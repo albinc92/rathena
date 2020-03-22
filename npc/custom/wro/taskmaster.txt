@@ -1,0 +1,583 @@
+//===== rAthena Script =======================================
+//= Imperial Taskmaster
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= NPC that provides quests for specific monsters and rewards
+//= players with Zeny and Experience.
+//============================================================
+
+prontera,147,174,5	script	Imperial Taskmaster#pro	416,{
+	//cutin "bat_crua1",2;
+    query_sql("SELECT * FROM `taskmaster` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max, .@npc$);
+
+    // If on a mission
+    if(.@mobid && .@npc$ == strnpcinfo(0)) {
+        mes "["+strnpcinfo(1)+"]";
+        mes "Let's see, your progress for the current mission is:";
+        mes "^f7f7f7-^000000";
+        mes "Monster: ^0000ff" + strmobinfo(1,.@mobid) + "^000000";
+        if(.@count == .@max) {
+            mes "Count: ^00ff00" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        } else {
+            mes "Count: ^ff0000" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        }
+
+        if(.@count >= .@max) {
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "You completed your mission, excellent!";
+            query_sql("DELETE FROM `taskmaster` WHERE `char_id` = " + getcharid(0));
+            set .@bExp, (strmobinfo(6,.@mobid) * 25);
+            set .@jExp, (strmobinfo(7,.@mobid) * 25);
+            set .@zeny, (strmobinfo(3,.@mobid) * 100);
+            getexp2 .@bExp,.@jExp;
+            set zeny, zeny + .@zeny;
+            specialeffect2 18;
+		    message strcharinfo(0),"Congratulations! Your reward is Zeny and Experience Points.";
+        } else {
+            L_OnCurrentMissionInfo:
+            next;
+            switch(select("Monster information:Location information:Abort mission:Cancel")) {
+                case 1:
+		            atcommand "@mobinfo " + .@mobid;
+		            goto L_OnCurrentMissionInfo;
+                    end;
+
+                case 2:
+		            atcommand "@whereis " + .@mobid;
+		            goto L_OnCurrentMissionInfo;
+                    end;
+
+                case 3:
+                    query_sql("DELETE FROM `taskmaster` WHERE `char_id` = " + getcharid(0));
+                    mes "["+strnpcinfo(1)+"]";
+                    mes "Mission aborted!";
+                    end;
+
+                case 4:
+                    next;
+                    mes "["+strnpcinfo(1)+"]";
+                    mes "Until next time.";
+                    end;
+            }
+        }
+        close2;
+        cutin "", 255;
+        end;
+    }
+
+    mes "["+strnpcinfo(1)+"]";
+    mes "Hail, Legionnaire. Are you looking to go monster-hunting?";
+    next;
+	set .@menu, select("Available Missions:Information:Cancel");
+	if (.@menu == 1) {
+		goto L_Missions;
+	} else if (.@menu == 2) {
+		goto L_Information;
+	}
+	mes "["+strnpcinfo(1)+"]";
+	mes "Until next time.";
+    close2;
+    cutin "", 255;
+    end;
+
+L_Missions:
+    mes "["+strnpcinfo(1)+"]";
+    mes "These are the following monsters that have a bounty on their heads in these parts:";
+    next;
+    if(strnpcinfo(0) == "Imperial Taskmaster#pro") {
+        setarray .@id[0],1002,1007,1063,1167,1004,1052,1020,1057,1093,1166,1088,1214,1308;
+        setarray .@qty[0],7,5,8,7,7,8,7,8,1,7,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#prt_sew") {
+        setarray .@id[0],1048,1051,1053,1175,1054,1086;
+        setarray .@qty[0],8,7,6,6,7,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#prt_maze") {
+        setarray .@id[0],1031,1093,1090,1088,1214,1092,1294,1120,1039;
+        setarray .@qty[0],7,1,1,1,1,2,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#alb" || strnpcinfo(0) == "Imperial Taskmaster#pay") {
+        setarray .@id[0],1008,1063,1010,1024,1014,1056,1077,1033,1013,1060,1090,1110,1277,1180,1321,1120,1096,1582,1115;
+        setarray .@qty[0],5,5,5,9,10,8,6,7,7,7,1,7,6,6,5,1,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#pay_dun") {
+        setarray .@id[0],1076,1068,1028,1016,1026,1188,1170,1186,1301,1307,1150;
+        setarray .@qty[0],4,5,7,7,4,4,7,1,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#treasure") {
+        setarray .@id[0],1068,1071,1216,1120,1112;
+        setarray .@qty[0],9,8,4,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#tur_dun") {
+        setarray .@id[0],1314,1318,1316,1315,1319,1312;
+        setarray .@qty[0],7,4,4,6,8,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#iz" || strnpcinfo(0) == "Imperial Taskmaster#iz_dun") {
+        setarray .@id[0],1161,1070,1068,1066,1141,1067,1158,1142,1069,1044,1144,1045,1065,1264;
+        setarray .@qty[0],8,7,10,8,6,8,5,3,5,4,4,4,5,6;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#alde") {
+        setarray .@id[0],1004,1020,1031,1174,1018,1104,1128,1077,1114,1103,1100,1118,1139,1099,1155,1156,1059;
+        setarray .@qty[0],7,5,10,7,5,7,7,6,5,4,6,6,6,7,5,7,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#xmas") {
+        setarray .@id[0],1242,1243,1090,1248,1249,1250,1515,1096,1251;
+        setarray .@qty[0],4,2,1,4,5,1,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#xmas_dun") {
+        setarray .@id[0],1265,1246,1515,1252;
+        setarray .@qty[0],4,4,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#c_tower") {
+        setarray .@id[0],1111,1199,1102,1213,1216,1193,1194,1195,1269,1270,1377,1205,1204,1320,1203;
+        setarray .@qty[0],10,7,5,5,9,8,5,7,5,1,1,1,1,3,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#mjo_dun") {
+        setarray .@id[0],1175,1145,1169,1151,1209;
+        setarray .@qty[0],6,6,7,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#moc") {
+        setarray .@id[0],1113,1049,1047,1011,1050,1107,1042,1055,1019,1033,1030,1001,1091,1040,1127,1165,1278,1366,1159,1920,1918,1919,1921,1917;
+        setarray .@qty[0],7,5,5,4,5,7,7,8,7,7,8,7,1,7,10,7,5,5,1,6,6,6,3,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#moc_pryd") {
+        setarray .@id[0],1005,1041,1032,1029,1149,1297,1038,1511;
+        setarray .@qty[0],5,7,5,5,6,2,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#in_sphinx") {
+        setarray .@id[0],1111,1178,1164,1140,1149,1154,1098,1157;
+        setarray .@qty[0],4,5,5,7,5,7,2,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#cmd") {
+        setarray .@id[0],1266,1030,1258,1119,1282,1089,1271,1206,1262,1259;
+        setarray .@qty[0],5,6,3,5,6,1,6,9,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#anthell") {
+        setarray .@id[0],1097,1095,1160,1105,1176,1289,1147;
+        setarray .@qty[0],9,5,5,4,3,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#beach1") {
+        setarray .@id[0],1148,1583;
+        setarray .@qty[0],6,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#beach2") {
+        setarray .@id[0],1278;
+        setarray .@qty[0],7;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#beach3") {
+        setarray .@id[0],1034;
+        setarray .@qty[0],5;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#um") {
+        setarray .@id[0],1494,1499,1500,1493,1259;
+        setarray .@qty[0],5,4,10,7,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#um_dun") {
+        setarray .@id[0],1495,1497;
+        setarray .@qty[0],7,5;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#nif") {
+        setarray .@id[0],1509,1508,1510,1506,1503,1504,1505,1507,1373;
+        setarray .@qty[0],3,5,3,4,3,3,3,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#gef") {
+        setarray .@id[0],1002,1007,1008,1012,1094,1023,1040,1166,1273,1134,1282,1261,1214,1089,1156,1213,1190,1087;
+        setarray .@qty[0],5,6,6,5,6,6,4,4,7,4,4,5,1,1,5,7,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#gef_dun") {
+        setarray .@id[0],1130,1036,1035,1109,1061,1204,1046,1389;
+        setarray .@qty[0],4,5,4,4,5,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#geffenia") {
+        setarray .@id[0],1371,1374,1390,1370,1205,1292,1204,1203,1219,1268;
+        setarray .@qty[0],10,6,10,6,1,10,1,1,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#orcsdun") {
+        setarray .@id[0],1153,1152,1177;
+        setarray .@qty[0],8,6,5;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#gl") {
+        setarray .@id[0],1036,1267,1257,1276,1163,1197,1192,1117,1195,1200,1132,1201,1204,1208,1320,1283,1295,1203,1219,1302,1272;
+        setarray .@qty[0],5,5,6,4,7,3,5,6,5,1,4,3,1,4,2,1,1,1,2,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#yuno") {
+        setarray .@id[0],1002,1113,1031,1162,1128,1114,1494,1090,1368,1369,1386,1372,1376,1096,1582,1388;
+        setarray .@qty[0],6,4,5,7,4,3,4,1,4,8,7,4,4,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#mag_dun") {
+        setarray .@id[0],1367,1383,1072,1385,1382,1366,1379;
+        setarray .@qty[0],2,3,2,3,2,2,3;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#jupe") {
+        setarray .@id[0],1365,1676,1679,1678,1668,1670,1677,1672,1673,1671,1685;
+        setarray .@qty[0],7,7,5,7,4,4,7,4,4,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#kh_dun") {
+        setarray .@id[0],1738,1275,1737,1735,1736,1734,1718,1155,1156,1687,1262;
+        setarray .@qty[0],2,3,5,3,3,1,4,6,6,7,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#hu") {
+        setarray .@id[0],1627,1628,1715,1713,1720,1719;
+        setarray .@qty[0],5,5,3,6,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#abyss") {
+        setarray .@id[0],1721,1216,1717,1714,1716,1713,1720,1719;
+        setarray .@qty[0],2,3,6,5,6,6,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#odin") {
+        setarray .@id[0],1753,1752,1754,1755,1765,1751;
+        setarray .@qty[0],3,3,2,2,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#thana") {
+        setarray .@id[0],1699,1377,1698,1320,1295,1703,1702,1701,1700,1707,1706,1705,1704,1708;
+        setarray .@qty[0],8,4,8,8,4,3,3,3,2,1,1,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#einb" || strnpcinfo(0) == "Imperial Taskmaster#einbr") {
+        setarray .@id[0],1002,1613,1118,1619,1628,1261,1199,1615,1380,1378,1614,1368,1372,1618;
+        setarray .@qty[0],4,6,3,7,4,5,2,5,5,4,8,6,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ein_dun") {
+        setarray .@id[0],1619,1620,1621,1616,1615,1614,1617,1622,1618,1623;
+        setarray .@qty[0],3,3,1,7,3,4,2,2,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#lhz") {
+        setarray .@id[0],1103,1613,1628,1215;
+        setarray .@qty[0],3,7,3,5;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#lhz_dun") {
+        setarray .@id[0],1627,1613,1682,1652,1655,1656,1657,1653,1654,1681,1638,1636,1635,1637,1634,1639,1658,1644,1642,1641,1643,1640,1645,1650,1648,1647,1649,1646,1651;
+        setarray .@qty[0],7,5,10,3,3,3,3,3,3,1,6,6,5,4,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ra") {
+        setarray .@id[0],1113,1784,1782,1680,1781,1368,1780,1783,1259,1785;
+        setarray .@qty[0],10,10,6,7,6,3,6,4,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ra_san") {
+        setarray .@id[0],1632,1633,1771,1773,1772,1774,1770,1769,1768;
+        setarray .@qty[0],3,2,8,6,9,4,6,7,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ice_dun") {
+        setarray .@id[0],1789,1776,1778,1775,1777,1779;
+        setarray .@qty[0],5,8,4,7,6,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ve") {
+        setarray .@id[0],1055,1784,1166,1106,1782,1165,1037,1386,1785;
+        setarray .@qty[0],7,3,6,6,4,5,7,5,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#thor") {
+        setarray .@id[0],1836,1838,1837,1830,1833,1829,1839,1831,1832;
+        setarray .@qty[0],3,6,2,1,5,1,1,6,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#abbey") {
+        setarray .@id[0],1036,1869,1866,1865,1864,1867,1870,1871,1873;
+        setarray .@qty[0],6,3,2,7,10,9,6,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ama") {
+        setarray .@id[0],1400,1406,1402;
+        setarray .@qty[0],5,5,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ama_dun") {
+        setarray .@id[0],1404,1402,1403,1375,1405,1401,1492;
+        setarray .@qty[0],7,4,5,2,6,6,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#gon") {
+        setarray .@id[0],1400,1415;
+        setarray .@qty[0],5,4;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#gon_dun") {
+        setarray .@id[0],1417,1413,1410,1408,1412,1416,1418;
+        setarray .@qty[0],3,2,4,6,3,5,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#lou") {
+        setarray .@id[0],1139,1516;
+        setarray .@qty[0],3,2;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#lou_dun") {
+        setarray .@id[0],1517,1514,1512,1631,1630;
+        setarray .@qty[0],3,3,4,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ayo") {
+        setarray .@id[0],1104,1056,1057,1494,1586,1499;
+        setarray .@qty[0],3,3,3,3,5,2;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ayo_dun") {
+        setarray .@id[0],1586,1036,1584,1688;
+        setarray .@qty[0],7,3,10,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#mosk") {
+        setarray .@id[0],1060,1139;
+        setarray .@qty[0],4,3;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#mosk_dun") {
+        setarray .@id[0],1881,1880,1882,1883,1884,1885;
+        setarray .@qty[0],4,7,6,4,2,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#man") {
+        setarray .@id[0],1988,1999,2024,1989,1986,1987,1990;
+        setarray .@qty[0],10,3,5,3,3,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#spl") {
+        setarray .@id[0],1995,1994,1992,1993,1991;
+        setarray .@qty[0],10,4,3,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#ygg") {
+        setarray .@id[0],2013,2015,2016,2017,2018;
+        setarray .@qty[0],4,4,3,1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#nyd") {
+        setarray .@id[0],2015,2020,2021,2019,2023,2022;
+        setarray .@qty[0],4,6,5,4,4,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#et") {
+        setarray .@id[0],1957,1956;
+        setarray .@qty[0],1,1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#orcmemory") {
+        setarray .@id[0],1087;
+        setarray .@qty[0],1;
+    }
+    if(strnpcinfo(0) == "Imperial Taskmaster#shrine") {
+        setarray .@id[0],1929;
+        setarray .@qty[0],1;
+    }
+    set .@huntmenu$, "";
+    for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
+        if (.@i) set .@huntmenu$,.@huntmenu$+":";
+        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ ^0000ffLv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
+    }
+	set .@selection,select(.@huntmenu$);
+    set .@mobToHunt, .@id[.@selection - 1];
+    set .@amnt, .@qty[.@selection - 1];
+    set .@bExp, (strmobinfo(6,.@mobToHunt) * 25);
+    set .@jExp, (strmobinfo(7,.@mobToHunt) * 25);
+    set .@zeny, strmobinfo(6,.@mobToHunt) + strmobinfo(7,.@mobToHunt) + strmobinfo(4,.@mobToHunt);  // TODO: Fix
+
+L_OnMissionInfo:
+    next;
+    mes "["+strnpcinfo(1)+"]";
+    mes "The specifications for this mission are the following:";
+    mes "^f7f7f7-^000000";
+    mes "Monster: ^0000ff" + strmobinfo(1,.@mobToHunt) + "^000000";
+    mes "Quantity: ^ff0000" + .@amnt + "^000000";
+    mes "Reward (Base EXP): ^ff0000" + .@bExp + "^000000";
+    mes "Reward (Job EXP): ^ff0000" + .@jExp + "^000000";
+    mes "Reward (Zeny): ^ff0000" + .@zeny + "^000000";
+
+    switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
+        case 1:
+            query_sql("REPLACE INTO `taskmaster` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ", '" + strnpcinfo(0) + "')");
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "Excellent. I shall await your return!";
+            close2;
+            cutin "", 255;
+            end;
+
+        case 2:
+            atcommand "@mobinfo " + .@mobToHunt;
+            goto L_OnMissionInfo;
+            end;
+
+        case 3:
+            atcommand "@whereis " + .@mobToHunt;
+            goto L_OnMissionInfo;
+            end;
+
+        case 4:
+            next;
+            goto L_Missions;
+            end;
+
+        case 5:
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "Until next time.";
+    }
+    close2;
+    cutin "", 255;
+    end;
+
+L_Information:
+    mes "["+strnpcinfo(1)+"]";
+    mes "I am an emissary sent by the Imperial Legion of Royal, charged with providing fellow Legionnaires with missions to slay the foul monsters that pester these lands.";
+    next;
+    mes "["+strnpcinfo(1)+"]";
+    mes "If you accept one of my missions, and slay the designated monsters, I shall reward you with both ^ff0000Zeny^000000 and ^ff0000Experience^000000 for your services to the Imperial Legion.";
+    next;
+    goto L_Missions;
+    close2;
+    cutin "", 255;
+    end;
+
+OnPCLoadMapEvent:
+    query_sql("SELECT * FROM `taskmaster` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max, .@npc$);
+    if(.@count == .@max && .@charid > 0) {
+        showevent QTYPE_QUEST2,0;
+    }
+    showevent QTYPE_QUEST,0;
+    end;
+
+OnInit:
+    query_sql("CREATE TABLE IF NOT EXISTS `taskmaster` (`char_id` int(11) unsigned NOT NULL default '0',`mob_id` int(11) NOT NULL default '0',`count` int(11) NOT NULL default '0',`max` int(11) NOT NULL default '0',`npc` varchar(30) NOT NULL default '',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+    end;
+
+}
+
+
+
+// Duplicates
+prt_fild05,292,216,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#prt_sew	416
+prt_fild01,131,364,6	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#prt_maze	416
+alberta,38,241,6	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#alb	416
+payon,181,111,2	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#pay	416
+pay_arche,39,127,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#pay_dun	416
+alb2trea,70,98,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#treasure	416
+tur_dun01,148,60,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#tur_dun	416
+izlude,136,121,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#iz	416
+izlu2dun,104,85,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#iz_dun	416
+aldebaran,133,122,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#alde	416
+aldebaran,142,133,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#c_tower	415
+xmas,150,307,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#xmas	416
+xmas,140,127,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#xmas_dun	416
+mjolnir_02,76,358,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#mjo_dun	416
+morocc,148,87,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#moc	416
+moc_ruins,63,152,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#moc_pryd	416
+moc_fild19,113,101,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#in_sphinx	416
+comodo,215,139,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#cmd	416
+cmd_fild08,328,347,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#anthell	416
+comodo,31,218,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#beach1	416
+comodo,181,348,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#beach2	416
+comodo,323,173,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#beach3	416
+umbala,98,157,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#um	416
+umbala,119,282,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#um_dun	416
+niflheim,207,168,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#nif	416
+geffen,114,58,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#gef	416
+gef_tower,149,33,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#gef_dun	416
+geffen,128,63,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#geffenia	415
+gef_fild10,61,331,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#orcsdun	416
+gef_fild06,23,300,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#gl	416
+yuno,163,51,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#yuno	416
+yuno_fild03,35,136,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#mag_dun	416
+yuno_fild07,212,171,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#jupe	416
+yuno_fild08,81,175,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#kh_dun	416
+hugel,90,143,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#hu	416
+hu_fild05,170,312,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#abyss	416
+hu_fild01,145,158,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#thana	416
+odin_tem01,96,143,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#odin	416
+einbech,58,31,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#einb	416
+einbech,133,247,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ein_dun	416
+einbroch,60,193,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#einbr	416
+lighthalzen,151,90,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#lhz	416
+lhz_in01,28,219,0	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#lhz_dun	416
+rachel,134,103,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ra	416
+ra_temin,24,314,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ra_san	416
+ra_fild01,237,332,4	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ice_dun	416
+veins,212,121,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ve	416
+ve_fild03,165,237,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#thor	416
+nameless_n,165,181,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#abbey	416
+amatsu,202,82,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ama	416
+ama_in02,124,175,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ama_dun	416
+gonryun,168,115,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#gon	416
+gonryun,169,190,3	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#gon_dun	415
+louyang,226,108,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#lou	416
+louyang,50,286,4	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#lou_dun	416
+ayothaya,198,163,0	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ayo	416
+ayo_fild01,128,193,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ayo_dun	416
+moscovia,225,178,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#mosk	416
+mosk_fild02,188,250,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#mosk_dun	416
+manuk,289,131,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#man	416
+splendide,193,155,4	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#spl	416
+spl_fild01,359,106,1	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#ygg	416
+spl_fild01,355,105,7	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#nyd	415
+e_tower,82,110,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#et	416
+gef_fild10,245,200,4	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#orcmemory	416
+monk_test,309,142,5	duplicate(Imperial Taskmaster#pro)	Imperial Taskmaster#shrine	416
+
+
+
+// Mapflags
+prontera	mapflag	loadevent
+prt_fild05	mapflag	loadevent
+prt_fild01	mapflag	loadevent
+alberta	mapflag	loadevent
+xmas	mapflag	loadevent
+payon	mapflag	loadevent
+pay_arche	mapflag	loadevent
+alb2trea	mapflag	loadevent
+tur_dun01	mapflag	loadevent
+izlude	mapflag	loadevent
+izlu2dun	mapflag	loadevent
+aldebaran	mapflag	loadevent
+mjolnir_02	mapflag	loadevent
+morocc	mapflag	loadevent
+moc_ruins	mapflag	loadevent
+moc_fild19	mapflag	loadevent
+comodo	mapflag	loadevent
+cmd_fild08	mapflag	loadevent
+umbala	mapflag	loadevent
+niflheim	mapflag	loadevent
+geffen	mapflag	loadevent
+gef_tower	mapflag	loadevent
+gef_fild10	mapflag	loadevent
+gef_fild06	mapflag	loadevent
+yuno	mapflag	loadevent
+yuno_fild03	mapflag	loadevent
+yuno_fild07	mapflag	loadevent
+yuno_fild08	mapflag	loadevent
+hugel	mapflag	loadevent
+hu_fild05	mapflag	loadevent
+hu_fild01	mapflag	loadevent
+odin_tem01	mapflag	loadevent
+einbech	mapflag	loadevent
+einbroch	mapflag	loadevent
+lighthalzen	mapflag	loadevent
+lhz_in01	mapflag	loadevent
+rachel	mapflag	loadevent
+ra_temin	mapflag	loadevent
+ra_fild01	mapflag	loadevent
+veins	mapflag	loadevent
+ve_fild03	mapflag	loadevent
+nameless_n	mapflag	loadevent
+amatsu	mapflag	loadevent
+ama_in02	mapflag	loadevent
+gonryun	mapflag	loadevent
+louyang	mapflag	loadevent
+ayothaya	mapflag	loadevent
+ayo_fild01	mapflag	loadevent
+moscovia	mapflag	loadevent
+mosk_fild02	mapflag	loadevent
+manuk	mapflag	loadevent
+splendide	mapflag	loadevent
+spl_fild01	mapflag	loadevent
+e_tower	mapflag	loadevent
+monk_test	mapflag	loadevent
+
+
+
+// Scripts
+-	script	killtracker	-1,{
+OnNPCKillEvent:
+    query_sql("SELECT `mob_id`, `count`, `max`  FROM `taskmaster` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max);
+    if(killedrid == .@mobid && .@count != .@max) {
+        set .@count, .@count + 1;
+        message strcharinfo(0),"" + strmobinfo(1, killedrid) + " killed: (" + .@count + " / " + .@max + ")";
+        query_sql("UPDATE `taskmaster` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
+        if(.@count == .@max) {
+            query_sql("DELETE FROM `taskmaster` WHERE `char_id` = " + getcharid(0));
+            set .@bExp, (strmobinfo(6,.@mobid) * 25);
+            set .@jExp, (strmobinfo(7,.@mobid) * 25);
+            set .@zeny, (strmobinfo(3,.@mobid) * 100);
+            getexp2 .@bExp, .@jExp;
+            set zeny, zeny + .@zeny;
+            specialeffect2 885;
+		    message strcharinfo(0),"You have completed your mission! Your reward is Zeny and Experience Points.";
+        }
+    }
+    end;
+}

@@ -15,7 +15,7 @@
 extern int login_fd; //login file descriptor
 extern int char_fd; //char file descriptor
 
-#define MAX_STARTPOINT 5
+#define MAX_STARTPOINT 9
 #define MAX_STARTITEM 32
 
 enum E_CHARSERVER_ST {

@@ -10,3 +10,6 @@
 // Use the base folder, not the data\ path.
 //-----------------------------------------
 //data_dir: C:\Program Files\Gravity\RO\
+data_dir: C:\Program1\rAthena\client\kRO_FullClient_20180813-Cleaned\data.grf
+data_dir: C:\Program1\rAthena\client\kRO_FullClient_20180813-Cleaned\rdata.grf
+data_dir: C:\Program1\rAthena\client\kRO_FullClient_20180813-Cleaned\wrodata.grf

@@ -1,0 +1,191 @@
+// Entrance Warper
+royal,124,125,6	script	Dice Event Warper#1	10179,{
+	cutin "16lei_01",2;
+	mes "["+strnpcinfo(1)+"]";
+	if(.dice == 1) {
+		mes "Yoo! The dice event is ^00FF00Active^000000. Wanna join in?";
+	} else if(.dice > 1) {
+		mes "The dice event is ^00FF00Active^000000. However, you can't join since it's already started ~~";
+	} else {
+		mes "Hey duude, the dice event is ^FF0000Inactive^000000. You should come back later ~~";
+	}
+	set .@menu, select(":"+((.dice == 1)?"Join":"")+":Information:Cancel");
+	if(.@menu == 2) {
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Sweet duude ~~";
+		next;
+		warp "quiz_02", 55, 85;
+	}
+	if(.@menu == 3) {
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I am responsible for managing the ^0000ffDice Event^000000.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Once the event is active, come talk to me. I can warp you to the event area.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Players are given a 3 minute window to join after I announce the start of the event. Entrance is prohibited after said time window has expired.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Once inside, players must enter one of the four bounding boxes before I finish my countdown. Otherwise they will be expelled from the event and warped to town.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "After a 3 second countdown, I will reward players in a random bounding box by dropping ^0000ffPoring Coins^000000.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "They must then hurry up to pick up these coins before they get picked up by someone else, or disappear.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "This process will be repeated five times, the event is then over. Simple as that.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnClock0030:
+OnClock0230:
+OnClock0430:
+OnClock0630:
+OnClock0830:
+OnClock1030:
+OnClock1230:
+OnClock1430:
+OnClock1630:
+OnClock1830:
+OnClock2030:
+OnClock2230:
+	if(agitcheck()) {
+		end;
+	}
+	movenpc "EffectDummy",0,0;
+	set .dice, 1;
+	announce "We are going to have a dice event!",bc_all,0x00FFFF,FW_NORMAL,16;
+	sleep 6000;
+	announce "The dice event will begin in 3 minutes!",bc_all,0x00FFFF,FW_NORMAL,16;
+	sleep 60000;
+	sleep 1000;
+	announce "The dice event will begin in 2 minutes!",bc_all,0x00FFFF,FW_NORMAL,16;
+	sleep 60000;
+	sleep 1000;
+	announce "The dice event will begin in 1 minute!",bc_all,0x00FFFF,FW_NORMAL,16;
+	sleep 60000;
+	sleep 1000;
+	announce "The dice event has now begun!",bc_all,0x00FFFF,FW_NORMAL,16;
+	set .dice, 2;
+	goto OnDice;
+	end;
+
+OnDice:
+	sleep 3000;
+	while (.dice < 8) {
+		enablenpc "select1_2";
+		enablenpc "select2_2";
+		enablenpc "select3_2";
+		enablenpc "select4_2";
+		mapannounce "quiz_02","Please step into one of the four boxes!",0x00FFFF,FW_NORMAL,16;
+		sleep 6000;
+		mapannounce "quiz_02","Anyone not standing in a box by the time i roll the dice will be disqualified!",0x00FFFF,FW_NORMAL,16;
+		sleep 8000;
+		mapannounce "quiz_02","I will roll in 3!",0x00FFFF,FW_NORMAL,16;
+		sleep 1000;
+		mapannounce "quiz_02","I will roll in 2!",0x00FFFF,FW_NORMAL,16;
+		sleep 1000;
+		mapannounce "quiz_02","I will roll in 1!",0x00FFFF,FW_NORMAL,16;
+		sleep 1000;
+		mapannounce "quiz_02","And the lucky number is...",0x00FFFF,FW_NORMAL,16;
+		sleep 3000;
+		areawarp "quiz_02",32,95,80,76,"royal",134,159;
+		disablenpc "select1_2";
+		disablenpc "select2_2";
+		disablenpc "select3_2";
+		disablenpc "select4_2";
+		set .@roll, rand(1,4);
+		mapannounce "quiz_02",.@roll+"!",0x00FFFF,FW_NORMAL,16;
+
+		if(.@roll == 1) {
+			movenpc "EffectDummy",37,62;
+			donpcevent "EffectDummy::OnEffect";
+		} else if(.@roll == 2) {
+			movenpc "EffectDummy",49,62;
+			donpcevent "EffectDummy::OnEffect";
+		} else if(.@roll == 3) {
+			movenpc "EffectDummy",61,62;
+			donpcevent "EffectDummy::OnEffect";
+		} else {
+			movenpc "EffectDummy",73,62;
+			donpcevent "EffectDummy::OnEffect";
+		}
+
+		sleep 3000;
+		mapannounce "quiz_02","Congratulations to those who won this round!",0x00FFFF,FW_NORMAL,16;
+		sleep 10000;
+		.dice++;
+	}
+	enablenpc "select1_2";
+	enablenpc "select2_2";
+	enablenpc "select3_2";
+	enablenpc "select4_2";
+	mapannounce "quiz_02","That was the last round people!",0x00FFFF,FW_NORMAL,16;
+	sleep 3000;
+	mapannounce "quiz_02","Thank you for playing!",0x00FFFF,FW_NORMAL,16;
+	sleep 3000;
+	set .dice, 0;
+	end;
+
+}
+
+
+
+// Dummy NPC
+quiz_02,0,0,3	script	EffectDummy	139,{
+	end;
+OnEffect:
+	specialeffect 10,AREA,"EffectDummy";
+	getmapxy(.@map$,.@x,.@y,BL_NPC,"EffectDummy");
+	set .@areausers, getareausers(.@map$,(.@x-4),(.@y-10),(.@x+4),(.@y+11));
+	for(set .@i, 0; .@i < rand(.@areausers,(.@areausers*4)); .@i++) {
+		sleep 100;
+		set .@x2, rand((.@x-4),(.@x+4));
+		set .@y2, rand((.@y-10),(.@y+11));
+		makeitem 7539,1,"quiz_02",.@x2,.@y2;
+	}
+	end;
+}
+
+
+
+// Exit warper
+quiz_02,55,91,3	script	Dice Event Warper#2	10179,{
+	cutin "16lei_01",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You looking to leave this palce?";
+	set .@menu, select("Leave:Cancel");
+	if(.@menu==1) {
+		warp "royal", 134, 150;
+	}
+	close2;
+	cutin "", 255;
+	end;
+}
+
+// Warps
+quiz_02,37,77,0	warp	select1_1	1,1,quiz_02,37,69
+quiz_02,37,72,0	warp	select1_2	1,1,quiz_02,37,80
+quiz_02,49,77,0	warp	select2_1	1,1,quiz_02,49,69
+quiz_02,49,72,0	warp	select2_2	1,1,quiz_02,49,80
+quiz_02,61,77,0	warp	select3_1	1,1,quiz_02,61,69
+quiz_02,61,72,0	warp	select3_2	1,1,quiz_02,61,80
+quiz_02,73,77,0	warp	select4_1	1,1,quiz_02,73,69
+quiz_02,73,72,0	warp	select4_2	1,1,quiz_02,73,80
+
+// Mapflags
+quiz_02	mapflag	nobranch
+quiz_02	mapflag	noicewall
+quiz_02	mapflag	nowarpto
+quiz_02	mapflag	noteleport
+quiz_02	mapflag	loadevent
+quiz_02	mapflag	novending
+quiz_02	mapflag	nomemo
+quiz_02	mapflag	nosave	SavePoint

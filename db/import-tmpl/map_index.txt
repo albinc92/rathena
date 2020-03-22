@@ -16,3 +16,9 @@
 //
 //mymap	1250
 //mymap-2
+royal   1250
+roy_in01   1251
+roy_in02   1252
+roy_in03   1253
+jupe_lib   1254
+roy_pvp01   1255

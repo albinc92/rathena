@@ -20,3 +20,817 @@
 //	Balmung cannot be dropped, traded, or placed in Guild Storage (1+2+64).
 //	Only groups of group-level 50 and up can override this setting.
 
+7285,507,100	// Holy Thread
+7287,507,100	// Holier Thread
+2657,507,100	// Laboratory Permit
+12622,507,100	// Reins of Mount
+6075,0,100	    // Crystalized Teardrop
+
+2201,0,100   // Sunglasses
+2202,0,100   // Sunglasses
+2203,0,100   // Glasses
+2204,0,100   // Glasses
+2205,0,100   // Diver Goggles
+2206,0,100   // Wedding Veil
+2207,0,100   // Fancy Flower
+2208,0,100   // Ribbon
+2209,0,100   // Ribbon
+2210,0,100   // Hair Band
+2211,0,100   // Bandana
+2212,0,100   // Eye Patch
+2213,0,100   // Kitty Band
+2214,0,100   // Bunny Band
+2215,0,100   // Flower Band
+2216,0,100   // Biretta
+2217,0,100   // Biretta
+2218,0,100   // Flu Mask
+2219,0,100   // Flu Mask
+2220,0,100   // Hat
+2221,0,100   // Hat
+2222,0,100   // Turban
+2223,0,100   // Turban
+2224,0,100   // Goggles
+2225,0,100   // Goggles
+2226,0,100   // Cap
+2227,0,100   // Cap
+2228,0,100   // Helm
+2229,0,100   // Helm
+2230,0,100   // Gemmed Sallet
+2231,0,100   // Gemmed Sallet
+2232,0,100   // Circlet
+2233,0,100   // Circlet
+2234,0,100   // Tiara
+2235,0,100   // Crown
+2236,0,100   // Santa Hat
+2237,0,100   // Bandit Beard
+2239,0,100   // Monocle
+2240,0,100   // Beard
+2241,0,100   // Grampa Beard
+2242,0,100   // Purple Glasses
+2243,0,100   // Geek Glasses
+2244,0,100   // Big Ribbon
+2245,0,100   // Sweet Gent
+2246,0,100   // Golden Gear
+2247,0,100   // Romantic Gent
+2248,0,100   // Western Grace
+2249,0,100   // Coronet
+2250,0,100   // Cute Ribbon
+2251,0,100   // Monk Hat
+2252,0,100   // Wizard Hat
+2253,0,100   // Sunflower
+2254,0,100   // Angel Wing
+2255,0,100   // Evil Wing
+2256,0,100   // Majestic Goat
+2257,0,100   // Unicorn Horn
+2258,0,100   // Spiky Band
+2259,0,100   // Mini Propeller
+2260,0,100   // Mini Glasses
+2261,0,100   // Army Cap
+2262,0,100   // Clown Nose
+2263,0,100   // Zorro Masque
+2264,0,100   // Munak Hat
+2265,0,100   // Gangster Mask
+2266,0,100   // Iron Cain
+2267,0,100   // Cigarette
+2268,0,100   // Pipe
+2269,0,100   // Romantic Flower
+2270,0,100   // Romantic Leaf
+2271,0,100   // Jack be Dandy
+2272,0,100   // Stop Post
+2273,0,100   // Doctor Band
+2274,0,100   // Ghost Bandana
+2275,0,100   // Red Bandana
+2276,0,100   // Angled Glasses
+2277,0,100   // Nurse Cap
+2278,0,100   // Mr. Smile
+2279,0,100   // Bomb Wick
+2280,0,100   // Sakkat
+2281,0,100   // Opera Masque
+2282,0,100   // Halo
+2283,0,100   // Ear Muffs
+2284,0,100   // Antlers
+2285,0,100   // Apple of Archer
+2286,0,100   // Elven Ears
+2287,0,100   // Pirate Bandana
+2288,0,100   // Mr. Scream
+2289,0,100   // Poo Poo Hat
+2290,0,100   // Funeral Hat
+2291,0,100   // Masquerade
+2292,0,100   // Welding Mask
+2293,0,100   // Pretend Murdered
+2294,0,100   // Stellar
+2295,0,100   // Blinker
+2296,0,100   // Binoculars
+2297,0,100   // Goblin Mask
+2298,0,100   // Green Feeler
+2299,0,100   // Orc Helm
+2686,0,100   // Elven Ears
+2687,0,100   // Steel Flower
+4010,0,100   // Willow Card
+4039,0,100   // Stainer Card
+4041,0,100   // Coco Card
+4046,0,100   // Martin Card
+4052,0,100   // Elder Willow Card
+4087,0,100   // Giearth Card
+4110,0,100   // Ghoul Card
+4112,0,100   // Marduk Card
+4122,0,100   // Deviruchi Card
+4127,0,100   // Nightmare Card
+4132,0,100   // Mistress Card
+4143,0,100   // Orc Hero Card
+4148,0,100   // Pharaoh Card
+4161,0,100   // Grand Peco Card
+4169,0,100   // Dark Illusion Card
+4177,0,100   // Dryad Card
+4185,0,100   // Rideword Card
+4188,0,100   // Leib Olmai Card
+4195,0,100   // Leaf Cat Card
+4198,0,100   // Maya Purple Card
+4206,0,100   // Myst Case Card
+4223,0,100   // Stalactic Golem Card
+4229,0,100   // Tower Keeper Card
+4241,0,100   // Arc Angeling Card
+4258,0,100   // Evil Nymph Card
+4260,0,100   // Wootan Shooter Card
+4261,0,100   // Wootan Fighter Card
+4269,0,100   // Incubus Card
+4271,0,100   // Giant Hornet Card
+4278,0,100   // Gibbet Card
+4288,0,100   // Carat Card
+4296,0,100   // Cramp Card
+4311,0,100   // Permeter Card
+4330,0,100   // Evil Snake Lord Card
+4336,0,100   // Ungoliant Card
+4343,0,100   // Holden Card
+4354,0,100   // Gemini-S58 Card
+4357,0,100   // Lord Knight Card
+4358,0,100   // Seyren Windsor Card
+4364,0,100   // Margaretha Sorin Card
+4365,0,100   // High Wizard Card
+4366,0,100   // Kathryne Keyron Card
+4372,0,100   // White Lady Card
+4374,0,100   // Vesper Card
+4379,0,100   // Blue Acidus Card
+4403,0,100   // Kiel-D-01 Card
+4411,0,100   // Vanberk Card
+4412,0,100   // Isilla Card
+4434,0,100   // Knocker Card
+4438,0,100   // Banshee Card
+5001,0,100   // Headset
+5002,0,100   // Jewel Crown
+5003,0,100   // Joker Jester
+5004,0,100   // Oxygen Mask
+5005,0,100   // Gas Mask
+5006,0,100   // Machoman's Glasses
+5007,0,100   // Grand Circlet
+5008,0,100   // Puppy Love
+5009,0,100   // Safety Helmet
+5010,0,100   // Indian Fillet
+5011,0,100   // Aerial
+5012,0,100   // Ph.D Hat
+5013,0,100   // Lord Kaho's Horn
+5014,0,100   // Fin Helm
+5015,0,100   // Egg Shell
+5016,0,100   // Boy's Cap
+5017,0,100   // Bone Helm
+5018,0,100   // Feather Bonnet
+5019,0,100   // Corsair
+5020,0,100   // Kafra Band
+5021,0,100   // Grief for Greed
+5022,0,100   // Hat of the Sun God
+5023,0,100   // Parcel Hat
+5024,0,100   // Cake Hat
+5025,0,100   // Helm of Angel
+5026,0,100   // Chef Hat
+5027,0,100   // Mage Hat
+5028,0,100   // Candle
+5029,0,100   // Spore Hat
+5030,0,100   // Panda Hat
+5031,0,100   // Mine Hat
+5032,0,100   // Sunday Hat
+5033,0,100   // Raccoon Hat
+5034,0,100   // Bulb Band
+5035,0,100   // Poring Hat
+5036,0,100   // Cross Hat
+5037,0,100   // Nut Shell
+5038,0,100   // Deviruchi Hat
+5039,0,100   // Rainbow Eggshell
+5040,0,100   // Blush
+5041,0,100   // Heart Hairpin
+5042,0,100   // Bao Bao
+5043,0,100   // Opera Phantom Mask
+5044,0,100   // Evil Wing Ears
+5045,0,100   // Magician Hat
+5046,0,100   // Bongun Hat
+5047,0,100   // Fashionable Glasses
+5048,0,100   // Cresent Hairpin
+5049,0,100   // Striped Hairband
+5050,0,100   // Wonder Nutshell
+5051,0,100   // Pussy Cat Bell
+5052,0,100   // Blue Hairband
+5053,0,100   // Sphinx Hat
+5054,0,100   // Assassin Mask
+5055,0,100   // Novice False Eggshell
+5056,0,100   // Fruit of Love
+5057,0,100   // Black Cat Ears
+5058,0,100   // Drooping Cat
+5059,0,100   // Teddybear Hat
+5060,0,100   // Party Hat
+5061,0,100   // Flower Hairpin
+5062,0,100   // Straw Hat
+5063,0,100   // Giant Band Aid
+5064,0,100   // Smokie Leaf
+5065,0,100   // Blue Fish
+5066,0,100   // Succubus Horn
+5067,0,100   // Sombrero
+5068,0,100   // Evil Wing Ears
+5069,0,100   // Kitsune Mask
+5070,0,100   // Hot-blooded Headband
+5071,0,100   // Indian Headband
+5072,0,100   // Incubus Horn
+5073,0,100   // Model Training Hat
+5074,0,100   // Angel Wing Ears
+5075,0,100   // Cowboy Hat
+5076,0,100   // Beanie
+5077,0,100   // Tulip Hairpin
+5078,0,100   // Sea-Otter Hat
+5079,0,100   // X Hairpin
+5080,0,100   // Crown of Ancient Queen
+5081,0,100   // Crown of Mistress
+5082,0,100   // Decorative Mushroom
+5083,0,100   // Red Ribbon
+5084,0,100   // Lazy Smokie
+5085,0,100   // Small Ribbons
+5086,0,100   // Alarm Mask
+5087,0,100   // Poker Face
+5088,0,100   // Surprised Mask
+5089,0,100   // Annoyed Mask
+5090,0,100   // Goblin Leader Mask
+5091,0,100   // Decorative Golden Bell
+5092,0,100   // Coif
+5093,0,100   // Coif
+5094,0,100   // Helmet of Orc Hero
+5096,0,100   // Assassin Mask
+5097,0,100   // Holiday Hat
+5098,0,100   // Tiger Mask
+5099,0,100   // Neko Mimi
+5100,0,100   // Sales Banner
+5101,0,100   // Takius's Blindfold
+5102,0,100   // Blank Eyes
+5103,0,100   // Sunflower Hairpin
+5104,0,100   // Dark Blinder
+5105,0,100   // 2nd Anniversary Hat
+5106,0,100   // 2nd Anniversary Hat
+5107,0,100   // Crunch Toast
+5108,0,100   // Renown Detective's Cap
+5109,0,100   // Red Bonnet
+5110,0,100   // Baby Pacifier
+5111,0,100   // Galapago Cap
+5112,0,100   // Super Novice Hat
+5113,0,100   // Angry Snarl
+5114,0,100   // Bucket Hat
+5115,0,100   // Winter Hat
+5116,0,100   // Banana Hat
+5117,0,100   // Mystic Rose
+5118,0,100   // Puppy Headband
+5119,0,100   // Super Novice Hat
+5120,0,100   // Bucket Hat
+5121,0,100   // Zealotus Mask
+5122,0,100   // Magni's Cap
+5123,0,100   // Ulle's Cap
+5124,0,100   // Fricca's Circlet
+5125,0,100   // Angel's Kiss
+5126,0,100   // Morpheus's Hood
+5127,0,100   // Morrigane's Helm
+5128,0,100   // Goibne's Helm
+5129,0,100   // Bird Nest
+5130,0,100   // Lion Mask
+5131,0,100   // Close Helmet
+5132,0,100   // Angeling Hat
+5133,0,100   // Sheep Hat
+5134,0,100   // Pumpkin-Head
+5135,0,100   // Cyclop's Eye
+5136,0,100   // Antonio's Santa Hat
+5137,0,100   // Alice Doll
+5138,0,100   // Magic Eyes
+5139,0,100   // Hibiscus
+5140,0,100   // Charming Ribbon
+5141,0,100   // Marionette Doll
+5142,0,100   // Crescent Helm
+5143,0,100   // Kabuki Mask
+5144,0,100   // Gambler Hat
+5145,0,100   // Carnival Joker Jester
+5146,0,100   // Elephant Hat
+5147,0,100   // Baseball Cap
+5148,0,100   // Phrygian Cap
+5149,0,100   // Silver Tiara
+5150,0,100   // Joker Jester
+5151,0,100   // Note Headphones
+5152,0,100   // Chinese Crown
+5153,0,100   // Angeling Hairpin
+5154,0,100   // Father's Sunglasses
+5155,0,100   // Father's White Moustache
+5156,0,100   // Father's Mask
+5157,0,100   // Orc Helm
+5158,0,100   // Monk Hat
+5159,0,100   // Golden Gear
+5160,0,100   // Majestic Goat
+5161,0,100   // Spiky Band
+5162,0,100   // Bone Helm
+5163,0,100   // Corsair
+5164,0,100   // Tiara
+5165,0,100   // Crown
+5166,0,100   // Sphinx Hat
+5167,0,100   // Munak Hat
+5168,0,100   // Bongun Hat
+5169,0,100   // Bride Mask
+5170,0,100   // Feather Beret
+5171,0,100   // Valkyrie Helm
+5172,0,100   // Beret
+5173,0,100   // Magistrate Hat
+5174,0,100   // Ayam
+5175,0,100   // Censor Bar
+5176,0,100   // Hahoe Mask
+5177,0,100   // Mythical Lion Mask
+5178,0,100   // Candle
+5179,0,100   // Golden Tiara
+5180,0,100   // France Holiday Hat
+5181,0,100   // Helm of Darkness
+5182,0,100   // Puppy Hat
+5183,0,100   // Bird Nest Hat
+5184,0,100   // Captain's Hat
+5185,0,100   // Laurel Wreath
+5186,0,100   // Geographer Band
+5187,0,100   // Twin Ribbon
+5188,0,100   // Wandering Minstrel Hat
+5189,0,100   // Autumn Leaves
+5190,0,100   // Independence Memorial Hat
+5191,0,100   // Black Ribbon
+5192,0,100   // Yellow Ribbon
+5193,0,100   // Green Ribbon
+5194,0,100   // Pink Ribbon
+5195,0,100   // Red Ribbon
+5196,0,100   // Orange Ribbon
+5197,0,100   // White Ribbon
+5198,0,100   // Drooping Bunny
+5199,0,100   // Baseball Cap
+5200,0,100   // Coppola
+5201,0,100   // Party Hat
+5202,0,100   // Fantastic Pumpkin-Head
+5203,0,100   // Smiling Mask
+5204,0,100   // Rudolph's Nose
+5205,0,100   // Emperor's Laurel Crown
+5206,0,100   // Romantic White Flower
+5207,0,100   // Angel Blessing
+5208,0,100   // Rideword Hat
+5209,0,100   // Love Dad Cap
+5210,0,100   // Flapping Angel Wing
+5211,0,100   // Dress Hat
+5212,0,100   // Satellite Hairband
+5213,0,100   // Sheila Hairnet
+5214,0,100   // Moonlight Flower Hat
+5215,0,100   // Evolved Angel Wing
+5216,0,100   // Evolved Evil Wing
+5217,0,100   // Evolved Majestic Goat
+5218,0,100   // Evolved Bunny Band
+5219,0,100   // Evolved Drooping Cat
+5220,0,100   // Evolved Pipe
+5221,0,100   // Evolved Pair of Red Ribbon
+5222,0,100   // Evolved Blue Fish
+5223,0,100   // Evolved Big Golden Bell
+5224,0,100   // Evolved Orc Hero Helm
+5225,0,100   // Parade Hat
+5226,0,100   // Mini Propeller
+5227,0,100   // Red Deviruchi Hat
+5228,0,100   // Gray Deviruchi Hat
+5229,0,100   // Brown Deviruchi Hat
+5230,0,100   // Gray Drooping Cat
+5231,0,100   // Brown Drooping Cat
+5232,0,100   // Pink Drooping Cat
+5233,0,100   // Blue Drooping Cat
+5234,0,100   // Yellow Drooping Cat
+5235,0,100   // Brown Beanie
+5236,0,100   // Blue Beanie
+5237,0,100   // Pink Beanie
+5238,0,100   // Red Mage Hat
+5239,0,100   // Gray Mage Hat
+5240,0,100   // Brown Mage Hat
+5241,0,100   // Blue Mage Hat
+5242,0,100   // Yellow Mage Hat
+5243,0,100   // Shafka
+5244,0,100   // Elven Blindfold
+5245,0,100   // Elven Sunglasses
+5246,0,100   // Angelic Helm
+5247,0,100   // Satanic Helm
+5248,0,100   // Robotic Blindfold
+5249,0,100   // Human Blindfold
+5250,0,100   // Robotic Ears
+5251,0,100   // Round Ears
+5252,0,100   // Drooping Ninetail
+5253,0,100   // Lif Doll Hat
+5254,0,100   // Deviling Hat
+5255,0,100   // Triple Poring Hat
+5256,0,100   // Valkyrie Feather Band
+5257,0,100   // Soul Ring
+5258,0,100   // Afro Wig
+5259,0,100   // Elephant Hat
+5260,0,100   // Cookie Hat
+5261,0,100   // Silver Tiara
+5262,0,100   // Golden Tiara
+5263,0,100   // Pagdayaw
+5264,0,100   // Australian Flag Hat
+5265,0,100   // Apple of Archer
+5266,0,100   // Bunny Band
+5267,0,100   // Sakkat
+5268,0,100   // Grand Circlet
+5269,0,100   // Flapping Angel Wing
+5270,0,100   // Autumn Leaves
+5271,0,100   // Phoenix Crown
+5272,0,100   // Tongue Mask
+5273,0,100   // Happy Wig
+5274,0,100   // Shiny Wig
+5275,0,100   // Marvelous Wig
+5276,0,100   // Fantastic Wig
+5277,0,100   // Yellow Bandana
+5278,0,100   // Yellow Ribbon
+5279,0,100   // Refined Drooping Cat
+5280,0,100   // Baphomet Horns
+5281,0,100   // Refined Deviruchi Hat
+5282,0,100   // Europe Baseball Cap
+5283,0,100   // Chick Hat
+5284,0,100   // Water Lily Crown
+5285,0,100   // Vane Hairpin
+5286,0,100   // Pecopeco Hairband
+5287,0,100   // Vacation Hat
+5288,0,100   // Red Glasses
+5289,0,100   // Vanilmirth Hat
+5290,0,100   // Drooping Bunny
+5291,0,100   // Kettle Hat
+5292,0,100   // Dragon Skull
+5293,0,100   // Ramen Hat
+5294,0,100   // Whisper Mask
+5295,0,100   // Golden Bandana
+5296,0,100   // Drooping Nine Tail
+5297,0,100   // Soul Wing
+5298,0,100   // Dokebi's Wig
+5299,0,100   // Pagdayaw
+5300,0,100   // Bullock Helm
+5301,0,100   // Victory Hairband
+5302,0,100   // Flower Lily
+5303,0,100   // Flower Crown
+5304,0,100   // Cap Of Blindness
+5305,0,100   // Pirate Dagger
+5306,0,100   // Freya's Crown
+5307,0,100   // Carmen Miranda's Hat
+5308,0,100   // Brazil National Flag Hat
+5309,0,100   // Wool Mask
+5310,0,100   // Shining Electric Bulb Hairband
+5311,0,100   // Large Hisbiscus
+5312,0,100   // Ayothaya King's Hat
+5313,0,100   // Diadem
+5314,0,100   // Hockey Mask
+5315,0,100   // Observer
+5316,0,100   // Umbrella Hat
+5317,0,100   // Fisherman's Hat
+5318,0,100   // Poring Party Hat
+5319,0,100   // Hello Mother Hat
+5320,0,100   // Champion Wreath
+5321,0,100   // Bandana Merah Putih
+5322,0,100   // Kerchief
+5323,0,100   // Misstrance Crown
+5324,0,100   // Little Angel Doll
+5325,0,100   // Robo Eye
+5326,0,100   // Masquerade C
+5327,0,100   // Refined Helmet of Orc Hero
+5328,0,100   // Evil Wing Ears C
+5329,0,100   // Dark Blindfold C
+5330,0,100   // kRO Drooping Kitty C
+5331,0,100   // Corsair C
+5332,0,100   // Loki Mask
+5333,0,100   // Radio Antenna
+5334,0,100   // Flapping Angeling
+5335,0,100   // Jumping Poring
+5336,0,100   // Guildsman Recruiter Hat
+5337,0,100   // Party Recruiter Hat
+5338,0,100   // Bf Recruiter Hat
+5339,0,100   // Friend Recruiter Hat
+5340,0,100   // Defolty Doll Hat
+5341,0,100   // Glaris Doll Hat
+5342,0,100   // Sorin Doll Hat
+5343,0,100   // Telling Doll Hat
+5344,0,100   // Bennit Doll Hat
+5345,0,100   // W Doll Hat
+5346,0,100   // Gf Recruiter Hat
+5347,0,100   // Ph.D Hat
+5348,0,100   // Big Ribbon
+5349,0,100   // Boy's Cap
+5350,0,100   // Pirate Bandana
+5351,0,100   // Sunflower
+5352,0,100   // Poporing Cap
+5353,0,100   // Hat of the Sun God
+5354,0,100   // Muslim Hat M
+5355,0,100   // Selendang
+5356,0,100   // Festival Pumpkin Hat
+5357,0,100   // Wings Of Victory
+5358,0,100   // Peco Ears
+5359,0,100   // Ship Captain Hat
+5360,0,100   // Hyuke's Black Cat Ears
+5361,0,100   // Gangster Scarf
+5362,0,100   // Ninja Scroll
+5363,0,100   // Helm Of Abyss
+5364,0,100   // Evil Snake Lord Hat
+5365,0,100   // Magnolia Hat
+5366,0,100   // Love Dad Bandana
+5367,0,100   // Hyegun Hat
+5368,0,100   // White Wing
+5369,0,100   // Dark Wing
+5370,0,100   // Orchid Hairband
+5371,0,100   // Judge Hat
+5372,0,100   // Koneko Hat
+5373,0,100   // Dark Randgris Helm
+5374,0,100   // Gigantic Majestic Goat
+5375,0,100   // Orc Hero Headdress
+5376,0,100   // Flying Evil Wing
+5377,0,100   // Gentleman's Pipe
+5378,0,100   // Bunny Top Hat
+5379,0,100   // Tam
+5380,0,100   // Fish Head Hat
+5381,0,100   // Santa Poring Hat
+5382,0,100   // Bell Ribbon
+5383,0,100   // Hunter's Cap
+5384,0,100   // Twin Pompom By JB
+5385,0,100   // Yoyo Hat
+5386,0,100   // Ayam
+5387,0,100   // Neko Mimi Kafra
+5388,0,100   // Snake Head Hat
+5389,0,100   // Angel Spirit
+5390,0,100   // Frozen Twin Pompom
+5391,0,100   // Toast
+5392,0,100   // Luoyang NewYear Hat
+5393,0,100   // Love Valentine's Hat
+5394,0,100   // Bubblegum
+5395,0,100   // Striped Hat
+5396,0,100   // Jasper Crest
+5397,0,100   // Scuba Gear
+5398,0,100   // Bone Head
+5399,0,100   // Mandragora Cap
+5400,0,100   // Fox Hat
+5401,0,100   // Black Frame Glasses
+5402,0,100   // Mischievous Fairy
+5403,0,100   // Fish In Mouth
+5404,0,100   // Blue Ribbon
+5405,0,100   // Filir Hat
+5406,0,100   // Academy Freshman Hat
+5407,0,100   // Academy Completion Hat
+5408,0,100   // Old Bandana
+5409,0,100   // Purple Cowboy Hat
+5410,0,100   // Brown Paperbag Hat
+5411,0,100   // White Snake Hat
+5412,0,100   // Sweet Candy
+5413,0,100   // Pop Corn Hat
+5414,0,100   // Camp Fire Hat
+5415,0,100   // Poring Cake Hat
+5416,0,100   // Beer Hat
+5417,0,100   // Crown Parrots
+5418,0,100   // Legionnaire Hat
+5419,0,100   // Leaves Of Grass
+5420,0,100   // Mask Of Ifrit
+5421,0,100   // Ears Of Ifrit
+5422,0,100   // Linguistic Book Hat
+5423,0,100   // I Love China
+5424,0,100   // Fanta Orange Can Hat
+5425,0,100   // Fanta Grape Can Hat
+5426,0,100   // Karada Meguricha Hat
+5427,0,100   // Black Tea Kochakaden Hat
+5428,0,100   // RWC Anniversary Bread Envelope
+5429,0,100   // Bogy Cap
+5430,0,100   // Torch Cap
+5431,0,100   // Chicken Hat
+5432,0,100   // bRO 4th Anniversary Hat
+5433,0,100   // Golden Laurel
+5435,0,100   // Red Minstrel Hat
+5436,0,100   // Bride's Corolla
+5437,0,100   // Fairy Flower
+5438,0,100   // Cute Green Ribbon
+5439,0,100   // Cute Red Ribbon
+5440,0,100   // Cute Blue Ribbon
+5441,0,100   // Cute White Ribbon
+5442,0,100   // Necktie
+5443,0,100   // Statue Of Baby Angel
+5444,0,100   // Hair Brush
+5445,0,100   // Candy Cane In Mouth
+5446,0,100   // Catfoot Hairpin
+5447,0,100   // Frog Hat
+5448,0,100   // Soloplay Box1
+5449,0,100   // Soloplay Box2
+5450,0,100   // Solar Hat
+5451,0,100   // RWC 2008 Dragon Helm Gold
+5452,0,100   // RWC 2008 Dragon Helm Silver
+5453,0,100   // RWC 2008 Dragon Helm Copper
+5454,0,100   // Puppy Hat
+5455,0,100   // Decorative Geographer
+5456,0,100   // Summer Hat
+5457,0,100   // Moon Rabbit Hat
+5458,0,100   // Pinwheel Hat
+5459,0,100   // Drooping Bunny
+5460,0,100   // Evolved Dragon Skull Hat
+5461,0,100   // Evolved Whisper Mask
+5462,0,100   // Spiked Scarf
+5463,0,100   // Rainbow Scarf
+5464,0,100   // Zaha Doll Hat
+5476,0,100   // Grand Peco Hairband
+5477,0,100   // Brazilian Flag Hat
+5478,0,100   // Classic Hat
+5479,0,100   // Shaman's Hair Decoration
+5480,0,100   // Bijofnil Wings
+5481,0,100   // Hermode Cap
+5482,0,100   // Dark Knight Mask
+5483,0,100   // Odin Mask
+5485,0,100   // Tiger Face
+5486,0,100   // Anniversary Hat
+5487,0,100   // Poring Cake Hat
+5488,0,100   // Twin Santa Hat
+5489,0,100   // Love Daddy Hat
+5490,0,100   // Anubis Helm
+5491,0,100   // Bandit Hat
+5492,0,100   // Student Cap
+5493,0,100   // Ulle's Cap
+5494,0,100   // Sphinx Hat
+5495,0,100   // Power Of Thor
+5496,0,100   // Dice Hat
+5497,0,100   // King Tiger Doll Hat
+5498,0,100   // Wandering Wolf Helm
+5499,0,100   // Pizza Hat
+5500,0,100   // Icecream Hat
+5501,0,100   // Pirate's Pride
+5502,0,100   // Necromancer's Hood
+5503,0,100   // Magic Rabit Hat
+5504,0,100   // Wedding Weil
+5505,0,100   // Asara Fairy Hat
+5506,0,100   // Blue Night Cap
+5507,0,100   // Pink Night Cap
+5508,0,100   // Shark Hat
+5509,0,100   // Sting hat
+5510,0,100   // Shower Cap
+5511,0,100   // Samambaia
+5512,0,100   // Aquarius Diadem
+5513,0,100   // Aquarius Crown
+5514,0,100   // Pisces Diadem
+5515,0,100   // Pisces Crown
+5516,0,100   // hawk Eyes
+5517,0,100   // Hawk Eyes
+5518,0,100   // Gigantic Majestic Goat
+5519,0,100   // Peacock Feather
+5520,0,100   // Rabbit Earplugs
+5521,0,100   // Angry Mouth
+5522,0,100   // Fanta Zero Lemon Hat
+5523,0,100   // Sakura Mist Hat
+5524,0,100   // Sakura Milk Tea Hat
+5525,0,100   // Flower Hat
+5526,0,100   // Tanigumi Girl Doll
+5527,0,100   // Lunatic Hat
+5528,0,100   // Frog King Hat
+5529,0,100   // Satanic Bone Helm
+5530,0,100   // Raven Cap
+5531,0,100   // Baby Dragon Hat
+5532,0,100   // Pirate Dagger
+5533,0,100   // Emperor Wreath
+5535,0,100   // Side Cap
+5536,0,100   // Spare Card
+5537,0,100   // Kwati Hat
+5538,0,100   // Tucan Hat
+5539,0,100   // Jaguar Hat
+5540,0,100   // Freyja SCirclet7
+5541,0,100   // Freyja SCirclet30
+5542,0,100   // Freyja SCirclet60
+5543,0,100   // Freyja SCirclet90
+5544,0,100   // Time Keeper Hat
+5545,0,100   // Aries Diadem
+5546,0,100   // Aries Crown
+5547,0,100   // RJC Katusa Flower
+5548,0,100   // Scarlet Rose
+5549,0,100   // Taurus Diadem
+5550,0,100   // Taurus Crown
+5552,0,100   // Festival Grand Circlet
+5553,0,100   // Festival Bunny Band
+5554,0,100   // Octopus Hat
+5555,0,100   // Leaf Cat Hat
+5556,0,100   // Seal Hat
+5557,0,100   // Wild Rose Hat
+5558,0,100   // Luxury Hat
+5559,0,100   // Piece Of White Cloth
+5560,0,100   // Bullock Helm
+5561,0,100   // Magic Rabbit Hat
+5562,0,100   // Luxurious Wedding Veil
+5564,0,100   // Crown of Deceit
+5565,0,100   // Dragon Arhat Mask
+5566,0,100   // Tiger Arhat Mask
+5567,0,100   // Bright Fury
+5568,0,100   // Rabbit Bonnet
+5569,0,100   // Gemini Diadem
+5570,0,100   // Gemini Crown
+5572,0,100   // Savage Babe Hat
+5573,0,100   // Dokebi Horn
+5574,0,100   // Well-Chewed Pencil
+5575,0,100   // Rice Ball Hat
+5577,0,100   // Dark Knight Mask
+5578,0,100   // Voyage_Hat
+5579,0,100   // Wanderer's Sakkat
+5581,0,100   // Cancer Diadem
+5582,0,100   // Cancer Crown
+5583,0,100   // Eden Team Hat
+5584,0,100   // Majestic Evil Horns
+5585,0,100   // Rune Cloth Circlet
+5586,0,100   // Mosquito Coil
+5587,0,100   // Mosquito Coil
+5590,0,100   // Poring Cake Hat
+5592,0,100   // Sigrun's Wings
+5593,0,100   // Rabbit Bonnet
+5594,0,100   // Donut In Mouth
+5596,0,100   // 4Leaf Clover In Mouth
+5597,0,100   // Bubble Gum In Mouth
+5600,0,100   // Brazil Twin Ribbon
+5603,0,100   // RTC First Place
+5604,0,100   // RTC Second Place
+5605,0,100   // RTC Third Place
+5653,0,100   // Darkness Helm
+5654,0,100   // Holy Marching Hat
+5658,0,100   // Imp Hat
+5659,0,100   // Sleeper Hat
+5660,0,100   // Gryphon Hat
+5664,0,100   // Filir's Pinions
+5665,0,100   // Shaman Hat
+5666,0,100   // Golden Crown
+5667,0,100   // Skull Hood
+5668,0,100   // Weird Pumpkin Hat
+5671,0,100   // Drooping Morocc Minion
+5681,0,100   // Green Ribbon
+5682,0,100   // Triangle Rune Cap
+5683,0,100   // Baphomet Horns
+5684,0,100   // Ornate Crown
+5685,0,100   // Army Cap
+5686,0,100   // Nice Hat Feather
+5687,0,100   // Orc Helm
+5690,0,100   // Red Wing Hat
+5691,0,100   // Sailor's Bandana
+5692,0,100   // Sea Cat Hat
+5738,0,100   // Snowman Hat
+5741,0,100   // Eternal Egg Shell
+5742,0,100   // Rudolph Santa Hat
+5770,0,100   // Splash Hat
+5771,0,100   // Family Hat
+5775,0,100   // Choco Donut In Mouth
+5781,0,100   // Persika
+5786,0,100   // Ancient Elven Ear
+5788,0,100   // 3D Glasses
+5792,0,100   // Fish Pin
+5793,0,100   // Ribbon Of Life
+5794,0,100   // 3D Glasses
+5796,0,100   // Cheer Scarf
+5797,0,100   // Cheer Scarf2
+5798,0,100   // Cheer Scarf3
+5799,0,100   // Cheer Scarf4
+5800,0,100   // Blush of Groom
+5801,0,100   // Red Tailed Ribbon
+5802,0,100   // Upgraded Elephant Hat
+5803,0,100   // Love Flower Hat
+5804,0,100   // Pirate Eye Bandage
+5805,0,100   // Victorious Coronet
+5806,0,100   // Poet Natalie's Hat
+5807,0,100   // October Fest Cap
+5808,0,100   // Dark Bacilium
+5809,0,100   // Boom Boom Hat
+5810,0,100   // Ph.D Hat V
+5811,0,100   // Santa's Beard
+5812,0,100   // Hat Of Expert
+5815,0,100   // Classic Hat
+5816,0,100   // Purple Cowboy Hat
+5818,0,100   // Carnival Hat
+5819,0,100   // Carnival Circlet
+5821,0,100   // Gold Tulip Hairpin
+5822,0,100   // Love Chick Hat
+5824,0,100   // Fools Day Hat
+5826,0,100   // Valkyrie Helmet
+5827,0,100   // Book File Hat
+5846,0,100   // Buzzy Ball Gum
+5851,0,100   // Summer Knight
+5856,0,100   // Passion FB Hat
+5857,0,100   // Cool FB Hat
+5858,0,100   // Victory FB Hat
+5859,0,100   // Glory FB Hat
+18500,0,100   // Cheer Scarf6
+18501,0,100   // Cheer Scarf8
+18502,0,100   // Cheer Scarf10
+18503,0,100   // Small Devil Horns
+18505,0,100   // Umbala Spirit
+18506,0,100   // Hattah Black
+18507,0,100   // Elven Ears
+18539,0,100   // Skull Cap
+18595,0,100   // Horn of Ancient
+18596,0,100   // Sprout Hat
+18597,0,100   // Mercury Riser
+18600,0,100   // Cat Ear Beret
+18612,0,100   // White Musang Hat
+18613,0,100   // Black Musang Hat
+18620,0,100   // Heart Eyepatch
+18656,0,100   // Witch's Pumpkin Hat

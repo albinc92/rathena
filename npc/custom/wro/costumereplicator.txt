@@ -1,0 +1,72 @@
+dew_in01,25,47,3	script	Costume Replicator	10078,{
+
+	cutin "ep15_2_brt_2",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hi! I am the Headgear Replicator! I can create costume replicas of any headgear you present me! How neat is that!?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Do you want to create a replica of an item on this fine day?";
+	set .@menu, select("Create replica:Cancel");
+	if (.@menu == 2) {
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Very well. Goodbye!";
+		close2;
+		cutin "", 255;
+		end;
+	}
+	if (.@menu == 1) {
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Creating a replica costs 100,000 Zeny. Is that okay?";
+		set .@menu, select("Yes:Cancel");
+		if (.@menu == 2) {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Very well. Goodbye!";
+			close2;
+			cutin "", 255;
+			end;
+		}
+		if (.@menu == 1) {
+			next;
+			set .@cost, 100000;
+			if(Zeny < .@cost) {
+				mes "["+strnpcinfo(1)+"]";
+				mes "I'm afraid you can't pay for my services. Please return later.";
+				close2;
+				cutin "", 255;
+				end;
+			}
+			mes "["+strnpcinfo(1)+"]";
+			mes "Great! Which item would you like me to replicate?";
+			next;
+			getinventorylist;
+			for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+				if(getiteminfo(@inventorylist_id[.@i],5)==256 || getiteminfo(@inventorylist_id[.@i],5)==512 || getiteminfo(@inventorylist_id[.@i],5)==1 || getiteminfo(@inventorylist_id[.@i],5)==768 || getiteminfo(@inventorylist_id[.@i],5)==513 || getiteminfo(@inventorylist_id[.@i],5)==257 || getiteminfo(@inventorylist_id[.@i],5)==769) {
+					if(getiteminfo(@inventorylist_id[.@i],2)==4) {
+						.@menu$ = .@menu$ + (.@i > 0 ? ":" : "") + getitemname(@inventorylist_id[.@i]);
+						set .@replicaindex[.@j],.@i;
+						.@j++;
+					}
+				}
+			}
+			if(.@menu$ == "") {
+				mes "["+strnpcinfo(1)+"]";
+				mes "Oh... I'm afraid you do not have anything for me to work with. Please come back later.";
+				close2;
+				cutin "", 255;
+				end;
+			}
+			.@i = select( .@menu$ ) - 1;
+			set Zeny, Zeny-.@cost;
+			getitem2 (@inventorylist_id[.@replicaindex[.@i-1]] + 41000),1,1,0,0,254,0,1&0xffff,(1>>16)&0xffff;
+			mes "["+strnpcinfo(1)+"]";
+			mes "There we go. Enjoy your costume!";
+			close2;
+			cutin "", 255;
+			end;
+		}
+	}
+
+}

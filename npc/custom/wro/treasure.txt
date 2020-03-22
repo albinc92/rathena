@@ -1,0 +1,72 @@
+//===== Immortals-RO Script ==================================
+//= Treasure Box Spawner
+//===== By: ==================================================
+//= Exaeon
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Spawns random treasure chests that drop sweet items.
+//===== Changelogs: ==========================================
+//= 1.0 Initial version
+//============================================================
+royal,0,0,3	script	Treasure Chest#1	10005,{
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can open the chest.";
+        end;
+    }
+
+    setarray .@items[0],670,671,672,673,674,675,676,677,718,719,720,721,722,723,725,726,727,728,729,730,731,732,969,12103,40006,40008;
+    set .@MAX_ITEMS, 10;
+    progressbar "0xffff00",3;
+	specialeffect EF_COIN;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 5; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+
+OnInit:
+	setarray .maps$[0],"abyss_03","ama_dun03","ayo_dun02","anthell02","beach_dun","abbey02","abbey03","gef_dun01",
+	                    "gef_dun02","gl_chyard","gon_dun03","prt_maze03","ein_dun02","mosk_dun03","odin_tem03",
+	                    "pay_dun04","prt_sewb4","moc_pryd04","moc_pryd06","ra_san05","kh_dun02","lou_dun03","jupe_core",
+	                    "in_sphinx5","treasure02","thor_v03","xmas_dun02","tur_dun05";
+	unitwarp getnpcid(0),.maps$[rand(0,getarraysize(.maps$)-1)],-1,-1;
+	//getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	//announce .@map$ + " " + .@x_npc + ", " + .@y_npc,bc_all,"0x70dbdb";
+	end;
+
+}
+
+// Duplicates
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#2	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#3	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#4	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#5	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#6	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#7	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#8	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#9	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#10	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#11	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#12	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#13	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#14	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#15	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#16	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#17	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#18	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#19	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#20	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#21	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#22	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#23	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#24	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#25	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#26	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#27	10005
+royal,0,0,3	duplicate(Treasure Chest#1)	Treasure Chest#28	10005

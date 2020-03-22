@@ -3,3 +3,5 @@
 // Structure of Database:
 // ID:ID:ID:ID,{ Script }
 
+// WarboundRO
+4488:4169,{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bCastrate,-10; }

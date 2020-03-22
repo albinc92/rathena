@@ -6743,11 +6743,11 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			break;
 #ifndef RENEWAL
 		case HW_GRAVITATION:
-			md.damage = 200 + 200 * skill_lv;
+			md.damage = 1200 + 1200 * skill_lv;
 			md.dmotion = 0; //No flinch animation
 			break;
 		case PA_PRESSURE:
-			md.damage = 500 + 300 * skill_lv;
+			md.damage = 3000 + 1800 * skill_lv;
 			break;
 #endif
 		case PA_GOSPEL:
@@ -6782,7 +6782,11 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			}
 #else
 			if(tstatus->vit+sstatus->int_) //crash fix
-				md.damage = (int)((int64)7*tstatus->vit*sstatus->int_*sstatus->int_ / (10*(tstatus->vit+sstatus->int_)));
+			    if(tstatus->race == RC_PLAYER) {
+                    md.damage = (int)((int64)7*tstatus->vit*sstatus->int_*sstatus->int_ / (4*(tstatus->vit+sstatus->int_)));
+			    } else {
+                    md.damage = (int)((int64)7*tstatus->vit*sstatus->int_*sstatus->int_ / (10*(tstatus->vit+sstatus->int_)));
+			    }
 			else
 				md.damage = 0;
 			if (tsd) md.damage>>=1;

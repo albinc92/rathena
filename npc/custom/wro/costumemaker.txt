@@ -1,0 +1,291 @@
+dew_in01,16,49,4	script	Costume Designer	451,{
+	cutin "ep13_heslanta",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Grreeetiiiinngggsss... nooormaaan...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Meeee maake beaaautifuul gaaarmeeent costuumes...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Whiiiich oneee aaareee youuu looookiing fooor... .?";
+	next;
+	goto L_Main;
+
+L_Main:
+	set .@menu, select("Archangel Wings:Fallen Angel Wings:Seraph Wings:Golden Wings:Happiness Wings:Uriel's Wings:Poring Bag:Cupids Pink Wings:Kirin Wings:Little Devil Wings:Great Devil Wings:Wings of Michael:Sword Wings:Blue Fairy Wings:Thanatos Sword");
+	if (.@menu == 1) {
+		goto L_Archangel;
+	}
+	if (.@menu == 2) {
+		goto L_Fallenangel;
+	}
+	if (.@menu == 3) {
+		goto L_Seraph;
+	}
+	if (.@menu == 4) {
+		goto L_Golden;
+	}
+	if (.@menu == 5) {
+		goto L_Happiness;
+	}
+	if (.@menu == 6) {
+		goto L_Uriel;
+	}
+	if (.@menu == 7) {
+		goto L_Poring;
+	}
+	if (.@menu == 8) {
+		goto L_Cupid;
+	}
+	if (.@menu == 9) {
+		goto L_Kirin;
+	}
+	if (.@menu == 10) {
+		goto L_Littledevil;
+	}
+	if (.@menu == 11) {
+		goto L_Greatdevil;
+	}
+	if (.@menu == 12) {
+		goto L_Michael;
+	}
+	if (.@menu == 13) {
+		goto L_Swordwing;
+	}
+	if (.@menu == 14) {
+		goto L_Bluefairy;
+	}
+	if (.@menu == 15) {
+		goto L_Thanatos;
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+L_Archangel:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Raaadiaaant!";
+	next;
+	callfunc "listitems",20500,10000000,5,916,200,982,5,7162,250,938,50,7200,50;
+	end;
+
+L_Michael:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Raaadiaaant!";
+	next;
+	callfunc "listitems",20516,10000000,5,916,200,982,5,7162,250,938,50,7200,50;
+	end;
+
+L_Bluefairy:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Raaadiaaant!";
+	next;
+	callfunc "listitems",20511,10000000,5,720,120,978,5,1000,250,1059,50,7355,50;
+	end;
+
+L_Thanatos:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Raaadiaaant!";
+	next;
+	callfunc "listitems",20514,10000000,5,7315,200,7022,1,7098,250,7297,5,930,50;
+	end;
+
+L_Swordwing:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Raaadiaaant!";
+	next;
+	callfunc "listitems",20510,10000000,5,999,200,7023,10,969,10,7507,50,7317,50;
+	end;
+
+L_Fallenangel:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Ooooohh...";
+	next;
+	callfunc "listitems",20764,10000000,5,916,200,983,5,7511,50,938,50,7200,50;
+	end;
+
+L_Seraph:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Maaarveeelooouss!";
+	next;
+	callfunc "listitems",20746,10000000,5,7440,250,975,5,7563,200,938,50,7200,50;
+	next;
+	end;
+
+L_Golden:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Faaantaaaastic!";
+	next;
+	callfunc "listitems",20727,10000000,5,7435,250,976,5,7448,100,938,50,7200,50;
+	next;
+	end;
+
+L_Happiness:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Spleeendid!";
+	next;
+	callfunc "listitems",20761,10000000,5,7101,200,1013,5,622,250,938,50,7200,50;
+	end;
+
+L_Uriel:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Wooooonderfuuuuul!";
+	next;
+	callfunc "listitems",2573,10000000,8,949,100,7440,250,982,2,975,2,7162,125,7563,125,938,50,7200,50;
+	end;
+
+L_Poring:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Sweeeeet!";
+	next;
+	callfunc "listitems",20507,5000000,4,16001,1,975,3,982,3,909,100;
+	end;
+
+L_Cupid:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Cuuuuuutee!";
+	next;
+	callfunc "listitems",20504,7500000,5,2254,1,975,3,982,3,938,50,7200,50;
+	end;
+
+L_Kirin:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Eeeedgyyyy!";
+	next;
+	callfunc "listitems",20737,8000000,5,1027,200,913,50,963,250,938,50,7200,50;
+	end;
+
+L_Littledevil:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Spooookyyy!";
+	next;
+	callfunc "listitems",20502,7500000,5,1039,200,2255,1,1038,250,938,50,7200,50;
+	end;
+
+L_Greatdevil:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Creeeeepyyyy!";
+	next;
+	callfunc "listitems",20762,10000000,5,7006,200,2507,2,7221,250,938,50,7200,50;
+	end;
+
+OnEnd:
+	changelook LOOK_ROBE, @defaultLook;
+	end;
+
+}
+
+
+
+// *******************************
+// Turn in and preview function
+// *******************************
+
+// Function arguments are the following:
+// <ItemRewardID>,<ZenyCost>,<NumberOfItemsListed>,<ItemID1>,<ItemAmount1>,...<ItemIDX>,<ItemAmountX>
+function	script	listitems	{
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Fooor ^0000ff" + getitemname(getarg(0)) + "^000000 youu muust briiing mee:";
+
+	// Zeny count
+	if(getarg(1)>0) {
+		if(Zeny>=getarg(1)) {
+			mes "^009900" + getarg(1) + " Zeny^000000";
+		}
+		else if(Zeny<getarg(1)) {
+			mes "^ff0000" + getarg(1) + " Zeny^000000";
+		}
+	}
+
+	// Item count
+	if(getarg(2)>0) {
+		set .@currID, 3;
+		set .@currAmnt, 4;
+		for( set .@i,1; .@i <= getarg(2); set .@i,.@i+1 ) {
+			if(countitem(getarg(.@currID)) < getarg(.@currAmnt)) {
+				mes "^ff0000" + countitem(getarg(.@currID)) + " / " + getarg(.@currAmnt) + " " + getitemname(getarg(.@currID)) + "^000000";
+			}
+			else if(countitem(getarg(.@currID)) >= getarg(.@currAmnt)) {
+				mes "^009900" + getarg(.@currAmnt) + " / " + getarg(.@currAmnt) + " " + getitemname(getarg(.@currID)) + "^000000";
+			}
+			set .@currID, .@currID+2;
+			set .@currAmnt, .@currAmnt+2;
+		}
+	}
+
+	next;
+
+OnSelect:
+	@defaultLook = getlook(LOOK_ROBE);
+	set .@menu, select("Deal:Preview:Cancel");
+		// Deal
+		if(.@menu==1) {
+			// Check zeny arg and amount
+			if(getarg(1)>0) {
+				if(Zeny<getarg(1)) {
+					goto L_TradeFail;
+				}
+			}
+
+			// Check item nbrs arg and items
+			if(getarg(2)>0) {
+				set .@currID, 3;
+				set .@currAmnt, 4;
+				for( set .@i,1; .@i <= getarg(2); set .@i,.@i+1 ) {
+					if(countitem(getarg(.@currID)) < getarg(.@currAmnt)) {
+						goto L_TradeFail;
+					}
+					set .@currID, .@currID+2;
+					set .@currAmnt, .@currAmnt+2;
+				}
+			}
+
+			goto L_TradeSuccess;
+		}
+
+		// Preview
+		if(.@menu==2) {
+			deltimer strnpcinfo(0)+"::OnEnd";
+			addtimer 1,strnpcinfo(0)+"::OnEnd";
+			changelook LOOK_ROBE, getiteminfo(getarg(0),11);
+			mes "["+strnpcinfo(1)+"]";
+			mes "Thiiiis is hoow it loooks liiike~~";
+			next;
+			goto OnSelect;
+		}
+
+		// Cancel
+		if(.@menu==3) {
+			changelook LOOK_ROBE, @defaultLook;
+			close2;
+			cutin "", 255;
+			end;
+		}
+	end;
+
+L_TradeFail:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Youuu doon't haaave eeeverythiiing requiiireeed...";
+	close2;
+	cutin "", 255;
+	end;
+
+L_TradeSuccess:
+	set Zeny,Zeny-getarg(1);
+	set .@currID, 3;
+	set .@currAmnt, 4;
+	for( set .@i,1; .@i <= getarg(2); set .@i,.@i+1 ) {
+		delitem getarg(.@currID),getarg(.@currAmnt);
+		set .@currID, .@currID+2;
+		set .@currAmnt, .@currAmnt+2;
+	}
+	getitem getarg(0),1;
+	specialeffect2 98;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Greeeeaat..!";
+	close2;
+	cutin "", 255;
+	end;
+
+}

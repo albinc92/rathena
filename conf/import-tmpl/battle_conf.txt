@@ -1,0 +1,248 @@
+// Equipment Switch (Note 1)
+// Requires: 2017-02-08bRagexeRE or later
+feature.equipswitch: off
+
+// Homunculues Autofeeding (Note 1)
+// Requires: 2017-09-20bRagexeRE or later
+feature.homunculus_autofeed: off
+
+// Attendance System (Note 1)
+// Requires: 2018-03-07bRagexeRE or later
+feature.attendance: off
+
+// Private Airship System (Note 1)
+// Requires: 2018-03-21aRagexeRE or later
+feature.privateairship: off
+
+// Item drop rates (Note 2)
+
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 20000
+item_rate_common_boss: 20000
+item_rate_common_mvp: 20000
+item_drop_common_min: 1
+item_drop_common_max: 10000
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 20000
+item_rate_heal_boss: 20000
+item_rate_heal_mvp: 20000
+item_drop_heal_min: 1
+item_drop_heal_max: 10000
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 20000
+item_rate_use_boss: 20000
+item_rate_use_mvp: 20000
+item_drop_use_min: 1
+item_drop_use_max: 10000
+
+// The rate at which equipment is dropped.
+item_rate_equip: 20000
+item_rate_equip_boss: 20000
+item_rate_equip_mvp: 20000
+item_drop_equip_min: 1
+item_drop_equip_max: 10000
+
+// The rate at which cards are dropped
+item_rate_card: 30000
+item_rate_card_boss: 15000
+item_rate_card_mvp: 10000
+item_drop_card_min: 1
+item_drop_card_max: 10000
+
+// The rate adjustment for the MVP items that the MVP gets directly in their inventory
+// Mode: 0 - official order, 1 - random order, 2 - all items
+item_rate_mvp: 50000
+item_drop_mvp_min: 1
+item_drop_mvp_max: 10000
+item_drop_mvp_mode: 0
+
+// The rate adjustment for card-granted item drops.
+item_rate_adddrop: 50000
+item_drop_add_min: 1
+item_drop_add_max: 10000
+
+// Rate adjustment for Treasure Box drops (these override all other modifiers)
+item_rate_treasure: 50000
+item_drop_treasure_min: 1
+item_drop_treasure_max: 10000
+
+// Use logarithmic drops? (Note 1)
+// Logarithmic drops scale drop rates in a non-linear fashion using the equation
+// Droprate(x,y) = x * (5 - log(x)) ^ (ln(y) / ln(5))
+// Where x is the original drop rate and y is the drop_rate modifier (the previously mentioned item_rate* variables)
+// Use the following table for an idea of how the rate will affect drop rates when logarithmic drops are used:
+// Y: Original Drop Rate
+// X: Rate drop modifier (eg: item_rate_equip)
+//  X\Y | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+// -----+---------------------------------------------------------------
+//   50 | 0.01 0.01  0.03  0.06  0.11  0.30  0.62  1.30  3.49  7.42 15.92
+//  100 | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+//  200 | 0.02 0.04  0.09  0.18  0.35  0.84  1.61  3.07  7.16 13.48 25.13
+//  500 | 0.05 0.09  0.22  0.40  0.74  1.65  3.00  5.40 11.51 20.00 33.98
+// 1000 | 0.10 0.18  0.40  0.73  1.30  2.76  4.82  8.28 16.47 26.96 42.69
+// 2000 | 0.20 0.36  0.76  1.32  2.28  4.62  7.73 12.70 23.58 36.33 53.64
+// 5000 | 0.50 0.86  1.73  2.91  4.81  9.11 14.45 22.34 37.90 53.91 72.53
+//10000 | 1.00 1.67  3.25  5.28  8.44 15.24 23.19 34.26 54.57 72.67 91.13
+//20000 | 2.00 3.26  6.09  9.59 14.83 25.49 37.21 52.55 77.70 97.95  100%
+//50000 | 5.00 7.87 13.98 21.12 31.23 50.31 69.56 92.48  100%  100%  100%
+item_logarithmic_drops: yes
+
+// Makes your LUK value affect drop rates on an absolute basis.
+// Setting to 100 means each luk adds 0.01% chance to find items
+// (regardless of item's base drop rate).
+drops_by_luk: 116
+
+// The rate of monsters dropping ores by the skill Ore Discovery (Default is 100)
+finding_ore_rate: 10000
+
+// Change attacker's direction to face opponent on every attack? (Note 3)
+// NOTE: On official servers knockback of some skills like Firewall is always based on the
+// last direction walked. Even when attacking in a completely different direction, the
+// knockback direction won't change, so e.g. if you walk north and then attack an enemy to
+// the south you will still be knocked back to the south by Firewall. Immobile monsters
+// will always be knocked back to the south as their default direction is north.
+attack_direction_change: 1
+
+// If both the attacker and the target are on the same tile, should the target be knocked back to the left?
+// Official behavior is "yes", setting this to "no" will knock the target back behind the attacker.
+knockback_left: no
+
+// Visible area size (how many squares away from a player they can see)
+area_size: 20
+
+// Maximum walk path (how many cells a player can walk going to cursor)
+max_walk_path: 20
+
+// Will tuxedo and wedding dresses be shown when worn? (Note 1)
+wedding_modifydisplay: yes
+
+// Show rAthena version to users when the login?
+display_version: no
+
+// Do we allow to change guilde emblem during woe_time?
+emblem_woe_change: no
+
+// When a player teleports, changes maps, or logs in, will they face the direction they were facing before warped?
+// Official: Disabled, players always face North.
+spawn_direction: yes
+
+// Max level for regular Homunculus
+homunculus_max_level: 250
+
+// Can any player equip any item regardless of the gender restrictions
+// NOTE: Wedding Rings and Whips/Musical Instruments will check gender regardless of setting.
+ignore_items_gender: no
+
+// PK Server Mode.  Turns entire server pvp(excluding towns). Experience loss is doubled if killed by another player.
+// When players hunt monsters over 20 levels higher, they will receive 15% additional exp., and 25% chance of receiving more items.
+// There is a nopvp.txt for setting up maps not to have pk on in this mode.  Novices cannot be attacked and cannot attack.
+// Normal pvp counter and rank display are disabled as well.
+// Note: If pk_mode is set to 2 instead of 1 (yes), players will receive a
+//   manner penalty of 5 each time they kill another player (see manner_system
+//   config to adjust how this will affect players)
+//pk_mode: 1
+
+// Delay between using @duel in minutes
+duel_time_interval: 0
+
+// Zeny from mobs
+zeny_from_mobs: yes
+
+// Maximum HPs depending on base level. Default values are:
+// Lv 99:  330000
+// Lv150:  660000
+// Lv175: 1100000
+max_hp_lv99: 330000
+max_hp_lv150: 660000
+max_hp: 2750000
+
+// Maximum atk speed. (Default 190, Highest allowed 199)
+max_aspd: 193
+
+// Maximum params/stats for each class. (str, agi, vit, int, dex, and luk)
+// 'max_parameter' for novice, non-trans, non-baby, and non-3rd classes
+// 'max_trans_parameter' for trans classes (non-3rd trans classes)
+// 'max_third_parameter' for 3rd classes (regular/non-trans) except baby 3rd clasess
+// 'max_third_trans_parameter' for 3rd trans classes
+// 'max_baby_parameter' for baby classes except baby 3rd classes
+// 'max_baby_third_parameter' for baby 3rd classes only
+// 'max_extended_parameter' for extended 2nd class (Kagerou/Oboro and Rebellion)
+// For mor specific/advanced option, see 'db/[pre-]re/job_params_db.txt'
+max_parameter: 250
+max_trans_parameter: 250
+max_baby_parameter: 200
+max_extended_parameter: 250
+
+// Display the drained hp/sp values from normal attacks? (Ie: Hunter Fly card)
+show_hp_sp_drain: yes
+
+// Area of Bowling Bash chain reaction
+// 0: Use official gutter line system
+// 1: Gutter line system without demi gutter bug
+// 2-20: Area around caster (2 = 5x5, 3 = 7x7, 4 = 9x9, ..., 20 = 41x41)
+// Note: If you knock the target out of the area it will only be hit once and won't do splash damage
+bowling_bash_area: 1
+
+// Is the knockback direction for Cart Revolution always West? (Note 1)
+// On official servers it will knock the target always to the West. If disabled it will knock the target backwards.
+cart_revo_knockback: no
+
+// Valid range of dyes and styles on the client.
+min_hair_style: 0
+max_hair_style: 29
+min_hair_color: 0
+max_hair_color: 8
+min_cloth_color: 0
+max_cloth_color: 34
+min_body_style: 0
+max_body_style: 1
+
+// The rate a homunculus will get friendly by feeding it. (Note 2)
+homunculus_friendly_rate: 10000
+
+// Minimum intimacy to evo the homunculus
+homunculus_evo_intimacy_need: 91100
+
+// Does autoloot work, when a monster is killed by homunculus only?
+homunculus_autoloot: yes
+
+// Max level for regular Homunculus
+homunculus_max_level: 250
+
+// Adjustment for the natural rate of resistance from status changes.
+// If 50, status defense is halved, and you need twice as much stats to block
+// them (eg: 200 vit to completely block stun)
+pc_status_def_rate: 40
+mob_status_def_rate: 100
+
+// Turn this on to allow a player to level up more than once from a kill. (Note 1)
+multi_level_up: yes
+
+// Maximum allowed 'level' value that can be sent in unit packets.
+// Use together with the aura_lv setting to tell when exactly to show the aura.
+// NOTE: You also need to adjust the client if you want this to work.
+// NOTE: Default is 99. Values above 127 will probably behave incorrectly.
+// NOTE: If you don't know what this does, don't change it!!!
+max_lv: 250
+
+// Level required to display an aura.
+// NOTE: This assumes that sending max_lv to the client will display the aura.
+// NOTE: aura_lv must not be less than max_lv.
+// Example: If max_lv is 99 and aura_lv is 150, characters with level 99~149
+//          will be sent as being all level 98, and only characters with level
+//          150 or more will be reported as having level 99 and show an aura.
+aura_lv: 250
+
+// When a player dies, how should we penalize them?
+// 0 = No penalty.
+// 1 = Lose % of current level when killed.
+// 2 = Lose % of total experience when killed.
+death_penalty_type: 1
+
+// Base exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_base: 10000
+
+// Job exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_job: 10000

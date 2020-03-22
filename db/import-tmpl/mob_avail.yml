@@ -42,7 +42,7 @@ Header:
   Type: MOB_AVAIL_DB
   Version: 1
 
-#Body:
+Body:
   # Examples
 #  - Mob: PORING
 #    Sprite: BAPHOMET
@@ -97,7 +97,7 @@ Header:
 #  - Mob: E_TREASURE2
 #    Sprite: JOB_SNIPER
 #    Sex: Male
-#    HairStyle: 21
+#    HairStyle: 21wro_
 #    Weapon: Bow_Of_Rudra
 #    HeadTop: Boy's_Cap
 #    HeadMid: Takius_Blindfold
@@ -121,3 +121,43 @@ Header:
 #    Sprite: WHISPER
 #  - Mob: EP14_3_DEATH_B_MOB3
 #    Sprite: DARK_LORD
+
+  - Mob: TRAINING_POST
+    Sprite: BARRICADE
+  - Mob: IMPERIAL_GUARD
+    Sprite: JOB_REBELLION
+    Sex: Male
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 5
+    Weapon: Crimson_Bolt
+    HeadTop: Imperial_Cap_C
+    HeadMid: Sunglasses
+  - Mob: INVADING_WARRIOR
+    Sprite: RAYDRIC
+  - Mob: INVADING_ARCHER
+    Sprite: RAYDRIC_ARCHER
+  - Mob: INVADING_COMMANDER
+    Sprite: KNIGHT_OF_ABYSS
+  - Mob: HERB_LVL1
+    Sprite: SEAANEMONE
+  - Mob: HERB_LVL1
+    Sprite: BLUE_PLANT
+  - Mob: HERB_LVL2
+    Sprite: GREEN_PLANT
+  - Mob: HERB_LVL3
+    Sprite: YELLOW_PLANT
+  - Mob: HERB_LVL4
+    Sprite: RED_PLANT
+  - Mob: HERB_LVL5
+    Sprite: SHINING_PLANT
+  - Mob: NODE_LVL1
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL2
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL3
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL4
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL5
+    Sprite: PURPLESTONE

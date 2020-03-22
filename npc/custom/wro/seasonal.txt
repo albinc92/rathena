@@ -1,0 +1,88 @@
+//===== rAthena Script =======================================
+//= Seasonal Event NPCs
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Various NPCs related to seasonal events.
+//============================================================
+
+-	script	season_controller	-1,{
+OnClock0000:
+OnInit:
+	removemapflag "royal",mf_snow;
+	removemapflag "royal",mf_leaves;
+	removemapflag "royal",mf_fireworks;
+	disablenpc "Santa";
+	disablenpc "Santa's Little Helper";
+	disablenpc "Witch";
+	disablenpc "Black Cat";
+	if (gettime(DT_MONTH) == DECEMBER) {
+		if(gettime(DT_DAYOFMONTH) == 31) {
+			setmapflag "royal",mf_fireworks;
+		} else {
+			enablenpc "Santa";
+			enablenpc "Santa's Little Helper";
+			setmapflag "royal",mf_snow;
+		}
+	} else if (gettime(DT_MONTH) == OCTOBER) {
+		enablenpc "Witch";
+		enablenpc "Black Cat";
+		setmapflag "royal",mf_leaves;
+	}
+	end;
+}
+
+
+
+// Christmas
+royal,125,141,7	script	Santa	718,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Ho~ Ho~ Ho~!";
+	mes "Merry Christmas to you!";
+	set .@menu, select("Gift (Apply Disguise):Treat (Remove Disguise):Walk away");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		mes "Ho~ Ho~ Ho~! There you go~~";
+		setarray .@mobIds[0],"1741","1245","1244","1588";
+		atcommand "@disguise " + .@mobIds[rand(0,3)];
+	} else if(.@menu==2) {
+		atcommand "@undisguise";
+		mes "Ho~ Ho~ Ho~! There you go~~";
+	} else {
+		mes "Ho~ Ho~ Ho~! Fare well ~~";
+	}
+	close;
+}
+royal,126,138,6	script	Santa's Little Helper	1741,{}
+
+
+
+// Halloween
+royal,125,141,7	script	Witch	650,{
+	cutin "gl_himel2",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Nyahahahaha-ha!";
+	mes "Happy Halloween to you!";
+	set .@menu, select("Trick (Apply Disguise):Treat (Remove Disguise):Walk away");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		mes "Hocus pocus! Your appearance has changed!";
+		setarray .@mobIds[0],"1503","1504","1505","1507","1509","1510","1179";
+		atcommand "@disguise " + .@mobIds[rand(0,3)];
+	} else if(.@menu==2) {
+		atcommand "@undisguise";
+		mes "Abra cadabra! Your appearance is normal again!";
+	} else {
+		mes "Best of wishes nyahahahaha-ha!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+}
+royal,126,138,6	script	Black Cat	1261,{}

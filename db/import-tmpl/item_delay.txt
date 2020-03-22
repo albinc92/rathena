@@ -6,3 +6,8 @@
 // NOTE:
 // There is a max concurrent number of entries set in src/map/itemdb.h as MAX_ITEMDELAYS.
 
+601,1000
+602,10000
+607,3000
+607,1500
+40009,7000

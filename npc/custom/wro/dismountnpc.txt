@@ -1,0 +1,9 @@
+royal,169,60,8	script	Dismount Helper	726,{
+	if(countitem(12622) < 1 && ismounting()) {
+		setmounting();
+		message strcharinfo(0),"Dismounted.";
+	} else {
+		message strcharinfo(0),"You are not mounted, and/or are not missing a Boarding Halter.";
+		emotion 1;
+	}
+}

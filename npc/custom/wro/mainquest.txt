@@ -1,0 +1,763 @@
+// @showrank atcommand
+-	script	ShowrankAtCommand	-1,{
+    end;
+
+OnAtcommand:
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+	if(.@rank$ == "adventurer") {
+		message strcharinfo(0),"You do not yet have a rank to display.";
+		end;
+	}
+	query_sql("SELECT `showrank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@showrank);
+	if(!.@showrank) {
+		message strcharinfo(0),"Now displaying rank.";
+		atcommand "@fakename " + .@rank$ + " " + strcharinfo(0);
+		query_sql("UPDATE `mainquest` SET `showrank` = 1 WHERE `char_id` = " + getcharid(0));
+	} else {
+		message strcharinfo(0),"Now hiding rank.";
+		atcommand "@fakename";
+		query_sql("UPDATE `mainquest` SET `showrank` = 0 WHERE `char_id` = " + getcharid(0));
+	}
+	end;
+
+OnInit:
+	query_sql("CREATE TABLE IF NOT EXISTS `mainquest` (`char_id` int(11) unsigned NOT NULL default '0',`stage` int(11) NOT NULL default '0',`rank` varchar(30) NOT NULL default '0',`showrank` int(11) NOT NULL default '1',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+	bindatcmd "showrank",strnpcinfo(3) + "::OnAtcommand";
+	end;
+
+OnPCLoginEvent:
+	query_sql("SELECT `showrank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@showrank);
+	if(.@showrank) {
+		query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+		if(.@rank$ != "adventurer") {
+			atcommand "@fakename " + .@rank$ + " " + strcharinfo(0);
+		}
+	}
+	end;
+}
+
+// Juperos Library
+jupe_lib,24,105,0	script	Fireplace Mantle#jupe_lib	111,1,1,{
+	if(main_quest_stage == 9) {
+		mes "*You skim through the books on the mantle*";
+		next;
+		mes "Hey, whats this?";
+		next;
+		mes "*You read the title of one of the books*";
+		next;
+		mes "This is the book! The Prose Edda by Snorre Sturlasson!";
+		next;
+		getitem 40012, 1;
+		set main_quest_stage, 10;
+		mes "You should take this to Commander Hass at once.";
+	}
+	close;
+}
+
+jupe_lib,73,67,0	script	Book#jupe_lib	111,1,1,{
+	if(main_quest_stage == 9) {
+		mes "*A book is lying on the floor*";
+		next;
+		mes "...";
+		next;
+		mes "It's not the one you're looking for.";
+	}
+	close;
+}
+
+jupe_lib,66,69,0	duplicate(Book#jupe_lib)	Book#roy2	111
+jupe_lib,72,78,0	duplicate(Book#jupe_lib)	Book#roy3	111
+jupe_lib,73,74,0	duplicate(Book#jupe_lib)	Book#roy4	111
+jupe_lib,102,30,0	duplicate(Book#jupe_lib)	Book#roy5	111
+jupe_lib,103,28,0	duplicate(Book#jupe_lib)	Book#roy6	111
+jupe_lib,115,16,0	duplicate(Book#jupe_lib)	Book#roy7	111
+jupe_lib,118,22,0	duplicate(Book#jupe_lib)	Book#roy8	111
+jupe_lib,120,30,0	duplicate(Book#jupe_lib)	Book#roy9	111
+
+jupe_lib,68,76,0	script	Row of Books#jupe_lib	111,1,1,{
+	if(main_quest_stage == 9) {
+		mes "*You skim through the books*";
+		next;
+		mes "...";
+		next;
+		mes "Nope, nothing.";
+	}
+	close;
+}
+
+jupe_lib,32,97,0	script	Drawer#jupe_lib	111,1,1,{
+	if(main_quest_stage == 9) {
+		mes "*You look through the drawer*";
+		next;
+		mes "...";
+		next;
+		mes "Its empty...";
+	}
+	close;
+}
+
+jupe_lib,30,102,0	duplicate(Drawer#jupe_lib)	Drawer#jupe_lib2	111
+
+jupe_lib	mapflag	nobranch
+jupe_lib	mapflag	nowarpto
+jupe_lib	mapflag	noteleport
+jupe_lib	mapflag	nomemo
+jupe_lib	mapflag	nosave	SavePoint
+
+jupe_lib,0,0,0,0	monster	Venatu	1675,5,0,60000
+jupe_lib,0,0,0,0	monster	Venatu	1678,5,0,60000
+jupe_lib,0,0,0,0	monster	Venatu	1676,5,0,60000
+jupe_lib,0,0,0,0	monster	Venatu	1679,5,0,60000
+jupe_lib,0,0,0,0	monster	Venatu	1677,5,0,60000
+
+juperos_01,252,210,0	warp	jupe_lib	1,1,jupe_lib,69,13
+jupe_lib,69,10,0	warp	lib_jupe	1,1,juperos_01,249,210
+jupe_lib,87,22,0	warp	lib_lib_east1	1,1,jupe_lib,101,22
+jupe_lib,98,22,0	warp	lib_lib_east2	1,1,jupe_lib,84,22
+jupe_lib,113,35,0	warp	lib_lib_east3	1,1,jupe_lib,113,51
+jupe_lib,113,48,0	warp	lib_lib_east4	1,1,jupe_lib,113,32
+jupe_lib,94,68,0	warp	lib_lib_east5	1,1,jupe_lib,78,68
+jupe_lib,81,68,0	warp	lib_lib_east6	1,1,jupe_lib,97,68
+jupe_lib,52,22,0	warp	lib_lib_west1	1,1,jupe_lib,38,22
+jupe_lib,41,22,0	warp	lib_lib_west2	1,1,jupe_lib,55,22
+jupe_lib,19,35,0	warp	lib_lib_west3	1,1,jupe_lib,19,51
+jupe_lib,19,48,0	warp	lib_lib_west4	1,1,jupe_lib,19,33
+jupe_lib,37,68,0	warp	lib_lib_west5	1,1,jupe_lib,63,68
+jupe_lib,60,68,0	warp	lib_lib_west6	1,1,jupe_lib,34,68
+jupe_lib,19,77,0	warp	lib_lib_north1	1,1,jupe_lib,19,95
+jupe_lib,19,92,0	warp	lib_lib_north2	1,1,jupe_lib,19,74
+
+
+
+// Book on the Edda
+roy_in02,164,96,0	script	Bookshelf#roy	111,1,1,{
+	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+
+	if(.@stage == 8) {
+		set .@rng, rand(1,10);
+		if(.@rng == 1) {
+			mes "Huh? What's this? A book titled ^ff0000Midgard Mythos^000000...";
+			next;
+			mes "This could be useful...";
+			next;
+			mes "*You put the book into your inventory*";
+			getitem 40013, 1;
+			query_sql("UPDATE `mainquest` SET `stage` = 9 WHERE `char_id` = " + getcharid(0));
+		} else if(.@rng == 2 || .@rng == 3 || .@rng == 4 ) {
+			mes "You rummage through the books and find a book that looks promising...";
+			next;
+			mes "Oh second thought, however, defenetely not.";
+		} else {
+			mes "You rummage through the books but find nothing of interest...";
+		}
+	} else {
+		mes "The shelf is filled with all sorts of books.";
+	}
+	close;
+}
+roy_in02,172,96,0	duplicate(Bookshelf#roy)	Bookshelf#roy2	111
+roy_in02,172,102,0	duplicate(Bookshelf#roy)	Bookshelf#roy3	111
+roy_in02,164,102,0	duplicate(Bookshelf#roy)	Bookshelf#roy4	111
+roy_in02,169,108,0	duplicate(Bookshelf#roy)	Bookshelf#roy5	111
+
+// Librarian
+roy_in02,179,92,3	script	Librarian#roy	641,{
+	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+
+	cutin "acact_01",2;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@stage == 7) {
+		mes "Greetings, " + .@rank$ + ". How may this humble librarian be of help?";
+		set .@menu, select("The Prose Edda:Walk away");
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		if(.@menu==2) {
+			mes "Please remember be quiet during your visit here.";
+		} else {
+			mes "The Prose Edda you say?";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "That ancient writing has been lost for ages...";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "We do keep a book on the subject of the Edda here somewhere, however.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Look around the shelves at your hearts content. And please remember to keep quiet.";
+			query_sql("UPDATE `mainquest` SET `stage` = 8 WHERE `char_id` = " + getcharid(0));
+		}
+	} else if(.@stage == 8) {
+		mes "I have told you what I know...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Search the shelves for the book that covers the subject on The Prose Edda.";
+	} else if(.@stage == 9) {
+		mes "Found the book did you? How fortune for you.";
+	} else {
+		mes "Please be quiet in here.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}
+
+// Legion Commander Hass
+roy_in01,204,208,3	script	Legion Commander Hass	10180,{
+	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+
+	cutin "16go_01",2;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@stage == 0) {
+		goto OnStage0;
+	}
+	if(BaseLevel < 250) {
+		goto OnLowLevel;
+	}
+	if(.@stage == 1) {
+		goto OnStage1;
+	}
+	if(.@stage >= 2) {
+		mes "Hail, " + .@rank$ + "! What brings you to me?";
+		set .@menu, select("Assignment:Cancel");
+		next;
+		if(.@menu==1) {
+			if(.@stage == 2) {
+				goto OnStage2;
+			}
+			if(.@stage == 3) {
+				goto OnStage3;
+			}
+			if(.@stage == 4) {
+				goto OnStage4;
+			}
+			if(.@stage == 5) {
+				goto OnStage5;
+			}
+			if(.@stage == 6) {
+				goto OnStage6;
+			}
+			if(.@stage >= 7 && .@stage <= 9) {
+				goto OnStage7_9;
+			}
+			if(.@stage == 10) {
+				goto OnStage10;
+			}
+			if(.@stage == 11 || .@stage == 12) {
+				goto OnStage11_12;
+			}
+			if(.@stage == 13) {
+				goto OnStage13;
+			}
+			if(.@stage == 14) {
+				goto OnStage14;
+			}
+			if(.@stage == 15) {
+				goto OnStage15;
+			}
+		}
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage13:
+	mes "You're back, shall we continue?";
+	set .@menu, select("Continue:Not yet");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		mes "Now, where were we?";
+	} else {
+		mes "Very well.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage12:
+		mes "Ah, Legionnaire, I have an update for you!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The Prose Edda is indeed a fascinating book...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "And I believe it is time I informed you why I sent you to the ruins of Juperos to get it.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "As you well know, an abundance of monsters roam the lands of Rune-Midgard...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "From its widest plains, to its deepest recesses...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "What alot of people don't remember however, is that it was not always so...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "In elder days, monsters were not actually commonsight!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Researchers and Sages have tried to find an answer to this question, but they have thus far been unable to do so.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Well, all except one...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "A renowned Sage by the name of ^ff0000Alrikur^000000 once swore to have found proof.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "In his papers, he claims that the appearance of monsters is directly connected to the mythological catastrophe, ^ff0000Ragnarok^000000.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Ridiculed for this notion by the scientific community, Alrikur packed his bags and never returned.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You must be wondering why I am telling you this?";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Well... Alrikur was my grandfather.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "And even though he may have seemed to be a deluded old fool...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "No one can explain the events that are occuring in this world!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The never ending flood of monsters that roam the countryside...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The never-ending winter in Lutie...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "From my point of view, it all points to the same thing!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "...and this book you found, The Prose Edda, it explains it all...";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "But we won't make the mistake my grandfather made, no... we need real ^ff0000proof^000000!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Alas, you look weary, Legionnaire. Return to me after you have received some rest, and we will continue this discussion.";
+		set main_quest_stage, 13;
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage11:
+	set .@rng, rand(1,5);
+	if(.@rng == 1) {
+		set main_quest_stage, 12;
+		goto OnStage12;
+	} else {
+		mes "I'm still examining the book, Legionnaire. I shall call for you when I need your help again.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage10:
+	mes "Have you been to Juperos yet?";
+	if(countitem(40012) > 0) {
+		set .@menu, select("Show him The Prose Edda:Not yet");
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		if(.@menu==1) {
+			mes "This is indeed the book we are looking for!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Superb work, Legionnaire!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Please accept this token as a reward for your services to the empire!";
+			getitem 670, 1;
+			delitem 40012, 1;
+			set main_quest_stage, 11;
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Now you will have to excuse me. I shall withdraw to study its contents.";
+		} else {
+			mes "I eagerly await your return with the book.";
+		}
+	} else {
+		next;
+		mes "This endeavor is beginning to look promising!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Head to Juperos immediately, Legionnaire! We need to find that book!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage7_9:
+	mes "["+strnpcinfo(1)+"]";
+	if(countitem(40013) > 0) {
+		mes "How goes your search?";
+		set .@menu, select("Show him Midgard Mythos:Cancel");
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		if(.@menu==1) {
+			mes "... Hmm... this looks quite interesting.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "... it could just be me, but the book seems be refering to the ancient city of ^ff0000Juperos^000000.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "In ancient times, a catastrophe caused it to plummet into the depths of the El Mes Gorge...";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "If the city's library still stands down there, it might just contain the Edda!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Although unlikely, it is our best shot!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "You must head to Juperos and begin your search immediately!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Dismissed, Legionnaire!";
+			delitem 40013, 1;
+			query_sql("UPDATE `mainquest` SET `stage` = 10 WHERE `char_id` = " + getcharid(0));
+		} else {
+			mes "There is no time to waste. We need to find that book, Legionnaire.";
+		}
+	} else {
+		mes "Go find ^ff0000The Prose Edda^000000 for me, " + .@rank$ + ".";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You should consult the local librarians for any clues to its whereabouts.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Godspeed.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage6:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Just recently, the existence of a certain book came to my knowledge...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The book is apparently titled ^ff0000The Prose Edda^000000, and is apparently some ancient writing of significance...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You need not burden yourself with its contents. I am sure it would be well beyond your knowledge.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Know this however; the book could be of great use to the Imperial Legion in times to come.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "It is of utmost importance that you acquire it, no matter what.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "By my authority, you have the right to claim it and bring it back here to me by any means necessary.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "I recommend you consult the local librarians for more information on the subject.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Now, go about your business, " + .@rank$ + ".";
+	query_sql("UPDATE `mainquest` SET `stage` = 7 WHERE `char_id` = " + getcharid(0));
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage5:
+	mes "["+strnpcinfo(1)+"]";
+	mes "How goes your current assignment? Let's see...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You've acquired ^ff0000" + countitem(984) + " / 100^000000 Oridecon...";
+	mes ".. aand ^ff0000" + countitem(985) + " / 100^000000 Elunium.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(countitem(984) > 99 && countitem(985) > 99) {
+		mes "Most excellent!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I knew you could be counted on!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Those metals will serve us nicely. Can't have enough spears, eh, " + .@rank$ + "?";
+		next;
+		delitem 984, 100;
+		delitem 985, 100;
+		query_sql("UPDATE `mainquest` SET `stage` = 6 WHERE `char_id` = " + getcharid(0));
+	} else {
+		mes "It seems you still have aways to go.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I'm relying on you, " + .@rank$ + ".";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage4:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Are you ready for some real work?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The Imperial Legion is at constant war with the monstrosities that roam the face of this world...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "... and our efforts require tremendous amounts of resources.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Therefore, it is every soldiers duty to salvage what they can from the fields of battle!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "I've received reports that our stocks of ^ff0000Elunium^000000 and ^ff0000Oridecon^000000 have begun to run low.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "This is where you come in, " + .@rank$ + ".";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Bring me around ^ff0000100^000000 of each, and we should have stabilized our current situation.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Godspeed!";
+	query_sql("UPDATE `mainquest` SET `stage` = 5 WHERE `char_id` = " + getcharid(0));
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage3:
+	mes "["+strnpcinfo(1)+"]";
+	if(countitem(7443) > 0) {
+		mes "Well, well... what do we have here?";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "It appears you have slain the vile creature. Well done!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Not everyone can go toe-to-toe with such a beast and live to tell about it!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "By the power vested in me, I hereby promote you to the rank of ^ff0000Legate^000000. Congratulations!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Now, go rest Legate, you have earned it. You should come see me again later, I might have another assignment for you then.";
+		delitem 7443, 1;
+		query_sql("UPDATE `mainquest` SET `stage` = 4 WHERE `char_id` = " + getcharid(0));
+		query_sql("UPDATE `mainquest` SET `rank` = 'Legate' WHERE `char_id` = " + getcharid(0));
+		query_sql("SELECT `showrank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@showrank);
+		if(.@showrank) {
+			atcommand "@fakename Legate " + strcharinfo(0);
+		}
+	} else {
+		mes "What are you standing around here for, " + .@rank$ + "!?";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I'm still waiting for you for show me proof of your victory over a ^ff0000Hydrolancer^000000.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage2:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Are you ready for your first assignment as an enlisted legionnaire?";
+	next;
+	set .@menu, select("Sir, yes sir!:Not yet, sir...");
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		mes "Alright! As your first assignment, I'll have to test your mettle in combat.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "If you can prove to me that you have killed a ^ff0000Hydrolancer^000000, then I shall recognize your strength in battle.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "One of its three heads will suffice as a token of your victory.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The vile beast can be found in the deepest recesses of the caves below the ^ff0000Abyss Lakes^000000.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Although this merely is a test to prove you mettle, don't take this challenge too lightly... A Hydrolancer is a fierce beast.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Now get to it, " + .@rank$ + ".";
+		query_sql("UPDATE `mainquest` SET `stage` = 3 WHERE `char_id` = " + getcharid(0));
+	} else {
+		mes "Very well then...";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage1:
+	mes "You there, " + .@rank$ + "! You look like a capable individual! Interested in climbing the ranks within the Legion?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "They have been worn thin in latter years due to the ever growing monsters threat... And thus, I am always keeping a lookout for promising individuals, such as yourself.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "So how about it, " + .@rank$ + "? Are you hungry for some action? Fame and glory await those who look for it!";
+	next;
+	set .@menu, select("Yes sir!:No thanks");
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		mes "Most excellent! I knew you would be a willing subject!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "As commander of the Imperial Legion of Royal, I hereby bestow you the title of ^ff0000Legionnaire^000000.";
+		query_sql("UPDATE `mainquest` SET `stage` = 2 WHERE `char_id` = " + getcharid(0));
+		query_sql("UPDATE `mainquest` SET `rank` = 'Legionnaire' WHERE `char_id` = " + getcharid(0));
+		query_sql("SELECT `showrank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@showrank);
+		if(.@showrank) {
+			atcommand "@fakename Legionnaire " + strcharinfo(0);
+		}
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "May you wear the title proudly.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You should drop by some time soon, I might have a ^ff0000Assignment^000000 available for you.";
+	} else {
+		mes "Very well then. Remember however, that the offer still stands.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnLowLevel:
+	mes "Humm you show promise, " + .@rank$ + "...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "But I'm afraid you're still too inexperienced to be useful to me.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Return to me when you've grown stronger.";
+	close2;
+	cutin "", 255;
+	end;
+
+OnStage0:
+	mes "You show promise, " + .@rank$ + "...";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You should definitely join the ^ff0000Imperial Legion^000000!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Seek out the ^ff0000Imperial Recruiter^000000 next to the PvP Arena to join our ranks, then talk to me.";
+	close2;
+	cutin "", 255;
+	end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
+	if(.@stage < 99) {
+		showevent 0,0;
+	}
+	end;
+
+}
+
+
+
+// Imperial Recruiter
+royal,81,190,5	script	Imperial Recruiter	10010,{
+	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+
+	cutin "lydia_a",2;
+	mes "[" + strnpcinfo(1) + "]";
+	if(.@stage == 0) {
+		showevent -1,0;
+		mes "Greetings to you, adventurer. Allow me to welcome you to Royal, the Imperial Metropolis!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "I am responsible for recruiting new members into the ^0000ffImperial Legion^000000, the military force serving under this great nation.";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "You look like a capable adventurer, say, would you consider joining us?";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "I can promise you rewards of fame and glory if you choose to do so!";
+		set .@menu, select("Join:Don't Join");
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		if(.@menu == 1) {
+			mes "Most excellent!";
+			next;
+		} else {
+			mes "Oh. Bummer! If you change your mind, you know where to find me!";
+			close2;
+			cutin "", 255;
+			end;
+		}
+		mes "[" + strnpcinfo(1) + "]";
+		mes "I hereby proclaim you ^ff0000Recruit^000000 of the Imperial Legion of Royal!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Please accept these items as a reward for your initiation!";
+		next;
+		getitem 2393, 1;
+		getitem 40027, 1;
+		getitem 2112, 1;
+		getitem 1243, 1;
+		getitem 2765, 1;
+		getitem 602, 5;
+		getitem 601, 25;
+		getitem 501, 10;
+		set zeny, zeny + 10000;
+		query_sql("UPDATE `mainquest` SET `stage` = 1 WHERE `char_id` = " + getcharid(0));
+		query_sql("UPDATE `mainquest` SET `rank` = 'Recruit' WHERE `char_id` = " + getcharid(0));
+		query_sql("SELECT `showrank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@showrank);
+		if(.@showrank) {
+			atcommand "@fakename Recruit " + strcharinfo(0);
+		}
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "As you might have seen, your name has been updated to reflect your new rank.";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Simply use the atcommand ^ff0000@showrank^000000 to toggle it On or Off. Easy as pie!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Now before anything else, you should strive to acquire as much experience as possible!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "I recommend you take a look at the ^ff0000Questboard^000000 located outside the ^ff0000Imperial Senate Building^000000!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "It lists various quests available for Legion members, rewarding them with experience and zeny upon completion!";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Oh! And before anything else, don't forget to allocate your stat points, which can be done via the menu that pops up when hitting '^0000ffAlt + A^000000'";
+		next;
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Now, good luck on your adventures, Recruit!";
+	} else {
+		mes "Greetings to you, " + .@rank$ + "! Hope all is well.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT COUNT(`char_id`) FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@exists);
+	if(!.@exists) {
+		query_sql("INSERT INTO `mainquest` VALUES (" + getcharid(0) + ",0,'adventurer',1)");
+		callfunc "F_GetPlatinumSkills";
+		setlook LOOK_CLOTHES_COLOR,5;
+	}
+
+	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
+	if(.@rank$ == "adventurer") {
+		showevent 0,0;
+		npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! Come speak with me!";
+	}
+	end;
+
+}

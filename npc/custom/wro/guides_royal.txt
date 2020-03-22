@@ -1,0 +1,201 @@
+royal,143,138,2	script	Guide#roy::RoyGuide	861,{
+	cutin "kafra_09",2;
+	mes "[Royal Guide]";
+	mes "Welcome to Royal, the imperial metropolis!";
+	mes "Feel free to ask me anything!";
+	set .@loop1,1;
+	while (.@loop1) {
+		next;
+		switch(select("City Guide:Remove Marks from Mini-Map:Notice:Leveling Tips:Gear-Up Tips:Cancel")) {
+		case 1:
+			mes "[Royal Guide]";
+			mes "Please select";
+			mes "a location from";
+			mes "the following menu.";
+			if (.@compass_check == 0) {
+				mes "Would you like me";
+				mes "to mark locations";
+				mes "on your Mini-Map?";
+				next;
+				if (select("Yes:No") == 1) set .@compass_check,1;
+			}
+			set .@loop2,1;
+			while (.@loop2) {
+				if (.@wait_button_chk == 0) set .@wait_button_chk,1;
+				else next;
+
+				switch(select("Vending Square:Clan Hall:Disguise Event:Dice Event:Stylist:PvP Arena:Gemstone Socketing:Supply Master:Quest Board:Wise One:Harbor:Graveyard:Cancel")) {
+				case 1:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Vending Square^000000 is due west from here. Speak with the ^FF0000Vending Helper^000000 for more information.";
+					if (.@compass_check)
+						viewpoint 1,97,151,2,0xFF00FF;
+					break;
+				case 2:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Clan Hall^000000 is located in the far south-western part of town, close to the Graveyard and The Mobster Tavern.";
+					if (.@compass_check)
+						viewpoint 1,73,66,3,0xFF00FF;
+					break;
+				case 3:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Disguise Event^000000 is located in the ^ff0000graveyard^000000. Located just due west of the southern entrance, close to the Clan Hall.";
+					if (.@compass_check)
+						viewpoint 1,89,99,4,0xFF00FF;
+					break;
+				case 4:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Dice Event Warper^000000 is just nearby! Across the street!";
+					if (.@compass_check)
+						viewpoint 1,124,125,4,0xFF00FF;
+					break;
+				case 5:
+					mes "[Royal Guide]";
+					mes "You can find ^ff0000Longinus' Stylery^000000 close to the eastern city entrance, by the marketplace.";
+					if (.@compass_check)
+						viewpoint 1,220,175,5,0xFF00FF;
+					break;
+				case 6:
+					mes "[Royal Guide]";
+					mes "The ^ff0000PvP Arena^000000 is where players do battle against one another. It is located due north-west of here.";
+					if (.@compass_check)
+						viewpoint 1,99,180,5,0xFF00FF;
+					break;
+				case 7:
+					mes "[Royal Guide]";
+					mes "You can socket gemstones into your equipment at the ^ff0000Socketing Craftsman^000000 located in the harbor area.";
+					if (.@compass_check)
+						viewpoint 1,173,198,5,0xFF00FF;
+					break;
+				case 8:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Supply Master^000000 is located inside the ^ff0000Imperial Senate Building^000000. You can buy an array of incredibly useful items from him. Such as PvP equipment and rare cards!";
+					if (.@compass_check)
+						viewpoint 1,134,166,5,0xFF00FF;
+					break;
+				case 9:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Quest Board^000000 is located inside the ^ff0000Imperial Senate Building^000000. It lists numerous quests you can complete in order to gain ^ff0000Zeny^000000 and ^ff0000Experience^000000!";
+					if (.@compass_check)
+						viewpoint 1,134,166,5,0xFF00FF;
+					break;
+				case 10:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Wise One^000000 can identify any item you carry. She charges an absurd amount of Zeny for it though.";
+					next;
+					mes "[Royal Guide]";
+					mes "Any item identifed by her can however generate ^ff0000Random Magical Bonuses^000000!";
+					next;
+					if (.@compass_check)
+						viewpoint 1,177,177,5,0xFF00FF;
+					break;
+				case 11:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Harbor^000000 is located in the north-eastern part of town.";
+					if (.@compass_check)
+						viewpoint 1,210,225,5,0xFF00FF;
+					break;
+				case 12:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Graveyard^000000 is located in the south-eastern part of town, just across the street from the ^ff0000Clan Hall^000000.";
+					next;
+					mes "[Royal Guide]";
+					mes "Take great care if you venture down the crypt! I hear trouble has been brewing there as of late!";
+					next;
+					if (.@compass_check)
+						viewpoint 1,89,100,5,0xFF00FF;
+					break;
+				case 13:
+					mes "[Royal Guide]";
+					mes "Please ask me to ''Remove";
+					mes "Marks from Mini-Map'' if you";
+					mes "no longer wish to have the";
+					mes "location marks displayed";
+					mes "on your Mini-Map.";
+					set .@loop2,0;
+				}
+			}
+			break;
+		case 2:
+			viewpoint 2,237,41,2,0xFF0000;
+			viewpoint 2,237,41,3,0xFF00FF;
+			viewpoint 2,46,345,4,0xFF00FF;
+			viewpoint 2,175,220,5,0xFF00FF;
+			viewpoint 2,175,220,6,0xFF00FF;
+			set .@compass_check,0;
+			break;
+		case 3:
+			mes "[Royal Guide]";
+			mes "Advances in sorcery and";
+			mes "technology have allowed";
+			mes "us to update our information";
+			mes "system, enabling up to mark";
+			mes "locations on your Mini-Map";
+			mes "for easier navigation.";
+			next;
+			mes "[Royal Guide]";
+			mes "Your Mini-Map is located";
+			mes "in the upper right corner";
+			mes "of the screen. If you can't";
+			mes "see it, press the Ctrl + Tab";
+			mes "keys or click the ''Map'' button in your Basic Info Window.";
+			next;
+			mes "[Royal Guide]";
+			mes "On your Mini-Map,";
+			mes "click on the ''+'' and ''-''";
+			mes "symbols to zoom in and";
+			mes "our of your Mini-Map. We";
+			mes "hope you enjoy your travels";
+			mes "here in the city of Royal.";
+			break;
+		case 4:
+			mes "[Royal Guide]";
+			mes "Leveling up can be quite a pain sometimes... luckily there's a solution!";
+			next;
+			mes "[Royal Guide]";
+			mes "Inside the Imperial Senate building there is a ^ff0000Quest Board^000000 which lists a number of quests issued by the Imperial Legion.";
+			next;
+			mes "[Royal Guide]";
+			mes "Completing quests from the Quest Board gives rewards such as ^ff0000Zeny^000000 and ^ff0000Experience^000000!";
+			next;
+			mes "[Royal Guide]";
+			mes "You should also seek out the Supply Master, also located in the Imperial Senate building! I hear he has ^ff0000Battle Manuals^000000 for sale!";
+			break;
+			mes "[Royal Guide]";
+			mes "Battle Manuals will increase the amount of experience you receive from monsters by a certain amount for a period of time.";
+			break;
+		case 5:
+			mes "[Royal Guide]";
+			mes "It can be tricky to figure out what to do once you hit max level. You might not know what to do in order to get stronger.";
+			next;
+			mes "[Royal Guide]";
+			mes "First, you should opt to power up your equipment with ^0000ffcards^000000 and ^0000ffsocketing minerals^000000.";
+			next;
+			mes "[Royal Guide]";
+			mes "Don't let the low drop rates of MVP cards fool you! It is easier than you think to get powerful cards!";
+			next;
+			mes "[Royal Guide]";
+			mes "The Supply Master in the Imperial Senate building can sell you some useful items for monster hunting, such as ^ff0000Bubblegums^000000, and ^ff0000Convex Mirrors^000000.";
+			break;
+			mes "[Royal Guide]";
+			mes "Also, I heard rumors of a guy in town who offers to trade ^ff0000Bloody Branches^000000, and various ^ff0000Card Albums^000000!";
+			next;
+			mes "[Royal Guide]";
+			mes "I'm not sure where he is located, but you should try one of the ^ff0000inns^000000!";
+			next;
+		case 6:
+			mes "[Royal Guide]";
+			mes "Be safe when you";
+			mes "travel and don't hesitate";
+			mes "to ask me if you have any";
+			mes "questions about Royal.";
+			set .@loop1,0;
+			close2;
+			cutin "", 255;
+			end;
+		}
+	}
+	close2;
+	cutin "", 255;
+	end;
+}

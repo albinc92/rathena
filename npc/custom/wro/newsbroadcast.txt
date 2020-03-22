@@ -1,0 +1,28 @@
+//===== rAthena Script =======================================
+//= News broadcast
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Broadcasts random news across the server at given intervals.
+//============================================================
+
+-	script	News	-1,{
+OnInit:
+set .Time,60;		// Announce every x Minute.
+
+setarray .News$[0],	// Random Message to be Announced
+		"Never give out your account name or password to anyone!",
+		"Don't forget to read up on the server rules at our website!",
+		"Found a bug or having issues with the server? Make a post on our forums. Your feedback is greatly appreciated!",
+		"Enjoying your stay at WarboundRO? Don't forget to vote!";
+
+while( 1 ){
+	announce .News$[ rand( getarraysize( .News$ ) ) ],0;
+	sleep ( .Time * 60000 );
+	}
+end;
+}

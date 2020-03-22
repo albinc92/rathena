@@ -1,0 +1,200 @@
+//===== rAthena Script =======================================
+//= Questboard
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Generates quests for players to hunt various monsters
+//= that match their job level.
+//============================================================
+
+prontera,138,183,7	script	Questboard	857,{
+    set .@clvl, BaseLevel / 2,3;
+    if(.@clvl > 108) {
+        set .@clvl, 108;
+    }
+    query_sql("SELECT `id` FROM `questboard_mob_db` WHERE `lv` >= " + (.@clvl - 3) + " AND `lv` <= " + (.@clvl + 3) + " ORDER BY lv DESC", .@id);
+    query_sql("SELECT * FROM `questboard` WHERE `char_id` = " + getcharid(0), .@charid, .@mobToHunt, .@count, .@max);
+
+    // If on a mission
+    if(.@mobToHunt) {
+        mes "["+strnpcinfo(1)+"]";
+        mes "Current progress: ";
+        mes "^f7f7f7-^000000";
+        mes "Monster: ^0000ff" + strmobinfo(1,.@mobToHunt) + "^000000";
+        if(.@count == .@max) {
+            mes "Count: ^00ff00" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        } else {
+            mes "Count: ^ff0000" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        }
+
+        if(.@count >= .@max) {
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "You completed your mission, excellent!";
+            query_sql("DELETE FROM `questboard` WHERE `char_id` = " + getcharid(0));
+            set .@bExp, (strmobinfo(6,.@mobToHunt) * 25);
+            set .@jExp, (strmobinfo(7,.@mobToHunt) * 25);
+            //set .@zeny, (strmobinfo(3,.@mobToHunt) * 1000);
+            getexp2 .@bExp,.@jExp;
+            //set zeny, zeny + .@zeny;
+            getitem 40001, 1;
+            specialeffect2 18;
+		    message strcharinfo(0),"Congratulations! Your reward is 1 Event Token and Experience Points.";
+        } else {
+            L_OnCurrentMissionInfo:
+            next;
+            switch(select("Monster details:Abort mission:Cancel")) {
+                case 1:
+		            atcommand "@mobinfo " + .@mobToHunt;
+		            atcommand "@whereis " + .@mobToHunt;
+		            goto L_OnCurrentMissionInfo;
+                    end;
+
+                case 2:
+                    query_sql("DELETE FROM `questboard` WHERE `char_id` = " + getcharid(0));
+                    mes "["+strnpcinfo(1)+"]";
+                    mes "Mission aborted!";
+                    end;
+
+                case 3:
+                    close;
+            }
+        }
+
+        end;
+    }
+
+    mes "["+strnpcinfo(1)+"]";
+    mes "This board seems to list various missions for adventurers looking for work.";
+    next;
+
+    // No match on jobLv
+    if(!getarraysize(.@id)) {
+        mes "["+strnpcinfo(1)+"]";
+        mes "However, it seems no quests are available for your skill level...";
+        end;
+    }
+
+	// Menu
+	switch(select("Peruse a mission:Information:Cancel")) {
+
+        // Accept mission
+        case 1:
+        L_OnGenerateMission:
+            set .@huntmenu$, "";
+            for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
+                if (.@i) set .@huntmenu$,.@huntmenu$+":";
+                set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ ^0000ffLv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
+            }
+	        set .@selection,select(.@huntmenu$);
+            set .@mobToHunt, .@id[.@selection - 1];
+            set .@amnt, (.@cLvl - strmobinfo(3, .@mobToHunt))  + 13;
+            set .@bExp, (strmobinfo(6,.@mobToHunt) * 25);
+            set .@jExp, (strmobinfo(7,.@mobToHunt) * 25);
+            set .@zeny, (strmobinfo(3,.@mobToHunt) * 500);
+
+        L_OnMissionInfo:
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "A bounty has been placed on a monster with the following specifications: ";
+            mes "^f7f7f7-^000000";
+            mes "Monster: ^0000ff" + strmobinfo(1,.@mobToHunt) + "^000000";
+            mes "Amount: ^ff0000" + .@amnt + "^000000";
+            mes "Reward (Base EXP): ^ff0000" + .@bExp + "^000000";
+            mes "Reward (Job EXP): ^ff0000" + .@jExp + "^000000";
+            mes "Reward (Zeny): ^ff0000" + .@zeny + "^000000";
+            mes "Reward (Item) ^ff00001 Event Token^000000";
+
+            switch(select("Accept mission:Monster details:Pick another mission:Cancel")) {
+                case 1:
+                    next;
+                    query_sql("REPLACE INTO `questboard` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ")");
+                    mes "["+strnpcinfo(1)+"]";
+                    mes "Mission accepted!";
+                    end;
+
+                case 2:
+		            atcommand "@mobinfo " + .@mobToHunt;
+		            atcommand "@whereis " + .@mobToHunt;
+		            goto L_OnMissionInfo;
+                    end;
+
+                case 3:
+                    next;
+		            goto L_OnGenerateMission;
+                    end;
+
+                case 4:
+                    close;
+
+                end;
+            }
+
+        // Info
+        case 2:
+            mes "["+strnpcinfo(1)+"]";
+            mes "Hear ye, noble adventurers of Rune-Midgard! By decree of our benevolent king Tristan III, we must persevere in our battle versus the monsters that roam this fair world.";
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "Thus, able bodied adventurers will receive great bounty upon proving that they contribute to this fight!";
+            next;
+            mes "["+strnpcinfo(1)+"]";
+            mes "Accept and complete any quest from this board and thou shall receive riches and glory upon your return!";
+            end;
+    }
+    end;
+
+OnInit:
+    query_sql("CREATE TABLE IF NOT EXISTS `questboard_mob_db` LIKE `mob_db`");
+    query_sql("REPLACE INTO `questboard_mob_db` SELECT * FROM `mob_db` WHERE `id` IN (1002, 1007, 1049, 1063, 1113, 1010, 1011, 1050, 1097, 1183, 1009, 1012, 1051, 1167, 1004, 1005, 1052, 1107, 1053, 1076, 1161, 1070, 1175, 1020, 1094, 1024, 1031, 1068, 1015, 1025, 1074, 1242, 1014, 1018, 1174, 1042, 1055, 1095, 1104, 1162, 1056, 1128, 1145, 1160, 1019, 1054, 1066, 1077, 1105, 1033, 1073, 1176, 1057, 1114, 1141, 1254, 1034, 1058, 1126, 1030, 1067, 1103, 1125, 1178, 1627, 1784, 1001, 1023, 1064, 1111, 1116, 1123, 1124, 1153, 1013, 1040, 1060, 1071, 1100, 1122, 1265, 1118, 1127, 1138, 1139, 1158, 1166, 1613, 1106, 1409, 1142, 1152, 1246, 1258, 1619, 1028, 1121, 1026, 1069, 1119, 1169, 1243, 1400, 1016, 1044, 1134, 1135, 1144, 1146, 1177, 1273, 1782, 1188, 1279, 1415, 1110, 1170, 1282, 1404, 1129, 1165, 1179, 1494, 1164, 1248, 1280, 1417, 1620, 1045, 1133, 1509, 1628, 1041, 1032, 1130, 1151, 1249, 1261, 1586, 1498, 1881, 1036, 1140, 1215, 1255, 1256, 1277, 1508, 1836, 1099, 1143, 1406, 1499, 1035, 1271, 1495, 1621, 1715, 1776, 1880, 1037, 1199, 1281, 1367, 1616, 1629, 1694, 1718, 1102, 1155, 1697, 1783, 1156, 1274, 1680, 1109, 1211, 1383, 1402, 1413, 1781, 1029, 1403, 1065, 1253, 1517, 1061, 1189, 1500, 1519, 1696, 1882, 1101, 1493, 1587, 1615, 1838, 1180, 1191, 1257, 1263, 1267, 1497, 1510, 1516, 1149, 1163, 1196, 1213, 1276, 1380, 1584, 1192, 1197, 1264, 1410, 1632, 1514, 1687, 1408, 1506, 1682, 1778, 1209, 1303, 1368, 1375, 1378, 1412, 1512, 1614, 1692, 1216, 1780, 1117, 1193, 1322, 1369, 1503, 1652, 1194, 1195, 1260, 1323, 1655, 1771, 1072, 1269, 1278, 1656, 1699, 1775, 1869, 1154, 1206, 1207, 1321, 1391, 1657, 1773, 1883, 1275, 1293, 1504, 1513, 1653, 1772, 1132, 1314, 1317, 1416, 1884, 1297, 1377, 1371, 1385, 1405, 1698, 1774, 1365, 1384, 1654, 1382, 1386, 1292, 1318, 1381, 1617, 1372, 1401, 1717, 1737, 1753, 1770, 1316, 1376, 1714, 1752, 1201, 1315, 1505, 1622, 1866, 1319, 1676, 1769, 1208, 1098, 1295, 1320, 1374, 1390, 1679, 1735, 1736, 1865, 1988, 1716, 1837, 1366, 1669, 1675, 1703, 1864, 1379, 1678, 1148, 1219, 1668, 1670, 1702, 1672, 1677, 1701, 1713, 1995, 1999, 1700, 1867, 1638, 1673, 2013, 1636, 1370, 1833, 1635, 1870, 1671, 1637, 1634, 1831, 1639, 2024, 2019, 1994, 1989, 1986, 1992, 1987, 1993);");
+    query_sql("CREATE TABLE IF NOT EXISTS `questboard` (`char_id` int(11) unsigned NOT NULL default '0',`id` int(11) NOT NULL default '0',`count` int(11) NOT NULL default '0',`max` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+    waitingroom "Questboard",0;
+}
+
+-	script	killtracker	-1,{
+OnNPCKillEvent:
+    query_sql("SELECT `id`, `count`, `max`  FROM `questboard` WHERE `char_id` = " + getcharid(0) + "", .@id, .@count, .@max);
+    if(killedrid == .@id && .@count != .@max) {
+        set .@count, .@count + 1;
+        message strcharinfo(0),"" + strmobinfo(1, killedrid) + " killed: (" + .@count + " / " + .@max + ")";
+        query_sql("UPDATE `questboard` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
+        if(.@count == .@max) {
+            specialeffect2 885;
+        }
+    }
+    end;
+}
+
+// Duplicates
+//============================================================
+royal,125,161,5	duplicate(Questboard)	Questboard#roy	857
+alberta,38,241,6	duplicate(Questboard)	Questboard#alb	857
+aldebaran,143,133,3	duplicate(Questboard)	Questboard#alde	857
+amatsu,203,81,1	duplicate(Questboard)	Questboard#ama	857
+ayothaya,206,161,1	duplicate(Questboard)	Questboard#ayo	857
+comodo,191,144,7	duplicate(Questboard)	Questboard#cmd	857
+einbech,57,31,7	duplicate(Questboard)	Questboard#einbe	857
+einbroch,59,206,5	duplicate(Questboard)	Questboard#einbr	857
+geffen,115,65,5	duplicate(Questboard)	Questboard#gef	857
+hugel,102,142,1	duplicate(Questboard)	Questboard#hu	857
+izlude,123,120,3	duplicate(Questboard)	Questboard#iz	857
+jawaii,246,131,7	duplicate(Questboard)	Questboard#jaw	857
+lighthalzen,164,86,1	duplicate(Questboard)	Questboard#lhz	857
+louyang,204,100,3	duplicate(Questboard)	Questboard#lou	857
+xmas,140,127,7	duplicate(Questboard)	Questboard#lu	857
+manuk,287,130,1	duplicate(Questboard)	Questboard#man	857
+mid_camp,199,290,3	duplicate(Questboard)	Questboard#mid	857
+morocc,149,82,7	duplicate(Questboard)	Questboard#moc	857
+moscovia,224,177,1	duplicate(Questboard)	Questboard#mosk	857
+niflheim,215,175,3	duplicate(Questboard)	Questboard#nif	857
+payon,181,110,1	duplicate(Questboard)	Questboard#pay	857
+rachel,134,103,1	duplicate(Questboard)	Questboard#ra	857
+splendide,207,155,5	duplicate(Questboard)	Questboard#spl	857
+thor_camp,247,78,3	duplicate(Questboard)	Questboard#thor	857
+umbala,95,162,5	duplicate(Questboard)	Questboard#um	857
+veins,210,119,1	duplicate(Questboard)	Questboard#ve	857
+yuno,151,45,5	duplicate(Questboard)	Questboard#yu	857

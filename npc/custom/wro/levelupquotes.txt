@@ -1,0 +1,27 @@
+-	script	LevelUpQuotes	-1,{
+end;
+
+OnInit:
+	setarray .q$,"I have advanced forward!","There's no stopping me now!","Look at me go!","There's more where that came from.","This isn't even my final form!";
+	.num1 = getarraysize(.q$);
+	setarray .maxq$,"I've made it!","I never thought I'd become this strong...","I have reached my final form.";
+	.num2 = getarraysize(.maxq$);
+	end;
+
+OnPCBaseLvUpEvent:
+	if( BaseLevel == 250 ) {
+		.@quote = rand(.num2);
+		showscript strcharinfo(0)+" : "+.maxq$[.@quote];
+	}
+	else {
+		.@quote = rand(.num1);
+		showscript strcharinfo(0)+" : "+.q$[.@quote];
+	}
+	if( getstatus(SC_INCREASEAGI) != 1 ) {
+	    specialeffect2 37;
+		sc_start SC_INCREASEAGI,240000,10;
+	    specialeffect2 42;
+		sc_start SC_BLESSING,240000,10;
+	}
+	end;
+}

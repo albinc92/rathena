@@ -11507,6 +11507,7 @@ void clif_parse_TakeItem(int fd, struct map_session_data *sd)
 {
 	struct flooritem_data *fitem;
 	int map_object_id;
+    int skill_greed(struct block_list *bl, va_list ap);
 
 	map_object_id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]);
 
@@ -11524,8 +11525,10 @@ void clif_parse_TakeItem(int fd, struct map_session_data *sd)
 		if (pc_cant_act(sd))
 			break;
 
-		if (!pc_takeitem(sd, fitem))
-			break;
+        if(sd->state.arealoot == 1 && map_foreachinallrange(skill_greed,&sd->bl,1,BL_ITEM,&sd->bl) == 0)
+            return;
+        else if (!pc_takeitem(sd, fitem))
+            break;
 
 		return;
 	} while (0);

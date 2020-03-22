@@ -1,0 +1,24 @@
+//===== rAthena Script =======================================
+//= Kafra NPC
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Adds a special kafra to prontera.
+//============================================================
+
+royal,126,165,5	script	Kafra Employee::roy	113,{
+	callfunc "F_KafSet";
+	cutin "kafra_05",2;
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,1,1,20,600;
+	savepoint "royal",134,150,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Royal";
+}

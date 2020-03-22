@@ -1,0 +1,57 @@
+// Captain Felock
+royal,190,231,5	script	Captain Pawson	556,{
+
+	cutin "ma_tomas01",2;
+	mes "[" + strnpcinfo(1) + "]";
+	mes "Ahoy matey! What can this old seadog- ... I mean CAT... do ya for?";
+	next;
+	set .@menu, select("Set Sail:Cancel");
+	if(.@menu==1) {
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Where would ya like to sail on this fine day?";
+		set .@menu, select("Island of Krakatoa:Cancel");
+		if(.@menu==1) {
+			warp "dew_dun01", 290, 160;
+		}
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}
+
+
+
+// Island Copies
+dew_dun01,293,163,3	script	Captain Pawson#krakatoa	556,{
+
+	cutin "ma_tomas01",2;
+	mes "[" + strnpcinfo(1) + "]";
+	mes "Ahoy, landlubber! You lookin' yo sail home already?";
+	next;
+	set .@menu, select("Set Sail:Cancel");
+	if(.@menu==1) {
+		mes "[" + strnpcinfo(1) + "]";
+		mes "Where would ya like to sail on this fine day?";
+		set .@menu, select("Royal:Cancel");
+		if(.@menu==1) {
+			warp "royal", 195, 225;
+		}
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}
+
+
+
+// Crew
+royal,188,231,3	script	Crew Member	545,{
+	mes "[" + strnpcinfo(1) + "]";
+	mes "You should speak to Captain Pawson if you want something.";
+	close2;
+	cutin "", 255;
+	end;
+}
+dew_dun01,291,164,3	duplicate(Crew Member)	Crew Member#krakatoa	545

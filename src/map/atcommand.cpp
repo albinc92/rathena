@@ -7927,6 +7927,8 @@ ACMD_FUNC(whereis)
 		clif_displaymessage(fd, atcmd_output);
 		
 		const std::vector<spawn_info> spawns = mob_get_spawns(mob_id);
+
+
 		if (spawns.size() <= 0) {
 			 // This monster does not spawn normally.
 			clif_displaymessage(fd, msg_txt(sd,1290));
@@ -8212,7 +8214,7 @@ ACMD_FUNC(fakename)
 	clif_name_area(&sd->bl);
 	if (sd->disguise) // Another packet should be sent so the client updates the name for sd
 		clif_name_self(&sd->bl);
-	clif_displaymessage(sd->fd, msg_txt(sd,1310)); // Fake name enabled.
+	//clif_displaymessage(sd->fd, msg_txt(sd,1310)); // Fake name enabled.
 
 	return 0;
 }
@@ -9214,7 +9216,7 @@ ACMD_FUNC(charcommands) {
 }
 /* for new mounts */
 ACMD_FUNC(mount2) {
-	clif_displaymessage(sd->fd,msg_txt(sd,1362)); // NOTICE: If you crash with mount your LUA is outdated.
+	//clif_displaymessage(sd->fd,msg_txt(sd,1362)); // NOTICE: If you crash with mount your LUA is outdated.
 	if (!sd->sc.data[SC_ALL_RIDING]) {
 		clif_displaymessage(sd->fd,msg_txt(sd,1363)); // You have mounted.
 		sc_start(NULL, &sd->bl, SC_ALL_RIDING, 10000, 1, INFINITE_TICK);

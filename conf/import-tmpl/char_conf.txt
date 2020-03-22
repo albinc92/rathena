@@ -1,0 +1,93 @@
+// Server Communication username and password.
+userid: interwro
+passwd: nic3shPbJhfD
+
+// Server name, use alternative character such as ASCII 160 for spaces.
+// NOTE: Do not use spaces or any of these characters which are not allowed in
+//       Windows filenames \/:*?"<>|
+//       ... or else guild emblems won't work client-side!
+server_name: WarboundRO
+
+// Wisp name for server: used to send wisp from server to players (between 4 to 23 characters)
+wisp_server_name: Server
+
+// Login Server IP
+// The character server connects to the login server using this IP address.
+// NOTE: This is useful when you are running behind a firewall or are on
+// a machine with multiple interfaces.
+login_ip: 127.0.0.1
+
+// Character Server IP
+// The IP address which clients will use to connect.
+// Set this to what your server's public IP address is.
+char_ip: 213.67.114.51
+
+// Starting point for new characters
+// Format: <map_name>,<x>,<y>{:<map_name>,<x>,<y>...}
+// Max number of start points is MAX_STARTPOINT in char.hpp (default 5)
+// Location is randomly picked on character creation.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_point_pre: royal,85,189:royal,85,188:royal,85,187:royal,86,189:royal,86,188:royal,86,187:royal,87,189:royal,87,188:royal,87,187
+
+// Starting items for new characters
+// Max number of items is MAX_STARTITEM in char.cpp (default 32)
+// Format: <id>,<amount>,<position>{:<id>,<amount>,<position>...}
+// To auto-equip an item, include the position where it will be equipped; otherwise, use zero.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_items: 1201,1,2:2301,1,16:40027,1,1024:40009,1,0
+
+// Starting zeny for new characters
+start_zeny: 0
+
+// Manage possible letters/symbol in the name of charater. Control character (0x00-0x1f) are never accepted. Possible values are:
+// NOTE: Applies to character, party and guild names.
+// 0: no restriction (default)
+// 1: only letters/symbols in 'char_name_letters' option.
+// 2: Letters/symbols in 'char_name_letters' option are forbidden. All others are possibles.
+char_name_option: 1
+
+// Set the letters/symbols that you want use with the 'char_name_option' option.
+// Note: Don't add spaces unless you mean to add 'space' to the list.
+char_name_letters: abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+// Amount of time in seconds by which the character deletion is delayed.
+// Default: 86400 (24 hours)
+// NOTE: Requires client 2010-08-03aragexeRE or newer.
+char_del_delay: 86400
+
+// Restrict character deletion by email address or birthdate.
+// This restricts players from changing the langtype and deleting characters.
+// Defaults based on client date.
+// 1: Email address
+// 2: Birthdate
+// 3: Email address or Birthdate
+// IMPORTANT!
+// - This config only works for clients that send 0x0068 or 0x01fb for delete request.
+// - Use langtype 1 for newer clients (2013+), to use 0x01fb.
+// - Clients that are not using 0x0068 or 0x01fb, only use birthdate (YYMMDD) as default.
+char_del_option: 1
+
+// Restrict character deletion by email address or birthdate.
+// This restricts players from changing the langtype and deleting characters.
+// Defaults based on client date.
+// 1: Email address
+// 2: Birthdate
+// 3: Email address or Birthdate
+// IMPORTANT!
+// - This config only works for clients that send 0x0068 or 0x01fb for delete request.
+// - Use langtype 1 for newer clients (2013+), to use 0x01fb.
+// - Clients that are not using 0x0068 or 0x01fb, only use birthdate (YYMMDD) as default.
+char_del_option: 1
+
+// Restrict certain class from being created. (Only functional on 20151001aRagexe or later)
+// 0: No character creation is allowed
+// 1: Only novice is allowed to be created    (pre-renewal default)
+// 2: Only summoner is allowed to be created
+// 3: Both novice and summoner can be created (renewal default)
+// Uncomment to customize the restriction
+allowed_job_flag: 1
+
+// NOTE: Requires client 2011-03-09aragexeRE or newer.
+// A window is opened before you can select your character and you will have to enter a pincode by using only your mouse.
+// Default: yes
+pincode_enabled: no
