@@ -1,0 +1,2666 @@
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Who should have a baseatk value (makes str affect damage)? (Note 3)
+enable_baseatk: 0x9
+enable_baseatk_renewal: 0x29F
+
+// Who can have perfect flee? (Note 3)
+enable_perfect_flee: 1
+
+// Who can have critical attacks? (Note 3)
+// (Note that there are some skills that always do critical hit regardless of this)
+enable_critical: 17
+
+// Critical adjustment rate for non-players (Note 2)
+mob_critical_rate: 100
+critical_rate: 100
+
+// Should normal attacks give you a walk delay? (Note 3)
+// If no, characters can move as soon as they start an attack (attack animation
+// or walk animation may be omitted client-side, causing cropped attacks or
+// monsters that teleport to you)
+// Otherwise, the delay is equal to the 'attack animation' (amotion)
+attack_walk_delay: 15
+
+// Move-delay adjustment after being hit. (Note 2)
+// The 'can't walk' delay after being hit is calculated as a percentage of the damage animation duration.
+// NOTE: Only affects the normal delay from a single attack, not the delay added by the multihit_delay option below.
+pc_damage_walk_delay_rate: 20
+damage_walk_delay_rate: 100
+
+// Move-delay adjustment for multi-hitting attacks.
+// When hit by a multi-hitting skill like Lord of Vermillion or Jupitel Thunder, characters will be
+// unable to move for an additional "(number of hits -1) * multihit_delay" milliseconds.
+// 80 is the setting that feels like Aegis (vs Sonic Blows)
+// 230 is the setting that makes walkdelay last until the last hit (vs Jupitel thunder)
+multihit_delay: 80
+
+// Damaged delay rate for players (Note 2)
+// (Setting to no/0  will be like always endure)
+player_damage_delay_rate: 100
+
+// Should race or element be used to consider someone undead?
+// 0 = element undead
+// 1 = race undead
+// 2 = both (either one works)
+undead_detect_type: 0
+
+// Does HP recover if hit by an attribute that's same as your own? (Note 1)
+attribute_recover: no
+
+// What is the minimum and maximum hitrate of normal attacks?
+min_hitrate: 5
+max_hitrate: 100
+
+// Type of penalty that is applied to FLEE when more than agi_penalty_count monsters are targetting player
+// 0 = no penalty is applied
+// 1 = agi_penalty_num is reduced from FLEE as a %
+// 2 = agi_penalty_num is reduced from FLEE as an exact amount
+agi_penalty_type: 1
+
+// When agi penalty is enabled, to whom it should apply to? (Note 3)
+// By default, only players get the penalty.
+agi_penalty_target: 1
+
+// Amount of enemies required to be targetting player before FLEE begins to be penalized
+agi_penalty_count: 3
+
+// Amount of FLEE penalized per each attacking monster more than agi_penalty_count
+agi_penalty_num: 10
+
+// Type of penalty that is applied to both equipment and vit DEF when more than vit_penalty_count monsters are targetting player
+// 0 = no penalty is applied
+// 1 = vit_penalty_num is reduced from DEF as a %
+// 2 = vit_penalty_num is reduced from DEF as an exact amount
+vit_penalty_type: 1
+
+// When vit penalty is enabled, to whom it should apply to? (Note 3)
+// By default, only players get the penalty.
+vit_penalty_target: 1
+
+// Amount of enemies required to be targetting player before defense begins to be penalized
+vit_penalty_count: 3
+
+// Amount of VIT defense penalized per each attacking monster more than vit_penalty_count
+vit_penalty_num: 5
+
+// Use alternate method of DEF calculation for physical attacks.
+// With 0, disabled (use normal def% reduction with further def2 reduction)
+// At 1 or more defense is subtraction of (DEF * value).
+// eg: 10 + 50 def becomes 0 + (10*type + 50)
+weapon_defense_type: 0
+
+// MDEF‚ same as above. (MDEF * value)
+magic_defense_type: 0
+
+// Change attacker's direction to face opponent on every attack? (Note 3)
+// NOTE: On official servers knockback of some skills like Firewall is always based on the
+// last direction walked. Even when attacking in a completely different direction, the
+// knockback direction won't change, so e.g. if you walk north and then attack an enemy to
+// the south you will still be knocked back to the south by Firewall. Immobile monsters
+// will always be knocked back to the south as their default direction is north.
+attack_direction_change: 1
+
+// For those who is set, their innate attack element is "not elemental"
+// (100% versus on all defense-elements) (Note 3)
+// NOTE: This is the setting that makes it so non-players can hit for full
+// damage against Ghost-type targets with normal attacks (eg: vs. Ghostring).
+attack_attr_none: 14
+
+// Rate at which equipment can break (base rate before it's modified by any skills)
+// 1 = 0.01% chance. Default for official servers: 0
+equip_natural_break_rate: 0
+
+// Overall rate of which your own equipment can break. (Note 2)
+// This rate affects penalty breaking rate of skills such as power-thrust and your natural breaking rate
+// (from equip_natural_break_rate). If a Sage's endow skill fails and this is above 0, the selected char's
+// weapon will be broken.
+equip_self_break_rate: 100
+
+// Overall rate at which you can break target's equipment. (Note 2)
+// This affects the behaviour of skills like acid terror and meltdown
+equip_skill_break_rate: 100
+
+// Do weapon attacks have a attack speed delay before actual damage is applied? (Note 1)
+// NOTE: The official setting is yes, even thought it degrades performance a bit.
+delay_battle_damage: yes
+
+// Are arrows/ammo consumed when used on a bow/gun?
+// 0 = No
+// 1 = Yes
+// 2 = Yes even for skills that do not specify arrow consumption when said
+//     skill is weapon-based and used with ranged weapons (auto-guesses which
+//     skills should consume ammo when it's acquired via a card or plagiarize)
+arrow_decrement: 1
+
+// Should ammo be unequipped when unequipping a weapon?
+// Official behavior is "yes".
+ammo_unequip: yes
+
+// Should a suitable weapon be equipped when equipping ammo?
+// Official behavior is "yes".
+ammo_check_weapon: yes
+
+// Should the item script bonus 'Autospell' check for range/obstacles before casting?
+// Official behavior is "no", setting this to "yes" will make skills use their defined
+// range. For example, Sonic Blow requires a 2 cell distance before autocasting is allowed.
+// This setting also affects autospellwhenhit.
+autospell_check_range: no
+
+// If both the attacker and the target are on the same tile, should the target be knocked back to the left?
+// Official behavior is "yes", setting this to "no" will knock the target back behind the attacker.
+knockback_left: no
+
+// Can players use Falcons and Wargs at the same time? (Note 1)
+// This is not allowed on official servers.
+warg_can_falcon: no
+
+// Should the target be able of dodging damage by snapping away to the edge of the screen?
+// Official behavior is "no"
+snap_dodge: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Melee damage adjustments (non skills) for Battleground maps (Note 2)
+bg_short_attack_damage_rate: 80
+
+// Ranged damage adjustments (non skills) for Battleground maps (Note 2)
+bg_long_attack_damage_rate: 80
+
+// Weapon skills damage adjustments for Battleground maps (Note 2)
+bg_weapon_attack_damage_rate: 60
+
+// Magic skills damage adjustments for Battleground maps (Note 2)
+bg_magic_attack_damage_rate: 60
+
+// Misc skills damage adjustments for Battleground maps (Note 2)
+bg_misc_attack_damage_rate: 60
+
+// Flee penalty on BG grounds.
+// NOTE: It's %, not absolute, so 20 is -20% of your total flee
+bg_flee_penalty: 20
+
+// Interval before updating the bg-member map mini-dots (milliseconds)
+bg_update_interval: 1000
+
+// Before a player is warped into a Battleground from the Battleground Queue,
+// check to see if the player's current map has MF_NOWARP.
+bgqueue_nowarp_mapflag: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary)
+//--------------------------------------------------------------
+
+// Minimum delay between whisper/global/party/guild messages (in ms)
+// Messages that break this threshold are silently omitted.
+min_chat_delay: 0
+
+// Valid range of dyes and styles on the client.
+min_hair_style: 0
+max_hair_style: 29
+min_hair_color: 0
+max_hair_color: 8
+min_cloth_color: 0
+max_cloth_color: 34
+min_body_style: 0
+max_body_style: 1
+
+// When set to yes, the damage field in packets sent from woe maps will be set
+// to -1, making it impossible for GMs, Bots and Hexed clients to know the
+// actual damage caused by attacks. (Note 1)
+hide_woe_damage: no
+
+// "hair style" number that identifies pet.
+// NOTE: The client uses the "hair style" field in the mob packet to tell them apart from mobs.
+// This value is always higher than the max hair-style available in said client.
+// Known values to work (all 2005 clients):
+// older sakexes: 20
+// sakexe 0614: 24
+// sakexe 0628 (and later): 100
+pet_hair_style: 100
+
+// Visible area size (how many squares away from a player they can see)
+area_size: 20
+
+// Maximum walk path (how many cells a player can walk going to cursor)
+max_walk_path: 20
+
+// Maximum allowed 'level' value that can be sent in unit packets.
+// Use together with the aura_lv setting to tell when exactly to show the aura.
+// NOTE: You also need to adjust the client if you want this to work.
+// NOTE: Default is 99. Values above 127 will probably behave incorrectly.
+// NOTE: If you don't know what this does, don't change it!!!
+max_lv: 250
+
+// Level required to display an aura.
+// NOTE: This assumes that sending max_lv to the client will display the aura.
+// NOTE: aura_lv must not be less than max_lv.
+// Example: If max_lv is 99 and aura_lv is 150, characters with level 99~149
+//          will be sent as being all level 98, and only characters with level
+//          150 or more will be reported as having level 99 and show an aura.
+aura_lv: 250
+
+// Units types affected by max_lv and aura_lv settings. (Note 3)
+// Note: If an unit type, which normally does not show an aura, is
+//       set it will obtain an aura when it meets the level requirement.
+// Default: 0 (none)
+client_limit_unit_lv: 0
+
+// Will tuxedo and wedding dresses be shown when worn? (Note 1)
+wedding_modifydisplay: yes
+
+// Save Clothes color. (This will degrade performance) (Note 1)
+save_clothcolor: yes
+
+// Save body styles. (Note 1)
+save_body_style: yes
+
+// Do not display cloth colors for the wedding class?
+// Note: Both save_clothcolor and wedding_modifydisplay have to be enabled
+// for this option to take effect. Set this to yes if your cloth palettes
+// pack doesn't has wedding palettes (or has less than the other jobs)
+wedding_ignorepalette: no
+
+// Do not display cloth colors for the Xmas costume?
+// Set this to yes if your cloth palettes pack doesn't have Xmas palettes (or has less than the other jobs)
+xmas_ignorepalette: no
+
+// Do not display cloth colors for the Summer costume?
+// Set this to yes if your cloth palettes pack doesn't have Summer palettes (or has less than the other jobs)
+summer_ignorepalette: no
+
+// Do not display cloth colors for the Hanbok costume?
+// Set this to yes if your cloth palettes pack doesn't have Hanbok palettes (or has less than the other jobs)
+hanbok_ignorepalette: no
+
+// Do not display cloth colors for the Oktoberfest costume?
+// Set this to yes if your cloth palettes pack doesn't have Oktoberfest palettes (or has less than the other jobs)
+oktoberfest_ignorepalette: no
+
+// Set this to 1 if your clients have langtype problems and can't display motd properly
+motd_type: 0
+
+// Show rAthena version to users when the login?
+display_version: no
+
+// When affected with the "Hallucination" status effect, send the effect to client? (Note 1)
+// NOTE: Set to 'no' if the client lags due to the "Wavy" screen effect.
+display_hallucination: yes
+
+// Set this to 1 if your client supports status change timers and you want to use them
+// Clients from 2009 onward support this
+display_status_timers: yes
+
+// Randomizes the dice emoticon server-side, to prevent clients from forging
+// packets for the desired number. (Note 1)
+client_reshuffle_dice: yes
+
+// Sorts the character and guild storage before it is sent to the client.
+// Official servers do not sort storage. (Note 1)
+// NOTE: Enabling this option degrades performance.
+client_sort_storage: no
+
+// Do we allow to change guilde emblem during woe_time?
+emblem_woe_change: no
+
+// How many transparent pixel can be found in emblem before detected as invalid? (Note 2)
+emblem_transparency_limit: 80
+
+// Update enemy position while in invisible state? (Note 1)
+// NOTE: Set to 'no' will make client won't update enemy position unless the players have "Intravision" effect.
+//       So that will help client handling WPE - Maya Purple Hack stuff.
+//       But it will screw 'the game animation display' while players in invisible state.
+update_enemy_position: yes
+
+// When a player teleports, changes maps, or logs in, will they face the direction they were facing before warped?
+// Official: Disabled, players always face North.
+spawn_direction: yes
+
+// Show the MVP EXP reward message for clients 2013-12-23cRagexe and newer? (Note 1)
+// kRO removed the packet and this re-enables the message.
+// Official: Disabled.
+mvp_exp_reward_message: no
+
+// Send ping timer
+// Interval in seconds for each timer invoke.
+ping_timer_inverval: 30
+
+// Send packets timeout in seconds before ping packet can be sent.
+ping_time: 20
+
+// Show skill scale for clients 2015-12-23 and newer? (Note 1)
+// Official: yes
+show_skill_scale: yes
+
+// Should the connection be dropped on server side after a player disconnection request was received? (Note 1)
+// Note: Enabling this is known to cause problems on clients that make use of REST API calls.
+// Official: no
+drop_connection_on_quit: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// If an item is dropped, does it go straight into the user's inventory? (Note 1)
+item_auto_get: no
+
+// How long does it take for an item to disappear from the floor after it is dropped? (in milliseconds)
+flooritem_lifetime: 60000
+
+// Grace time during which only the person who did the most damage to a monster can get the item? (in milliseconds)
+item_first_get_time: 3000
+
+// Grace time during which only the first and second person who did the most damage to a monster can get the item? (in milliseconds)
+// (Takes effect after item_first_get_time elapses)
+item_second_get_time: 1000
+
+// Grace time during which only the first, second and third person who did the most damage to a monster can get the item? (in milliseconds)
+// (Takes effect after the item_second_get_time elapses)
+item_third_get_time: 1000
+
+// Grace time to apply to MvP reward items when the Most Valuable Player can't get the prize item and it drops on the ground? (in milliseconds)
+mvp_item_first_get_time: 10000
+
+// Grace time for the first and second MvP so they can get the item? (in milliseconds)
+// (Takes effect after mvp_item_first_get_time elapses)
+mvp_item_second_get_time: 10000
+
+// Grace time for the first, second and third MvP so they can get the item? (in milliseconds)
+// (Takes effect after mvp_item_second_get_time elapses)
+mvp_item_third_get_time: 2000
+
+// Item drop rates (Note 2)
+
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 10000
+item_rate_common_boss: 10000
+item_rate_common_mvp: 10000
+item_drop_common_min: 1
+item_drop_common_max: 10000
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 10000
+item_rate_heal_boss: 10000
+item_rate_heal_mvp: 10000
+item_drop_heal_min: 1
+item_drop_heal_max: 10000
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 10000
+item_rate_use_boss: 10000
+item_rate_use_mvp: 10000
+item_drop_use_min: 1
+item_drop_use_max: 10000
+
+// The rate at which equipment is dropped.
+item_rate_equip: 10000
+item_rate_equip_boss: 10000
+item_rate_equip_mvp: 10000
+item_drop_equip_min: 1
+item_drop_equip_max: 10000
+
+// The rate at which cards are dropped
+item_rate_card: 10000
+item_rate_card_boss: 10000
+item_rate_card_mvp: 10000
+item_drop_card_min: 1
+item_drop_card_max: 10000
+
+// The rate adjustment for the MVP items that the MVP gets directly in their inventory
+// Mode: 0 - official order, 1 - random order, 2 - all items
+item_rate_mvp: 10000
+item_drop_mvp_min: 1
+item_drop_mvp_max: 10000
+item_drop_mvp_mode: 0
+
+// The rate adjustment for card-granted item drops.
+item_rate_adddrop: 10000
+item_drop_add_min: 1
+item_drop_add_max: 10000
+
+// Rate adjustment for Treasure Box drops (these override all other modifiers)
+item_rate_treasure: 10000
+item_drop_treasure_min: 1
+item_drop_treasure_max: 10000
+
+// Use logarithmic drops? (Note 1)
+// Logarithmic drops scale drop rates in a non-linear fashion using the equation
+// Droprate(x,y) = x * (5 - log(x)) ^ (ln(y) / ln(5))
+// Where x is the original drop rate and y is the drop_rate modifier (the previously mentioned item_rate* variables)
+// Use the following table for an idea of how the rate will affect drop rates when logarithmic drops are used:
+// Y: Original Drop Rate
+// X: Rate drop modifier (eg: item_rate_equip)
+//  X\Y | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+// -----+---------------------------------------------------------------
+//   50 | 0.01 0.01  0.03  0.06  0.11  0.30  0.62  1.30  3.49  7.42 15.92
+//  100 | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+//  200 | 0.02 0.04  0.09  0.18  0.35  0.84  1.61  3.07  7.16 13.48 25.13
+//  500 | 0.05 0.09  0.22  0.40  0.74  1.65  3.00  5.40 11.51 20.00 33.98
+// 1000 | 0.10 0.18  0.40  0.73  1.30  2.76  4.82  8.28 16.47 26.96 42.69
+// 2000 | 0.20 0.36  0.76  1.32  2.28  4.62  7.73 12.70 23.58 36.33 53.64
+// 5000 | 0.50 0.86  1.73  2.91  4.81  9.11 14.45 22.34 37.90 53.91 72.53
+//10000 | 1.00 1.67  3.25  5.28  8.44 15.24 23.19 34.26 54.57 72.67 91.13
+//20000 | 2.00 3.26  6.09  9.59 14.83 25.49 37.21 52.55 77.70 97.95  100%
+//50000 | 5.00 7.87 13.98 21.12 31.23 50.31 69.56 92.48  100%  100%  100%
+item_logarithmic_drops: yes
+
+// Can the monster's drop rate become 0? (Note 1)
+// Default: no (as in official servers).
+drop_rate0item: no
+
+// Increase item drop rate +0.01%? (Note 1)
+// On official servers it is possible to get 0.00% drop chance so all items are increased by 0.01%.
+// NOTE: This is viewed as a bug to rAthena.
+// Default: no
+drop_rateincrease: no
+
+// Makes your LUK value affect drop rates on an absolute basis.
+// Setting to 100 means each luk adds 0.01% chance to find items
+// (regardless of item's base drop rate).
+drops_by_luk: 116
+
+// Makes your LUK value affect drop rates on a relative basis.
+// Setting to 100 means each luk adds 1% chance to find items
+// (So at 100 luk, everything will have double chance of dropping).
+drops_by_luk2: 0
+
+// The rate of monsters dropping ores by the skill Ore Discovery (Default is 100)
+finding_ore_rate: 100
+
+// Whether or not Marine Spheres and Floras summoned by Alchemist drop items?
+// This setting has three available values:
+// 0: Nothing drops.
+// 1: Only marine spheres drop items.
+// 2: All alchemist summons drop items.
+alchemist_summon_reward: 1
+
+// Make broadcast ** Player1 won Pupa's Pupa Card (chance 0.01%) ***
+// This can be set to any value between 0~10000.
+// Note: It also announces STEAL skill usage with rare items
+// 0 = don't show announces at all
+// 1 = show announces for 0.01% drop chance items
+// 333 = show announces for 3.33% or lower drop chance items
+// 10000 = show announces for all items
+rare_drop_announce: 0
+
+// Does autoloot take into account player bonuses and penalties? (Note 1)
+// If RENEWAL_DROP, Bubble Gum, or any other modifiers are active autoloot
+// will take them into account.
+autoloot_adjust: 0
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: The max level of classes is stored in the exp table.
+//         See files db/exp.txt and db/exp2.txt to change them.
+//--------------------------------------------------------------
+
+// Rate at which exp. is given. (Note 2)
+base_exp_rate: 100
+
+// Rate at which job exp. is given. (Note 2)
+job_exp_rate: 100
+
+// Turn this on to allow a player to level up more than once from a kill. (Note 1)
+multi_level_up: yes
+
+// Allow multi level up until a certain level?
+// This only triggers if multi_level_up is enabled.
+// Default: 0 (Unlimited)
+multi_level_up_base: 0
+multi_level_up_job: 0
+
+// Setting this can cap the max experience one can get per kill specified as a
+// % of the current exp bar. (Every 10 = 1.0%)
+// For example, set it to 500 and no matter how much exp the mob gives,
+// it can never give you above half of your current exp bar.
+max_exp_gain_rate: 0
+
+// Method of calculating earned experience when defeating a monster:
+// 0 = uses damage given / total damage as damage ratio
+// 1 = uses damage given / max_hp as damage ratio
+// NOTE: Using type 1 disables the bonus where the first attacker gets
+//       his share of the exp doubled when multiple people attack the mob.
+exp_calc_type: 0
+
+// Experience increase per attacker. That is, every additional attacker to the
+// monster makes it give this much more experience
+// (eg: 5 people attack with 25 here, +(25*4)% -> +100% exp)
+exp_bonus_attacker: 25
+
+// Max number of attackers at which exp bonus is capped
+// (eg: if set at 5, the max bonus is 4*bonus-per-char regardless of attackers)
+exp_bonus_max_attacker: 12
+
+// MVP bonus exp rate. (Note 2)
+mvp_exp_rate: 100
+
+// Rate of base/job exp given by NPCs. (Note 2)
+quest_exp_rate: 100
+
+// The rate of job exp. from using Heal skill (100 is the same as the heal amount, 200 is double.
+// The balance of the exp. rate is best used with 5 to 10)
+heal_exp: 0
+
+// The rate of exp. that is gained by the process of resurrection, a unit is 0.01%.
+// Experience calculations for the experience value * level difference of the person revived / 100 * resurrection_exp/10000 which the revived player has can be got.
+resurrection_exp: 0
+
+// The rate of job exp. when using discount and overcharge on an NPC
+// (in 0.01% increments - 100 is 1%, 10000 is normal, 20000 is double.)
+// The way it is calculated is (money received * skill lv) * shop_exp / 10000.
+shop_exp: 0
+
+// PVP exp.  Do players get exp in PvP maps
+// (Note: NOT exp from players, but from normal leveling)
+pvp_exp: yes
+
+// When a player dies, how should we penalize them?
+// 0 = No penalty.
+// 1 = Lose % of current level when killed.
+// 2 = Lose % of total experience when killed.
+death_penalty_type: 1
+
+// Base exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_base: 10000
+
+// Job exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_job: 10000
+
+// When a player dies (to another player), how much zeny should we penalize them with?
+// NOTE: It is a percentage of their zeny, so 100 = 1%
+zeny_penalty: 0
+
+// Will players on max base/job level lose the EXP on death?
+// 0: Never lose (default as in official).
+// 1: Lose Base EXP.
+// 2: Lose Job EXP.
+death_penalty_maxlv: 0
+
+// Will display experience gained from killing a monster. (Note 1)
+disp_experience: no
+
+// Will display zeny earned (from mobs, trades, etc) (Note 1)
+disp_zeny: no
+
+// Use the contents of db/statpoint.txt when doing a stats reset and leveling up? (Note 1)
+// If no, an equation will be used which preserves statpoints earned/lost
+// through external means (ie: stat point buyers/sellers)
+use_statpoint_table: yes
+
+// EXP cost for cast PR_REDEMPTIO (Note 2)
+exp_cost_redemptio: 1
+
+// How many player needed to makes PR_REDEMPTIO's EXP penalty become 0?
+// If by default, the 'exp_cost_redemptio' is 1 (1%) and every single player revived the penalty is reduced to 0.2%,
+// it means 'exp_cost_redemptio_limit' is 5.
+exp_cost_redemptio_limit: 5
+
+// EXP cost for cast LG_INSPIRATION (Note 2)
+exp_cost_inspiration: 1
+
+//--------------------------------------------------------------
+// rAthena Feature Configuration File
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Buying store (Note 1)
+// Requires: 2010-04-27aRagexeRE or later
+feature.buying_store: on
+
+// Search stores (Note 1)
+// Requires: 2010-08-03aRagexeRE or later
+feature.search_stores: on
+
+// Atcommand suggestions (Note 1)
+// If one type incomplete atcommand, it will suggest the complete ones.
+feature.atcommand_suggestions: off
+
+// Auction (Note 1)
+// Feature became unstable on clients 2012 onwards (exact date not known),
+// it has been fixed on clients 2013-05-15 onwards however.
+// Feature was removed again on clients 2014-11-12 and later.
+feature.auction: off
+
+// Warp suggestions (Note 1)
+// Show suggestions when attempting to @warp to a non-existent map?
+feature.warp_suggestions: off
+
+// Banking (Note 1)
+// Requires: 2013-07-24aRagexe or later
+feature.banking: on
+
+// Autotrade persistency (Note 1)
+// Should vendors that used @autotrade be restored after a restart?
+feature.autotrade: on
+
+// In which direction should respawned autotraders look?
+// Possible values are from 0-7
+// Default: 4(South)
+// -1 = Last player's direction
+feature.autotrade_direction: 4
+
+// Change player's head direction?
+// -1 = Last condition
+//  0 = Forward
+//  1 = Right
+//  2 = Left
+feature.autotrade_head_direction: 0
+
+// Do you want your autotraders to sit?
+// -1 = Last player's condition, sitting or standing
+//  0 = Standing
+//  1 = Sitting
+feature.autotrade_sit: 1
+
+// Delay in miliseconds to open vending/buyingsotre after player logged in.
+feature.autotrade_open_delay: 5000
+
+// Battlegrounds queue interface. Makes it possible to queue for a battleground anywhere using the battle menu.
+// Requires: 2012-04-10aRagexe or later
+feature.bgqueue: on
+
+// Roulette (Note 1)
+// Requires: 2014-10-22bRagexe or later
+feature.roulette: on
+
+// Achievement (Note 1)
+// Requires: 2015-05-13aRagexe or later
+feature.achievement: on
+
+// Equipment Switch (Note 1)
+// Requires: 2017-02-08bRagexeRE or later
+feature.equipswitch: off
+
+// Pet evolution (Note 1)
+// Requires: 2014-10-08aRagexe or later
+feature.petevolution: on
+
+// Automatic Pet Feeding (Note 1)
+// Requires: 2014-10-08aRagexe or later
+feature.petautofeed: on
+
+// At which hunger rate should pet autofeeding trigger? (Note 2)
+// Default: 89
+feature.pet_autofeed_rate: 89
+
+// Homunculues Autofeeding (Note 1)
+// Requires: 2017-09-20bRagexeRE or later
+feature.homunculus_autofeed: off
+
+// At which rate should homunculus autofeeding trigger? (Note 2)
+// Default: 30
+//
+// NOTE:
+// This setting only applies, if your client side LUAs are bugged.
+// By default the client triggers the feeding packet itself once
+// it reaches the limit that is hardcoded in the client.
+feature.homunculus_autofeed_rate: 30
+
+// Attendance System (Note 1)
+// Requires: 2018-03-07bRagexeRE or later
+feature.attendance: off
+
+// Private Airship System (Note 1)
+// Requires: 2018-03-21aRagexeRE or later
+feature.privateairship: off
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// The symbol that will be used to recognize commands.
+// You can set any one character except:
+// - control-characters (0x00-0x1f),
+// - '%' (party chat symbol)
+// - '$' (guild chat symbol)
+// - '/' (client commands symbol)
+// atcommand_symbol represents @commands used locally.
+// charcommand_symbol represents #commands used on other players.
+atcommand_symbol: @
+charcommand_symbol: #
+
+// The maximum quantity of monsters that can be summoned per GM command (0 denotes an unlimited quantity)
+atcommand_spawn_quantity_limit: 100
+
+// Maximum number of slave-clones that can be have by using the @slaveclone at command. (0 denotes unlimited quantity)
+atcommand_slave_clone_limit: 25
+
+// If 'no', commands require exact player name. If 'yes', entering a partial
+// name will work, as long as there's only one match from all players in the
+// current map server.
+// Some critical atcommands like jail, ban and a few others will still require you to enter the full name.
+// It will always work for charcommands when the setting is enabled.
+partial_name_scan: yes
+
+// Ban people that try trade dupe.
+// Duration of the ban, in minutes (default: 5). To disable the ban, set 0.
+ban_hack_trade: 5
+
+// requires RENEWAL_EXP or RENEWAL_DROP to be enabled (src/config/renewal.hpp)
+// modifies @mobinfo to display the users' real drop rate as per renewal_drop formula
+// modifies @iteminfo to not display the minimum item drop rate (since it can't tell the mob level)
+// modifies @whodrops to display the users' real drop rate as per renewal_drop formula
+atcommand_mobinfo_type: 1
+
+// Should atcommands trigger level up events for NPCs? (Note 1)
+// This option is for @baselevelup and @joblevelup
+// Default: no
+atcommand_levelup_events: no
+
+// Disable atcommands while a player is attached to a npc? (Note 1)
+// This can be changed by script commands 'enable_command' and 'disable_command'.
+// Anyone with the 'command_enable' permission in the 'conf/group.conf' can bypass this.
+// Default: yes
+atcommand_disable_npc: yes
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// When making a guild, an Emperium is consumed? (Note 1)
+guild_emperium_check: yes
+
+// Maximum tax limit on a guild member.
+guild_exp_limit: 50
+
+// Maximum castles one guild can own (0 = unlimited)
+guild_max_castles: 0
+
+// Activate guild skills delay by relog?
+// Official setting is 5 minutes (300000 ms), otherwise allow guild leaders to relog to cancel the 5 minute delay.
+guild_skill_relog_delay: 300000
+
+// Melee damage adjustments (non skills) for WoE battles (Guild Vs Guild) (Note 2)
+gvg_short_attack_damage_rate: 80
+
+// Ranged damage adjustments (non skills) for WoE battles (Guild Vs Guild) (Note 2)
+gvg_long_attack_damage_rate: 80
+
+// Weapon skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_weapon_attack_damage_rate: 60
+
+// Magic skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_magic_attack_damage_rate: 60
+
+// Misc skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_misc_attack_damage_rate: 60
+
+// Flee penalty on gvg grounds. Official value is 20 (Note 2)
+// NOTE: It's %, not absolute, so 20 is -20% of your total flee
+gvg_flee_penalty: 20
+
+// Can the 'Glory of Guild' skill be learnt in the Guild window,
+// and does changing emblems require it? (Note 1)
+// P.S: This skill is not implemented on official servers
+require_glory_guild: no
+
+// Limit Guild alliances. Value is 0 to 3.
+// If you want to change this value, clear the guild alliance table.
+// Default is 3
+max_guild_alliance: 3
+
+// When to re-display the guild notice
+// Upon teleporting (regardless of changing maps): 2 (official)
+// Upon changing maps: 1
+// Do not re-display: 0 (disabled)
+guild_notice_changemap: 2
+
+// Should maprespawnguildid kill clones too?
+// Default: no
+guild_maprespawn_clones: no
+
+// How long (in minutes) should a guild have to wait between guild master changes?
+// Default: 1440 (1 day)
+// Use 0 minutes to disable the delay.
+guild_leaderchange_delay: 1440
+
+// Is changing the guild leader allowed during WoE?
+// Default: no
+guild_leaderchange_woe: no
+
+// Only guild master can accept alliance?
+// Default: no
+guild_alliance_onlygm: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Homunculus setting (Note 3)
+// Activates various 'quirks' that makes them behave unlike normal characters.
+// 0x01: Can't be targetted by support skills (except for their master)
+// 0x04: Mobs will always go after them instead of players until attacked
+// 0x08: Copy their master's speed on spawn/map-change
+// 0x10: They display luk/3+1 instead of their actual critical in the
+//       stat window (by default they don't crit)
+// 0x20: Their Min-Matk is always the same as their max
+// 0x40: Skill re-use delay is reset when they are vaporized.
+// 0x80: Skill re-use delay is reset when they are warped (by skill or item) with player.
+hom_setting: 0x3D
+
+// The rate a homunculus will get friendly by feeding it. (Note 2)
+homunculus_friendly_rate: 10000
+
+// Can you name a homunculus more then once? (Note 1)
+hom_rename: no
+
+// Minimum intimacy to evo the homunculus
+homunculus_evo_intimacy_need: 91100
+
+// Reset intimacy after evolution to:
+homunculus_evo_intimacy_reset: 1000
+
+// Intimacy needed to use Evolved Vanilmirth's Bio Explosion
+hvan_explosion_intimate: 45000
+
+// Show stat growth to the owner when an Homunculus levels up
+homunculus_show_growth: yes
+
+// Does autoloot work, when a monster is killed by homunculus only?
+homunculus_autoloot: no
+
+// Should homunculi Vaporize when Master dies? (Note 2)
+// A homunculus will not Vaporize if their HP is below 80%.
+homunculus_auto_vapor: 80
+
+// Max level for regular Homunculus
+homunculus_max_level: 250
+
+// Max level for Homunculus S
+homunculus_S_max_level: 175
+
+// Growth level for Homunculus S
+// This is the level at which homunculus S can use their growth tables
+// Without this, a shuffle causes all levels of a Homunculus S to use their
+// growth tables, causing imbalanced stats
+homunculus_S_growth_level: 99
+
+// Send auto-feed notice even if OFF (Note 1)
+// Official: yes
+homunculus_autofeed_always: yes
+
+// Is getting exp/item from the homunculus disabled when their master's idle?
+// Set to no, or the amount of seconds (NOT milliseconds) that need to pass before considering
+// a character idle.
+// Characters in a chat/vending are always considered idle.
+// A character's idle status is reset upon item use/skill use/attack (auto attack counts too)/movement.
+// Their master will only receive items if 'homunculus_autoloot' is activated,
+// otherwise they will be dropped on the ground as usual.
+// NOTE: This option uses a special timer to track idle time, separated from the normal idle timer.
+hom_idle_no_share: no
+
+// How the server should measure the homunculus master's idle time? (for homunculus exp share and autoloot ONLY) (Note 3)
+// (This will only work if 'hom_idle_no_share' is enabled).
+// 0x001 - Walk Request
+// 0x002 - UseSkillToID Request (Targetted skill use attempt)
+// 0x004 - UseSkillToPos Request (AoE skill use attempt)
+// 0x008 - UseItem Request (Including equip/unequip)
+// 0x010 - Attack Request
+// 0x020 - Chat Request (Whisper, Party, Guild, Battlegrounds, etc)
+// 0x040 - Sit/Standup Request
+// 0x080 - Emotion Request
+// 0x100 - DropItem Request
+// 0x200 - @/#Command Request
+// Please note that at least 1 option has to be enabled.
+// Be mindful that the more options used, the easier it becomes to cheat this features.
+// Default: walk (0x1) + useskilltoid (0x2) + useskilltopos (0x4) + useitem (0x8) + attack (0x10) = 0x1F
+// NOTE: This allows you to configure different settings for homunculus, separated from normal idle timer and 'idletime_option'.
+// It will only apply to homunculus-only kills and it will not affect normal autoloot and party share options.
+idletime_hom_option: 0x1F
+
+// The rate at which homunculus gain experience from kills. (Note 2)
+// Only applies to renewal mode.
+// Official: 10%
+homunculus_exp_gain: 10
+
+// The hunger rate, less than or equal to, at which a homunculus' hunger delay changes. (Note 2)
+// See 'homunculus_starving_delay' for the delay value.
+// Set to 0 to disable.
+// Official: 10
+homunculus_starving_rate: 10
+
+// Homunculi normally lose hunger every 60 seconds but when the 'homunculus_starving_rate' is met the hunger delay drops to 20 seconds (in milliseconds).
+// Official: 20 seconds
+homunculus_starving_delay: 20000
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// When making a guild, an Emperium is consumed? (Note 1)
+guild_emperium_check: yes
+
+// Maximum tax limit on a guild member.
+guild_exp_limit: 50
+
+// Maximum castles one guild can own (0 = unlimited)
+guild_max_castles: 0
+
+// Activate guild skills delay by relog?
+// Official setting is 5 minutes (300000 ms), otherwise allow guild leaders to relog to cancel the 5 minute delay.
+guild_skill_relog_delay: 300000
+
+// Melee damage adjustments (non skills) for WoE battles (Guild Vs Guild) (Note 2)
+gvg_short_attack_damage_rate: 80
+
+// Ranged damage adjustments (non skills) for WoE battles (Guild Vs Guild) (Note 2)
+gvg_long_attack_damage_rate: 80
+
+// Weapon skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_weapon_attack_damage_rate: 60
+
+// Magic skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_magic_attack_damage_rate: 60
+
+// Misc skills damage adjustments for WoE battles (Guild Vs Guild) (Note 2)
+gvg_misc_attack_damage_rate: 60
+
+// Flee penalty on gvg grounds. Official value is 20 (Note 2)
+// NOTE: It's %, not absolute, so 20 is -20% of your total flee
+gvg_flee_penalty: 20
+
+// Can the 'Glory of Guild' skill be learnt in the Guild window,
+// and does changing emblems require it? (Note 1)
+// P.S: This skill is not implemented on official servers
+require_glory_guild: no
+
+// Limit Guild alliances. Value is 0 to 3.
+// If you want to change this value, clear the guild alliance table.
+// Default is 3
+max_guild_alliance: 3
+
+// When to re-display the guild notice
+// Upon teleporting (regardless of changing maps): 2 (official)
+// Upon changing maps: 1
+// Do not re-display: 0 (disabled)
+guild_notice_changemap: 2
+
+// Should maprespawnguildid kill clones too?
+// Default: no
+guild_maprespawn_clones: no
+
+// How long (in minutes) should a guild have to wait between guild master changes?
+// Default: 1440 (1 day)
+// Use 0 minutes to disable the delay.
+guild_leaderchange_delay: 1440
+
+// Is changing the guild leader allowed during WoE?
+// Default: no
+guild_leaderchange_woe: no
+
+// Only guild master can accept alliance?
+// Default: no
+guild_alliance_onlygm: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Homunculus setting (Note 3)
+// Activates various 'quirks' that makes them behave unlike normal characters.
+// 0x01: Can't be targetted by support skills (except for their master)
+// 0x04: Mobs will always go after them instead of players until attacked
+// 0x08: Copy their master's speed on spawn/map-change
+// 0x10: They display luk/3+1 instead of their actual critical in the
+//       stat window (by default they don't crit)
+// 0x20: Their Min-Matk is always the same as their max
+// 0x40: Skill re-use delay is reset when they are vaporized.
+// 0x80: Skill re-use delay is reset when they are warped (by skill or item) with player.
+hom_setting: 0x3D
+
+// The rate a homunculus will get friendly by feeding it. (Note 2)
+homunculus_friendly_rate: 100
+
+// Can you name a homunculus more then once? (Note 1)
+hom_rename: no
+
+// Minimum intimacy to evo the homunculus
+homunculus_evo_intimacy_need: 91100
+
+// Reset intimacy after evolution to:
+homunculus_evo_intimacy_reset: 1000
+
+// Intimacy needed to use Evolved Vanilmirth's Bio Explosion
+hvan_explosion_intimate: 45000
+
+// Show stat growth to the owner when an Homunculus levels up
+homunculus_show_growth: yes
+
+// Does autoloot work, when a monster is killed by homunculus only?
+homunculus_autoloot: no
+
+// Should homunculi Vaporize when Master dies? (Note 2)
+// A homunculus will not Vaporize if their HP is below 80%.
+homunculus_auto_vapor: 80
+
+// Max level for regular Homunculus
+homunculus_max_level: 99
+
+// Max level for Homunculus S
+homunculus_S_max_level: 175
+
+// Growth level for Homunculus S
+// This is the level at which homunculus S can use their growth tables
+// Without this, a shuffle causes all levels of a Homunculus S to use their
+// growth tables, causing imbalanced stats
+homunculus_S_growth_level: 99
+
+// Send auto-feed notice even if OFF (Note 1)
+// Official: yes
+homunculus_autofeed_always: yes
+
+// Is getting exp/item from the homunculus disabled when their master's idle?
+// Set to no, or the amount of seconds (NOT milliseconds) that need to pass before considering
+// a character idle.
+// Characters in a chat/vending are always considered idle.
+// A character's idle status is reset upon item use/skill use/attack (auto attack counts too)/movement.
+// Their master will only receive items if 'homunculus_autoloot' is activated,
+// otherwise they will be dropped on the ground as usual.
+// NOTE: This option uses a special timer to track idle time, separated from the normal idle timer.
+hom_idle_no_share: no
+
+// How the server should measure the homunculus master's idle time? (for homunculus exp share and autoloot ONLY) (Note 3)
+// (This will only work if 'hom_idle_no_share' is enabled).
+// 0x001 - Walk Request
+// 0x002 - UseSkillToID Request (Targetted skill use attempt)
+// 0x004 - UseSkillToPos Request (AoE skill use attempt)
+// 0x008 - UseItem Request (Including equip/unequip)
+// 0x010 - Attack Request
+// 0x020 - Chat Request (Whisper, Party, Guild, Battlegrounds, etc)
+// 0x040 - Sit/Standup Request
+// 0x080 - Emotion Request
+// 0x100 - DropItem Request
+// 0x200 - @/#Command Request
+// Please note that at least 1 option has to be enabled.
+// Be mindful that the more options used, the easier it becomes to cheat this features.
+// Default: walk (0x1) + useskilltoid (0x2) + useskilltopos (0x4) + useitem (0x8) + attack (0x10) = 0x1F
+// NOTE: This allows you to configure different settings for homunculus, separated from normal idle timer and 'idletime_option'.
+// It will only apply to homunculus-only kills and it will not affect normal autoloot and party share options.
+idletime_hom_option: 0x1F
+
+// The rate at which homunculus gain experience from kills. (Note 2)
+// Only applies to renewal mode.
+// Official: 10%
+homunculus_exp_gain: 10
+
+// The hunger rate, less than or equal to, at which a homunculus' hunger delay changes. (Note 2)
+// See 'homunculus_starving_delay' for the delay value.
+// Set to 0 to disable.
+// Official: 10
+homunculus_starving_rate: 10
+
+// Homunculi normally lose hunger every 60 seconds but when the 'homunculus_starving_rate' is met the hunger delay drops to 20 seconds (in milliseconds).
+// Official: 20 seconds
+homunculus_starving_delay: 20000
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// The highest value at which an item can be sold via the merchant vend skill. (in zeny)
+vending_max_value: 1000000000
+
+// Whether to allow buying from vending chars that are at their max. zeny limit.
+// If set to yes, the rest of the zeny above the char's capacity will disappear.
+vending_over_max: yes
+
+// Tax to apply to all vending transactions (eg: 10000 = 100%, 50 = 0.50%)
+// When a tax is applied, the item's full price is charged to the buyer, but
+// the vender will not get the whole price paid (they get 100% - this tax).
+vending_tax: 500
+
+// Minimum total of purchase until taxes are applied.
+// Officially there is no tax for anything less than 100 million zeny.
+// 0 will apply taxes to all transactions.
+vending_tax_min: 100000000
+
+// Show the buyer's name when successfully vended an item
+buyer_name: yes
+
+// Forging success rate. (Note 2)
+weapon_produce_rate: 100
+
+// Prepare Potion success rate. (Note 2)
+potion_produce_rate: 100
+
+// Do produced items have the maker's name on them? (Note 3)
+// 0x01: Produced Weapons
+// 0x02: Produced Potions
+// 0x04: Produced Arrows
+// 0x08: Produced Holy Water/Ancilla
+// 0x10: Produced Deadly Potions
+// 0x80: Other produced items.
+produce_item_name_input: 0x03
+
+// Is a monster summoned via dead branch aggressive? (Note 1)
+dead_branch_active: yes
+
+// Should summoned monsters check the player's base level? (dead branches) (Note 1)
+// On officials this is no - monsters summoned from dead/bloody branches can be ANY level.
+// Change to 'yes' to only summon monsters less than or equal to the player's base level.
+random_monster_checklv: no
+
+// Can any player equip any item regardless of the gender restrictions
+// NOTE: Wedding Rings and Whips/Musical Instruments will check gender regardless of setting.
+ignore_items_gender: no
+
+// On map change it will check for items not tagged as "available" and
+// auto-delete them from inventory/cart/storage.
+// NOTE: An item is not available if it was not loaded from the item_db or
+// specified as unavailable in db/item_avail.txt
+// 0x1: Inventory
+// 0x2: Cart
+// 0x4: Storage
+item_check: 0x0
+
+// How much time must pass between item uses?
+// Only affects the delay between using items, prevents healing item abuse. Recommended ~500 ms
+// On officials this is 0, but it's set to 100ms as a measure against bots/macros.
+item_use_interval: 100
+
+// How much time must pass between cash food uses? Default: 60000 (1 min)
+cashfood_use_interval: 60000
+
+// Required level of bNoMagicDamage before Status Changes are blocked (Golden Thief Bug card).
+// For example, if left at 50. An item can give bNoMagicDamage,40;
+// which reduces magic damage by 40%, but does not blocks status changes.
+gtb_sc_immunity: 50
+
+// Enable autospell card effects to stack?
+// NOTE: Different cards that grant the same skill will both
+// always work independently of each other regardless of setting.
+autospell_stacking: no
+
+// Allow the consumption of usable items that are disabled by item_noequip.txt? (Note 1)
+// no = can't be consumed
+// yes = consumed with no effect
+allow_consume_restricted_item: no
+
+// Allow equipping items that are disabled by item_noequip.txt? (Note 1)
+// no = can't be equipped and will be unequipped when entering the map
+// yes = can be equipped but gives no effect
+// If the equip is compounded with restricted card(s), it ignores this check but still gives no effect.
+allow_equip_restricted_item: yes
+
+// Allow changing of equipment while interacting with NPCs? (Note 1)
+// Default: yes
+item_enabled_npc: yes
+
+// Allow map_flooritem to check if item is droppable? (Note 1)
+// If yes, undroppable items will be destroyed instead of appearing on the map when a player's inventory is full.
+// Default: yes
+item_flooritem_check: yes
+
+// Set default bound type for item_flag &8 (see db/[pre-]re/item_flag.txt
+// 0 - None
+// 1 - Account
+// 2 - Guild
+// 3 - Party
+// 4 - Character
+default_bind_on_equip: 4
+
+// Allow selling of bound/sell restricted items as Itemshop currency? (Note 3)
+// 0x0 = Bound/sell restricted items are unable to be sold to Itemshops/Shops
+// 0x1 = Bound items are able to be sold to Itemshops
+// 0x2 = Sell restricted items are able to be sold to Itemshops
+// 0x4 = Bound items are able to be sold to Shops,
+//       because most of trade restricted items are still able to be sold to Shops
+// 0x8 = Only Guild Leader can sell BOUND_GUILD items to Shops or Itemshops (if 0x1 or 0x4 set)
+allow_bound_sell: 0x0
+
+// Turn on event refine chance (see db/{pre-}re/refine_db.yml)
+// no = normal refine chances in effect (official/default value)
+// yes = event refine chances in effect
+event_refine_chance: no
+
+// Hide n last characters of player's name with asterisk (*) when the player
+// obtained an item with special broadcast flag.
+// Note: Players with short names can be fully converted to asterisks if this
+// config value is set high.
+broadcast_hide_name: 2
+
+// Enable to sell rental item to NPC shop? (Note 1)
+rental_transaction: yes
+
+// Sell rental item for 0 to NPC shop regardless of the item value in item_db? (Note 1)
+rental_item_novalue: no
+
+// Minimum purchase price of items at a normal Shop
+// Officially items cannot be purchased for less than 1 Zeny
+min_shop_buy: 1
+
+// Minimum sell price of items at a normal shop
+// Officially items can be sold for 0 Zeny
+min_shop_sell: 0
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// PK Server Mode.  Turns entire server pvp(excluding towns). Experience loss is doubled if killed by another player.
+// When players hunt monsters over 20 levels higher, they will receive 15% additional exp., and 25% chance of receiving more items.
+// There is a nopvp.txt for setting up maps not to have pk on in this mode.  Novices cannot be attacked and cannot attack.
+// Normal pvp counter and rank display are disabled as well.
+// Note: If pk_mode is set to 2 instead of 1 (yes), players will receive a
+//   manner penalty of 5 each time they kill another player (see manner_system
+//   config to adjust how this will affect players)
+pk_mode: 0
+
+// Displays a message when the player enters a pk zone.
+// Only during pk_mode (Note 1)
+pk_mode_mes: yes
+
+// Manner/karma system configuration. Specifies how does negative manner
+// (red no chat bubble) affects players (add as needed):
+//  0: No penalties.
+//  1: Disables chatting (includes whispers, party/guild msgs, etc)
+//  2: Disables skill usage
+//  4: Disables commands usage
+//  8: Disables item usage/picking/dropping
+// 16: Disables room creation (chatrooms and vending shops)
+manner_system: 15
+
+// For PK Server Mode. Change this to define the minimum level players can start PK-ing
+pk_min_level: 55
+
+// For PK Server Mode. It specifies the maximum level difference between
+// players to let them attack each other. 0 disables said limit.
+pk_level_range: 0
+
+// For PK servers. Damage adjustment settings, these follow the same logic
+// as their WoE counterparts (see guild.conf)
+pk_short_attack_damage_rate: 80
+pk_long_attack_damage_rate: 70
+pk_weapon_attack_damage_rate: 60
+pk_magic_attack_damage_rate: 60
+pk_misc_attack_damage_rate: 60
+
+// Display skill usage in console? (for debug only) (default: off) (Note 3)
+skill_log: off
+
+// Display battle log? (for debug only) (default: off) (Note 1)
+battle_log: off
+
+// Display other stuff? (for debug only) (default: off) (Note 1)
+etc_log: off
+
+// Do you want to debug warp points? If set to yes, warp points will appear as flags.(Note 1)
+// It will also run on start-up a warp-check to print out which warp points lead directly on
+// top of on-touch npcs (which can lead to infinite loopback warping situations)
+warp_point_debug: no
+
+// Choose if server begin with night (yes) or day (no)
+night_at_start: no
+
+// Define duration in msec of the day (default: 7200000 = 2 hours)
+// Set to 0 to disable day cycle (but not @day GM command).
+// Except 0, minimum is 60000 (1 minute)
+day_duration: 0
+
+// Define duration in msec of the night (default: 1800000 = 30 min)
+// Set to 0 to disable night cycle (but not @night GM command).
+// Except 0, minimum is 60000 (1 minute)
+night_duration: 0
+
+// Using duel on pvp-maps
+duel_allow_pvp: no
+
+// Using duel on gvg-maps
+duel_allow_gvg: no
+
+// Allow using teleport/warp when dueling
+duel_allow_teleport: no
+
+// Autoleave duel when die
+duel_autoleave_when_die: yes
+
+// Delay between using @duel in minutes
+duel_time_interval: 0
+
+// Restrict duel usage to same map
+duel_only_on_same_map: no
+
+// Determines max number of characters that can stack within a single cell.
+// Official - Only affects the walking routines of characters, including monsters.
+// If a unit stops walking and is on a cell with more than stack limit
+// characters on it, it will walk to the closest free cell.
+// Set to 0 for no cell stacking checks and free movement.
+// Custom - This variation will make every full cell to be considered a wall.
+// NOTE: For the custom setting to take effect you have to use a server compiled
+// with Cell Stack Limit support (see src/map/map.hpp)
+official_cell_stack_limit: 1
+custom_cell_stack_limit: 1
+
+// Allow autotrade only in maps with autotrade flag?
+// Set this to "no" to allow autotrade where no "autotrade" mapflag is set.
+// Set this to "yes" to only allow autotrade on maps with "autotrade" mapflag.
+at_mapflag: no
+
+// Set this to the amount of minutes autotrade chars will be kicked from the server.
+at_timeout: 0
+
+// Makes player cannot be attacked when autotrade? (turns player's state.monster_ignore) (Note 1)
+at_monsterignore: no
+
+// Should autotrade trigger OnPCLogout script events? (Note 1)
+at_logout_event: yes
+
+// Auction system, fee per hour. Default is 12000
+auction_feeperhour: 12000
+
+// Auction maximum sell price
+auction_maximumprice: 500000000
+
+// Minimum delay between each store search query in seconds.
+searchstore_querydelay: 10
+
+// Maximum amount of results a store search query may yield, before
+// it is canceled.
+searchstore_maxresults: 30
+
+// Whether or not gaining and loosing of cash points is displayed (Note 1).
+// Default: no
+cashshop_show_points: no
+
+// Whether or not mail box status is displayed upon login.
+// Default: 0
+// 0 = No
+// 1 = Yes
+// 2 = Yes, when there are unread mails
+mail_show_status: 0
+
+// Amount of mails a user can send a day.
+// Default: 100
+// 0 = Unlimited
+mail_daily_count: 100
+
+// Fee for transferring zeny via mail (Note 2)
+// NOTE: this rate is hardcoded in the client, you need to diff your client accordingly if you change this value.
+// Default: 2(2%)
+// 0 = No fee
+mail_zeny_fee: 2
+
+// Amount of zeny to pay for each attached item
+// NOTE: this fee is hardcoded in the client, you need to diff your client accordingly if you change this value.
+// Default: 2500
+// 0 = No fee
+mail_attachment_price: 2500
+
+// Maximum weight in total that can be attached to a mail
+// NOTE: this limit is hardcoded in the client, you need to diff your client accordingly if you change this value.
+// Default: 2000
+// 0 = No weight limit
+mail_attachment_weight: 2000
+
+// Is monster transformation disabled during Guild Wars?
+// If set to yes, monster transforming is automatically removed/disabled when enterting castles during WoE times
+mon_trans_disable_in_gvg: no
+
+// Is item's price at item/point shop discountable?
+// 0 = No (Default)
+// 1 = Item shops
+// 2 = Point shops
+// 3 = Item & point shops
+discount_item_point_shop: 0
+
+// Don't display message "login-serv has been asked to %s the player '%.*s'." (Note 1)
+disp_servervip_msg: no
+
+// Delay to allow user resend new mail (default & minimum is 1000)
+mail_delay: 1000
+
+// Hides items from the player's favorite tab from being sold to a NPC. (Note 1)
+hide_fav_sell: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// The HP rate of MVPs. (Note 2)
+mvp_hp_rate: 100
+
+// The HP rate of normal monsters (that is monsters that are not MVP's) (Note 2)
+monster_hp_rate: 100
+
+// The maximum attack speed of a monster
+monster_max_aspd: 199
+
+// Defines various mob AI related settings. (Note 3)
+// 0x001: When enabled mobs will update their target cell every few iterations
+//        (normally they never update their target cell until they reach it while
+//        chasing)
+// 0x002: Makes mob use their "rude attack" skill (usually warping away) if they
+//        are attacked and they can't attack back regardless of how they were
+//        attacked (eg: GrimTooth), otherwise, their rude attack" is only activated
+//        if they can't melee reach the target (eg: sniping)
+// 0x004: If not set, mobs that can change target only do so when attacked within a
+//        distance of [attack range+1], otherwise mobs may change target and chase
+//        ranged attackers. This flag also overrides the 'provoke' target.
+// 0x008: When set, mobs scatter as soon as they lose their target. Use this mode
+//        to make it much harder to mob-train by hiding and collecting them on a
+//        single spot (ie: GrimTooth training)
+// 0x010: If set, mob skills defined for friends will also trigger on themselves.
+// 0x020: When set, the monster ai is executed for all monsters in maps that
+//        have players on them, instead of only for mobs who are in the vicinity
+//        of players.
+// 0x040: When set, when the mob's target changes map, the mob will walk towards
+//        any npc-warps in it's sight of view (use with mob_warp below)
+// 0x080: If not set, mobs on attack state will only change targets when attacked
+//        by normal attacks. Set this if you want mobs to also switch targets when
+//        hit by skills.
+// 0x100: When set, a mob will pick a random skill from it's list and start from
+//        that instead of checking skills in orders (when unset, if a mob has too
+//        many skills, the ones near the end will rarely get selected)
+// 0x200: When set, a mob's skill re-use delay will not be applied to all entries of
+//        the same skill, instead, only to that particular entry (eg: Mob has heal
+//        on six lines in the mob_skill_db, only the entry that is actually used
+//        will receive the delay). This will make monsters harder, especially MvPs.
+// 0x400: Set this to make mobs have a range of 9 for all skills. Otherwise, they
+//        will obey the normal skill range rules.
+// 0x800: When set, monsters that are provoked will always change target to the
+//        provoking person, even if they would usually not change target on attack.
+// Example: 0x140 -> Chase players through warps + use skills in random order.
+monster_ai: 0
+
+// How often should a monster rethink its chase?
+// 0: Every 100ms (MIN_MOBTHINKTIME)
+// 1: Every cell moved
+// 2: Every 2 cells moved
+// 3: Every 3 cells moved (official)
+// x: Every x cells moved
+// Regardless of this setting, a monster will always rethink its chase if it has
+// reached its target. Increase this value if you want to make monsters continue
+// moving after they lost their target (hide, no line of sight, etc.).
+monster_chase_refresh: 3
+
+// Should mobs be able to be warped (add as needed)?
+// 0: Disable.
+// 1: Enable mob-warping when standing on NPC-warps
+// 2: Enable mob-warping when standing on Priest Warp Portals
+// 4: Disable warping when the target map is a 'nobranch' map.
+// 8: Enable mob-warping when standing on Dimensional Door
+mob_warp: 0
+
+// If these are set above 0, they define the time (in ms) during which monsters
+// will have their 'AI' active after all players have left their vicinity.
+mob_active_time: 0
+boss_active_time: 0
+
+// Mobs and Pets view-range adjustment (range2 column in the mob_db) (Note 2)
+view_range_rate: 100
+
+// Chase Range is the base minimum-chase that a mob gives before giving up
+// (as long as the target is outside their field of view). This is the range3
+// column in the mob_db. (Note 2)
+chase_range_rate: 100
+
+// Which level of of Vulture's Eye and Snake's Eye should monsters have learned?
+// Officially monsters don't have these skills learned, so their ranged skills
+// only have a range of 9. If you put a number higher than 0, their range will
+// be increased by that number.
+monster_eye_range_bonus: 0
+
+// Allow monsters to be aggresive and attack first? (Note 1)
+monster_active_enable: yes
+
+// Should the mob_db names override the mob names specified in the spawn files?
+// 0: No
+// 1: always use the mob_db Name column (english mob name)
+// 2: always use the mob_db JName column (original Kro mob name)
+override_mob_names: 0
+
+// Monster damage delay rate (Note 1)
+// Setting to no/0 is like they always have endure.
+monster_damage_delay_rate: 100
+
+// Looting monster actions.
+// 0 = Monster will consume the item.
+// 1 = Monster will not consume the item.
+monster_loot_type: 0
+
+// How does monster search floor item to loot?
+// 0: Closest (old Athena style)
+// 1: Oldest in range (Official)
+monster_loot_search_type: 1
+
+// Chance of mob casting a skill (Note 2)
+// Higher rates lead to 100% mob skill usage with no/few normal attacks.
+// Set to 0 to disable mob skills.
+mob_skill_rate: 100
+
+// Mob skill delay adjust (Note 2)
+// After a mob has casted a skill, there is a delay before being able to
+// re-cast it. Note that skills with a delay of 0 can't be affected by this
+// setting.
+mob_skill_delay: 100
+
+// Rate of monsters on a map, 200 would be twice as many as normal. (Note 2)
+mob_count_rate: 100
+
+// Respawn rate of monsters on a map. 50 would make mobs respawn twice as fast (half delay time) (Note 2)
+//Note: This does not affects mobs with immediate respawn (most normal mobs)
+mob_spawn_delay: 100
+plant_spawn_delay: 100
+boss_spawn_delay: 100
+
+// Should mobs not spawn within the viewing range of players?
+// 0 is disabled, otherwise it is the number of retries before giving up
+// and spawning the mob within player-view anyway, unless the max (100) is used,
+// in which case the mob will not be spawned, and it'll be retried again in
+// 5 seconds.
+// NOTE: This has no effect on mobs that always spawn on the very same cell
+// (like ant eggs) except if you set it to the max.
+no_spawn_on_player: 0
+
+// Should spawn coordinates in the mob-spawn files be ignored? (Note 1)
+// If set to yes, all monsters will have a random respawn spot across the whole
+// map regardless of what the mob-spawn file says.
+force_random_spawn: no
+
+// Do summon slaves inherit the passive/aggressive traits of their master?
+// 0: No, retain original mode.
+// 1: Slaves are always aggressive.
+// 2: Slaves are always passive.
+// 3: Same as master's aggressive/passive state.
+// 4: Mode is overwritten with slave mode (official)
+slaves_inherit_mode: 4
+
+// Do summon slaves have the same walking speed as their master?
+// NOTE: The default is 3 for official servers.
+// 0: Never.
+// 1: If the master can walk
+// 2: If the master can't walk (even motionless mobs have a speed
+//    entry in their mob_db)
+// 3: Always
+slaves_inherit_speed: 3
+
+// Will summoned monsters (alchemists, or @summon'ed monsters) attack cause a
+// chance of triggering the master's autospell cards? (Note 1)
+summons_trigger_autospells: yes
+
+// When a mob is attacked by another monster, will the mob retaliate against the master of said mob instead of the mob itself?
+// NOTE: Summoned mobs are both those acquired via @summon and summoned by Alchemists
+retaliate_to_master: yes
+
+// Whether mobs should change target temporarily when a skill triggers a counter mob skill (Note 1)
+// eg: Mob attacks player B, and player A casts a skill C. If set to yes and the
+// mob has a skill that is triggered by skill C, then A will be the target of
+// the skill, otherwise B will be targetted by the reaction skill.
+mob_changetarget_byskill: no
+
+// If monster's class is changed will it fully recover HP? (Note 1)
+monster_class_change_full_recover: yes
+
+// Display some mob info next to their name? (add as needed)
+// (does not works on guardian or Emperium)
+// 1: Display mob HP (Hp/MaxHp format)
+// 2: Display mob HP (Percent of full life format)
+// 4: Display mob's level
+show_mob_info: 0
+
+// Zeny from mobs
+zeny_from_mobs: yes
+
+// Monsters level up (monster will level up each time a player is killed and they will grow stronger)
+// Exp rate is calculated ((monster level-original monster level)*(exp*(mobs_level_up_exp rate/100)))
+// NOTE: Does not apply to WoE Guardians.
+mobs_level_up: no
+mobs_level_up_exp_rate: 1
+
+// Dynamic Mobs Options
+// Use dynamic mobs? (recommended for small-medium sized servers)
+dynamic_mobs: yes
+
+// Remove Mobs even if they are hurt
+mob_remove_damaged: yes
+
+// Delay before removing mobs from empty maps (default 5 min = 300 secs)
+mob_remove_delay: 300000
+
+// Defines on who the mob npc_event gets executed when a mob is killed.
+// Type 1: On the player that killed the mob (if killed by a non-player, resorts to type 0)
+// Type 0: On the player that did the most damage to the mob.
+// NOTE: This affects who gains the Castle when the Emperium is broken.
+mob_npc_event_type: 1
+
+// Time in milliseconds to activate protection against Kill Steal
+// Set to 0 to disable it.
+// If this is activated and a player is using @noks, damage from others players (KS) not in the party
+// will be reduced to 0.
+ksprotection: 0
+
+// Should MVP slaves retain their target when summoned back to their master?
+mob_slave_keep_target: yes
+
+// Whether or not to spawn the mvp tomb.
+// See http://irowiki.org/wiki/MVP#Gravestone
+mvp_tomb_enabled: yes
+
+// Delay before the MVP tomb is spawned.
+// Default: 9 seconds
+mvp_tomb_delay: 9000
+
+// Whether or not the size of specially summoned mobs influences experience, drop rates,
+// and stats. The rates will be doubled for large mobs, and halved for small ones.
+// This is only invoked under the 'monster' command, @monsterbig, and @monstersmall. (Note 1)
+// Default: no
+mob_size_influence: no
+
+// How should a monster be trapped by an icewall casted directly on it?
+// On official servers, monsters can only leave an icewall to the west and south. If their target is north or east of
+// them they will continously try to chase it but fail doing so. This brings them into a loop during which they will use
+// idle and chase skills. Boss monsters on the other hand will behave like a trapped monster, do not move and will use
+// idle and rudeattacked skills (when attacked).
+// 0: Monster won't be stuck in icewall at all.
+// 1: Monster will behave like a trapped monster.
+// 2-255: Number of loops a monster will go through the behavior described above before it frees itself from icewall.
+// NOTE: On some servers, normal monsters can free themselves after 15-35 second depending on their speed. On other
+// servers, they will be stuck inside icewall until it expires. Also, many official servers (e.g. iRO) have casting
+// icewall completely blocked on all maps that have boss monsters on them.
+// Default (least exploitable): mob - 75, boss - 0
+// Default (most official): mob - 220, boss - 1
+mob_icewall_walk_block: 75
+boss_icewall_walk_block: 0
+
+// Should HP bars be shown for monsters?
+// 2012-04-04aRagexeRE or higher client required.
+monster_hp_bars_info: yes
+
+// Should a monster respawn and a warning printed to the map server when a monster couldn't move for a long time?
+// This can be legit gameplay (e.g. players keeping an MVP stuck inside icewall), but if you want to prevent any
+// exploits and be notified about them, you can set this to yes.
+monster_stuck_warning: no
+
+// Rate at which monsters use their idle skills when there are no players nearby (Note 2)
+// On official servers monsters use their idle skills if they have been spotted once, even if there are no players nearby anymore.
+// On small-medium sized servers this can cause all monsters like eggs and Fabre/Pupa to metamorph.
+// To switch it off, set it to 0.
+mob_nopc_idleskill_rate: 100
+boss_nopc_idleskill_rate: 100
+
+// Rate at which monsters move when there are no players nearby (Note 2)
+// On official servers monsters always move if they have been spotted once, even if there are no players nearby anymore.
+// To switch it off, set it to 0.
+mob_nopc_move_rate: 100
+boss_nopc_move_rate: 100
+
+// When killing a monster, do AG_BATTLE type achievements trigger for everyone in the same party within the area?
+// Area is limited to area_size battle config.
+achievement_mob_share: no
+
+// Should slaves teleport back to their master if they get too far during chase? (Note 1)
+// Default (Official): no
+slave_stick_with_master: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// If someone steals (gank/steal skills), show name in party? (Note 1)
+show_steal_in_same_party: no
+
+// Interval before updating the party-member map mini-dots (milliseconds)
+party_update_interval: 1000
+
+// Method used to update party-mate hp-bars:
+// 0: Aegis - bar is updated every time HP changes (bandwidth intensive)
+// 1: rAthena - bar is updated with the party map dots (up to 1 second delay)
+party_hp_mode: 0
+
+// NOTE:
+// The level range for sharing within a party is set in conf/inter_athena.conf
+// under the value "party_share_level".
+
+// When 'Party Share' item sharing is enabled in a party,
+// announce in the party which party-member received the item and what's he received? (Note 1)
+show_party_share_picker: yes
+
+// What types of items are going to be announced when 'show_party_share_picker' is active?
+// 1:   IT_HEALING,  2:   IT_UNKNOWN,  4:    IT_USABLE, 8:    IT_ETC,
+// 16:  IT_WEAPON,   32:  IT_ARMOR,    64:   IT_CARD,   128:  IT_PETEGG,
+// 256: IT_PETARMOR, 512: IT_UNKNOWN2, 1024: IT_AMMO,   2048: IT_DELAYCONSUME
+// 262144: IT_CASH
+show_picker.item_type: 112
+
+// Method of distribution when item party share is enabled in a party:
+//
+// 0: Normal (item goes to a random party member)
+// 1: Item Share is disabled for non-mob drops (player/pet drops)
+// 2: Round Robin (items are distributed evenly and in order among members)
+// 3: 1+2
+party_item_share_type: 0
+
+// Is exp/item sharing disabled for idle members in the party?
+// Set to no, or the amount of seconds (NOT milliseconds) that need to pass before considering
+// a character idle.
+// Characters in a chat/vending are always considered idle.
+// A character's idle status is reset upon item use/skill use/attack (auto attack counts too)/movement.
+idle_no_share: no
+
+// Give additional experience bonus per party-member involved on even-share parties (excluding yourself)?
+// ex. If set to 10, an even-share party of 5 people will receive +40% exp (4 members * 10% exp):
+//     140% party experience in total, so each member receives 140%/5 = 28% exp (instead of 20%).
+party_even_share_bonus: 0
+
+// Display party name regardless if player is in a guild.
+// Official servers do not display party name unless the user is in a guild. (Note 1)
+display_party_name: no
+
+// Prevent multiple characters of the same account to join the same party. (Note 1)
+block_account_in_same_party: yes
+
+// Prevent changing the party leader if the specified player is not on the same map (Note 1)
+change_party_leader_samemap: yes
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Rate for catching pets (Note 2)
+pet_catch_rate: 100
+
+// Can you name a pet more then once? (Note 1)
+pet_rename: no
+
+// The rate a pet will get friendly by feeding it. (Note 2)
+pet_friendly_rate: 100
+
+// The rate at which a pet will become hungry. (Note 2)
+pet_hungry_delay_rate: 100
+
+// Does the pet need its equipment before it does its skill? (Note 1)
+// These bonuses are unofficial and found in the import/pet_db.yml
+pet_equip_required: yes
+
+// When the master attacks a monster, whether or not the pet will also attack. (Note 1)
+pet_attack_support: no
+
+// When the master receives damage from the monster, whether or not the pet attacks back. (Note 1)
+pet_damage_support: no
+
+// Minimum intimacy necessary for a pet to support their master. Default is 900
+// (intimacy goes from 0 to 1000). At this minimum, support rate is 50% of pet's normal value.
+// At max (1000) support rate is 150%.
+pet_support_min_friendly: 900
+
+// Whether or not the pet's will use skills. (Note 1)
+// Note: Offensive pet skills need at least pet_attack_support or
+// pet_damage_support to work (they trigger while the pet is attacking).
+pet_status_support: no
+
+// Rate at which a pet will support it's owner in battle. (Note 2)
+// Affects pet_attack_support & pet_damage_support.
+pet_support_rate: 100
+
+// Does the pets owner receive exp from the pets damage?
+pet_attack_exp_to_master: no
+
+// The rate exp. is gained from the pet attacking monsters
+pet_attack_exp_rate: 100
+
+// Pet leveling system. Use 0 to disable (default).
+// When enabled, a pet's level is a fixed % of the master's. (Note 2)
+// If 200%, pet has double level, if 50% pet has half your level, etc.
+pet_lv_rate: 0
+
+// When pet leveling is enabled, what is the max stats for pets?
+pet_max_stats: 99
+
+// When pet leveling is enabled, these are the imposed caps on
+// min/max damage. Note that these only cap atk1 and atk2, if you
+// enable pet_str, their max damage is then their base_atk + pet_max_atk2
+pet_max_atk1: 500
+pet_max_atk2: 1000
+
+// Are pets disabled during Guild Wars?
+// If set to yes, pets are automatically returned to egg when entering castles during WoE times
+// and hatching is forbidden within as well.
+pet_disable_in_gvg: no
+
+// Will does petskillattack2 fixed damage ignore plant infnite defense? (Note 1)
+pet_ignore_infinite_def: yes
+
+// Whether or not the pet will continue to attack when the master is dead. (Note 1)
+pet_master_dead: no
+
+// Send auto-feed notice even if the client setting is OFF (Note 1)
+// Official: yes
+pet_autofeed_always: yes
+
+// Pet walk speed.
+// 1: Master's walk speed (official)
+// 2: DEFAULT_WALK_SPEED value
+// 3: Mob database walk speed
+pet_walk_speed: 1
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Players' maximum HP rate? (Default is 100)
+hp_rate: 100
+
+// Players' maximum SP rate? (Default is 100)
+sp_rate: 100
+
+// Whether or not cards and attributes of the left hand are applied to the right hand attack (Note 1)
+// (It is 'yes' on official servers)
+left_cardfix_to_right: yes
+
+// The amount of HP a player will respawn with, 0 is default.
+// (Unit is in percentage of total HP, 100 is full heal of HP, 0 is respawn with 1HP total.)
+restart_hp_rate: 0
+
+// The amount of SP a player will respawn with, 0 is default.
+// (Unit is in percentage of total SP, 100 is full heal of SP, 0 is respawn with 1SP total.)
+restart_sp_rate: 0
+
+// Can a normal player by-pass the skill tree? (Note 1)
+player_skillfree: no
+
+// When set to yes, forces skill points gained from 1st class to be put into 1st class
+// skills, and forces novice skill points to be put into the basic skill. (Note 1)
+player_skillup_limit: yes
+
+// Quest skills can be learned? (Note 1)
+// Setting this to yes can open an exploit on your server!
+quest_skill_learn: no
+
+// When skills are reset, quest skills are reset as well? (Note 1)
+// Setting this to yes can open an exploit on your server!
+// NOTE: If you have quest_skill_learn set to yes, quest skills are always reset.
+quest_skill_reset: no
+
+// You must have basic skills to be able to sit, trade, form a party or create a chatroom? (Note 1)
+basic_skill_check: yes
+
+// When teleporting, or spawning to a map, how long before a monster sees you if you don't move? (time is in milliseconds)
+// That is, when you go to a map and don't move, how long before the monsters will notice you.
+// If you attack a monster, it will attack you back regardless of this setting.
+player_invincible_time: 5000
+
+// The time interval for HP to restore naturally. (in milliseconds)
+natural_healhp_interval: 6000
+
+// The time interval for SP to restore naturally. (in milliseconds)
+natural_healsp_interval: 8000
+
+// Automatic healing skill's time interval. (in milliseconds)
+natural_heal_skill_interval: 10000
+
+// The maximum weight for a character to carry when the character stops healing naturally. (in %)
+// For renewal: Requires client 20171025 or newer to display properly
+natural_heal_weight_rate: 50
+natural_heal_weight_rate_renewal: 70
+
+// Maximum atk speed. (Default 190, Highest allowed 199)
+max_aspd: 193
+
+// Same as max_aspd, but for 3rd classes. (Default 193, Highest allowed 199)
+max_third_aspd: 193
+
+// Max ASPD for extended class (Kagerou/Oboro and Rebellion). (Default 193, Highest allowed 199)
+max_extended_aspd: 193
+
+// Maximum walk speed rate (200 would be capped to twice the normal speed)
+max_walk_speed: 300
+
+// Maximum HPs depending on base level. Default values are:
+// Lv 99:  330000
+// Lv150:  660000
+// Lv175: 1100000
+max_hp_lv99: 330000
+max_hp_lv150: 660000
+max_hp: 2640000
+
+// Maximum SP. (Default is 1000000)
+max_sp: 2500000
+
+// Maximum params/stats for each class. (str, agi, vit, int, dex, and luk)
+// 'max_parameter' for novice, non-trans, non-baby, and non-3rd classes
+// 'max_trans_parameter' for trans classes (non-3rd trans classes)
+// 'max_third_parameter' for 3rd classes (regular/non-trans) except baby 3rd clasess
+// 'max_third_trans_parameter' for 3rd trans classes
+// 'max_baby_parameter' for baby classes except baby 3rd classes
+// 'max_baby_third_parameter' for baby 3rd classes only
+// 'max_extended_parameter' for extended 2nd class (Kagerou/Oboro and Rebellion)
+// For mor specific/advanced option, see 'db/[pre-]re/job_params_db.txt'
+max_parameter: 250
+max_trans_parameter: 250
+max_third_parameter: 130
+max_third_trans_parameter: 130
+max_baby_parameter: 200
+max_baby_third_parameter: 117
+max_extended_parameter: 312
+max_summoner_parameter: 120
+
+// Status points bonus for transcendent class
+transcendent_status_points: 52
+
+// Max armor def/mdef
+// NOTE: This setting have no effect if server is run on Renewal Mode (RENEWAL)
+// NOTE: does not affects skills and status effects like Mental Strength
+// If weapon_defense_type is non-zero, it won't apply to max def.
+// If magic_defense_type is non-zero, it won't apply to max mdef.
+max_def: 99
+
+// Def to Def2 conversion bonus. If the armor def/mdef exceeds max_def,
+// the remaining is converted to vit def/int mdef using this multiplier
+// (eg: if set to 10, every armor point above the max becomes 10 vit defense points)
+over_def_bonus: 0
+
+// Max weight carts can hold.
+max_cart_weight: 8000
+
+// Prevent logout of players after being hit for how long (in ms, 0 disables)?
+prevent_logout: 10000
+
+// When should the server prevent a player from logging out? Have no effect if prevent_logout is disabled. (Note 3)
+// Official servers prevent players from logging out after attacking, casting skills, and taking damage.
+// 0 = Players can always logout
+// 1 = Prevent logout on login
+// 2 = Prevent logout after attacking
+// 4 = Prevent logout after casting skill
+// 8 = Prevent logout after being hit
+prevent_logout_trigger: 14
+
+// Display the drained hp/sp values from normal attacks? (Ie: Hunter Fly card)
+show_hp_sp_drain: yes
+
+// Display the gained hp/sp values from killing mobs? (Ie: Sky Deleter Card)
+show_hp_sp_gain: yes
+
+// If set, when A accepts B as a friend, B will also be added to A's friend
+// list, otherwise, only A appears in B's friend list.
+// NOTE: this setting enables friend auto-adding and auto-deletion.
+friend_auto_add: yes
+
+// Are simultaneous trade/party/guild invite requests automatically rejected?
+invite_request_check: yes
+
+// Players' will drop a 'Skull' when killed?
+// Note: The 'Skull' item (ID 7420) is trade restricted by default. Please check
+// the item_trade database to adjust accordingly.
+// 0 = Disabled
+// 1 = Dropped only in PvP maps
+// 2 = Dropped in all situations
+bone_drop: 0
+
+// Do mounted (on Peco) characters increase their size?
+// 0 = no
+// 1 = only Normal Classes on Peco have Big Size
+// 2 = only Baby Classes on Peco have Medium Size
+// 3 = both Normal Classes on Peco have Big Size
+//	and Baby Classes on Peco have Medium Size
+character_size: 0
+
+// Idle characters can receive autoloot?
+// Set to the time in seconds where an idle character will stop receiving
+// items from Autoloot (0: disabled).
+idle_no_autoloot: 0
+
+// Minimum distance a vending/chat room must be from a NPC in order to be placed.
+// Default: 3 (0: disabled).
+min_npc_vendchat_distance: 3
+
+// How much should rental mounts increase a player's movement speed?
+// Default is 25. 100 = 100% Increase.
+rental_mount_speed_boost: 25
+
+//===================================
+// VIP system
+//===================================
+// Storage slot increase. Setting to 0 will disable.
+// Give more storage slots above the MIN_STORAGE limit.
+// Note: MIN_STORAGE + vip_storage_increase cannot exceed MAX_STORAGE.
+// Default: 300
+vip_storage_increase: 300
+
+// Base experience rate increase. Setting to 0 will disable. (Note 2)
+// Default: 50
+vip_base_exp_increase: 50
+
+// Job experience rate increase. Setting to 0 will disable. (Note 2)
+// Default: 50
+vip_job_exp_increase: 50
+
+// Experience penalty rate multiplier for VIP accounts.
+// Default: 100 (100 = 1% penalty)
+vip_exp_penalty_base: 100
+vip_exp_penalty_job: 100
+
+// Zeny penalty for VIP accounts.
+// Zeny loss only happens if the player dies from another player.
+// Default: 0 (100 = 1% penalty)
+vip_zeny_penalty: 0
+
+// Battle Manual experience increase. Setting to 0 will disable.
+// - Regular/Thick Battle Manual: 50+(50/X) = 75%
+// - HE Battle Manual: 100+(100/X) = 150%
+// - Battle Manual x3: 200+(200/X) = 300%
+// Note: X is the config value.
+// Default: 2
+vip_bm_increase: 2
+
+// Item drop increase. Setting to 0 will disable.
+// Note: 50 = 50% item_drop increase.
+// For item_rate = 200: 200 * 50 / 100 = 100 bonus rate added to the 200 base giving total rate of 300.
+// Default: 50
+vip_drop_increase: 50
+
+// Gemstone requirement.
+// Can the VIP Group ignore Gemstone requirement for skills?
+// 0 = Disable
+// 1 = Behave like Mistress Card
+// 2 = Remove all gemstone requirements (default)
+vip_gemstone: 2
+
+// Will display rate information (EXP, Drop, and Death penalty message)? (Note 1)
+vip_disp_rate: yes
+
+// Revive dead player while warping? (Note 1)
+revive_onwarp: yes
+
+// Minimum base level to receives Taekwon Ranker Bonus
+// - 3x Maximum HP and SP
+// - All Taekwon skills
+taekwon_ranker_min_lv: 90
+
+// Fame points gained
+// Taekwon Mission completed
+fame_taekwon_mission: 1
+// Refined own forged weapon to +10
+fame_refine_lv1: 1
+fame_refine_lv2: 25
+fame_refine_lv3: 1000
+// Success to forge a lv3 weapon with 3 additional ingredients
+fame_forge: 10
+// Refine threshold for giving point for refining forged weapon to +10
+blacksmith_fame_refine_threshold: 10
+// Success to prepare 'n' Condensed Potions in a row
+fame_pharmacy_3: 1
+fame_pharmacy_5: 3
+fame_pharmacy_7: 10
+fame_pharmacy_10: 50
+
+// How the server should measure the character's idle time? (Note 3)
+// 0x0001 - Walk Request
+// 0x0002 - UseSkillToID Request (Targetted skill use attempt)
+// 0x0004 - UseSkillToPos Request (AoE skill use attempt)
+// 0x0008 - UseItem Request (Including equip/unequip)
+// 0x0010 - Attack Request
+// 0x0020 - Chat Request (Whisper, Party, Guild, Battlegrounds, etc)
+// 0x0040 - Sit/Standup Request
+// 0x0080 - Emotion Request
+// 0x0100 - DropItem Request
+// 0x0200 - @/#Command Request
+// 0x0400 - Closing a NPC window
+// 0x0800 - Providing input to a NPC
+// 0x1000 - Choosing a NPC menu option
+// 0x2000 - Clicking the next button of a NPC
+// 0x4000 - Finishing for a NPC progress bar
+// Please note that at least 1 option has to be enabled.
+// Be mindful that the more options used, the easier it becomes to cheat features that rely on idletime (e.g. checkidle()).
+// Default: walk (0x1) + useskilltoid (0x2) + useskilltopos (0x4) + useitem (0x8) + attack (0x10) + any npc interaction(0x400,0x800,0x1000,0x2000,0x4000) = 0x7C1F
+idletime_option: 0x7C1F
+
+// Adjust the summoner class' special traits.
+// - Summoners belong to brute race category. They have their own race RC_PLAYER_DORAM (11) to be differentiated from monster race RC_BRUTE (2).
+// - Summoners are small size (0) instead of medium (1)
+summoner_race: 11
+summoner_size: 0
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary)
+//--------------------------------------------------------------
+
+// The rate of time it takes to cast a spell (Note 2, 0 = No casting time)
+casting_rate: 100
+
+// Delay time after casting (Note 2)
+delay_rate: 100
+
+// Does the delay time depend on the caster's DEX and/or AGI? (Note 1)
+// Note: On Official servers, neither Dex nor Agi affect delay time
+delay_dependon_dex: no
+delay_dependon_agi: no
+
+// Minimum allowed delay for ANY skills after castbegin (in milliseconds) (Note 1)
+// Note: Setting this to anything above 0 can stop speedhacks.
+min_skill_delay_limit: 100
+
+// This delay is the min 'can't walk delay' of all skills.
+// NOTE: Do not set this too low, if a character starts moving too soon after
+// doing a skill, the client will not update this, and the player/mob will
+// appear to "teleport" afterwards.
+default_walk_delay: 300
+
+// Completely disable skill delay of the following types (Note 3)
+// NOTE: By default mobs don't have the skill delay as specified in the skill
+//  database, but follow their own 'reuse' skill delay which is specified on
+//  the mob skill db. When set, the delay for all skills become
+//  min_skill_delay_limit.
+no_skill_delay: 2
+
+// At what dex does the cast time become zero (instacast)?
+castrate_dex_scale: 150
+
+// How much (dex*2+int) does variable cast turns zero?
+vcast_stat_scale: 530
+
+// On official servers, amotion delay is applied at castbegin. There is no amotion delay applied
+// at castend. Set this to anything above 0 to also apply amotion delay at castend. (Note 2)
+// NOTE: Setting this will break chaining of skills with cast time but no aftercast delay.
+// The client-sided delays are different from skill to skill and usually range from 140 to 180.
+// If you want to be secure, a value between 90 and 140 is recommended.
+skill_amotion_leniency: 0
+
+// Will normal attacks be able to ignore the delay after skills? (Note 1)
+skill_delay_attack_enable: yes
+
+// Range added to skills after their cast time finishes.
+// Decides how far away the target can walk away after the skill began casting before the skill fails.
+// 0 disables this range checking (default)
+skill_add_range: 0
+
+// If the target moves out of range while casting, do we take the items and SP for the skill anyway? (Note 1)
+skill_out_range_consume: no
+
+// Does the distance between caster and target define if the skill is a ranged skill? (Note 3)
+// If set, when the distance between caster and target is greater than 3 the skill is considered long-range, otherwise it's a melee range.
+// If not set, then the range is determined by the skill's range (if it is above 5, the skill is ranged).
+// Default 14 (mobs + pets + homun)
+skillrange_by_distance: 14
+
+// Should the equipped weapon's range override the skill's range defined in the skill_db for most weapon-based skills? (Note 3)
+// NOTE: Skills affected by this option are those whose range in the skill_db are negative. By default always the skill range is used.
+// Note that if you want all monster skills to have a range of 9 you need to set monster_ai&0x400.
+skillrange_from_weapon: 0
+
+// Should a check on the caster's status be performed in all skill attacks?
+// When set to yes, meteors, storm gust and any other ground skills will have
+// no effect while the caster is unable to fight (eg: stunned).
+skill_caster_check: yes
+
+// Should ground placed skills be removed as soon as the caster dies? (Note 3)
+clear_skills_on_death: 0
+
+// Should ground placed skills be removed when the caster changes maps? (Note 3)
+clear_skills_on_warp: 15
+
+//Setting this to YES will override the target mode of ground-based skills with the flag 0x01 to "No Enemies"
+//The two skills affected by default are Pneuma and Safety Wall (if set to yes, those two skills will not protect everyone, but only allies)
+//See db/(pre-)re/skill_db.yml for more info.
+defunit_not_enemy: no
+
+// Should skills always do at least 'hits' damage when they don't miss/are blocked?
+// Many skills will have their damage multiplied by their number of hits (see skill_db), these will always deal 1 HP
+// damage per hit, even against plants. But some skills are actually a single hit that is just displayed as multiple
+// hits. For these skills, damage gets divided by number of hits and rounded down. That means that plants won't take
+// any damage from them. Examples: Sonic Blow, Lord of Vermillion
+// With this setting, you can change the official behavior and make these skills deal at least 1 HP damage per hit.
+// Values: 1 for weapon-based attacks, 2 for magic attacks, 4 for misc attacks.
+skill_min_damage: 0
+
+// The delay rate of monk's combo (Note 2)
+combo_delay_rate: 100
+
+// Use alternate auto Counter Attack Skill Type? (Note 3)
+// For those characters on which it is set, 100% Critical,
+// Otherwise it disregard DEF and HIT+20, CRI*2
+auto_counter_type: 15
+
+// Can ground skills be placed on top of each other? (Note 3)
+// By default, skills with UF_NOREITERATION set cannot be stacked on top of
+// other skills, this setting will override that.
+skill_reiteration: 0
+
+// Can ground skills NOT be placed underneath/near players/monsters? (Note 3)
+// If set, only skills with UF_NOFOOTSET set will be affected.
+skill_nofootset: 1
+
+// Should traps (hunter traps + quagmire) change their target to "all" inside gvg/pvp grounds? (Note 3)
+// Default on official servers: 1 (for players)
+gvg_traps_target_all: 1
+
+// Traps visibility setting (trap with UF_HIDDEN_TRAP flag):
+// 0 = Always visible
+// 1 = Enable invisibility in versus maps (GVG/PVP/BG)
+// 2 = Enable invisibility in all maps
+// Default on official servers: 0 for Pre-renewal, 2 for Renewal
+//traps_setting: 0
+
+// Restrictions applied to the Alchemist's Summon Flora skill (add as necessary)
+// 1: Enable players to damage the floras outside of versus grounds.
+// 2: Disable having different types out at the same time
+//    (eg: forbid summoning anything except hydras when there's already
+//     one hydra out)
+summon_flora_setting: 3
+
+// Whether placed down skills will check walls (Note 1)
+// (ex. Storm Gust cast against a wall will not hit the other side.)
+skill_wall_check: yes
+
+// When cloaking, Whether the wall is checked or not. (Note 1)
+// Note: When the skill does not checks for walls, you will always be considered
+//  as if you had a wall-next to you (you always get the wall-based speed).
+//  Add the settings as required, being hit always uncloaks you.
+//
+// 0 = doesn't check for walls
+// 1 = Check for walls
+// 2 = Cloaking is not cancelled when attacking.
+// 4 = Cloaking is not cancelled when using skills
+player_cloak_check_type: 1
+monster_cloak_check_type: 4
+
+// Can't place unlimited land skills at the same time (Note 3)
+land_skill_limit: 9
+
+//Determines which kind of skill-failed messages should be sent:
+// 1 - Disable all skill-failed messages.
+// 2 - Disable skill-failed messages due to can-act delays.
+// 4 - Disable failed message from Snatcher
+// 8 - Disable failed message from Envenom
+display_skill_fail: 2
+
+// Can a player in chat room (in-game), be warped by a warp portal? (Note 1)
+chat_warpportal: no
+
+// What should the wizard's "Sense" skill display on the defense fields?
+// 0: Do not show defense
+// 1: Base defense [RE default]
+// 2: Vit/Int defense
+// 3: Both (the addition of both)
+sense_type: 1
+
+// Which finger offensive style will be used?
+// 0 = Aegis style (single multi-hit attack)
+// 1 = Athena style (multiple consecutive attacks)
+finger_offensive_type: 0
+
+// Grandcross Settings (Don't mess with these)
+// If set to no, hit interval is increased based on the amount of mobs standing on the same cell
+// (means that when there's stacked mobs in the same cell, they won't receive all hits)
+gx_allhit: no
+
+// Grandcross display type (Default 1)
+// 0: Yellow character
+// 1: White character
+gx_disptype: 1
+
+// Max Level Difference for Devotion
+devotion_level_difference: 10
+
+// Using 'old' behavior for devotion vs reflect damage? (Note 2)
+// Default is 0 (official). If 'devotion_rdamage' is > 0 (chance to devote the reflected damage),
+// when player with devotion attacks player with reflect damage ability (item bonus or skill),
+// the damage will be taken by the person who provides devotion instead the attacker.
+devotion_rdamage: 0
+
+// Officially, reflecting shield (SC_REFLECTDAMAGE) reflects physical damage by skill or normal attack.
+// But if the target is being devoted, it ONLY reflects the damage for melee skill. (Note 1)
+devotion_rdamage_skill_only: yes
+
+// On AEGIS there is a bug when the player who is under devotion is sitting and getting hit.
+// The player stands up on client side, but will still remain sitting on server side.
+// Because of this the player will not be able to walk anymore, until the player sat down/stood up again or used @refresh.
+// You can read more about it on https://github.com/rathena/rathena/issues/1927
+// Default: yes (because it is a recommended bug fix from our side)
+// Official: no
+devotion_standup_fix: yes
+
+// If no than you can use the ensemble skills alone. (Note 1)
+player_skill_partner_check: yes
+
+// Remove trap type
+// 0 = Aegis system : Returns 1 'Trap' item
+// 1 = Athena system : Returns all items used to deploy the trap
+skill_removetrap_type: 0
+
+// Does using bow to do a backstab give a 50% damage penalty? (Note 1)
+backstab_bow_penalty: yes
+
+// How many times you could try to steal from a mob.
+// Note: It helps to avoid stealing exploit on monsters with few rare items
+// Use 0 to disable (max allowed value is 255)
+skill_steal_max_tries: 0
+
+// Does Berserk/Frenzy cancel other self-buffs when used?
+berserk_cancels_buffs: no
+
+// Level and Strength of "MVP heal". When someone casts a heal of this level or
+// above, the heal formula is bypassed and this value is used instead.
+max_heal: 9999
+max_heal_lv: 11
+
+// Emergency Recall Guild Skill setting (add as appropriate).
+// Note that for the skill to be usable at all,
+// you need at least one of 1/2 and 4/8
+// 1: Skill is usable outside of woe.
+// 2: Skill is usable during woe.
+// 4: Skill is usable outside of GvG grounds
+// 8: Skill is usable on GvG grounds
+//16: Disable skill from "nowarpto" maps
+//    (it will work on GVG castles even if they are set to nowarpto, though)
+emergency_call: 11
+
+// Guild Aura Skills setting (add as appropriate).
+// (This affects GD_LEADERSHIP, GD_GLORYWOUNDS, GD_SOULCOLD and GD_HAWKEYES)
+// Note that for the skill to be usable at all,
+// you need at least one of 1/2 and 4/8
+// 1: Skill works outside of woe.
+// 2: Skill works during woe.
+// 4: Skill works outside of GvG grounds
+// 8: Skill works on GvG grounds
+//16: Disable skill from affecting Guild Master
+guild_aura: 31
+
+// Max Possible Level of Monster skills
+// Note: If your MVPs are too tough, reduce it to 10.
+mob_max_skilllvl: 100
+
+// Allows players to skip menu when casting Teleport level 1
+// Menu contains two options. "Random" and "Cancel"
+skip_teleport_lv1_menu: no
+
+// Allow use of SG skills without proper day (Sun/Moon/Star) ?
+allow_skill_without_day: no
+
+// Allow use of ES-type magic on players?
+allow_es_magic_player: no
+
+// Miracle of the Sun, Moon and Stars skill ratio (100% = 10000)
+sg_miracle_skill_ratio: 2
+
+// Miracle of the Sun, Moon and Stars skill duration in milliseconds
+sg_miracle_skill_duration: 3600000
+
+// Angel of the Sun, Moon and Stars skill ratio (100% = 10000)
+sg_angel_skill_ratio: 10
+
+// Skills that bHealPower has effect on
+// 1: Heal, 2: Sanctuary, 4: Potion Pitcher, 8: Slim Pitcher, 16: Apple of Idun
+skill_add_heal_rate: 7
+
+// Whether the damage of EarthQuake with a single target on screen is able to be reflected.
+// Note: On official servers, EQ is reflectable when there is only one target on the screen,
+//	 which might be an exploit to hunt the MVPs.
+eq_single_target_reflectable: yes
+
+// On official server, you will receive damage from Reflection and some Tarot Card even in invincible status.
+// When this setting is enabled, it allows you to immune to all kinds of damage, including those stated previous.
+// (The number will show but no actual damage will be done)
+invincible.nodamage: no
+
+// Dancing Weapon Switch
+// On official servers, a fix is in place that prevents the switching of weapons to cancel songs.
+// Default: yes
+dancing_weaponswitch_fix: yes
+
+// Skill Trap Type
+// On official servers if a unit is completely immune to knockback, it will still walk to the last target tile before
+// stopping when inflicted by a stopping status effect (including traps like Ankle Snare and Spiderweb). All traps on
+// the way will be activated.
+// This does NOT include being immune to knock back from equip. This bonus only helps against knockback skills.
+// 0: (official)
+// 1: Stop effects in GvG/WoE make units stop immediately.
+// 2: Stop effects make monsters immune to knockback / bosses stop immediately.
+// 3: 1+2
+skill_trap_type: 0
+
+// Area of Bowling Bash chain reaction
+// 0: Use official gutter line system
+// 1: Gutter line system without demi gutter bug
+// 2-20: Area around caster (2 = 5x5, 3 = 7x7, 4 = 9x9, ..., 20 = 41x41)
+// Note: If you knock the target out of the area it will only be hit once and won't do splash damage
+bowling_bash_area: 1
+
+// Pushback behavior (Note 1)
+// On official servers, hitting a wall will always cause the unit to stop moving.
+// If "no", the unit will continue moving when approaching walls diagonally (old Athena behavior).
+path_blown_halt: yes
+
+// Taekwon Mission mob name check
+// iRO Wiki States: If your target is Goblin, any monster called "Goblin" will count toward the mission.
+// 0: Off (default)
+// 1: All 5 of the Goblin monsters will count, regardless of Mob ID (Mob ID: 1122-1126) - iRO default
+// 2: Any monster with the same exact name will count, regardless of Mob ID - Comparison based off of jName
+taekwon_mission_mobname: 0
+
+// Can a player Teleport on top of a Map Warp Portal? (Note 1)
+// On official servers players have been unable to do so.
+teleport_on_portal: no
+
+// Is the knockback direction for Cart Revolution always West? (Note 1)
+// On official servers it will knock the target always to the West. If disabled it will knock the target backwards.
+cart_revo_knockback: no
+
+// On official servers, Arrow Shower blow direction always rely on skill placed location to target instead of caster to target
+arrow_shower_knockback: yes
+
+// On official servers, Storm Gust consists of 81 units that all deal 3x3 splash damage "away from center". Due to
+// south-western cells being processed first, this usually leads to a knockback to the northeast. Knockback at the
+// edges will be away from SG. Knockback direction can also be influenced by Ganbantein and Land Protector. If you
+// punch a hole into SG it will for example create a "suck in" effect.
+// If you disable this setting, the knockback direction will be completely random (eAthena style).
+stormgust_knockback: yes
+
+// For RENEWAL_CAST (Note 2)
+// By default skill that has '0' value for Fixed Casting Time will use 20% of cast time
+// as Fixed Casting Time, and the rest (80%) as Variable Casting Time.
+// Put it 0 to disable default Fixed Casting Time (just like -1 in the skill_db.yml).
+default_fixed_castrate: 20
+
+// On official servers, skills that hit all targets on a path (e.g. Focused Arrow Strike and First Wind) first
+// calculate one of the eight directions and then apply an AoE based on that direction. This means there can be
+// areas that such skills can't hit. If you target a monster in such an area, only this monster will be hit.
+// The 3rd job skills Flame Launcher and Cannon Spear can completely miss.
+// Set this to "no" to calculate a path from the caster to the target instead and hit everything near that path.
+// You can adjust splash and maxcount in the skill_db to adjust the width and length of these skills.
+// Note: Brandish Spear will always use this algorithm due to its special damage behavior.
+skill_eightpath_algorithm: yes
+
+// Should skills that use skill_eightpath_algorithm include targets in the caster's cell?
+// Official: yes
+skill_eightpath_same_cell: yes
+
+// Can damage skill units like icewall and traps (Note 3)
+// On official servers, players can damage icewalls and some traps with skills. When monsters use skills, damage
+// will show on the icewalls and traps, but it is not actually substracted from the durability.
+// The official setting makes it quite easy to trap MVPs, set this to 31 if you want all units to be able to
+// damage skills (previous behavior).
+can_damage_skill: 1
+
+// Land Protector behavior (Note 1)
+// On official servers, players standing on the border (outer cell) of the Land Protector can still be affected/hit
+// by AoE skills (if the skill has a splash effect, such as Storm Gust). The Athena behavior ignores AoE affects/hits
+// while players are standing on the border.
+// Official: 0
+// Legacy Athena: 1
+land_protector_behavior: 0
+
+// NPC EMOTION behavior (Note 1)
+// On official servers, certain mobs cast NPC EMOTION skill which displays an emoticon and change their mode from
+// Aggressive to Passive for a certain time. The Athena behavior does not change their mode to Passive.
+// Official: 0
+// Legacy Athena: 1
+npc_emotion_behavior: 0
+
+// Should Tarot Card of Fate have the same chance for each card to occur? (Note 1)
+// Official chances: 15%: LOVERS | 10%: FOOL, MAGICIAN, HIGH PRIESTESS, STRENGTH, SUN | 8%: TEMPERANCE
+// 7%: CHARIOT | 6%: THE HANGED MAN | 5%: DEATH, STAR | 2%: TOWER | 1%: WHEEL OF FORTUNE, DEVIL
+// If you set this to "yes", the chance for each card becomes 1/14.
+tarotcard_equal_chance: no
+
+// Should Dispel work on songs when the target is not in the song area? (Note 1)
+// On official servers, it's impossible to dispel songs.
+// Hint: Also affects the Rebellion skill "Vanishing Buster".
+dispel_song: no
+
+// Banana Bomb from Genetic's Make Bomb skill sitting duration.
+// Official duration is 1000ms * Thrower's Job Level / 4.
+// 0: Uses the official duration
+// X: Enter a custom duration in milliseconds.
+banana_bomb_duration: 0
+
+// Should items that you try to create be dropped if you have no space left in your inventory? (Note 1)
+// Official: no
+// Legacy rAthena logic: yes
+skill_drop_items_full: no
+
+// EDP setting: (Note 3)
+// When switching/unequipping a right hand weapon, should EDP be removed? EDP can't be used with bare hand.
+// 0: Disabled (rAthena legacy and pre-renewal behavior).
+// 1: Enabled on pre-renewal.
+// 2: Enabled on renewal.
+// 3: 1+2
+switch_remove_edp: 2
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)s
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Should skill casting be cancelled when inflicted by curse/stun/sleep/etc (includes silence) (Note 3)?
+status_cast_cancel: 0
+
+// Will certain skill status-changes be removed on logout?
+// This mimics official servers, where Extremity Fist's no SP regen,
+// Strip Equipment, and some other buffs are removed when you logout. Setting is:
+// 0 = remove nothing.
+// 1 = remove negative buffs (stripping, EF)
+// 2 = remove positive buffs (maximize power, steel body...)
+// 3 = remove both negative and positive buffs.
+debuff_on_logout: 3
+
+// Adjustment for the natural rate of resistance from status changes.
+// If 50, status defense is halved, and you need twice as much stats to block
+// them (eg: 200 vit to completely block stun)
+pc_status_def_rate: 40
+mob_status_def_rate: 100
+
+// Maximum resistance to status changes. (100 = 100%)
+// NOTE: Cards and equipment can go over this limit, so it only applies to natural resist.
+pc_max_status_def: 100
+mob_max_status_def: 100

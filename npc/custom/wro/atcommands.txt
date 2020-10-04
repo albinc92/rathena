@@ -1,0 +1,141 @@
+//===== rAthena Script =======================================
+//= Atcommands for WarboundRO
+//===== Description: =========================================
+//= Various useful commands using the @ notation.
+//============================================================
+
+-	script	Stat Manager	-1,{
+    end;
+
+OnAtcommand:
+	setarray .@resistsType$, "Fire", "Water", "Wind", "Earth", "Holy", "Dark", "Ghost", "Poison", "Neutral", "All";
+
+	//ARMOR
+	setarray .@equipPos[0], EQI_ACC_L, EQI_ACC_R, EQI_SHOES, EQI_GARMENT, EQI_HEA_LOW, EQI_HEAD_MID, EQI_HEAD_TOP,
+		EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_COSTUME_HEAD_TOP, EQI_COSTUME_HEAD_MID, EQI_COSTUME_HEAD_LOW,
+		EQI_COSTUME_GARMENT, EQI_SHADOW_ARMOR, EQI_SHADOW_SHIELD, EQI_SHADOW_SHOES, EQI_SHADOW_ACC_R, EQI_SHADOW_ACC_L;
+
+	dispbottom "-------------------Resist values-------------------";
+
+	freeloop 1;
+
+	for( .@r = 0; .@r < getarraysize(.@resistsType$); .@r++ )
+	{
+		.@amount = 0;
+
+		for( .@p = 0; .@p < getarraysize(.@equipPos); .@p++ )
+		{
+			.@id = getequipid(.@p);
+
+			if(.@id != -1)
+			{
+				//get equip resists
+				.@amount += callsub(OnGetResist, .@r, .@id);
+
+				//now, check cards coumpounded
+				for( .@i = 0; .@i < 4; .@i++ )
+				{
+					.@id = getequipcardid(.@p, .@i);
+					if(.@id > 0)
+					{
+						.@amount += callsub(OnGetResist, .@r, .@id);
+					}
+				}
+			}
+		}
+
+		dispbottom "	~" + .@resistsType$[.@r] + " --> " + .@amount;
+	}
+
+	freeloop 0;
+	end;
+
+OnGetResist:
+	query_sql("SELECT `script` FROM `item_db` WHERE `id` = " + getarg(1), .@script$);
+	if(getstrlen(.@script$) > 0)
+	{
+		switch(getarg(0))
+		{
+			case 0:
+				.@seekStr$ += "Fire";
+				break;
+			case 1:
+				.@seekStr$ += "Water";
+				break;
+			case 2:
+				.@seekStr$ += "Wind";
+				break;
+			case 3:
+				.@seekStr$ += "Earth";
+				break;
+			case 4:
+				.@seekStr$ += "Holy";
+				break;
+			case 5:
+				.@seekStr$ += "Dark";
+				break;
+			case 6:
+				.@seekStr$ += "Ghost";
+				break;
+			case 7:
+				.@seekStr$ += "Poison";
+				break;
+			case 8:
+				.@seekStr$ += "Neutral";
+				break;
+			case 9:
+				.@seekStr$ += "All";
+				break;
+		}
+
+		if(compare(.@script$, .@seekStr$) == 1)
+		{
+			explode(.@dest$, .@script$, ",");
+			if(getarraysize(.@dest$) > 1)
+			{
+				for( .@v = 0; .@v < getarraysize(.@dest$); .@v++ )
+				{
+					if(compare(.@dest$[.@v], .@seekStr$) == 1)
+					{
+						if(compare(.@dest$[.@v - 1], "bSubEle") == 1)
+						{
+							.@realValue = atoi(.@dest$[.@v + 1]);
+						}
+					}
+				}
+			}
+		}
+	}
+	return .@realValue;
+
+OnInit:
+	bindatcmd "battlestats", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "bstats", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "bs", strnpcinfo(3) + "::OnAtcommand";
+	end;
+}
+
+
+
+-	script	Headhunter Info	-1,{
+    end;
+
+OnAtcommand:
+    query_sql("SELECT * FROM `wrohunter` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max);
+    dispbottom " ";
+    dispbottom "-------------- Headhunter Info --------------";
+    dispbottom "Monster: " + strmobinfo(1, .@mobid);
+    dispbottom "ID: " + .@mobid;
+    dispbottom "Count: ( " + .@count + " / " + .@max + " )";
+    dispbottom "Rewards ( bExp / jExp / Zeny ): " + (strmobinfo(6, .@mobToHunt) * 25) + " / " + (strmobinfo(7, .@mobToHunt) * 25) + " / " + (strmobinfo(3, .@mobid) * 100);
+	dispbottom " ";
+    end;
+
+OnInit:
+	bindatcmd "headhunter", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "headhunt", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "hhunter", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "hhunt", strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "hh", strnpcinfo(3) + "::OnAtcommand";
+	end;
+}

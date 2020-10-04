@@ -1,0 +1,22 @@
+//===== rAthena Script =======================================
+//= Infocast
+//===== Description: =========================================
+//= Broadcasts random info messages across the server.
+//============================================================
+
+-	script	News	-1,{
+OnInit:
+set .Time,60;		// Announce every x Minute.
+
+setarray .News$[0],	// Random Message to be Announced
+		"Never give out your account name or password to anyone!",
+		"Don't forget to read up on the server rules on our website @ https://warboundro.boards.net/",
+		"Found a bug or having issues with the server? Make a post on our forums @ https://warboundro.boards.net/. Your feedback is greatly appreciated!",
+		"Enjoying your stay at WarboundRO? Don't forget to vote!";
+
+while( 1 ){
+	announce .News$[ rand( getarraysize( .News$ ) ) ],0;
+	sleep ( .Time * 60000 );
+	}
+end;
+}

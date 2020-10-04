@@ -1,0 +1,134 @@
+//===== rAthena Script =======================================
+//= Healer
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Basic healer script.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.1 Aligned coordinates with @go.
+//============================================================
+
+-	script	Healer	-1,{
+	.@Price = 0;	// Zeny required for heal
+	.@Buffs = 1;	// Also buff players? (1: yes / 0: no)
+	.@Delay = 3;	// Heal delay, in seconds
+
+	if (@HD > gettimetick(2))
+		end;
+	if (.@Price) {
+		message strcharinfo(0), "Healing costs " + callfunc("F_InsertComma",.@Price) + " Zeny.";
+		if (Zeny < .@Price)
+			end;
+		if (select("^0055FFHeal^000000:^777777Cancel^000000") == 2)
+			end;
+		Zeny -= .@Price;
+	}
+    emotion ET_BEST;
+	specialeffect2 EF_HEAL2;
+	percentheal 100,100;
+	if (.@Buffs) {
+		specialeffect2 EF_INCAGILITY;
+		sc_start SC_INCREASEAGI,240000,10;
+		specialeffect2 EF_BLESSING;
+		sc_start SC_BLESSING,240000,10;
+	}
+	sc_end SC_STONE;
+	sc_end SC_SLOWDOWN;
+	sc_end SC_FREEZE;
+	sc_end SC_SLEEP;
+	sc_end SC_CURSE;
+	sc_end SC_SILENCE;
+	sc_end SC_CONFUSION;
+	sc_end SC_BLIND;
+	sc_end SC_BLEEDING;
+	sc_end SC_DECREASEAGI;
+	sc_end SC_POISON;
+	sc_end SC_HALLUCINATION;
+	sc_end SC_STRIPWEAPON;
+	sc_end SC_STRIPARMOR;
+	sc_end SC_STRIPHELM;
+	sc_end SC_STRIPSHIELD;
+	sc_end SC_CHANGEUNDEAD;
+	sc_end SC_ORCISH;
+	sc_end SC_BERSERK;
+	sc_end SC_SKE;
+	sc_end SC_SWOO;
+	sc_end SC_SKA;
+	if (.@Delay)
+		@HD = gettimetick(2) + .@Delay;
+	end;
+}
+
+
+
+// Duplicates
+//============================================================
+prt_fild05,279,227,6	duplicate(Healer)	Healer#prt_sew	569
+prt_fild01,142,363,3	duplicate(Healer)	Healer#prt_maze	569
+alberta,25,240,6	duplicate(Healer)	Healer#alb	569
+alb2trea,76,94,1	duplicate(Healer)	Healer#treasure	569
+tur_dun01,156,57,3	duplicate(Healer)	Healer#tur_dun	569
+aldebaran,135,118,6	duplicate(Healer)	Healer#alde	569
+mjolnir_02,81,355,7	duplicate(Healer)	Healer#mjo_dun	569
+amatsu,194,91,5	duplicate(Healer)	Healer#ama	569
+ama_in02,121,183,5	duplicate(Healer)	Healer#ama_dun	569
+ayothaya,207,169,6	duplicate(Healer)	Healer#ayo	569
+comodo,206,147,3	duplicate(Healer)	Healer#com	569
+comodo,32,220,5	duplicate(Healer)	Healer#beach1	569
+comodo,171,350,5	duplicate(Healer)	Healer#beach2	569
+comodo,316,179,5	duplicate(Healer)	Healer#beach3	569
+cmd_fild08,327,358,5	duplicate(Healer)	Healer#anthell	569
+einbech,57,36,6	duplicate(Healer)	Healer#einbe	569
+einbech,143,244,3	duplicate(Healer)	Healer#ein_dun	569
+einbroch,57,202,6	duplicate(Healer)	Healer#einbr	569
+geffen,115,72,6	duplicate(Healer)	Healer#gef	569
+gef_tower,158,35,3	duplicate(Healer)	Healer#gef_dun	569
+gef_fild10,76,340,5	duplicate(Healer)	Healer#orcsdun	569
+gef_fild06,27,309,5	duplicate(Healer)	Healer#gl	569
+gonryun,156,122,6	duplicate(Healer)	Healer#gon	569
+gonryun,158,188,5	duplicate(Healer)	Healer#gon_dun	569
+hugel,89,150,6	duplicate(Healer)	Healer#hu	569
+hu_fild05,175,305,1	duplicate(Healer)	Healer#abyss	569
+odin_tem01,95,147,5	duplicate(Healer)	Healer#odin	569
+hu_fild01,136,160,5	duplicate(Healer)	Healer#thana	569
+izlude,125,118,5	duplicate(Healer)	Healer#izl	569	//Pre-RE: (125,118)
+izlu2dun,112,90,3	duplicate(Healer)	Healer#iz_dun	569
+jawaii,250,139,4	duplicate(Healer)	Healer#jaw	569
+lighthalzen,152,100,6	duplicate(Healer)	Healer#lhz	569
+lhz_in01,35,222,3	duplicate(Healer)	Healer#lhz_dun	569
+louyang,226,103,4	duplicate(Healer)	Healer#lou	569
+ayo_fild01,125,201,3	duplicate(Healer)	Healer#lou_dun	569
+manuk,272,144,6	duplicate(Healer)	Healer#man	569
+mid_camp,203,289,6	duplicate(Healer)	Healer#mid	569
+moc_ruins,72,164,4	duplicate(Healer)	Healer#moc	569
+moc_fild19,111,101,3	duplicate(Healer)	Healer#sphinx	569
+morocc,153,97,6	duplicate(Healer)	Healer#mor	569
+moscovia,220,191,4	duplicate(Healer)	Healer#mos	569
+mosk_fild02,199,248,4	duplicate(Healer)	Healer#mosk_dun	569
+niflheim,212,182,5	duplicate(Healer)	Healer#nif	569
+payon,179,106,4	duplicate(Healer)	Healer#pay	569
+pay_arche,42,125,7	duplicate(Healer)	Healer#pay_dun	569
+prontera,162,193,4	duplicate(Healer)	Healer#prt	569
+rachel,125,116,6	duplicate(Healer)	Healer#rac	569
+ra_temin,34,313,3	duplicate(Healer)	Healer#ra_san	569
+ra_fild01,228,327,5	duplicate(Healer)	Healer#ice_dun	569
+splendide,201,153,4	duplicate(Healer)	Healer#spl	569
+spl_fild01,360,113,4	duplicate(Healer)	Healer#nyd	569
+umbala,105,148,3	duplicate(Healer)	Healer#umb	569
+veins,224,126,4	duplicate(Healer)	Healer#ve	569
+ve_fild03,175,239,5	duplicate(Healer)	Healer#thor	569
+nameless_n,167,188,5	duplicate(Healer)	Healer#abbey	569
+xmas,143,136,4	duplicate(Healer)	Healer#xmas	569
+xmas,138,308,5	duplicate(Healer)	Healer#xmas_dun	569
+yuno,169,188,4	duplicate(Healer)	Healer#yuno	569
+yuno_fild03,39,146,5	duplicate(Healer)	Healer#mag_dun	569
+yuno_fild07,210,178,5	duplicate(Healer)	Healer#jupe	569
+yuno_fild08,77,183,5	duplicate(Healer)	Healer#kh_dun	569
+e_tower,72,118,5	duplicate(Healer)	Healer#et	569
+gef_fild10,232,198,5	duplicate(Healer)	Healer#orcmemory	569
+monk_test,302,145,5	duplicate(Healer)	Healer#shrine	569

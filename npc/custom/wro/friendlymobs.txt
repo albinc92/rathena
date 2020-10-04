@@ -1,0 +1,194 @@
+-	script	Friendly_Mob_Controller	-1,{
+
+OnInit:
+	//Guards
+	monster "cmd_fild08",320,351,"Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead1",0,1;
+	monster "cmd_fild08",354,333,"Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead2",0,1;
+	monster "mjolnir_02",82,349,"Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
+	monster "tur_dun01",150,50,"Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
+	monster "gef_fild06",32,301,"Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
+	monster "yuno_fild07",216,173,"Guard",3611,1,strnpcinfo(0)+"::OnJupeDead",0,1;
+	monster "hu_fild05",177,314,"Guard",3611,1,strnpcinfo(0)+"::OnAbyssDead",0,1;
+	monster "odin_tem01",98,142,"Guard",3611,1,strnpcinfo(0)+"::OnOdinDead",0,1;
+	monster "hu_fild01",139,150,"Guard",3611,1,strnpcinfo(0)+"::OnThanaDead",0,1;
+	monster "ra_fild01",233,324,"Guard",3611,1,strnpcinfo(0)+"::OnIceDead",0,1;
+	monster "nameless_n",171,182,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead",0,1;
+	monster "nameless_n",162,191,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead2",0,1;
+	monster "nameless_n",159,178,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead3",0,1;
+	monster "mosk_fild02",193,246,"Guard",3611,1,strnpcinfo(0)+"::OnMoskDead",0,1;
+	monster "spl_fild01",352,114,"Guard",3611,1,strnpcinfo(0)+"::OnNydDead1",0,1;
+	monster "spl_fild01",349,106,"Guard",3611,1,strnpcinfo(0)+"::OnNydDead2",0,1;
+	monster "yuno_fild03",44,135,"Guard",3611,1,strnpcinfo(0)+"::OnNoggDead",0,1;
+	monster "gef_fild10",73,328,"Guard",3611,1,strnpcinfo(0)+"::OnOrcDead",0,1;
+	monster "gef_fild10",242,193,"Guard",3611,1,strnpcinfo(0)+"::OnOrcDead2",0,1;
+	monster "yuno_fild08",84,179,"Guard",3611,1,strnpcinfo(0)+"::OnKHDead",0,1;
+	monster "ve_fild03",171,230,"Guard",3611,1,strnpcinfo(0)+"::OnThorDead",0,1;
+
+	//Adventurers Lv.1+ Fields
+	//freeloop(1);s
+	//setarray .@maps$[0],"pay_fild03","gef_fild00","gef_fild01","gef_fild04","gef_fild07","prt_fild00","prt_fild01","prt_fild05","prt_fild06","prt_fild08","prt_fild09","prt_fild06","yuno_fild04","moc_fild07","moc_fild12";
+    //set .@amnt, (getarraysize(.@maps$) * 3);
+	//for(set .@i, 0; .@i < .@amnt; .@i++) {
+	//	set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//	monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3615,3616),1,strnpcinfo(0)+"::OnAdventurer1Dead",0,1;
+	//}
+
+	//Adventurers Lv.25 Dungeons
+	//freeloop(1);
+	//setarray .@maps$[0],"anthell01","anthell02","beach_dun3","iz_dun00","iz_dun01","mjo_dun01","mjo_dun02","prt_maze01","prt_maze02","orcsdun01","pay_dun00","prt_sewb1","prt_sewb2","prt_sewb3","prt_sewb4","moc_pryd01","moc_pryd01","in_sphinx1","treasure01";
+	//set .@amnt, (getarraysize(.@maps$) * 3);
+	//for(set .@i, 0; .@i < .@amnt; .@i++) {
+	//	set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//	monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3618),1,strnpcinfo(0)+"::OnAdventurer25Dead",0,1;
+	//}
+
+	//Adventurers Lv.50 Dungeons
+	//freeloop(1);
+	//setarray .@maps$[0],"ama_dun01","ama_dun02","ayo_dun01","alde_dun04","iz_dun02","iz_dun03","iz_dun04","mjo_dun03","ein_dun01","gef_dun00","gef_dun01","gef_dun02","gl_in01","gl_sew01","gl_sew02","prt_maze03","ice_dun01","mosk_dun01","mosk_dun02","orcsdun02","pay_dun01","pay_dun02","pay_dun03","pay_dun04","moc_pryd02","moc_pryd03","moc_pryd04","in_sphinx2","in_sphinx3","xmas_dun01","xmas_dun02","um_dun01","um_dun02";
+	//set .@amnt, (getarraysize(.@maps$) * 3);
+	//for(set .@i, 0; .@i < .@amnt; .@i++) {
+	//	set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//	monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3618),1,strnpcinfo(0)+"::OnAdventurer50Dead",0,1;
+	//}
+
+	//Adventurers Lv.75 Dungeons
+	//freeloop(1);
+	//setarray .@maps$[0],"abyss_01","abyss_02","ayo_dun02","beach_dun2","c_tower1","c_tower2","c_tower3","c_tower4","alde_dun01","alde_dun02","alde_dun03","ein_dun02","gl_church","gl_chyard","gl_cas01","gl_cas02","gl_prison","gl_prison1","gl_knt01","gl_knt02","gl_step","gl_sew03","gl_sew04","gl_dun01","gl_dun02","gon_dun01","gon_dun02","gon_dun03","gld_dun02","gld_dun04","gld_dun01","gld_dun03","ice_dun02","ice_dun03","lou_dun01","lou_dun02","lou_dun03","mag_dun01","mag_dun02","mosk_dun03","odin_tem01","odin_tem02","moc_pryd05","moc_pryd06","ra_san01","ra_san02","ra_san03","ra_san04","ra_san05","in_sphinx4","in_sphinx5","treasure02","tha_t01","tha_t02","tha_t03","thor_v02","tur_dun01","tur_dun02","tur_dun03","tur_dun04";
+	//set .@amnt, (getarraysize(.@maps$) * 3);
+	//for(set .@i, 0; .@i < .@amnt; .@i++) {
+	//	set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//	monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3617),1,strnpcinfo(0)+"::OnAdventurer75Dead",0,1;
+	//}
+
+	end;
+
+OnAnthellDead1:
+	sleep 30000;
+	monster "cmd_fild08",320,351,"Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead1",0,1;
+	end;
+
+OnAnthellDead2:
+	sleep 30000;
+	monster "cmd_fild08",354,333,"Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead2",0,1;
+	end;
+
+OnCoalMineDead:
+	sleep 30000;
+	monster "mjolnir_02",82,349,"Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
+	end;
+
+OnTurDunDead:
+	sleep 30000;
+	monster "tur_dun01",150,50,"Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
+	end;
+
+OnGLDead:
+	sleep 30000;
+	monster "gef_fild06",32,301,"Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
+	end;
+
+OnJupeDead:
+	sleep 30000;
+	monster "yuno_fild07",216,173,"Guard",3611,1,strnpcinfo(0)+"::OnJupeDead",0,1;
+	end;
+
+OnAbyssDead:
+	sleep 30000;
+	monster "hu_fild05",177,314,"Guard",3611,1,strnpcinfo(0)+"::OnAbyssDead",0,1;
+	end;
+
+OnOdinDead:
+	sleep 30000;
+	monster "odin_tem01",98,142,"Guard",3611,1,strnpcinfo(0)+"::OnOdinDead",0,1;
+	end;
+
+OnIceDead:
+	sleep 30000;
+	monster "ra_fild01",233,324,"Guard",3611,1,strnpcinfo(0)+"::OnIceDead",0,1;
+	end;
+
+OnThanaDead:
+	sleep 30000;
+	monster "hu_fild01",139,150,"Guard",3611,1,strnpcinfo(0)+"::OnThanaDead",0,1;
+	end;
+
+OnAbbeyDead1:
+	sleep 30000;
+	monster "nameless_n",171,182,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead1",0,1;
+	end;
+
+OnAbbeyDead2:
+	sleep 30000;
+	monster "nameless_n",162,191,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead2",0,1;
+	end;
+
+OnAbbeyDead3:
+	sleep 30000;
+	monster "nameless_n",159,178,"Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead3",0,1;
+	end;
+
+OnMoskDead:
+	sleep 30000;
+	monster "mosk_fild02",193,246,"Guard",3611,1,strnpcinfo(0)+"::OnMoskDead",0,1;
+	end;
+
+OnNydDead1:
+	sleep 30000;
+	monster "spl_fild01",352,114,"Guard",3611,1,strnpcinfo(0)+"::OnNydDead1",0,1;
+	end;
+
+OnNydDead2:
+	sleep 30000;
+	monster "spl_fild01",349,106,"Guard",3611,1,strnpcinfo(0)+"::OnNydDead2",0,1;
+	end;
+
+OnNoggDead:
+	sleep 30000;
+	monster "yuno_fild03",44,135,"Guard",3611,1,strnpcinfo(0)+"::OnNoggDead",0,1;
+	end;
+
+OnOrcDead:
+	sleep 30000;
+	monster "gef_fild10",73,328,"Guard",3611,1,strnpcinfo(0)+"::OnOrcDead",0,1;
+	end;
+
+OnKHDead:
+	sleep 30000;
+	monster "yuno_fild08",84,179,"Guard",3611,1,strnpcinfo(0)+"::OnKHDead",0,1;
+	end;
+
+OnThorDead:
+	sleep 30000;
+	monster "ve_fild03",171,230,"Guard",3611,1,strnpcinfo(0)+"::OnThorDead",0,1;
+	end;
+
+OnOrcDead2:
+	sleep 30000;
+	monster "gef_fild10",242,193,"Guard",3611,1,strnpcinfo(0)+"::OnOrcDead2",0,1;
+	end;
+
+//OnAdventurer1Dead:
+	//setarray .@maps$[0],"pay_fild03","gef_fild00","gef_fild01","gef_fild04","gef_fild07","prt_fild00","prt_fild01","prt_fild05","prt_fild06","prt_fild08","prt_fild09","prt_fild06","yuno_fild04","moc_fild07","moc_fild12";
+	//set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3615,3616),1,strnpcinfo(0)+"::OnAdventurer1Dead",0,1;
+	//end;
+
+//OnAdventurer25Dead:
+	//setarray .@maps$[0],"anthell01","anthell02","beach_dun3","iz_dun00","iz_dun01","mjo_dun01","mjo_dun02","prt_maze01","prt_maze02","orcsdun01","pay_dun00","prt_sewb1","prt_sewb2","prt_sewb3","prt_sewb4","moc_pryd01","moc_pryd01","in_sphinx1","treasure01";
+	//set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3618),1,strnpcinfo(0)+"::OnAdventurer25Dead",0,1;
+	//end;
+
+//OnAdventurer50Dead:
+	//setarray .@maps$[0],"ama_dun01","ama_dun02","ayo_dun01","alde_dun04","iz_dun02","iz_dun03","iz_dun04","mjo_dun03","ein_dun01","gef_dun00","gef_dun01","gef_dun02","gl_in01","gl_sew01","gl_sew02","prt_maze03","ice_dun01","mosk_dun01","mosk_dun02","orcsdun02","pay_dun01","pay_dun02","pay_dun03","pay_dun04","moc_pryd02","moc_pryd03","moc_pryd04","in_sphinx2","in_sphinx3","xmas_dun01","xmas_dun02","um_dun01","um_dun02";
+	//set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3618),1,strnpcinfo(0)+"::OnAdventurer50Dead",0,1;
+	//end;
+
+//OnAdventurer75Dead:
+	//setarray .@maps$[0],"abyss_01","abyss_02","ayo_dun02","beach_dun2","c_tower1","c_tower2","c_tower3","c_tower4","alde_dun01","alde_dun02","alde_dun03","ein_dun02","gl_church","gl_chyard","gl_cas01","gl_cas02","gl_prison","gl_prison1","gl_knt01","gl_knt02","gl_step","gl_sew03","gl_sew04","gl_dun01","gl_dun02","gon_dun01","gon_dun02","gon_dun03","gld_dun02","gld_dun04","gld_dun01","gld_dun03","ice_dun02","ice_dun03","lou_dun01","lou_dun02","lou_dun03","mag_dun01","mag_dun02","mosk_dun03","odin_tem01","odin_tem02","moc_pryd05","moc_pryd06","ra_san01","ra_san02","ra_san03","ra_san04","ra_san05","in_sphinx4","in_sphinx5","treasure02","tha_t01","tha_t02","tha_t03","thor_v02","tur_dun01","tur_dun02","tur_dun03","tur_dun04";
+	//set .@j, rand(0,(getarraysize(.@maps$)-1));
+	//monster .@maps$[.@j],0,0,"Imperial Recruit",rand(3617,3618),1,strnpcinfo(0)+"::OnAdventurer75Dead",0,1;
+	//end;
+
+}

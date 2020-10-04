@@ -1,0 +1,323 @@
+//===== rAthena Script =======================================
+//= Headhunter
+//===== Description: =========================================
+//= Dynamic hunting quests.
+//============================================================
+
+-	script	Headhunter	-1,{
+
+    cutin "3rd_sc_doomk02.bmp", 2;
+    query_sql("SELECT * FROM `wrohunter` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max);
+    
+    // If on a mission
+    if(.@mobid) {
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Let's see, your progress for the current mission is:";
+        mes "^f7f7f7-^000000";
+        mes "Monster: ^0000ff" + strmobinfo(1,.@mobid) + "^000000";
+        if(.@count == .@max) {
+            mes "Count: ^00ff00" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        } else {
+            mes "Count: ^ff0000" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
+        }
+
+        if(.@count <= .@max) {
+            L_OnCurrentMissionInfo:
+            next;
+            switch(select("Monster information:Location information:Abort mission")) {
+                case 1:
+    		        atcommand "@mobinfo " + .@mobid;
+    		        goto L_OnCurrentMissionInfo;
+                    end;
+                case 2:
+    		        atcommand "@whereis " + .@mobid;
+    		        goto L_OnCurrentMissionInfo;
+                    end;
+                case 3:
+                    query_sql("DELETE FROM `wrohunter` WHERE `char_id` = " + getcharid(0));
+                    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+                    mes "Mission aborted!";
+                    end;
+            }
+        }
+        close2;
+        cutin "", 255;
+        end;
+    }
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Hummm... Are you looking to do some headhunting?";
+    next;
+
+    switch(select("Yes:No")) {
+        case 1:
+            next;
+    		goto L_Missions;
+    }
+
+    emotion ET_SWEAT;
+    cutin "3rd_sc_doomk01.bmp", 2;
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "No? Then be on your way...";
+    close2;
+    cutin "",255;
+    end;
+
+L_Missions:
+    cutin "3rd_sc_doomk02.bmp", 2;
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "What kind of game are you looking for today?";
+    switch(select("~ Easy:~ Moderate:~ Difficult:[^ff8000Mini Boss^000000]:[^ff0000Boss^000000]")) {
+        case 1:
+            next;
+            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 63 AND HP / LV > 5 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND ID NOT IN (1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1964, 1968, 1970, 1971, 1972, 1973, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
+            goto L_ListMobs;
+        case 2:
+            next;
+            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 119 AND HP / (LV + (LV * (LV/74))) > 63 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 2014, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
+            goto L_ListMobs;
+        case 3:
+            next;
+            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 176 AND HP / (LV + (LV * (LV/74))) > 119 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 2014, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
+            goto L_ListMobs;
+        case 4:
+            next;
+            query_sql("SELECT ID FROM mob_db WHERE HP / (LV + (LV * (LV/74))) < 515 AND HP / (LV + (LV * (LV/74))) > 176 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1198, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1399, 1502, 1519, 1520, 1609, 1626, 1722, 1731, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1889, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 1980, 2009, 2014, 2019, 2020, 2021, 2023, 2026, 2068, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
+            goto L_ListMobs;
+        case 5:
+            next;
+            query_sql("SELECT ID FROM mob_db WHERE HP / (LV + (LV * (LV/74))) > 515 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1198, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1399, 1502, 1519, 1520, 1609, 1626, 1722, 1731, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1889, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 1980, 2009, 2014, 2019, 2020, 2021, 2023, 2026, 2068, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY HP ASC", .@id);
+            goto L_ListMobs;
+    }
+    next;
+
+L_ListMobs:
+    if(!.@id[0]) {
+        emotion ET_SWEAT;
+        cutin "3rd_sc_doomk01.bmp", 2;
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "I'm afraid there are no appropriate targets for you at your current level in this category.";
+        next;
+        goto L_Missions;
+    }
+
+    set .@huntmenu$, "";
+    for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
+        if (.@i) set .@huntmenu$,.@huntmenu$+":";
+        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ " + .@textColor$ + "Lv. ^ff0000" + strmobinfo(3, .@id[.@i]) + "^000000]";
+    }
+    set .@selection, select(.@huntmenu$);
+    set .@mobToHunt, .@id[.@selection - 1];
+    set .@amnt, 10;
+
+L_OnMissionInfo:
+    next;
+    mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+    mes "The specifications for this mission are the following:";
+    mes "^f7f7f7-^000000";
+    mes "Monster: ^0000ff" + strmobinfo(1,.@mobToHunt) + "^000000";
+    mes "Quantity: ^ff0000" + .@amnt + "^000000";
+    mes "Reward (Base EXP): ^ff0000" + (strmobinfo(6, .@mobToHunt) * 25) + "^000000";
+    mes "Reward (Job EXP): ^ff0000" + (strmobinfo(7, .@mobToHunt) * 25) + "^000000";
+    mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 100) + "^000000";
+
+    switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
+        case 1:
+            query_sql("REPLACE INTO `wrohunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ")");
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Excellent. I shall await your return!";
+            close2;
+            cutin "", 255;
+            end;
+
+        case 2:
+            atcommand "@mobinfo " + .@mobToHunt;
+            goto L_OnMissionInfo;
+            end;
+
+        case 3:
+            atcommand "@whereis " + .@mobToHunt;
+            goto L_OnMissionInfo;
+            end;
+
+        case 4:
+            next;
+            goto L_Missions;
+            end;
+
+        case 5:
+            next;
+            mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+            mes "Another time, perhaps.";
+    }
+    close2;
+    cutin "",255;
+    end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT `count` FROM `wrohunter` WHERE `char_id` = '"+getcharid(3)+"'", .@count);
+    if(!.@intro) {
+        showevent QTYPE_QUEST;
+    } else {
+        showevent QTYPE_QUEST2;
+    }
+    end;
+
+}
+
+
+
+// Duplicates
+prontera,141,178,7	duplicate(Headhunter)	Headhunter#prt	481
+prt_fild05,292,216,3	duplicate(Headhunter)	Headhunter#prt_sew	481
+prt_fild01,131,364,6	duplicate(Headhunter)	Headhunter#prt_maze	481
+alberta,38,241,6	duplicate(Headhunter)	Headhunter#alb	481
+payon,181,111,2	duplicate(Headhunter)	Headhunter#pay	481
+pay_arche,39,127,7	duplicate(Headhunter)	Headhunter#pay_dun	481
+alb2trea,70,98,5	duplicate(Headhunter)	Headhunter#treasure	481
+tur_dun01,148,60,5	duplicate(Headhunter)	Headhunter#tur_dun	481
+izlude,136,121,5	duplicate(Headhunter)	Headhunter#iz	481
+izlu2dun,104,85,7	duplicate(Headhunter)	Headhunter#iz_dun	481
+aldebaran,133,122,5	duplicate(Headhunter)	Headhunter#alde	481
+xmas,150,307,3	duplicate(Headhunter)	Headhunter#xmas	481
+xmas,140,127,7	duplicate(Headhunter)	Headhunter#xmas_dun	481
+mjolnir_02,76,358,5	duplicate(Headhunter)	Headhunter#mjo_dun	481
+morocc,148,87,7	duplicate(Headhunter)	Headhunter#moc	481
+moc_ruins,63,152,7	duplicate(Headhunter)	Headhunter#moc_pryd	481
+moc_fild19,113,101,3	duplicate(Headhunter)	Headhunter#in_sphinx	481
+comodo,215,139,1	duplicate(Headhunter)	Headhunter#cmd	481
+cmd_fild08,328,347,1	duplicate(Headhunter)	Headhunter#anthell	481
+comodo,31,218,5	duplicate(Headhunter)	Headhunter#beach1	481
+comodo,181,348,3	duplicate(Headhunter)	Headhunter#beach2	481
+comodo,323,173,1	duplicate(Headhunter)	Headhunter#beach3	481
+umbala,98,157,5	duplicate(Headhunter)	Headhunter#um	481
+umbala,119,282,3	duplicate(Headhunter)	Headhunter#um_dun	481
+niflheim,207,168,1	duplicate(Headhunter)	Headhunter#nif	481
+geffen,114,58,1	duplicate(Headhunter)	Headhunter#gef	481
+gef_tower,149,33,7	duplicate(Headhunter)	Headhunter#gef_dun	481
+gef_fild10,61,331,5	duplicate(Headhunter)	Headhunter#orcsdun	481
+gef_fild06,23,300,7	duplicate(Headhunter)	Headhunter#gl	481
+yuno,147,187,6	duplicate(Headhunter)	Headhunter#yuno	481
+yuno_fild03,35,136,7	duplicate(Headhunter)	Headhunter#mag_dun	481
+yuno_fild07,212,171,7	duplicate(Headhunter)	Headhunter#jupe	481
+yuno_fild08,81,175,1	duplicate(Headhunter)	Headhunter#kh_dun	481
+hugel,90,143,7	duplicate(Headhunter)	Headhunter#hu	481
+hu_fild05,170,312,5	duplicate(Headhunter)	Headhunter#abyss	481
+hu_fild01,145,158,3	duplicate(Headhunter)	Headhunter#thana	481
+odin_tem01,96,143,7	duplicate(Headhunter)	Headhunter#odin	481
+einbech,58,31,7	duplicate(Headhunter)	Headhunter#einb	481
+einbech,133,247,5	duplicate(Headhunter)	Headhunter#ein_dun	481
+einbroch,60,193,7	duplicate(Headhunter)	Headhunter#einbr	481
+lighthalzen,151,90,7	duplicate(Headhunter)	Headhunter#lhz	481
+lhz_in01,28,219,0	duplicate(Headhunter)	Headhunter#lhz_dun	481
+rachel,134,103,1	duplicate(Headhunter)	Headhunter#ra	481
+ra_temin,24,314,5	duplicate(Headhunter)	Headhunter#ra_san	481
+ra_fild01,237,332,4	duplicate(Headhunter)	Headhunter#ice_dun	481
+veins,212,121,7	duplicate(Headhunter)	Headhunter#ve	481
+ve_fild03,165,237,5	duplicate(Headhunter)	Headhunter#thor	481
+nameless_n,165,181,7	duplicate(Headhunter)	Headhunter#abbey	481
+amatsu,202,82,1	duplicate(Headhunter)	Headhunter#ama	481
+ama_in02,124,175,3	duplicate(Headhunter)	Headhunter#ama_dun	481
+gonryun,168,115,1	duplicate(Headhunter)	Headhunter#gon	481
+gonryun,169,190,3	duplicate(Headhunter)	Headhunter#gon_dun	415
+louyang,226,108,1	duplicate(Headhunter)	Headhunter#lou	481
+louyang,50,286,4	duplicate(Headhunter)	Headhunter#lou_dun	481
+ayothaya,198,163,0	duplicate(Headhunter)	Headhunter#ayo	481
+ayo_fild01,128,193,1	duplicate(Headhunter)	Headhunter#ayo_dun	481
+moscovia,225,178,7	duplicate(Headhunter)	Headhunter#mosk	481
+mosk_fild02,188,250,5	duplicate(Headhunter)	Headhunter#mosk_dun	481
+manuk,289,131,1	duplicate(Headhunter)	Headhunter#man	481
+splendide,193,155,4	duplicate(Headhunter)	Headhunter#spl	481
+spl_fild01,359,106,1	duplicate(Headhunter)	Headhunter#ygg	481
+spl_fild01,355,105,7	duplicate(Headhunter)	Headhunter#nyd	415
+e_tower,82,110,5	duplicate(Headhunter)	Headhunter#et	481
+gef_fild10,245,200,4	duplicate(Headhunter)	Headhunter#orcmemory	481
+monk_test,309,142,5	duplicate(Headhunter)	Headhunter#shrine	481
+
+
+
+// Mapflags
+prontera	mapflag	loadevent
+prt_fild05	mapflag	loadevent
+prt_fild01	mapflag	loadevent
+alberta	mapflag	loadevent
+xmas	mapflag	loadevent
+payon	mapflag	loadevent
+pay_arche	mapflag	loadevent
+alb2trea	mapflag	loadevent
+tur_dun01	mapflag	loadevent
+izlude	mapflag	loadevent
+izlu2dun	mapflag	loadevent
+aldebaran	mapflag	loadevent
+mjolnir_02	mapflag	loadevent
+morocc	mapflag	loadevent
+moc_ruins	mapflag	loadevent
+moc_fild19	mapflag	loadevent
+comodo	mapflag	loadevent
+cmd_fild08	mapflag	loadevent
+umbala	mapflag	loadevent
+niflheim	mapflag	loadevent
+geffen	mapflag	loadevent
+gef_tower	mapflag	loadevent
+gef_fild10	mapflag	loadevent
+gef_fild06	mapflag	loadevent
+yuno	mapflag	loadevent
+yuno_fild03	mapflag	loadevent
+yuno_fild07	mapflag	loadevent
+yuno_fild08	mapflag	loadevent
+hugel	mapflag	loadevent
+hu_fild05	mapflag	loadevent
+hu_fild01	mapflag	loadevent
+odin_tem01	mapflag	loadevent
+einbech	mapflag	loadevent
+einbroch	mapflag	loadevent
+lighthalzen	mapflag	loadevent
+lhz_in01	mapflag	loadevent
+rachel	mapflag	loadevent
+ra_temin	mapflag	loadevent
+ra_fild01	mapflag	loadevent
+veins	mapflag	loadevent
+ve_fild03	mapflag	loadevent
+nameless_n	mapflag	loadevent
+amatsu	mapflag	loadevent
+ama_in02	mapflag	loadevent
+gonryun	mapflag	loadevent
+louyang	mapflag	loadevent
+ayothaya	mapflag	loadevent
+ayo_fild01	mapflag	loadevent
+moscovia	mapflag	loadevent
+mosk_fild02	mapflag	loadevent
+manuk	mapflag	loadevent
+splendide	mapflag	loadevent
+spl_fild01	mapflag	loadevent
+e_tower	mapflag	loadevent
+monk_test	mapflag	loadevent
+
+
+
+// Scripts
+-	script	killtracker	-1,{
+OnNPCKillEvent:
+    query_sql("SELECT `mob_id`, `count`, `max`  FROM `wrohunter` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max);
+    if(killedrid == .@mobid && .@count != .@max) {
+        set .@count, .@count + 1;
+        message strcharinfo(0),"" + strmobinfo(1, killedrid) + " killed: (" + .@count + " / " + .@max + ")";
+        query_sql("UPDATE `wrohunter` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
+        if(.@count == .@max) {
+            query_sql("DELETE FROM `wrohunter` WHERE `char_id` = " + getcharid(0));
+            set .@bExp, (strmobinfo(6, .@mobid) * 25);
+            set .@jExp, (strmobinfo(7, .@mobid) * 25);
+            getexp2 .@bExp, .@jExp;
+            set zeny, zeny + (strmobinfo(3, .@mobid) * 100);
+            specialeffect2 885;
+		    message strcharinfo(0),"You have completed your hunt! Your reward is Zeny and Experience Points.";
+        }
+    }
+    end;
+}
+
+
+
+// Atcommand
+

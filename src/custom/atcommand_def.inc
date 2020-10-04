@@ -9,3 +9,6 @@
  **/
 
 //ACMD_DEF(newcommand),
+ACMD_DEF(arealoot),
+ACMD_DEF(battlestats),
+ACMD_DEF(headhunter),

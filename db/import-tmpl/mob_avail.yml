@@ -42,82 +42,122 @@ Header:
   Type: MOB_AVAIL_DB
   Version: 1
 
-#Body:
+Body:
   # Examples
-#  - Mob: PORING
-#    Sprite: BAPHOMET
-#  - Mob: E_OBEAUNE
-#    Sprite: PORING
-#    PetEquip: Backpack
+  #  - Mob: PORING
+  #    Sprite: BAPHOMET
+  #  - Mob: E_OBEAUNE
+  #    Sprite: PORING
+  #    PetEquip: Backpack
 
   # Easter Event Monsters
-#  - Mob: MOROCC_3
-#    Sprite: DOPPELGANGER
-#  - Mob: MOROCC_4
-#    Sprite: ECLIPSE
+  #  - Mob: MOROCC_3
+  #    Sprite: DOPPELGANGER
+  #  - Mob: MOROCC_4
+  #    Sprite: ECLIPSE
 
   # rAthena Dev Team
   # Valaris
-#  - Mob: BOW_GUARDIAN_
-#    Sprite: JOB_ASSASSIN_CROSS
-#    Sex: Male
-#    HairStyle: 1
-#    HairColor: 1
-#    ClothColor: 1
-#    Weapon: Jamadhar
-#    HeadTop: Sahkkat
-#    HeadMid: Sunglasses
-#    HeadLow: Cigar
-#    Options:
-#      Falcon: true
+  #  - Mob: BOW_GUARDIAN_
+  #    Sprite: JOB_ASSASSIN_CROSS
+  #    Sex: Male
+  #    HairStyle: 1
+  #    HairColor: 1
+  #    ClothColor: 1
+  #    Weapon: Jamadhar
+  #    HeadTop: Sahkkat
+  #    HeadMid: Sunglasses
+  #    HeadLow: Cigar
+  #    Options:
+  #      Falcon: true
   # Valaris Worshiper
-#  - Mob: E_CONDOR
-#    Sprite: JOB_THIEF
-#    Sex: Male
-#    HairStyle: 1
-#    HairColor: 1
-#    ClothColor: 1
-#    Weapon: Gladius
-#    Shield: Guard
-#    HeadTop: Sahkkat
-#    HeadMid: Sunglasses
-#    HeadLow: Cigar
+  #  - Mob: E_CONDOR
+  #    Sprite: JOB_THIEF
+  #    Sex: Male
+  #    HairStyle: 1
+  #    HairColor: 1
+  #    ClothColor: 1
+  #    Weapon: Gladius
+  #    Shield: Guard
+  #    HeadTop: Sahkkat
+  #    HeadMid: Sunglasses
+  #    HeadLow: Cigar
   # MC Cameri
-#  - Mob: E_TREASURE1
-#    Sprite: JOB_CRUSADER
-#    Sex: Male
-#    HairStyle: 6
-#    HairColor: 6
-#    ClothColor: 3
-#    Weapon: Sword
-#    Shield: Shield
-#    Options:
-#      Riding: true
+  #  - Mob: E_TREASURE1
+  #    Sprite: JOB_CRUSADER
+  #    Sex: Male
+  #    HairStyle: 6
+  #    HairColor: 6
+  #    ClothColor: 3
+  #    Weapon: Sword
+  #    Shield: Shield
+  #    Options:
+  #      Riding: true
   # Poki#3
-#  - Mob: E_TREASURE2
-#    Sprite: JOB_SNIPER
-#    Sex: Male
-#    HairStyle: 21
-#    Weapon: Bow_Of_Rudra
-#    HeadTop: Boy's_Cap
-#    HeadMid: Takius_Blindfold
-#    HeadLow: Centimental_Leaf
-#    Options:
-#      Falcon: true
+  #  - Mob: E_TREASURE2
+  #    Sprite: JOB_SNIPER
+  #    Sex: Male
+  #    HairStyle: 21
+  #    Weapon: Bow_Of_Rudra
+  #    HeadTop: Boy's_Cap
+  #    HeadMid: Takius_Blindfold
+  #    HeadLow: Centimental_Leaf
+  #    Options:
+  #      Falcon: true
   # Sentry
-#  - Mob: BOMBPORING
-#    Sprite: KNIGHT_GUARDIAN
+  #  - Mob: BOMBPORING
+  #    Sprite: KNIGHT_GUARDIAN
 
   # iRO Halloween Event 2009
-#  - Mob: EP14_MORS_BOSSB
-#    Sprite: ZOMBIE
-#  - Mob: EP14_MORS_MOB1
-#    Sprite: GHOUL
-#  - Mob: EP14_MORS_MOB2
-#    Sprite: ZOMBIE_MASTER
+  #  - Mob: EP14_MORS_BOSSB
+  #    Sprite: ZOMBIE
+  #  - Mob: EP14_MORS_MOB1
+  #    Sprite: GHOUL
+  #  - Mob: EP14_MORS_MOB2
+  #    Sprite: ZOMBIE_MASTER
 
   # iRO Halloween Event 2009
-#  - Mob: EP14_3_DEATH_B_MOB2
-#    Sprite: WHISPER
-#  - Mob: EP14_3_DEATH_B_MOB3
-#    Sprite: DARK_LORD
+  #  - Mob: EP14_3_DEATH_B_MOB2
+  #    Sprite: WHISPER
+  #  - Mob: EP14_3_DEATH_B_MOB3
+  #    Sprite: DARK_LORD
+
+  - Mob: TRAINING_POST
+    Sprite: BARRICADE
+  - Mob: IMPERIAL_GUARD
+    Sprite: JOB_REBELLION
+    Sex: Male
+    HairStyle: 7
+    HairColor: 8
+    ClothColor: 5
+    Weapon: Crimson_Bolt
+    HeadTop: Imperial_Cap_C
+    HeadMid: Sunglasses
+  - Mob: INVADING_WARRIOR
+    Sprite: RAYDRIC
+  - Mob: INVADING_ARCHER
+    Sprite: RAYDRIC_ARCHER
+  - Mob: INVADING_COMMANDER
+    Sprite: KNIGHT_OF_ABYSS
+  - Mob: HERB_LVL1
+    Sprite: SEAANEMONE
+  - Mob: HERB_LVL1
+    Sprite: BLUE_PLANT
+  - Mob: HERB_LVL2
+    Sprite: GREEN_PLANT
+  - Mob: HERB_LVL3
+    Sprite: YELLOW_PLANT
+  - Mob: HERB_LVL4
+    Sprite: RED_PLANT
+  - Mob: HERB_LVL5
+    Sprite: SHINING_PLANT
+  - Mob: NODE_LVL1
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL2
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL3
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL4
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL5
+    Sprite: PURPLESTONE

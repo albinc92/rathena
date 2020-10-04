@@ -1,0 +1,234 @@
+//===== rAthena Script =======================================
+//= Intro
+//===== Description: =========================================
+//= NPCs relating to new character creation.
+//============================================================
+
+-	script	Intro1	-1,{
+    showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
+    cutin "kafra_01.bmp", 2;
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Greetings, " + strcharinfo(0) + "!";
+
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(.@intro) {
+        goto OnEnd;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Allow me to welcome you to Warbound Ragnarok Online!";
+    next;
+
+	query_sql("SELECT COUNT(*) FROM `char` WHERE account_id = '"+getcharid(3)+"'", .@charCnt);
+    if(.@charCnt > 1) {
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "I can tell that this isn't the first time playing on this server.";
+    } else {
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "I can tell that this is your first time playing on this server.";
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Would you like to have some directions, or do you just want to be on your way?";
+    switch(select("Directions:I'll be on my way")) {
+        case 2:
+            next;
+    		goto OnTutorialDone;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Excellent!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "What would you like to know?";
+    switch(select("Basic controls:Skills")) {
+        case 1:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Basic controls it is!";
+            cutin "tutorial01.bmp", 3;
+            navigateto("new_1-2",100,18,NAV_NONE,0,0,getcharid(0));
+        case 2:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Skills it is!";
+    }
+    next;
+
+OnTutorialDone:
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
+    next;
+
+    getitem 40009,1;
+    getitem 40013,1;
+    getitem 5055,1;
+    getitem 2112,1;
+    getitem 2414,1;
+    getitem 2510,1;
+    getitem 2352,1;
+	//query_sql("INSERT INTO `wrodata` SET `intro` = 1, `char_id` = '"+getcharid(3)+"'");
+
+OnEnd:
+    close2;
+    cutin "",255;
+    end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(!.@intro) {
+        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
+    }
+    end;
+}
+
+
+
+-	script	Intro2	-1,{
+    showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
+	cutin "nov_magicsoul01",2;
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Greetings, " + strcharinfo(0) + "!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "The time has come for you to enter the world of Warbound Ragnarok Online!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "But first, please tell me which of the following qualities you seek in this life?";
+    switch(select("Faith:Guile:Wisdom:Balance:Wealth:Strength:Other")) {
+        case 1:
+            set .@warpTo$, "prontera";
+            set .@weaponID, 1545;
+            goto L_OnChoice;
+            end;
+        case 2:
+            set .@warpTo$, "morocc";
+            set .@weaponID, 1243;
+            goto L_OnChoice;
+            end;
+        case 3:
+            set .@warpTo$, "geffen";
+            set .@weaponID, 1639;
+            goto L_OnChoice;
+            end;
+        case 4:
+            set .@warpTo$, "payon";
+            set .@weaponID, 1742;
+            goto L_OnChoice;
+            end;
+        case 5:
+            set .@warpTo$, "alberta";
+            set .@weaponID, 1381;
+            goto L_OnChoice;
+            end;
+        case 6:
+            set .@warpTo$, "izlude";
+            set .@weaponID, 13415;
+            goto L_OnChoice;
+            end;
+        case 7:
+            setarray .@array$[0],"prontera","morocc","geffen","payon","alberta","izlude";
+            set .@warpTo$, .@array$[rand(0, 5)];
+            set .@weaponID, 7271;
+            goto L_OnChoice;
+            end;
+    }
+
+L_OnChoice:
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "I see...";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "So tell me, are you ready to start your adventure?";
+    switch(select("Yes:No")) {
+        case 2:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Very well... you know where to find me.";
+            close2;
+            cutin "",255;
+            end;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Excellent!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "I know the perfect place for you to begin your adventure!";
+    next;
+
+	specialeffect2 EF_READYPORTAL;
+	specialeffect2 EF_TELEPORTATION;
+	specialeffect2 EF_PORTAL;
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Let me take you there now!";
+    sleep2 1600;
+
+    getitem .@weaponID, 1;
+    if (.@warpTo$ == "prontera") {
+        savepoint "prontera",117,72,1,1;
+        atcommand "@go 0";
+        sleep2 100;
+        navigateto("prontera",141,178,NAV_NONE,0,0,getcharid(0));
+	} else if (.@warpTo$ == "geffen") {
+	    savepoint "geffen",119,37,1,1;
+        atcommand "@go 3";
+        sleep2 100;
+        navigateto("geffen",114,58,NAV_NONE,0,0,getcharid(0));
+	} else if (.@warpTo$ == "alberta") {
+	    savepoint "alberta",30,232,1,1;
+        atcommand "@go 3";
+        sleep2 100;
+        navigateto("alberta",38,241,NAV_NONE,0,0,getcharid(0));
+	} else if (.@warpTo$ == "morocc") {
+	    savepoint "morocc",150,99,1,1;
+        atcommand "@go 4";
+        sleep2 100;
+        navigateto("morocc",148,87,NAV_NONE,0,0,getcharid(0));
+	} else if (.@warpTo$ == "payon") {
+	    savepoint "payon",256,242,1,1;
+	    warp "pay_fild01",334,354;
+        sleep2 100;
+        navigateto("payon",181,111,NAV_NONE,0,0,getcharid(0));
+	} else if (.@warpTo$ == "izlude") {
+	    savepoint "izlude",93,104,1,1;
+        atcommand "@go 5";
+        sleep2 100;
+        navigateto("izlude",136,121,NAV_NONE,0,0,getcharid(0));
+	}
+    close2;
+    cutin "",255;
+    end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(!.@intro) {
+        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+    }
+    end;
+}
+
+
+
+// Duplicates
+//============================================================
+new_1-1,45,112,6	duplicate(Intro1)	WarboundRO Guide#1	860
+new_1-2,100,18,4	duplicate(Intro2)	Warper#1	735
+
+
+
+// Mapflag
+//============================================================
+new_1-1	mapflag	loadevent

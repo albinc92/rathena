@@ -1,0 +1,3 @@
+// Interserver communication passwords, set in account.txt (or equiv.)
+userid: wrointer
+passwd: y;5C3G<@<!dY

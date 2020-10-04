@@ -31,3 +31,26 @@
 Header:
   Type: ATCOMMAND_DB
   Version: 1
+Body:
+  - Command: arealoot
+    Aliases:
+      - aoeloot
+      - aloot
+      - al
+    Help: |
+      Params: <on|off|#>
+      Pick up multiple items at the same time.
+  - Command: battlestats
+    Aliases:
+      - bstats
+      - bs
+    Help: |
+      Displays characters stats not visible through the user interface.
+  - Command: headhunter
+    Aliases:
+      - headhunt
+      - hhunter
+      - hhunt
+      - hh
+    Help: |
+      Displays information about your current headhunter mission.

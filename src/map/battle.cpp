@@ -6965,11 +6965,11 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 			nk.set(NK_IGNOREELEMENT); //These two are not properties of the weapon based part.
 			break;
 		case HW_GRAVITATION:
-			md.damage = 200 + 200 * skill_lv;
+			md.damage = 1200 + 1200 * skill_lv;
 			md.dmotion = 0; //No flinch animation
 			break;
 		case PA_PRESSURE:
-			md.damage = 500 + 300 * skill_lv;
+			md.damage = 3000 + 1800 * skill_lv;
 			break;
 #endif
 		case PA_GOSPEL:
