@@ -109,6 +109,9 @@ Thumbs.db
 /.idea/rathena.iml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/.idea/dataSources.local.xml
+/.idea/dataSources.xml
+/.idea/sqldialects.xml
 /build/
 /cbuild/
 

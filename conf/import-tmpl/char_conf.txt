@@ -1,0 +1,14 @@
+// Server Communication username and password.
+userid: wrointercom
+passwd: ~45Qt9$?=&bM
+
+// Login Server IP
+// The character server connects to the login server using this IP address.
+// NOTE: This is useful when you are running behind a firewall or are on
+// a machine with multiple interfaces.
+login_ip: 192.168.1.86
+
+// Character Server IP
+// The IP address which clients will use to connect.
+// Set this to what your server's public IP address is.
+char_ip: 213.67.114.51
