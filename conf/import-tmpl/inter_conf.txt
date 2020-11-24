@@ -1,0 +1,41 @@
+// MySQL Login server
+login_server_ip: localhost
+login_server_port: 3306
+login_server_id: wrologinserv
+login_server_pw: Sh6e:SCKR`+t
+login_server_db: warboundro
+login_codepage:
+login_case_sensitive: yes
+
+ipban_db_ip: localhost
+ipban_db_port: 3306
+ipban_db_id: wroipban
+ipban_db_pw: Gp7>.gSDL_9_
+ipban_db_db: warboundro
+ipban_codepage:
+
+// MySQL Character server
+char_server_ip: localhost
+char_server_port: 3306
+char_server_id: wrocharserv
+char_server_pw: !9yxPH##ob.G
+char_server_db: warboundro
+
+// MySQL Map Server
+map_server_ip: localhost
+map_server_port: 3306
+map_server_id: wromapserv
+map_server_pw: 4rN:p.5S=sM~
+map_server_db: warboundro
+
+// MySQL Log Database
+log_db_ip: localhost
+log_db_port: 3306
+log_db_id: wrolog
+log_db_pw: 5!P9<gP-SLqp
+log_db_db: wrolog
+log_codepage:
+log_login_db: loginlog
+
+// Use SQL item_db, mob_db and mob_skill_db for the map server? (yes/no)
+use_sql_db: yes

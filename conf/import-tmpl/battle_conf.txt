@@ -1,0 +1,24 @@
+//--------------------------------------------------------------
+// rAthena Feature Configuration File
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Equipment Switch (Note 1)
+// Requires: 2017-02-08bRagexeRE or later
+feature.equipswitch: off
+
+// Homunculues Autofeeding (Note 1)
+// Requires: 2017-09-20bRagexeRE or later
+feature.homunculus_autofeed: off
+
+// Attendance System (Note 1)
+// Requires: 2018-03-07bRagexeRE or later
+feature.attendance: off
+
+// Private Airship System (Note 1)
+// Requires: 2018-03-21aRagexeRE or later
+feature.privateairship: off
