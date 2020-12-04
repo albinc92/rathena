@@ -1,6 +1,18 @@
+// Athena Character configuration file.
+
+// Note: "Comments" are all text on the right side of a double slash "//"
+// Whatever text is commented will not be parsed by the servers, and serves
+// only as information/reference.
+
 // Server Communication username and password.
 userid: wrointercom
 passwd: ~45Qt9$?=&bM
+
+// Server name, use alternative character such as ASCII 160 for spaces.
+// NOTE: Do not use spaces or any of these characters which are not allowed in
+//       Windows filenames \/:*?"<>|
+//       ... or else guild emblems won't work client-side!
+server_name: WarboundRO
 
 // Login Server IP
 // The character server connects to the login server using this IP address.
@@ -12,3 +24,49 @@ login_ip: 192.168.1.86
 // The IP address which clients will use to connect.
 // Set this to what your server's public IP address is.
 char_ip: 213.67.114.51
+
+//Time-stamp format which will be printed before all messages.
+//Can at most be 20 characters long.
+//Common formats:
+// %I:%M:%S %p (hour:minute:second 12 hour, AM/PM format)
+// %H:%M:%S (hour:minute:second, 24 hour format)
+// %d/%b/%Y (day/Month/year)
+//For full format information, consult the strftime() manual.
+timestamp_format: [%d/%b %H:%M]
+
+//Makes server log selected message types to a file in the /log/ folder
+//1: Log Warning Messages
+//2: Log Error and SQL Error messages.
+//4: Log Debug Messages
+//Example: "console_msg_log: 7" logs all 3 kinds
+//Messages logged by this overrides console_silent setting
+console_msg_log: 7
+
+// Starting point for new characters
+// Format: <map_name>,<x>,<y>{:<map_name>,<x>,<y>...}
+// Max number of start points is MAX_STARTPOINT in char.hpp (default 5)
+// Location is randomly picked on character creation.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_point: iz_int,18,26:iz_int01,18,26:iz_int02,18,26:iz_int03,18,26:iz_int04,18,26
+start_point_pre: new_1-1,53,111
+start_point_doram: lasa_fild01,48,297
+
+// Restrict character deletion by email address or birthdate.
+// This restricts players from changing the langtype and deleting characters.
+// Defaults based on client date.
+// 1: Email address
+// 2: Birthdate
+// 3: Email address or Birthdate
+// IMPORTANT!
+// - This config only works for clients that send 0x0068 or 0x01fb for delete request.
+// - Use langtype 1 for newer clients (2013+), to use 0x01fb.
+// - Clients that are not using 0x0068 or 0x01fb, only use birthdate (YYMMDD) as default.
+char_del_option: 1
+
+// Restrict certain class from being created. (Only functional on 20151001aRagexe or later)
+// 0: No character creation is allowed
+// 1: Only novice is allowed to be created    (pre-renewal default)
+// 2: Only summoner is allowed to be created
+// 3: Both novice and summoner can be created (renewal default)
+// Uncomment to customize the restriction
+allowed_job_flag: 1

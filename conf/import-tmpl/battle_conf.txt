@@ -1,4 +1,139 @@
 //--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Change attacker's direction to face opponent on every attack? (Note 3)
+// NOTE: On official servers knockback of some skills like Firewall is always based on the
+// last direction walked. Even when attacking in a completely different direction, the
+// knockback direction won't change, so e.g. if you walk north and then attack an enemy to
+// the south you will still be knocked back to the south by Firewall. Immobile monsters
+// will always be knocked back to the south as their default direction is north.
+attack_direction_change: 1
+
+// If both the attacker and the target are on the same tile, should the target be knocked back to the left?
+// Official behavior is "yes", setting this to "no" will knock the target back behind the attacker.
+knockback_left: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// Item drop rates (Note 2)
+
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 10000
+item_rate_common_boss: 10000
+item_rate_common_mvp: 10000
+item_drop_common_min: 1
+item_drop_common_max: 10000
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 10000
+item_rate_heal_boss: 10000
+item_rate_heal_mvp: 10000
+item_drop_heal_min: 1
+item_drop_heal_max: 10000
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 10000
+item_rate_use_boss: 10000
+item_rate_use_mvp: 10000
+item_drop_use_min: 1
+item_drop_use_max: 10000
+
+// The rate at which equipment is dropped.
+item_rate_equip: 10000
+item_rate_equip_boss: 10000
+item_rate_equip_mvp: 10000
+item_drop_equip_min: 1
+item_drop_equip_max: 10000
+
+// The rate at which cards are dropped
+item_rate_card: 10000
+item_rate_card_boss: 10000
+item_rate_card_mvp: 10000
+item_drop_card_min: 1
+item_drop_card_max: 10000
+
+// The rate adjustment for the MVP items that the MVP gets directly in their inventory
+// Mode: 0 - official order, 1 - random order, 2 - all items
+item_rate_mvp: 10000
+item_drop_mvp_min: 1
+item_drop_mvp_max: 10000
+item_drop_mvp_mode: 0
+
+// The rate adjustment for card-granted item drops.
+item_rate_adddrop: 10000
+item_drop_add_min: 1
+item_drop_add_max: 10000
+
+// Rate adjustment for Treasure Box drops (these override all other modifiers)
+item_rate_treasure: 10000
+item_drop_treasure_min: 1
+item_drop_treasure_max: 10000
+
+// Use logarithmic drops? (Note 1)
+// Logarithmic drops scale drop rates in a non-linear fashion using the equation
+// Droprate(x,y) = x * (5 - log(x)) ^ (ln(y) / ln(5))
+// Where x is the original drop rate and y is the drop_rate modifier (the previously mentioned item_rate* variables)
+// Use the following table for an idea of how the rate will affect drop rates when logarithmic drops are used:
+// Y: Original Drop Rate
+// X: Rate drop modifier (eg: item_rate_equip)
+//  X\Y | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+// -----+---------------------------------------------------------------
+//   50 | 0.01 0.01  0.03  0.06  0.11  0.30  0.62  1.30  3.49  7.42 15.92
+//  100 | 0.01 0.02  0.05  0.10  0.20  0.50  1.00  2.00  5.00 10.00 20.00
+//  200 | 0.02 0.04  0.09  0.18  0.35  0.84  1.61  3.07  7.16 13.48 25.13
+//  500 | 0.05 0.09  0.22  0.40  0.74  1.65  3.00  5.40 11.51 20.00 33.98
+// 1000 | 0.10 0.18  0.40  0.73  1.30  2.76  4.82  8.28 16.47 26.96 42.69
+// 2000 | 0.20 0.36  0.76  1.32  2.28  4.62  7.73 12.70 23.58 36.33 53.64
+// 5000 | 0.50 0.86  1.73  2.91  4.81  9.11 14.45 22.34 37.90 53.91 72.53
+//10000 | 1.00 1.67  3.25  5.28  8.44 15.24 23.19 34.26 54.57 72.67 91.13
+//20000 | 2.00 3.26  6.09  9.59 14.83 25.49 37.21 52.55 77.70 97.95  100%
+//50000 | 5.00 7.87 13.98 21.12 31.23 50.31 69.56 92.48  100%  100%  100%
+item_logarithmic_drops: yes
+
+// Makes your LUK value affect drop rates on a relative basis.
+// Setting to 100 means each luk adds 1% chance to find items
+// (So at 100 luk, everything will have double chance of dropping).
+drops_by_luk2: 40
+
+// The rate of monsters dropping ores by the skill Ore Discovery (Default is 100)
+finding_ore_rate: 10000
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: The max level of classes is stored in the exp table.
+//         See files db/exp.txt and db/exp2.txt to change them.
+//--------------------------------------------------------------
+
+// Turn this on to allow a player to level up more than once from a kill. (Note 1)
+multi_level_up: no
+
+// Base exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_base: 10000
+
+// Job exp. penalty rate (Each 100 is 1% of their exp)
+death_penalty_job: 10000
+
+//--------------------------------------------------------------
 // rAthena Feature Configuration File
 //--------------------------------------------------------------
 // Note 1: Value is a config switch (on/off, yes/no or 1/0)
@@ -6,6 +141,19 @@
 // Note 3: Value is a bit field. If no description is given,
 //         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
 //--------------------------------------------------------------
+
+// In which direction should respawned autotraders look?
+// Possible values are from 0-7
+// Default: 4(South)
+// -1 = Last player's direction
+feature.autotrade_direction: -1
+
+// Change player's head direction?
+// -1 = Last condition
+//  0 = Forward
+//  1 = Right
+//  2 = Left
+feature.autotrade_head_direction: -1
 
 // Equipment Switch (Note 1)
 // Requires: 2017-02-08bRagexeRE or later
@@ -22,3 +170,235 @@ feature.attendance: off
 // Private Airship System (Note 1)
 // Requires: 2018-03-21aRagexeRE or later
 feature.privateairship: off
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// The rate a homunculus will get friendly by feeding it. (Note 2)
+homunculus_friendly_rate: 10000
+
+// Max level for regular Homunculus
+homunculus_max_level: 250
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Can any player equip any item regardless of the gender restrictions
+// NOTE: Wedding Rings and Whips/Musical Instruments will check gender regardless of setting.
+ignore_items_gender: no
+
+// How much time must pass between item uses?
+// Only affects the delay between using items, prevents healing item abuse. Recommended ~500 ms
+// On officials this is 0, but it's set to 100ms as a measure against bots/macros.
+item_use_interval: 500
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// PK Server Mode.  Turns entire server pvp(excluding towns). Experience loss is doubled if killed by another player.
+// When players hunt monsters over 20 levels higher, they will receive 15% additional exp., and 25% chance of receiving more items.
+// There is a nopvp.txt for setting up maps not to have pk on in this mode.  Novices cannot be attacked and cannot attack.
+// Normal pvp counter and rank display are disabled as well.
+// Note: If pk_mode is set to 2 instead of 1 (yes), players will receive a
+//   manner penalty of 5 each time they kill another player (see manner_system
+//   config to adjust how this will affect players)
+pk_mode: 1
+
+// For PK Server Mode. It specifies the maximum level difference between
+// players to let them attack each other. 0 disables said limit.
+pk_level_range: 50
+
+// Delay between using @duel in minutes
+duel_time_interval: 0
+
+// Restrict duel usage to same map
+duel_only_on_same_map: yes
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Zeny from mobs
+zeny_from_mobs: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+//--------------------------------------------------------------
+
+// Method of distribution when item party share is enabled in a party:
+//
+// 0: Normal (item goes to a random party member)
+// 1: Item Share is disabled for non-mob drops (player/pet drops)
+// 2: Round Robin (items are distributed evenly and in order among members)
+// 3: 1+2
+party_item_share_type: 1
+
+// Display party name regardless if player is in a guild.
+// Official servers do not display party name unless the user is in a guild. (Note 1)
+display_party_name: yes
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Maximum atk speed. (Default 190, Highest allowed 199)
+max_aspd: 193
+
+// Maximum HPs depending on base level. Default values are:
+// Lv 99:  330000
+// Lv150:  660000
+// Lv175: 1100000
+max_hp_lv99: 330000
+max_hp_lv150: 660000
+max_hp: 2640000
+
+// Maximum params/stats for each class. (str, agi, vit, int, dex, and luk)
+// 'max_parameter' for novice, non-trans, non-baby, and non-3rd classes
+// 'max_trans_parameter' for trans classes (non-3rd trans classes)
+// 'max_third_parameter' for 3rd classes (regular/non-trans) except baby 3rd clasess
+// 'max_third_trans_parameter' for 3rd trans classes
+// 'max_baby_parameter' for baby classes except baby 3rd classes
+// 'max_baby_third_parameter' for baby 3rd classes only
+// 'max_extended_parameter' for extended 2nd class (Kagerou/Oboro and Rebellion)
+// For mor specific/advanced option, see 'db/[pre-]re/job_params_db.txt'
+max_parameter: 250
+max_trans_parameter: 250
+max_baby_parameter: 200
+
+// Display the drained hp/sp values from normal attacks? (Ie: Hunter Fly card)
+show_hp_sp_drain: yes
+
+// Do mounted (on Peco) characters increase their size?
+// 0 = no
+// 1 = only Normal Classes on Peco have Big Size
+// 2 = only Baby Classes on Peco have Medium Size
+// 3 = both Normal Classes on Peco have Big Size
+//	and Baby Classes on Peco have Medium Size
+character_size: 3
+
+// How much should rental mounts increase a player's movement speed?
+// Default is 25. 100 = 100% Increase.
+rental_mount_speed_boost: 25
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary)
+//--------------------------------------------------------------
+
+// Max Level Difference for Devotion
+devotion_level_difference: 249
+
+// Allow use of ES-type magic on players?
+allow_es_magic_player: no
+
+// Area of Bowling Bash chain reaction
+// 0: Use official gutter line system
+// 1: Gutter line system without demi gutter bug
+// 2-20: Area around caster (2 = 5x5, 3 = 7x7, 4 = 9x9, ..., 20 = 41x41)
+// Note: If you knock the target out of the area it will only be hit once and won't do splash damage
+bowling_bash_area: 1
+
+// Is the knockback direction for Cart Revolution always West? (Note 1)
+// On official servers it will knock the target always to the West. If disabled it will knock the target backwards.
+cart_revo_knockback: no
+
+//--------------------------------------------------------------
+// rAthena Battle Configuration File
+// Originally Translated by Peter Kieser <pfak@telus.net>
+// Made in to plainer English by Ancyker
+//--------------------------------------------------------------
+// Note 1: Value is a config switch (on/off, yes/no or 1/0)
+// Note 2: Value is in percents (100 means 100%)
+// Note 3: Value is a bit field. If no description is given,
+//         assume unit types (1: Pc, 2: Mob, 4: Pet, 8: Homun, 16: Mercenary, 128: NPC, 512: Elemental)
+//--------------------------------------------------------------
+
+// Adjustment for the natural rate of resistance from status changes.
+// If 50, status defense is halved, and you need twice as much stats to block
+// them (eg: 200 vit to completely block stun)
+pc_status_def_rate: 40
+mob_status_def_rate: 100

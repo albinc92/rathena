@@ -1,3 +1,15 @@
+// Athena InterServer configuration.
+// Contains settings shared/used by more than 1 server.
+
+// Options for both versions
+
+// Level range for sharing within a party
+party_share_level: 250
+
+// Global SQL settings
+// overridden by local settings when the hostname is defined there
+// (currently only the login-server reads/obeys these settings)
+
 // MySQL Login server
 login_server_ip: localhost
 login_server_port: 3306
