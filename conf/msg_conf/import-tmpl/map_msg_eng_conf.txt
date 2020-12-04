@@ -1,0 +1,21 @@
+// rAthena msg_athena.conf
+// Message Configuration
+// For translation, just change msg here (second line), no need to modify source code,
+// or alternatively, use conf/import/msg_conf.txt
+//
+// Format:
+// msg_number: message (max length is 255 chars)
+//
+// To disable a string (%s) field, make its max length 0:
+// eg:
+// 270: *%s %s* (@me format)
+// 270: *%.0s%s* (remove the character's name from it)
+
+// Messages of GM commands
+// -----------------------
+
+59: Night Mode Activated [08:00 PM].
+60: Day Mode Activated [08:00 AM].
+
+231: Game time: The game is in daylight until 08:00 PM.
+232: Game time: The game is in night until 08:00 AM.
