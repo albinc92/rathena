@@ -1,3 +1,14 @@
+//--------------------------------------------------------------
+//rAthena Map-Server Configuration File
+//--------------------------------------------------------------
+
+// Note: "Comments" are all text on the right side of a double slash "//"
+// Whatever text is commented will not be parsed by the servers, and serves
+// only as information/reference.
+
+//--------------------------------------------------------------
+//                     Configuration Info
+//--------------------------------------------------------------
 // Interserver communication passwords, set in account.txt (or equiv.)
 userid: wrointercom
 passwd: ~45Qt9$?=&bM
@@ -12,3 +23,22 @@ char_ip: 192.168.1.86
 // The IP address which clients will use to connect.
 // Set this to what your server's public IP address is.
 map_ip: 213.67.114.51
+
+//Time-stamp format which will be printed before all messages.
+//Can at most be 20 characters long.
+//Common formats:
+// %I:%M:%S %p (hour:minute:second 12 hour, AM/PM format)
+// %H:%M:%S (hour:minute:second, 24 hour format)
+// %d/%b/%Y (day/Month/year)
+//For full format information, consult the strftime() manual.
+timestamp_format: [%d/%b %H:%M]
+
+//Makes server log selected message types to a file in the /log/ folder
+//1: Log Warning Messages
+//2: Log Error and SQL Error messages.
+//4: Log Debug Messages
+//Example: "console_msg_log: 7" logs all 3 kinds
+//Messages logged by this overrides console_silent setting
+console_msg_log: 7
+
+
