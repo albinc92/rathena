@@ -223,23 +223,23 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- REPLACE INTO `item_db2` VALUES (40008,'Headgear_Box','Headgear Box',2,1000,NULL,200,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'getrandgroupitem(IG_HATBOX),1;',NULL,NULL);
 
 -- Boarding Halter
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = 12622;
-UPDATE `item_db2` SET `script` = 'if (ismounting(getcharid(0)) == 0) { progressbar "000000",1; }; atcommand "@mount2";' WHERE `id` = 12622;
-UPDATE `item_db2` SET `unequip_script` = '' WHERE `id` = 12622;
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = 12622;
+-- UPDATE `item_db2` SET `script` = 'if (ismounting(getcharid(0)) == 0) { progressbar "000000",1; }; atcommand "@mount2";' WHERE `id` = 12622;
+-- UPDATE `item_db2` SET `unequip_script` = '' WHERE `id` = 12622;
 
 -- Mercenary scrolls level restrictions
 -- Set price and equip level req for merc scrolls
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (12153, 12154, 12155, 12156, 12157, 12158, 12159, 12160, 12161, 12162, 12163, 12164, 12165, 12166, 12167, 12168, 12169, 12170, 12171, 12172, 12173, 12174, 12175, 12176, 12177, 12178, 12179, 12180, 12181, 12182);
-UPDATE `item_db2` SET `equip_level` = 5, `price_buy` = 5000 WHERE `id` IN (12153, 12163, 12173);
-UPDATE `item_db2` SET `equip_level` = 10, `price_buy` = 10000 WHERE `id` IN (12154, 12164, 12174);
-UPDATE `item_db2` SET `equip_level` = 15, `price_buy` = 15000 WHERE `id` IN (12155, 12165, 12175);
-UPDATE `item_db2` SET `equip_level` = 20, `price_buy` = 20000 WHERE `id` IN (12156, 12166, 12176);
-UPDATE `item_db2` SET `equip_level` = 25, `price_buy` = 25000 WHERE `id` IN (12157, 12167, 12177);
-UPDATE `item_db2` SET `equip_level` = 30, `price_buy` = 30000 WHERE `id` IN (12158, 12168, 12178);
-UPDATE `item_db2` SET `equip_level` = 35, `price_buy` = 35000 WHERE `id` IN (12159, 12169, 12179);
-UPDATE `item_db2` SET `equip_level` = 40, `price_buy` = 40000 WHERE `id` IN (12160, 12170, 12180);
-UPDATE `item_db2` SET `equip_level` = 45, `price_buy` = 45000 WHERE `id` IN (12161, 12171, 12181);
-UPDATE `item_db2` SET `equip_level` = 50, `price_buy` = 50000 WHERE `id` IN (12162, 12172, 12182);
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (12153, 12154, 12155, 12156, 12157, 12158, 12159, 12160, 12161, 12162, 12163, 12164, 12165, 12166, 12167, 12168, 12169, 12170, 12171, 12172, 12173, 12174, 12175, 12176, 12177, 12178, 12179, 12180, 12181, 12182);
+-- UPDATE `item_db2` SET `equip_level` = 5, `price_buy` = 5000 WHERE `id` IN (12153, 12163, 12173);
+-- UPDATE `item_db2` SET `equip_level` = 10, `price_buy` = 10000 WHERE `id` IN (12154, 12164, 12174);
+-- UPDATE `item_db2` SET `equip_level` = 15, `price_buy` = 15000 WHERE `id` IN (12155, 12165, 12175);
+-- UPDATE `item_db2` SET `equip_level` = 20, `price_buy` = 20000 WHERE `id` IN (12156, 12166, 12176);
+-- UPDATE `item_db2` SET `equip_level` = 25, `price_buy` = 25000 WHERE `id` IN (12157, 12167, 12177);
+-- UPDATE `item_db2` SET `equip_level` = 30, `price_buy` = 30000 WHERE `id` IN (12158, 12168, 12178);
+-- UPDATE `item_db2` SET `equip_level` = 35, `price_buy` = 35000 WHERE `id` IN (12159, 12169, 12179);
+-- UPDATE `item_db2` SET `equip_level` = 40, `price_buy` = 40000 WHERE `id` IN (12160, 12170, 12180);
+-- UPDATE `item_db2` SET `equip_level` = 45, `price_buy` = 45000 WHERE `id` IN (12161, 12171, 12181);
+-- UPDATE `item_db2` SET `equip_level` = 50, `price_buy` = 50000 WHERE `id` IN (12162, 12172, 12182);
 
 -- Elemental Converters
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` IN (12114, 12115, 12116, 12117, 12020);
