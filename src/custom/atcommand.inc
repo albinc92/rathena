@@ -17,3 +17,17 @@
 //	clif_specialeffect(&sd->bl, EF_HEARTCASTING, AREA);
 //	return 0;
 //}
+
+ACMD_FUNC(arealoot)
+{
+ if (sd->state.arealoot) {
+  sd->state.arealoot = 0;
+  clif_displaymessage(fd, "Area loot is now deactivated!");
+  return 0;
+ }
+
+ sd->state.arealoot = 1;
+ clif_displaymessage(fd, "Area loot is now activated!");
+
+ return 0;
+}

@@ -11745,7 +11745,9 @@ void clif_parse_TakeItem(int fd, struct map_session_data *sd)
 		if (pc_cant_act(sd))
 			break;
 
-		if (!pc_takeitem(sd, fitem))
+        if(sd->state.arealoot == 1 && map_foreachinallrange(skill_greed,&sd->bl,1,BL_ITEM,&sd->bl) == 0)
+            return;
+        else if (!pc_takeitem(sd, fitem))
 			break;
 
 		return;

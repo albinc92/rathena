@@ -31,3 +31,12 @@
 Header:
   Type: ATCOMMAND_DB
   Version: 1
+Body:
+  - Command: arealoot
+    Aliases:
+      - aoeloot
+      - aloot
+      - al
+    Help: |
+      Params: <on|off|#>
+      Pick up multiple items at the same time.
