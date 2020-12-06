@@ -200,21 +200,21 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
 
 -- Costume Garments
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20500';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20516';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20511';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20514';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20510';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20764';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20746';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20727';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20761';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '2573';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20507';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20504';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20737';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20502';
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20762';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20500';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20516';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20511';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20514';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20510';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20764';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20746';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20727';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20761';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '2573';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20507';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20504';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20737';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20502';
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` = '20762';
 
 -- Sealed Card Album
 -- REPLACE INTO `item_db2` VALUES (40006,'Sld_Card_Album','Sealed Card Album',2,10000,NULL,50,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'getrandgroupitem(IG_SLDCARDALBUM),1;',NULL,NULL);
