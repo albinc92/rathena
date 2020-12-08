@@ -152,6 +152,7 @@ L_OnHelp:
     }
 
 L_OnTutorialDone:
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
     next;
 
