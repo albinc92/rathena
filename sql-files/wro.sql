@@ -306,9 +306,9 @@ UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2
 
 -- Misc
 -- REPLACE INTO `item_db2` VALUES (40005,'Cart_Weight','Cart Weight',3,25000,NULL,10000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-REPLACE INTO `item_db2` VALUES (40009,'Rejuv_Flask','Rejuvenation Flask',2,100000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'progressbar "000000",1; specialeffect2 325; percentheal 100,100; if(!getmapflag(strcharinfo(3),mf_pvp)) { specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,240000,10; specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10; };',NULL,NULL);
+-- REPLACE INTO `item_db2` VALUES (40009,'Rejuv_Flask','Rejuvenation Flask',2,100000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'progressbar "000000",1; specialeffect2 325; percentheal 100,100; if(!getmapflag(strcharinfo(3),mf_pvp)) { specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,240000,10; specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10; };',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (40010,'Mastela_Fruit_Potion','Mastela Potion',0,3000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'specialeffect2 204; itemheal rand(1905,2430),0;',NULL,NULL);
-REPLACE INTO `item_db2` VALUES (40013,'Kafra_Teleporter','Kafra Teleporter',2,100000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'itemskill "AL_TELEPORT",2;',NULL,NULL);
+-- REPLACE INTO `item_db2` VALUES (40013,'Kafra_Teleporter','Kafra Teleporter',2,100000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'itemskill "AL_TELEPORT",2;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (40011,'Iris_Potion','Iris Potion',0,12500,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'specialeffect2 208; itemheal 0,rand(240,360);',NULL,NULL);
 
 -- Custom Headgear
