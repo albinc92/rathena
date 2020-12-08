@@ -47,9 +47,14 @@ console_msg_log: 7
 // Max number of start points is MAX_STARTPOINT in char.hpp (default 5)
 // Location is randomly picked on character creation.
 // NOTE: For Doram, this requires client 20151001 or newer.
-start_point: iz_int,18,26:iz_int01,18,26:iz_int02,18,26:iz_int03,18,26:iz_int04,18,26
 start_point_pre: new_1-1,53,111
-start_point_doram: lasa_fild01,48,297
+
+// Starting items for new characters
+// Max number of items is MAX_STARTITEM in char.cpp (default 32)
+// Format: <id>,<amount>,<position>{:<id>,<amount>,<position>...}
+// To auto-equip an item, include the position where it will be equipped; otherwise, use zero.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_items: 1201,1,2:2301,1,16:40009,1,0:40013,1,0
 
 // Restrict character deletion by email address or birthdate.
 // This restricts players from changing the langtype and deleting characters.
