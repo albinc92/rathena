@@ -91,32 +91,40 @@ L_OnHelp:
             mes "You can ^ff0000interact^000000 with other players and see ^ff0000item information^000000 with this button.";
             next;
             cutin "kafra_01.bmp", 2;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Now, there is one last thing I wish to tell you about.";
             next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "^ff0000Skills^000000 are a critical part of Warbound Ragnarok Online!";
             next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Whenever you gain a ^ff0000Job Level^000000 by killing a monster, you get 1 point to spend on ^ff0000Skills^000000.";
             next;
             cutin "tutorial05.bmp", 3;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Having opened the ^ff0000Skill Interface^000000 and spent some points into a skill, you can ^ff0000drag^000000 the skill into your ^ff0000Hotkey Bar^000000.";
             next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Once a skill has been placed in the Hotkey Bar, you can press its designated ^ff0000hotkey^000000! to instantly activate the skill!";
             next;
             cutin "kafra_01.bmp", 2;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "That's it!";
             next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "I know this was a lot of information.";
             next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "But don't be afraid to ask me if you want some repetition!";
             next;
             goto L_OnHelp;
         case 2:
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "In order to proceed into the world of Warbound Ragnarok Online, you must cross the bridge to the east.";
+            mes "In order to proceed into the world of Warbound Ragnarok Online, you must ^ff0000cross the bridge^000000 to the east.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "Having past the bridge, enter the portal to reach the inside of the fortress you see before you.";
+            mes "Having past the bridge, ^ff0000enter through the portal^000000 to reach the inside of the fortress you see before you.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "There you must speak with the ^ff0000[Warper]^000000. He will give you further assistance.";
@@ -136,6 +144,7 @@ L_OnHelp:
             next;
             goto L_OnHelp;
         case 3:
+            next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "All finished are you?";
             next;
@@ -144,17 +153,21 @@ L_OnHelp:
 
 L_OnTutorialDone:
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(.@intro) {
+        mes "Okay! Good luck!";
+        next;
+        goto L_OnEnd;
+    }
     mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
     next;
 
-    getitem 40009,1;
-    getitem 40013,1;
     getitem 5055,1;
     getitem 2112,1;
     getitem 2414,1;
     getitem 2510,1;
     getitem 2352,1;
-	//query_sql("INSERT INTO `wrodata` SET `intro` = 1, `char_id` = '"+getcharid(3)+"'");
+	query_sql("INSERT INTO `wrodata` SET `intro` = 1, `char_id` = '"+getcharid(3)+"'");
 
 L_OnEnd:
     close2;
