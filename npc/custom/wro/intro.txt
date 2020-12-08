@@ -100,7 +100,7 @@ L_OnHelp:
             cutin "tutorial05.bmp", 3;
             mes "Having opened the ^ff0000Skill Interface^000000 and spent some points into a skill, you can ^ff0000drag^000000 the skill into your ^ff0000Hotkey Bar^000000.";
             next;
-            mes "Once a skill has been placed in the Hotkey Bar, you can press its designated ^ff0000hotkey^000000!" to instantly activate the skill!";
+            mes "Once a skill has been placed in the Hotkey Bar, you can press its designated ^ff0000hotkey^000000! to instantly activate the skill!";
             next;
             cutin "kafra_01.bmp", 2;
             mes "That's it!";
