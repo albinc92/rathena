@@ -88,7 +88,7 @@ L_OnHelp:
             mes "^ff0000Right-clicking^000000 can be used for all sorts of useful information.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "You can ^ff0000interact^000000 with other players and see ^ff0000item information^000000 with this button.;
+            mes "You can ^ff0000interact^000000 with other players and see ^ff0000item information^000000 with this button.";
             next;
             cutin "kafra_01.bmp", 2;
             mes "Now, there is one last thing I wish to tell you about.";
