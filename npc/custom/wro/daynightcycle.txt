@@ -1,0 +1,23 @@
+//======================================================================================================================
+//=                                                   Daynightcycle
+//======================================================================================================================
+//=                                  Sets day night mode depending on server clock.
+//======================================================================================================================
+
+-	script	daynightcycle	-1,{
+
+OnInit:
+	if ((gettime(3) < 8) || (gettime(3) >= 20)) night;
+	end;
+
+OnClock0800:
+	//announce "The sun is rising. [08:00]",bc_all,0xEEEEEE;
+	day;
+	end;
+
+OnClock2000:
+	//announce "It's getting dark and the moon is rising. [20:00]",bc_all,0xEEEEEE;
+	night;
+	end;
+
+}

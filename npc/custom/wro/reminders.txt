@@ -1,0 +1,22 @@
+//======================================================================================================================
+//=                                                      Reminders
+//======================================================================================================================
+//=                             Reminds players about important messages at a regular basis
+//======================================================================================================================
+
+-	script	News	-1,{
+OnInit:
+set .Time,60;		// Announce every x Minute.
+
+setarray .News$[0],	// Random Message to be Announced
+		"Never give out your account name or password to anyone, not even GMs!",
+		"Don't forget to read keep yourself updated with the latest ongoings at our forums! www.warboundro.boards.net",
+		"Found a bug or having issues with the server? Please make a post on our forums! www.warboundro.boards.net",
+		"Enjoying your stay at WarboundRO? Don't forget to vote!";
+
+while( 1 ){
+	announce .News$[ rand( getarraysize( .News$ ) ) ],0;
+	sleep ( .Time * 60000 );
+	}
+end;
+}
