@@ -180,7 +180,7 @@ finding_ore_rate: 10000
 //--------------------------------------------------------------
 
 // Turn this on to allow a player to level up more than once from a kill. (Note 1)
-multi_level_up: no
+multi_level_up: yes
 
 // Base exp. penalty rate (Each 100 is 1% of their exp)
 death_penalty_base: 10000
