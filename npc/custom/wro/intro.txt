@@ -102,7 +102,7 @@ OnPCLoadMapEvent:
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "But first, please tell me which of the following qualities you seek in this life?";
-    switch(select("Faith:Guile:Wisdom:Balance:Wealth:Strength:Other")) {
+    switch(select("Faith:Guile:Wisdom:Balance:Wealth:Strength:Uncertain")) {
         case 1:
             set .@warpTo$, "prontera";
             set .@weaponID, 1545;
@@ -184,27 +184,27 @@ L_OnChoice:
         navigateto("prontera",141,178,NAV_NONE,0,0,getcharid(0));
 	} else if (.@warpTo$ == "geffen") {
 	    savepoint "geffen",119,37,1,1;
-        atcommand "@go 3";
+        atcommand "@go 2";
         sleep2 100;
         navigateto("geffen",114,58,NAV_NONE,0,0,getcharid(0));
 	} else if (.@warpTo$ == "alberta") {
 	    savepoint "alberta",30,232,1,1;
-        atcommand "@go 3";
+        atcommand "@go 4";
         sleep2 100;
         navigateto("alberta",38,241,NAV_NONE,0,0,getcharid(0));
 	} else if (.@warpTo$ == "morocc") {
 	    savepoint "morocc",150,99,1,1;
-        atcommand "@go 4";
+        atcommand "@go 1";
         sleep2 100;
         navigateto("morocc",148,87,NAV_NONE,0,0,getcharid(0));
 	} else if (.@warpTo$ == "payon") {
 	    savepoint "payon",256,242,1,1;
-	    warp "pay_fild01",334,354;
+	    atcommand "@go 3";
         sleep2 100;
         navigateto("payon",181,111,NAV_NONE,0,0,getcharid(0));
 	} else if (.@warpTo$ == "izlude") {
-	    savepoint "izlude",93,104,1,1;
-        atcommand "@go 5";
+	    savepoint "izlude",93,105,1,1;
+	    atcommand "@go 5";
         sleep2 100;
         navigateto("izlude",136,121,NAV_NONE,0,0,getcharid(0));
 	}
