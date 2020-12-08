@@ -124,7 +124,7 @@ L_OnHelp:
             mes "In order to proceed into the world of Warbound Ragnarok Online, you must ^ff0000cross the bridge^000000 to the east.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "Having past the bridge, ^ff0000enter through the portal^000000 to reach the inside of the fortress you see before you.";
+            mes "Having passed the bridge, ^ff0000enter through the portal^000000 to reach the inside of the fortress you see before you.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "There you must speak with the ^ff0000[Warper]^000000. He will give you further assistance.";
@@ -134,10 +134,10 @@ L_OnHelp:
             mes "You can just follow the ^ff0000red arrows^000000 on the ground that appeared before you just now.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "You may have noticed that the ^ff0000Navigation Interface^000000 appeared in your screen along with the red arrows.";
+            mes "You may have noticed that the ^ff0000Navigation Interface^000000 appeared on your screen along with the red arrows.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "It is a super helpful feature that can be used to find all sorts of things.";
+            mes "It is a super helpful interface that can be used to find all sorts of things.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "I leave it to you to experiment with it.";
@@ -168,6 +168,10 @@ L_OnTutorialDone:
     getitem 2510,1;
     getitem 2352,1;
 	query_sql("INSERT INTO `wrodata` SET `intro` = 1, `char_id` = '"+getcharid(3)+"'");
+
+	next;
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Godspeed!";
 
 L_OnEnd:
     close2;
