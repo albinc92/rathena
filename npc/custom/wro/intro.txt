@@ -152,13 +152,6 @@ L_OnHelp:
     }
 
 L_OnTutorialDone:
-    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
-    if(.@intro) {
-        mes "Okay! Good luck!";
-        next;
-        goto L_OnEnd;
-    }
     mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
     next;
 
