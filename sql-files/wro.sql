@@ -13,14 +13,14 @@ CREATE TABLE IF NOT EXISTS `wrodata` (
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
 
--- CREATE TABLE IF NOT EXISTS `wrohunter` (
---     `char_id` int(11) unsigned NOT NULL default '0',
---     `mob_id` mediumint(9) unsigned NOT NULL default '0',
---     `count` tinyint(6) unsigned NOT NULL default '0',
---     `max` tinyint(6) unsigned NOT NULL default '0',
---     PRIMARY KEY (`char_id`),
---     KEY `char_id` (`char_id`)
--- ) ENGINE=MyISAM;
+CREATE TABLE IF NOT EXISTS `questboard` (
+    `char_id` int(11) unsigned NOT NULL default '0',
+    `mob_id` mediumint(9) unsigned NOT NULL default '0',
+    `count` tinyint(6) unsigned NOT NULL default '0',
+    `max` tinyint(6) unsigned NOT NULL default '0',
+    PRIMARY KEY (`char_id`),
+    KEY `char_id` (`char_id`)
+) ENGINE=MyISAM;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      ITEMS
