@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `wrodata` (
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
 
-CREATE TABLE IF NOT EXISTS `questboard` (
+CREATE TABLE IF NOT EXISTS `headhunter` (
     `char_id` int(11) unsigned NOT NULL default '0',
     `mob_id` mediumint(9) unsigned NOT NULL default '0',
     `count` tinyint(6) unsigned NOT NULL default '0',

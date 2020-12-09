@@ -1,14 +1,14 @@
 //===== rAthena Script =======================================
-//= Questboard
+//= Headhunter
 //===== Description: =========================================
 //= Dynamic hunting quests.
 //============================================================
 
--	script	Questboard	-1,{
+-	script	Headhunter	-1,{
 
     cutin "3rd_sc_doomk02.bmp", 2;
-    query_sql("SELECT * FROM `questboard` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max);
-
+    query_sql("SELECT * FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@charid, .@mobid, .@count, .@max);
+    
     // If on a mission
     if(.@mobid) {
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -34,7 +34,7 @@
     		        goto L_OnCurrentMissionInfo;
                     end;
                 case 3:
-                    query_sql("DELETE FROM `questboard` WHERE `char_id` = " + getcharid(0));
+                    query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
                     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
                     mes "Mission aborted!";
                     end;
@@ -123,7 +123,7 @@ L_OnMissionInfo:
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
-            query_sql("REPLACE INTO `questboard` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ")");
+            query_sql("REPLACE INTO `headhunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ")");
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Excellent. I shall await your return!";
@@ -156,7 +156,7 @@ L_OnMissionInfo:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `count` FROM `questboard` WHERE `char_id` = '"+getcharid(3)+"'", .@count);
+	query_sql("SELECT `count` FROM `headhunter` WHERE `char_id` = '"+getcharid(3)+"'", .@count);
     if(!.@intro) {
         showevent QTYPE_QUEST;
     } else {
@@ -169,71 +169,71 @@ OnPCLoadMapEvent:
 
 
 // Duplicates
-prontera,141,178,7	duplicate(Questboard)	Questboard#prt	481
-prt_fild05,292,216,3	duplicate(Questboard)	Questboard#prt_sew	481
-prt_fild01,131,364,6	duplicate(Questboard)	Questboard#prt_maze	481
-alberta,38,241,6	duplicate(Questboard)	Questboard#alb	481
-payon,181,111,2	duplicate(Questboard)	Questboard#pay	481
-pay_arche,39,127,7	duplicate(Questboard)	Questboard#pay_dun	481
-alb2trea,70,98,5	duplicate(Questboard)	Questboard#treasure	481
-tur_dun01,148,60,5	duplicate(Questboard)	Questboard#tur_dun	481
-izlude,136,121,5	duplicate(Questboard)	Questboard#iz	481
-izlu2dun,104,85,7	duplicate(Questboard)	Questboard#iz_dun	481
-aldebaran,133,122,5	duplicate(Questboard)	Questboard#alde	481
-xmas,150,307,3	duplicate(Questboard)	Questboard#xmas	481
-xmas,140,127,7	duplicate(Questboard)	Questboard#xmas_dun	481
-mjolnir_02,76,358,5	duplicate(Questboard)	Questboard#mjo_dun	481
-morocc,148,87,7	duplicate(Questboard)	Questboard#moc	481
-moc_ruins,63,152,7	duplicate(Questboard)	Questboard#moc_pryd	481
-moc_fild19,113,101,3	duplicate(Questboard)	Questboard#in_sphinx	481
-comodo,215,139,1	duplicate(Questboard)	Questboard#cmd	481
-cmd_fild08,328,347,1	duplicate(Questboard)	Questboard#anthell	481
-comodo,31,218,5	duplicate(Questboard)	Questboard#beach1	481
-comodo,181,348,3	duplicate(Questboard)	Questboard#beach2	481
-comodo,323,173,1	duplicate(Questboard)	Questboard#beach3	481
-umbala,98,157,5	duplicate(Questboard)	Questboard#um	481
-umbala,119,282,3	duplicate(Questboard)	Questboard#um_dun	481
-niflheim,207,168,1	duplicate(Questboard)	Questboard#nif	481
-geffen,114,58,1	duplicate(Questboard)	Questboard#gef	481
-gef_tower,149,33,7	duplicate(Questboard)	Questboard#gef_dun	481
-gef_fild10,61,331,5	duplicate(Questboard)	Questboard#orcsdun	481
-gef_fild06,23,300,7	duplicate(Questboard)	Questboard#gl	481
-yuno,147,187,6	duplicate(Questboard)	Questboard#yuno	481
-yuno_fild03,35,136,7	duplicate(Questboard)	Questboard#mag_dun	481
-yuno_fild07,212,171,7	duplicate(Questboard)	Questboard#jupe	481
-yuno_fild08,81,175,1	duplicate(Questboard)	Questboard#kh_dun	481
-hugel,90,143,7	duplicate(Questboard)	Questboard#hu	481
-hu_fild05,170,312,5	duplicate(Questboard)	Questboard#abyss	481
-hu_fild01,145,158,3	duplicate(Questboard)	Questboard#thana	481
-odin_tem01,96,143,7	duplicate(Questboard)	Questboard#odin	481
-einbech,58,31,7	duplicate(Questboard)	Questboard#einb	481
-einbech,133,247,5	duplicate(Questboard)	Questboard#ein_dun	481
-einbroch,60,193,7	duplicate(Questboard)	Questboard#einbr	481
-lighthalzen,151,90,7	duplicate(Questboard)	Questboard#lhz	481
-lhz_in01,28,219,0	duplicate(Questboard)	Questboard#lhz_dun	481
-rachel,134,103,1	duplicate(Questboard)	Questboard#ra	481
-ra_temin,24,314,5	duplicate(Questboard)	Questboard#ra_san	481
-ra_fild01,237,332,4	duplicate(Questboard)	Questboard#ice_dun	481
-veins,212,121,7	duplicate(Questboard)	Questboard#ve	481
-ve_fild03,165,237,5	duplicate(Questboard)	Questboard#thor	481
-nameless_n,165,181,7	duplicate(Questboard)	Questboard#abbey	481
-amatsu,202,82,1	duplicate(Questboard)	Questboard#ama	481
-ama_in02,124,175,3	duplicate(Questboard)	Questboard#ama_dun	481
-gonryun,168,115,1	duplicate(Questboard)	Questboard#gon	481
-gonryun,169,190,3	duplicate(Questboard)	Questboard#gon_dun	415
-louyang,226,108,1	duplicate(Questboard)	Questboard#lou	481
-louyang,50,286,4	duplicate(Questboard)	Questboard#lou_dun	481
-ayothaya,198,163,0	duplicate(Questboard)	Questboard#ayo	481
-ayo_fild01,128,193,1	duplicate(Questboard)	Questboard#ayo_dun	481
-moscovia,225,178,7	duplicate(Questboard)	Questboard#mosk	481
-mosk_fild02,188,250,5	duplicate(Questboard)	Questboard#mosk_dun	481
-manuk,289,131,1	duplicate(Questboard)	Questboard#man	481
-splendide,193,155,4	duplicate(Questboard)	Questboard#spl	481
-spl_fild01,359,106,1	duplicate(Questboard)	Questboard#ygg	481
-spl_fild01,355,105,7	duplicate(Questboard)	Questboard#nyd	415
-e_tower,82,110,5	duplicate(Questboard)	Questboard#et	481
-gef_fild10,245,200,4	duplicate(Questboard)	Questboard#orcmemory	481
-monk_test,309,142,5	duplicate(Questboard)	Questboard#shrine	481
+prontera,141,178,7	duplicate(Headhunter)	Headhunter#prt	481
+prt_fild05,292,216,3	duplicate(Headhunter)	Headhunter#prt_sew	481
+prt_fild01,131,364,6	duplicate(Headhunter)	Headhunter#prt_maze	481
+alberta,38,241,6	duplicate(Headhunter)	Headhunter#alb	481
+payon,181,111,2	duplicate(Headhunter)	Headhunter#pay	481
+pay_arche,39,127,7	duplicate(Headhunter)	Headhunter#pay_dun	481
+alb2trea,70,98,5	duplicate(Headhunter)	Headhunter#treasure	481
+tur_dun01,148,60,5	duplicate(Headhunter)	Headhunter#tur_dun	481
+izlude,136,121,5	duplicate(Headhunter)	Headhunter#iz	481
+izlu2dun,104,85,7	duplicate(Headhunter)	Headhunter#iz_dun	481
+aldebaran,133,122,5	duplicate(Headhunter)	Headhunter#alde	481
+xmas,150,307,3	duplicate(Headhunter)	Headhunter#xmas	481
+xmas,140,127,7	duplicate(Headhunter)	Headhunter#xmas_dun	481
+mjolnir_02,76,358,5	duplicate(Headhunter)	Headhunter#mjo_dun	481
+morocc,148,87,7	duplicate(Headhunter)	Headhunter#moc	481
+moc_ruins,63,152,7	duplicate(Headhunter)	Headhunter#moc_pryd	481
+moc_fild19,113,101,3	duplicate(Headhunter)	Headhunter#in_sphinx	481
+comodo,215,139,1	duplicate(Headhunter)	Headhunter#cmd	481
+cmd_fild08,328,347,1	duplicate(Headhunter)	Headhunter#anthell	481
+comodo,31,218,5	duplicate(Headhunter)	Headhunter#beach1	481
+comodo,181,348,3	duplicate(Headhunter)	Headhunter#beach2	481
+comodo,323,173,1	duplicate(Headhunter)	Headhunter#beach3	481
+umbala,98,157,5	duplicate(Headhunter)	Headhunter#um	481
+umbala,119,282,3	duplicate(Headhunter)	Headhunter#um_dun	481
+niflheim,207,168,1	duplicate(Headhunter)	Headhunter#nif	481
+geffen,114,58,1	duplicate(Headhunter)	Headhunter#gef	481
+gef_tower,149,33,7	duplicate(Headhunter)	Headhunter#gef_dun	481
+gef_fild10,61,331,5	duplicate(Headhunter)	Headhunter#orcsdun	481
+gef_fild06,23,300,7	duplicate(Headhunter)	Headhunter#gl	481
+yuno,147,187,6	duplicate(Headhunter)	Headhunter#yuno	481
+yuno_fild03,35,136,7	duplicate(Headhunter)	Headhunter#mag_dun	481
+yuno_fild07,212,171,7	duplicate(Headhunter)	Headhunter#jupe	481
+yuno_fild08,81,175,1	duplicate(Headhunter)	Headhunter#kh_dun	481
+hugel,90,143,7	duplicate(Headhunter)	Headhunter#hu	481
+hu_fild05,170,312,5	duplicate(Headhunter)	Headhunter#abyss	481
+hu_fild01,145,158,3	duplicate(Headhunter)	Headhunter#thana	481
+odin_tem01,96,143,7	duplicate(Headhunter)	Headhunter#odin	481
+einbech,58,31,7	duplicate(Headhunter)	Headhunter#einb	481
+einbech,133,247,5	duplicate(Headhunter)	Headhunter#ein_dun	481
+einbroch,60,193,7	duplicate(Headhunter)	Headhunter#einbr	481
+lighthalzen,151,90,7	duplicate(Headhunter)	Headhunter#lhz	481
+lhz_in01,28,219,0	duplicate(Headhunter)	Headhunter#lhz_dun	481
+rachel,134,103,1	duplicate(Headhunter)	Headhunter#ra	481
+ra_temin,24,314,5	duplicate(Headhunter)	Headhunter#ra_san	481
+ra_fild01,237,332,4	duplicate(Headhunter)	Headhunter#ice_dun	481
+veins,212,121,7	duplicate(Headhunter)	Headhunter#ve	481
+ve_fild03,165,237,5	duplicate(Headhunter)	Headhunter#thor	481
+nameless_n,165,181,7	duplicate(Headhunter)	Headhunter#abbey	481
+amatsu,202,82,1	duplicate(Headhunter)	Headhunter#ama	481
+ama_in02,124,175,3	duplicate(Headhunter)	Headhunter#ama_dun	481
+gonryun,168,115,1	duplicate(Headhunter)	Headhunter#gon	481
+gonryun,169,190,3	duplicate(Headhunter)	Headhunter#gon_dun	415
+louyang,226,108,1	duplicate(Headhunter)	Headhunter#lou	481
+louyang,50,286,4	duplicate(Headhunter)	Headhunter#lou_dun	481
+ayothaya,198,163,0	duplicate(Headhunter)	Headhunter#ayo	481
+ayo_fild01,128,193,1	duplicate(Headhunter)	Headhunter#ayo_dun	481
+moscovia,225,178,7	duplicate(Headhunter)	Headhunter#mosk	481
+mosk_fild02,188,250,5	duplicate(Headhunter)	Headhunter#mosk_dun	481
+manuk,289,131,1	duplicate(Headhunter)	Headhunter#man	481
+splendide,193,155,4	duplicate(Headhunter)	Headhunter#spl	481
+spl_fild01,359,106,1	duplicate(Headhunter)	Headhunter#ygg	481
+spl_fild01,355,105,7	duplicate(Headhunter)	Headhunter#nyd	415
+e_tower,82,110,5	duplicate(Headhunter)	Headhunter#et	481
+gef_fild10,245,200,4	duplicate(Headhunter)	Headhunter#orcmemory	481
+monk_test,309,142,5	duplicate(Headhunter)	Headhunter#shrine	481
 
 
 
@@ -299,13 +299,13 @@ monk_test	mapflag	loadevent
 // Scripts
 -	script	killtracker	-1,{
 OnNPCKillEvent:
-    query_sql("SELECT `mob_id`, `count`, `max`  FROM `questboard` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max);
+    query_sql("SELECT `mob_id`, `count`, `max`  FROM `headhunter` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max);
     if(killedrid == .@mobid && .@count != .@max) {
         set .@count, .@count + 1;
         message strcharinfo(0),"" + strmobinfo(1, killedrid) + " killed: (" + .@count + " / " + .@max + ")";
-        query_sql("UPDATE `questboard` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
+        query_sql("UPDATE `headhunter` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
         if(.@count == .@max) {
-            query_sql("DELETE FROM `questboard` WHERE `char_id` = " + getcharid(0));
+            query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
             set .@bExp, (strmobinfo(6, .@mobid) * 25);
             set .@jExp, (strmobinfo(7, .@mobid) * 25);
             getexp2 .@bExp, .@jExp;
