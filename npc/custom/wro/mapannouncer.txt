@@ -5,6 +5,7 @@
 //======================================================================================================================
 
 -	script	Map_Des_Announcer	-1,{
+
 OnInit:
 	setarray .townMaps$,
 		//<mapname>,<Map Nick>,
@@ -43,6 +44,7 @@ OnInit:
 		"yuno",         "Yuno, Capital of Schwarzwald Republic",
 		"umbala",       "The Wootan Tribe's Village, Umbala";
 	.size = getarraysize( .townMaps$ );
+
 	for( .@i = 0; .@i < .size; .@i += 2 ) {
 		setmapflag .townMaps$[.@i], mf_loadevent;
 	}

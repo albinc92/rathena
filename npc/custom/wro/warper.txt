@@ -1,0 +1,562 @@
+//======================================================================================================================
+//=                                                      Warper
+//======================================================================================================================
+//=                                      Helpful NPC for transportation (for a fee)
+//======================================================================================================================
+
+-	script	Warper	-1,{
+    function Go; function Disp; function Pick; function Restrict;
+    set .@cost, (1800 + (BaseLevel * 7));
+
+	cutin "nov_magicsoul01",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hmm? You want to get warped somewhere? It costs ^ff0000" + .@cost + "^000000 Zeny.";
+
+L_Main:
+    menu
+        "Last Warp ^777777["+lastwarp$+"]^000000",-,
+    	" ~ Towns",Towns,
+    	" ~ Fields",Fields,
+    	" ~ Dungeons",Dungeons,
+    	" ~ Guild Castles",Castles,
+    	" ~ Instances",Instances,
+    	" ~ Special Areas",Special;
+
+	if (lastwarp$ == "") {
+		message strcharinfo(0),"You haven't warped anywhere yet.";
+		goto L_Main;
+	} else {
+	    Go(lastwarp$,lastwarpx,lastwarpy);
+	}
+	end;
+
+// ------------------- Functions -------------------
+// * Go("<map>",<x>,<y>);
+//	~ Warps directly to a map.
+//
+// * Disp("<Menu Option>",<first option>,<last option>);
+// * Pick("<map_prefix>"{,<index offset>});
+//	~ Dynamic menu and map selection (auto-numbered).
+//
+// * Disp("<Option 1>:<Option 2>:<etc.>");
+// * Pick("","<map1>","<map2>","<etc.>");
+//	~ Manual menu and map selection (listed).
+//
+// * Restrict("<RE | Pre-RE>"{,<menu option numbers>});
+//	~ Only allows map for Renewal or Pre-Renewal modes.
+//     If menu option numbers are given, only those maps
+//     will be restricted (i.e. not for "Go").
+//
+// Other notes:
+//   ~ Array @c[] holds all (x,y) coordinates.
+//   ~ Use @c[2] EXCEPT when maps begin dynamically
+//	  at 0: use @c[0] and Pick() offset 1.
+// --------------------------------------------------
+
+function Go {
+	if(zeny < .@cost) {
+        next;
+        mes "["+strnpcinfo(1)+"]";
+        mes "You don't have enough zeny.";
+	} else {
+	    set zeny, zeny - .@cost;
+        set lastwarp$, getarg(0);
+        set lastwarpx, getarg(1,0);
+        set lastwarpy, getarg(2,0);
+        warp getarg(0),getarg(1,0),getarg(2,0);
+    }
+	close2;
+    cutin "", 255;
+    end;
+}
+
+function Disp {
+	if (getargcount() < 3)
+		set @menu$, getarg(0);
+	else {
+		set @menu$,"";
+		for (set .@i,getarg(1); .@i<=getarg(2); set .@i,.@i+1)
+			set @menu$, @menu$+getarg(0)+" "+.@i+":";
+	}
+	return;
+}
+
+function Pick {
+	set .@warp_block,@warp_block;
+	set @warp_block,0;
+	set .@select, select(@menu$);
+	if (getarg(0) == "") {
+		set .@i, .@select;
+		set .@map$, getarg(.@i);
+	} else {
+		set .@i, .@select-getarg(1,0);
+		set .@map$, getarg(0)+((.@i<10)?"0":"")+.@i;
+	}
+	if (.@warp_block & (1<<.@select)) {
+		message strcharinfo(0),"This map is not enabled in "+((checkre(0))?"":"Pre-")+"Renewal.";
+		close2;
+        cutin "", 255;
+        end;
+	}
+	set .@x, @c[.@i*2];
+	set .@y, @c[.@i*2+1];
+	deletearray @c[0],getarraysize(@c);
+	if(.@map$ == "ayo_fild02") {
+	    if(countitem(7285)<1 || !countitem(7287)<1) {
+            Go("ayo_fild01",126,196);
+        } else {
+            Go("ayo_fild02",275,150);
+        }
+	} else {
+	    Go(.@map$,.@x,.@y);
+	}
+}
+
+function Restrict {
+	if ((getarg(0) == "RE" && !checkre(0)) || (getarg(0) == "Pre-RE" && checkre(0))) {
+		if (getarg(1,0)) {
+			set @warp_block,0;
+			for (set .@i,1; .@i<getargcount(); set .@i,.@i+1)
+				set @warp_block, @warp_block | (1<<getarg(.@i));
+		} else {
+			message strcharinfo(0),"This map is not enabled in "+((checkre(0))?"":"Pre-")+"Renewal.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+	}
+	return;
+}
+
+// --------------------------------------------------
+	Towns:
+// --------------------------------------------------
+menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
+    	"Comodo",T7, "Einbech",T10,
+    	"Einbroch",T11, "Geffen",T13, "Gonryun",T14, "Hugel",T15,
+    	"Izlude",T16, "Jawaii",T17, "Lighthalzen",T18, "Louyang",T19, "Lutie",T20,
+    	"Manuk",T23, "Midgarts Expedition Camp",T24,
+    	"Morroc",T26, "Moscovia",T27,
+    	"Niflheim",T29, "Payon",T30, "Rachel",T31, "Splendide",T32,
+    	"Umbala",T34, "Veins",T35, "Yuno",T36;
+
+T1: Go("prontera",155,183);
+T2: Go("alberta",28,234);
+T3: Go("aldebaran",140,131);
+T4: Go("amatsu",198,84);
+T5: Go("ayothaya",208,166);
+T6: Restrict("RE");
+	Go("brasilis",196,217);
+T7: Go("comodo",209,143);
+T8: Restrict("RE");
+	Go("dewata",200,180);
+T9: Restrict("RE");
+	Go("ecl_in01",48,53);
+T10: Go("einbech",63,35);
+T11: Go("einbroch",64,200);
+T12: Restrict("RE");
+	 Go("dicastes01",198,187);
+T13: Go("geffen",119,59);
+T14: Go("gonryun",160,120);
+T15: Go("hugel",96,145);
+T16: Go("izlude",128,(checkre(3)?146:114));
+T17: Go("jawaii",251,132);
+T18: Go("lighthalzen",158,92);
+T19: Go("louyang",217,100);
+T20: Go("xmas",147,134);
+T21: Restrict("RE");
+	 Go("malangdo",140,114);
+T22: Restrict("RE");
+	 Go("malaya",231,200);
+T23: Go("manuk",282,138);
+T24: Go("mid_camp",210,288);
+T25: Restrict("RE");
+	 Go("mora",55,146);
+T26: Go("morocc",156,93);
+T27: Go("moscovia",223,184);
+T29: Go("niflheim",202,174);
+T30: Go("payon",179,100);
+T31: Go("rachel",130,110);
+T32: Go("splendide",201,147);
+T33: Go("thor_camp",246,68);
+T34: Go("umbala",97,153);
+T35: Go("veins",216,123);
+T36: Go("yuno",157,51);
+
+// --------------------------------------------------
+	Fields:
+// --------------------------------------------------
+menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
+    	"Comodo Fields",F5,
+    	"Einbroch Fields",F8,
+    	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
+    	"Lighthalzen Fields",F13, "Louyang Field",F14, "Lutie Field",F15,
+    	"Manuk Fields",F17, "Mjolnir Fields",F18,
+    	"Moscovia Fields",F19, "Niflheim Fields",F20, "Payon Forests",F21,
+    	"Prontera Fields",F22, "Rachel Fields",F23, "Sograt Deserts",F24,
+    	"Splendide Fields",F25, "Umbala Fields",F26, "Veins Fields",F27,
+    	"Yuno Fields",F28;
+
+F1: setarray @c[0],190,197;
+	Disp("Amatsu Field",1,1,"ama_fild"); Pick("ama_fild");
+F2: setarray @c[0],173,134,212,150;
+	Disp("Ayothaya Field",1,2); Pick("ayo_fild");
+F3: Restrict("RE");
+	setarray @c[2],193,220,220,187;
+	Disp("Bifrost Field",1,2); Pick("bif_fild");
+F4: Restrict("RE");
+	setarray @c[2],74,32;
+	Disp("Brasilis Field",1,1); Pick("bra_fild");
+F5: Restrict("Pre-RE",5);
+	setarray @c[2],180,178,231,160,191,172,228,194,224,203,190,223,234,177,194,175,172,172;
+	Disp("Comodo Field",1,9); Pick("cmd_fild");
+F6: Restrict("RE");
+	setarray @c[2],371,212;
+	Disp("Dewata Field",1,1); Pick("dew_fild");
+F7: Restrict("RE");
+	setarray @c[2],97,314;
+	Disp("Eclage Field",1,1); Pick("ecl_fild");
+F8: Restrict("Pre-RE",2,10);
+	setarray @c[2],142,225,182,141,187,228,185,173,216,173,195,148,272,220,173,214,207,174,196,200;
+	Disp("Einbroch Field",1,10); Pick("ein_fild");
+F9: Restrict("RE");
+	setarray @c[2],143,132,143,217;
+	Disp("El Dicastes Field",1,2); Pick("dic_fild");
+F10: Restrict("Pre-RE",13,15);
+	 setarray @c[0],46,199,213,204,195,212,257,192,188,171,166,263,248,158,195,191,186,183,221,117,178,218,136,328,240,181,235,235,211,185;
+	 Disp("Geffen Field",0,14); Pick("gef_fild",1);
+F11: setarray @c[2],220,227;
+	 Disp("Gonryun Field",1,1); Pick("gon_fild");
+F12: Restrict("Pre-RE",3,7);
+	 setarray @c[2],268,101,222,193,232,185,252,189,196,106,216,220,227,197;
+	 Disp("Hugel Field",1,7); Pick("hu_fild");
+F13: setarray @c[2],240,179,185,235,240,226;
+	 Disp("Lighthalzen Field",1,3); Pick("lhz_fild");
+F14: setarray @c[2],229,187;
+	 Disp("Louyang Field",1,1); Pick("lou_fild");
+F15: setarray @c[2],115,145;
+	 Disp("Lutie Field",1,1); Pick("xmas_fild");
+F16: Restrict("RE");
+	 setarray @c[2],40,272,207,180;
+	 Disp("Malaya Field",1,2); Pick("ma_fild");
+F17: setarray @c[2],35,236,35,262,84,365;
+	 Disp("Manuk Field",1,3); Pick("man_fild");
+F18: setarray @c[2],204,120,175,193,208,213,179,180,181,240,195,270,235,202,188,215,205,144,245,223,180,206,196,208;
+	 Disp("Mjolnir Field",1,12); Pick("mjolnir_");
+F19: setarray @c[2],82,104,131,147;
+	 Disp("Moscovia Field",1,2); Pick("mosk_fild");
+F20: setarray @c[2],215,229,167,234;
+	 Disp("Niflheim Field",1,2); Pick("nif_fild");
+F21: Restrict("Pre-RE",5,11);
+	 setarray @c[2],158,206,151,219,205,148,186,247,134,204,193,235,200,177,137,189,201,224,160,205,194,150;
+	 Disp("Payon Forest",1,11); Pick("pay_fild");
+F22: setarray @c[0],208,227,190,206,240,206,190,143,307,252,239,213,185,188,193,194,187,218,210,183,195,149,198,164;
+	 Disp("Prontera Field",0,11); Pick("prt_fild",1);
+F23: Restrict("Pre-RE",2,7,9,10,11,13);
+	 setarray @c[2],192,162,235,166,202,206,202,208,225,202,202,214,263,196,217,201,87,121,277,181,221,185,175,200,174,197;
+	 Disp("Rachel Field",1,13); Pick("ra_fild");
+F24: setarray @c[2],219,205,177,206,194,182,224,170,198,216,156,187,185,263,206,228,208,238,209,223,85,97,207,202,31,195,38,195;
+	 Disp("Sograt Desert 1:Sograt Desert 2:Sograt Desert 3:Sograt Desert 7:Sograt Desert 11:Sograt Desert 12:Sograt Desert 13:Sograt Desert 16:Sograt Desert 17:Sograt Desert 18:Sograt Desert 19:Sograt Desert 20:Sograt Desert 21:Sograt Desert 22");
+	 Pick("","moc_fild01","moc_fild02","moc_fild03","moc_fild07","moc_fild11","moc_fild12","moc_fild13","moc_fild16","moc_fild17","moc_fild18","moc_fild19","moc_fild20","moc_fild21","moc_fild22");
+F25: setarray @c[2],175,186,236,184,188,204;
+	 Disp("Splendide Field",1,3); Pick("spl_fild");
+F26: setarray @c[2],217,206,223,221,237,215,202,197;
+	 Disp("Umbala Field",1,4); Pick("um_fild");
+F27: Restrict("Pre-RE",5);
+	 setarray @c[2],186,175,196,370,222,45,51,250,202,324,150,223,149,307;
+	 Disp("Veins Field",1,7); Pick("ve_fild");
+F28: Restrict("Pre-RE",5,10);
+	 setarray @c[2],189,224,192,207,221,157,226,199,223,177,187,232,231,174,196,203,183,214,200,124,195,226,210,304;
+	 Disp("Yuno Field",1,12); Pick("yuno_fild");
+
+// --------------------------------------------------
+	Dungeons:
+// --------------------------------------------------
+menu	"Abyss Lakes [^ff0000Lv. 57 - 80^000000]",D1, "Amatsu Dungeon [^ff0000Lv. 33 - 69^000000]",D2, "Ancient Shrine [^ff0000Lv. 38 - 52^000000]",D4, "Ant Hell [^ff0000Lv. 4 - 20^000000]",D3,
+    	"Beach Dungeon [^ff0000Lv. 22 - 79^000000]",D5, "Bio Laboratory [^ff0000Lv. 55 - 92^000000]",D6,
+		"Clock Tower [^ff0000Lv. 24 - 60^000000]",D9, "Cursed Abbey [^ff0000Lv. 40 - 88^000000]",D12,
+    	"Geffen Dungeon [^ff0000Lv. 38 - 49^000000]",D16, "Geffenia [^ff0000Lv. 65 - 79^000000]",D15, "Glast Heim [^ff0000Lv. 40 - 79^000000]",D17, "Gonryun Dungeon [^ff0000Lv. 35 - 63^000000]",D18,
+    	"Ice Cave [^ff0000Lv. 38 - 60^000000]",D20,
+		"Labyrinth Forest [^ff0000Lv. 14 - 81^000000]",D19,
+		"Mine Dungeon [^ff0000Lv. 28 - 71^000000]",D14, "Mjolnir Dead Pit [^ff0000Lv. 11 - 38^000000]",D10, "Moscovia Dungeon [^ff0000Lv. 38 - 63^000000]",D26,
+		"Nogg Road [^ff0000Lv. 43 - 78^000000]",D24,
+    	"Odin Shrine [^ff0000Lv. 69 - 83^000000]",D28, "Orc Dungeon [^ff0000Lv. 24 - 31^000000]",D29,
+    	"Payon Cave [^ff0000Lv. 10 - 33^000000]",D30, "Prontera Culvert [^ff0000Lv. 4 - 19^000000]",D11, "Pyramids [^ff0000Lv. 8 - 52^000000]",D31,
+		"Rachel Sanctuary [^ff0000Lv. 53 - 73^000000]",D32, "Robot Factory [^ff0000Lv. 55 - 75^000000]",D22, "Royal Tomb [^ff0000Lv. 48 - 56^000000]",D23, "Ruins of Juperos [^ff0000Lv. 66 - 89^000000]",D21,
+    	"Sphinx [^ff0000Lv. 24 - 75^000000]",D34, "Sunken Ship [^ff0000Lv. 14 - 57^000000]",D35,
+		"Thanatos Tower [^ff0000Lv. 60 - 81^000000]",D36, "Thor's Volcano [^ff0000Lv. 50 - 91^000000]",D37, "Toy Factory [^ff0000Lv. 15 - 38^000000]",D38, "Turtle Island [^ff0000Lv. 63 - 72^000000]",D39,
+		"Umbala Dungeon [^ff0000Lv. 42 - 51^000000]",D40, "Undersea Tunnel [^ff0000Lv. 10 - 53^000000]",D8,
+		"Yggdrasil Root [^ff0000Lv. 82 - 83^000000]",D27;
+
+D1: Go("hu_fild05",172,309);
+D2: Go("ama_in02",119,181);
+D3: Go("cmd_fild08",323,353);
+D4: if(countitem(7285)<1 || !countitem(7287)<1) {
+        Go("ayo_fild01",126,196);
+    } else {
+        Go("ayo_fild02",275,150);
+    }
+D5: setarray @c[2],37,212,175,346,321,175;
+	Disp("Beach Dungeon",1,3); Pick("","comodo","comodo","comodo");
+D6: Go("lhz_in01",31,223);
+D8: Go("izlu2dun",108,88);
+D9: Go("aldebaran",140,131);
+D10: Go("mjolnir_02",83,358);
+D11: Go("prt_fild05",285,223);
+D12: Go("nameless_n",167,184);
+D14: Go("einbech",138,245);
+D15: Go("geffen",119,59);
+D16: Go("gef_tower",153,37);
+D17: Go("gef_fild06",27,304);
+D18: Go("gonryun",164,190);
+D19: Go("prt_fild01",136,362);
+D20: Go("ra_fild01",233,328);
+D21: Go("yuno_fild07",216,176);
+D22: Go("yuno_fild08",77,180);
+D23: Go("louyang",46,276);
+D24: Go("yuno_fild03",41,139);
+D26: Go("mosk_fild02",193,249);
+D27: Go("spl_fild01",360,110);
+D28: Go("odin_tem01",100,146);
+D29: Go("gef_fild10",69,333);
+D30: Go("pay_arche",41,130);
+D31: Go("moc_ruins",67,158);
+D32: Go("ra_temin",28,312);
+D34: Go("moc_fild19",110,99);
+D35: Go("alb2trea",75,98);
+D36: Go("hu_fild01",140,156);
+D37: Go("ve_fild03",168,235);
+D38: Go("xmas",143,307);
+D39: Go("tur_dun01",153,52);
+D40: Go("umbala",112,283);
+
+// --------------------------------------------------
+	Castles:
+// --------------------------------------------------
+menu	"Aldebaran Castles",C1, "Geffen Castles",C2, "Payon Castles",C3,
+    	"Prontera Castles",C4, "Arunafeltz Castles",C5, "Schwaltzvalt Castles",C6;
+
+C1: setarray @c[2],48,83,95,249,142,85,239,242,264,90;
+	Disp("Neuschwanstein:Hohenschwangau:Nuenberg:Wuerzburg:Rothenburg");
+	Pick("","alde_gld","alde_gld","alde_gld","alde_gld","alde_gld");
+C2: setarray @c[2],214,75,308,240,143,240,193,278,305,87;
+	Disp("Repherion:Eeyolbriggar:Yesnelph:Bergel:Mersetzdeitz");
+	Pick("","gef_fild13","gef_fild13","gef_fild13","gef_fild13","gef_fild13");
+C3: setarray @c[2],121,233,295,116,317,293,140,160,204,266;
+	Disp("Bright Arbor:Scarlet Palace:Holy Shadow:Sacred Altar:Bamboo Grove Hill");
+	Pick("","pay_gld","pay_gld","pay_gld","pay_gld","pay_gld");
+C4: setarray @c[2],134,65,240,128,153,137,111,240,208,240;
+	Disp("Kriemhild:Swanhild:Fadhgridh:Skoegul:Gondul");
+	Pick("","prt_gld","prt_gld","prt_gld","prt_gld","prt_gld");
+C5: setarray @c[2],158,272,83,47,68,155,299,345,292,107;
+	Disp("Mardol:Cyr:Horn:Gefn:Banadis");
+	Pick("","aru_gld","aru_gld","aru_gld","aru_gld","aru_gld");
+C6: setarray @c[2],293,100,288,252,97,196,137,90,71,315;
+	Disp("Himinn:Andlangr:Viblainn:Hljod:Skidbladnir");
+	Pick("","sch_gld","sch_gld","sch_gld","sch_gld","sch_gld");
+
+// --------------------------------------------------
+	Guild_Dungeons:
+// --------------------------------------------------
+menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
+    	"Arunafeltz",G5, "Schwaltzvalt",G6;
+
+G1: Restrict("RE",2,3);
+	setarray @c[2],119,93;
+	Disp("Baldur F1");
+	Pick("","gld_dun01","gld_dun01_2","gld2_pay");
+G2: Restrict("RE",2,3);
+	setarray @c[2],39,161;
+	Disp("Luina F1");
+	Pick("","gld_dun02","gld_dun02_2","gld2_ald");
+G3: Restrict("RE",2,3);
+	setarray @c[2],50,44;
+	Disp("Valkyrie F1");
+	Pick("","gld_dun03","gld_dun03_2","gld2_prt");
+G4: Restrict("RE",2,3);
+	setarray @c[2],116,45;
+	Disp("Britoniah F1");
+	Pick("","gld_dun04","gld_dun04_2","gld2_gef");
+G5: Go("arug_dun01",199,195);
+G6: Go("schg_dun01",200,124);
+
+// --------------------------------------------------
+	Instances:
+// --------------------------------------------------
+menu	"Endless Tower [^ff0000Lv. 50 - 99^000000]",I4, "Nidhoggur's Nest [^ff0000Lv. 83 - 117^000000]",I7,
+    	"Orc's Memory [^ff0000Lv. 60 - 88^000000]",I10, "Sealed Shrine [^ff0000Lv. 75 - 98^000000]",I11;
+
+I1: Restrict("RE");
+	Go("ma_scene01",172,175);
+I2: Restrict("RE");
+	Go("ma_dun01",151,8);
+I3: Restrict("RE");
+	Go("ma_fild02",316,317);
+I4: Go("e_tower",72,112);
+I5: Restrict("RE");
+	Go("spl_fild01",360,110);
+I6: Restrict("RE");
+	Go("mal_in01",164,21);
+I7: Go("spl_fild01",360,110);
+I8: Restrict("RE");
+	Go("mal_dun01",152,230);
+I9: Restrict("RE");
+	Go("glast_01",204,268);
+I10: Go("gef_fild10",240,198);
+I11: Go("monk_test",306,143);
+I12: Restrict("RE");
+	Go("lhz_dun04",148,269);
+
+// --------------------------------------------------
+	Special:
+// --------------------------------------------------
+menu	"Leveling Room",S1, "Battlegrounds",S2, "Casino",S3,
+    	"Gonryun Arena",S5, "Izlude Arena",S6, "Monster Race Arena",S7, "Turbo Track",S8;
+
+S1: set .@menu, select("Sandwich:Rock On:Four:Undercross:Copass:Cancel");	// Select room
+	if(.@menu == 6) {
+		close2;
+		cutin "", 255;
+		end;
+	}
+	set .@x, .@menu;
+
+	set .@menu, select("Level 1:Level 2:Level 3:Level 4:Level 5:Cancel");	// Select level
+	if(.@menu == 6) {
+		close2;
+		cutin "", 255;
+		end;
+	}
+	set .@y, .@menu;
+
+	Go("pvp_n_" + .@y + "-" + .@x + "",0,0);
+S2: Go("bat_room",154,150);
+S3: Go("cmd_in02",179,129);
+S4: Restrict("RE");
+	Go("moc_para01",31,14);
+S5: Go("gon_test",48,10);
+S6: Go("arena_room",100,88);
+S7: Go("p_track01",62,41);
+S8: Go("turbo_room",99,114);
+}
+
+// --------------------------------------------------
+//	Duplicates:
+// --------------------------------------------------
+alb2trea,57,70,6	duplicate(Warper)	Warper#tre	735
+alberta,28,240,4	duplicate(Warper)	Warper#alb	735
+aldebaran,145,118,4	duplicate(Warper)	Warper#alde	735
+amatsu,192,89,5	duplicate(Warper)	Warper#ama	735
+ayothaya,209,169,6	duplicate(Warper)	Warper#ayo	735
+comodo,208,147,5	duplicate(Warper)	Warper#com	735
+einbech,59,38,6	duplicate(Warper)	Warper#einbe	735
+einbroch,69,202,4	duplicate(Warper)	Warper#einbr	735
+gef_fild10,71,339,4	duplicate(Warper)	Warper#orc	735
+geffen,124,72,4	duplicate(Warper)	Warper#gef	735
+gef_fild06,24,308,5	duplicate(Warper)	Warper#glh	735
+gonryun,162,122,4	duplicate(Warper)	Warper#gon	735
+hugel,101,151,4	duplicate(Warper)	Warper#hug	735
+izlu2dun,110,92,4	duplicate(Warper)	Warper#izd	735
+izlude,132,120,4	duplicate(Warper)	Warper#izl	735	//Pre-RE: (132,120)
+jawaii,253,138,4	duplicate(Warper)	Warper#jaw	735
+lighthalzen,162,102,4	duplicate(Warper)	Warper#lhz	735
+louyang,208,103,6	duplicate(Warper)	Warper#lou	735
+manuk,274,146,6	duplicate(Warper)	Warper#man	735
+mid_camp,216,288,4	duplicate(Warper)	Warper#mid	735
+mjolnir_02,86,359,4	duplicate(Warper)	Warper#mjo	735
+moc_ruins,64,164,4	duplicate(Warper)	Warper#moc	735
+morocc,159,97,4	duplicate(Warper)	Warper#mor	735
+moscovia,229,191,4	duplicate(Warper)	Warper#mos	735
+nameless_n,259,213,4	duplicate(Warper)	Warper#nam	735
+niflheim,205,179,4	duplicate(Warper)	Warper#nif	735
+pay_arche,42,134,4	duplicate(Warper)	Warper#arc	735
+payon,184,103,5	duplicate(Warper)	Warper#pay	735
+prontera,159,192,4	duplicate(Warper)	Warper#prt	735
+prt_fild05,279,223,6	duplicate(Warper)	Warper#cul	735
+rachel,135,116,4	duplicate(Warper)	Warper#rac	735
+splendide,205,153,4	duplicate(Warper)	Warper#spl	735
+umbala,106,150,3	duplicate(Warper)	Warper#umb	735
+veins,222,128,4	duplicate(Warper)	Warper#ve	735
+xmas,150,136,6	duplicate(Warper)	Warper#xmas	735
+yuno,162,47,4	duplicate(Warper)	Warper#yuno	735
+
+
+// --------------------------------------------------
+//	Duplicates (Renewal):
+// --------------------------------------------------
+brasilis,201,222,4	duplicate(Warper)	Warper#bra	811
+dewata,204,186,6	duplicate(Warper)	Warper#dew	811
+dicastes01,194,194,6	duplicate(Warper)	Warper#dic	811
+ecl_in01,51,60,4	duplicate(Warper)	Warper#ecl	811
+malangdo,134,117,6	duplicate(Warper)	Warper#mal	811
+malaya,231,204,4	duplicate(Warper)	Warper#ma	811
+mora,57,152,4	duplicate(Warper)	Warper#mora	811
+
+
+// --------------------------------------------------
+//	Duplicates (WarboundRO):
+// --------------------------------------------------
+hu_fild05,177,307,2	duplicate(Warper)	Warper#hu05	735
+ama_in02,118,184,5	duplicate(Warper)	Warper#ama02	735
+cmd_fild08,325,357,4	duplicate(Warper)	Warper#moc05	735
+ayo_fild01,127,200,3	duplicate(Warper)	Warper#ayo02	735
+comodo,34,208,7	duplicate(Warper)	Warper#cmd01	735
+comodo,170,348,5	duplicate(Warper)	Warper#cmd02	735
+comodo,319,180,4	duplicate(Warper)	Warper#cmd03	735
+lhz_in01,36,220,3	duplicate(Warper)	Warper#lhz01	735
+nameless_n,165,187,5	duplicate(Warper)	Warper#abbey	735
+einbech,142,249,4	duplicate(Warper)	Warper#ein01	735
+gef_tower,157,33,3	duplicate(Warper)	Warper#gef01	735
+gonryun,159,191,6	duplicate(Warper)	Warper#gon01	735
+prt_fild01,140,365,4	duplicate(Warper)	Warper#prt01	735
+ra_fild01,229,330,5	duplicate(Warper)	Warper#ra01	735
+yuno_fild07,212,179,6	duplicate(Warper)	Warper#jupe	735
+yuno_fild08,75,182,6	duplicate(Warper)	Warper#yuno01	735
+louyang,44,266,7	duplicate(Warper)	Warper#lou01	735
+yuno_fild03,38,134,7	duplicate(Warper)	Warper#mag01	735
+mosk_fild02,200,251,4	duplicate(Warper)	Warper#mosk01	735
+spl_fild01,363,112,4	duplicate(Warper)	Warper#nyd01	735
+odin_tem01,97,148,5	duplicate(Warper)	Warper#hu01	735
+ra_temin,32,314,4	duplicate(Warper)	Warper#san	735
+moc_fild19,106,97,8	duplicate(Warper)	Warper#sphinx	735
+alb2trea,73,100,5	duplicate(Warper)	Warper#ship	735
+hu_fild01,135,158,5	duplicate(Warper)	Warper#thana	735
+ve_fild03,173,238,4	duplicate(Warper)	Warper#thor01	735
+xmas,139,311,5	duplicate(Warper)	Warper#xmas01	735
+tur_dun01,148,55,5	duplicate(Warper)	Warper#tur	735
+umbala,114,286,4	duplicate(Warper)	Warper#um01	735
+e_tower,74,117,5	duplicate(Warper)	Warper#endless	735
+monk_test,304,146,5	duplicate(Warper)	Warper#monk	735
+auction_01,24,67,3	duplicate(Warper)	Warper#auction	735
+bat_room,156,152,3	duplicate(Warper)	Warper#bg	735
+cmd_in02,181,132,3	duplicate(Warper)	Warper#casino	735
+gon_test,43,8,5	duplicate(Warper)	Warper#gonare	735
+arena_room,100,91,5	duplicate(Warper)	Warper#izare	735
+p_track01,60,44,5	duplicate(Warper)	Warper#ptrack	735
+turbo_room,96,110,8	duplicate(Warper)	Warper#troom	735
+pvp_n_1-1,110,70,3	duplicate(Warper)	Warper#sandwich1	735
+pvp_n_2-1,110,70,3	duplicate(Warper)	Warper#sandwich2	735
+pvp_n_3-1,110,70,3	duplicate(Warper)	Warper#sandwich3	735
+pvp_n_4-1,110,70,3	duplicate(Warper)	Warper#sandwich4	735
+pvp_n_5-1,110,70,3	duplicate(Warper)	Warper#sandwich5	735
+pvp_n_1-2,100,100,3	duplicate(Warper)	Warper#rockon1	735
+pvp_n_2-2,100,100,3	duplicate(Warper)	Warper#rockon2	735
+pvp_n_3-2,100,100,3	duplicate(Warper)	Warper#rockon3	735
+pvp_n_4-2,100,100,3	duplicate(Warper)	Warper#rockon4	735
+pvp_n_5-2,100,100,3	duplicate(Warper)	Warper#rockon5	735
+pvp_n_1-3,99,96,3	duplicate(Warper)	Warper#four1	735
+pvp_n_2-3,99,96,3	duplicate(Warper)	Warper#four2	735
+pvp_n_3-3,99,96,3	duplicate(Warper)	Warper#four3	735
+pvp_n_4-3,99,96,3	duplicate(Warper)	Warper#four4	735
+pvp_n_5-3,99,96,3	duplicate(Warper)	Warper#four5	735
+pvp_n_1-4,100,120,3	duplicate(Warper)	Warper#undercross1	735
+pvp_n_2-4,100,120,3	duplicate(Warper)	Warper#undercross2	735
+pvp_n_3-4,100,120,3	duplicate(Warper)	Warper#undercross3	735
+pvp_n_4-4,100,120,3	duplicate(Warper)	Warper#undercross4	735
+pvp_n_5-4,100,120,3	duplicate(Warper)	Warper#undercross5	735
+pvp_n_1-5,100,100,3	duplicate(Warper)	Warper#copass1	735
+pvp_n_2-5,100,100,3	duplicate(Warper)	Warper#copass2	735
+pvp_n_3-5,100,100,3	duplicate(Warper)	Warper#copass3	735
+pvp_n_4-5,100,100,3	duplicate(Warper)	Warper#copass4	735
+pvp_n_5-5,100,100,3	duplicate(Warper)	Warper#copass5	735
+gef_fild10,231,196,5	duplicate(Warper)	Warper#orcmemory	735
