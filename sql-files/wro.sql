@@ -2,6 +2,10 @@
 --                                             WarboundRO custom changes
 -- ---------------------------------------------------------------------------------------------------------------------
 
+DELETE FROM `item_db2`;
+
+
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                  CUSTOM TABLES
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -22,6 +26,8 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
     KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
 
+
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      ITEMS
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -39,33 +45,40 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- and updates their stats to reflect their nature.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db` WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
-
 UPDATE `item_db2`
 SET `id` = `id` + 41000,
+    `name_aegis` = CONCAT('C_', `name_aegis`),
     `name_english` = CONCAT('C_', `name_english`),
-    `name_japanese` = CONCAT('C_', `name_japanese`),
---     price_buy = 0,
---     price_sell = 0,
---     weight = 0,
---     defence = 0,
---     slots = 0,
---     equip_jobs = 0xFFFFFFFF,
---     equip_genders = 2,
---     equip_locations = CASE
---         WHEN equip_locations = 1 THEN 4096
---         WHEN equip_locations = 256 THEN 1024
---         WHEN equip_locations = 257 THEN (4096 + 1024)
---         WHEN equip_locations = 512 THEN 2048
---         WHEN equip_locations = 513 THEN (2048 + 4096)
---         WHEN equip_locations = 768 THEN (1024 + 2048)
---         WHEN equip_locations = 769 THEN (1024 + 2048 + 4096)
---         END,
---     equip_level = 0,
---     refineable = 0,
---     script = '',
---     equip_script = '',
---     unequip_script = ''
--- WHERE equip_locations IN ( 1, 256, 257, 512, 513, 768, 769 );
+    `price_buy` = 0,
+    `price_sell` = 0,
+    `weight` = 0,
+    `defense` = 0,
+    `slots` = 0,
+    `job_all` = true,
+    `class_all` = true,
+    `gender` = 'Both',
+    `location_head_top` = false,
+    `location_head_mid` = false,
+    `location_head_low` = false,
+    `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
+    `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
+    `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
+    `equip_level_min` = 0,
+    `equip_level_max` = 250,
+    `refineable` = true,
+    `trade_nodrop` = false,
+    `trade_notrade` = false,
+    `trade_tradepartner` = false,
+    `trade_nosell` = false,
+    `trade_nocart` = false,
+    `trade_nostorage` = false,
+    `trade_noguildstorage` = false,
+    `trade_nomail` = false,
+    `trade_noauction` = false,
+    `script` = '',
+    `equip_script` = '',
+    `unequip_script` = ''
+WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
 
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
@@ -170,8 +183,13 @@ REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`wei
 VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus3 bAutoSpellWhenHit,"NPC_DRAGONFEAR",3,(30+70*(readparam(bStr)>=250));');
 
 -- Add new world cards
--- REPLACE INTO `item_db2` VALUES (4446,'Enhanced_Skeleton_Card','Enhanced Skeleton Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bBaseAtk,15; bonus2 bAddEff,Eff_Stun,(BaseLevel>=100?300:200);',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4454,'Light_Up_Card1','Light Up Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
+VALUES (4446,'Enhanced_Skeleton_Card','Enhanced Skeleton Card','Card',20,10,true,true,'bonus bBaseAtk,15; bonus2 bAddEff,Eff_Stun,(BaseLevel>=100?300:200);');
+REPLACE INTO `item_db_re` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`)
+VALUES (4454,'Light_Up_Card1','Light Up Card','Card',20,10,true,true);
+REPLACE INTO `item_db_re` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`)
+VALUES (4455,'Light_Up_Card2','Light Up Card','Card',20,10,true,true);
+
 -- REPLACE INTO `item_db2` VALUES (4455,'Light_Up_Card2','Light Up Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4457,'Nahtzigger_Card','Naght Sieger Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,16,NULL,NULL,NULL,NULL,'bonus2 bMagicAtkEle,Ele_Ghost,30;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4458,'Duneirre_Card','Duneyrr Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; autobonus "{ bonus bAspdRate,5; }",10,10000,0,"{ specialeffect2 EF_HASTEUP; }";',NULL,NULL);
@@ -309,7 +327,7 @@ UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2
 -- Misc
 -- REPLACE INTO `item_db2` VALUES (40005,'Cart_Weight','Cart Weight',3,25000,NULL,10000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
-VALUES (40009,'Rejuv_Flask','Rejuvenation Flask','Healing',0,0,true,7000,true,true,true,true,true,true,true,true,true,'progressbar "000000",1; specialeffect2 325; percentheal 100,100; if(!getmapflag(strcharinfo(3),mf_pvp)) { specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,240000,10; specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10; };');
+VALUES (40009,'Rejuv_Flask','Rejuvenation Flask','Healing',0,0,true,7000,true,true,true,true,true,true,true,true,true,'progressbar "000000",1; specialeffect2 325; percentheal 100,100;');
 -- REPLACE INTO `item_db2` VALUES (40010,'Mastela_Fruit_Potion','Mastela Potion',0,3000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'specialeffect2 204; itemheal rand(1905,2430),0;',NULL,NULL);
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40013,'Kafra_Teleporter','Kafra Teleporter','Usable',0,0,true,500,true,true,true,true,true,true,true,true,true,'itemskill "AL_TELEPORT",2;');
@@ -373,9 +391,11 @@ VALUES (40013,'Kafra_Teleporter','Kafra Teleporter','Usable',0,0,true,500,true,t
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
 UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddClass,Class_All,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; skill "GM_SANDMAN",1; bonus bDelayRate,-100;' WHERE `id` = 1599;
 
--- ----------------------------------------------------------------------------
---                                    MONSTERS
--- ----------------------------------------------------------------------------
+
+
+-- ---------------------------------------------------------------------------------------------------------------------
+--                                                     MONSTERS
+-- ---------------------------------------------------------------------------------------------------------------------
 
 -- Add new cards to mob drops
 -- First, create copies of mobs in mob_db2
@@ -435,14 +455,18 @@ UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999;
 -- REPLACE INTO `mob_db2` VALUES(3708,'NODE_LVL4','Red Herb','Red Herb',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 -- REPLACE INTO `mob_db2` VALUES(3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
--- ----------------------------------------------------------------------------
---                               MOB SKILLS
--- ----------------------------------------------------------------------------
+
+
+-- ---------------------------------------------------------------------------------------------------------------------
+--                                                      MOB SKILLS
+-- ---------------------------------------------------------------------------------------------------------------------
 
 -- REPLACE INTO mob_skill_db2 VALUES(3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
--- ----------------------------------------------------------------------------
---                               DUMMY CHARACTERS
--- ----------------------------------------------------------------------------
+
+
+-- ---------------------------------------------------------------------------------------------------------------------
+--                                                   DUMMY CHARACTERS
+-- ---------------------------------------------------------------------------------------------------------------------
 
 -- REPLACE INTO `char` VALUES (000001,0000001,0,'Replicator',0,1,1,0,0,0,1,1,1,1,1,1,40,40,11,11,48,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,'royal',86,189,'royal',86,189,0,0,0,0,0,0,0,0,0,0,0,0,'M',0,0,NULL,0,0);
