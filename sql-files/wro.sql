@@ -37,11 +37,13 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
--- REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE equip_locations IN ( 1, 256, 257, 512, 513, 768, 769 );
--- UPDATE `item_db2`
--- SET id = id + 41000,
---     name_english = CONCAT('C_', name_english),
---     name_japanese = CONCAT('C_', name_japanese),
+REPLACE INTO `item_db2`
+SELECT * FROM `item_db` WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
+
+UPDATE `item_db2`
+SET `id` = `id` + 41000,
+    `name_english` = CONCAT('C_', `name_english`),
+    `name_japanese` = CONCAT('C_', `name_japanese`),
 --     price_buy = 0,
 --     price_sell = 0,
 --     weight = 0,
