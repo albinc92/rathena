@@ -2176,6 +2176,96 @@ void mob_setdropitem_option(item *item, s_mob_drop *mobdrop) {
 	}
 }
 
+/**
+ * Set random options for item when dropped from monster
+ * @param itm Item data
+ **/
+void mob_setdropitem_option2(struct item *itm) {
+    if (!itemdb_isequip(itm->nameid))
+        return;
+
+    short id = 0, val = 0;
+    char param = '0';
+    const int MAX_WEAPON_INDEX = 23, MAX_ARMOR_INDEX = 19;
+    short weaponid[MAX_WEAPON_INDEX] = {
+            3, 4, 5, 6, 7, 8,
+            13, 14, 16, 17, 18, 19, 24,
+            147, 148, 151, 152,
+            164, 166,
+            168, 170, 171, 172
+    };
+    short weaponbase[MAX_WEAPON_INDEX] = {
+            1, 1, 1, 1, 1, 1,
+            5, 5, 10, 25, 25, 25, 10,
+            5, 5, 5, 5,
+            10, 5,
+            10, 10, 3, 10
+    };
+    short weaponbonus[MAX_WEAPON_INDEX] = {
+            2, 2, 2, 2, 2, 2,
+            5, 5, 15, 25, 75, 25, 15,
+            5, 5, 5, 5,
+            10, 5,
+            15, 15, 4, 15
+    };
+    short armorid[MAX_ARMOR_INDEX] = {
+            1, 2,
+            3, 4, 5, 6, 7, 8,
+            9, 10, 11, 12,
+            20, 21, 22, 23,
+            165, 167, 171
+    };
+    short armorbase[MAX_ARMOR_INDEX] = {
+            5, 5,
+            1, 1, 1, 1, 1, 1,
+            5, 5, 10, 10,
+            1, 1, 5, 5,
+            5, 5, 3
+    };
+    short armorbonus[MAX_ARMOR_INDEX] = {
+            5, 5,
+            2, 2, 2, 2, 2, 2,
+            5, 5, 10, 10,
+            2, 2, 6, 5,
+            5, 5, 4
+    };
+
+    int r, optAmt = 0;
+    r = rand() % 750;
+    if(r < 501 && r > 250) {
+        optAmt = MAX_ITEM_RDM_OPT - 4;
+    } else if(r < 251 && r > 125) {
+        optAmt = MAX_ITEM_RDM_OPT - 3;
+    } else if(r < 126 && r > 62) {
+        optAmt = MAX_ITEM_RDM_OPT - 2;
+    } else if(r < 63 && r > 31) {
+        optAmt = MAX_ITEM_RDM_OPT - 1;
+    } else if(r < 32 && r > 16) {
+        optAmt = MAX_ITEM_RDM_OPT;
+    }
+    if(!optAmt) {
+        return;
+    }
+
+    for(int i = 0; i < optAmt; i++) {
+        if(itemdb_type(itm->nameid) == IT_WEAPON) {
+            r = rand() % MAX_WEAPON_INDEX;
+            id = weaponid[r];
+            val = weaponbase[r] + (rand() % weaponbonus[r] + 1);
+        } else {
+            r = rand() % MAX_ARMOR_INDEX;
+            id = armorid[r];
+            val = armorbase[r] + (rand() % armorbonus[r] + 1);
+        }
+        for(int j = i; j > 0; j--) {
+            if(id == itm->option[j-1].id) {
+                return;
+            }
+        }
+        itm->option[i] = { id, val, param };
+    }
+}
+
 /*==========================================
  * Initializes the delay drop structure for mob-dropped items.
  *------------------------------------------*/
@@ -2187,6 +2277,7 @@ static struct item_drop* mob_setdropitem(struct s_mob_drop *mobdrop, int qty, un
 	drop->item_data.amount = qty;
 	drop->item_data.identify = itemdb_isidentified(mobdrop->nameid);
 	mob_setdropitem_option(&drop->item_data, mobdrop);
+    mob_setdropitem_option2(&drop->item_data);
 	drop->mob_id = mob_id;
 	drop->next = NULL;
 	return drop;
@@ -3028,6 +3119,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				}
 
 				mob_setdropitem_option(&item, &mdrop[i]);
+                mob_setdropitem_option2(&item);
 
 				if((temp = pc_additem(mvp_sd,&item,1,LOG_TYPE_PICKDROP_PLAYER)) != 0) {
 					clif_additem(mvp_sd,0,0,temp);
