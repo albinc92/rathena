@@ -2181,7 +2181,7 @@ void mob_setdropitem_option(item *item, s_mob_drop *mobdrop) {
  * @param itm Item data
  **/
 void mob_setdropitem_option2(struct item *itm) {
-    if (!itemdb_isequip(itm->nameid))
+    if (!itemdb_isequip(itm->nameid) || itemdb_isidentified(itm->nameid))
         return;
 
     short id = 0, val = 0;
@@ -2245,6 +2245,18 @@ void mob_setdropitem_option2(struct item *itm) {
     }
     if(!optAmt) {
         return;
+    }
+
+    // Limit maximum random options based on weapon slot count
+    int slotAmnt = itemdb_slots(itm->nameid);
+    if(slotAmnt == 1 && optAmt > 4) {
+        optAmt = 4;
+    } else if(slotAmnt == 2 && optAmt > 3) {
+        optAmt = 3;
+    } else if(slotAmnt == 3 && optAmt > 2) {
+        optAmt = 2;
+    } else if(slotAmnt == 4 && optAmt > 1) {
+        optAmt = 1;
     }
 
     for(int i = 0; i < optAmt; i++) {
