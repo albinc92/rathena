@@ -196,32 +196,32 @@ OnPCLoadMapEvent:
     switch(select("Faith:Guile:Wisdom:Balance:Wealth:Strength:Uncertain")) {
         case 1:
             set .@warpTo$, "prontera";
-            set .@weaponID, 1545;
+            set .@weaponID, 1504;
             goto L_OnChoice;
             end;
         case 2:
             set .@warpTo$, "morocc";
-            set .@weaponID, 1243;
+            set .@weaponID, 1207;
             goto L_OnChoice;
             end;
         case 3:
             set .@warpTo$, "geffen";
-            set .@weaponID, 1639;
+            set .@weaponID, 1601;
             goto L_OnChoice;
             end;
         case 4:
             set .@warpTo$, "payon";
-            set .@weaponID, 1742;
+            set .@weaponID, 1704;
             goto L_OnChoice;
             end;
         case 5:
             set .@warpTo$, "alberta";
-            set .@weaponID, 1381;
+            set .@weaponID, 1301;
             goto L_OnChoice;
             end;
         case 6:
             set .@warpTo$, "izlude";
-            set .@weaponID, 13415;
+            set .@weaponID, 1104;
             goto L_OnChoice;
             end;
         case 7:
@@ -304,6 +304,7 @@ L_OnChoice:
     end;
 
 OnPCLoadMapEvent:
+
 	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);

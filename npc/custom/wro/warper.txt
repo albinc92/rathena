@@ -9,7 +9,7 @@
     set .@cost, (1800 + (BaseLevel * 7));
 
 	cutin "nov_magicsoul01",2;
-	mes "["+strnpcinfo(1)+"]";
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
 	mes "Hmm? You want to get warped somewhere? It costs ^ff0000" + .@cost + "^000000 Zeny.";
 
 L_Main:
@@ -56,7 +56,7 @@ L_Main:
 function Go {
 	if(zeny < .@cost) {
         next;
-        mes "["+strnpcinfo(1)+"]";
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "You don't have enough zeny.";
 	} else {
         next;

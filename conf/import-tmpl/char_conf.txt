@@ -54,7 +54,7 @@ start_point_pre: new_1-1,53,111
 // Format: <id>,<amount>,<position>{:<id>,<amount>,<position>...}
 // To auto-equip an item, include the position where it will be equipped; otherwise, use zero.
 // NOTE: For Doram, this requires client 20151001 or newer.
-start_items: 1201,1,2:2301,1,16:40009,1,0:40013,1,0
+start_items: 1201,1,2:2301,1,16:40027,1,1024:40009,1,0:40013,1,0
 
 // Restrict character deletion by email address or birthdate.
 // This restricts players from changing the langtype and deleting characters.
