@@ -37,7 +37,6 @@
                     query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
                     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
                     mes "Mission aborted!";
-                    end;
             }
         }
         close2;

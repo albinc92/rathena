@@ -206,7 +206,7 @@ OnPCLoadMapEvent:
             end;
         case 3:
             set .@warpTo$, "geffen";
-            set .@weaponID, 1601;
+            set .@weaponID, 1606;
             goto L_OnChoice;
             end;
         case 4:
@@ -304,9 +304,9 @@ L_OnChoice:
     end;
 
 OnPCLoadMapEvent:
-
 	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
     if(!.@intro) {
+        setlook LOOK_CLOTHES_COLOR,5;
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
     }
     end;
