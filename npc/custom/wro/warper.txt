@@ -63,6 +63,12 @@ function Go {
         set lastwarp$, getarg(0);
         set lastwarpx, getarg(1,0);
         set lastwarpy, getarg(2,0);
+        specialeffect2 EF_READYPORTAL;
+        specialeffect2 EF_TELEPORTATION;
+        specialeffect2 EF_PORTAL;
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Let me take you there now!";
+        sleep2 1600;
         warp getarg(0),getarg(1,0),getarg(2,0);
     }
 	close2;
