@@ -59,6 +59,7 @@ function Go {
         mes "["+strnpcinfo(1)+"]";
         mes "You don't have enough zeny.";
 	} else {
+        next;
 	    set zeny, zeny - .@cost;
         set lastwarp$, getarg(0);
         set lastwarpx, getarg(1,0);
@@ -67,7 +68,18 @@ function Go {
         specialeffect2 EF_TELEPORTATION;
         specialeffect2 EF_PORTAL;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "Let me take you there now!";
+        set .@rng, rand(1, 5);
+        if(.@rng == 1) {
+            mes "Let me take you there now~~!";
+        } else if(.@rng == 2) {
+            mes "Hold on tightly~~!";
+        } else if(.@rng == 3) {
+            mes "Here we go~~!";
+        } else if(.@rng == 4) {
+            mes "Hold on tight~~!";
+        } else {
+            mes "Away you go~~!";
+        }
         sleep2 1600;
         warp getarg(0),getarg(1,0),getarg(2,0);
     }
