@@ -149,7 +149,7 @@ function Restrict {
 // --------------------------------------------------
 	Towns:
 // --------------------------------------------------
-menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
+menu	"Royal",T0, "Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
     	"Comodo",T7, "Einbech",T10,
     	"Einbroch",T11, "Geffen",T13, "Gonryun",T14, "Hugel",T15,
     	"Izlude",T16, "Jawaii",T17, "Lighthalzen",T18, "Louyang",T19, "Lutie",T20,
@@ -158,6 +158,7 @@ menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
     	"Niflheim",T29, "Payon",T30, "Rachel",T31, "Splendide",T32,
     	"Umbala",T34, "Veins",T35, "Yuno",T36;
 
+T0: Go("royal",86,188);
 T1: Go("prontera",155,183);
 T2: Go("alberta",28,234);
 T3: Go("aldebaran",140,131);
@@ -514,6 +515,7 @@ mora,57,152,4	duplicate(Warper)	Warper#mora	811
 // --------------------------------------------------
 //	Duplicates (WarboundRO):
 // --------------------------------------------------
+royal,142,161,3	duplicate(Warper)	Warper#roy	735
 hu_fild05,177,307,2	duplicate(Warper)	Warper#hu05	735
 ama_in02,118,184,5	duplicate(Warper)	Warper#ama02	735
 cmd_fild08,325,357,4	duplicate(Warper)	Warper#moc05	735

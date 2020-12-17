@@ -242,7 +242,7 @@ REPLACE INTO `item_db_re` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`
 -- Boarding Halter
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`flag_noconsume`,`delay_duration`,`delay_status`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`,`unequip_script`)
 VALUES (12622,'Boarding_Halter','Reins Of Mount','Usable',true,3000,'All_Riding_Reuse_Limit',100,true,true,true,true,true,true,true,true,'setmounting();','if (ismounting()) setmounting();');
-UPDATE `item_db2` SET `script` = 'if (ismounting(getcharid(0)) == 0) { progressbar "000000",1; specialeffect2 6; }; atcommand "@mount2"; specialeffect2 26;' WHERE `id` = 12622;
+UPDATE `item_db2` SET `script` = 'if (ismounting(getcharid(0)) == 0) { progressbar "000000",1; }; atcommand "@mount2";  specialeffect2 6; specialeffect2 26;' WHERE `id` = 12622;
 
 -- Mercenary scrolls level restrictions
 -- Set price and equip level req for merc scrolls
