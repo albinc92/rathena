@@ -168,7 +168,7 @@ OnPCLoadMapEvent:
 
 
 // Duplicates
-royal,125,58,6	duplicate(Headhunter)	Headhunter#roy	481
+royal,125,158,6	duplicate(Headhunter)	Headhunter#roy	481
 prontera,141,178,7	duplicate(Headhunter)	Headhunter#prt	481
 prt_fild05,292,216,3	duplicate(Headhunter)	Headhunter#prt_sew	481
 prt_fild01,131,364,6	duplicate(Headhunter)	Headhunter#prt_maze	481
