@@ -326,6 +326,7 @@ function	script	F_KafTele	{
 	else if (@wrpD$[.@j] == "Orc Dungeon") warp "gef_fild10", 52, 326;
 	else if (@wrpD$[.@j] == "Payon") warp "payon", 161, 58;
 	else if (@wrpD$[.@j] == "Prontera") warp "prontera", 116, 72;
+	else if (@wrpD$[.@j] == "Royal") warp "royal", 86, 188;
 	else if (@wrpD$[.@j] == "Umbala") warp "umbala", 100, 154;
 	end;
 }
@@ -656,6 +657,9 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "job3_rune01") {
 		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc", "Alberta";
 		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800;
+	} else if (.@map$ == "prontera") {
+		setarray @wrpD$[0], "Prontera", "Izlude", "Al De Baran", "Payon", "Alberta";
+		setarray @wrpP[0], 600, 600, 1200, 1200, 1800;
 	}
 
 	.@warp_size = getarraysize(@wrpD$);

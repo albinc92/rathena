@@ -4,15 +4,17 @@
 //=                                    Custom Kafras for Warbound Ragnarok Online
 //======================================================================================================================
 
-royal,145,158,4	script	Kafra Employee::roy	117,{
-	cutin "kafra_05",2;
+royal,145,158,4	script	Kafra Employee::kaf_royal	112,{
+	cutin "kafra_06",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
-	mes "The Kafra Corporation";
-	mes "is always working to provide";
-	mes "you with convenient services.";
-	mes "How may I be of assistance?";
-	callfunc "F_Kafra",5,0,1,20,600;
+	mes "Welcome to the";
+	mes "Kafra Corporation~";
+	mes "The Kafra Services are";
+	mes "always here to support";
+	mes "you. So how can I be";
+	mes "of service today?";
+	callfunc "F_Kafra",5,0,0,40,800;
 	savepoint "royal",86,188,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Royal";
 }
