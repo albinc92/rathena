@@ -138,6 +138,8 @@ function	script	F_Kafra	{
 			case 9: setarray .@K_Menu0$[0],"Use Storage","Rent a Pushcart","Use Teleport Service","Check Other Information","Cancel"; break;
 			// Storage, Save, and Pushcart (Dewata, reorder of case 7)
 			case 10: setarray .@K_Menu0$[0],"Use Storage","Save","Rent a Pushcart","Cancel"; break;
+			// Storage, Save, and Pushcart (Dewata, reorder of case 7)
+            case 11: setarray .@K_Menu0$[0],"Save","Use Storage","Use Guild Storage","Use Teleport Service","Rent a Pushcart","Cancel"; break;
 			// Default message (obsolete)
 			default: setarray .@K_Menu0$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Check Other Information","Cancel"; break;
 		}
@@ -657,7 +659,7 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "job3_rune01") {
 		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morocc", "Alberta";
 		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800;
-	} else if (.@map$ == "prontera") {
+	} else if (.@map$ == "royal") {
 		setarray @wrpD$[0], "Prontera", "Izlude", "Al De Baran", "Payon", "Alberta";
 		setarray @wrpP[0], 600, 600, 1200, 1200, 1800;
 	}

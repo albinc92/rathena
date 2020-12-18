@@ -14,7 +14,7 @@ royal,145,158,4	script	Kafra Employee::kaf_royal	116,{
 	mes "always here to support";
 	mes "you. So how can I be";
 	mes "of service today?";
-	callfunc "F_Kafra",10,0,0,40,800;
+	callfunc "F_Kafra",0,11,0,40,800;
 	savepoint "royal",86,188,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Royal";
 }
