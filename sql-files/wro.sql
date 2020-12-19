@@ -47,6 +47,7 @@ REPLACE INTO `item_db2`
 SELECT * FROM `item_db` WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
 UPDATE `item_db2`
 SET `id` = `id` + 41000,
+    `alias_name` = `name_aegis`,
     `name_aegis` = CONCAT('C_', `name_aegis`),
     `name_english` = CONCAT('C_', `name_english`),
     `price_buy` = 0,
@@ -66,7 +67,6 @@ SET `id` = `id` + 41000,
     `equip_level_min` = 0,
     `equip_level_max` = 250,
     `refineable` = true,
-    `alias_name` = `name_aegis`,
     `trade_nodrop` = false,
     `trade_notrade` = false,
     `trade_tradepartner` = false,
