@@ -614,7 +614,7 @@ function	script	F_KafSet	{
 
 	.@map$ = strnpcinfo(4);
 	if (.@map$ == "prontera") {
-		setarray @wrpD$[0], "Royal", ""Izlude", "Geffen", "Payon", "Morocc", "Orc Dungeon", "Alberta";
+		setarray @wrpD$[0], "Royal", "Izlude", "Geffen", "Payon", "Morocc", "Orc Dungeon", "Alberta";
 		setarray @wrpP[0], 600, 600, 1200, 1200, 1200, 1700, 1800;
 		setarray @viewpX[0], 87, 151, 29, 282, 152;
 		setarray @viewpY[0], 187, 29, 207, 200, 326;
