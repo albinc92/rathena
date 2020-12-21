@@ -624,7 +624,7 @@ function	script	F_KafSet	{
 		setarray @viewpX[0], 87, 28, 113, 0, 0;
 		setarray @viewpY[0], 187, 229, 60, 0, 0;
 	} else if (.@map$ == "aldebaran") {
-		setarray @wrpP[0], 1200, 1200, 1200, 1800, 1700;
+		setarray @wrpP[0], 1200, 1200, 1200, 1200, 1800, 1700;
 		setarray @wrpD$[0], "Royal", "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
 	} else if (.@map$ == "comodo" ) {
 		setarray @wrpD$[0], "Morocc", "Comodo Pharos Beacon", "Umbala";
