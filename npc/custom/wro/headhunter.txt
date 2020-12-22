@@ -66,40 +66,39 @@ L_Missions:
     cutin "3rd_sc_doomk02.bmp", 2;
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "What kind of game are you looking for today?";
-    switch(select("~ Easy:~ Moderate:~ Difficult:[^ff8000Mini Boss^000000]:[^ff0000Boss^000000]")) {
+
+    // Mini bosses
+    // setarray .@mb1[0],
+    // 1090,1093,1091,1089,1120,
+    // 1088,1096,,,,
+    // ,,,,,
+    // ,,,,,;
+
+    // setarray .@mbc1[0],
+    // 1,1,1,1,1,
+    // 1,1,,,,
+    // ,,,,,
+    // ,,,,,;
+
+    // MvPs
+    // setarray .@mvp1[0],0;
+    // setarray .@mvpc1[0],1;
+
+    switch(select("Monsters [^ff0000Lv. 1 - 21^000000]:Monsters [^ff0000Lv. 21 - 40^000000]")) {
         case 1:
             next;
-            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 63 AND HP / LV > 5 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND ID NOT IN (1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1964, 1968, 1970, 1971, 1972, 1973, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
+            setarray .@id[0],1002,1007,1049,1113,1063,1010,1011,1050,1011,1012,1009,1051,1167,1005,1004,1107,1052,1053,1161,1076,1175,1070,1020,1094,1068,1024,1031,1074,1242,1174,1018,1055,1095,1042,1162,1104,1145,1266,1128,1145,1054,1105,1066,1077,1019,1033,1176,1254,1114,1057;
+            setarray .@count[0],7,6,5,10,8,5,4,5,4,5,2,7,7,5,7,7,8,7,7,4,6,5,7,6,4,9,5,4,4,7,4,8,5,7,7,7,6,5,7,6,7,4,6,7,7,7,3,4,5,8;
             goto L_ListMobs;
         case 2:
             next;
-            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 119 AND HP / (LV + (LV * (LV/74))) > 63 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 2014, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
-            goto L_ListMobs;
-        case 3:
-            next;
-            query_sql("SELECT ID FROM mob_db WHERE LV BETWEEN (" + BaseLevel + " * 0.7) +- 5 AND (" + BaseLevel + " * 0.7) + 5 AND HP / (LV + (LV * (LV/74))) < 176 AND HP / (LV + (LV * (LV/74))) > 119 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1519, 1520, 1609, 1722, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 2014, 2019, 2020, 2021, 2023, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
-            goto L_ListMobs;
-        case 4:
-            next;
-            query_sql("SELECT ID FROM mob_db WHERE HP / (LV + (LV * (LV/74))) < 515 AND HP / (LV + (LV * (LV/74))) > 176 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1198, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1399, 1502, 1519, 1520, 1609, 1626, 1722, 1731, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1889, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 1980, 2009, 2014, 2019, 2020, 2021, 2023, 2026, 2068, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY LV ASC", .@id);
-            goto L_ListMobs;
-        case 5:
-            next;
-            query_sql("SELECT ID FROM mob_db WHERE HP / (LV + (LV * (LV/74))) > 515 AND (EXP / JEXP) < 5 AND Drop1id NOT LIKE 0 AND Sprite NOT LIKE '%_1' AND Sprite NOT LIKE '%_2' AND Sprite NOT LIKE '%_3' AND Sprite NOT LIKE '%_4' AND Sprite NOT LIKE '%_5' AND Sprite NOT LIKE 'POTON%' AND Sprite NOT LIKE 'PLASMA%' AND ID NOT IN (1008, 1047, 1097, 1048, 1062, 1183, 1184, 1185, 1198, 1212, 1220, 1221, 1229, 1230, 1231, 1232, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1244, 1245, 1247, 1399, 1502, 1519, 1520, 1609, 1626, 1722, 1731, 1789, 1840, 1841, 1842, 1843, 1844, 1846, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862, 1889, 1901, 1964, 1968, 1969, 1970, 1971, 1972, 1973, 1980, 2009, 2014, 2019, 2020, 2021, 2023, 2026, 2068, 2069, 2070, 2071, 2072, 2073, 2074) ORDER BY HP ASC", .@id);
+            setarray .@id[0],1002,1007,1049,1113,1063,1010,1011,1050,1011,1012,1009,1051,1167,1005,1004,1107,1052,1053,1161,1076,1175,1070,1020,1094,1068,1024,1031,1074,1242,1174,1018,1055,1095,1042,1162,1104,1145,1266,1128,1145,1054,1105,1066,1077,1019,1033,1176,1254,1114,1057;
+            setarray .@count[0],7,6,5,10,8,5,4,5,4,5,2,7,7,5,7,7,8,7,7,4,6,5,7,6,4,9,5,4,4,7,4,8,5,7,7,7,6,5,7,6,7,4,6,7,7,7,3,4,5,8;
             goto L_ListMobs;
     }
     next;
 
 L_ListMobs:
-    if(!.@id[0]) {
-        emotion ET_SWEAT;
-        cutin "3rd_sc_doomk01.bmp", 2;
-        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "I'm afraid there are no appropriate targets for you at your current level in this category.";
-        next;
-        goto L_Missions;
-    }
-
     set .@huntmenu$, "";
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
         if (.@i) set .@huntmenu$,.@huntmenu$+":";
@@ -107,7 +106,7 @@ L_ListMobs:
     }
     set .@selection, select(.@huntmenu$);
     set .@mobToHunt, .@id[.@selection - 1];
-    set .@amnt, 10;
+    set .@amnt, .@count[.@selection - 1];
 
 L_OnMissionInfo:
     next;
