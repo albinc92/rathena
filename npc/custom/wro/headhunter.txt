@@ -48,16 +48,31 @@
     mes "Hummm... Are you looking to do some headhunting?";
     next;
 
-    switch(select("Yes:No")) {
+L_Main:
+    switch(select("Start a headhunt:Information")) {
         case 1:
             next;
     		goto L_Missions;
     }
 
-    emotion ET_SWEAT;
     cutin "3rd_sc_doomk01.bmp", 2;
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "No? Then be on your way...";
+    mes "I am a member of the Headhunters Association.";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Our association is concerned with keeping the roaming monsters around these lands in check.";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "If you want to aid us in this cause, you're certainly welcome to.";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Just speak to me about ^ff0000Starting a headhunt^000000 and the association will reward you with Zeny and Experience upon killing your targeted monster(s).";
+
+    goto L_Main;
+
     close2;
     cutin "",255;
     end;
