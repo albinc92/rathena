@@ -1,0 +1,124 @@
+//===== rAthena Script =======================================
+//= Vending Square
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Vending square logic for map Royal, server WarboundRO.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//============================================================
+
+royal,97,151,6	script	Vending Manager	10123,{
+	cutin "mark_wt_1",2;
+	mes "[Vending Manager]";
+	mes "Greetings adventurer. How can I assist you?";
+	next;
+	set .@menu, select("Information:Vending Commands:Buying Store License(s):Cancel");
+	if (.@menu == 1) {
+		goto L_Information;
+	} else if (.@menu == 2) {
+		goto L_Commands;
+	} else if (.@menu == 3) {
+		goto L_License;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Good bye!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+L_Information:
+	mes "[Vending Manager]";
+	mes "Vending is prohibited throughout almost the entirety of Royal, with one exception.";
+	next;
+	mes "[Vending Manager]";
+	mes "One may open up shop anywhere on the western plaza, located just behind me.";
+	next;
+	cutin "mark_wt_4",2;
+	mes "[Vending Manager]";
+	mes "As long as the shop is located within the confines of the lantern posts.";
+	close2;
+	cutin "", 255;
+	end;
+
+L_Commands:
+	mes "[Vending Manager]";
+	mes "There are two super useful ^ff0000@commands^000000 that you can use to help navigate the ruckus of the trade plaza.";
+	next;
+	mes "[Vending Manager]";
+	mes "These are the ^ff0000@whosell^000000 and ^ff0000@whobuy^000000 commands.";
+	next;
+	cutin "mark_wt_4",2;
+	mes "[Vending Manager]";
+	mes "Go ahead, try them yourself!";
+	next;
+	cutin "mark_wt_1",2;
+	mes "[Vending Manager]";
+	mes "Just specify an ^ff0000Item ID^000000 that you would wish to know about.";
+	next;
+	mes "[Vending Manager]";
+	mes "For instance, you could type ^ff0000@whosell 909^000000 to learn about shops that sell the item Jellopy.";
+	next;
+	mes "[Vending Manager]";
+	mes "If you don't know the ID of Jellopy for instance, you can either use the ^ff0000@iteminfo Jellopy^000000 command, or search it up online!";
+	next;
+	cutin "mark_wt_4",2;
+	mes "[Vending Manager]";
+	mes "Hope you got all that.";
+	close2;
+	cutin "", 255;
+	end;
+
+L_License:
+	mes "[Vending Manager]";
+	mes "I sell ^ff0000Buying Store Licenses^000000 that you can use to set up a ^ff0000Buying Store^000000. They cost 500z a piece.";
+	next;
+	set .@menu, select("Buy:Cancel");
+	if (.@menu == 1) {
+	    cutin "mark_wt_1",2;
+        mes "[Vending Manager]";
+        mes "How many would you like to buy today?";
+        input .@amnt;
+        next;
+        if(.@amnt <= 0) {
+            mes "["+strnpcinfo(1)+"]";
+            mes "Very funny!";
+            close2;
+            cutin "", 255;
+            end;
+        }
+        if (Zeny < (.@amnt * 500)) {
+            mes "["+strnpcinfo(1)+"]";
+            mes "You do not have enough Zeny, I'm afraid.";
+            close2;
+            cutin "", 255;
+            end;
+        }
+        set Zeny, Zeny - (.@amnt * 500);
+        getitem 12548, .@amnt;
+        mes "["+strnpcinfo(1)+"]";
+        mes "Thank you for your patronage!";
+        close2;
+        cutin "", 255;
+        end;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Good bye!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}
+
+-	script	vend_slot	-1,{
+OnInit:
+	setcell "royal",0,0,500,500,cell_novending,1;
+	setcell "royal",26,173,49,126,cell_novending,0;
+	setcell "royal",50,161,88,138,cell_novending,0;
+}

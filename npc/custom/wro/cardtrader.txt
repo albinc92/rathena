@@ -1,0 +1,126 @@
+//= Card Trader
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= NPC that deals with overflowing cards by allowing trading
+//= 3 cards for OCAs, 3 OCAs for Mystical card albums, etc.
+//============================================================
+
+roy_in02,178,11,2	script	Alleyway Jack	853,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Oi, you! Yeah you! You lookin' to get rid of some spare cards or albums?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Tell you what, I'll trade ya ^ff00001 Card Token^000000 for each Card ya give me, and ^ff00002 Card Tokens^000000 for each Old Card Album you give me.";
+	next;
+	goto L_Main;
+
+L_Main:
+	mes "["+strnpcinfo(1)+"]";
+	mes "So... what's it gon' be ye?";
+	next;
+	set .@menu, select("Cards:Old Card Albums:Information:Cancel");
+	if (.@menu == 1) {
+		goto L_Card;
+	} else if (.@menu == 2) {
+		goto L_OCA;
+	} else if (.@menu == 3) {
+		goto L_Information;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Oi! You know where to find me!";
+		close;
+	}
+
+L_OCA:
+	mes "["+strnpcinfo(1)+"]";
+	mes "How many would you like to trade?";
+	input .@amnt;
+	next;
+	if(.@amnt <= 0) {
+		mes "["+strnpcinfo(1)+"]";
+		mes "You what?";
+		close;
+	}
+	if (countitem(616) < .@amnt) {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Oi! You don't even have that many!";
+		close;
+	}
+	delitem 616, .@amnt;
+	getitem 40112, (.@amnt * 2);
+	mes "["+strnpcinfo(1)+"]";
+	mes "Pleasure doin' business with ya!";
+	close;
+
+L_Card:
+	getinventorylist;
+    for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+		if(getiteminfo(@inventorylist_id[.@i],2) == 6) {
+        	.@menu$ = .@menu$ + (.@i > 0 ? ":" : "") + getitemname(@inventorylist_id[.@i]) + " (^ff0000" + countitem(@inventorylist_id[.@i]) + "x^000000)";
+        	set .@replicaindex[.@j],.@i;
+        	.@j++;
+        }
+	}
+
+	if(.@menu$ == "") {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Ya tryin' to pull my leg 'ere? Ya don't even have a single card!";
+		close2;
+		cutin "", 255;
+		end;
+	}
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Which card would ya like to trade?";
+	next;
+
+	.@i = select( .@menu$ ) - 1;
+	
+	mes "["+strnpcinfo(1)+"]";
+	mes "How many would you like to trade?";
+	input .@amnt;
+	next;
+
+	if(.@amnt <= 0) {
+		mes "["+strnpcinfo(1)+"]";
+		mes "You what?";
+		close;
+	}
+
+	if (countitem(@inventorylist_id[.@replicaindex[.@i-1]]) >= .@amnt) {
+		delitem @inventorylist_id[.@replicaindex[.@i-1]], .@amnt;
+		getitem 40112, .@amnt;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Oi! You don't even have that many!";
+		close;
+	}
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Pleasure doin' business with ya!";
+	close;
+
+L_Information:
+	mes "["+strnpcinfo(1)+"]";
+	mes "If you're lookin' to get rid of some ol' cards you got lyin' about, I'm your man!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "I'll trade ya ^ff00001 Card Token^000000 for each card ya give me.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "And ^ff00002 Card Tokens^000000 for each Old Card Album ya give me.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You can trade in ya tokens for various goodies down at the ^ff0000Supply Master^000000 inside the ^ff0000Imperial Senate Building^000000.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Got all that? Good, let's get down to business.";
+	next;
+	goto L_Main;
+
+}

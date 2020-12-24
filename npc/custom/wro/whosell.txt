@@ -1,0 +1,96 @@
+//===== Rathena Script =======================================
+//= @whosell command script
+//= Gathering professions
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Adds atcommands that display location of sellers of
+//= specific items, or buyers of them.
+//============================================================
+
+-	script	WhosellAtCommand	-1,{
+    end;
+
+OnAtcommandWhoSell:
+    // Check syntax
+    if(.@atcmd_numparameters > 1 || !.@atcmd_numparameters) {
+        dispbottom "@whosell <item_id>";
+        end;
+    }
+
+    //SQL Query
+    set .@itemID, .@atcmd_parameters$[0];
+	query_sql("SELECT vi.price, ci.amount, v.title, v.map, v.x, v.y FROM vendings AS v INNER JOIN vending_items AS vi ON vi.vending_id = v.id INNER JOIN cart_inventory AS ci ON ci.id = vi.cartinventory_id WHERE ci.nameid = " + .@itemID +" ORDER BY vi.price LIMIT 5;", .@price, .@amount, .@title$, .@map$, .@x, .@y);
+
+    // No shops found
+	if(getarraysize(.@price) < 1) {
+	    dispbottom "No shops found.";
+	    end;
+	}
+
+	// Check map for shops and add a map marker
+	viewpoint 2,237,41,2,0xFF0000;
+	viewpoint 2,237,41,3,0xFF00FF;
+	viewpoint 2,46,345,4,0xFF00FF;
+	viewpoint 2,175,220,5,0xFF00FF;
+	viewpoint 2,175,220,6,0xFF00FF;
+    for(set .@i, 0; .@i < getarraysize(.@price); .@i++) {
+        if(strcharinfo(3) == .@map$[.@i]) {
+            viewpoint 1,.@x[.@i],.@y[.@i],3,0xFF00FF;
+            break;
+        }
+    }
+
+    // Display info
+	dispbottom "Shop info for item '" + getitemname(.@itemID) + "' :";
+    for(set .@i, 0; .@i < getarraysize(.@price); .@i++) {
+        dispbottom .@title$ + "   |   " + .@map$ + " " + .@x + ", " + .@y + "   |   " + .@amount + " PC(s), " + .@price + "z ea.";
+    }
+	end;
+
+OnAtcommandWhoBuy:
+    if(.@atcmd_numparameters > 1 || !.@atcmd_numparameters) {
+        dispbottom "@whobuy <item_id>";
+        end;
+    }
+
+    //SQL Query
+    set .@itemID, .@atcmd_parameters$[0];
+	query_sql("SELECT b.title, b.map, b.x, b.y, bi.amount, bi.price FROM buyingstores AS b INNER JOIN buyingstore_items AS bi ON bi.buyingstore_id = b.id WHERE bi.item_id = " + .@itemID + " ORDER BY bi.price LIMIT 10;", .@title$, .@map$, .@x, .@y, .@amount, .@price);
+
+    // No shops found
+	if(getarraysize(.@price) < 1) {
+	    dispbottom "No shops found.";
+	    end;
+	}
+
+	// Check map for shops and add a map marker
+	viewpoint 2,237,41,2,0xFF0000;
+	viewpoint 2,237,41,3,0xFF00FF;
+	viewpoint 2,46,345,4,0xFF00FF;
+	viewpoint 2,175,220,5,0xFF00FF;
+	viewpoint 2,175,220,6,0xFF00FF;
+    for(set .@i, 0; .@i < getarraysize(.@price); .@i++) {
+        if(strcharinfo(3) == .@map$[.@i]) {
+            viewpoint 1,.@x[.@i],.@y[.@i],3,0xFF00FF;
+            break;
+        }
+    }
+
+    // Display info
+	dispbottom "Buying store info for item '" + getitemname(.@itemID) + "' :";
+    for(set .@i, 0; .@i < getarraysize(.@price); .@i++) {
+        dispbottom .@title$ + "   |   " + .@map$ + " " + .@x + ", " + .@y + "   |   " + .@amount + " PC(s), " + .@price + "z ea.";
+    }
+	end;
+
+OnInit:
+	bindatcmd "whosell",strnpcinfo(3) + "::OnAtcommandWhoSell";
+	bindatcmd "whobuy",strnpcinfo(3) + "::OnAtcommandWhoBuy";
+	end;
+
+}

@@ -1,0 +1,1227 @@
+//= Gathering professions
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Harvest nodes for ingredients and increase your profession
+//= level. Craft stat foods from herbalism ingredients, or
+//= craft gems which can be socketed into your gear from
+//= materials you find in mineral nodes. Enchant your gear
+//= with Scrolls that generate magical bonuses to your
+//= equipment.
+//============================================================
+
+// NPCs
+roy_in02,63,60,2	script	Secretary#crafting	982,{
+	cutin "3rd_gn_demi01",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hello and welcome to the ^ff0000Craftmen's Guild^000000! What can I help you with today?";
+	next;
+	set .@menu, select("Information about Professions:Cancel");
+	if (.@menu == 1) {
+		goto L_Information;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Goodbye! Come see me again if you need any further assistance.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+L_Information:
+	mes "["+strnpcinfo(1)+"]";
+	mes "I'm glad you asked! Having a profession is crucial if you want to maximize your personal capabilities!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "There are three different professions you can pick from: ^ff0000Herbalism^000000, ^ff0000Mining^000000, and ^ff0000Enchanting^000000.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Each profession requires you to harvest nodes that can be found throughout various dungeons.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Whenever you harvest a node, you will gain 1-3 skill levels to your profession.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You must have the correct tool in your inventory to do this.";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Having successfully harvested a node, it will drop valuable materials for you!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Collect these materials and either sell them, or use them to craft powerful items!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "To learn more about each profession and what type of items you can craft, see the ^ff0000Profession Trainers^000000 in the room down past that sofa!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hope you got all that. Goodbye!";
+	close2;
+	cutin "", 255;
+	end;
+
+}
+
+roy_in02,29,73,5	script	Herbalism Trainer#crafting	490,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Greeetings Noorman. Whaat is on youur mind?";
+	next;
+	set .@menu, select("Become a Herbalist:About Herbalism:Cancel");
+	if (.@menu == 1) {
+		goto L_Train;
+	} else if (.@menu == 2) {
+		goto L_About;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fareweeell~~";
+	}
+	close;
+
+L_Train:
+	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
+	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
+	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	mes "["+strnpcinfo(1)+"]";
+	if(.@Herbalism) {
+	    mes "Very fuunnyy normaan. Yoou aalready knoow this profession~~";
+	    close;
+	} else if(.@Mining || .@Enchanting) {
+	    goto L_Train2;
+	}
+	mes "Sooo youu wouuld like too learn thee ^ff0000Herbalism^000000 profession hmmm?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "Veery weell.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fareweeell~~";
+	}
+	close;
+
+L_Train2:
+	mes "I aam afraaid you already knoow another professioon. Do youu want to leaarn ^ff0000Herbalism^000000 insteaaad?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Yoou will unleaarn youur oother profession. Is that aalright wiith youu?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "Veery weell.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fareweeell~~";
+	}
+	close;
+
+L_ChangeProf:
+	mes "["+strnpcinfo(1)+"]";
+	mes "I heeereby proclaim yoou aan alchemist!";
+	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",1,0,0)");
+	specialeffect2 568;
+	message strcharinfo(0),"You have learnt the [Herbalism] profession.";
+	close;
+
+L_About:
+	mes "["+strnpcinfo(1)+"]";
+	mes "^ff0000Herbalism^000000 is the fiiine art of colleecting and uuutilizing the magical proopertiies of vaarious plants.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Youu need to haave a ^ff0000Field Shovel^000000 in youur inventoory in order to haarvest plant nodes.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Materials gaained from haarvesting plant nodes caan bee used to craaft vaarious ^ff0000Status Boosting Foods^000000.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "To leaarn moore about whaat ^ff0000Status Foods^000000 youu caan craaft, see the tablooids in the oother room across thee haaall froom this oone.";
+	close;
+
+}
+
+roy_in02,27,73,5	script	Mining Trainer#crafting	848,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Yo! What can I do ya for?";
+	next;
+	set .@menu, select("Become a Miner:About Mining:Cancel");
+	if (.@menu == 1) {
+		goto L_Train;
+	} else if (.@menu == 2) {
+		goto L_About;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Cya around!";
+	}
+	close;
+
+L_Train:
+	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
+	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
+	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	mes "["+strnpcinfo(1)+"]";
+	if(.@Mining) {
+	    mes "Hey don't try to play me! I can tell you already know this trade!";
+	    close;
+	} else if(.@Herbalism || .@Enchanting) {
+	    goto L_Train2;
+	}
+	mes "Interested in becoming a ^ff0000Mining^000000 professional hmmm?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "Well alright then.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Cya around!";
+	}
+	close;
+
+L_Train2:
+	mes "Seems like you're already rollin with another profession. You wanna become a ^ff0000Miner^000000 instead right?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You'll have to unlearn your previous profession. That alright with you?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "That's what I'm talking about.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Cya.";
+	}
+	close;
+
+L_ChangeProf:
+	mes "["+strnpcinfo(1)+"]";
+	mes "I hereby proclaim you Miner extraordinaire!";
+	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,1,0)");
+	specialeffect2 568;
+	message strcharinfo(0),"You have learnt the [Mining] profession.";
+	close;
+
+L_About:
+	mes "["+strnpcinfo(1)+"]";
+	mes "I'll tell ya! ^ff0000Mining^000000 is the process of harvesting minerals and using their magical minerals to power up your gear!";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You need an ^ff0000Old Pick^000000 on your personage first before you can start mining away though.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The magical gemstones you mine up can be used to craft ^ff0000Socketing Minerals^000000 that can be inserted into your armor to give them a nice power-up!";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "To learn more about these awesome ^ff0000Socketing Minerals^000000 and how to craft them, look up the tabloids in the other room across the hall from this one!";
+	close;
+
+}
+
+roy_in02,25,73,5	script	Enchanting Trainer#crafting	618,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hail, adventurer. What brings you to me?";
+	next;
+	set .@menu, select("Become an Enchanter:About Enchanting:Cancel");
+	if (.@menu == 1) {
+		goto L_Train;
+	} else if (.@menu == 2) {
+		goto L_About;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fare thee well.";
+	}
+	close;
+
+L_Train:
+	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
+	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
+	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	mes "["+strnpcinfo(1)+"]";
+	if(.@Enchanting) {
+	    mes "Very amusing, the records show that you already know this profession. Good day.";
+	    close;
+	} else if(.@Mining || .@Herbalism) {
+	    goto L_Train2;
+	}
+	mes "So you would like to become an ^ff0000Enchanter^000000, correct?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "Very well.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fare thee well.";
+	}
+	close;
+
+L_Train2:
+	mes "According to our records, you already know a previous profession. Would you like to become an ^ff0000Enchanter^000000 instead?";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You will have to unlearn your previous profession, is this agreeable with you?";
+	next;
+	set .@menu, select("Yes:Cancel");
+	if (.@menu == 1) {
+	    mes "["+strnpcinfo(1)+"]";
+	    mes "As you wish.";
+	    next;
+		goto L_ChangeProf;
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "Fare thee well.";
+	}
+	close;
+
+L_ChangeProf:
+	mes "["+strnpcinfo(1)+"]";
+	mes "I am proud to announce you an Enchanter!";
+	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,0,1)");
+	specialeffect2 568;
+	message strcharinfo(0),"You have learnt the [Enchanting] profession.";
+	close;
+
+L_About:
+	mes "["+strnpcinfo(1)+"]";
+	mes "^ff0000Enchanting^000000 is the ever so delicate process of harnessing the ^ff0000Magical Properties^000000 you might find on equipment looted from slain monsters.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "You must use an ^ff0000Old Magicbook^000000 in order to do this.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Simply activate the spellbook and select which magical item you would wish to harness energy from.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Note that the targeted item will loose its magical properties once the harnessing process has been completed.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Upon completing this process you will receive some ^ff0000Magical Residue^000000.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The amount of residue you will receive is directly tied to the amount of magic bound to the item you harnessed from.";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The residue can in turn be used to enchant items with ^ff0000Random Magical Bonusses^000000!";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Simply use an ^ff0000Old Magicbook^000000 again and use its powers to enchant the item of your choice!";
+    next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "To learn more about which bonuses you might generate in this way, see the tabloids in the other room across the hall from this one.";
+	close;
+
+}
+
+royal,221,115,2	script	Signpost#crafting1	837,{
+	end;
+OnInit:
+	waitingroom "Craftsmen's Guild",0;
+}
+
+roy_in02,65,61,2	script	Signpost#crafting2	837,{
+	end;
+OnInit:
+	waitingroom "Service Desk",0;
+}
+
+
+
+// Merchants
+roy_in02,64,68,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000
+
+
+
+// AtCommands
+-	script	ProfessionAtCommand	-1,{
+    end;
+
+OnAtcommand:
+	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
+	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
+	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	dispbottom "--------------- Gathering Skill Values --------------";
+	dispbottom "Herbalism ~ (" + .@Herbalism + " / 300)";
+	dispbottom "Mining ~ (" + .@Mining + " / 300)";
+	dispbottom "Enchanting ~ (" + .@Enchanting + " / 300)";
+	dispbottom "-------------------------------------------------------------";
+	end;
+
+OnInit:
+    query_sql("REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1006");
+    //query_sql("UPDATE `item_db2` SET `script` = 'callfunc "F_CashStore";' WHERE `id` = 1006");
+    query_sql("UPDATE `item_db2` SET `type` = 2 WHERE `id` = 1006");
+    query_sql("CREATE TABLE IF NOT EXISTS `gathering` (`char_id` int(11) unsigned NOT NULL default '0',`Herbalism` int(11) NOT NULL default '0',`Mining` int(11) NOT NULL default '0',`Enchanting` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+	bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "prof",strnpcinfo(3) + "::OnAtcommand";
+	end;
+}
+
+
+
+// Functions
+// Param: <string_skilltype>
+function	script	checkprofession	{
+    query_sql("SELECT `" + getarg(0) + "` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@skillLv);
+	if(.@skillLv == 0) {
+		message strcharinfo(0),"You must have the [" + getarg(0) + "] profession in order to salvage this node.";
+	    end;
+	}
+	return;
+}
+
+// Param: <itemid_req>
+function	script	checkitem	{
+    if(countitem(getarg(0)) < 1) {
+		message strcharinfo(0),"You need to have an [" + getitemname(getarg(0)) + "] in your inventory in order to harvest this node.";
+		end;
+    }
+	return;
+}
+
+// Param: <string_skilltype>,<min_lvlreq>
+// Node Level 1 min_lvlreq: 1
+// Node Level 2 min_lvlreq: 61
+// Node Level 3 min_lvlreq: 121
+// Node Level 4 min_lvlreq: 181
+// Node Level 5 min_lvlreq: 241
+function	script	checkskilllv	{
+    query_sql("SELECT `" + getarg(0) + "` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@skillLv);
+	if(.@skillLv < getarg(1)) {
+		message strcharinfo(0),"Your [" + getarg(0) + "] skill level is too low to be able to salvage this node.";
+	    end;
+	}
+	return;
+}
+
+// Param: <string_skilltype>,<max_lvlreq>
+// Node Level 1 max_lvlreq: 60
+// Node Level 2 max_lvlreq: 120
+// Node Level 3 max_lvlreq: 180
+// Node Level 4 max_lvlreq: 240
+// Node Level 5 max_lvlreq: 300
+function	script	incgatherskill	{
+    query_sql("SELECT `" + getarg(0) + "` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@skillLv);
+	if(.@skillLv == 300) {
+	    return;
+	}
+	if(.@skillLv > getarg(1)) {
+		message strcharinfo(0),"Your [" + getarg(0) + "] skill level is too high to be able to learn anything by salvaging this node.";
+	    return;
+	}
+	set .@skillLv, .@skillLv + rand(1,3);
+	if(.@skillLv > 300) {
+	    set .@skillLv, 300;
+	    specialeffect2 568;
+	}
+	query_sql("UPDATE `gathering` SET `" + getarg(0) + "` = " + .@skillLv + " WHERE `char_id` = " + getcharid(0));
+	message strcharinfo(0),"Your [" + getarg(0) + "] skill increased to " + (.@skillLv) + "!";
+	specialeffect2 456;
+	return;
+}
+
+
+
+// Node location debug code, paste into a node code block
+//getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+//announce .map$ + " " + .x_npc + ", " + .y_npc, bc_all, "0x70dbdb";
+
+// ==========================================================
+// Herbs, Level 1
+// Up to Level 25 dungeons
+// ==========================================================
+anthell01,0,0,3	script	Green Stem#1	10229,{
+	callfunc "checkprofession","Herbalism";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+        end;
+    }
+
+	callfunc "checkitem",6381;
+	callfunc "checkskilllv","Herbalism",1;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Herbalism",60;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#2	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#23	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#24	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#25	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#26	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#27	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#28	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#29	10229
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#30	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#3	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#4	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#31	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#32	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#33	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#34	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#35	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#36	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#37	10229
+anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#38	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#5	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#6	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#39	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#40	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#41	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#42	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#43	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#44	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#45	10229
+beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#46	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#7	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#8	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#47	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#48	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#49	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#50	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#51	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#52	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#53	10229
+iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#54	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#9	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#10	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#55	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#56	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#57	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#58	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#59	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#60	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#61	10229
+iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#62	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#11	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#12	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#63	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#64	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#65	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#66	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#67	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#68	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#69	10229
+mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#70	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#13	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#14	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#71	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#72	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#73	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#74	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#75	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#76	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#77	10229
+mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#78	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#15	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#16	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#79	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#80	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#81	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#82	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#83	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#84	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#85	10229
+prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#86	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#17	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#18	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#87	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#88	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#89	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#90	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#91	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#92	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#93	10229
+prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#94	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#19	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#20	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#95	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#96	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#97	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#98	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#99	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#100	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#101	10229
+orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#102	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#21	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#103	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#104	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#105	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#106	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#107	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#108	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#109	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#110	10229
+pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#111	10229
+
+
+
+// ==========================================================
+// Herbs, Level 2
+// Up to Level 50 dungeons
+// ==========================================================
+ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
+	callfunc "checkprofession","Herbalism";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+        end;
+    }
+
+	callfunc "checkitem",6381;
+	callfunc "checkskilllv","Herbalism",61;
+
+    if(countitem(6381) < 1) {
+		message strcharinfo(0),"You need to have an [Field Shovel] in your inventory in order to harvest this node.";
+		end;
+    }
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Herbalism",120;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#2	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#3	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#4	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#5	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#6	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#7	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#8	10174
+mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#9	10174
+mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#10	10174
+ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#11	10174
+ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#12	10174
+gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#13	10174
+gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#14	10174
+gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#15	10174
+gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#16	10174
+gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#17	10174
+gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#18	10174
+prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#19	10174
+prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#20	10174
+ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#21	10174
+ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#22	10174
+mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#23	10174
+mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#24	10174
+mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#25	10174
+mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#26	10174
+orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#27	10174
+orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#28	10174
+pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#29	10174
+pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#30	10174
+pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#31	10174
+pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#32	10174
+pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#33	10174
+pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#34	10174
+pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#35	10174
+pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#36	10174
+um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#37	10174
+um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#38	10174
+um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#39	10174
+um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#40	10174
+
+
+
+// ==========================================================
+// Herbs, Level 3
+// Up to Level 75 dungeons
+// ==========================================================
+abyss_01,0,0,3	script	Wigglewort#1	527,{
+	callfunc "checkprofession","Herbalism";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+        end;
+    }
+
+	callfunc "checkitem",6381;
+	callfunc "checkskilllv","Herbalism",121;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Herbalism",180;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#2	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#3	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#4	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#5	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#6	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#7	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#8	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#9	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#10	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#11	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#12	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#13	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#14	527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#23	527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#24	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#25	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#26	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#27	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#28	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#29	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#30	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#31	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#32	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#33	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#34	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#35	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#36	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#37	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#38	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#39	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#40	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#41	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#42	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#43	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#44	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#45	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#46	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#47	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#48	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#49	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#50	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#51	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#52	527
+
+
+
+// ==========================================================
+// Herbs, Level 4
+// Up to Level 100 dungeons
+// ==========================================================
+abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
+	callfunc "checkprofession","Herbalism";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+        end;
+    }
+
+	callfunc "checkitem",6381;
+	callfunc "checkskilllv","Herbalism",181;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Herbalism",240;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#2	1816
+beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#3	1816
+beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#4	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#5	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#6	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#7	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#8	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#9	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#10	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#11	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#12	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#13	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#14	1816
+
+
+
+// ==========================================================
+// Herbs, Level 5
+// From Level 100 dungeons
+// ==========================================================
+nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
+	callfunc "checkprofession","Herbalism";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+        end;
+    }
+
+	callfunc "checkitem",6381;
+	callfunc "checkskilllv","Herbalism",241;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Herbalism",300;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+nyd_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#2	613
+dew_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#3	613
+dew_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#4	613
+
+
+
+// ==========================================================
+// Mining, Level 1
+// Up to Level 25 dungeons
+// ==========================================================
+anthell01,0,0,3	script	Iolite Deposit#1	3742,{
+	callfunc "checkprofession","Mining";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can mine the node.";
+        end;
+    }
+
+	callfunc "checkitem",7318;
+	callfunc "checkskilllv","Mining",1;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Mining",60;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#2	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#23	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#24	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#25	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#26	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#27	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#28	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#29	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#30	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#3	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#4	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#31	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#32	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#33	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#34	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#35	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#36	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#37	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#38	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#5	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#6	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#39	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#40	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#41	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#42	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#43	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#44	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#45	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#46	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#7	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#8	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#47	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#48	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#49	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#50	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#51	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#52	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#53	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#54	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#9	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#10	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#55	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#56	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#57	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#58	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#59	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#60	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#61	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#62	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#11	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#12	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#63	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#64	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#65	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#66	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#67	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#68	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#69	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#70	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#13	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#14	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#71	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#72	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#73	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#74	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#75	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#76	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#77	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#78	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#15	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#16	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#79	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#80	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#81	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#82	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#83	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#84	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#85	3742
+prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#86	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#17	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#18	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#87	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#88	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#89	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#90	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#91	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#92	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#93	3742
+prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#94	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#19	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#20	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#95	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#96	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#97	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#98	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#99	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#100	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#101	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#102	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#21	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#103	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#104	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#105	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#106	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#107	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#108	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#109	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#110	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#111	3742
+
+
+
+// ==========================================================
+// Mining, Level 2
+// Up to Level 50 dungeons
+// ==========================================================
+ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
+	callfunc "checkprofession","Mining";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can mine the node.";
+        end;
+    }
+
+	callfunc "checkitem",7318;
+	callfunc "checkskilllv","Mining",61;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Mining",120;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#2	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#3	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#4	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#5	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#6	1914
+iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#7	1914
+iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#8	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#9	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#10	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#11	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#12	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#13	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#14	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#15	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#16	1914
+gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#17	1914
+gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#18	1914
+prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#19	1914
+prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#20	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#21	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#22	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#23	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#24	1914
+mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#25	1914
+mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#26	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#27	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#28	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#29	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#30	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#31	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#32	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#33	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#34	1914
+pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#35	1914
+pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#36	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#37	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#38	1914
+um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#39	1914
+um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#40	1914
+
+
+
+// ==========================================================
+// Mining, Level 3
+// From Level 100 dungeons
+// ==========================================================
+abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
+	callfunc "checkprofession","Mining";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can mine the node.";
+        end;
+    }
+
+	callfunc "checkitem",7318;
+	callfunc "checkskilllv","Mining",121;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Mining",180;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#2	1915
+abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#3	1915
+abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#4	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#5	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#6	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#7	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#8	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#9	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#10	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#11	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#12	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#13	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#14	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#23	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#24	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#25	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#26	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#27	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#28	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#29	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#30	1915
+lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#31	1915
+lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#32	1915
+mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#33	1915
+mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#34	1915
+mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#35	1915
+mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#36	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#37	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#38	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#39	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#40	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#41	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#42	1915
+thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#43	1915
+thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#44	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#45	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#46	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#47	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#48	1915
+tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#49	1915
+tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#50	1915
+tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#51	1915
+tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#52	1915
+
+
+
+// ==========================================================
+// Mining, Level 4
+// From Level 100 dungeons
+// ==========================================================
+abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
+	callfunc "checkprofession","Mining";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can mine the node.";
+        end;
+    }
+
+	callfunc "checkitem",7318;
+	callfunc "checkskilllv","Mining",181;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Mining",240;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#2	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#3	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#4	1907
+juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#5	1907
+juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#6	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#7	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#8	1907
+odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#9	1907
+odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#10	1907
+thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#11	1907
+thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#12	1907
+thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#13	1907
+thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#14	1907
+
+
+
+// ==========================================================
+// Mining, Level 5
+// From Level 100 dungeons
+// ==========================================================
+nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
+	callfunc "checkprofession","Mining";
+
+    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+		message strcharinfo(0),"You have to get closer before you can mine the node.";
+        end;
+    }
+
+	callfunc "checkitem",7318;
+	callfunc "checkskilllv","Mining",241;
+
+    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
+    set .@MAX_ITEMS, 5;
+    progressbar "0xffff00",3;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	}
+	callfunc "incgatherskill","Mining",300;
+
+OnInit:
+	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
+	unitwarp getnpcid(0),.map$,-1,-1;
+	end;
+
+}
+nyd_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#2	10248
+dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#3	10248
+dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#4	10248

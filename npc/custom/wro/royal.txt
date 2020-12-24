@@ -1,0 +1,481 @@
+// Misc NPCs
+roy_in01,198,217,5	script	Empress Lyanna IX	640,{
+	cutin "gc_mayssel01",2;
+	mes "[Lyanna IX]";
+	mes "Hail, adventurer. I trust you enjoy your stay in Royal?";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+roy_in01,191,213,4	script	Minister Artemia	10182,{
+	cutin "16wol_ang",2;
+	mes "[Minister Artemia]";
+	mes "Can't you see I am very busy?";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+roy_in03,103,34,5	script	Orguk	826,{
+	mes "[Orguk]";
+	mes "We offer the best selection of weapons in the entire empire! Take a look a round!";
+	close;
+}
+
+royal,204,121,5	script	Mercenary	6046,{
+	mes "[Mercenary]";
+	mes "Speak to the contractor if you want something...";
+	close;
+}
+
+roy_in03,36,179,5	script	Rowley	46,{
+	mes "[Rowley]";
+	mes "Step right in!";
+	close;
+}
+
+royal,50,192,5	script	Ian	10056,{
+	cutin "verus_ian03",2;
+	mes "[Ian]";
+	mes "Come to gawk at the retired researcher eh?";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+royal,68,135,5	script	Tom	953,{
+	cutin "looke_rapez01",2;
+	mes "[Tom]";
+	mes "I just got this awesome sword from one of the nearby shops!";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+roy_in02,282,131,5	script	Old Man	866,{
+	mes "[Old Man]";
+	mes "If you're looking to get a card removed, this is the place! Speak with my wife. If not, get outta here!";
+	close;
+}
+
+royal,186,80,4	script	Piom#roy1	622,{
+	cutin "ep14_etran1",2;
+	mes "[Piom]";
+	mes "Royal is such an awesome city, don't you think?";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+royal,217,64,4	script	Biologist#roy	865,{
+	cutin "3rd_gn_dbris04",2;
+	mes "[Biologist]";
+	mes "Fascinating these people from the other world, would you not agree?";
+	next;
+	mes "[Biologist]";
+	mes "I'm currently writing an ethnographic report on their culture. This is too exciting!";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+royal,142,83,3	script	Sarah	10066,{
+	cutin "sarah_hero3",2;
+	mes "[Sarah]";
+	mes "Uh I get lost in this place all the time...";
+	next;
+	cutin "sarah_hero3_2",2;
+	mes "[Sarah]";
+	mes "I got two coupons for a so called ^ff0000Gemstone Socketing Service^000000. But I can't for the life of me find the store...";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+roy_in02,92,61,1	script	Fay	665,{
+	cutin "paycana_a",2;
+	mes "[Fay]";
+	mes "This place is just the best! I learn so much every day!";
+	next;
+	cutin "paycana_b ",2;
+	mes "[Fay]";
+	mes "Hum... I wonder where the rest of my classmates are though.";
+	next;
+	mes "[Fay]";
+	mes "Oh wait! That outing to juperos was supposed to be today!";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+roy_in02,177,27,1	script	Bard	625,{
+	cutin "nines01",2;
+	mes "[Bard]";
+	mes "Excuse me! I have to practice for tonights performance.";
+	close2;
+	cutin "", 255;
+	end;
+}
+
+
+
+// Wandering NPCs
+roy_in01,183,181,5	script	Maid	1737,{
+	end;
+OnInit:
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	while(1) {
+		sleep rand(2000,10000);
+		do {
+			.@x = .@x_npc + rand( -5,5 );
+			.@y = .@y_npc + rand( -5,5 );
+		}
+		while( !checkcell( .@map$,.@x,.@y,cell_chkpass ) );
+		npcwalkto .@x, .@y;
+		.@x_npc = .@x;
+		.@y_npc = .@y;
+	}
+}
+roy_in02,249,20,4	duplicate(Maid)	Maid#2	1737
+
+roy_in03,18,22,5	script	Homunculus	6004,{
+	end;
+OnInit:
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	while(1) {
+		sleep rand(2000,10000);
+		do {
+			.@x = .@x_npc + rand( -5,5 );
+			.@y = .@y_npc + rand( -5,5 );
+		}
+		while( !checkcell( .@map$,.@x,.@y,cell_chkpass ) );
+		npcwalkto .@x, .@y;
+		.@x_npc = .@x;
+		.@y_npc = .@y;
+	}
+}
+
+roy_in03,24,168,5	script	Mobster	1313,1,1,{
+	end;
+OnInit:
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	while(1) {
+		sleep rand(2000,10000);
+		do {
+			.@x = .@x_npc + rand( -5,5 );
+			.@y = .@y_npc + rand( -5,5 );
+		}
+		while( !checkcell( .@map$,.@x,.@y,cell_chkpass ) );
+		npcwalkto .@x, .@y;
+		.@x_npc = .@x;
+		.@y_npc = .@y;
+	}
+OnTouch:
+	npctalk "Mobster: Eyyy! Watch it, punk!";
+}
+
+roy_in02,43,114,5	script	Pet Rideword	1195,{
+	end;
+OnInit:
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	while(1) {
+		sleep rand(2000,10000);
+		do {
+			.@x = .@x_npc + rand( -5,5 );
+			.@y = .@y_npc + rand( -5,5 );
+		}
+		while( !checkcell( .@map$,.@x,.@y,cell_chkpass ) );
+		npcwalkto .@x, .@y;
+		.@x_npc = .@x;
+		.@y_npc = .@y;
+	}
+}
+
+roy_in02,283,133,1	script	Idun	1107,{
+	end;
+OnInit:
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	while(1) {
+		sleep rand(2000,10000);
+		do {
+			.@x = .@x_npc + rand( -5,5 );
+			.@y = .@y_npc + rand( -5,5 );
+		}
+		while( !checkcell( .@map$,.@x,.@y,cell_chkpass ) );
+		npcwalkto .@x, .@y;
+		.@x_npc = .@x;
+		.@y_npc = .@y;
+	}
+}
+
+
+
+// Refine & Repair NPCs
+royal,92,120,8	script	Apprentice Armsmith	85,{
+	callfunc "refinemain","Apprentice Armsmith",1;
+	end;
+}
+
+roy_in02,80,96,3	script	Repairsmith#roy	726,{
+	callfunc "repairmain","Repairsmith";
+	end;
+}
+
+roy_in02,74,106,4	script	Aleron	86,{
+	callfunc "phramain","Aleron";
+	end;
+}
+
+/*
+roy_in02,88,104,3	script	Master Armsmith	826,{
+	disable_items;
+	mes "[Master Armsmith]";
+	mes "I am the Armsmith";
+	mes "I can refine all kinds of weapons,";
+	mes "armor and equipment, so let me";
+	mes "know what you want to refine.";
+	next;
+
+	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
+	for(set .@i,1; .@i<=10; set .@i,.@i+1) {
+		if (getequipisequiped(.@indices[.@i])) {
+			set .@menu$, .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
+			set .@equipped,1;
+		}
+		set .@menu$, .@menu$ + ":";
+	}
+	if (.@equipped == 0) {
+		mes "[Master Armsmith]";
+		mes "I don't think I can refine any items you have...";
+		close;
+	}
+	set .@part, .@indices[ select(.@menu$) ];
+
+	if (!getequipisequiped(.@part)) //custom check
+		close;
+	if (!getequipisenableref(.@part)) {
+		mes "[Master Armsmith]";
+		mes "Go find another Blacksmith. You can't refine this thing.";
+		close;
+	}
+	if (getequiprefinerycnt(.@part) >= 10) {
+		mes "[Master Armsmith]";
+		mes "Hmm... someone perfected this already. I don't think I can work on it further.";
+		close;
+	}
+
+	.@price = getequiprefinecost(.@part, REFINE_COST_ENRICHED, REFINE_ZENY_COST);
+	.@material = getequiprefinecost(.@part, REFINE_COST_ENRICHED, REFINE_MATERIAL_ID);
+
+	// Make sure you have the neccessary items and Zeny to refine your items
+	// Determines chance of failure and verifies that you want to continue.
+	callsub S_RefineValidate,getequipweaponlv(.@part),.@material,.@price,.@part;
+
+	mes "[Master Armsmith]";
+	mes "Clang! Clang! Clang!";
+	if (getequippercentrefinery(.@part, true) > rand(100)) {
+		successrefitem .@part;
+		next;
+		mes "[Master Armsmith]";
+		mes "There you go! It's done.";
+		mes "It's been a while since I've made such a fine "+((getequipweaponlv(.@part))?"weapon":"armor")+". You must be happy because it has become stronger!";
+		close;
+	}
+	failedrefitem .@part;
+	next;
+	mes "[Master Armsmith]";
+	mes "Uuuuuuuuuummmmmph!!!";
+	next;
+	mes "[Master Armsmith]";
+	mes "...";
+	mes ".....";
+	mes ".......Huhuhuhuhu~";
+	mes "........It was your choice and my ability, no regret.";
+	close;
+
+S_RefineValidate:
+	.@weapon_lvl = getarg(0);
+	.@item_req = getarg(1);
+	set .@price, getarg(2);
+
+	// If the VIP system is enabled, the prices for non-VIP players are considerably higher.
+	if (VIP_SCRIPT && !vip_status(VIP_STATUS_ACTIVE)) {
+		switch(.@weapon_lvl){
+			case 0: set .@price, .@price * 10; break;
+			case 1: set .@price, .@price * 40; break;
+			case 2: set .@price, .@price * 50; break;
+			case 3: set .@price, .@price * 2; break;
+			case 4: set .@price, .@price * 2; break;
+		}
+	}
+
+	mes "[Master Armsmith]";
+	if (.@weapon_lvl)
+		mes "You want to refine a level "+ .@weapon_lvl +" weapon?";
+	mes "To refine that, you'll need to have one ^ff9999"+ getitemname(.@item_req) +"^000000 and "+ .@price +" zeny.";
+	mes "Would you like to continue?";
+	next;
+	if(select("Yes:No") == 1) {
+		if (getequippercentrefinery(getarg(3)) < 100) {
+			if (.@weapon_lvl) {
+				mes "[Master Armsmith]";
+				mes "Wow!!";
+				mes "This weapon probably";
+				mes "looks like it's been refined...";
+				mes "many times...";
+				mes "It may break if";
+				mes "you refine it again.";
+				next;
+				mes "And if it breaks,";
+				mes "you can't use it anymore!";
+				mes "All the cards in it and the properties ^ff0000will be lost^000000!";
+				mes "^ff0000Besides, the equipment will break!^000000";
+				mes "Are you sure you still want to continue?";
+				next;
+				if(select("Yes:No") == 2) {
+					mes "[Master Armsmith]";
+					mes "Good.";
+					mes "Because if the weapon breaks from unreasonable refining, then I get a bad mood, too.";
+					close;
+				}
+			} else {
+				mes "[Master Armsmith]";
+				mes "Giggle. Giggle. Oh, you have guts, daring to refine this.";
+				mes "You know it's pretty risky, don't you?";
+				next;
+				mes "If your defensive equipment is broken, you'll never be able to use it again.";
+				mes "Even your cards and your modifications will ^ff0000completely disappear^000000.";
+				//mes "Everything will disappear. As in... GONE!";
+				mes "Do you really wish to continue?";
+				next;
+				if(select("Yes:No") == 2) {
+					mes "[Master Armsmith]";
+					mes "What nonsense. You waste my precious time.";
+					mes "Get lost, punk.";
+					close;
+				}
+			}
+		}
+		if (countitem(.@item_req) > 0 && Zeny > .@price) {
+			delitem .@item_req,1;
+			set Zeny, Zeny - .@price;
+			return;
+		}
+		mes "[Master Armsmith]";
+		mes "Are these all you have?";
+		mes "I'm very sorry, but I can't do anything without all the materials. Besides, I deserve some payments for my work, don't I?";
+		close;
+	}
+	mes "[Master Armsmith]";
+	mes "I can't help it even if you're not happy about it...";
+	close;
+}
+*/
+
+
+
+// Wedding NPCs
+roy_in02,129,168,4	duplicate(Bishop#w)	Bishop#roy	60
+roy_in02,164,174,4	duplicate(Wedding Staff#w)	Wedding Staff#roy	71
+
+
+
+// Signposts
+royal,160,177,7	script	Signpost#arms	837,{
+	end;
+OnInit:
+	waitingroom "Orguk's Arms",0;
+}
+
+royal,220,179,3	script	Signpost#stylist	837,{
+	end;
+OnInit:
+	waitingroom "Longinus' Stylery",0;
+}
+
+royal,103,179,4	script	Signpost#arena	837,{
+	end;
+OnInit:
+	waitingroom "PvP Arena",0;
+}
+
+royal,68,196,4	script	Signpost#alche	837,{
+	end;
+OnInit:
+	waitingroom "Fiery Concoctions",0;
+}
+
+royal,104,119,1	script	Signpost#repair	837,{
+	end;
+OnInit:
+	waitingroom "Aleron's Smithy",0;
+}
+
+royal,80,120,1	script	Signpost#gems	837,{
+	end;
+OnInit:
+	waitingroom "The Warlock's Domain",0;
+}
+
+royal,129,166,5	script	Signpost#hq	837,{
+	end;
+OnInit:
+	waitingroom "Imperial Senate",0;
+}
+
+royal,184,178,3	script	Signpost#church	837,{
+	end;
+OnInit:
+	waitingroom "Church of St. Clements",0;
+}
+
+royal,181,84,5	script	Signpost#card	837,{
+	end;
+OnInit:
+	waitingroom "Card Remover",0;
+}
+
+royal,47,82,6	script	Signpost#mobster	837,{
+	end;
+OnInit:
+	waitingroom "The Mobster Tavern",0;
+}
+
+royal,47,202,6	script	Signpost#astro	837,{
+	end;
+OnInit:
+	waitingroom "Astronomer's Facility",0;
+}
+
+royal,221,57,3	script	Signpost#library	837,{
+	end;
+OnInit:
+	waitingroom "The Imperial Library",0;
+}
+
+royal,181,122,6	script	Signpost#bard	837,{
+	end;
+OnInit:
+	waitingroom "The Lonely Bard",0;
+}
+
+royal,76,65,8	script	Signpost#clan	837,{
+	end;
+OnInit:
+	waitingroom "Clan Hall",0;
+}
+
+royal,173,208,7	script	Signpost#socketing	837,{
+	end;
+OnInit:
+	waitingroom "Socketing Craftsman",0;
+}
+
+royal,86,98,4	script	Signpost#fild	837,{
+	mes "[Signpost]";
+	mes "Venture down the crypt at your own peril!";
+	close;
+OnInit:
+	waitingroom "Attention citizens!",0;
+}

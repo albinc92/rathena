@@ -1,0 +1,62 @@
+//===== rAthena Script =======================================
+//= Feeling Reset NPC
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Reset feelings for Star Gladiators.
+//============================================================
+
+royal,90,80,3	script	Feeling Resetter	644,{
+
+	cutin "arang01",2;
+	mes "["+strnpcinfo(0)+"]";
+	if (eaclass() != 263) {
+		mes "I'm sorry but I can only work with Taekwon Masters.";
+		close2;
+		cutin "",255;
+		end;
+	}
+	mes "What do you wish to reset?";
+	menu "Reset Feeling",feeling,"Reset Hatred",hatred;
+
+feeling:
+	next;
+	atcommand "@feelreset";
+	mes "["+strnpcinfo(0)+"]";
+	mes "Done.";
+	close2;
+	cutin "",255;
+	end;
+
+hatred:
+	next;
+	set PC_HATE_MOB_MOON, 0;
+	set PC_HATE_MOB_STAR, 0;
+	set PC_HATE_MOB_SUN, 0;
+	mes "["+strnpcinfo(0)+"]";
+	mes "Done.";
+	next;
+	mes "["+strnpcinfo(0)+"]";
+	mes "Hatred will be reset upon relogging.";
+	mes "Do you wish to relog now?";
+	menu "Relog now",relog,"Later",later;
+	end;
+
+relog:
+	next;
+	atcommand "@kick "+strcharinfo(0);
+	end;
+
+later:
+	next;
+	mes "["+strnpcinfo(0)+"]";
+	mes "Ok then, but don't forget changes won't take effect until you relog.";
+	close2;
+	cutin "",255;
+	end;
+
+}

@@ -1,0 +1,14 @@
+roy_in02,133,39,2	script	Bodystyle Changer	10007,{
+	if (getequipid(EQI_ACC_L) == 40000 || getequipid(EQI_ACC_R) == 40000) {
+		message strcharinfo(0),"Select your look: 0 (Default) or 1 (Alternative).";
+		input .@bodystyle;
+		if (.@bodystyle < 0 || .@bodystyle > 1) {
+			message strcharinfo(0),"Incorrect input.";
+		} else {
+			setlook LOOK_BODY2,.@bodystyle;
+		}
+	} else {
+		message strcharinfo(0),"You need to have a Seal of Transcendence equipped to change your bodystyle.";
+		end;
+	}
+}

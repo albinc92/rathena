@@ -1,0 +1,135 @@
+roy_in02,88,105,3	script	Deconstructor	10078,{
+
+	cutin "ep15_2_brt_1",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Yo! I can deconstruct your ^ff0000unidentified^000000 inventory items, reducing them to their base materials. Is this something you would like?";
+	next;
+	set .@menu, select("Deconstruct:Information:Cancel");
+
+	// DECONSTRUCT
+	if (.@menu == 1) {
+		getinventorylist;
+		for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+			if ( !@inventorylist_identify[.@i] ) {
+				set .@found, 1;
+
+				// IF WEAPON
+				if(getiteminfo(@inventorylist_id[.@i],2)==5) {
+					delitem @inventorylist_id[.@i],1;
+
+					// wLVL CHECK
+					if(getiteminfo(@inventorylist_id[.@i],13)==1) {
+						getitem 1010,1;
+						set .@rng, rand(1,3);
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==2) {
+						getitem 1011,1;
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==3) {
+						getitem 984,1;
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==4) {
+						getitem 984,1;
+					}
+				}
+
+				// IF ARMOR
+				if(getiteminfo(@inventorylist_id[.@i],2)==4) {
+					delitem @inventorylist_id[.@i],1;
+					getitem 985,1;
+				}
+			}
+		}
+
+		// COMPLETION CHECK
+		if(.@found) {
+			specialeffect 106,AREA,"Deconstructor";
+			set .@found, 0;
+			mes "["+strnpcinfo(1)+"]";
+			mes "There you go~";
+		} else {
+			mes "["+strnpcinfo(1)+"]";
+			mes "Looks like you don't have anything on you...";
+		}
+	}
+
+	// INFO
+	if (.@menu == 2) {
+		mes "["+strnpcinfo(1)+"]";
+		mes "If you can bring me any type of unidentified piece of equipment, I can deconstruct it for you.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Once deconstructed, an item will be converted back to its base material.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "A level 1 weapon will generate a Phracon, for instance. While a level 3 or 4 item will generate an Oridecon.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Any piece of armor will generate Elunium.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Got all that? Good.";
+	}
+
+	close2;
+	cutin "", 255;
+	end;
+}
+
+
+
+// HD METAL TEMPERING STOVES
+royal,93,116,0	script	HD Tempering Stove#2	111,1,1,{
+
+	mes "[Instructions]";
+	mes "Enter stacks of ^ff000010 Oridecon^000000 into the stove to produce ^ff00001 HD Oridecon^000000, or stacks of ^ff000010 Elunium^000000 into the stove to produce ^ff00001 HD Elunium^000000.";
+	next;
+	goto L_Main;
+
+L_Main:
+	set .@menu, select("Oridecon:Elunium:Cancel:");
+	if (.@menu == 1) {
+		goto L_Oridecon;
+	}if (.@menu == 2) {
+		goto L_Elunium;
+	}
+	if(.@menu == 3) {
+		close;
+	}
+
+L_Oridecon:
+	mes "How many ^ff0000HD Oridecon^000000 would I like to produce? (^ff000010 Oridecon^000000 ea.)";
+	input @test;
+	next;
+
+	// Item & input check
+	if(@test==0 || countitem(984)<(@test*10)) {
+		mes "It seems I don't have enough to produce that amount.";
+		close;
+	}
+
+	getitem 6240,@test;
+	delitem 984,(@test*10);
+	specialeffect 96,AREA,"HD Tempering Stove#2";
+	close;
+
+L_Elunium:
+	mes "How many ^ff0000HD Elunium^000000 would I like to produce? (^ff000010 Oridecon^000000 ea.)";
+	input @test;
+	next;
+
+	// Item & input check
+	if(@test==0 || countitem(985)<(@test*10)) {
+		mes "It seems I don't have enough to produce that amount.";
+		close;
+	}
+
+	getitem 6241,@test;
+	delitem 985,(@test*10);
+	specialeffect 96,AREA,"HD Tempering Stove#2";
+	close;
+
+OnInit:
+	waitingroom "HD Tempering Stove",0;
+
+}

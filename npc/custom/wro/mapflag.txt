@@ -1,0 +1,53 @@
+royal	mapflag	town
+royal	mapflag	nightenabled
+royal	mapflag	nobranch
+royal	mapflag	noicewall
+royal	mapflag	loadevent
+royal	mapflag	town
+royal	mapflag	pvp	off
+
+roy_in01	mapflag	town
+roy_in01	mapflag	nobranch
+roy_in01	mapflag	noicewall
+roy_in01	mapflag	nowarpto
+roy_in01	mapflag	noteleport
+roy_in01	mapflag	loadevent
+roy_in01	mapflag	novending
+roy_in01	mapflag	nomemo
+roy_in01	mapflag	nosave	SavePoint
+roy_in01	mapflag	pvp	off
+
+roy_in02	mapflag	town
+roy_in02	mapflag	nobranch
+roy_in02	mapflag	noicewall
+roy_in02	mapflag	nowarpto
+roy_in02	mapflag	noteleport
+roy_in02	mapflag	loadevent
+roy_in02	mapflag	novending
+roy_in02	mapflag	nomemo
+roy_in02	mapflag	nosave	SavePoint
+roy_in02	mapflag	pvp	off
+
+roy_in03	mapflag	town
+roy_in03	mapflag	nobranch
+roy_in03	mapflag	noicewall
+roy_in03	mapflag	nowarpto
+roy_in03	mapflag	noteleport
+roy_in03	mapflag	loadevent
+roy_in03	mapflag	novending
+roy_in03	mapflag	nomemo
+roy_in03	mapflag	nosave	SavePoint
+roy_in03	mapflag	pvp	off
+
+roy_pvp01	mapflag	nobranch
+roy_pvp01	mapflag	nowarpto
+roy_pvp01	mapflag	noteleport
+roy_pvp01	mapflag	novending
+roy_pvp01	mapflag	nomemo
+roy_pvp01	mapflag	nosave	SavePoint
+roy_pvp01	mapflag	loadevent
+roy_pvp01	mapflag	pvp
+
+guild_vs2	mapflag	loadevent
+guild_vs3	mapflag	loadevent
+guild_vs5	mapflag	loadevent

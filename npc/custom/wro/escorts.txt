@@ -1,0 +1,54 @@
+// Amatsu Dungeon
+ama_dun01,219,14,6	script	Shinobi	637,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Greetings adventurer. I know the maze herein like the back of my hand. Would you like me to escort you through? For a fee of course.";
+
+	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu == 1) {
+		if(zeny < 10000) {
+			mes "Ehm... you're broke!";
+		} else {
+			mes "Excellent, follow me!";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "ama_dun01", 222, 144;
+		}
+	} else {
+		mes "Oh. Very well then! Please note that the offer still stands, should you reconsider!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}
+// Labyrinth Forest
+prt_maze01,101,30,3	script	Hunter	727,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Greetings adventurer. I know this forest like the back of my hand. Would you like me to guide you through it? For a fee of course.";
+
+	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu == 1) {
+		if(zeny < 10000) {
+			mes "Ehm... you're broke!";
+		} else {
+			mes "Excellent, follow me!";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "prt_maze02", 93, 20;
+		}
+	} else {
+		mes "Oh. Very well then! Please note that the offer still stands, should you reconsider!";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+}

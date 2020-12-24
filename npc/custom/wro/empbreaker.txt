@@ -1,0 +1,141 @@
+roy_in02,132,122,4	script	Emperium Breaker	467,{
+
+	cutin "gc_verkhasel01",2;
+	mes "["+strnpcinfo(0)+"]";
+	mes "Soo, you think you got what it takes to be a premium Emperium Breaker, eh?";
+	next;
+	mes "["+strnpcinfo(0)+"]";
+	mes "Don't make me laugh... Though I guess I should commend you for your trying.";
+	next;
+	set .@menu, select("Warp to Break Room:Toplist:My Stats:Information:Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu==1) {
+		if(getareausers("job3_arch01",0,0,0,0) > 0) {
+			mes "Someone is already inside making a fool of themselves...";
+		} else {
+			if(getcharid(2) == 0) {
+				mes "You need to be with a guild to attack the Emperium. Come back later loser~~";
+				close2;
+				cutin "", 255;
+				end;
+			} else if(.occupied) {
+				mes "Someone got there before you, the room is occupied.";
+				close2;
+				cutin "", 255;
+				end;
+			}
+			set .occupied, 1;
+			killmonsterall "job3_arch01";
+			sc_end sc_ALL;
+			delwaitingroom;
+			waitingroom "Room: CLOSED",0;
+			warp "job3_arch01", 0, 0;
+			initnpctimer;
+		}
+	} else if(.@menu==2) {
+		set .@ladder, query_sql("SELECT `char_id`, `highscore` FROM `breakers` ORDER BY `highscore` ASC LIMIT 10", .@charid, .@score);
+		if(getarraysize(.@ladder) == 0) {
+			mes "There are no registered players yet.";
+		} else {
+			mes "The fastest breakers of all time are:";
+			mes " ";
+			for ( set .@i, 0; .@i < .@ladder; .@i++ ) {
+				query_sql("SELECT `name` FROM `char` WHERE `char_id` = " + .@charid[.@i], .@name$);
+				mes (.@i + 1) + ". " + .@name$ + " ~ ^FF0000" + .@score[.@i] + " milliseconds^000000";
+			}
+		}
+	} else if(.@menu==3) {
+		query_sql("SELECT COUNT(char_id) FROM `breakers` WHERE `char_id` = " + getcharid(0), .@recordExists);
+		if(!.@recordExists) {
+			mes "Yeah you haven't even broken the Emperium once. Enter the break room and break it first.";
+		} else {
+			query_sql("SELECT `highscore` FROM `breakers` WHERE `char_id` = " + getcharid(0), .@highscore);
+			mes "Let's see... your personal best is ^ff0000"+.@highscore+" milliseconds^000000.";
+		}
+	} else if(.@menu==4) {
+		mes "Alright here's how things work.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I can warp you into a room where I will spawn an Emperium for you to destroy as fast as you can.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Your efforts will be timed and ranked.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The top 5 breakers will be listed for fame and glory.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Oh yeah, and there can only be one breaker inside the room at any given time.";
+	} else {
+		mes "Yeah you really shouldn't embarass yourself.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnPCLoadMapEvent:
+	if(strcharinfo(3) == "job3_arch01") {
+		sleep 2000;
+		mapannounce "job3_arch01","Alright, you have three seconds to get ready...",bc_blue;
+		sleep 3000;
+		mapannounce "job3_arch01","3...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","2...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","1...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","Break it!",bc_blue;
+		monster "job3_arch01",29,28,"Emperium",1288,1,strnpcinfo(1)+"::OnBreak";
+	}
+	end;
+
+OnBreak:
+	.@time = getnpctimer(0);
+	stopnpctimer;
+	detachnpctimer;
+	query_sql("CREATE TABLE IF NOT EXISTS `breakers` (`char_id` int(11) unsigned NOT NULL default '0',`highscore` int(11) NOT NULL default '0',`times` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+	query_sql("SELECT COUNT(char_id) FROM `breakers` WHERE `char_id` = " + getcharid(0), .@recordExists);
+	if(!.@recordExists) {
+		query_sql("INSERT INTO `breakers` VALUES("+getcharid(0)+","+.@time+",0)");
+	}
+	query_sql("SELECT `highscore` FROM `breakers` WHERE `char_id` = " + getcharid(0), .@highscore);
+	if(.@highscore > .@time) {
+		query_sql("UPDATE `breakers` SET `highscore` = "+.@time+" WHERE `char_id` = " + getcharid(0));
+		mapannounce "job3_arch01","A new personal highscore! Your break time was " + .@time + " milliseconds.",bc_blue;
+	} else {
+		mapannounce "job3_arch01","Soo you managed to break it... your break time was " + .@time + " milliseconds.",bc_blue;
+	}
+	sleep 3000;
+	mapwarp "job3_arch01","roy_in02", 132, 114;
+	delwaitingroom;
+	waitingroom "Room: OPEN",0;
+	set .occupied, 0;
+	end;
+
+OnTimer30000:
+	mapannounce "job3_arch01","Yeah you're way too slow for this... I'll just kick you outta here~~",bc_blue;
+	sleep 3000;
+	delwaitingroom;
+	waitingroom "Room: OPEN",0;
+	set .occupied, 0;
+	mapwarp "job3_arch01","roy_in02", 132, 114;
+	end;
+
+OnInit:
+	waitingroom "Room: OPEN",0;
+	set .occupied, 0;
+	mapwarp "job3_arch01","roy_in02", 132, 114;
+	end;
+
+}
+
+
+
+// Mapflags
+job3_arch01	mapflag	nocommand	50
+job3_arch01	mapflag	gvg	on
+job3_arch01	mapflag	gvg_castle
+job3_arch01	mapflag	monster_noteleport
+job3_arch01	mapflag	nosave	SavePoint
+job3_arch01	mapflag	loadevent

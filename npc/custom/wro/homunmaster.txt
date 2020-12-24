@@ -1,0 +1,27 @@
+roy_in03,34,19,3	script	Homunculus Master	558,{
+
+if(Class == 18 || Class == 4019) goto L_OK;
+	mes "[Homunculus Master]";
+	mes "I speak only with Alchemists.";
+	close;
+
+L_OK:
+	if ( gethominfo(0) == null) {
+		goto L_homun;
+	}
+	if(gethominfo(6) == 250) {
+		mes "[Homunculus Master]";
+		mes "Your homunculus is already fully leveled.";
+	} else {
+		atcommand "@homlvl " + (BaseLevel - gethominfo(6));
+	}
+	close;
+	end;
+
+L_homun:
+	mes "[Homunculus Master]";
+	mes "You dont have Homunculus.";
+	close;
+	end;
+
+}

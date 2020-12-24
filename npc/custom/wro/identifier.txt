@@ -1,0 +1,94 @@
+//===== rAthena Script =======================================
+//= Identify NPC
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Identify all, or single items in inventory.
+//============================================================
+
+royal,177,177,3	script	Deckard Cain	743,{
+	cutin "job_sage_kayron",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Greetings. I am the greatest scholar on magical artifacts in all of Rune-Midgard. Would you like me to identify something for you?";
+
+	// Set cost
+	getinventorylist;
+	set .@cost, 0;
+	for(set .@a, 0; .@a < @inventorylist_count; .@a++ ) {
+		if (!@inventorylist_identify[.@a]) {
+			set .@cost, .@cost + 80;
+		}
+	}
+
+	// No items
+	if(!.@cost) {
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Return to me when you have something you need identified~";
+		close2;
+		cutin "", 255;
+		end;
+	}
+
+	// Menu
+	switch(select("Identify All Items (^ff0000"+.@cost+"z^000000):Identify Item (^ff000080z^000000):Cancel")) {
+
+	// Identify all
+	case 1:
+		if(Zeny < .@cost) {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Sorry,but you don't have enough Zeny!";
+			close2;
+			cutin "", 255;
+			end;
+		}
+
+		specialeffect 386;
+		set Zeny,Zeny - .@cost;
+		atcommand "@identifyall";
+
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Your items have been identified~";
+		close2;
+		cutin "", 255;
+		end;
+
+	// Identify single
+	case 2:
+		if(Zeny < 80) {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Sorry,but you don't have enough Zeny!";
+			close2;
+			cutin "", 255;
+			end;
+		}
+
+		specialeffect 386;
+		set Zeny,Zeny - .@cost;
+		atcommand "@identify";
+
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Your items have been identified~";
+		close2;
+		cutin "", 255;
+		end;
+
+	//Cancel
+	case 3:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Return to me when you have something you need identified~~";
+		close2;
+		cutin "", 255;
+		end;
+	}
+
+}

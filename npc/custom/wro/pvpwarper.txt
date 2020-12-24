@@ -1,0 +1,425 @@
+//===== rAthena Script =======================================
+//= PvP Scripts
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Various NPCs related to PvP. Killtracker scripts, mapflags
+//= etc. Marroll battle recruiter.
+//============================================================
+
+roy_in02,126,122,4	script	PvP Warper#1	10192,{
+setarray .@Map$[0],"roy_pvp01","guild_vs3","guild_vs2","guild_vs5";
+	if( BaseLevel <= 250 ) {
+		cutin "162elena_01",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Greetings, gladiator! What do you want today?";
+		next;
+		set .@menu, select("Battle:Toplist:My Stats:Information:Cancel");
+		if(.@menu==2) {
+			query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+			set .@ladder, query_sql("SELECT `char_id`, `score` FROM `pvp` ORDER BY `score` DESC LIMIT 10", .@charid, .@score);
+			mes "["+strnpcinfo(1)+"]";
+			if(getarraysize(.@ladder) == 0) {
+				mes "There are no registered players yet.";
+			} else {
+				mes "The highest scoring players this week are:";
+				mes " ";
+				for ( set .@i, 0; .@i < .@ladder; .@i++ ) {
+					query_sql("SELECT `name` FROM `char` WHERE `char_id` = " + .@charid[.@i], .@name$);
+					mes (.@i + 1) + ". " + .@name$ + " ~ ^FF0000" + .@score[.@i] + " points^000000";
+				}
+			}
+			close2;
+			cutin "", 255;
+			end;
+		}
+		if(.@menu==3) {
+			query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+			query_sql("SELECT `score` FROM `pvp` WHERE `char_id` = " + getcharid(0), .@pvpscore);
+			mes "["+strnpcinfo(1)+"]";
+			mes "Your weekly PvP Score is: ^FF0000" + .@pvpscore + " points^000000";
+			close2;
+			cutin "", 255;
+			end;
+		}
+		if(.@menu==4) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "My duty is to oversee transport for gladiators to the colosseum.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "There exists a few different arenas where unique rules apply.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "In ^0000ffNormal PvP^000000 there are no general rules. Everybody is free to join in on the fun.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "The same rules apply for ^0000ffChaos PvP^000000, in addition to some randomly generated gameplay features.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "In ^0000ffGuild vs. Guild^000000 you join up with your guildmates in glorious battle against your sworn antagonists.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "And lastly, in ^0000ffDuel^000000, players are expected to use the ^ff0000@duel <player_name>^000000 command to challenge each other in a civilized manner.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "In addition to all this, you will receive a ^0000ffPvP Token^000000 whenever you kill another player.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Make sure to salvage these tokens, as they can be traded for powerful items!";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Your ^0000ffPvP Score^000000 will also increase by 1 whenever you kill someone. Do note however, that your score will decrease by 1 if you die.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "There is no limit as to how high your PvP Score can rise. However, it can never fall below 0.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "These rules apply to almost all PvP-flagged maps in the game.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Oh yeah and before I forget... you will loose any magical effects while entering any of the aforementioned arenas.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "You got all that? Good.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+		if(.@menu==5) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "Cya.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+		mes "["+strnpcinfo(1)+"]";
+		mes "Where would you like to battle?";
+		switch(select("Normal [^FF0000"+getmapusers(.@Map$[0])+"^000000]:Chaos [^FF0000"+getmapusers(.@Map$[2])+"^000000]:Guild vs. Guild [^FF0000"+getmapusers(.@Map$[3])+"^000000]:Duel [^FF0000"+getmapusers(.@Map$[3])+"^000000]")) {
+		case 1:
+			next;
+			warp "roy_pvp01", 0, 0;
+			sc_end sc_ALL;
+			close2;
+			cutin "", 255;
+			end;
+		case 2:
+			next;
+			warp "guild_vs3", 0, 0;
+			sc_end sc_ALL;
+			close2;
+			cutin "", 255;
+			end;
+		case 3:
+			next;
+			warp "guild_vs2", 0, 0;
+			sc_end sc_ALL;
+			close2;
+			cutin "", 255;
+			end;
+		case 4:
+			next;
+			if(getmapusers(.@Map$[4])<2) {
+				warp "guild_vs5", 0, 0;
+				sc_end sc_ALL;
+			} else {
+				mes "["+strnpcinfo(1)+"]";
+				mes "I'm afraid this room is full.";
+				close2;
+				cutin "", 255;
+				end;
+			}
+			close2;
+			cutin "", 255;
+			end;
+		}
+	} else {
+		mes "["+strnpcinfo(1)+"]";
+		mes "I'm sorry, but you do not yet qualify for entering the PvP rooms.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You are required to be max level to enter.";
+		mes "Please come back again later.";
+		close2;
+		cutin "", 255;
+		end;
+	}
+
+
+OnPCLoadMapEvent:
+	if(strcharinfo(3) == "roy_pvp01" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
+		callsub OnUpdateWaitingRoom;
+	}
+	end;
+
+OnUpdateWaitingRoom:
+	setarray .@Map$[0],"roy_pvp01","guild_vs3","guild_vs2","guild_vs5";
+	for(set .@i, 0; .@i<getarraysize(.@Map$); .@i++) {
+		set .@users, .@users + getmapusers(.@Map$[.@i]);
+	}
+	delwaitingroom;
+	waitingroom "Users in PvP: " + .@users,0;
+	return;
+
+OnInit:
+	callsub OnUpdateWaitingRoom;
+	end;
+
+OnPCDieEvent:
+	if(strcharinfo(3) == "roy_pvp01" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
+		callsub OnUpdateWaitingRoom;
+	}
+	end;
+
+OnPCLogoutevent:
+	callsub OnUpdateWaitingRoom;
+	end;
+
+}
+
+
+
+//Statistics Script
+-	script	pvp	-1,{
+
+OnPCLoadMapEvent:
+	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+		set killcount, 0;
+		set combocount, 0;
+	}
+	end;
+
+OnPCKillEvent:
+	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+		query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+		query_sql("SELECT COUNT(char_id) FROM `pvp` WHERE `char_id` = " + getcharid(0), .@recordExists);
+		if(!.@recordExists) {
+			query_sql("INSERT INTO `pvp` VALUES(" + getcharid(0) + ",0)");
+		}
+		query_sql("UPDATE `pvp` SET `score` = `score` + 1 WHERE `char_id` = " + getcharid(0));
+		getmapxy( .@map$, .@x, .@y, BL_PC );
+		//getitem 40002,1;
+		query_sql("SELECT `score` FROM `pvp` WHERE `char_id` = " + getcharid(0), .@pvpscore);
+		message strcharinfo(0),"You killed " + rid2name(killedrid) + "! Your score has increased to " + .@pvpscore + "!";
+		set killcount, killcount + 1;
+		set combocount, combocount + 1;
+		deltimer strnpcinfo(0)+"::OnComboEnd";
+		addtimer 250,strnpcinfo(0)+"::OnComboEnd";
+	}
+	end;
+
+OnComboEnd:
+	getmapxy( .@map$, .@x, .@y, BL_PC );
+	if(combocount == 2) {
+		mapannounce .@map$,strcharinfo(0) + " just got a DOUBLE KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "double_kill.wav", 0, .@map$;
+	} else if(combocount == 3) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MULTI KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "multikill.wav", 0, .@map$;
+	} else if(combocount == 4) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MEGA KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "megakill.wav", 0, .@map$;
+	} else if(combocount == 5) {
+		mapannounce .@map$,strcharinfo(0) + " just got a ULTRA KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "ultrakill.wav", 0, .@map$;
+	} else if(combocount >= 6) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MONSTER KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "Monsterkill_F.wav", 0, .@map$;
+	}
+
+	// Kill Announcement
+	else if(killcount == 3) {
+		mapannounce .@map$,strcharinfo(0) + " is on a KILLING SPREE! (" + killcount + ")",bc_blue;
+		soundeffectall "killing_spree.wav", 0, .@map$;
+	} else if(killcount == 5) {
+		mapannounce .@map$,strcharinfo(0) + " is on a RAMPAGE! (" + killcount + ")",bc_blue;
+		soundeffectall "rampage.wav", 0, .@map$;
+	} else if(killcount == 10) {
+		mapannounce .@map$,strcharinfo(0) + " is DOMINATING! (" + killcount + ")",bc_blue;
+		soundeffectall "dominating.wav", 0, .@map$;
+	} else if(killcount == 15) {
+		mapannounce .@map$,strcharinfo(0) + " is UNSTOPPABLE! (" + killcount + ")",bc_blue;
+		soundeffectall "unstoppable.wav", 0, .@map$;
+	} else if(killcount == 20) {
+		mapannounce .@map$,strcharinfo(0) + " is GODLIKE! (" + killcount + ")",bc_blue;
+		soundeffectall "godlike.wav", 0, .@map$;
+	} else if(killcount >= 25 && killcount%5 == 0) {
+		mapannounce .@map$,strcharinfo(0) + " is WICKED SICK! (" + killcount + ")",bc_blue;
+		soundeffectall "WhickedSick.wav", 0, .@map$;
+	}
+
+	getitem 40002,combocount;
+	set combocount, 0;
+	end;
+
+OnPCDieEvent:
+	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+		query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
+		query_sql("SELECT COUNT(char_id) FROM `pvp` WHERE `char_id` = " + getcharid(0), .@recordExists);
+		if(!.@recordExists) {
+			query_sql("INSERT INTO `pvp` VALUES(" + getcharid(0) + ",0)");
+		}
+		query_sql("UPDATE `pvp` SET `score` = IF(`score` = 0, 0, `score` - 1) WHERE `char_id` = " + getcharid(0));
+		query_sql("SELECT `score` FROM `pvp` WHERE `char_id` = " + getcharid(0), .@pvpscore);
+		message strcharinfo(0),"You died. Your score has decreased to " + .@pvpscore + "!";
+
+		getmapxy( .@map$, .@x, .@y, BL_PC );
+
+		// Head hunted (streak breaker)
+		if(killcount >= 10) {
+			if(Sex) {
+				mapannounce .@map$,rid2name(killedrid) + " just HEAD-HUNTED " + strcharinfo(0) + "! Ending his killing streak of " + killcount + "!",bc_blue;
+			} else {
+				mapannounce .@map$,rid2name(killedrid) + " just HEAD-HUNTED " + strcharinfo(0) + "! Ending her killing streak of " + killcount + "!",bc_blue;
+			}
+			soundeffectall "HeadHunter.wav", 0, .@map$;
+			//getitem 40002,combocount/5; GIVE ITEM TO KILLING PLAYER INSTEAD!
+		}
+
+		message strcharinfo(0),"You died.";
+		set killcount, 0;
+		set combocount, 0;
+		//warp "Save",0,0;
+	}
+	end;
+
+OnMon0000:
+	query_sql("DROP TABLE IF EXISTS `pvp`");
+	end;
+
+}
+
+
+
+// @pvpscore atcommand
+
+-	script	PvPScoreAtCommand	-1,{
+    end;
+
+OnAtcommand:
+	query_sql("SELECT `score` FROM `pvp` WHERE `char_id` = " + getcharid(0), .@pvpscore);
+	dispbottom "Your PvP score is " + .@pvpscore + ".";
+	end;
+
+OnInit:
+	bindatcmd "pvpscore",strnpcinfo(3) + "::OnAtcommand";
+	end;
+}
+
+
+
+// PvP Runes
+//http://rathena.org/board/topic/57784-request-dota-runes/page__fromsearch__1
+guild_vs3,50,50,5	script	Runes	10042,1,1,{
+dispbottom "Walk through to gain bonus.";
+end;
+
+OnTouch:
+	switch( .runes ){
+		case 0:
+			// 2x ATK / MATK
+			sc_start SC_INCATKRATE,( .duration * 1000 ),100;
+			sc_start SC_INCMATKRATE,( .duration * 1000 ),100;
+			break;
+		case 1:
+			// Invisible
+			skill "AS_CLOAKING",10,1;
+			sc_start SC_CLOAKING,( .duration * 1000 ),10;
+			break;
+		case 2:
+			// Restore
+			sc_start4 SC_REGENERATION,( .duration * 1000 ),-10,1,0,0;
+			break;
+		case 3:
+			// Clone
+			getmapxy( .@map$,.@x,.@y,BL_NPC,strcharinfo(0) );
+			clone .@map$,.@X,.@y,"",getcharid(0),getcharid(0),"",1,.duration;
+			clone .@map$,.@X,.@y,"",getcharid(0),getcharid(0),"",1,.duration;
+			break;
+		case 4:
+			// Haste
+			sc_start SC_SpeedUp1,( .duration * 1000 ),0;
+			break;
+		default: end;
+	}
+	announce "[Rune]  "+strcharinfo(0)+" gained "+.name$[.runes]+".",bc_self,0x00FF00;
+	hideonnpc .npc_name$;
+	delwaitingroom;
+	.runes = -1;
+	attachnpctimer;
+	initnpctimer;
+	specialeffect2 EF_PROVIDENCE;
+	end;
+
+OnTimer6000:
+	sc_end SC_CLOAKING;
+	sc_end SC_REGENERATION;
+OnTimerQuit:
+	stopnpctimer;
+	callsub( OnAssign );
+	end;
+
+OnAssign:
+	.random = rand( .coordinate_size );
+	movenpc .npc_name$,.CoordinateX[ .random ],.CoordinateY[ .random ];
+	hideoffnpc .npc_name$;
+	if( .runes < 0 )
+		.runes = rand( .rune_size );
+	if( .npc_sprite[.runes] )
+		setnpcdisplay( .npc_name$,.name$[.runes],.npc_sprite[.runes] );
+	delwaitingroom;
+	waitingroom "   "+.name$[.runes],0;
+	return;
+
+OnInit:
+	// Runes Duration in Seconds
+	set .duration,60;
+
+	// Name of Each Runes.
+	setarray .name$[0],
+		"Double Damage",	//	2 x ATK Rate
+		"Invisibility",		//	Cloaking
+		"Regeneration",		//	HP / SP Regeneration
+		"Self Clone",		//	Create 2 Clones
+		"Unlimit Haste";	//	Improve Movement Speed
+
+	// npc sprite switching if any.
+	setarray .npc_sprite,
+		10042,
+		10043,
+		10044,
+		10045,
+		10046;
+
+	// Random Coordinate where NPC will Shown Again
+	setarray .CoordinateX[0],30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69;
+	setarray .CoordinateY[0],30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69;
+
+	.rune_size = getarraysize( .name$ );
+	.coordinate_size = getarraysize( .CoordinateX );
+	.npc_name$ = strnpcinfo(0);
+	callsub( OnAssign );
+	end;
+}
+
+
+
+// Maroll Battle Recruiter
+roy_in02,129,116,5	duplicate(BatRecruit)	Maroll Battle Recruiter::BatRecruitroy	728
+
+
+
+// Mapflags
+roy_pvp01	mapflag	loadevent
+roy_pvp01	mapflag	nobranch
+roy_pvp01	mapflag	nowarpto
+roy_pvp01	mapflag	noteleport
+roy_pvp01	mapflag	novending
+roy_pvp01	mapflag	nomemo
+roy_pvp01	mapflag	loadevent
+guild_vs3	mapflag	loadevent
+guild_vs2	mapflag	loadevent
+guild_vs5	mapflag	loadevent
