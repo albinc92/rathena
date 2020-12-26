@@ -305,10 +305,10 @@ UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2
 -- REPLACE INTO `item_db2` VALUES (40005,'Cart_Weight','Cart Weight',3,25000,NULL,10000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40009,'Rejuv_Flask','Rejuvenation Flask','Healing',0,0,true,7000,true,true,true,true,true,true,true,true,'progressbar "000000",1; specialeffect2 325; percentheal 100,100;');
--- REPLACE INTO `item_db2` VALUES (40010,'Mastela_Fruit_Potion','Mastela Potion',0,3000,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'specialeffect2 204; itemheal rand(1905,2430),0;',NULL,NULL);
+REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40010,'Mastela_Fruit_Potion','Mastela Fruit Potion','Healing',3000,30,'specialeffect2 204; itemheal rand(1905,2430),0;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40013,'Kafra_Teleporter','Kafra Teleporter','Usable',0,0,true,500,true,true,true,true,true,true,true,true,'itemskill "AL_TELEPORT",2;');
--- REPLACE INTO `item_db2` VALUES (40011,'Iris_Potion','Iris Potion',0,12500,NULL,30,NULL,NULL,NULL,NULL,4294967295,7,2,NULL,NULL,NULL,NULL,NULL,'specialeffect2 208; itemheal 0,rand(240,360);',NULL,NULL);
+REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40011,'Iris_Potion','Iris Potion','Healing',12500,30,'specialeffect2 208; itemheal 0,rand(240,360);');
 
 -- Custom Headgear
 -- REPLACE INTO `item_db2` VALUES (40014,'Admin_Hat_C','Costume Administrator Sign',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1772,NULL,NULL,NULL);
