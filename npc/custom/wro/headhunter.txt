@@ -151,7 +151,7 @@ L_ListMobs:
     set .@mobToHunt, .@id[.@selection - 1];
     set .@amnt, .@count[.@selection - 1];
     if(.@boss == 0) {
-        set .@amnt = (.@amnt + (strmobinfo(3, .@mobToHunt) / 15));
+        set .@amnt, .@amnt + (strmobinfo(3, .@mobToHunt) / 15);
     }
 
 L_OnMissionInfo:
