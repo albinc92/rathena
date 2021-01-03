@@ -13,3 +13,6 @@
 // NOTE:            Parameters are special in that they retrieve certain runtime values depending on the specified ID
 //                  in field Value. Depending on the implementation values assigned by scripts to parameters will affect
 //                  runtime values, such as Zeny, as well (see pc_readparam/pc_setparam).
+
+IG_SLDCARDALBUM	193
+IG_HATBOX	194
