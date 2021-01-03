@@ -2,3 +2,703 @@
 //
 // Structure of Database:
 // GroupID,ItemID,Rate{,Amount,Random,isAnnounced,Duration,GUID,isBound,isNamed}
+
+IG_SLDCARDALBUM,4480,2      // Kiel D-01
+IG_SLDCARDALBUM,4481,1      // Ktullanux
+IG_SLDCARDALBUM,4482,1      // General Ygnizem Cenia
+IG_SLDCARDALBUM,4483,4      // Dracula
+IG_SLDCARDALBUM,4484,2      // Mistress
+IG_SLDCARDALBUM,4485,4      // Gloom Under Night
+IG_SLDCARDALBUM,4486,2      // Berzebub
+IG_SLDCARDALBUM,4487,2      // Ifrit
+IG_SLDCARDALBUM,4488,1      // Dark Lord
+IG_SLDCARDALBUM,4489,2      // Pharaoh
+IG_SLDCARDALBUM,4490,1      // Moonlight Flower
+IG_SLDCARDALBUM,4491,4      // Sniper Shecil
+IG_SLDCARDALBUM,4492,2      // Orc Hero
+IG_SLDCARDALBUM,4493,1      // Tao Gunka
+IG_SLDCARDALBUM,4494,4      // Turtle General
+IG_SLDCARDALBUM,4495,1      // Amon Ra
+IG_SLDCARDALBUM,4496,1      // Drake
+IG_SLDCARDALBUM,4497,4      // Stormy Knight
+IG_SLDCARDALBUM,4498,1      // Lady Tanee
+IG_SLDCARDALBUM,4499,1      // Samurai Spector
+IG_SLDCARDALBUM,4500,1      // Orc Lord
+IG_SLDCARDALBUM,4501,2      // High Priest Magaleta
+IG_SLDCARDALBUM,4502,1      // Mastersmith Harword
+IG_SLDCARDALBUM,4503,2      // Vesper
+IG_SLDCARDALBUM,4504,1      // Eddga
+IG_SLDCARDALBUM,4535,1      // Valkyrie Randgris
+IG_SLDCARDALBUM,4536,4      // Atroce
+IG_SLDCARDALBUM,4537,1      // Phreeoni
+IG_SLDCARDALBUM,4538,4      // Bacsojin
+IG_SLDCARDALBUM,4539,1      // Fallen Bishop Hibram
+IG_SLDCARDALBUM,4540,4      // Lord of the Dead
+IG_SLDCARDALBUM,4541,1      // High Wizard Katrinn
+IG_SLDCARDALBUM,4542,1      // Detale
+IG_SLDCARDALBUM,4543,1      // Garm
+IG_SLDCARDALBUM,4544,1      // Evil Snake Lord
+IG_SLDCARDALBUM,27211,1     // Baphomet
+IG_SLDCARDALBUM,27212,1     // Maya
+IG_SLDCARDALBUM,32303,1     // Assassin Cross Eremes
+IG_SLDCARDALBUM,32304,4     // Doppelganger
+IG_SLDCARDALBUM,32305,1     // Golden Thief Bug
+IG_SLDCARDALBUM,32306,1     // Lord Knight Card
+IG_SLDCARDALBUM,32307,1     // Osiris
+IG_SLDCARDALBUM,32308,1     // RSX-0806
+IG_SLDCARDALBUM,32309,1     // Memory of Thanatos
+IG_SLDCARDALBUM,32310,2     // Nidhoggur's Shadow
+IG_SLDCARDALBUM,32311,1     // Wounded Morocc Card
+IG_SLDCARDALBUM,32312,2     // Gopinich
+IG_SLDCARDALBUM,32313,1     // Entweihen Crothen
+IG_SLDCARDALBUM,32314,1     // Naght Sieger
+
+IG_HATBOX,2201,6	// Sunglasses
+IG_HATBOX,2202,6	// Sunglasses
+IG_HATBOX,2203,6	// Glasses
+IG_HATBOX,2204,6	// Glasses
+IG_HATBOX,2205,6	// Diver Goggles
+IG_HATBOX,2206,6	// Wedding Veil
+IG_HATBOX,2207,6	// Fancy Flower
+IG_HATBOX,2208,6	// Ribbon
+IG_HATBOX,2209,6	// Ribbon
+IG_HATBOX,2210,6	// Hair Band
+IG_HATBOX,2211,6	// Bandana
+IG_HATBOX,2212,6	// Eye Patch
+IG_HATBOX,2213,6	// Kitty Band
+IG_HATBOX,2214,6	// Bunny Band
+IG_HATBOX,2215,6	// Flower Band
+IG_HATBOX,2216,6	// Biretta
+IG_HATBOX,2217,6	// Biretta
+IG_HATBOX,2218,6	// Flu Mask
+IG_HATBOX,2219,6	// Flu Mask
+IG_HATBOX,2220,6	// Hat
+IG_HATBOX,2221,6	// Hat
+IG_HATBOX,2222,6	// Turban
+IG_HATBOX,2223,6	// Turban
+IG_HATBOX,2224,6	// Goggles
+IG_HATBOX,2225,6	// Goggles
+IG_HATBOX,2226,6	// Cap
+IG_HATBOX,2227,6	// Cap
+IG_HATBOX,2228,6	// Helm
+IG_HATBOX,2229,6	// Helm
+IG_HATBOX,2230,6	// Gemmed Sallet
+IG_HATBOX,2231,6	// Gemmed Sallet
+IG_HATBOX,2232,6	// Circlet
+IG_HATBOX,2233,6	// Circlet
+IG_HATBOX,2234,6	// Tiara
+IG_HATBOX,2235,6	// Crown
+IG_HATBOX,2236,6	// Santa Hat
+IG_HATBOX,2237,6	// Bandit Beard
+IG_HATBOX,2239,6	// Monocle
+IG_HATBOX,2240,6	// Beard
+IG_HATBOX,2241,6	// Grampa Beard
+IG_HATBOX,2242,6	// Purple Glasses
+IG_HATBOX,2243,6	// Geek Glasses
+IG_HATBOX,2244,6	// Big Ribbon
+IG_HATBOX,2245,6	// Sweet Gent
+IG_HATBOX,2246,6	// Golden Gear
+IG_HATBOX,2247,6	// Romantic Gent
+IG_HATBOX,2248,6	// Western Grace
+IG_HATBOX,2249,6	// Coronet
+IG_HATBOX,2250,6	// Cute Ribbon
+IG_HATBOX,2251,6	// Monk Hat
+IG_HATBOX,2252,6	// Wizard Hat
+IG_HATBOX,2253,6	// Sunflower
+IG_HATBOX,2254,6	// Angel Wing
+IG_HATBOX,2255,6	// Evil Wing
+IG_HATBOX,2256,6	// Majestic Goat
+IG_HATBOX,2257,6	// Unicorn Horn
+IG_HATBOX,2258,6	// Spiky Band
+IG_HATBOX,2259,6	// Mini Propeller
+IG_HATBOX,2260,6	// Mini Glasses
+IG_HATBOX,2261,6	// Army Cap
+IG_HATBOX,2262,6	// Clown Nose
+IG_HATBOX,2263,6	// Zorro Masque
+IG_HATBOX,2264,6	// Munak Hat
+IG_HATBOX,2265,6	// Gangster Mask
+IG_HATBOX,2266,6	// Iron Cain
+IG_HATBOX,2267,6	// Cigarette
+IG_HATBOX,2268,6	// Pipe
+IG_HATBOX,2269,6	// Romantic Flower
+IG_HATBOX,2270,6	// Romantic Leaf
+IG_HATBOX,2271,6	// Jack be Dandy
+IG_HATBOX,2272,6	// Stop Post
+IG_HATBOX,2273,6	// Doctor Band
+IG_HATBOX,2274,6	// Ghost Bandana
+IG_HATBOX,2275,6	// Red Bandana
+IG_HATBOX,2276,6	// Angled Glasses
+IG_HATBOX,2277,6	// Nurse Cap
+IG_HATBOX,2278,6	// Mr. Smile
+IG_HATBOX,2279,6	// Bomb Wick
+IG_HATBOX,2280,6	// Sakkat
+IG_HATBOX,2281,6	// Opera Masque
+IG_HATBOX,2282,6	// Halo
+IG_HATBOX,2283,6	// Ear Muffs
+IG_HATBOX,2284,6	// Antlers
+IG_HATBOX,2285,6	// Apple of Archer
+IG_HATBOX,2286,6	// Elven Ears
+IG_HATBOX,2287,6	// Pirate Bandana
+IG_HATBOX,2288,6	// Mr. Scream
+IG_HATBOX,2289,6	// Poo Poo Hat
+IG_HATBOX,2290,6	// Funeral Hat
+IG_HATBOX,2291,6	// Masquerade
+IG_HATBOX,2292,6	// Welding Mask
+IG_HATBOX,2293,6	// Pretend Murdered
+IG_HATBOX,2294,6	// Stellar
+IG_HATBOX,2295,6	// Blinker
+IG_HATBOX,2296,6	// Binoculars
+IG_HATBOX,2297,6	// Goblin Mask
+IG_HATBOX,2298,6	// Green Feeler
+IG_HATBOX,2299,6	// Orc Helm
+IG_HATBOX,5001,6	// Headset
+IG_HATBOX,5002,6	// Jewel Crown
+IG_HATBOX,5003,6	// Joker Jester
+IG_HATBOX,5004,6	// Oxygen Mask
+IG_HATBOX,5005,6	// Gas Mask
+IG_HATBOX,5006,6	// Machoman's Glasses
+IG_HATBOX,5007,6	// Grand Circlet
+IG_HATBOX,5008,6	// Puppy Love
+IG_HATBOX,5009,6	// Safety Helmet
+IG_HATBOX,5010,6	// Indian Fillet
+IG_HATBOX,5011,6	// Aerial
+IG_HATBOX,5012,6	// Ph.D Hat
+IG_HATBOX,5013,6	// Lord Kaho's Horn
+IG_HATBOX,5014,6	// Fin Helm
+IG_HATBOX,5015,6	// Egg Shell
+IG_HATBOX,5016,6	// Boy's Cap
+IG_HATBOX,5017,6	// Bone Helm
+IG_HATBOX,5018,6	// Feather Bonnet
+IG_HATBOX,5019,6	// Corsair
+IG_HATBOX,5020,6	// Kafra Band
+IG_HATBOX,5021,6	// Grief for Greed
+IG_HATBOX,5022,6	// Hat of the Sun God
+IG_HATBOX,5023,6	// Parcel Hat
+IG_HATBOX,5024,6	// Cake Hat
+IG_HATBOX,5025,6	// Helm of Angel
+IG_HATBOX,5026,6	// Chef Hat
+IG_HATBOX,5027,6	// Mage Hat
+IG_HATBOX,5028,6	// Candle
+IG_HATBOX,5029,6	// Spore Hat
+IG_HATBOX,5030,6	// Panda Hat
+IG_HATBOX,5031,6	// Mine Hat
+IG_HATBOX,5032,6	// Sunday Hat
+IG_HATBOX,5033,6	// Raccoon Hat
+IG_HATBOX,5034,6	// Bulb Band
+IG_HATBOX,5035,6	// Poring Hat
+IG_HATBOX,5036,6	// Cross Hat
+IG_HATBOX,5037,6	// Nut Shell
+IG_HATBOX,5038,6	// Deviruchi Hat
+IG_HATBOX,5039,6	// Rainbow Eggshell
+IG_HATBOX,5040,6	// Blush
+IG_HATBOX,5041,6	// Heart Hairpin
+IG_HATBOX,5042,6	// Bao Bao
+IG_HATBOX,5043,6	// Opera Phantom Mask
+IG_HATBOX,5044,6	// Evil Wing Ears
+IG_HATBOX,5045,6	// Magician Hat
+IG_HATBOX,5046,6	// Bongun Hat
+IG_HATBOX,5047,6	// Fashionable Glasses
+IG_HATBOX,5048,6	// Cresent Hairpin
+IG_HATBOX,5049,6	// Striped Hairband
+IG_HATBOX,5050,6	// Wonder Nutshell
+IG_HATBOX,5051,6	// Pussy Cat Bell
+IG_HATBOX,5052,6	// Blue Hairband
+IG_HATBOX,5053,6	// Sphinx Hat
+IG_HATBOX,5055,6	// Novice False Eggshell
+IG_HATBOX,5056,6	// Fruit of Love
+IG_HATBOX,5057,6	// Black Cat Ears
+IG_HATBOX,5058,6	// Drooping Cat
+IG_HATBOX,5059,6	// Teddybear Hat
+IG_HATBOX,5060,6	// Party Hat
+IG_HATBOX,5061,6	// Flower Hairpin
+IG_HATBOX,5062,6	// Straw Hat
+IG_HATBOX,5063,6	// Giant Band Aid
+IG_HATBOX,5064,6	// Smokie Leaf
+IG_HATBOX,5065,6	// Blue Fish
+IG_HATBOX,5066,6	// Succubus Horn
+IG_HATBOX,5067,6	// Sombrero
+IG_HATBOX,5068,6	// Evil Wing Ears
+IG_HATBOX,5069,6	// Kitsune Mask
+IG_HATBOX,5070,6	// Hot-blooded Headband
+IG_HATBOX,5071,6	// Indian Headband
+IG_HATBOX,5072,6	// Incubus Horn
+IG_HATBOX,5073,6	// Model Training Hat
+IG_HATBOX,5074,6	// Angel Wing Ears
+IG_HATBOX,5075,6	// Cowboy Hat
+IG_HATBOX,5076,6	// Beanie
+IG_HATBOX,5077,6	// Tulip Hairpin
+IG_HATBOX,5078,6	// Sea-Otter Hat
+IG_HATBOX,5079,6	// X Hairpin
+IG_HATBOX,5080,6	// Crown of Ancient Queen
+IG_HATBOX,5081,6	// Crown of Mistress
+IG_HATBOX,5082,6	// Decorative Mushroom
+IG_HATBOX,5083,6	// Red Ribbon
+IG_HATBOX,5084,6	// Lazy Smokie
+IG_HATBOX,5085,6	// Small Ribbons
+IG_HATBOX,5086,6	// Alarm Mask
+IG_HATBOX,5087,6	// Poker Face
+IG_HATBOX,5088,6	// Surprised Mask
+IG_HATBOX,5089,6	// Annoyed Mask
+IG_HATBOX,5090,6	// Goblin Leader Mask
+IG_HATBOX,5091,6	// Decorative Golden Bell
+IG_HATBOX,5092,6	// Coif
+IG_HATBOX,5093,6	// Coif
+IG_HATBOX,5094,6	// Helmet of Orc Hero
+IG_HATBOX,5096,6	// Assassin Mask
+IG_HATBOX,5097,6	// Holiday Hat
+IG_HATBOX,5098,6	// Tiger Mask
+IG_HATBOX,5099,6	// Neko Mimi
+IG_HATBOX,5100,6	// Sales Banner
+IG_HATBOX,5101,6	// Takius's Blindfold
+IG_HATBOX,5102,6	// Blank Eyes
+IG_HATBOX,5103,6	// Sunflower Hairpin
+IG_HATBOX,5104,6	// Dark Blinder
+IG_HATBOX,5105,6	// 2nd Anniversary Hat
+IG_HATBOX,5106,6	// 2nd Anniversary Hat
+IG_HATBOX,5107,6	// Crunch Toast
+IG_HATBOX,5108,6	// Renown Detective's Cap
+IG_HATBOX,5109,6	// Red Bonnet
+IG_HATBOX,5110,6	// Baby Pacifier
+IG_HATBOX,5111,6	// Galapago Cap
+IG_HATBOX,5112,6	// Super Novice Hat
+IG_HATBOX,5113,6	// Angry Snarl
+IG_HATBOX,5114,6	// Bucket Hat
+IG_HATBOX,5115,6	// Winter Hat
+IG_HATBOX,5116,6	// Banana Hat
+IG_HATBOX,5117,6	// Mystic Rose
+IG_HATBOX,5118,6	// Puppy Headband
+IG_HATBOX,5119,6	// Super Novice Hat
+IG_HATBOX,5120,6	// Bucket Hat
+IG_HATBOX,5121,6	// Zealotus Mask
+IG_HATBOX,5122,6	// Magni's Cap
+IG_HATBOX,5123,6	// Ulle's Cap
+IG_HATBOX,5124,6	// Fricca's Circlet
+IG_HATBOX,5125,6	// Angel's Kiss
+IG_HATBOX,5126,6	// Morpheus's Hood
+IG_HATBOX,5127,6	// Morrigane's Helm
+IG_HATBOX,5128,6	// Goibne's Helm
+IG_HATBOX,5129,6	// Bird Nest
+IG_HATBOX,5130,6	// Lion Mask
+IG_HATBOX,5131,6	// Close Helmet
+IG_HATBOX,5132,6	// Angeling Hat
+IG_HATBOX,5133,6	// Sheep Hat
+IG_HATBOX,5134,6	// Pumpkin-Head
+IG_HATBOX,5135,6	// Cyclop's Eye
+IG_HATBOX,5136,6	// Antonio's Santa Hat
+IG_HATBOX,5137,6	// Alice Doll
+IG_HATBOX,5138,6	// Magic Eyes
+IG_HATBOX,5139,6	// Hibiscus
+IG_HATBOX,5140,6	// Charming Ribbon
+IG_HATBOX,5141,6	// Marionette Doll
+IG_HATBOX,5142,6	// Crescent Helm
+IG_HATBOX,5143,6	// Kabuki Mask
+IG_HATBOX,5144,6	// Gambler Hat
+IG_HATBOX,5145,6	// Carnival Joker Jester
+IG_HATBOX,5146,6	// Elephant Hat
+IG_HATBOX,5147,6	// Baseball Cap
+IG_HATBOX,5148,6	// Phrygian Cap
+IG_HATBOX,5149,6	// Silver Tiara
+IG_HATBOX,5150,6	// Joker Jester
+IG_HATBOX,5151,6	// Note Headphones
+IG_HATBOX,5152,6	// Chinese Crown
+IG_HATBOX,5153,6	// Angeling Hairpin
+IG_HATBOX,5154,6	// Father's Sunglasses
+IG_HATBOX,5155,6	// Father's White Moustache
+IG_HATBOX,5156,6	// Father's Mask
+IG_HATBOX,5157,6	// Orc Helm
+IG_HATBOX,5158,6	// Monk Hat
+IG_HATBOX,5159,6	// Golden Gear
+IG_HATBOX,5160,6	// Majestic Goat
+IG_HATBOX,5161,6	// Spiky Band
+IG_HATBOX,5162,6	// Bone Helm
+IG_HATBOX,5163,6	// Corsair
+IG_HATBOX,5164,6	// Tiara
+IG_HATBOX,5165,6	// Crown
+IG_HATBOX,5166,6	// Sphinx Hat
+IG_HATBOX,5167,6	// Munak Hat
+IG_HATBOX,5168,6	// Bongun Hat
+IG_HATBOX,5169,6	// Bride Mask
+IG_HATBOX,5170,6	// Feather Beret
+IG_HATBOX,5171,6	// Valkyrie Helm
+IG_HATBOX,5172,6	// Beret
+IG_HATBOX,5173,6	// Magistrate Hat
+IG_HATBOX,5174,6	// Ayam
+IG_HATBOX,5175,6	// Censor Bar
+IG_HATBOX,5176,6	// Hahoe Mask
+IG_HATBOX,5177,6	// Mythical Lion Mask
+IG_HATBOX,5178,6	// Candle
+IG_HATBOX,5179,6	// Golden Tiara
+IG_HATBOX,5180,6	// France Holiday Hat
+IG_HATBOX,5181,6	// Helm of Darkness
+IG_HATBOX,5182,6	// Puppy Hat
+IG_HATBOX,5183,6	// Bird Nest Hat
+IG_HATBOX,5184,6	// Captain's Hat
+IG_HATBOX,5185,6	// Laurel Wreath
+IG_HATBOX,5186,6	// Geographer Band
+IG_HATBOX,5187,6	// Twin Ribbon
+IG_HATBOX,5188,6	// Wandering Minstrel Hat
+IG_HATBOX,5189,6	// Autumn Leaves
+IG_HATBOX,5190,6	// Independence Memorial Hat
+IG_HATBOX,5191,6	// Black Ribbon
+IG_HATBOX,5192,6	// Yellow Ribbon
+IG_HATBOX,5193,6	// Green Ribbon
+IG_HATBOX,5194,6	// Pink Ribbon
+IG_HATBOX,5195,6	// Red Ribbon
+IG_HATBOX,5196,6	// Orange Ribbon
+IG_HATBOX,5197,6	// White Ribbon
+IG_HATBOX,5198,6	// Drooping Bunny
+IG_HATBOX,5199,6	// Baseball Cap
+IG_HATBOX,5200,6	// Coppola
+IG_HATBOX,5201,6	// Party Hat
+IG_HATBOX,5202,6	// Fantastic Pumpkin-Head
+IG_HATBOX,5203,6	// Smiling Mask
+IG_HATBOX,5204,6	// Rudolph's Nose
+IG_HATBOX,5205,6	// Emperor's Laurel Crown
+IG_HATBOX,5206,6	// Romantic White Flower
+IG_HATBOX,5207,6	// Angel Blessing
+IG_HATBOX,5208,6	// Rideword Hat
+IG_HATBOX,5209,6	// Love Dad Cap
+IG_HATBOX,5210,6	// Flapping Angel Wing
+IG_HATBOX,5211,6	// Dress Hat
+IG_HATBOX,5212,6	// Satellite Hairband
+IG_HATBOX,5213,6	// Sheila Hairnet
+IG_HATBOX,5214,6	// Moonlight Flower Hat
+IG_HATBOX,5215,6	// Evolved Angel Wing
+IG_HATBOX,5216,6	// Evolved Evil Wing
+IG_HATBOX,5217,6	// Evolved Majestic Goat
+IG_HATBOX,5218,6	// Evolved Bunny Band
+IG_HATBOX,5219,6	// Evolved Drooping Cat
+IG_HATBOX,5220,6	// Evolved Pipe
+IG_HATBOX,5221,6	// Evolved Pair of Red Ribbon
+IG_HATBOX,5222,6	// Evolved Blue Fish
+IG_HATBOX,5223,6	// Evolved Big Golden Bell
+IG_HATBOX,5224,6	// Evolved Orc Hero Helm
+IG_HATBOX,5225,6	// Parade Hat
+IG_HATBOX,5226,6	// Mini Propeller
+IG_HATBOX,5227,6	// Red Deviruchi Hat
+IG_HATBOX,5228,6	// Gray Deviruchi Hat
+IG_HATBOX,5229,6	// Brown Deviruchi Hat
+IG_HATBOX,5230,6	// Gray Drooping Cat
+IG_HATBOX,5231,6	// Brown Drooping Cat
+IG_HATBOX,5232,6	// Pink Drooping Cat
+IG_HATBOX,5233,6	// Blue Drooping Cat
+IG_HATBOX,5234,6	// Yellow Drooping Cat
+IG_HATBOX,5235,6	// Brown Beanie
+IG_HATBOX,5236,6	// Blue Beanie
+IG_HATBOX,5237,6	// Pink Beanie
+IG_HATBOX,5238,6	// Red Mage Hat
+IG_HATBOX,5239,6	// Gray Mage Hat
+IG_HATBOX,5240,6	// Brown Mage Hat
+IG_HATBOX,5241,6	// Blue Mage Hat
+IG_HATBOX,5242,6	// Yellow Mage Hat
+IG_HATBOX,5243,6	// Shafka
+IG_HATBOX,5244,6	// Elven Blindfold
+IG_HATBOX,5245,6	// Elven Sunglasses
+IG_HATBOX,5246,6	// Angelic Helm
+IG_HATBOX,5247,6	// Satanic Helm
+IG_HATBOX,5248,6	// Robotic Blindfold
+IG_HATBOX,5249,6	// Human Blindfold
+IG_HATBOX,5250,6	// Robotic Ears
+IG_HATBOX,5251,6	// Round Ears
+IG_HATBOX,5252,6	// Drooping Ninetail
+IG_HATBOX,5253,6	// Lif Doll Hat
+IG_HATBOX,5254,6	// Deviling Hat
+IG_HATBOX,5255,6	// Triple Poring Hat
+IG_HATBOX,5256,6	// Valkyrie Feather Band
+IG_HATBOX,5257,6	// Soul Ring
+IG_HATBOX,5258,6	// Afro Wig
+IG_HATBOX,5259,6	// Elephant Hat
+IG_HATBOX,5260,6	// Cookie Hat
+IG_HATBOX,5261,6	// Silver Tiara
+IG_HATBOX,5262,6	// Golden Tiara
+IG_HATBOX,5263,6	// Pagdayaw
+IG_HATBOX,5264,6	// Australian Flag Hat
+IG_HATBOX,5269,6	// Flapping Angel Wing
+IG_HATBOX,5270,6	// Autumn Leaves
+IG_HATBOX,5271,6	// Phoenix Crown
+IG_HATBOX,5272,6	// Tongue Mask
+IG_HATBOX,5273,6	// Happy Wig
+IG_HATBOX,5274,6	// Shiny Wig
+IG_HATBOX,5275,6	// Marvelous Wig
+IG_HATBOX,5276,6	// Fantastic Wig
+IG_HATBOX,5277,6	// Yellow Bandana
+IG_HATBOX,5278,6	// Yellow Ribbon
+IG_HATBOX,5282,6	// Europe Baseball Cap
+IG_HATBOX,5283,6	// Chick Hat
+IG_HATBOX,5284,6	// Water Lily Crown
+IG_HATBOX,5285,6	// Vane Hairpin
+IG_HATBOX,5286,6	// Pecopeco Hairband
+IG_HATBOX,5287,6	// Vacation Hat
+IG_HATBOX,5288,6	// Red Glasses
+IG_HATBOX,5289,6	// Vanilmirth Hat
+IG_HATBOX,5290,6	// Drooping Bunny
+IG_HATBOX,5291,6	// Kettle Hat
+IG_HATBOX,5292,6	// Dragon Skull
+IG_HATBOX,5293,6	// Ramen Hat
+IG_HATBOX,5294,6	// Whisper Mask
+IG_HATBOX,5295,6	// Golden Bandana
+IG_HATBOX,5296,6	// Drooping Nine Tail
+IG_HATBOX,5297,6	// Soul Wing
+IG_HATBOX,5298,6	// Dokebi's Wig
+IG_HATBOX,5299,6	// Pagdayaw
+IG_HATBOX,5300,6	// Bullock Helm
+IG_HATBOX,5302,6	// Flower Lily
+IG_HATBOX,5303,6	// Flower Crown
+IG_HATBOX,5304,6	// Cap Of Blindness
+IG_HATBOX,5305,6	// Pirate Dagger
+IG_HATBOX,5307,6	// Carmen Miranda's Hat
+IG_HATBOX,5309,6	// Wool Mask
+IG_HATBOX,5312,6	// Ayothaya King's Hat
+IG_HATBOX,5313,6	// Diadem
+IG_HATBOX,5314,6	// Hockey Mask
+IG_HATBOX,5315,6	// Observer
+IG_HATBOX,5318,6	// Poring Party Hat
+IG_HATBOX,5319,6	// Hello Mother Hat
+IG_HATBOX,5320,6	// Champion Wreath
+IG_HATBOX,5323,6	// Misstrance Crown
+IG_HATBOX,5324,6	// Little Angel Doll
+IG_HATBOX,5325,6	// Robo Eye
+IG_HATBOX,5332,6	// Loki Mask
+IG_HATBOX,5333,6	// Radio Antenna
+IG_HATBOX,5334,6	// Flapping Angeling
+IG_HATBOX,5336,6	// Guildsman Recruiter Hat
+IG_HATBOX,5337,6	// Party Recruiter Hat
+IG_HATBOX,5338,6	// Bf Recruiter Hat
+IG_HATBOX,5339,6	// Friend Recruiter Hat
+IG_HATBOX,5340,6	// Defolty Doll Hat
+IG_HATBOX,5341,6	// Glaris Doll Hat
+IG_HATBOX,5342,6	// Sorin Doll Hat
+IG_HATBOX,5343,6	// Telling Doll Hat
+IG_HATBOX,5344,6	// Bennit Doll Hat
+IG_HATBOX,5345,6	// W Doll Hat
+IG_HATBOX,5346,6	// Gf Recruiter Hat
+IG_HATBOX,5347,6	// Ph.D Hat
+IG_HATBOX,5348,6	// Big Ribbon
+IG_HATBOX,5349,6	// Boy's Cap
+IG_HATBOX,5350,6	// Pirate Bandana
+IG_HATBOX,5351,6	// Sunflower
+IG_HATBOX,5352,6	// Poporing Cap
+IG_HATBOX,5353,6	// Hat of the Sun God
+IG_HATBOX,5354,6	// Muslim Hat M
+IG_HATBOX,5355,6	// Selendang
+IG_HATBOX,5356,6	// Festival Pumpkin Hat
+IG_HATBOX,5357,6	// Wings Of Victory
+IG_HATBOX,5359,6	// Ship Captain Hat
+IG_HATBOX,5360,6	// Hyuke's Black Cat Ears
+IG_HATBOX,5361,6	// Gangster Scarf
+IG_HATBOX,5362,6	// Ninja Scroll
+IG_HATBOX,5363,6	// Helm Of Abyss
+IG_HATBOX,5364,6	// Evil Snake Lord Hat
+IG_HATBOX,5365,6	// Magnolia Hat
+IG_HATBOX,5367,6	// Hyegun Hat
+IG_HATBOX,5368,6	// White Wing
+IG_HATBOX,5369,6	// Dark Wing
+IG_HATBOX,5370,6	// Orchid Hairband
+IG_HATBOX,5371,6	// Judge Hat
+IG_HATBOX,5372,6	// Koneko Hat
+IG_HATBOX,5373,6	// Dark Randgris Helm
+IG_HATBOX,5374,6	// Gigantic Majestic Goat
+IG_HATBOX,5375,6	// Orc Hero Headdress
+IG_HATBOX,5377,6	// Gentleman's Pipe
+IG_HATBOX,5378,6	// Bunny Top Hat
+IG_HATBOX,5379,6	// Tam
+IG_HATBOX,5380,6	// Fish Head Hat
+IG_HATBOX,5381,6	// Santa Poring Hat
+IG_HATBOX,5382,6	// Bell Ribbon
+IG_HATBOX,5383,6	// Hunter's Cap
+IG_HATBOX,5384,6	// Twin Pompom By JB
+IG_HATBOX,5386,6	// Ayam
+IG_HATBOX,5387,6	// Neko Mimi Kafra
+IG_HATBOX,5389,6	// Angel Spirit
+IG_HATBOX,5390,6	// Frozen Twin Pompom
+IG_HATBOX,5393,6	// Love Valentine's Hat
+IG_HATBOX,5394,6	// Bubblegum
+IG_HATBOX,5395,6	// Striped Hat
+IG_HATBOX,5396,6	// Jasper Crest
+IG_HATBOX,5397,6	// Scuba Gear
+IG_HATBOX,5398,6	// Bone Head
+IG_HATBOX,5399,6	// Mandragora Cap
+IG_HATBOX,5403,6	// Fish In Mouth
+IG_HATBOX,5405,6	// Filir Hat
+IG_HATBOX,5408,6	// Old Bandana
+IG_HATBOX,5409,6	// Purple Cowboy Hat
+IG_HATBOX,5411,6	// White Snake Hat
+IG_HATBOX,5412,6	// Sweet Candy
+IG_HATBOX,5413,6	// Pop Corn Hat
+IG_HATBOX,5415,6	// Poring Cake Hat
+IG_HATBOX,5419,6	// Leaves Of Grass
+IG_HATBOX,5420,6	// Mask Of Ifrit
+IG_HATBOX,5421,6	// Ears Of Ifrit
+IG_HATBOX,5428,6	// RWC Anniversary Bread Envelope
+IG_HATBOX,5431,6	// Chicken Hat
+IG_HATBOX,5435,6	// Red Minstrel Hat
+IG_HATBOX,5436,6	// Bride's Corolla
+IG_HATBOX,5437,6	// Fairy Flower
+IG_HATBOX,5438,6	// Cute Green Ribbon
+IG_HATBOX,5439,6	// Cute Red Ribbon
+IG_HATBOX,5440,6	// Cute Blue Ribbon
+IG_HATBOX,5441,6	// Cute White Ribbon
+IG_HATBOX,5442,6	// Necktie
+IG_HATBOX,5443,6	// Statue Of Baby Angel
+IG_HATBOX,5444,6	// Hair Brush
+IG_HATBOX,5445,6	// Candy Cane In Mouth
+IG_HATBOX,5446,6	// Catfoot Hairpin
+IG_HATBOX,5447,6	// Frog Hat
+IG_HATBOX,5448,6	// Soloplay Box1
+IG_HATBOX,5449,6	// Soloplay Box2
+IG_HATBOX,5451,6	// RWC 2008 Dragon Helm Gold
+IG_HATBOX,5452,6	// RWC 2008 Dragon Helm Silver
+IG_HATBOX,5453,6	// RWC 2008 Dragon Helm Copper
+IG_HATBOX,5454,6	// Puppy Hat
+IG_HATBOX,5455,6	// Decorative Geographer
+IG_HATBOX,5456,6	// Summer Hat
+IG_HATBOX,5457,6	// Moon Rabbit Hat
+IG_HATBOX,5458,6	// Pinwheel Hat
+IG_HATBOX,5459,6	// Drooping Bunny
+IG_HATBOX,5461,6	// Evolved Whisper Mask
+IG_HATBOX,5462,6	// Spiked Scarf
+IG_HATBOX,5463,6	// Rainbow Scarf
+IG_HATBOX,5464,6	// Zaha Doll Hat
+IG_HATBOX,5476,6	// Grand Peco Hairband
+IG_HATBOX,5479,6	// Shaman's Hair Decoration
+IG_HATBOX,5480,6	// Bijofnil Wings
+IG_HATBOX,5481,6	// Hermode Cap
+IG_HATBOX,5482,6	// Dark Knight Mask
+IG_HATBOX,5483,6	// Odin Mask
+IG_HATBOX,5486,6	// Anniversary Hat
+IG_HATBOX,5487,6	// Poring Cake Hat
+IG_HATBOX,5488,6	// Twin Santa Hat
+IG_HATBOX,5490,6	// Anubis Helm
+IG_HATBOX,5492,6	// Student Cap
+IG_HATBOX,5493,6	// Ulle's Cap
+IG_HATBOX,5494,6	// Sphinx Hat
+IG_HATBOX,5495,6	// Power Of Thor
+IG_HATBOX,5497,6	// King Tiger Doll Hat
+IG_HATBOX,5498,6	// Wandering Wolf Helm
+IG_HATBOX,5502,6	// Necromancer's Hood
+IG_HATBOX,5503,6	// Magic Rabit Hat
+IG_HATBOX,5505,6	// Asara Fairy Hat
+IG_HATBOX,5508,6	// Shark Hat
+IG_HATBOX,5509,6	// Sting hat
+IG_HATBOX,5511,6	// Samambaia
+IG_HATBOX,5516,6	// hawk Eyes
+IG_HATBOX,5517,6	// Hawk Eyes
+IG_HATBOX,5520,6	// Rabbit Earplugs
+IG_HATBOX,5527,6	// Lunatic Hat
+IG_HATBOX,5529,6	// Satanic Bone Helm
+IG_HATBOX,5530,6	// Raven Cap
+IG_HATBOX,5531,6	// Baby Dragon Hat
+IG_HATBOX,5532,6	// Pirate Dagger
+IG_HATBOX,5533,6	// Emperor Wreath
+IG_HATBOX,5535,6	// Side Cap
+IG_HATBOX,5536,6	// Spare Card
+IG_HATBOX,5537,6	// Kwati Hat
+IG_HATBOX,5538,6	// Tucan Hat
+IG_HATBOX,5539,6	// Jaguar Hat
+IG_HATBOX,5544,6	// Time Keeper Hat
+IG_HATBOX,5545,6	// Aries Diadem
+IG_HATBOX,5546,6	// Aries Crown
+IG_HATBOX,5547,6	// RJC Katusa Flower
+IG_HATBOX,5548,6	// Scarlet Rose
+IG_HATBOX,5549,6	// Taurus Diadem
+IG_HATBOX,5550,6	// Taurus Crown
+IG_HATBOX,5552,6	// Festival Grand Circlet
+IG_HATBOX,5553,6	// Festival Bunny Band
+IG_HATBOX,5554,6	// Octopus Hat
+IG_HATBOX,5555,6	// Leaf Cat Hat
+IG_HATBOX,5556,6	// Seal Hat
+IG_HATBOX,5557,6	// Wild Rose Hat
+IG_HATBOX,5559,6	// Piece Of White Cloth
+IG_HATBOX,5560,6	// Bullock Helm
+IG_HATBOX,5561,6	// Magic Rabbit Hat
+IG_HATBOX,5565,6	// Dragon Arhat Mask
+IG_HATBOX,5566,6	// Tiger Arhat Mask
+IG_HATBOX,5567,6	// Bright Fury
+IG_HATBOX,5568,6	// Rabbit Bonnet
+IG_HATBOX,5569,6	// Gemini Diadem
+IG_HATBOX,5570,6	// Gemini Crown
+IG_HATBOX,5572,6	// Savage Babe Hat
+IG_HATBOX,5573,6	// Dokebi Horn
+IG_HATBOX,5574,6	// Well-Chewed Pencil
+IG_HATBOX,5577,6	// Dark Knight Mask
+IG_HATBOX,5578,6	// Voyage_Hat
+IG_HATBOX,5579,6	// Wanderer's Sakkat
+IG_HATBOX,5583,6	// Eden Team Hat
+IG_HATBOX,5584,6	// Majestic Evil Horns
+IG_HATBOX,5585,6	// Rune Cloth Circlet
+IG_HATBOX,5586,6	// Mosquito Coil
+IG_HATBOX,5587,6	// Mosquito Coil
+IG_HATBOX,5590,6	// Poring Cake Hat
+IG_HATBOX,5592,6	// Sigrun's Wings
+IG_HATBOX,5593,6	// Rabbit Bonnet
+IG_HATBOX,5594,6	// Donut In Mouth
+IG_HATBOX,5596,6	// 4Leaf Clover In Mouth
+IG_HATBOX,5597,6	// Bubble Gum In Mouth
+IG_HATBOX,5600,6	// Brazil Twin Ribbon
+IG_HATBOX,5603,6	// RTC First Place
+IG_HATBOX,5604,6	// RTC Second Place
+IG_HATBOX,5605,6	// RTC Third Place
+IG_HATBOX,5653,6	// Darkness Helm
+IG_HATBOX,5654,6	// Holy Marching Hat
+IG_HATBOX,5658,6	// Imp Hat
+IG_HATBOX,5660,6	// Gryphon Hat
+IG_HATBOX,5664,6	// Filir's Pinions
+IG_HATBOX,5665,6	// Shaman Hat
+IG_HATBOX,5666,6	// Golden Crown
+IG_HATBOX,5667,6	// Skull Hood
+IG_HATBOX,5668,6	// Weird Pumpkin Hat
+IG_HATBOX,5671,6	// Drooping Morocc Minion
+IG_HATBOX,5681,6	// Green Ribbon
+IG_HATBOX,5682,6	// Triangle Rune Cap
+IG_HATBOX,5683,6	// Baphomet Horns
+IG_HATBOX,5684,6	// Ornate Crown
+IG_HATBOX,5685,6	// Army Cap
+IG_HATBOX,5686,6	// Nice Hat Feather
+IG_HATBOX,5687,6	// Orc Helm
+IG_HATBOX,5690,6	// Red Wing Hat
+IG_HATBOX,5692,6	// Sea Cat Hat
+IG_HATBOX,5738,6	// Snowman Hat
+IG_HATBOX,5741,6	// Eternal Egg Shell
+IG_HATBOX,5742,6	// Rudolph Santa Hat
+IG_HATBOX,5771,6	// Family Hat
+IG_HATBOX,5775,6	// Choco Donut In Mouth
+IG_HATBOX,5781,6	// Persika
+IG_HATBOX,5786,6	// Ancient Elven Ear
+IG_HATBOX,5788,6	// 3D Glasses
+IG_HATBOX,5792,6	// Fish Pin
+IG_HATBOX,5793,6	// Ribbon Of Life
+IG_HATBOX,5794,6	// 3D Glasses
+IG_HATBOX,5796,6	// Cheer Scarf
+IG_HATBOX,5800,6	// Blush of Groom
+IG_HATBOX,5801,6	// Red Tailed Ribbon
+IG_HATBOX,5802,6	// Upgraded Elephant Hat
+IG_HATBOX,5803,6	// Love Flower Hat
+IG_HATBOX,5804,6	// Pirate Eye Bandage
+IG_HATBOX,5805,6	// Victorious Coronet
+IG_HATBOX,5806,6	// Poet Natalie's Hat
+IG_HATBOX,5807,6	// October Fest Cap
+IG_HATBOX,5808,6	// Dark Bacilium
+IG_HATBOX,5809,6	// Boom Boom Hat
+IG_HATBOX,5810,6	// Ph.D Hat V
+IG_HATBOX,5811,6	// Santa's Beard
+IG_HATBOX,5812,6	// Hat Of Expert
+IG_HATBOX,5816,6	// Purple Cowboy Hat
+IG_HATBOX,5824,6	// Fools Day Hat
+IG_HATBOX,5826,6	// Valkyrie Helmet
+IG_HATBOX,5846,6	// Buzzy Ball Gum
+IG_HATBOX,5851,6	// Summer Knight
+IG_HATBOX,5856,6	// Passion FB Hat
+IG_HATBOX,5857,6	// Cool FB Hat
+IG_HATBOX,5858,6	// Victory FB Hat
+IG_HATBOX,5859,6	// Glory FB Hat
+IG_HATBOX,18503,6	// Small Devil Horns
+IG_HATBOX,18505,6	// Umbala Spirit
+IG_HATBOX,18506,6	// Hattah Black
+IG_HATBOX,18507,6	// Elven Ears
+IG_HATBOX,18595,6	// Horn of Ancient
+IG_HATBOX,18596,6	// Sprout Hat
+IG_HATBOX,18597,6	// Mercury Riser
+IG_HATBOX,18600,6	// Cat Ear Beret
+IG_HATBOX,18612,6	// White Musang Hat
+IG_HATBOX,18613,6	// Black Musang Hat
+IG_HATBOX,18656,6	// Witch's Pumpkin Hat
