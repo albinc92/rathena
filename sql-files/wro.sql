@@ -433,17 +433,17 @@ VALUES (40027,'Imperial_Cap_C','Costume Imperial Recruit Cap','Armor',true,1785)
 
 -- Gem Socketing
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40200,'Ruby_G','Ruby','Card',0,0,'bonus bStr,1;');
+VALUES (40200,'Ruby_G','Ruby','Card','bonus bStr,1;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40201,'Zircon_G','Zircon','Card',0,0,'bonus bAgi,1;');
+VALUES (40201,'Zircon_G','Zircon','Card','bonus bAgi,1;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40202,'Emerald_G','Emerald','Card',0,0,'bonus bVit,1;');
+VALUES (40202,'Emerald_G','Emerald','Card','bonus bVit,1;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40203,'Sapphire_G','Sapphire','Card',0,0,'bonus bInt,1;');
+VALUES (40203,'Sapphire_G','Sapphire','Card','bonus bInt,1;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40204,'Topaz_G','Topaz','Card',0,0,'bonus bDex,1;');
+VALUES (40204,'Topaz_G','Topaz','Card','bonus bDex,1;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
-VALUES (40205,'Sardonyx_G','Sardonyx','Card',0,0,'bonus bLuk,1;');
+VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 
 -- Item Cash DB
 -- REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 46013, 40039, 40031, 40015) ORDER BY `name_japanese`;
