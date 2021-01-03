@@ -94,7 +94,6 @@ OnBreak:
 	.@time = getnpctimer(0);
 	stopnpctimer;
 	detachnpctimer;
-	query_sql("CREATE TABLE IF NOT EXISTS `breakers` (`char_id` int(11) unsigned NOT NULL default '0',`highscore` int(11) NOT NULL default '0',`times` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 	query_sql("SELECT COUNT(char_id) FROM `breakers` WHERE `char_id` = " + getcharid(0), .@recordExists);
 	if(!.@recordExists) {
 		query_sql("INSERT INTO `breakers` VALUES("+getcharid(0)+","+.@time+",0)");
@@ -123,6 +122,7 @@ OnTimer30000:
 	end;
 
 OnInit:
+	query_sql("CREATE TABLE IF NOT EXISTS `breakers` (`char_id` int(11) unsigned NOT NULL default '0',`highscore` int(11) NOT NULL default '0',`times` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 	waitingroom "Room: OPEN",0;
 	set .occupied, 0;
 	mapwarp "job3_arch01","roy_in02", 132, 114;
