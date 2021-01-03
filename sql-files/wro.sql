@@ -270,7 +270,7 @@ VALUES (4455,'Light_Up_Card2','Light Up Card','Card',20,10,true,true);
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
 
 -- Costume Garments
-REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
+-- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
 
 -- Sealed Card Album
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
@@ -522,7 +522,7 @@ REPLACE INTO `mob_db2` VALUES(3614,'INVADING_COMMANDER','Invasion_Commander','In
 --                                                      MOB SKILLS
 -- ---------------------------------------------------------------------------------------------------------------------
 
--- REPLACE INTO mob_skill_db2 VALUES(3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO mob_skill_db2 VALUES(3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 
 
@@ -530,4 +530,5 @@ REPLACE INTO `mob_db2` VALUES(3614,'INVADING_COMMANDER','Invasion_Commander','In
 --                                                   DUMMY CHARACTERS
 -- ---------------------------------------------------------------------------------------------------------------------
 
+REPLACE INTO `char` (`char_id`, `name`) VALUES(000001, 'Replicator');
 -- REPLACE INTO `char` VALUES (000001,0000001,0,'Replicator',0,1,1,0,0,0,1,1,1,1,1,1,40,40,11,11,48,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,'royal',86,189,'royal',86,189,0,0,0,0,0,0,0,0,0,0,0,0,'M',0,0,NULL,0,0);
