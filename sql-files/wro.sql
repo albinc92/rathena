@@ -541,5 +541,4 @@ REPLACE INTO mob_skill_db2 VALUES(3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',
 --                                                   DUMMY CHARACTERS
 -- ---------------------------------------------------------------------------------------------------------------------
 
-REPLACE INTO `char` (`char_id`, `name`) VALUES(000001, 'Costume Replicator');
--- REPLACE INTO `char` VALUES (000001,0000001,0,'Replicator',0,1,1,0,0,0,1,1,1,1,1,1,40,40,11,11,48,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,'royal',86,189,'royal',86,189,0,0,0,0,0,0,0,0,0,0,0,0,'M',0,0,NULL,0,0);
+REPLACE INTO `char` (`char_id`, `char_num`, `name`) VALUES(1, 1, 'Costume Replicator');
