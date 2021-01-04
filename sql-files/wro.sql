@@ -44,7 +44,7 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
 REPLACE INTO `item_db2`
-SELECT * FROM `item_db` WHERE `type` = 'Armor' AND `location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true;
+SELECT * FROM `item_db` WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
 
 UPDATE `item_db2`
 SET `id` = `id` + 41000,
@@ -74,7 +74,7 @@ SET `id` = `id` + 41000,
     `script` = '',
     `equip_script` = '',
     `unequip_script` = ''
-WHERE `type` = 'Armor' AND `location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true;
+WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
 
 UPDATE `item_db2`
 SET  `location_costume_head_top` = true
@@ -90,7 +90,7 @@ WHERE `type` = 'Armor' AND `location_head_low` = true;
 
 UPDATE `item_db2`
 SET  `location_head_top` = false, `location_head_mid` = false, `location_head_low` = false
-WHERE `type` = 'Armor' AND `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
+WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
 
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
