@@ -45,6 +45,7 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- and updates their stats to reflect their nature.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db` WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
+
 UPDATE `item_db2`
 SET `id` = `id` + 41000,
     `alias_name` = `name_aegis`,
@@ -61,9 +62,6 @@ SET `id` = `id` + 41000,
     `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
     `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
     `location_costume_head_top` = CASE WHEN `location_head_top` = true THEN location_costume_head_top = true END,
-    `location_head_top` = false,
-    `location_head_mid` = false,
-    `location_head_low` = false,
     `equip_level_min` = 0,
     `equip_level_max` = 250,
     `refineable` = true,
@@ -80,6 +78,10 @@ SET `id` = `id` + 41000,
     `equip_script` = '',
     `unequip_script` = ''
 WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
+
+-- UPDATE `item_db2`
+-- SET  `location_head_top` = false, `location_head_mid` = false, `location_head_low` = false
+-- WHERE `location_head_top` = true OR `location_head_mid` = true OR `location_head_mid` = true;
 
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
