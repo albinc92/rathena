@@ -62,6 +62,7 @@ dew_in01,25,47,3	script	Costume Replicator	10078,{
 			set Zeny, Zeny-.@cost;
 			//getitem2 (@inventorylist_id[.@replicaindex[.@i-1]] + 41000),1,1,0,0,254,0,1&0xffff,(1>>16)&0xffff;
 			getnameditem @inventorylist_id[.@replicaindex[.@i-1]] + 41000,"Costume Replicator";
+			searchstores 10,1;
 			mes "["+strnpcinfo(1)+"]";
 			mes "There we go. Enjoy your costume!";
 			close2;
