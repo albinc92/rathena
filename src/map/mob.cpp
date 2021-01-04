@@ -2186,7 +2186,7 @@ void mob_setdropitem_option2(struct item *itm) {
 
     short id = 0, val = 0;
     char param = '0';
-    const int MAX_WEAPON_INDEX = 23, MAX_ARMOR_INDEX = 19;
+    const int MAX_WEAPON_INDEX = 23, MAX_ARMOR_INDEX = 17;
     short weaponid[MAX_WEAPON_INDEX] = {
             3, 4, 5, 6, 7, 8,
             13, 14, 16, 17, 18, 19, 24,
@@ -2209,21 +2209,18 @@ void mob_setdropitem_option2(struct item *itm) {
             15, 15, 4, 15
     };
     short armorid[MAX_ARMOR_INDEX] = {
-            1, 2,
             3, 4, 5, 6, 7, 8,
             9, 10, 11, 12,
             20, 21, 22, 23,
             165, 167, 171
     };
     short armorbase[MAX_ARMOR_INDEX] = {
-            5, 5,
             1, 1, 1, 1, 1, 1,
             5, 5, 10, 10,
             1, 1, 5, 3,
             5, 5, 3
     };
     short armorbonus[MAX_ARMOR_INDEX] = {
-            5, 5,
             2, 2, 2, 2, 2, 2,
             5, 5, 10, 10,
             2, 2, 6, 3,
