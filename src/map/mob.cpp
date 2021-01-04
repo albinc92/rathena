@@ -2219,14 +2219,14 @@ void mob_setdropitem_option2(struct item *itm) {
             5, 5,
             1, 1, 1, 1, 1, 1,
             5, 5, 10, 10,
-            1, 1, 5, 5,
+            1, 1, 5, 3,
             5, 5, 3
     };
     short armorbonus[MAX_ARMOR_INDEX] = {
             5, 5,
             2, 2, 2, 2, 2, 2,
             5, 5, 10, 10,
-            2, 2, 6, 5,
+            2, 2, 6, 3,
             5, 5, 4
     };
 
