@@ -19,9 +19,9 @@ OnPCBaseLvUpEvent:
 	}
 	if( getstatus(SC_INCREASEAGI) != 1 ) {
 	    specialeffect2 37;
-		sc_start SC_INCREASEAGI,240000,10;
+		sc_start SC_INCREASEAGI,240000,1;
 	    specialeffect2 42;
-		sc_start SC_BLESSING,240000,10;
+		sc_start SC_BLESSING,240000,1;
 	}
 	end;
 }
