@@ -398,27 +398,42 @@ VALUES (40013,'Kafra_Teleporter','Kafra Teleporter','Usable',0,0,true,500,100,tr
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40011,'Iris_Potion','Iris Potion','Healing',12500,30,'specialeffect2 208; itemheal 0,rand(240,360);');
 
 -- Custom Headgear
--- REPLACE INTO `item_db2` VALUES (40014,'Admin_Hat_C','Costume Administrator Sign',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1772,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40015,'Ancient_Rune_Ring_C','Costume Ancient Rune Ring',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,2048,NULL,0,0,1773,NULL,NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40014,'Admin_Hat_C','Costume Administrator Sign','Armor',true,1772);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_low`,`view`)
+VALUES (40015,'Ancient_Rune_Ring_C','Costume Ancient Rune Ring','Armor',true,1773);
 -- REPLACE INTO `item_db2` VALUES (40016,'Angeling_Rucksack_C','Costume Angeling Rucksack',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1774,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40017,'Community_Hat_C','Costume Community Master Hat',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1775,NULL,NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40017,'Community_Hat_C','Costume Community Master Hat','Armor',true,1775);
 -- REPLACE INTO `item_db2` VALUES (40018,'Deviling_Rucksack_C','Costume Deviling Rucksack',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1776,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40019,'Event_Hat_C','Costume Event Master Hat',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1777,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40020,'Burden_of_Thorns_C','Costume Burden of Thorns',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1778,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40021,'Faerie_Helm_C','Costume Faerie Helm',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1779,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40022,'Faerie_Wings_C','Costume Faerie Wings',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1780,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40023,'GM_Hat_C','Costume Game Master Hat',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1781,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40024,'Gibbet_Dolls_C','Costume Gibbet Dolls',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,2048,NULL,0,0,1782,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40025,'Gobling_Leader_Cape_C','Costume Goblin Leader Cape',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1783,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40026,'Golden_Helm_C','Costume Golden Helm',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1784,NULL,NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40019,'Event_Hat_C','Costume Event Master Hat','Armor',true,1777);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+VALUES (40020,'Burden_of_Thorns_C','Costume Burden of Thorns','Armor',true,1778);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40021,'Faerie_Helm_C','Costume Faerie Helm','Armor',true,1779);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+VALUES (40022,'Faerie_Wings_C','Costume Faerie Wings','Armor',true,1780);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40023,'GM_Hat_C','Costume Game Master Hat','Armor',true,1781);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+VALUES (40024,'Gibbet_Dolls_C','Costume Gibbet Dolls','Armor',true,1782);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+VALUES (40025,'Gobling_Leader_Cape_C','Costume Goblin Leader Cape','Armor',true,1783);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40026,'Golden_Helm_C','Costume Golden Helm','Armor',true,1784);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40027,'Imperial_Cap_C','Costume Imperial Recruit Cap','Armor',true,1785);
--- REPLACE INTO `item_db2` VALUES (40027,'Imperial_Cap_C','Costume Imperial Recruit Cap',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1785,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40028,'Lady_Tanee_Hat_C','Costume Lady Tanee Headdress',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1786,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40029,'Bio_Aura_C','Costume Bio Aura',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,2048,NULL,0,0,1787,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40030,'Mononoke_Mask_C','Costume Mononoke Mask',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1788,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40031,'Rune_Ring_C','Costume Rune Ring',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,2048,NULL,0,0,1789,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (40032,'Valkyrie_Helm_C','Costume Valkyrie Helm',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1790,NULL,NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40028,'Lady_Tanee_Hat_C','Costume Lady Tanee Headdress','Armor',true,1786);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_low`,`view`)
+VALUES (40029,'Bio_Aura_C','Costume Bio Aura','Armor',true,1787);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40030,'Mononoke_Mask_C','Costume Mononoke Mask','Armor',true,1788);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_low`,`view`)
+VALUES (40031,'Rune_Ring_C','Costume Rune Ring','Armor',true,1789);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40032,'Valkyrie_Helm_C','Costume Valkyrie Helm','Armor',true,1790);
 -- REPLACE INTO `item_db2` VALUES (40033,'Vesper_Mask_C','Costume Vesper Mask',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,1024,NULL,0,0,1791,NULL,NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (40034,'Angeling_Wings_C','Costume Angeling Wings',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1792,NULL,NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (40035,'Bloody_B_Wings_C','Costume Bloody Butterfly Wings',4,0,0,0,NULL,0,NULL,0,4294967295,7,2,4096,NULL,0,0,1793,NULL,NULL,NULL);
