@@ -161,9 +161,9 @@ L_OnMissionInfo:
     mes "^f7f7f7-^000000";
     mes "Monster: ^0000ff" + strmobinfo(1,.@mobToHunt) + "^000000";
     mes "Quantity: ^ff0000" + .@amnt + "^000000";
-    mes "Reward (Base EXP): ^ff0000" + (strmobinfo(6, .@mobToHunt) * 25) + "^000000";
-    mes "Reward (Job EXP): ^ff0000" + (strmobinfo(7, .@mobToHunt) * 25) + "^000000";
-    mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 100) + "^000000";
+    mes "Reward (Base EXP): ^ff0000" + (strmobinfo(6, .@mobToHunt) * .@amnt) + "^000000";
+    mes "Reward (Job EXP): ^ff0000" + (strmobinfo(7, .@mobToHunt) * .@amnt) + "^000000";
+    mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 1000) + "^000000";
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
@@ -348,10 +348,10 @@ OnNPCKillEvent:
         query_sql("UPDATE `headhunter` SET `count` = " + .@count + " WHERE `char_id` = " + getcharid(0));
         if(.@count == .@max) {
             query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
-            set .@bExp, (strmobinfo(6, .@mobid) * 25);
-            set .@jExp, (strmobinfo(7, .@mobid) * 25);
+            set .@bExp, (strmobinfo(6, .@mobid) * .@max);
+            set .@jExp, (strmobinfo(7, .@mobid) * .@max);
             getexp2 .@bExp, .@jExp;
-            set zeny, zeny + (strmobinfo(3, .@mobid) * 100);
+            set zeny, zeny + (strmobinfo(3, .@mobid) * 1000);
             specialeffect2 885;
 		    message strcharinfo(0),"You have completed your hunt! Your reward is Zeny and Experience Points.";
         }
