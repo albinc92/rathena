@@ -163,11 +163,7 @@ L_OnMissionInfo:
     mes "Quantity: ^ff0000" + .@amnt + "^000000";
     mes "Reward (Base EXP): ^ff0000" + (strmobinfo(6, .@mobToHunt) * (.@amnt * 2)) + "^000000";
     mes "Reward (Job EXP): ^ff0000" + (strmobinfo(7, .@mobToHunt) * (.@amnt * 2)) + "^000000";
-    if(.@boss) {
-        mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 500) + "^000000";
-    } else {
-        mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 100) + "^000000";
-    }
+    mes "Reward (Zeny): ^ff0000" + ((strmobinfo(3, .@mobToHunt) * 100) + 1900) + "^000000";
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
@@ -355,7 +351,7 @@ OnNPCKillEvent:
             set .@bExp, (strmobinfo(6, .@mobid) * (.@max * 2));
             set .@jExp, (strmobinfo(7, .@mobid) * (.@max * 2));
             getexp2 .@bExp, .@jExp;
-            set zeny, zeny + (strmobinfo(3, .@mobid) * 1000);
+            set zeny, zeny + ((strmobinfo(3, .@mobid) * 100) + 1900);
             specialeffect2 885;
 		    message strcharinfo(0),"You have completed your hunt! Your reward is Zeny and Experience Points.";
         }
