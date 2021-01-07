@@ -163,7 +163,11 @@ L_OnMissionInfo:
     mes "Quantity: ^ff0000" + .@amnt + "^000000";
     mes "Reward (Base EXP): ^ff0000" + (strmobinfo(6, .@mobToHunt) * (.@amnt * 2)) + "^000000";
     mes "Reward (Job EXP): ^ff0000" + (strmobinfo(7, .@mobToHunt) * (.@amnt * 2)) + "^000000";
-    mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 1000) + "^000000";
+    if(.@boss) {
+        mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 500) + "^000000";
+    } else {
+        mes "Reward (Zeny): ^ff0000" + (strmobinfo(3, .@mobToHunt) * 100) + "^000000";
+    }
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
