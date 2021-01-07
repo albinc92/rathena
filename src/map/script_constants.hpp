@@ -5159,8 +5159,6 @@
 	export_constant(IG_ENCHANT_STONE_BOX13);
 	export_constant(IG_ENCHANT_STONE_BOX14);
 	export_constant(IG_ENCHANT_STONE_BOX15);
-    export_constant(IG_SLDCARDALBUM);
-    export_constant(IG_HATBOX);
 
 	/* unit stop walking */
 	export_constant(USW_NONE);
