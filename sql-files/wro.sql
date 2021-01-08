@@ -214,7 +214,7 @@ VALUES (4455,'Light_Up_Card2','Light Up Card','Card',20,10,true,true);
 -- REPLACE INTO `item_db2` VALUES (4471,'Egg_Of_Draco_Card','Draco Egg Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Dragon,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4472,'Bradium_Goram_Card','Bradium Golem Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Brute,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4473,'Ancient_Tree_Card','Ancient Tree Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Undead,10;',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4474,'Jakudam_Card','Zakudam Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_DemiHuman,10; bonus2 bMagicAddRace,RC_Player,10;',NULL,NULL);
+-- REPLACE INTO `item_db2` VALUES (4474,'Jakudam_Card','Zakudam Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_DemiHuman,10; bonus2 bMagicAddRace,RC_Player_Human,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4475,'Cobalt_Mineral_Card','Cobalt Mineral Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Formless,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4476,'Pinguicula_Card','Pinguicula Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Insect,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4477,'Hell_Apocalips_Card','Hell Apocalypse Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Demon,10;',NULL,NULL);
@@ -281,7 +281,7 @@ VALUES (4537,'Sealed_Phreeoni_Card','Sealed Phreeoni Card','Card',20,10,true,tru
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4538,'Sealed_Bacsojin_Card','Sealed White Lady Card','Card',20,10,true,true,'bonus bHealPower,7; bonus bUseSPrate,4;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (4539,'Sealed_F_Bishop_Card','Sealed Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,5; bonus bMaxSPrate,-75; bonus2 bMagicAddRace,RC_Angel,25; bonus2 bMagicAddRace,RC_DemiHuman,25; bonus2 bMagicAddRace,RC_Player,25;');
+VALUES (4539,'Sealed_F_Bishop_Card','Sealed Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,5; bonus bMaxSPrate,-75; bonus2 bMagicAddRace,RC_Angel,25; bonus2 bMagicAddRace,RC_DemiHuman,25; bonus2 bMagicAddRace,RC_Player_Human,25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4540,'SLD_Lord_Of_Death_Card','Sealed Lord of The Dead Card','Card',20,10,true,true,'bonus3 bAddEff,Eff_Stun,250,ATF_SHORT; bonus3 bAddEff,Eff_Curse,250,ATF_SHORT; bonus3 bAddEff,Eff_Silence,250,ATF_SHORT; bonus3 bAddEff,Eff_Poison,250,ATF_SHORT; bonus3 bAddEff,Eff_Bleeding,250,ATF_SHORT; bonus2 bComaClass,Class_Normal,1;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
