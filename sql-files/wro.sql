@@ -234,8 +234,10 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4484,'Sealed_Mistress_Card','Sealed Mistress Card','Card',20,10,true,true,true,true,'bonus bNoGemStone; bonus bUseSPrate,50; bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",1,50;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4485,'Sealed_Gloom_Card','Sealed Gloom Under Night Card','Card',20,10,true,true,'bonus2 bAddEle,Ele_Holy,20; bonus2 bAddEle,Ele_Dark,20; bonus2 bAddRace,RC_Angel,20; bonus2 bAddRace,RC_Demon,20;');
--- REPLACE INTO `item_db2` VALUES (4486,'Sealed_Berz_Card','Sealed Beelzebub Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,136,NULL,NULL,NULL,NULL,'bonus bVariableCastrate,-15;',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4487,'Sealed_Ifrit_Card','Sealed Ifrit Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,136,NULL,NULL,NULL,NULL,'bonus bBaseAtk,(JobLevel/8); bonus bCritical,(JobLevel/8); bonus bHit,(JobLevel/8); bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",3,10;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
+VALUES (4486,'Sealed_Berz_Card','Sealed Beelzebub Card','Card',20,10,true,true,true,'bonus bVariableCastrate,-15;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
+VALUES (4487,'Sealed_Ifrit_Card','Sealed Ifrit Card','Card',20,10,true,true,true,'bonus bBaseAtk,(JobLevel/8); bonus bCritical,(JobLevel/8); bonus bHit,(JobLevel/8); bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",3,10;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (4488,'Sealed_D_Lord_Card','Sealed Dark Lord Card','Card',20,10,true,true,true,true,'bonus3 bAutoSpellWhenHit,"WZ_METEOR",3,100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
@@ -262,7 +264,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;'',NULL,''if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4500,'Sealed_Orc_Load_Card','Sealed Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,15;');
--- REPLACE INTO `item_db2` VALUES (4501,'Sealed_B_Magaleta_Card','Sealed High Priest Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,136,NULL,NULL,NULL,NULL,'bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,25,BF_WEAPON|BF_MAGIC,0;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
+VALUES (4501,'Sealed_B_Magaleta_Card','Sealed High Priest Card','Card',20,10,true,true,true,'bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,25,BF_WEAPON|BF_MAGIC,0;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4502,'Sealed_B_Harword_Card','Sealed Whitesmith Card','Card',20,10,true,true,'bonus bBreakWeaponRate,500; bonus bBreakArmorRate,350;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
@@ -291,14 +294,18 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4544,'SLD_Dark_Snake_Card','Sealed Evil Snake Lord Card','Card',20,10,true,true,true,true,'bonus bInt,2; bonus2 bResEff,Eff_Blind,5000; bonus2 bResEff,Eff_Curse,5000;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (27211,'Sealed_Baphomet_Card','Sealed Baphomet Card','Card',20,10,true,true,'bonus bHit,-50; bonus bSplashRange,1;');
--- REPLACE INTO `item_db2` VALUES (27212,'Sealed_Maya_Card','Sealed Maya Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,32,NULL,NULL,NULL,NULL,'bonus bMagicDamageReturn,25;',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (32303,'Sealed_B_Eremes_Card','Sealed Assassin Cross Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,4,NULL,NULL,NULL,NULL,'skill "AS_CLOAKING",3; if (Class == Job_Assassin_Cross || Class == Job_Assassin) bonus bPerfectHide; bonus bFleeRate,-25;',NULL,'sc_end SC_CLOAKING;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+VALUES (27212,'Sealed_Maya_Card','Sealed Maya Card','Card',20,10,true,true,'bonus bMagicDamageReturn,25;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_garment`,`flag_buyingstore`,`script`,`unequip_script`)
+VALUES (32303,'Sealed_B_Eremes_Card','Sealed Assassin Cross Card','Card',20,10,true,true,'skill "AS_CLOAKING",3; if (Class == Job_Assassin_Cross || Class == Job_Assassin) bonus bPerfectHide; bonus bFleeRate,-25;','sc_end SC_CLOAKING;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (32304,'Sealed_Doppelganger_Card','Sealed Doppelganger Card','Card',20,10,true,true,'bonus bAspdRate,13;');
--- REPLACE INTO `item_db2` VALUES (32305,'Sealed_Golden_Bug_Card','Sealed Golden Thiefbug Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,32,NULL,NULL,NULL,NULL,'bonus bNoMagicDamage,50; bonus bUseSPrate,100;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+VALUES (32305,'Sealed_Golden_Bug_Card','Sealed Golden Thief Bug Card','Card',20,10,true,true,'bonus bNoMagicDamage,50; bonus bUseSPrate,100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (32306,'Sealed_B_Seyren_Card','Sealed Lord Knight Card','Card',20,10,true,true,true,true,'skill "LK_BERSERK",1; bonus bMaxHPrate,-75;');
--- REPLACE INTO `item_db2` VALUES (32307,'Sealed_Osiris_Card','Sealed Osiris Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,136,NULL,NULL,NULL,NULL,'skill "SL_KAIZEL",3;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
+VALUES (32307,'Sealed_Osiris_Card','Sealed Osiris Card','Card',20,10,true,true,true,'skill "SL_KAIZEL",3;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (32308,'Sealed_Rsx_0806_Card','Sealed RSX-0806 Card','Card',20,10,true,true,'bonus bVit,1; bonus bUnbreakableArmor; bonus bNoKnockback;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
@@ -307,7 +314,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (32310,'Sealed_Nidhogg_Shadow_Card','Sealed Nidhoggurs Shadow Card','Card',20,10,true,true,'bonus bInt,3; if (Class == Job_High_Wizard || Class == Job_Baby_Warlock || Class == Job_Warlock || Class == Job_Warlock_T) bonus bFixedCastrate,-25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,'');
--- REPLACE INTO `item_db2` VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,136,NULL,NULL,NULL,NULL,'bonus bSPDrainValue,3; bonus bUseSPrate,100;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
+VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,true,true,'bonus bSPDrainValue,3; bonus bUseSPrate,100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (32313,'Sealed_Ant_Buyanne_Card','Sealed Entweihen Crothen Card','Card',20,10,true,true,'bonus bMatk,125;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
