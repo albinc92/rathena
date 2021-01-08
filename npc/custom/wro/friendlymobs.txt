@@ -33,12 +33,6 @@ OnInit:
 	monster "nameless_n",171,182,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead",0,1;
 	.GID = $@mobid[0];
 	setunitdata .GID,UMOB_DMGIMMUNE,1;
-	monster "nameless_n",162,191,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead2",0,1;
-	.GID = $@mobid[0];
-	setunitdata .GID,UMOB_DMGIMMUNE,1;
-	monster "nameless_n",159,178,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead3",0,1;
-	.GID = $@mobid[0];
-	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	monster "mosk_fild02",193,246,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnMoskDead",0,1;
 	.GID = $@mobid[0];
 	setunitdata .GID,UMOB_DMGIMMUNE,1;
@@ -105,71 +99,85 @@ OnInit:
 OnAnthellDead:
 	sleep 30000;
 	monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnCoalMineDead:
 	sleep 30000;
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnTurDunDead:
 	sleep 30000;
 	monster "tur_dun01",150,50,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnGLDead:
 	sleep 30000;
 	monster "gef_fild06",32,301,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnJupeDead:
 	sleep 30000;
 	monster "yuno_fild07",216,173,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnJupeDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnAbyssDead:
 	sleep 30000;
 	monster "hu_fild05",177,314,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbyssDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnOdinDead:
 	sleep 30000;
 	monster "odin_tem01",98,142,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOdinDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnIceDead:
 	sleep 30000;
 	monster "ra_fild01",233,324,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnIceDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnThanaDead:
 	sleep 30000;
 	monster "hu_fild01",139,150,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnThanaDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnAbbeyDead1:
 	sleep 30000;
 	monster "nameless_n",171,182,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead1",0,1;
-	end;
-
-OnAbbeyDead2:
-	sleep 30000;
-	monster "nameless_n",162,191,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead2",0,1;
-	end;
-
-OnAbbeyDead3:
-	sleep 30000;
-	monster "nameless_n",159,178,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead3",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnMoskDead:
 	sleep 30000;
 	monster "mosk_fild02",193,246,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnMoskDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnNydDead1:
 	sleep 30000;
 	monster "spl_fild01",352,114,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnNydDead1",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnNydDead2:
@@ -180,26 +188,36 @@ OnNydDead2:
 OnNoggDead:
 	sleep 30000;
 	monster "yuno_fild03",44,135,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnNoggDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnOrcDead:
 	sleep 30000;
 	monster "gef_fild10",73,328,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOrcDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnKHDead:
 	sleep 30000;
 	monster "yuno_fild08",84,179,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnKHDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnThorDead:
 	sleep 30000;
 	monster "ve_fild03",171,230,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnThorDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 OnOrcDead2:
 	sleep 30000;
 	monster "gef_fild10",242,193,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOrcDead2",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	end;
 
 //OnAdventurer1Dead:
