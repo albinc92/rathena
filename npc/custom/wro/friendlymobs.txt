@@ -4,7 +4,7 @@
 OnInit:
 	//Guards
 	//monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
-	$@gid = monster("cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1);
+	$@gid = monster("cmd_fild08",320,351,"Imperial Guard",3611,strnpcinfo(0)+"::OnAnthellDead");
     setunitdata $@gid,UMOB_DMGIMMUNE,1;
 
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
