@@ -3,13 +3,13 @@
 
 OnInit:
 	//Guards
-	setarray .@mapn$[0],"cmd_fild08";
-	setarray .@mapx[0],320;
-	setarray .@mapy[0],351;
-	setarray .@label$[0],"OnAnthellDead";
-	for(set .@i, 0; i < getarraysize(.@mapn$); set .@i, .@i + 1) {
-	    monster .@mapn$[.@i],.@mapx[.@i],.@mapy[.@i],"Imperial Guard",3611,1,strnpcinfo(0)+"::"+.@label$[.@i],0,1;
-	    .GID = $@mobid[0];
+	setarray .mapn$[0],"cmd_fild08";
+	setarray .mapx[0],320;
+	setarray .mapy[0],351;
+	setarray .label$[0],"OnAnthellDead";
+	for(set .i, 0; i < getarraysize(.mapn$); set .i, .i + 1) {
+	    monster .mapn$[.i],.mapx[.i],.mapy[.i],"Imperial Guard",3611,1,strnpcinfo(0)+"::"+.label$[.i],0,1;
+	    .GID = $mobid[0];
 	    setunitdata .GID,UMOB_DMGIMMUNE,1;
 	}
 
