@@ -303,7 +303,7 @@ item_use_interval: 500
 // Note: If pk_mode is set to 2 instead of 1 (yes), players will receive a
 //   manner penalty of 5 each time they kill another player (see manner_system
 //   config to adjust how this will affect players)
-pk_mode: 1
+pk_mode: 0
 
 // For PK Server Mode. It specifies the maximum level difference between
 // players to let them attack each other. 0 disables said limit.
