@@ -4,6 +4,8 @@
 OnInit:
 	//Guards
 	monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
+	.@dupid = atoi(strnpcinfo(2, strnpcinfo(0)+"::OnAnthellDead"));
+	setunitdata .gid[.@dupid],UMOB_DMGIMMUNE,1;
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
 	monster "tur_dun01",150,50,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
 	monster "gef_fild06",32,301,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
