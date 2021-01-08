@@ -3,9 +3,16 @@
 
 OnInit:
 	//Guards
-	monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
-	.GID = $@mobid[0];
-	setunitdata .GID,UMOB_DMGIMMUNE,1;
+	setarray .@mapn$[],"cmd_fild08";
+	setarray .@mapx[],320;
+	setarray .@mapy[],351;
+	setarray .@label$[],"OnAnthellDead";
+	for(set .@i, 0; i < getarraysize(.@mapn$); set .@i, .@i + 1) {
+	    monster .@mapn$[.@i],.@mapx[.@i],.@mapy[.@i],"Imperial Guard",3611,1,strnpcinfo(0)+"::+.@label$[.@i],0,1;
+	    .GID = $@mobid[0];
+	    setunitdata .GID,UMOB_DMGIMMUNE,1;
+	}
+
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
 	monster "tur_dun01",150,50,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
 	monster "gef_fild06",32,301,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
