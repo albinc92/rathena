@@ -4,6 +4,8 @@
 OnInit:
 	//Guards
 	monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
+	.GID = $@mobid[0];
+	setunitdata .GID,UMOB_DMGIMMUNE,1;
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
 	monster "tur_dun01",150,50,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
 	monster "gef_fild06",32,301,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
@@ -23,10 +25,6 @@ OnInit:
 	monster "gef_fild10",242,193,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOrcDead2",0,1;
 	monster "yuno_fild08",84,179,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnKHDead",0,1;
 	monster "ve_fild03",171,230,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnThorDead",0,1;
-
-	// Make guards immune to damage
-	.GID = $@mobid[0];
-	setunitdata .GID,UMOB_DMGIMMUNE,1;
 
 	//Adventurers Lv.1+ Fields
 	//freeloop(1);s
