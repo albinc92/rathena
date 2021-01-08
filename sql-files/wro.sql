@@ -133,7 +133,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4374,'Apocalips_H_Card','Vesper Card','Card',20,10,true,true,'bonus bDex,2; bonus2 bIgnoreMdefClassRate,Class_Boss,30;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4430,'Ifrit_Card','Ifrit Card','Card',20,10,true,true,true,'bonus bBaseAtk,(JobLevel/4); bonus bCritical,(JobLevel/4); bonus bHit,(JobLevel/4); bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",5,10;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
+REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
 VALUES (4263,'Incant_Samurai_Card','Samurai Spector Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,10000;','if((Hp <= 999) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -999,0; }');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (4403,'Kiel_Card','Kiel-D-01 Card','Card',20,10,true,true,true,true,'bonus bDelayRate,-30;');
@@ -257,11 +257,11 @@ VALUES (4495,'Sealed_Amon_Ra_Card','Sealed Amon Ra Card','Card',20,10,true,true,
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4496,'Sealed_Drake_Card','Sealed Drake Card','Card',20,10,true,true,'bonus bNoSizeFix; bonus3 bAutoSpell,"WZ_WATERBALL",3,20;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4497,'Sealed_Knight_WS_Card','Sealed Stormy Knight Card','Card',20,10,true,true,'WZ_STORMGUST",1,20; bonus2 bAddEff,Eff_Freeze,1000;');
+VALUES (4497,'Sealed_Knight_WS_Card','Sealed Stormy Knight Card','Card',20,10,true,true,'bonus3 bAutoSpell,"WZ_STORMGUST",1,20; bonus2 bAddEff,Eff_Freeze,1000;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (4498,'Sealed_Lady_Tanee_Card','Sealed Lady Tanee Card','Card',20,10,true,true,'bonus bMaxHPrate,-20; bonus bMaxSPrate,25; bonus2 bAddMonsterDropItem,513,200; bonus2 bAddItemHealRate,513,300;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;'',NULL,''if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
+REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
+VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;','if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4500,'Sealed_Orc_Load_Card','Sealed Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
