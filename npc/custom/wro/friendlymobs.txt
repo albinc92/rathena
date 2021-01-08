@@ -4,25 +4,45 @@
 OnInit:
 	//Guards
 	monster "cmd_fild08",320,351,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAnthellDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnAnthellDead",UMOB_DMGIMMUNE,1;
 	monster "mjolnir_02",82,349,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnCoalMineDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnCoalMineDead",UMOB_DMGIMMUNE,1;
 	monster "tur_dun01",150,50,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnTurDunDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnTurDunDead",UMOB_DMGIMMUNE,1;
 	monster "gef_fild06",32,301,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnGLDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnGLDead",UMOB_DMGIMMUNE,1;
 	monster "yuno_fild07",216,173,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnJupeDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnJupeDead",UMOB_DMGIMMUNE,1;
 	monster "hu_fild05",177,314,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbyssDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnAbyssDead",UMOB_DMGIMMUNE,1;
 	monster "odin_tem01",98,142,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOdinDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnOdinDead",UMOB_DMGIMMUNE,1;
 	monster "hu_fild01",139,150,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnThanaDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnThanaDead",UMOB_DMGIMMUNE,1;
 	monster "ra_fild01",233,324,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnIceDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnIceDead",UMOB_DMGIMMUNE,1;
 	monster "nameless_n",171,182,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnAbbeyDead",UMOB_DMGIMMUNE,1;
 	monster "nameless_n",162,191,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead2",0,1;
+	setunitdata strnpcinfo(0)+"::OnAbbeyDead2",UMOB_DMGIMMUNE,1;
 	monster "nameless_n",159,178,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnAbbeyDead3",0,1;
+	setunitdata strnpcinfo(0)+"::OnAbbeyDead3",UMOB_DMGIMMUNE,1;
 	monster "mosk_fild02",193,246,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnMoskDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnMoskDead",UMOB_DMGIMMUNE,1;
 	monster "spl_fild01",352,114,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnNydDead1",0,1;
+	setunitdata strnpcinfo(0)+"::OnNydDead1",UMOB_DMGIMMUNE,1;
 	monster "spl_fild01",349,106,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnNydDead2",0,1;
+	setunitdata strnpcinfo(0)+"::OnNydDead2",UMOB_DMGIMMUNE,1;
 	monster "yuno_fild03",44,135,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnNoggDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnNoggDead",UMOB_DMGIMMUNE,1;
 	monster "gef_fild10",73,328,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOrcDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnOrcDead",UMOB_DMGIMMUNE,1;
 	monster "gef_fild10",242,193,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnOrcDead2",0,1;
+	setunitdata strnpcinfo(0)+"::OnOrcDead2",UMOB_DMGIMMUNE,1;
 	monster "yuno_fild08",84,179,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnKHDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnKHDead",UMOB_DMGIMMUNE,1;
 	monster "ve_fild03",171,230,"Imperial Guard",3611,1,strnpcinfo(0)+"::OnThorDead",0,1;
+	setunitdata strnpcinfo(0)+"::OnThorDead",UMOB_DMGIMMUNE,1;
 
 	//Adventurers Lv.1+ Fields
 	//freeloop(1);s
