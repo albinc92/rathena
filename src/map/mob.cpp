@@ -2260,11 +2260,11 @@ void mob_setdropitem_option2(struct item *itm) {
         if(itemdb_type(itm->nameid) == IT_WEAPON) {
             r = rand() % MAX_WEAPON_INDEX;
             id = weaponid[r];
-            val = weaponbase[r] + (rand() % weaponbonus[r] - 1);
+            val = weaponbase[r] + ((rand() % weaponbonus[r]) - 1);
         } else {
             r = rand() % MAX_ARMOR_INDEX;
             id = armorid[r];
-            val = armorbase[r] + (rand() % armorbonus[r] - 1);
+            val = armorbase[r] + ((rand() % armorbonus[r]) - 1);
         }
         for(int j = i; j > 0; j--) {
             if(id == itm->option[j-1].id) {

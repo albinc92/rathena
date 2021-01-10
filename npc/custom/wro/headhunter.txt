@@ -155,7 +155,6 @@ L_ListMobs:
         set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ " + .@textColor$ + "Lv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
     }
     set .@selection, select(.@huntmenu$);
-
     set .@mobToHunt, .@id[.@selection - 1];
     set .@amnt, .@count[.@selection - 1];
     if(.@boss == 0) {
