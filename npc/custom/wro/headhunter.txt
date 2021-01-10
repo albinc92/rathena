@@ -144,8 +144,10 @@ L_ListMobs:
     set .@huntmenu$, "";
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
         set .@textColor$, "^ff0000";
-        if(.@boss == 0 && (strmobinfo(3, .@id[.@i]) <= (baseLevel * 0,7))) {
+        if(.@boss == 0 && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 7))) {
             set .@textColor$, "^ff0000";
+        } else if(.@boss == 0 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 7))) {
+            set .@textColor$, "^ff8000";
         }
         if (.@i) set .@huntmenu$,.@huntmenu$+":";
         set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ " + .@textColor$ + "Lv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
