@@ -145,7 +145,7 @@ L_ListMobs:
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
         set .@textColor$, "^ff0000";
         if(.@boss == 0 && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 7))) {
-            set .@textColor$, "^0000ff";
+            set .@textColor$, "^00ff00";
         } else if(.@boss == 0 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 7)) && (strmobinfo(3, .@id[.@i]) <= (((baseLevel / 10) * 7) + 3))) {
             set .@textColor$, "^ff8000";
         }
