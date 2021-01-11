@@ -2202,11 +2202,11 @@ void mob_setdropitem_option2(struct item *itm) {
             10, 10, 3, 10
     };
     short weaponbonus[MAX_WEAPON_INDEX] = {
-            3, 3, 3, 3, 3, 3,
-            6, 6, 16, 26, 76, 26, 16,
-            6, 6, 6, 6,
-            11, 6,
-            16, 16, 5, 16
+            2, 2, 2, 2, 2, 2,
+            5, 5, 15, 25, 75, 25, 15,
+            5, 5, 5, 5,
+            10, 5,
+            15, 15, 4, 15
     };
     short armorid[MAX_ARMOR_INDEX] = {
             3, 4, 5, 6, 7, 8,
@@ -2221,14 +2221,14 @@ void mob_setdropitem_option2(struct item *itm) {
             5, 5, 3
     };
     short armorbonus[MAX_ARMOR_INDEX] = {
-            3, 3, 3, 3, 3, 3,
-            6, 6, 11, 11,
-            3, 3, 7, 4,
-            6, 6, 5
+            2, 2, 2, 2, 2, 2,
+            5, 5, 10, 10,
+            2, 2, 6, 3,
+            5, 5, 4
     };
 
     int r, optAmt = 0;
-    r = rand() % 750;
+    r = rand() % 750 + 1;
     if(r < 501 && r > 250) {
         optAmt = MAX_ITEM_RDM_OPT - 4;
     } else if(r < 251 && r > 125) {
@@ -2260,11 +2260,11 @@ void mob_setdropitem_option2(struct item *itm) {
         if(itemdb_type(itm->nameid) == IT_WEAPON) {
             r = rand() % MAX_WEAPON_INDEX;
             id = weaponid[r];
-            val = weaponbase[r] + ((rand() % weaponbonus[r]) - 1);
+            val = rand() % weaponbonus[r] + weaponbase[r];
         } else {
             r = rand() % MAX_ARMOR_INDEX;
             id = armorid[r];
-            val = armorbase[r] + ((rand() % armorbonus[r]) - 1);
+            val = rand() % armorbonus[r] + armorbase[r];
         }
         for(int j = i; j > 0; j--) {
             if(id == itm->option[j-1].id) {
