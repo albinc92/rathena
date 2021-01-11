@@ -2202,11 +2202,11 @@ void mob_setdropitem_option2(struct item *itm) {
             10, 10, 3, 10
     };
     short weaponbonus[MAX_WEAPON_INDEX] = {
-            2, 2, 2, 2, 2, 2,
-            5, 5, 15, 25, 75, 25, 15,
-            5, 5, 5, 5,
-            10, 5,
-            15, 15, 4, 15
+            3, 3, 3, 3, 3, 3,
+            6, 6, 16, 26, 76, 26, 16,
+            6, 6, 6, 6,
+            11, 6,
+            16, 16, 5, 16
     };
     short armorid[MAX_ARMOR_INDEX] = {
             3, 4, 5, 6, 7, 8,
@@ -2221,10 +2221,10 @@ void mob_setdropitem_option2(struct item *itm) {
             5, 5, 3
     };
     short armorbonus[MAX_ARMOR_INDEX] = {
-            2, 2, 2, 2, 2, 2,
-            5, 5, 10, 10,
-            2, 2, 6, 3,
-            5, 5, 4
+            3, 3, 3, 3, 3, 3,
+            6, 6, 11, 11,
+            3, 3, 7, 4,
+            6, 6, 5
     };
 
     int r, optAmt = 0;
