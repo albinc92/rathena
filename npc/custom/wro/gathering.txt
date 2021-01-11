@@ -386,7 +386,7 @@ function	script	checkprofession	{
 // Param: <itemid_req>
 function	script	checkitem	{
     if(countitem(getarg(0)) < 1) {
-		message strcharinfo(0),"You need to have an [" + getitemname(getarg(0)) + "] in your inventory in order to harvest this node.";
+		message strcharinfo(0),"You need to have 1x [" + getitemname(getarg(0)) + "] in your inventory in order to harvest this node.";
 		end;
     }
 	return;
@@ -601,11 +601,6 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
 
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",61;
-
-    if(countitem(6381) < 1) {
-		message strcharinfo(0),"You need to have an [Field Shovel] in your inventory in order to harvest this node.";
-		end;
-    }
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
