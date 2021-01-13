@@ -325,6 +325,26 @@ L_About:
 
 }
 
+roy_in02,63,71,2	script	Mining Stove	-1,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
+	close;
+	end;
+
+OnInit:
+	waitingroom "Mining Stove",0;
+}
+
+roy_in02,90,70,2	script	Herbalism Workbench	-1,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "You can grind down materials gathered from ^0000ff[Herbalism]^000000 nodes here.";
+	close;
+	end;
+
+OnInit:
+	waitingroom "Herbalism Workbench",0;
+}
+
 royal,221,115,2	script	Signpost#crafting1	837,{
 	end;
 OnInit:
