@@ -583,6 +583,8 @@ pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#109	10229
 pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#110	10229
 pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#111	10229
 
+anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#112	10229
+
 
 
 // ==========================================================
@@ -658,6 +660,31 @@ um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#37	10174
 um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#38	10174
 um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#39	10174
 um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#40	10174
+
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#41	10174
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#42	10174
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#43	10174
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#43	10174
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#44	10174
+ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#45	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#46	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#47	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#48	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#49	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#50	10174
+iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#51	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#52	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#53	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#54	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#55	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#56	10174
+iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#57	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#58	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#59	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#60	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#61	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#62	10174
+iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#63	10174
 
 
 
