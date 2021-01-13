@@ -860,6 +860,95 @@ tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#50	527
 tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#51	527
 tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#52	527
 
+abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#53	527
+abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#54	527
+abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#55	527
+abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#56	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#57	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#58	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#59	527
+abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#60	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#61	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#62	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#63	527
+beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#64	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#65	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#66	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#67	527
+ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#68	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#69	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#70	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#71	527
+gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#72	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#73	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#74	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#75	527
+gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#76	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#77	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#78	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#79	527
+gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#80	527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#81	527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#82	527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#83   527
+ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#84	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#85	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#86	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#87	527
+ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#88	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#89	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#90	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#91	527
+lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#92	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#93	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#94	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#95	527
+lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#96	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#97	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#98	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#99	527
+lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#100	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#101	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#102	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#103	527
+mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#104	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#105	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#106	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#107	527
+mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#108	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#109	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#110	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#111	527
+mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#112	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#113	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#114	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#115	527
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#116	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#117	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#118	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#119	527
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#120	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#121	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#122	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#123	527
+thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#124	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#125	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#126	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#127	527
+tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#128	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#129	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#130	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#131	527
+tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#132	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#133	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#134	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#135	527
+tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#136	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#137	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#138	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#139	527
+tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#140	527
+
 
 
 // ==========================================================
@@ -909,6 +998,31 @@ thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#11	1816
 thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#12	1816
 thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#13	1816
 thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#14	1816
+
+abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#15	1816
+abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#16	1816
+beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#17	1816
+beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#18	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#19	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#20	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#21	1816
+juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#22	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#23	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#24	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#25	1816
+nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#26	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#27	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#28	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#29	1816
+odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#30	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#31	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#32	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#33	1816
+thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#34	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#35	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#36	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#37	1816
+thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#38	1816
 
 
 
