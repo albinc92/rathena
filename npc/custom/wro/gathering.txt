@@ -478,9 +478,16 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",1;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((60 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -625,9 +632,16 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",61;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((120 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -821,9 +835,16 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",121;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((180 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -991,9 +1012,16 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",181;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((240 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -1067,9 +1095,16 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
 	callfunc "checkitem",6381;
 	callfunc "checkskilllv","Herbalism",241;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((300 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -1111,7 +1146,7 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
     progressbar "0xffff00",3;
-	if(rand(1, ((60 - .@skillLv) / 20)) > 1) {
+	if(rand(1, ((60 - .@skillLv) / 20)) > 2) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
 	}
@@ -1262,9 +1297,16 @@ ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
 	callfunc "checkitem",7318;
 	callfunc "checkskilllv","Mining",61;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((120 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -1460,9 +1502,16 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
 	callfunc "checkitem",7318;
 	callfunc "checkskilllv","Mining",121;
 
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((180 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -1630,9 +1679,15 @@ abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
 	callfunc "checkitem",7318;
 	callfunc "checkskilllv","Mining",181;
 
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((240 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
@@ -1696,9 +1751,15 @@ nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
 	callfunc "checkitem",7318;
 	callfunc "checkskilllv","Mining",241;
 
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+	if(rand(1, ((300 - .@skillLv) / 20)) > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
-    progressbar "0xffff00",3;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
