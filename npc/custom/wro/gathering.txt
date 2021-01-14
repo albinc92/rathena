@@ -328,7 +328,7 @@ L_About:
 roy_in02,64,70,0	script	Mining Stove	111,1,1,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
-	produce 1;
+	makerune 1;
 	close;
 	end;
 
