@@ -325,7 +325,7 @@ L_About:
 
 }
 
-roy_in02,64,70,0	script	Mining Stove	111,{
+roy_in02,64,70,0	script	Mining Stove	10045,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
 	makerune 1;
@@ -336,7 +336,7 @@ OnInit:
 	waitingroom "Mining Stove",0;
 }
 
-roy_in02,90,70,0	script	Herbalism Workbench	111,{
+roy_in02,90,70,0	script	Herbalism Workbench	10043,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "You can grind down materials gathered from ^0000ff[Herbalism]^000000 nodes here.";
 	cooking 11;
