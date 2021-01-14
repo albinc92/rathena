@@ -325,7 +325,7 @@ L_About:
 
 }
 
-roy_in02,63,71,2	script	Mining Stove	-1,{
+roy_in02,64,70,2	script	Mining Stove	-1,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
 	close;
@@ -437,6 +437,10 @@ function	script	incgatherskill	{
     query_sql("SELECT `" + getarg(0) + "` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@skillLv);
 	if(.@skillLv == 300) {
 	    return;
+	}
+	if((rand(1, getarg(0)) - .@skillLv) < 33) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
 	}
 	if(.@skillLv > getarg(1)) {
 		message strcharinfo(0),"Your [" + getarg(0) + "] skill level is too high to be able to learn anything by salvaging this node.";
