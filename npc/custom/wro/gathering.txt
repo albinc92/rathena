@@ -438,9 +438,9 @@ function	script	incgatherskill	{
 	if(.@skillLv == 300) {
 	    return;
 	}
-	if((rand(1, getarg(0)) - .@skillLv) < 33) {
+	if(rand(1, ((getarg(0) - .@skillLv) / 20)) > 1) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
+	    return;
 	}
 	if(.@skillLv > getarg(1)) {
 		message strcharinfo(0),"Your [" + getarg(0) + "] skill level is too high to be able to learn anything by salvaging this node.";
