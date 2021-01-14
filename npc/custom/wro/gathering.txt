@@ -495,7 +495,6 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Herbalism",60;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -649,7 +648,6 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Herbalism",120;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -852,7 +850,6 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Herbalism",180;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1029,7 +1026,6 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Herbalism",240;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1112,7 +1108,6 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Herbalism",300;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1160,7 +1155,6 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Mining",60;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1314,7 +1308,6 @@ ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Mining",120;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1519,7 +1512,6 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Mining",180;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1695,7 +1687,6 @@ abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Mining",240;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1767,7 +1758,6 @@ nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
 	}
 	callfunc "incgatherskill","Mining",300;
-	specialeffect 4;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
