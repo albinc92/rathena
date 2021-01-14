@@ -438,10 +438,6 @@ function	script	incgatherskill	{
 	if(.@skillLv == 300) {
 	    return;
 	}
-	if(rand(1, ((getarg(0) - .@skillLv) / 20)) > 1) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
 	if(.@skillLv > getarg(1)) {
 		message strcharinfo(0),"Your [" + getarg(0) + "] skill level is too high to be able to learn anything by salvaging this node.";
 	    return;
@@ -1109,6 +1105,11 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 
 	callfunc "checkitem",7318;
 	callfunc "checkskilllv","Mining",1;
+
+	if(rand(1, ((60 - .@skillLv) / 20)) > 1) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
