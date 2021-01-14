@@ -382,13 +382,12 @@ OnAtcommand:
 	end;
 
 OnInit:
-    query_sql("REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1006");
-    //query_sql("UPDATE `item_db2` SET `script` = 'callfunc "F_CashStore";' WHERE `id` = 1006");
-    query_sql("UPDATE `item_db2` SET `type` = 2 WHERE `id` = 1006");
     query_sql("CREATE TABLE IF NOT EXISTS `gathering` (`char_id` int(11) unsigned NOT NULL default '0',`Herbalism` int(11) NOT NULL default '0',`Mining` int(11) NOT NULL default '0',`Enchanting` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 	bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "prof",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "gather",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "gathering",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
 
