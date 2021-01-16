@@ -58,9 +58,9 @@ L_Exit:
 OnAtcommand:
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
 	if(.@hints) {
-	    query_sql("UPDATE `wrodata` SET `` = 0 WHERE `char_id` = " + getcharid(0));
+	    query_sql("UPDATE `wrodata` SET `hints` = 0 WHERE `char_id` = " + getcharid(0));
 	} else {
-	    query_sql("UPDATE `wrodata` SET `` = 1 WHERE `char_id` = " + getcharid(0));
+	    query_sql("UPDATE `wrodata` SET `hints` = 1 WHERE `char_id` = " + getcharid(0));
 	}
 	end;
 
