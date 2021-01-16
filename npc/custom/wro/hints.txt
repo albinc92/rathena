@@ -14,6 +14,7 @@ OnPCLoginEvent:
 	    end;
 	}
 
+    cutin "warboundro.bmp", 4;
     setarray .@hints$[0],
 		"Your ^0000ffLUK^000000 attribute directly affects the drop chance of items.",
 		"Pressing the ^0000ff[Ctrl]^000000 button while attacking a monster will cause your character to automatically attack it.",
