@@ -59,8 +59,10 @@ OnAtcommand:
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@hints);
 	if(.@hints == 1) {
 	    query_sql("UPDATE `wrodata` SET `hints` = 0 WHERE `char_id` = " + getcharid(3));
+		message strcharinfo(0),"Hints are now deactivated.";
 	} else {
 	    query_sql("UPDATE `wrodata` SET `hints` = 1 WHERE `char_id` = " + getcharid(3));
+		message strcharinfo(0),"Hints are now activated.";
 	}
 	end;
 
