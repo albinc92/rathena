@@ -26,17 +26,16 @@ OnPCLoginEvent:
 		"Type /where to see your map location.",
 		"You can socket gemstones into your equipment to add Status Point bonuses.";
 
-    while(0) {
-	    mes "[^0000ffDid you know?^000000]";
-	    mes .@hints$[rand(0, getarraysize(.@hints$))];
+L_NextHint:
+	mes "[^0000ffDid you know?^000000]";
+	mes .@hints$[rand(0, getarraysize(.@hints$))];
 
-        set .@menu, select("Next hint:Cancel");
-        if (.@menu == 2) {
-            goto L_Close;
-        }
+    set .@menu, select("Next hint:Cancel");
+    if (.@menu == 2) {
+            next;
+            goto L_NextHint;
     }
 
-L_Close:
 	close2;
 	cutin "", 255;
 	end;
