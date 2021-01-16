@@ -11,6 +11,7 @@ DELETE FROM `item_db2`;
 CREATE TABLE IF NOT EXISTS `wrodata` (
   `char_id` int(11) unsigned NOT NULL default '0',
   `intro` int(11) NOT NULL default '0',
+  `hints` int(11) NOT NULL default '0',
   PRIMARY KEY (`char_id`),
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;

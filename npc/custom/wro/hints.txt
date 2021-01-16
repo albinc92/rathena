@@ -7,8 +7,13 @@
 -	script	Hints	-1,{
 
 OnPCLoginEvent:
+	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
+	if(!.@hints) {
+	    end;
+	}
+
     setarray .@hints$[0],
-		"Your LUK attribute directly affects the drop chance of items.",
+		"LUK attribute directly affects the drop chance of items.",
 		"Pressing [Ctrl] while attacking a monster will cause your character to automatically attack it.",
 		"You can use the Navigation Interface simultaneously while looking at the World Map?",
 		"You can customize your Hotkeys for each of the 4 skill bars.",
@@ -27,8 +32,10 @@ OnPCLoginEvent:
 		"You can socket gemstones into your equipment to add Status Point bonuses.";
 
 L_NextHint:
-	mes "[^0000ffDid you know?^000000]";
+	mes "[^0000ffTip of the Day^000000]";
 	mes .@hints$[rand(0, getarraysize(.@hints$))];
+	mes "";
+	mes "^808080(You can toggle these hints ON/OFF with the @hints atcommand)";
 
     set .@menu, select("Next hint:Cancel");
     if (.@menu == 1) {
@@ -36,7 +43,28 @@ L_NextHint:
             goto L_NextHint;
     }
 
+L_Exit:
 	close2;
 	cutin "", 255;
+	end;
+}
+
+
+
+// AtCommands
+-	script	HintsAtCommand	-1,{
+    end;
+
+OnAtcommand:
+	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
+	if(.@hints) {
+	    query_sql("UPDATE `hints` SET `` = 0 WHERE `char_id` = " + getcharid(0));
+	} else {
+	    query_sql("UPDATE `hints` SET `` = 1 WHERE `char_id` = " + getcharid(0));
+	}
+	end;
+
+OnInit:
+	bindatcmd "hints",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
