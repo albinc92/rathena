@@ -1,0 +1,43 @@
+//======================================================================================================================
+//=                                                      Reminders
+//======================================================================================================================
+//=                             Reminds players about important messages at a regular basis
+//======================================================================================================================
+
+-	script	Hints	-1,{
+
+OnLogin:
+    setarray .@hints$[0],
+		"Your LUK attribute directly affects the drop chance of items.",
+		"Pressing [Ctrl] while attacking a monster will cause your character to automatically attack it.",
+		"You can use the Navigation Interface simultaneously while looking at the World Map?",
+		"You can customize your Hotkeys for each of the 4 skill bars.",
+		"Cast rate is affected by both your DEX and INT attributes.",
+		"You can learn a profession. Find out more at the Craftsmen's Guild in Royal.",
+		"You can buy Elemental Scrolls at the Astronomer's Facility in Royal.",
+		"At WarboundRO, the required Status Point amount for immunity against Status Effects has been increased from 99 to 250.",
+		"Dropped items have a chance to gain random Magical Bonuses. The amount of bonuses available is restricted by the amount of slots the item has.",
+		"Weapons above Weapon Level 1 have had their ATK increased by +50% per Weapon Level.",
+		"Static damage skills like [Gravitational Field] and [Pressure] have had their damage increased.",
+		"All MvP Cards have a Sealed Card equivalent that you can acquire from [Sealed Card Album]. In addition, previously missing MvP cards now exist, such as [Wounded Morocc Card].",
+		"Somewhere in Royal, you can turn in your Cards and [Old Card Album] for [Card Tokens]. These tokens can then be traded for some cool items.",
+		"You can find out if anyone is selling a particular item by using the @whosell <itemID> atcommand.",
+		"Tired of picking up items one at a time? The @arealoot atcommand is the solution for you!",
+		"Type /where to see your map location.",
+		"You can socket gemstones into your equipment to add Status Point bonuses.";
+
+    while(0) {
+	    mes "[^0000ffDid you know?^000000]";
+	    mes .@hints$[rand(0, getarraysize(.@hints$))];
+
+        set .@menu, select("Next hint:Cancel");
+        if (.@menu == 2) {
+            goto L_Close;
+        }
+    }
+
+L_Close;
+	close2;
+	cutin "", 255;
+	end;
+}
