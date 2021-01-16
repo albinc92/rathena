@@ -384,10 +384,13 @@ OnAtcommand:
 OnInit:
     query_sql("CREATE TABLE IF NOT EXISTS `gathering` (`char_id` int(11) unsigned NOT NULL default '0',`Herbalism` int(11) NOT NULL default '0',`Mining` int(11) NOT NULL default '0',`Enchanting` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 	bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "profs",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "prof",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "gather",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "gathering",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "gather",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "crafting",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "craft",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "cr",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
 

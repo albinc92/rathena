@@ -306,6 +306,7 @@ OnAtcommand:
 
 OnInit:
 	bindatcmd "pvpscore",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "ps",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
 

@@ -29,8 +29,6 @@ OnPCLoginEvent:
 		"Static damage skills like [Gravitational Field] and [Pressure] have had their damage increased.",
 		"All MvP Cards have a Sealed Card equivalent that you can acquire from [Sealed Card Album]. In addition, previously missing MvP cards now exist, such as [Wounded Morocc Card].",
 		"Somewhere in Royal, you can turn in your Cards and [Old Card Album] for [Card Tokens]. These tokens can then be traded for some cool items.",
-		"You can find out if anyone is selling a particular item by using the @whosell <itemID> atcommand.",
-		"Tired of picking up items one at a time? The @arealoot atcommand is the solution for you!",
 		"Type /where to see your map location.",
 		"You can socket gemstones into your equipment to add Status Point bonuses.";
 
@@ -59,10 +57,10 @@ L_Exit:
     end;
 
 OnAtcommand:
-    mes "Entered command.";
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
-	if(.@hints) {
+	if(.@hints == 1) {
 	    query_sql("UPDATE `wrodata` SET `hints` = 0 WHERE `char_id` = " + getcharid(0));
+		message strcharinfo(0),"Hints turned OFF.";
 	} else {
 	    query_sql("UPDATE `wrodata` SET `hints` = 1 WHERE `char_id` = " + getcharid(0));
 	}

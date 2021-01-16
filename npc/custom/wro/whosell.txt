@@ -89,8 +89,15 @@ OnAtcommandWhoBuy:
 	end;
 
 OnInit:
+	bindatcmd "whosells",strnpcinfo(3) + "::OnAtcommandWhoSell";
 	bindatcmd "whosell",strnpcinfo(3) + "::OnAtcommandWhoSell";
+	bindatcmd "whos",strnpcinfo(3) + "::OnAtcommandWhoSell";
+	bindatcmd "ws",strnpcinfo(3) + "::OnAtcommandWhoSell";
+
+	bindatcmd "whobuys",strnpcinfo(3) + "::OnAtcommandWhoBuy";
 	bindatcmd "whobuy",strnpcinfo(3) + "::OnAtcommandWhoBuy";
+	bindatcmd "whob",strnpcinfo(3) + "::OnAtcommandWhoBuy";
+	bindatcmd "wb",strnpcinfo(3) + "::OnAtcommandWhoBuy";
 	end;
 
 }
