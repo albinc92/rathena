@@ -8,6 +8,9 @@
 
 OnPCLoginEvent:
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
+
+	mes .@hints;
+
 	if(.@hints == 0) {
 	    end;
 	}
