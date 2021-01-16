@@ -59,6 +59,7 @@ L_Exit:
     end;
 
 OnAtcommand:
+    mes "Entered command.";
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
 	if(.@hints) {
 	    query_sql("UPDATE `wrodata` SET `hints` = 0 WHERE `char_id` = " + getcharid(0));
