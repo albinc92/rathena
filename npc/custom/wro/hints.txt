@@ -34,7 +34,7 @@ OnPCLoginEvent:
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
 	mes .@hints$[rand(0, getarraysize(.@hints$))];
-	mes "";
+	mes "^f7f7f7_^000000";
 	mes "^808080(You can toggle these hints ON/OFF with the @hints atcommand)";
 
     set .@menu, select("Next hint:Cancel");
