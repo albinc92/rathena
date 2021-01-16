@@ -7,7 +7,7 @@
 -	script	Hints	-1,{
 
 OnPCLoginEvent:
-	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
+	query_sql("SELECT hints FROM wrodata WHERE char_id = " + getcharid(0), .@hints);
 
 	if(.@hints == 0) {
 	    end;
@@ -55,13 +55,13 @@ L_Exit:
     end;
 
 OnAtcommand:
-	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
+	query_sql("SELECT hints FROM wrodata WHERE char_id = " + getcharid(0), .@hints);
+	message strcharinfo(0),atoi(.@hints);
+
 	if(.@hints == 1) {
-	    query_sql("UPDATE `wrodata` SET `hints` = 0 WHERE `char_id` = " + getcharid(0));
-		message strcharinfo(0),"Hints turned OFF.";
+	    query_sql("UPDATE wrodata SET hints = 0 WHERE char_id = " + getcharid(0));
 	} else {
-	    query_sql("UPDATE `wrodata` SET `hints` = 1 WHERE `char_id` = " + getcharid(0));
-		message strcharinfo(0),"Hints turned ON.";
+	    query_sql("UPDATE wrodata SET hints = 1 WHERE char_id = " + getcharid(0));
 	}
 	end;
 
