@@ -35,7 +35,7 @@ L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
 	mes .@hints$[rand(0, getarraysize(.@hints$))];
 	mes "^f7f7f7_^000000";
-	mes "^808080(You can toggle these hints ON/OFF with the @hints atcommand)";
+	mes "^808080(Use @hints to toggle these messages <on>/<off>)";
 
     set .@menu, select("Next hint:Cancel");
     if (.@menu == 1) {
