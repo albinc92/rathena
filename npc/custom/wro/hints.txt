@@ -15,25 +15,24 @@ OnPCLoginEvent:
 	}
 
     setarray .@hints$[0],
-		"LUK attribute directly affects the drop chance of items.",
-		"Pressing [Ctrl] while attacking a monster will cause your character to automatically attack it.",
-		"You can use the Navigation Interface simultaneously while looking at the World Map?",
-		"You can customize your Hotkeys for each of the 4 skill bars.",
-		"Cast rate is affected by both your DEX and INT attributes.",
-		"You can learn a profession. Find out more at the Craftsmen's Guild in Royal.",
-		"You can buy Elemental Scrolls at the Astronomer's Facility in Royal.",
-		"At WarboundRO, the required Status Point amount for immunity against Status Effects has been increased from 99 to 250.",
-		"Dropped items have a chance to gain random Magical Bonuses. The amount of bonuses available is restricted by the amount of slots the item has.",
+		"Your ^0000ffLUK^000000 attribute directly affects the drop chance of items.",
+		"Pressing the ^0000ff[Ctrl]^000000 button while attacking a monster will cause your character to automatically attack it.",
+		"Use the ^0000ffNavigation Interface^000000 and the ^0000ffWorld Map^000000 to ease navigation through the kingdom of Rune-Midgard.",
+		"Cast rate is affected by both your ^0000ffDEX^000000 and ^0000ffINT^000000 attributes.",
+		"You can learn a ^0000ffProfession^000000 to earn extra Zeny and other benefits! Find out more at the ^0000ffCraftsmen's Guild^000000 in Royal.",
+		"You can buy [^0000ffElemental Converters^000000] at the ^0000ffAstronomer's Facility^000000 in Royal.",
+		"The required status point amount for immunity against negative Status Effects has been increased from 99 to 250.",
+		"Dropped items have a chance to gain random [^0000ffMagical Bonuses^000000]. The maximum amount of bonuses available is restricted by the amount of slots the item has.",
 		"Weapons above Weapon Level 1 have had their ATK increased by +50% per Weapon Level.",
-		"Static damage skills like [Gravitational Field] and [Pressure] have had their damage increased.",
+		"Static damage skills like [^0000ffGravitational Field^000000] and [^0000ffPressure^000000] have had their damage increased.",
 		"All MvP Cards have a Sealed Card equivalent that you can acquire from [Sealed Card Album]. In addition, previously missing MvP cards now exist, such as [Wounded Morocc Card].",
 		"Somewhere in Royal, you can turn in your Cards and [Old Card Album] for [Card Tokens]. These tokens can then be traded for some cool items.",
 		"Type /where to see your map location.",
-		"You can socket gemstones into your equipment to add Status Point bonuses.";
+		"You can socket gemstones into your equipment to add Status Point bonuses. Look for the ^0000ffSocketing Craftsman^000000 in Royal.";
 
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
-	mes .@hints$[rand(0, getarraysize(.@hints$))];
+	mes .@hints$[rand(0, getarraysize(.@hints$) - 1)];
 	mes "^f7f7f7_^000000";
 	mes "^808080(Use @hints to toggle these messages <on>/<off>)";
 
