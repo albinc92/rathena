@@ -31,7 +31,7 @@ L_NextHint:
 	mes .@hints$[rand(0, getarraysize(.@hints$))];
 
     set .@menu, select("Next hint:Cancel");
-    if (.@menu == 2) {
+    if (.@menu == 1) {
             next;
             goto L_NextHint;
     }
