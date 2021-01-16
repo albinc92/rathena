@@ -10,3 +10,10 @@
 
 //ACMD_DEF(newcommand),
 ACMD_DEF(arealoot),
+ACMD_DEF(profession),
+ACMD_DEF(hints),
+ACMD_DEF(pvpscore),
+ACMD_DEF(resinfo),
+ACMD_DEF(title),
+ACMD_DEF(whosell),
+ACMD_DEF(whobuy),
