@@ -6,7 +6,7 @@
 
 -	script	Hints	-1,{
 
-OnLogin:
+OnPCLoginEvent:
     setarray .@hints$[0],
 		"Your LUK attribute directly affects the drop chance of items.",
 		"Pressing [Ctrl] while attacking a monster will cause your character to automatically attack it.",
