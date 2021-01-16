@@ -9,8 +9,6 @@
 OnPCLoginEvent:
 	query_sql("SELECT `hints` FROM `wrodata` WHERE `char_id` = " + getcharid(0), .@hints);
 
-	mes .@hints;
-
 	if(.@hints == 0) {
 	    end;
 	}
@@ -63,6 +61,7 @@ OnAtcommand:
 		message strcharinfo(0),"Hints turned OFF.";
 	} else {
 	    query_sql("UPDATE `wrodata` SET `hints` = 1 WHERE `char_id` = " + getcharid(0));
+		message strcharinfo(0),"Hints turned ON.";
 	}
 	end;
 
