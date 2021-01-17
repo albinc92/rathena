@@ -1,6 +1,6 @@
 // Royal
 royal,134,166,0	warp	royal_hq	1,1,roy_in01,198,178
-//royal,134,15,0	warp	royal_field	1,1,roy_fild01,190,274
+royal,134,15,0	warp	royal_field	1,1,roy_fild01,190,274
 royal,190,177,0	warp	royal_church	1,1,roy_in02,129,146
 royal,177,85,0	warp	royal_uncard	1,1,roy_in02,284,125
 royal,99,181,0	warp	royal_pvp	1,1,roy_in02,129,104
@@ -20,6 +20,9 @@ royal,73,66,0	warp	royal_clan	1,1,roy_in02,240,138
 royal,223,112,0	warp	royal_academy	1,1,roy_in02,60,74
 royal,46,67,0	warp	royal_house1	1,1,roy_in03,32,101
 royal,248,150,0	warp	roy_new01	1,1,royal,134,150
+
+// Roy Fields 01
+roy_fild01,190,276,0	warp	roy_fild01_royal	1,1,roy_fild01,190,274
 
 // Legion Senate
 roy_in01,198,175,0	warp	hq_royal	1,1,royal,134,164
