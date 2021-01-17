@@ -82,7 +82,7 @@ L_Missions:
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "What kind of game are you looking for today?";
 
-    switch(select("Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 105^000000]:Monsters [^ff0000Lv. 106 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
+    switch(select("Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
         case 1:
             set .@boss, 0;
             next;
