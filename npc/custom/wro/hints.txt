@@ -42,9 +42,6 @@ OnPCLoginEvent:
     set .@index, rand(0, getarraysize(.@hints$) - 1);
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
-	if(.@index == (getarraysize(.@hints$) - 1)) {
-	    set ..@index, 0;
-	}
 	mes .@hints$[.@index];
 	mes "^f7f7f7_^000000";
 	mes "^808080(Use @hints to toggle these messages <on>/<off>)";
@@ -53,6 +50,9 @@ L_NextHint:
     if (.@menu == 1) {
             next;
             set .@index, .@index + 1;
+            if(.@index == (getarraysize(.@hints$) - 1)) {
+                set .@index, 0;
+            }
             goto L_NextHint;
     }
 
