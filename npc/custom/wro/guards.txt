@@ -28,5 +28,5 @@ roy_in01,193,186,5	duplicate(royguard)	Imperial Guard#hq5	852
 roy_in01,193,196,5	duplicate(royguard)	Imperial Guard#hq6	852
 roy_in01,202,220,5	duplicate(royguard)	Imperial Guard#hq7	852
 roy_in01,193,220,5	duplicate(royguard)	Imperial Guard#hq8	852
-//roy_fild01,195,276,4	duplicate(royguard)	Imperial Guard#fild1	852
-//roy_fild01,183,276,5	duplicate(royguard)	Imperial Guard#fild2	852
+roy_fild01,195,276,4	duplicate(royguard)	Imperial Guard#fild1	852
+roy_fild01,183,276,5	duplicate(royguard)	Imperial Guard#fild2	852

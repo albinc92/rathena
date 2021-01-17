@@ -22,7 +22,7 @@ royal,46,67,0	warp	royal_house1	1,1,roy_in03,32,101
 royal,248,150,0	warp	roy_new01	1,1,royal,134,150
 
 // Roy Fields 01
-roy_fild01,190,276,0	warp	roy_fild01_royal	1,1,roy_fild01,190,274
+roy_fild01,190,276,0	warp	roy_fild01_royal	1,1,royal,134,18
 
 // Legion Senate
 roy_in01,198,175,0	warp	hq_royal	1,1,royal,134,164
