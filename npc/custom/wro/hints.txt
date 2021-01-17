@@ -14,7 +14,7 @@ OnPCLoginEvent:
 	    end;
 	}
 
-    cutin "warboundro.bmp", 4;
+    cutin "tipoftheday.bmp", 4;
     setarray .@hints$[0],
 		"The LUK attribute positively affects drop chances of items.",
 		"Pressing the Ctrl button while attacking a monster will cause your character to automatically attack it.",
