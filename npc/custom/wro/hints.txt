@@ -31,15 +31,17 @@ OnPCLoginEvent:
 		"Type /where to see your map location.",
 		"You can socket gemstones into your equipment to add Status Point bonuses. Look for the Socketing Craftsman in Royal.";
 
+    set .@index, rand(0, getarraysize(.@hints$) - 1);
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
-	mes .@hints$[rand(0, getarraysize(.@hints$) - 1)];
+	mes .@hints$[.@index];
 	mes "^f7f7f7_^000000";
 	mes "^808080(Use @hints to toggle these messages <on>/<off>)";
 
     set .@menu, select("Next hint:Cancel");
     if (.@menu == 1) {
             next;
+            set .@index, .@index + 1;
             goto L_NextHint;
     }
 
