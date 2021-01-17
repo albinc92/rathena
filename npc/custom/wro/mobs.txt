@@ -1,6 +1,9 @@
 // Royal
 royal,0,0	monster	Wild Rose	1261,1,7200000,3600000
 
+// Royal Field 01
+roy_fild01,0,0	monster	Cobalt Mineral	1976,70,0,0
+
 // Niflheim
 niflheim,0,0,0,0	boss_monster	Lord of the Dead	1373,1,7980000,7980000
 
