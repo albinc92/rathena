@@ -21,15 +21,23 @@ OnPCLoginEvent:
 		"Use the Navigation Interface and the World Map to more easily navigate Rune-Midgard.",
 		"Cast rate is affected by both the DEX and INT attributes.",
 		"You can learn a profession in order to earn extra Zeny and gain various benefits! Find out more at the Craftsmen's Guild in Royal.",
-		"You can buy Elemental Converters at the Astronomer's Facility in Royal.",
-		"The Status Point requirement for immunity against negative Status Effects has been increased from 99 to 250.",
+		"You can buy Elemental Converters at the Astronomer's Facility in Royal. They can change the elemental property of your weapon temporarily.",
+		"Hire a Mercenary from the Mercenary Contractor in Royal to aid you when leveling.",
+		"Make sure you check out the Supply Master inside the Senate building in Royal to see what he has in store.",
+        "The Status Point requirement for immunity against negative Status Effects has been increased from 99 to 250.",
 		"Dropped items have a chance to gain random Magical Bonuses. The maximum amount of bonuses available is restricted by the amount of slots the item has.",
 		"Weapons above Weapon Level 1 have had their ATK increased by +50% per Weapon Level.",
-		"Static damage skills like [Gravitational Field] and [Pressure] have had their damage increased.",
-		"All MvP Cards have a Sealed Card equivalent that you can acquire from [Sealed Card Album]. In addition, previously missing MvP cards now exist, such as [Wounded Morocc Card].",
-		"Somewhere in Royal, you can turn in your Cards and [Old Card Album] for [Card Tokens]. These tokens can then be traded for some cool items.",
+		"Static damage skills like Gravitational Field and Pressure have had their damage increased.",
+		"All MvP Cards have a Sealed Card equivalent that you can acquire from Sealed Card Albums. In addition, previously missing MvP cards now exist, such as Wounded Morocc Card.",
+		"Somewhere in Royal, you can turn in your Cards and Old Card Albums for Card Tokens. These tokens can then be traded for some cool items.",
 		"Type /where to see your map location.",
-		"You can socket gemstones into your equipment to add Status Point bonuses. Look for the Socketing Craftsman in Royal.";
+		"You can socket gemstones into your equipment to add Status Point bonuses. Look for the Socketing Craftsman in Royal.",
+		"You can set up your Shop or Buying Store on the Western Plaza in Royal.",
+		"They say Captain Pawson in the Royal harbor is letting adventurers ride along on his adventures.",
+		"You should seek our Galtun in the Foreign District in Royal if you're looking to get stronger.",
+		"Partaking in events to receive Poring Coins, which can be traded for cool stuff at the Supply Master inside the Royal Senate building.",
+		"Looking to change up your style? You can create Costume Copies of any headgear at the Hut in the Foreign District in Royal.",
+		"Talk to the Private MVP Room master in Royal if you want to break open your Bloody Branches in peace.";
 
     set .@index, rand(0, getarraysize(.@hints$) - 1);
 L_NextHint:
