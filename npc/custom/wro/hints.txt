@@ -39,7 +39,7 @@ OnPCLoginEvent:
 		"Looking to change up your style? You can create Costume Copies of any headgear at the Hut in the Foreign District in Royal.",
 		"Talk to the Private MVP Room master in Royal if you want to break open your Bloody Branches in peace.";
 
-    set .@index, rand(0, getarraysize(.@hints$) - 1);
+    set .@index, rand(0, getarraysize(.@hints$));
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
 	mes .@hints$[.@index];
@@ -50,7 +50,7 @@ L_NextHint:
     if (.@menu == 1) {
             next;
             set .@index, .@index + 1;
-            if(.@index == (getarraysize(.@hints$) - 1)) {
+            if(.@index == getarraysize(.@hints$)) {
                 set .@index, 0;
             }
             goto L_NextHint;
