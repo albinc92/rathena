@@ -6,6 +6,8 @@ royal	mapflag	loadevent
 royal	mapflag	town
 royal	mapflag	pvp	off
 
+roy_fild01	mapflag	nightenabled
+
 roy_in01	mapflag	town
 roy_in01	mapflag	nobranch
 roy_in01	mapflag	noicewall
