@@ -42,8 +42,8 @@ OnPCLoginEvent:
     set .@index, rand(0, getarraysize(.@hints$) - 1);
 L_NextHint:
 	mes "[^0000ffTip of the Day^000000]";
-	if(.@hints == (getarraysize(.@hints$) - 1)) {
-	    set .@hints, 0;
+	if(.@index == (getarraysize(.@hints$) - 1)) {
+	    set ..@index, 0;
 	}
 	mes .@hints$[.@index];
 	mes "^f7f7f7_^000000";
