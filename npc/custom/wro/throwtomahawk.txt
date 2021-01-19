@@ -2,7 +2,7 @@ royal,134,150,3	script	Tomahawk Specialist	472,{
 
 	mes "["+strnpcinfo(0)+"]";
     if(Class == 10 || Class == 4011) goto L_OK;
-	mes "I provide the ^ff0000Throw Tomahawk^000000 skill to ^ff0000Blacksmiths^000000 and ^ff0000Whitesmiths^000000 only.";
+	mes "I teach the ^ff0000Throw Tomahawk^000000 skill. However, I only teach it to ^ff0000Blacksmiths^000000 and ^ff0000Whitesmiths^000000.";
 	close2;
     cutin "", 255;
     end;
@@ -16,7 +16,7 @@ L_OK:
         case 1:
             next;
 	        mes "["+strnpcinfo(0)+"]";
-	        mes "Very well! I charge 10.000 Zeny for this. Is this OK?";
+	        mes "Very well! I charge ^ff000010.000 Zeny^000000 for this. Is this OK?";
             switch(select("Pay:Cancel")) {
                 case 1:
                     next;
@@ -28,7 +28,7 @@ L_OK:
                         end;
                     }
                     set zeny, zeny - 10000;
-                    skill ITM_TOMAHAWK,1,0;
+                    bonus_script "ITM_TOMAHAWK,1,0",0;
                     mes "Alright! You now know the ^ff0000Throw Tomahawk^000000 skill! Congratulations!";
                     close2;
                     cutin "", 255;
@@ -40,7 +40,7 @@ L_OK:
     end;
 
 L_KnowsSkill:
-	mes "How fare thee? Hope you are enjoying the skill i taught you.";
+	mes "Hail.";
     close2;
     cutin "", 255;
     end;
