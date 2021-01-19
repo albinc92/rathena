@@ -28,7 +28,7 @@ L_OK:
                         end;
                     }
                     set zeny, zeny - 10000;
-                    bonus_script "skill "ITM_TOMAHAWK",1;",-1;
+                    bonus_script "{ skill "ITM_TOMAHAWK",1; }",180;
                     mes "Alright! You now know the ^ff0000Throw Tomahawk^000000 skill! Congratulations!";
                     close2;
                     cutin "", 255;
