@@ -61,7 +61,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Consumables","Miscellaneous","PC Exchange","Glorious Weapons","Valorous Weapons","Brave Weapons","Soldier Weapons","Glorious Armor","Battleground Armor","Cards","Costume Items";
+	setarray .Shops$[1],"Consumables","Miscellaneous","Event Token Exchange","Glorious Weapons","Valorous Weapons","Brave Weapons","Soldier Weapons","Glorious Armor","Battleground Armor","Cards","Costume Items";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!

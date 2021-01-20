@@ -149,7 +149,7 @@ OnEffect:
 		sleep 100;
 		set .@x2, rand((.@x-4),(.@x+4));
 		set .@y2, rand((.@y-10),(.@y+11));
-		makeitem 7539,1,"quiz_02",.@x2,.@y2;
+		makeitem 40001,1,"quiz_02",.@x2,.@y2;
 	}
 	end;
 }
