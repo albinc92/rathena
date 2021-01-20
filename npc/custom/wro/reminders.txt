@@ -7,7 +7,7 @@
 -	script	News	-1,{
 
 OnInit:
-    set .Time, 20;		// Announce every x Minute.
+    set .Time, 15;		// Announce every x Minute.
 
     setarray .News$[0],	// Random Message to be Announced
 		"Never give out your account name or password to anyone!",
@@ -15,7 +15,7 @@ OnInit:
 		"Found a bug or having issues with the server? Make a post at our forums! www.warboundro.boards.net",
 		"Enjoying your stay at WarboundRO? Don't forget to vote!";
 
-	sleep ( .Time * 60000 );
+	sleep ( 60000 );
     while(1) {
 	    announce .News$[ rand( getarraysize( .News$ ) ) ],0;
 	    sleep ( .Time * 60000 );
