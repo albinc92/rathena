@@ -236,7 +236,7 @@ iCorrect:
 	deletepset 1;
 	activatepset 1;
 	getitem .Prize,.PrizeAmt;
-	npctalk "Disguise Event : " + strcharinfo(0) + " is correct! I was disguised as: "+$MonsterName$+"!",bc_map,0x00FFFF,FW_NORMAL,16;
+	npctalk "Disguise Event : " + strcharinfo(0) + " is correct! I was disguised as: "+$MonsterName$+"!";
 	if (.RoundCount>=.Rounds) {
 		setnpcdisplay "Disguise Event",795;
 		set .RoundCount,0; set .Change,0; set .EventON,0;
