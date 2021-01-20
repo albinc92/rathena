@@ -4199,7 +4199,8 @@ S_Donate:
 			mes "donate if you can, okay?";
 			return;
 		}
-		$rachel_donate = $rachel_donate + .@num;
+		$rachel_donate = 10000;
+		//$rachel_donate = $rachel_donate + .@num;
 		getitem 7570,.@num;// Temple_Lottery_Ticket
 		Zeny = Zeny - .@num *50000;
 		set ra_have_donated,1;
@@ -6812,8 +6813,7 @@ OnTouch:
 		}
 	}
 	if (ra_tem_q < 16) {
-		warp "ra_temin",276,239;
-		//mes "^3355FFThe door is locked.^000000";
+		mes "^3355FFThe door is locked.^000000";
 		close;
 	}
 	end;
