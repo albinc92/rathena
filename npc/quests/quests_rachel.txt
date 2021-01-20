@@ -3799,6 +3799,7 @@ OnTouch:
 
 ra_temple,116,174,3	script	Nemma#ra_temple	920,{
 	cutin "ra_nemma02",2;
+	set $rachel_donate, 10000;
 	if ($rachel_donate < 10000) {
 		if (ra_have_donated == 0) {
 			cutin "ra_nemma03",2;
@@ -4199,8 +4200,7 @@ S_Donate:
 			mes "donate if you can, okay?";
 			return;
 		}
-		$rachel_donate = 10000;
-		//$rachel_donate = $rachel_donate + .@num;
+		$rachel_donate = $rachel_donate + .@num;
 		getitem 7570,.@num;// Temple_Lottery_Ticket
 		Zeny = Zeny - .@num *50000;
 		set ra_have_donated,1;
