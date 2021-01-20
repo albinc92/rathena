@@ -18,7 +18,6 @@ roy_in02,120,35,7	script	Longinus the Stylist#custom_stylist	878,25,25,{
 	cutin "orleans_2",2;
 	mes "[Longinus]";
 	mes "I've got just the look for you, darling!";
-	opendressroom(1);
 
 	setarray .@Styles[1],
 		getbattleflag("max_cloth_color"),

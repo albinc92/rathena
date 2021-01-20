@@ -128,8 +128,8 @@ OnInit:
 	set .Wait,0;
 	set .Winner,0;
 	set .ResetCounter,0;
-	set .Rounds,10;
-	set .Prize,7539;
+	set .Rounds,3;
+	set .Prize,40001;
 	set .PrizeAmt,1;
 	set .Rule,1;
 	setarray .MVP[0],1038,1039,1046,1059,1086,1087,1112,1115,1147,1150,1157,1159,1190,1251,1252,1272,1312,1373,
@@ -205,6 +205,10 @@ OnTimer180000:
 	announce "The Event is being held in the Royal graveyard.",bc_all,0x00FFFF,FW_NORMAL,16;
 	set .Timer,0; stopnpctimer;
 	setnpctimer 0; initnpctimer;
+	set .Rounds, .Rounds + (getareausers(strnpcinfo(4),78,85,105,103) * 3);
+	if(.Rounds > 15) {
+	    set .Rounds, 10;
+	}
 iDisguise:
 	if (.Rule==1) {
 		set .Winner,0;
@@ -224,6 +228,7 @@ iDisguise:
 	activatepset 1;
 	if (.Rule==1) setnpcdisplay "Disguise Event",.Monster;
 	if (.Rule==2) setnpcdisplay "Disguise Event",.MVP[.Monster];
+		npctalk "Disguise Event : Round " + .RoundCount + " / " + .Rounds;
 	set .Change,1;
 	setnpctimer 0;
 	end;
