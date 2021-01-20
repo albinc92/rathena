@@ -6812,7 +6812,8 @@ OnTouch:
 		}
 	}
 	if (ra_tem_q < 16) {
-		mes "^3355FFThe door is locked.^000000";
+		warp "ra_temin",276,239;
+		//mes "^3355FFThe door is locked.^000000";
 		close;
 	}
 	end;
