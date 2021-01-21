@@ -132,7 +132,7 @@ roy_in02,177,27,1	script	Bard	625,{
         } else {
             emotion ET_COOL;
             mes "["+strnpcinfo(1)+"]";
-            mes "Ah! " + .@song$ + "is a most excellent choice my friend! I shall begin at once!";
+            mes "Ah! That one is a most excellent choice my friend! I shall begin at once!";
             playBGM .@song$;
             //playBGMall .@song$,"roy_in02",156,10,181,33;
         }
