@@ -153,12 +153,15 @@ roy_in02,177,27,1	script	Bard	625,{
 	end;
 
 L_OnFailSong:
+    mes "["+strnpcinfo(1)+"]";
     mes "I'm afraid I don't know this song...";
     emotion ET_SWEAT;
     close2;
     cutin "", 255;
     end;
 
+OnInit:
+	waitingroom "Request a song!",0;
 }
 
 
