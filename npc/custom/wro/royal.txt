@@ -119,7 +119,7 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "[" + strnpcinfo(0) + "]";
         mes "Excellent! What song would you like me to play?";
         mes "^f7f7f7_^000000";
-        mes "^808080(Input the number of which BGM you wish to be played!)^000000";
+        mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@song;
         next;
         if(.@song < 0 || .@song > 176 || (getstrlen(atoi(.@song)) < 3) || (getstrlen(atoi(.@song)) > 3)) {
