@@ -122,7 +122,7 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@song$;
         next;
-        if(atoid(.@song$) < 0 || atoid(.@song$) > 176 || (getstrlen(.@song$) < 3) || (getstrlen(.@song$) > 3)) {
+        if(atoi(.@song$) < 0 || atoi(.@song$) > 176 || (getstrlen(.@song$) < 3) || (getstrlen(.@song$) > 3)) {
             mes "["+strnpcinfo(1)+"]";
             mes "I'm afraid I don't know this song...";
             emotion ET_SWEAT;
