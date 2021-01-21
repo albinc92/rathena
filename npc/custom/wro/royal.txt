@@ -133,7 +133,7 @@ roy_in02,177,27,1	script	Bard	625,{
             mes "Ah! A most excellent choice my friend!";
             next;
 		    npctalk "Bard : Another song has been requested!";
-            playBGMall "" + .@song,"roy_in02",156,10,181,33}};
+            playBGMall "" + .@song,"roy_in02",156,10,181,33;
         }
 	} else {
         mes "[" + strnpcinfo(0) + "]";
