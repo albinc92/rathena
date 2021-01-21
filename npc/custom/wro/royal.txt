@@ -122,7 +122,6 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@songInput$;
         next;
-        set .@song$, .@songInput$
         if(atoi(.@song$) < 0 || atoi(.@song$) > 176) {
             mes "["+strnpcinfo(1)+"]";
             mes "I'm afraid I don't know this song...";
