@@ -122,7 +122,7 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@song$;
         next;
-	    set .@size = getstrlen(.@song$);
+	    set .@size, getstrlen(.@song$);
         if(.@size > 3) {
             set .@song$, substr(.@song$, 3, .@size);
         }
