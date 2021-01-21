@@ -122,13 +122,21 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@song$;
         next;
+	    set .@size = getstrlen(.@song$);
+        if(.@size > 3) {
+            set .@song$, substr(.@song$, 3, .@size);
+        }
+        for (set .@i, 0; .@i < .@size; set .@i, .@i + 1) {
+        	if (charat(.@song$, .@i) != " ") {
+        		if (charisalpha(.@song$, .@i)) {
+                    goto L_OnFailSong;
+                }
+        	} else {
+                goto L_OnFailSong;
+        	}
+        }
         if(atoi(.@song$) < 0 || atoi(.@song$) > 176) {
-            mes "["+strnpcinfo(1)+"]";
-            mes "I'm afraid I don't know this song...";
-            emotion ET_SWEAT;
-            close2;
-            cutin "", 255;
-            end;
+            goto L_OnFailSong;
         } else {
             emotion ET_COOL;
             mes "["+strnpcinfo(1)+"]";
@@ -143,6 +151,14 @@ roy_in02,177,27,1	script	Bard	625,{
 	close2;
 	cutin "", 255;
 	end;
+
+L_OnFailSong:
+    mes "I'm afraid I don't know this song...";
+    emotion ET_SWEAT;
+    close2;
+    cutin "", 255;
+    end;
+
 }
 
 
