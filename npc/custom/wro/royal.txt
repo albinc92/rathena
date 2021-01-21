@@ -125,10 +125,12 @@ roy_in02,177,27,1	script	Bard	625,{
         if(.@song < 0 || .@song > 176 || (getstrlen(atoi(.@song)) < 3) || (getstrlen(atoi(.@song)) > 3)) {
             mes "["+strnpcinfo(1)+"]";
             mes "I'm afraid I don't know this song...";
+            emotion ET_SWEAT;
             close2;
             cutin "", 255;
             end;
         } else {
+            emotion ET_PROFUSELY_SWEAT;
             mes "["+strnpcinfo(1)+"]";
             mes "Ah! A most excellent choice my friend! I shall begin at once!";
             playBGM "" + .@song;
