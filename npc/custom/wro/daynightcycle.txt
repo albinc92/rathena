@@ -7,18 +7,15 @@
 -	script	daynightcycle	-1,{
 
 OnInit:
-    showdigit gettime(3);
 	if ((gettime(3) < 8) || (gettime(3) >= 20)) night;
 	end;
 
 OnClock0800:
-    showdigit 800;
 	//announce "The sun is rising. [08:00]",bc_all,0xEEEEEE;
 	day;
 	end;
 
 OnClock2000:
-    showdigit 2000;
 	//announce "It's getting dark and the moon is rising. [20:00]",bc_all,0xEEEEEE;
 	night;
 	end;
