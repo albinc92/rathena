@@ -122,10 +122,12 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
         input .@song$;
         next;
+
 	    set .@size, getstrlen(.@song$);
         if(.@size > 3) {
             set .@song$, substr(.@song$, 3, .@size);
         }
+
         for (set .@i, 0; .@i < .@size; set .@i, .@i + 1) {
         	if (charat(.@song$, .@i) != " ") {
         		if (charisalpha(.@song$, .@i)) {
@@ -135,15 +137,15 @@ roy_in02,177,27,1	script	Bard	625,{
                 goto L_OnFailSong;
         	}
         }
+
+	    mes .@song$;
         if(atoi(.@song$) < 0 || atoi(.@song$) > 176) {
             goto L_OnFailSong;
-        } else {
-            emotion ET_COOL;
-            mes "["+strnpcinfo(1)+"]";
-            mes "Ah! That one is a most excellent choice my friend! I shall begin at once!";
-            playBGM .@song$;
-            //playBGMall .@song$,"roy_in02",156,10,181,33;
         }
+        emotion ET_COOL;
+        mes "["+strnpcinfo(1)+"]";
+        mes "Ah! That one is a most excellent choice my friend! I shall begin at once!";
+        playBGM .@song$;
 	} else {
         mes "[" + strnpcinfo(0) + "]";
         mes "Very well then, goodbye for now!";
