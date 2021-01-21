@@ -135,6 +135,9 @@ roy_in02,177,27,1	script	Bard	625,{
                 goto L_OnFailSong;
         	}
         }
+        if(.@size == 1) {
+            set .@song$, "0" + .@song$;
+        }
         if(atoi(.@song$) < 0 || atoi(.@song$) > 176) {
             goto L_OnFailSong;
         }
