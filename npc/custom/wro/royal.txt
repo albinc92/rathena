@@ -120,9 +120,9 @@ roy_in02,177,27,1	script	Bard	625,{
         mes "Excellent! What song would you like me to play?";
         mes "^f7f7f7_^000000";
         mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
-        input .@song;
+        input .@song$;
         next;
-        if(.@song < 0 || .@song > 176 || (getstrlen("" + .@song) < 3) || (getstrlen("" + .@song) > 3)) {
+        if(atoid(.@song$) < 0 || atoid(.@song$) > 176 || (getstrlen(.@song$) < 3) || (getstrlen(.@song$) > 3)) {
             mes "["+strnpcinfo(1)+"]";
             mes "I'm afraid I don't know this song...";
             emotion ET_SWEAT;
@@ -133,8 +133,8 @@ roy_in02,177,27,1	script	Bard	625,{
             emotion ET_PROFUSELY_SWEAT;
             mes "["+strnpcinfo(1)+"]";
             mes "Ah! A most excellent choice my friend! I shall begin at once!";
-            playBGM "" + .@song;
-            //playBGMall "" + .@song,"roy_in02",156,10,181,33;
+            playBGM .@song$;
+            //playBGMall .@song$,"roy_in02",156,10,181,33;
         }
 	} else {
         mes "[" + strnpcinfo(0) + "]";
