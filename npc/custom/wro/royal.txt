@@ -130,7 +130,6 @@ roy_in02,177,27,1	script	Bard	625,{
             cutin "", 255;
             end;
         } else {
-            showdigit .@song;
             emotion ET_PROFUSELY_SWEAT;
             mes "["+strnpcinfo(1)+"]";
             mes "Ah! A most excellent choice my friend! I shall begin at once!";
