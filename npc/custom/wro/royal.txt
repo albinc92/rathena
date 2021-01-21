@@ -128,7 +128,7 @@ roy_in02,177,27,1	script	Bard	625,{
             close2;
             cutin "", 255;
             end;
-        } else {g
+        } else {
             mes "["+strnpcinfo(1)+"]";
             mes "Ah! A most excellent choice my friend!";
             next;
