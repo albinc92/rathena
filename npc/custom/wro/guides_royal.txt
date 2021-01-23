@@ -12,6 +12,13 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 			mes "Please select";
 			mes "a location from";
 			mes "the following menu.";
+			if (.@compass_check == 0) {
+				mes "Would you like me";
+				mes "to mark locations";
+				mes "on your Mini-Map?";
+				next;
+				if (select("Yes:No") == 1) set .@compass_check,1;
+			}
 			set .@loop2,1;
 			while (.@loop2) {
 				if (.@wait_button_chk == 0) set .@wait_button_chk,1;
@@ -22,7 +29,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 					mes "[Royal Guide]";
 					mes "The ^ff0000Vending Square^000000 is due west from here. Speak with the ^FF0000Vending Helper^000000 for more information.";
 					if (.@compass_check)
-					navigateto("royal",97,151,NAV_NONE,0,0,getcharid(0));
+						viewpoint 1,97,151,2,0xFF00FF;
 					break;
 				case 2:
 					mes "[Royal Guide]";
