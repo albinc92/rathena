@@ -110,7 +110,6 @@ roy_in02,92,61,1	script	Fay	665,{
 }
 
 roy_in02,177,27,1	script	Jukebox	563,{
-	cutin "nines01",2;
 	mes "[" + strnpcinfo(0) + "]";
 	mes "^808080*Brzzzt*^000000 W-Welcome! ^808080*Brzzzt*^000000 Would you like to request a song?";
 	next;
