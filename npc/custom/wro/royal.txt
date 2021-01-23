@@ -109,17 +109,15 @@ roy_in02,92,61,1	script	Fay	665,{
 	end;
 }
 
-roy_in02,177,27,1	script	Bard	625,{
+roy_in02,177,27,1	script	Jukebox	625,{
 	cutin "nines01",2;
 	mes "[" + strnpcinfo(0) + "]";
-	mes "Hail brave adventurer! Would you like to request a song?";
+	mes "^808080*Brzzzt*^000000 W-Welcome! ^808080*Brzzzt*^000000 Would you like to request a song?";
 	next;
 	set .@menu, select("Request a song:Cancel");
 	if(.@menu==1) {
         mes "[" + strnpcinfo(0) + "]";
-        mes "Excellent! What song would you like me to play?";
-        mes "^f7f7f7_^000000";
-        mes "^808080(Input 3 digit number of the BGM you wish to be played)^000000";
+        mes "^808080*Brzzzt*^000000 Input 3 digit number of the ^808080*Brzzzt*^000000 BGM you w-wish to be played";
         input .@song$;
         next;
 	    set .@size, getstrlen(.@song$);
@@ -143,11 +141,8 @@ roy_in02,177,27,1	script	Bard	625,{
         }
         emotion ET_COOL;
         mes "["+strnpcinfo(1)+"]";
-        mes "Ah! That one is a most excellent choice my friend! I shall begin at once!";
+        mes "Now playing track no. " + .@song$ + "! ^808080*Brzzzt*^000000";
         playBGM .@song$;
-	} else {
-        mes "[" + strnpcinfo(0) + "]";
-        mes "Very well then, goodbye for now!";
 	}
 	close2;
 	cutin "", 255;
@@ -155,7 +150,7 @@ roy_in02,177,27,1	script	Bard	625,{
 
 L_OnFailSong:
     mes "["+strnpcinfo(1)+"]";
-    mes "I'm afraid I don't know this song...";
+    mes "Error. ^808080*Brzzzt*^000000 No such BGM available.";
     emotion ET_SWEAT;
     close2;
     cutin "", 255;
@@ -501,10 +496,10 @@ OnInit:
 	waitingroom "The Imperial Library",0;
 }
 
-royal,181,122,6	script	Signpost#bard	837,{
+royal,181,122,6	script	Signpost#dancingdragon	837,{
 	end;
 OnInit:
-	waitingroom "The Lonely Bard",0;
+	waitingroom "The Dancing Dragon",0;
 }
 
 royal,76,65,8	script	Signpost#clan	837,{
