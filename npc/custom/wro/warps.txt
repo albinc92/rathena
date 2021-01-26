@@ -9,7 +9,7 @@ royal,69,193,0	warp	royal_alche	1,1,roy_in03,32,33
 royal,46,199,0	warp	royal_tele	1,1,roy_in02,133,72
 royal,101,118,0	warp	royal_socket	1,1,roy_in02,80,111
 royal,46,79,0	warp	royal_mobster	1,1,roy_in03,38,176
-//royal,89,101,0	warp	royal_crypt	1,1,pvp_n_1-4,100,117
+royal,89,101,0	warp	royal_crypt	1,1,pvp_n_1-4,100,117
 royal,173,198,0	warp	royal_research	1,1,roy_in02,227,16
 royal,76,117,0	warp	royal_gems	1,1,roy_in02,50,106
 royal,220,175,0	warp	royal_stylist	1,1,roy_in02,128,42

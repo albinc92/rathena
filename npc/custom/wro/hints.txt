@@ -16,7 +16,7 @@ OnPCLoginEvent:
 
     cutin "tipoftheday.bmp", 4;
     setarray .@hints$[0],
-		"The LUK attribute positively affects drop chances of items.",
+		"Each point in LUK increases the drop chance of items by +0.4%. Meaning at 250 LUK, items drop twice as often.",
 		"Pressing the Ctrl button while attacking a monster will cause your character to automatically attack it.",
 		"Use the Navigation Interface and the World Map to more easily navigate Rune-Midgard.",
 		"Cast rate is affected by both the DEX and INT attributes.",
