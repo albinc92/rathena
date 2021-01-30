@@ -84,6 +84,14 @@ L_Missions:
 
     switch(select("Last headhunt [^0000ff"+strmobinfo(1,.@lastMob)+"^000000]:Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
         case 1:
+            if(.@lastMob == 0) {
+                next;
+                emotion ET_SWEAT;
+                cutin "3rd_sc_doomk03.bmp", 2;
+                mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+                mes "Oops...  I don't remember your last headhunt hehe...";
+                goto L_Missions;
+            }
             set .@selection, .@lastMob;
             goto L_Selection;
         case 2:
@@ -215,11 +223,6 @@ OnPCLoadMapEvent:
         showevent QTYPE_QUEST2;
     }
     end;
-
-OnInit:
-    set .@lastMob, 1002;
-    end;
-
 }
 
 
