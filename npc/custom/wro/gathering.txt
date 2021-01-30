@@ -1144,10 +1144,13 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     specialeffect2 12;
     progressbar "0xffff00",3;
 
+    if(.@skillLv > 60) {
+        set .@skillLv, 60;
+    }
     set .@skillVal, ((60 - .@skillLv) / 10) + 3;
 	message strcharinfo(0),"skillVal: " + .@skillVal;
 
-	if(rand(1, .@skillVal) > 2) {
+	if(rand(1, .@skillVal) > 4) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
 	}
