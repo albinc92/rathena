@@ -84,14 +84,6 @@ L_Missions:
 
     switch(select("Last headhunt [^0000ff"+strmobinfo(1,.@lastMob)+"^000000]:Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
         case 1:
-            if(.@lastMob == 0) {
-                next;
-                mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-                mes "Uh...  I don't remember your last headhunt. Heh.";
-                close2;
-                cutin "", 255;
-                end;
-            }
             set .@selection, .@lastMob;
             goto L_Selection;
         case 2:
@@ -225,7 +217,7 @@ OnPCLoadMapEvent:
     end;
 
 OnInit:
-    set .@lastMob, 0;
+    set .@lastMob, 1002;
     end;
 
 }
