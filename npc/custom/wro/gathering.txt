@@ -1138,7 +1138,7 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     }
 
 	callfunc "checkitem",7318;
-	set .@skillLv, callfunc "checkskilllv","Mining",1;
+    set .@skillLv, callfunc("checkskilllv","Mining",1);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
