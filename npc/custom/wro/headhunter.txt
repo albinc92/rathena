@@ -82,18 +82,19 @@ L_Missions:
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "What kind of game are you looking for today?";
 
-    if(.@lastMob == 0) {
-        set .@lastMob$, "-";
+    if(@lastMob == 0) {
+        set .@lastMob$, " - ";
     } else {
         set .@lastMob$, strmobinfo(1,.@lastMob);
     }
 
     switch(select("Last headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
         case 1:
-            if(.@lastMob == 0) {
+            if(@lastMob == 0) {
+                next;
                 goto L_Missions;
             }
-            set .@selection, .@lastMob;
+            set .@selection, @lastMob;
             goto L_Selection;
         case 2:
             set .@boss, 0;
@@ -170,7 +171,7 @@ L_ListMobs:
 
 L_Selection:
     set .@mobToHunt, .@id[.@selection - 1];
-    set .@lastMob, .@mobToHunt;
+    set @lastMob, .@mobToHunt;
     set .@amnt, .@count[.@selection - 1];
     if(.@boss == 0) {
         set .@amnt, .@amnt + (strmobinfo(3, .@mobToHunt) / 15);
