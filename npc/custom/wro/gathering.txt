@@ -1143,7 +1143,9 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
     progressbar "0xffff00",3;
-	if(rand(1, ((60 - .@skillLv) / 20)) > 2) {
+    set .@rng, rand(1, ((60 - .@skillLv) / 20));
+	message strcharinfo(0),"RNG: " + .@rng;
+	if(.@rng > 2) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
 	}

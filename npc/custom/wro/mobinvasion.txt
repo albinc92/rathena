@@ -22,7 +22,7 @@ OnClock2300:
 	if(.cleared == 1) {
 		set .cleared, 0;
 	} else {
-		announce "A monster invasion is still going strong in " + .rmap$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+		announce "A monster invasion is still going strong in " + .rmap2$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
 		end;
 	}
 	setarray .@Map$[0],"prontera","morocc","geffen","payon","alberta","izlude","aldebaran","xmas","comodo","yuno","amatsu","gonryun","umbala","niflheim","louyang","jawaii","ayothaya","einbroch","lighthalzen","einbech","hugel","rachel","veins","moscovia","splendide","manuk";
