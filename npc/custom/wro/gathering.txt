@@ -478,7 +478,7 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
     }
 
 	callfunc "checkitem",6381;
-	callfunc "checkskilllv","Herbalism",1;
+    set .@skillLv, callfunc("checkskilllv","Herbalism",1);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -631,7 +631,7 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
     }
 
 	callfunc "checkitem",6381;
-	callfunc "checkskilllv","Herbalism",61;
+    set .@skillLv, callfunc("checkskilllv","Herbalism",61);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -833,7 +833,7 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
     }
 
 	callfunc "checkitem",6381;
-	callfunc "checkskilllv","Herbalism",121;
+    set .@skillLv, callfunc("checkskilllv","Herbalism",121);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -1009,7 +1009,7 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
     }
 
 	callfunc "checkitem",6381;
-	callfunc "checkskilllv","Herbalism",181;
+    set .@skillLv, callfunc("checkskilllv","Herbalism",181);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -1091,7 +1091,7 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
     }
 
 	callfunc "checkitem",6381;
-	callfunc "checkskilllv","Herbalism",241;
+    set .@skillLv, callfunc("checkskilllv","Herbalism",241);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -1143,8 +1143,14 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
     progressbar "0xffff00",3;
-	message strcharinfo(0),"skillLv: " + .@skillLv;
-	if(rand(1, .@skillLv) > 4) {
+
+    if(.@skillLv > 60) {
+        set .@skillLv, 60;
+    }
+    set .@skillVal, rand(.@skillLv, ((.@skillLv * 3) - .@skillLv));
+	message strcharinfo(0),"skillVal: " + .@skillVal;
+
+	if(.@skillVal > (.@skillLv * 2))) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
 	}
@@ -1292,7 +1298,7 @@ ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
     }
 
 	callfunc "checkitem",7318;
-	callfunc "checkskilllv","Mining",61;
+    set .@skillLv, callfunc("checkskilllv","Mining",61);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -1496,7 +1502,7 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
     }
 
 	callfunc "checkitem",7318;
-	callfunc "checkskilllv","Mining",121;
+    set .@skillLv, callfunc("checkskilllv","Mining",121);
 
     message strcharinfo(0),"Harvesting node...";
     specialeffect2 12;
@@ -1672,7 +1678,7 @@ abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
     }
 
 	callfunc "checkitem",7318;
-	callfunc "checkskilllv","Mining",181;
+    set .@skillLv, callfunc("checkskilllv","Mining",181);
 
     specialeffect2 12;
     progressbar "0xffff00",3;
@@ -1743,7 +1749,7 @@ nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
     }
 
 	callfunc "checkitem",7318;
-	callfunc "checkskilllv","Mining",241;
+    set .@skillLv, callfunc("checkskilllv","Mining",241);
 
     specialeffect2 12;
     progressbar "0xffff00",3;
