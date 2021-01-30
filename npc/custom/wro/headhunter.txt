@@ -83,7 +83,7 @@ L_Missions:
     mes "What kind of game are you looking for today?";
 
     if(.@lastMob == 0) {
-        set .@lastMob$, "N/A";
+        set .@lastMob$, "-";
     } else {
         set .@lastMob$, strmobinfo(1,.@lastMob);
     }
@@ -170,6 +170,7 @@ L_ListMobs:
 
 L_Selection:
     set .@mobToHunt, .@id[.@selection - 1];
+    set .@lastMob, .@mobToHunt;
     set .@amnt, .@count[.@selection - 1];
     if(.@boss == 0) {
         set .@amnt, .@amnt + (strmobinfo(3, .@mobToHunt) / 15);
