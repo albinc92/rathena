@@ -19,7 +19,7 @@
 
 // Information NPC
 //============================================================
-royal,122,159,5	script	WOE Information	10183,{
+royal,122,159,5	script	WOE Manager	10183,{
 	cutin "ep162_est01",2;
 	doevent "WOE_CONTROL::OnMenu";
 	end;
@@ -207,7 +207,7 @@ OnPCLoadMapEvent:
 
 OnMenu:
 while(1) {
-	mes "[WOE Information]";
+	mes "[WOE Manager]";
 	if (agitcheck() || agitcheck2()) {
 		if (.Active[0]) {
 			for(set .@i,0; .@i<.Size; set .@i,.@i+4)
