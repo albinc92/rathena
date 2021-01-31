@@ -6,7 +6,7 @@
 
 -	script	Warper	-1,{
     function Go; function Disp; function Pick; function Restrict;
-    set .@cost, (1800 + (BaseLevel * 7));
+    set .@cost, (1900 + (BaseLevel * 100));
 
 	cutin "nov_magicsoul01",2;
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
