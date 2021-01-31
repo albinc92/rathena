@@ -457,6 +457,28 @@ function	script	incgatherskill	{
 	return;
 }
 
+// Param: <pc_skill_level>,<req_cap>
+// Node Level 1 req_cap: 60
+// Node Level 2 req_cap: 120
+// Node Level 3 req_cap: 180
+// Node Level 4 req_cap: 240
+// Node Level 5 req_cap: 300
+function	script	harvestnode	{
+    message strcharinfo(0),"Harvesting node...";
+    specialeffect2 12;
+    progressbar "0xffff00",3;
+    set .@skillLv, getarg(0);
+    if(.@skillLv > getarg(1)) {
+        set .@skillLv, getarg(1);
+    }
+    set .@skillVal, rand(1, (3 + (((getarg(0) + 1) - .@skillLv) / 30)));
+	if(.@skillVal > 2) {
+		message strcharinfo(0),"You failed to harvest the node. Try again.";
+	    end;
+	}
+	return;
+}
+
 
 
 // Node location debug code, paste into a node code block
@@ -1159,18 +1181,7 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 
 	callfunc "checkitem",7318;
     set .@skillLv, callfunc("checkskilllv","Mining",1);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 60) {
-        set .@skillLv, 60;
-    }
-    set .@skillVal, rand(1, (3 + ((61 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,60;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
