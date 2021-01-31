@@ -20,11 +20,27 @@
         } else {
             mes "Count: ^ff0000" + .@count + "^000000 / ^00ff00" + .@max + "^000000";
         }
+        if(@lastType == 1) {
+            set .@amnt, .@count[.@selection - 1] + (strmobinfo(3, .@mobToHunt) / 15);
+            set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 2));
+            set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 2));
+            set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 100) + 1900);
+        } else if(@lastType == 2) {
+            set .@amnt, .@count[.@selection - 1];
+            set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 5));
+            set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 5));
+            set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 200) + 19000);
+        } else if {
+            set .@amnt, .@count[.@selection - 1];
+            set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 10));
+            set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 10));
+            set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 300) + 190000);
+        }
 
         if(.@count <= .@max) {
             L_OnCurrentMissionInfo:
             next;
-            switch(select("Monster information:Location information:Abort mission")) {
+            switch(select("Monster information:Location information:Pick another mission")) {
                 case 1:
     		        atcommand "@mobinfo " + .@mobid;
     		        goto L_OnCurrentMissionInfo;
@@ -34,6 +50,8 @@
     		        goto L_OnCurrentMissionInfo;
                     end;
                 case 3:
+                    next;
+                    goto L_Missions;
                     query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
                     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
                     mes "Mission aborted!";
