@@ -30,7 +30,7 @@
             set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 5));
             set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 5));
             set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 200) + 19000);
-        } else if {
+        } else {
             set .@amnt, .@count[.@selection - 1];
             set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 10));
             set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 10));
