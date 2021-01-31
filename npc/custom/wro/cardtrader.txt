@@ -15,7 +15,7 @@ roy_in02,178,11,2	script	Alleyway Jack	853,{
 	mes "Oi, you! Yeah you! You lookin' to get rid of some spare cards or albums?";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Tell you what, I'll trade ya ^ff00001 Card Token^000000 for each Card ya give me, and ^ff00003 Card Tokens^000000 for each Old Card Album you give me.";
+	mes "Tell you what, I'll trade ya ^ff00001 Card Token^000000 for each Card ya give me, and ^ff00005 Card Tokens^000000 for each Old Card Album you give me.";
 	next;
 	goto L_Main;
 
@@ -52,7 +52,7 @@ L_OCA:
 		close;
 	}
 	delitem 616, .@amnt;
-	getitem 40112, (.@amnt * 3);
+	getitem 40112, (.@amnt * 5);
 	mes "["+strnpcinfo(1)+"]";
 	mes "Pleasure doin' business with ya!";
 	close;
