@@ -2259,7 +2259,7 @@ void mob_setdropitem_option2(struct item *itm) {
     }
 
     // Limit max option amount of armors to 3
-    if(optAmt > 3 && itemdb_type(itm->nameid) == IT_ARMOR) {
+    if(optAmt > 3 && (itemdb_type(itm->nameid) != IT_WEAPON)) {
         optAmt = 3;
     }
 
