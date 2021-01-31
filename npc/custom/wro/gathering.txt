@@ -471,8 +471,7 @@ function	script	harvestnode	{
     if(.@skillLv > getarg(1)) {
         set .@skillLv, getarg(1);
     }
-    set .@skillVal, rand(1, (3 + (((getarg(0) + 1) - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
+	if(rand(1, (3 + (((getarg(0) + 1) - .@skillLv) / 30))) > 2) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
 	}
@@ -501,18 +500,7 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 
 	callfunc "checkitem",6381;
     set .@skillLv, callfunc("checkskilllv","Herbalism",1);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 60) {
-        set .@skillLv, 60;
-    }
-    set .@skillVal, rand(1, (3 + ((61 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,60;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743;
     set .@MAX_ITEMS, 5;
@@ -658,18 +646,7 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
 
 	callfunc "checkitem",6381;
     set .@skillLv, callfunc("checkskilllv","Herbalism",61);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 120) {
-        set .@skillLv, 120;
-    }
-    set .@skillVal, rand(1, (3 + ((121 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,120;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -864,18 +841,7 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
 
 	callfunc "checkitem",6381;
     set .@skillLv, callfunc("checkskilllv","Herbalism",121);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 180) {
-        set .@skillLv, 180;
-    }
-    set .@skillVal, rand(1, (3 + ((181 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,180;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1044,18 +1010,7 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
 
 	callfunc "checkitem",6381;
     set .@skillLv, callfunc("checkskilllv","Herbalism",181);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 240) {
-        set .@skillLv, 240;
-    }
-    set .@skillVal, rand(1, (3 + ((241 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,240;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1130,18 +1085,7 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
 
 	callfunc "checkitem",6381;
     set .@skillLv, callfunc("checkskilllv","Herbalism",241);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 300) {
-        set .@skillLv, 300;
-    }
-    set .@skillVal, rand(1, (3 + ((301 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,300;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1327,18 +1271,7 @@ ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
 
 	callfunc "checkitem",7318;
     set .@skillLv, callfunc("checkskilllv","Mining",61);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 120) {
-        set .@skillLv, 120;
-    }
-    set .@skillVal, rand(1, (3 + ((121 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,120;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1535,18 +1468,7 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
 
 	callfunc "checkitem",7318;
     set .@skillLv, callfunc("checkskilllv","Mining",121);
-
-    message strcharinfo(0),"Harvesting node...";
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 180) {
-        set .@skillLv, 180;
-    }
-    set .@skillVal, rand(1, (3 + ((181 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,180;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1715,17 +1637,7 @@ abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
 
 	callfunc "checkitem",7318;
     set .@skillLv, callfunc("checkskilllv","Mining",181);
-
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 240) {
-        set .@skillLv, 240;
-    }
-    set .@skillVal, rand(1, (3 + ((241 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,240;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
@@ -1790,17 +1702,7 @@ nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
 
 	callfunc "checkitem",7318;
     set .@skillLv, callfunc("checkskilllv","Mining",241);
-
-    specialeffect2 12;
-    progressbar "0xffff00",3;
-    if(.@skillLv > 300) {
-        set .@skillLv, 300;
-    }
-    set .@skillVal, rand(1, (3 + ((301 - .@skillLv) / 30)));
-	if(.@skillVal > 2) {
-		message strcharinfo(0),"You failed to harvest the node. Try again.";
-	    end;
-	}
+    callfunc "harvestnode",.@skillLv,300;
 
     setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
     set .@MAX_ITEMS, 5;
