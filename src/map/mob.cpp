@@ -2229,6 +2229,11 @@ void mob_setdropitem_option2(struct item *itm) {
 
     int r, optAmt = 0;
     r = rand() % 750 + 1;
+
+    if(!optAmt) {
+        return;
+    }
+
     if(r < 501 && r > 250) {
         optAmt = MAX_ITEM_RDM_OPT - 4;
     } else if(r < 251 && r > 125) {
@@ -2239,9 +2244,6 @@ void mob_setdropitem_option2(struct item *itm) {
         optAmt = MAX_ITEM_RDM_OPT - 1;
     } else if(r < 32 && r > 16) {
         optAmt = MAX_ITEM_RDM_OPT;
-    }
-    if(!optAmt) {
-        return;
     }
 
     // Limit maximum random options based on weapon slot count
@@ -2254,6 +2256,11 @@ void mob_setdropitem_option2(struct item *itm) {
         optAmt = 2;
     } else if(slotAmnt == 4 && optAmt > 1) {
         optAmt = 1;
+    }
+
+    // Limit max option amount of armors to 3
+    if(optAmt > 3 && itemdb_type(itm->nameid) == IT_ARMOR) {
+        optAmt = 3;
     }
 
     for(int i = 0; i < optAmt; i++) {
