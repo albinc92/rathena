@@ -175,7 +175,7 @@ L_ListMobs:
 L_Selection:
     set .@mobToHunt, .@id[.@selection - 1];
     if(.@type == 1) {
-        set .@amnt, .@amnt + (strmobinfo(3, .@mobToHunt) / 15);
+        set .@amnt, .@count[.@selection - 1] + (strmobinfo(3, .@mobToHunt) / 15);
         set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 2));
         set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 2));
         set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 100) + 1900);
@@ -183,12 +183,12 @@ L_Selection:
         set .@amnt, .@count[.@selection - 1];
         set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 5));
         set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 5));
-        set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 200) + 1900);
+        set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 200) + 19000);
     } else {
         set .@amnt, .@count[.@selection - 1];
         set .@bExp, (strmobinfo(6, .@mobToHunt) * (.@amnt * 10));
         set .@jExp, (strmobinfo(7, .@mobToHunt) * (.@amnt * 10));
-        set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 300) + 1900);
+        set .@zenyReward, ((strmobinfo(3, .@mobToHunt) * 300) + 190000);
     }
     set @lastMob, .@mobToHunt;
     set @lastAmnt, .@amnt;
