@@ -1136,7 +1136,9 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 	    if(rand(1, 10000) <= .@chance[.@i]) {
 	        set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	        set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	        makeitem .@items[.@i], rand(1, .@count[.@i]), strnpcinfo(4), .@x2, .@y2;
+	        for(set .@j, rand(1, .@count[.@i]), .@j <= .@count[.@i]; set .@j, (.@j + 1)) {
+	            makeitem .@items[.@i], , strnpcinfo(4), .@x2, .@y2;
+	        }
 	    }
 	}
 
