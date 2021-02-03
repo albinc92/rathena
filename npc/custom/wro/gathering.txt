@@ -1127,7 +1127,7 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     set .@skillLv, callfunc("checkskilllv","Mining",1);
     callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],7049,1010,733,715,716,717,7321,7300,730;
+    setarray .@items[0],7049,1010,1003,715,716,717,7321,7300,730;
     setarray .@chance[0],10000,7500,5000,2500,2500,2500,1000,500,100;
     setarray .@count[0],3,1,1,1,1,1,1,1,1;
 
