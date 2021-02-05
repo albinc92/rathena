@@ -502,7 +502,7 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",1);
     callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],6035,1010,905,1025,12405,717,707,710,522;
+    setarray .@items[0],7194,905,1025,604,12292,684,707,610,706;
     setarray .@chance[0],10000,7500,5000,2500,2500,2500,1000,500,100;
     setarray .@count[0],3,1,1,1,1,1,1,1,1;
 
