@@ -502,14 +502,21 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",1);
     callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],6035,1010,905,1025,12405,717,707,710,522;
+    setarray .@chance[0],10000,7500,5000,2500,2500,2500,1000,500,100;
+    setarray .@count[0],3,1,1,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= .@chance[.@i]) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Herbalism",60;
 
 OnInit:
