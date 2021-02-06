@@ -502,9 +502,9 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",1);
     callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],7194,905,1025,604,12292,684,707,610,706;
-    setarray .@chance[0],10000,7500,5000,2500,2500,2500,1000,500,100;
-    setarray .@count[0],3,1,1,1,1,1,1,1,1;
+    setarray .@items[0],905,7033,522,11520,683,7015,749,5206;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
@@ -655,14 +655,21 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",61);
     callfunc "harvestnode",.@skillLv,120;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],1062,7012,12292,518,604,743,7140,5202;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= .@chance[.@i]) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Herbalism",120;
 
 OnInit:
@@ -850,15 +857,22 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",121);
     callfunc "harvestnode",.@skillLv,180;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7100,7763,12405,576,12338,752,7140,18596,511;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= .@chance[.@i]) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
-	callfunc "incgatherskill","Herbalism",180;
+
+	icgatherskill","Herbalism",180;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
@@ -1019,14 +1033,21 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",181);
     callfunc "harvestnode",.@skillLv,240;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7771,6041,608,587,684,743,706,5533,610;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= .@chance[.@i]) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Herbalism",240;
 
 OnInit:
@@ -1094,14 +1115,21 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
     set .@skillLv, callfunc("checkskilllv","Herbalism",241);
     callfunc "harvestnode",.@skillLv,300;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7198,6035,607,12293,12103,7141,7510,5399,526;
+    setarray .@chance[0],10000,7500,3300,3300,1000,1000,500,250,3300;
+    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= .@chance[.@i]) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Herbalism",300;
 
 OnInit:
