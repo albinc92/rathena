@@ -872,7 +872,7 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
 	    }
 	}
 
-	icgatherskill","Herbalism",180;
+	incgatherskill","Herbalism",180;
 
 OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
