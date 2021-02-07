@@ -509,7 +509,7 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
@@ -662,7 +662,7 @@ ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
@@ -864,7 +864,7 @@ abyss_01,0,0,3	script	Wigglewort#1	527,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
@@ -1040,7 +1040,7 @@ abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
@@ -1122,7 +1122,7 @@ nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
@@ -1169,7 +1169,7 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= .@chance[.@i]) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
