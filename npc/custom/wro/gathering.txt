@@ -472,7 +472,6 @@ function	script	harvestnode	{
         set .@skillLevel, getarg(1);
     }
     set .@rate, rand(1, (3 + (((getarg(1) + 1) - .@skillLevel) / 30)));
-    message strcharinfo(0),"Drop rate: " + .@rate;
 	if(.@rate > 2) {
 		message strcharinfo(0),"You failed to harvest the node. Try again.";
 	    end;
@@ -510,7 +509,9 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + ((40 / 100) * readparam(bLuk)))) {
+	    set .@rate, (.@chance[.@i] + ((40 / 100) * readparam(bLuk)));
+	    message strcharinfo(1),"" + .@rate;
+	    if(rand(1, 10000) <= .@rate) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
