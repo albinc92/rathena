@@ -509,8 +509,9 @@ anthell01,0,0,3	script	Green Stem#1	10229,{
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    set .@rate, (.@chance[.@i] * (((readparam(bLuk) / 100) * 40) / 50));
-	    message strcharinfo(0),"" + .@rate;
+	    message strcharinfo(0),"Factor: " + (1 + (1/250*readparam(bLuk)));
+	    set .@rate, (.@chance[.@i] * (1 + (1/250*readparam(bLuk))));
+	    message strcharinfo(0),"Result: " + .@rate;
 	    if(rand(1, 10000) <= .@rate) {
 	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
 	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
