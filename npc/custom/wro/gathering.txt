@@ -1163,9 +1163,9 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
     set .@skillLv, callfunc("checkskilllv","Mining",1);
     callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],7049,1010,1003,715,716,717,7321,7300,730;
-    setarray .@chance[0],10000,7500,5000,2500,2500,2500,1000,500,100;
-    setarray .@count[0],3,1,1,1,1,1,1,1,1;
+    setarray .@items[0],7049,1002,1010,985,723,994,730,5009;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
@@ -1316,14 +1316,21 @@ ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
     set .@skillLv, callfunc("checkskilllv","Mining",61);
     callfunc "harvestnode",.@skillLv,120;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],998,1003,1011,985,729,995,731,2413;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Mining",120;
 
 OnInit:
@@ -1513,14 +1520,21 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
     set .@skillLv, callfunc("checkskilllv","Mining",121);
     callfunc "harvestnode",.@skillLv,180;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7232,715,984,6241,721,996,732,2794;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Mining",180;
 
 OnInit:
@@ -1682,14 +1696,21 @@ abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
     set .@skillLv, callfunc("checkskilllv","Mining",181);
     callfunc "harvestnode",.@skillLv,240;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7233,716,984,6241,726,997,969,1148;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Mining",240;
 
 OnInit:
@@ -1747,14 +1768,21 @@ nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
     set .@skillLv, callfunc("checkskilllv","Mining",241);
     callfunc "harvestnode",.@skillLv,300;
 
-    setarray .@items[0],707,12359,12405,12292,607,610,608,7033,743,7821;
-    set .@MAX_ITEMS, 5;
+    setarray .@items[0],7231,717,6240,6241,728,1000,7444,1535;
+    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+    setarray .@count[0],3,2,1,1,1,1,1,1;
+
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 3; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
-	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
+	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
+	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
+	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
+	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
+	        }
+	    }
 	}
+
 	callfunc "incgatherskill","Mining",300;
 
 OnInit:
