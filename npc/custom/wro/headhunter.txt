@@ -404,7 +404,7 @@ OnNPCKillEvent:
             query_sql("DELETE FROM `headhunter` WHERE `char_id` = " + getcharid(0));
             set .@bExp, (strmobinfo(6, .@mobid) * (.@max * 2));
             set .@jExp, (strmobinfo(7, .@mobid) * (.@max * 2));
-            getexp2 .@bExp, .@jExp;
+            getexpgit .@bExp, .@jExp;
             set zeny, zeny + ((strmobinfo(3, .@mobid) * 100) + 1900);
             specialeffect2 885;
 		    message strcharinfo(0),"You have completed your hunt! Your reward is Zeny and Experience Points.";
