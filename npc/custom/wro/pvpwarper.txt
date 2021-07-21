@@ -12,7 +12,7 @@
 //============================================================
 
 roy_in02,126,122,4	script	PvP Warper#1	10192,{
-setarray .@Map$[0],"roy_pvp01","guild_vs3","guild_vs2","guild_vs5";
+setarray .@Map$[0],"pvp_n_1-2","guild_vs3","guild_vs2","guild_vs5";
 	if( BaseLevel <= 250 ) {
 		cutin "162elena_01",2;
 		mes "["+strnpcinfo(1)+"]";
