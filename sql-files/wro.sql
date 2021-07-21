@@ -314,7 +314,7 @@ VALUES (32309,'Sealed_Thanatos_Card','Sealed Memory of Thanatos Card','Card',20,
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (32310,'Sealed_Nidhogg_Shadow_Card','Sealed Nidhoggurs Shadow Card','Card',20,10,true,true,'bonus bInt,3; if (Class == Job_High_Wizard || Class == Job_Baby_Warlock || Class == Job_Warlock || Class == Job_Warlock_T) bonus bFixedCastrate,-25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
-VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,'setarray .@ids[0],689,691,693; bonus3 bAddMonsterDropItem,.@ids[rand(0, getarraysize(.@ids))],RC_ALL,100;');
+VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,true,'setarray .@ids[0],689,691,693; bonus3 bAddMonsterDropItem,.@ids[rand(0, getarraysize(.@ids))],RC_ALL,100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,true,true,'bonus bSPDrainValue,3; bonus bUseSPrate,100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
