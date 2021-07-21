@@ -150,13 +150,13 @@ setarray .@Map$[0],"pvp_y_1-2","guild_vs3","guild_vs2","guild_vs5";
 
 
 OnPCLoadMapEvent:
-	if(strcharinfo(3) == "roy_pvp01" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
+	if(strcharinfo(3) == "pvp_y_1-2" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
 		callsub OnUpdateWaitingRoom;
 	}
 	end;
 
 OnUpdateWaitingRoom:
-	setarray .@Map$[0],"roy_pvp01","guild_vs3","guild_vs2","guild_vs5";
+	setarray .@Map$[0],"pvp_y_1-2","guild_vs3","guild_vs2","guild_vs5";
 	for(set .@i, 0; .@i<getarraysize(.@Map$); .@i++) {
 		set .@users, .@users + getmapusers(.@Map$[.@i]);
 	}
@@ -169,7 +169,7 @@ OnInit:
 	end;
 
 OnPCDieEvent:
-	if(strcharinfo(3) == "roy_pvp01" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
+	if(strcharinfo(3) == "pvp_y_1-2" || strcharinfo(3) == "guild_vs3" || strcharinfo(3) == "guild_vs2" || strcharinfo(3) == "guild_vs5") {
 		callsub OnUpdateWaitingRoom;
 	}
 	end;
