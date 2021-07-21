@@ -414,13 +414,20 @@ roy_in02,129,116,5	duplicate(BatRecruit)	Maroll Battle Recruiter::BatRecruitroy	
 
 
 // Mapflags
-roy_pvp01	mapflag	loadevent
-roy_pvp01	mapflag	nobranch
-roy_pvp01	mapflag	nowarpto
-roy_pvp01	mapflag	noteleport
-roy_pvp01	mapflag	novending
-roy_pvp01	mapflag	nomemo
-roy_pvp01	mapflag	loadevent
+//roy_pvp01	mapflag	loadevent
+//roy_pvp01	mapflag	nobranch
+//roy_pvp01	mapflag	nowarpto
+//roy_pvp01	mapflag	noteleport
+//roy_pvp01	mapflag	novending
+//roy_pvp01	mapflag	nomemo
+//roy_pvp01	mapflag	loadevent
+pvp_y_1-2	mapflag	loadevent
+pvp_y_1-2	mapflag	nobranch
+pvp_y_1-2	mapflag	nowarpto
+pvp_y_1-2	mapflag	noteleport
+pvp_y_1-2	mapflag	novending
+pvp_y_1-2	mapflag	nomemo
+pvp_y_1-2	mapflag	loadevent
 guild_vs3	mapflag	loadevent
 guild_vs2	mapflag	loadevent
 guild_vs5	mapflag	loadevent
