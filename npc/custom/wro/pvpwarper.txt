@@ -12,7 +12,7 @@
 //============================================================
 
 roy_in02,126,122,4	script	PvP Warper#1	10192,{
-setarray .@Map$[0],"pvp_n_1-2","guild_vs3","guild_vs2","guild_vs5";
+setarray .@Map$[0],"pvp_y_1-2","guild_vs3","guild_vs2","guild_vs5";
 	if( BaseLevel <= 250 ) {
 		cutin "162elena_01",2;
 		mes "["+strnpcinfo(1)+"]";
@@ -101,7 +101,7 @@ setarray .@Map$[0],"pvp_n_1-2","guild_vs3","guild_vs2","guild_vs5";
 		switch(select("Normal [^FF0000"+getmapusers(.@Map$[0])+"^000000]:Chaos [^FF0000"+getmapusers(.@Map$[2])+"^000000]:Guild vs. Guild [^FF0000"+getmapusers(.@Map$[3])+"^000000]:Duel [^FF0000"+getmapusers(.@Map$[3])+"^000000]")) {
 		case 1:
 			next;
-			warp "roy_pvp01", 0, 0;
+			warp "pvp_y_1-2", 0, 0;
 			sc_end sc_ALL;
 			close2;
 			cutin "", 255;
