@@ -1,0 +1,180 @@
+//======================================================================================================================
+//=                                                Royal Recruiters
+//======================================================================================================================
+//=                                         NPCs directing players to Royal
+//======================================================================================================================
+
+//======================================================================================================================
+//                                                      Scripts
+//======================================================================================================================
+-	script	recruiter	-1,{
+    showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
+    cutin "ep13_captin_edq.bmp", 2;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Hail adventurer.";
+
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(.@intro == 2) {
+        goto L_OnEnd;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "I am en emissary sent from the....";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Would you like to have some help, or do you just want to be on your way?";
+    switch(select("Help please:I'll be on my way")) {
+        case 2:
+            next;
+    		goto L_OnTutorialDone;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Well okay then!";
+    next;
+
+L_OnHelp:
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Now, what can I help you with?";
+    switch(select("Basic controls:Where should I go?:Finished")) {
+        case 1:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Basic controls it is!";
+            next;
+            cutin "tutorial01.bmp", 3;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "In order to move around, interact with NPCs, and to attack monsters - you must ^ff0000left-click^000000.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "When attacking monsters specifically, note that you must ^ff0000hold down^000000 the button, or you will only perform a single melee attack!";
+            next;
+            cutin "tutorial03.bmp", 3;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "The left mouse button can also be used to ^ff0000utilize items^000000 inside your ^ff0000Inventory^000000.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "For instance, if you double-click a ^ff0000Red Potion^000000, you will consume it and recover some lost health!";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "And if you double-click a piece of ^ff0000Equipment^000000, you will automatically equip it!";
+            next;
+            cutin "kafra_01.bmp", 2;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Furthermore, you can left-click the ^ff0000helpful interface buttons^000000 at the ^ff0000top-left of your screen^000000 to toggle various interface components, such as the inventory.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Neat, huh?";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Okay moving on to some additional controls.";
+            next;
+            cutin "tutorial04.bmp", 3;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "^ff0000Right-clicking^000000 can be used for all sorts of useful information.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "You can ^ff0000interact^000000 with other players and see ^ff0000item information^000000 with this button.";
+            next;
+            cutin "kafra_01.bmp", 2;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Now, there is one last thing I wish to tell you about.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "^ff0000Skills^000000 are a critical part of Warbound Ragnarok Online!";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Whenever you gain a ^ff0000Job Level^000000 by killing a monster, you get 1 point to spend on ^ff0000Skills^000000.";
+            next;
+            cutin "tutorial05.bmp", 3;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Having opened the ^ff0000Skill Interface^000000 and spent some points into a skill, you can ^ff0000drag^000000 the skill into your ^ff0000Hotkey Bar^000000.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Once a skill has been placed in the Hotkey Bar, you can press its designated ^ff0000hotkey^000000! to instantly activate the skill!";
+            next;
+            cutin "kafra_01.bmp", 2;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "That's it!";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "I know this was a lot of information.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "But don't be afraid to ask me if you want some repetition!";
+            next;
+            goto L_OnHelp;
+        case 2:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "In order to proceed into the world of Warbound Ragnarok Online, you must ^ff0000cross the bridge^000000 to the east.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "Having passed the bridge, ^ff0000enter through the portal^000000 to reach inside of the fortress you see before you.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "There you must speak with the ^ff0000[Warper]^000000. He will give you further assistance.";
+            next;
+            navigateto("new_1-2",100,18,NAV_NONE,0,0,getcharid(0));
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "You can just follow the ^ff0000red arrows^000000 on the ground that appeared before you just now.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "You may have noticed that the ^ff0000Navigation Interface^000000 appeared on your screen along with the red arrows.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "It is a super helpful interface that can be used to find all sorts of things.";
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "I leave it to you to experiment with it.";
+            next;
+            goto L_OnHelp;
+        case 3:
+            next;
+            mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+            mes "All finished are you?";
+            next;
+            goto L_OnTutorialDone;
+    }
+
+L_OnTutorialDone:
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
+    next;
+    
+	query_sql("INSERT INTO `wrodata` SET `intro` = 2, `char_id` = '"+getcharid(3)+"'");
+
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Godspeed!";
+
+L_OnEnd:
+    close2;
+    cutin "",255;
+    end;
+
+OnPCLoadMapEvent:
+	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
+    if(.@intro != 2) {
+        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+        npctalk "Hey you, " + strcharinfo(0) + "! I would have a word with you!";
+    }
+    end;
+}
+
+
+
+//======================================================================================================================
+//                                                      NPCs
+//======================================================================================================================
+prontera,148,192,6	duplicate(recruiter)	Royal Recruiter#1	459
+
+
+
+//======================================================================================================================
+//                                                    Mapflags
+//======================================================================================================================
+prontera	mapflag	loadevent
