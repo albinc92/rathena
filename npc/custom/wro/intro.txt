@@ -124,7 +124,7 @@ L_OnHelp:
             mes "In order to proceed into the world of Warbound Ragnarok Online, you must ^ff0000cross the bridge^000000 to the east.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-            mes "Having passed the bridge, ^ff0000enter through the portal^000000 to reach the inside of the fortress you see before you.";
+            mes "Having passed the bridge, ^ff0000enter through the portal^000000 to reach inside of the fortress you see before you.";
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "There you must speak with the ^ff0000[Warper]^000000. He will give you further assistance.";
@@ -240,6 +240,10 @@ L_OnChoice:
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "I know just the place for someone like you!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "So tell me, are you ready to start your adventure?";
     switch(select("Yes:No")) {
         case 2:
@@ -256,15 +260,11 @@ L_OnChoice:
     mes "Excellent!";
     next;
 
-    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "I know the perfect place for you to begin your adventure!";
-    next;
-
 	specialeffect2 EF_READYPORTAL;
 	specialeffect2 EF_TELEPORTATION;
 	specialeffect2 EF_PORTAL;
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "Let me take you there now!";
+    mes "Off you go then!";
     sleep2 1600;
 
     getitem .@weaponID, 1;
