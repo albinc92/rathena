@@ -129,7 +129,7 @@ L_OnHelp:
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "There you must speak with the ^ff0000[Warper]^000000. He will give you further assistance.";
             next;
-            navigateto("new_1-1",100,18,NAV_NONE,0,0,getcharid(0));
+            navigateto("new_1-2",100,18,NAV_NONE,0,0,getcharid(0));
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "You can just follow the ^ff0000red arrows^000000 on the ground that appeared before you just now.";
             next;
@@ -317,7 +317,7 @@ OnPCLoadMapEvent:
 //======================================================================================================================
 //                                                      NPCs
 //======================================================================================================================
-new_1-1,100,18,4	duplicate(Intro1)	WarboundRO Guide#1	860
+new_1-1,48,107,4	duplicate(Intro1)	WarboundRO Guide#1	735
 
 
 
