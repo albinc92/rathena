@@ -33,7 +33,7 @@
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "You can reach Royal through the ^ff0000[Warper]^000000 npc!";
+    mes "You can reach Royal via the ^ff0000[Warper]^000000!";
 
 L_OnEnd:
     close2;
@@ -44,7 +44,7 @@ OnPCLoadMapEvent:
 	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
     if(.@intro != 2) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        npctalk "Hey you! Yes you, " + strcharinfo(0) + "! I want to have a word with you!";
+        npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!";
 		emotion ET_SMILE;
     }
     end;
@@ -55,7 +55,32 @@ OnPCLoadMapEvent:
 //======================================================================================================================
 //                                                      NPCs
 //======================================================================================================================
-prontera,148,192,6	duplicate(recruiter)	Royal Emissary#1	459
+prontera,148,192,6	duplicate(recruiter)	Royal Emissary#prt	459
+morocc,149,102,6	duplicate(recruiter)	Royal Emissary#moc	459
+geffen,129,67,3	duplicate(recruiter)	Royal Emissary#gef	459
+payon,174,97,7	duplicate(recruiter)	Royal Emissary#pay	459
+alberta,33,243,3	duplicate(recruiter)	Royal Emissary#alb	459
+izlude,123,120,3	duplicate(recruiter)	Royal Emissary#iz	459
+aldebaran,136,114,7	duplicate(recruiter)	Royal Emissary#ald	459
+xmas,143,138,3	duplicate(recruiter)	Royal Emissary#xmas	459
+comodo,212,149,6	duplicate(recruiter)	Royal Emissary#cmd	459
+yuno,163,55,3	duplicate(recruiter)	Royal Emissary#yuno	459
+amatsu,194,91,6	duplicate(recruiter)	Royal Emissary#ama	459
+gonryun,155,121,6	duplicate(recruiter)	Royal Emissary#gon	459
+umbala,86,153,6	duplicate(recruiter)	Royal Emissary#um	459
+niflheim,205,166,1	duplicate(recruiter)	Royal Emissary#nif	459
+louyang,209,108,7	duplicate(recruiter)	Royal Emissary#lou	459
+ayothaya,213,174,7	duplicate(recruiter)	Royal Emissary#ayo	459
+einbroch,55,204,6	duplicate(recruiter)	Royal Emissary#einbr	459
+lighthalzen,164,87,1	duplicate(recruiter)	Royal Emissary#lhz	459
+einbech,58,37,6	duplicate(recruiter)	Royal Emissary#einbe	459
+hugel,102,142,1	duplicate(recruiter)	Royal Emissary#hu	459
+rachel,121,106,7	duplicate(recruiter)	Royal Emissary#ra	459
+veins,224,127,3	duplicate(recruiter)	Royal Emissary#ve	459
+moscovia,217,185,7	duplicate(recruiter)	Royal Emissary#mosc	459
+mid_camp,214,281,7	duplicate(recruiter)	Royal Emissary#mid	459
+manuk,272,145,6	duplicate(recruiter)	Royal Emissary#man	459
+splendide,201,154,3	duplicate(recruiter)	Royal Emissary#spl	459
 
 
 
@@ -63,3 +88,28 @@ prontera,148,192,6	duplicate(recruiter)	Royal Emissary#1	459
 //                                                    Mapflags
 //======================================================================================================================
 prontera	mapflag	loadevent
+morocc	mapflag	loadevent
+geffen	mapflag	loadevent
+payon	mapflag	loadevent
+alberta	mapflag	loadevent
+izlude	mapflag	loadevent
+aldebaran	mapflag	loadevent
+xmas	mapflag	loadevent
+comodo	mapflag	loadevent
+yuno	mapflag	loadevent
+amatsu	mapflag	loadevent
+gonryun	mapflag	loadevent
+umbala	mapflag	loadevent
+niflheim	mapflag	loadevent
+louyang	mapflag	loadevent
+ayothaya	mapflag	loadevent
+einbroch	mapflag	loadevent
+lighthalzen	mapflag	loadevent
+einbech	mapflag	loadevent
+hugel	mapflag	loadevent
+rachel	mapflag	loadevent
+veins	mapflag	loadevent
+moscovia	mapflag	loadevent
+mid_camp	mapflag	loadevent
+manuk	mapflag	loadevent
+splendide	mapflag	loadevent

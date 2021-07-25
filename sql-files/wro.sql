@@ -89,6 +89,28 @@ UPDATE `item_db2`
 SET  `location_head_top` = false, `location_head_mid` = false, `location_head_low` = false
 WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
 
+-- Copy all headgears to item_db2 and set their sell flag to true
+-- This part must come after the costume headgear commands, otherwise
+-- they will be overwritten as costume headgears.
+REPLACE INTO `item_db2`
+SELECT * FROM `item_db`
+WHERE `type` = 'Armor'
+AND (`location_head_top` = true
+OR `location_head_mid` = true
+OR `location_head_low` = true);
+
+UPDATE `item_db2`
+SET `trade_nodrop` = false,
+    `trade_notrade` = false,
+    `trade_tradepartner` = false,
+    `trade_nosell` = false,
+    `trade_nocart` = false,
+    `trade_nostorage` = false,
+    `trade_noguildstorage` = false,
+    `trade_nomail` = false,
+    `trade_noauction` = false,
+WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
+
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (4236,'Amon_Ra_Card','Amon Ra Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=250));');
