@@ -142,6 +142,24 @@ SET `weight` = 0,
     `trade_noauction` = true
 WHERE `ID` IN (7160);
 
+-- Make certain items droppable etc.
+REPLACE INTO `item_db2`
+SELECT * FROM `item_db`
+WHERE `ID` IN (7821);
+
+UPDATE `item_db2`
+SET `weight` = 0,
+    `trade_nodrop` = false,
+    `trade_notrade` = false,
+    `trade_tradepartner` = false,
+    `trade_nosell` = false,
+    `trade_nocart` = false,
+    `trade_nostorage` = false,
+    `trade_noguildstorage` = false,
+    `trade_nomail` = false,
+    `trade_noauction` = false
+WHERE `ID` IN (7821);
+
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (4236,'Amon_Ra_Card','Amon Ra Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=250));');
