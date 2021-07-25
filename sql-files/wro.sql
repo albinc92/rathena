@@ -148,8 +148,7 @@ SELECT * FROM `item_db`
 WHERE `ID` IN (7821);
 
 UPDATE `item_db2`
-SET `weight` = 0,
-    `trade_nodrop` = false,
+SET `trade_nodrop` = false,
     `trade_notrade` = false,
     `trade_tradepartner` = false,
     `trade_nosell` = false,
