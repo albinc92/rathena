@@ -108,7 +108,7 @@ SET `trade_nodrop` = false,
     `trade_nostorage` = false,
     `trade_noguildstorage` = false,
     `trade_nomail` = false,
-    `trade_noauction` = false,
+    `trade_noauction` = false
 WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
 
 -- Update scripts of MvP cards
