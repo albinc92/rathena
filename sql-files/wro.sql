@@ -41,7 +41,11 @@ UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
 REPLACE INTO `item_db2`
-SELECT * FROM `item_db` WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
+SELECT * FROM `item_db`
+WHERE `type` = 'Armor'
+AND (`location_head_top` = true
+OR `location_head_mid` = true
+OR `location_head_low` = true);
 
 UPDATE `item_db2`
 SET `id` = `id` + 41000,
@@ -71,23 +75,32 @@ SET `id` = `id` + 41000,
     `script` = '',
     `equip_script` = '',
     `unequip_script` = ''
-WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
+WHERE `type` = 'Armor'
+AND (`location_head_top` = true
+OR `location_head_mid` = true
+OR `location_head_low` = true);
 
 UPDATE `item_db2`
 SET  `location_costume_head_top` = true
-WHERE `type` = 'Armor' AND `location_head_top` = true;
+WHERE `type` = 'Armor'
+AND `location_head_top` = true;
 
 UPDATE `item_db2`
 SET  `location_costume_head_mid` = true
-WHERE `type` = 'Armor' AND `location_head_mid` = true;
+WHERE `type` = 'Armor'
+AND `location_head_mid` = true;
 
 UPDATE `item_db2`
 SET  `location_costume_head_low` = true
-WHERE `type` = 'Armor' AND `location_head_low` = true;
+WHERE `type` = 'Armor'
+AND `location_head_low` = true;
 
 UPDATE `item_db2`
 SET  `location_head_top` = false, `location_head_mid` = false, `location_head_low` = false
-WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
+WHERE `type` = 'Armor'
+AND (`location_head_top` = true
+OR `location_head_mid` = true
+OR `location_head_low` = true);
 
 -- Copy all headgears to item_db2 and set their sell flag to true
 -- This part must come after the costume headgear commands, otherwise
@@ -110,6 +123,24 @@ SET `trade_nodrop` = false,
     `trade_nomail` = false,
     `trade_noauction` = false
 WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = true OR `location_head_low` = true);
+
+-- Make all quest items non-sellable etc.
+REPLACE INTO `item_db2`
+SELECT * FROM `item_db`
+WHERE `ID` IN (7160);
+
+UPDATE `item_db2`
+SET `weight` = 0,
+    `trade_nodrop` = true,
+    `trade_notrade` = true,
+    `trade_tradepartner` = true,
+    `trade_nosell` = true,
+    `trade_nocart` = true,
+    `trade_nostorage` = true,
+    `trade_noguildstorage` = true,
+    `trade_nomail` = true,
+    `trade_noauction` = true
+WHERE `ID` IN (7160);
 
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
