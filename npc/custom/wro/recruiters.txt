@@ -11,13 +11,20 @@
     showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
     cutin "ep13_captin_edq.bmp", 2;
 
-    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "Hail adventurer!";
-
 	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
     if(.@intro == 2) {
+		emotion ET_SMILE;
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?.";
         goto L_OnEnd;
     }
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "So I got your attention. Perfect!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Allow me to introduce myself.";
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -25,15 +32,25 @@
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "My mission is to recruit brave adventurers such as yourself to aid us in a pressing matter.";
+    mes "My mission is to recruit brave adventurers such as yourself to aid us in a rather pressing situation.";
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "So I ask you brave one: to travel to Royal to seek out our governor, Scooby-doo.";
+    mes "So I would ask you brave one: travel to Royal to seek out governor ^ff0000Artemia^000000.";
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "You can reach Royal via the ^ff0000[Warper]^000000!";
+    mes "He will provide you with more information than I can.";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "You can reach Royal via any ^ff0000[Warper]^000000, or through the ^ff0000Kafra Teleportation Network^000000.";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Godspeed, adventurer.";
+
+	query_sql("UPDATE `wrodata` SET `intro` = 2, `char_id` = '" + getcharid(3) + "'");
 
 L_OnEnd:
     close2;
@@ -45,7 +62,6 @@ OnPCLoadMapEvent:
     if(.@intro != 2) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!";
-		emotion ET_SMILE;
     }
     end;
 }
