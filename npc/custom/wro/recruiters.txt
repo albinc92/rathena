@@ -16,6 +16,12 @@
 		emotion ET_SMILE;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?.";
+        next;
+
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Remember: you can find him inside the ^ff0000Senate Building^000000.";
+        next;
+
         goto L_OnEnd;
     }
 
@@ -36,7 +42,7 @@
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "So I would ask you brave one: travel to Royal to seek out governor ^ff0000Artemia^000000.";
+    mes "So I would ask you brave one: travel to Royal to seek out governor ^ff0000Artemia^000000 in the ^ff0000Senate Building^000000.";
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -44,7 +50,7 @@
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-    mes "You can reach Royal via any ^ff0000[Warper]^000000, or through the ^ff0000Kafra Teleportation Network^000000.";
+    mes "You can reach Royal via any ^ff0000Warper^000000, or through the ^ff0000Kafra Teleportation Network^000000.";
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
