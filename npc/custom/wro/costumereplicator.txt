@@ -1,4 +1,4 @@
-dew_in01,25,47,3	script	Costume Replicator	10078,{
+dew_in01,25,47,3	script	Costume Replicator	436,{
 
 	cutin "ep15_2_brt_2",2;
 	mes "["+strnpcinfo(1)+"]";
