@@ -1,6 +1,6 @@
-dew_in01,25,47,3	script	Costume Replicator	436,{
+dew_in01,25,47,3	script	Costume Replicator	626,{
 
-	cutin "ep15_2_brt_2",2;
+	cutin "bu_oliver1.bmp",2;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Hi! I am the Headgear Replicator! I can create costume replicas of any headgear you present me! How neat is that!?";
 	next;
