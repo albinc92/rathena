@@ -11,31 +11,56 @@
 //============================================================
 
 roy_in02,44,113,4	script	Enchantress	916,{
+	disable_items;
+
 	cutin "ra_usti1.bmp",2;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Salutations, have you come to employ my services?";
 
 L_Menu:
 	// Menu
-	switch(select("Enchant Item:Disenchant Item:Information:Cancel")) {
+	switch(select("Enchant item:Disenchant item:Information:Cancel")) {
 
 	// Enchant Item
 	case 1:
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "Enchant Item~";
-		close2;
-		cutin "", 255;
-		end;
+		mes "As I thought. Which item would you like me to enchant today?";
+
+		// Get equipment array
+		setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
+		for(.@i = 1; .@i<getarraysize(.@indices); ++.@i) {
+			if(getequipisequiped(.@indices[.@i]) && !getequiprandomoption(.@part, 0, ROA_ID)) {
+				.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
+				.@equipped = 1;
+			}
+			.@menu$ = .@menu$ + ":";
+		}
+
+		// Check if equipped at all
+		// Check if item already has random options
+		if (.@equipped == 0) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "Ehm. You are not wearing anything that is enchantable. Maybe you would like me to disenchant something instead?";
+			
+			switch(select("Disenchant item:Cancel")) {
+			case 1:
+				next;
+				goto L_Disenchant;
+			case 2:
+		}
+
+		.@part = .@indices[select(.@menu$)];
+
+		goto L_End;
 
 	// Disenchant item
+L_Disenchant:
 	case 2:
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Disenchant Item~";
-		close2;
-		cutin "", 255;
-		end;
+		goto L_End;
 
 	// Information
 	case 3:
@@ -47,11 +72,13 @@ L_Menu:
 	//Cancel
 	case 4:
 		next;
-		mes "["+strnpcinfo(1)+"]";
-		mes "Be seeing you again.";
-		close2;
-		cutin "", 255;
-		end;
 	}
+
+L_End:
+	mes "["+strnpcinfo(1)+"]";
+	mes "Be seeing you.";
+	close2;
+	cutin "", 255;
+	end;
 
 }
