@@ -275,7 +275,7 @@ VALUES (4459,'Lata_Card','Rata Card','Card',20,10,true,true,true,true,'bonus bMa
 -- REPLACE INTO `item_db2` VALUES (4461,'Pillar_Card','Phylla Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bDex,1; bonus bAgi,1; autobonus "{ bonus bCritical,20; }",15,4000,0,"{ specialeffect2 EF_ENHANCE; }";',NULL,NULL);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4462,'Hardrock_Mommos_Card','Hardrock Mammoth Card','Card',20,10,true,true,'.@r = getrefine(); bonus bDef,5; if(.@r>=12) { bonus bDef,20; bonus bMaxHPrate,10; } if(.@r>=14) { bonus bMaxHPrate,3; }');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_hand_left`,`flag_buyingstore`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
 VALUES (4463,'Tendrilion_Card','Tendril Lion Card','Card',20,10,true,true,'bonus bCritical,5; .@r = getrefine(); if(.@r>=12) { bonus bBaseAtk,35; } if(.@r>=14) { bonus bCritical,10; }');
 -- REPLACE INTO `item_db2` VALUES (4464,'Aunoe_Card','Aunoe Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bCritAtkRate,20;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4465,'Panat_Card','Fanat Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; if(getiteminfo(getequipid(EQI_HAND_R),11)==W_2HSWORD) { .@r = getrefine(); if(.@r>=10) { bonus bAspd,1; } if(.@r>=14) { bonus bAspd,1; } }',NULL,NULL);
@@ -622,30 +622,30 @@ UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999;
 -- First, create copies of mobs in mob_db2
 -- Then, add their respective card to the mob_db2 entry
 REPLACE INTO `mob_db2` SELECT * FROM `mob_db` WHERE `ID` IN (2022,1917,1885,1956,2018,2017,2020,2021,1990,1991,1796,1797,1975,1977,2015,2015,1993,1988,2014,2024,2019,1979,1976,1995,1978);
-UPDATE `mob_db2` SET `DropCardid` = 4456, `DropCardper` = 1 WHERE `ID` = '2022';	-- Nidhoggr's Shadow
-UPDATE `mob_db2` SET `DropCardid` = 32315, `DropCardper` = 1 WHERE `ID` = '1917';	-- Wounded Morrocc
-UPDATE `mob_db2` SET `DropCardid` = 27162, `DropCardper` = 1 WHERE `ID` = '1885';	-- Gopinich
-UPDATE `mob_db2` SET `DropCardid` = 4457, `DropCardper` = 1 WHERE `ID` = '1956';	-- Naght Sieger
--- UPDATE `mob_db2` SET `DropCardid` = 4458, `DropCardper` = 1 WHERE id = '2018';	-- Duneyrr
--- UPDATE `mob_db2` SET `DropCardid` = 4459, `DropCardper` = 1 WHERE id = '2017';	-- Rata
--- UPDATE `mob_db2` SET `DropCardid` = 4460, `DropCardper` = 1 WHERE id = '2020';	-- Rhyncho
--- UPDATE `mob_db2` SET `DropCardid` = 4461, `DropCardper` = 1 WHERE id = '2021';	-- Phylla
--- UPDATE `mob_db2` SET `DropCardid` = 4462, `DropCardper` = 1 WHERE id = '1990';	-- Hardrock Mammoth
--- UPDATE `mob_db2` SET `DropCardid` = 4463, `DropCardper` = 1 WHERE id = '1991';	-- Tendrilrion
--- UPDATE `mob_db2` SET `DropCardid` = 4464, `DropCardper` = 1 WHERE id = '1796';	-- Aunoe
--- UPDATE `mob_db2` SET `DropCardid` = 4465, `DropCardper` = 1 WHERE id = '1797';	-- Fanat
--- UPDATE `mob_db2` SET `DropCardid` = 4466, `DropCardper` = 1 WHERE id = '1975';	-- Beholder Master
--- UPDATE `mob_db2` SET `DropCardid` = 4467, `DropCardper` = 1 WHERE id = '1977';	-- Heavy Metaling
--- UPDATE `mob_db2` SET `DropCardid` = 4468, `DropCardper` = 1 WHERE id = '2015';	-- Dark Pinguicula
--- UPDATE `mob_db2` SET `DropCardid` = 4469, `DropCardper` = 1 WHERE id = '1993';	-- Naga
--- UPDATE `mob_db2` SET `DropCardid` = 4470, `DropCardper` = 1 WHERE id = '1988';	-- Nepenthes
--- UPDATE `mob_db2` SET `DropCardid` = 4471, `DropCardper` = 1 WHERE id = '2014';	-- Draco Egg
--- UPDATE `mob_db2` SET `DropCardid` = 4472, `DropCardper` = 1 WHERE id = '2024';	-- Bradium Golem
--- UPDATE `mob_db2` SET `DropCardid` = 4473, `DropCardper` = 1 WHERE id = '2019';	-- Ancient Tree
--- UPDATE `mob_db2` SET `DropCardid` = 4474, `DropCardper` = 1 WHERE id = '1979';	-- Zakudam
--- UPDATE `mob_db2` SET `DropCardid` = 4475, `DropCardper` = 1 WHERE id = '1976';	-- Cobalt Mineral
--- UPDATE `mob_db2` SET `DropCardid` = 4476, `DropCardper` = 1 WHERE id = '1995';	-- Pinguicula
--- UPDATE `mob_db2` SET `DropCardid` = 4477, `DropCardper` = 1 WHERE id = '1978';	-- Hell Apocalypse
+UPDATE `mob_db2` SET `DropCardid` = 4456, `DropCardper` = 1 WHERE `id` = '2022';	-- Nidhoggr's Shadow
+UPDATE `mob_db2` SET `DropCardid` = 32315, `DropCardper` = 1 WHERE `id` = '1917';	-- Wounded Morrocc
+UPDATE `mob_db2` SET `DropCardid` = 27162, `DropCardper` = 1 WHERE `id` = '1885';	-- Gopinich
+UPDATE `mob_db2` SET `DropCardid` = 4457, `DropCardper` = 1 WHERE `id` = '1956';	-- Naght Sieger
+UPDATE `mob_db2` SET `DropCardid` = 4458, `DropCardper` = 1 WHERE `id` = '2018';	-- Duneyrr
+UPDATE `mob_db2` SET `DropCardid` = 4459, `DropCardper` = 1 WHERE `id` = '2017';	-- Rata
+-- UPDATE `mob_db2` SET `DropCardid` = 4460, `DropCardper` = 1 WHERE `id` = '2020';	-- Rhyncho
+-- UPDATE `mob_db2` SET `DropCardid` = 4461, `DropCardper` = 1 WHERE `id` = '2021';	-- Phylla
+UPDATE `mob_db2` SET `DropCardid` = 4462, `DropCardper` = 1 WHERE `id` = '1990';	-- Hardrock Mammoth
+UPDATE `mob_db2` SET `DropCardid` = 4463, `DropCardper` = 1 WHERE `id` = '1991';	-- Tendrilrion
+-- UPDATE `mob_db2` SET `DropCardid` = 4464, `DropCardper` = 1 WHERE `id` = '1796';	-- Aunoe
+-- UPDATE `mob_db2` SET `DropCardid` = 4465, `DropCardper` = 1 WHERE `id` = '1797';	-- Fanat
+-- UPDATE `mob_db2` SET `DropCardid` = 4466, `DropCardper` = 1 WHERE `id` = '1975';	-- Beholder Master
+-- UPDATE `mob_db2` SET `DropCardid` = 4467, `DropCardper` = 1 WHERE `id` = '1977';	-- Heavy Metaling
+-- UPDATE `mob_db2` SET `DropCardid` = 4468, `DropCardper` = 1 WHERE `id` = '2015';	-- Dark Pinguicula
+-- UPDATE `mob_db2` SET `DropCardid` = 4469, `DropCardper` = 1 WHERE `id` = '1993';	-- Naga
+-- UPDATE `mob_db2` SET `DropCardid` = 4470, `DropCardper` = 1 WHERE `id` = '1988';	-- Nepenthes
+-- UPDATE `mob_db2` SET `DropCardid` = 4471, `DropCardper` = 1 WHERE `id` = '2014';	-- Draco Egg
+-- UPDATE `mob_db2` SET `DropCardid` = 4472, `DropCardper` = 1 WHERE `id` = '2024';	-- Bradium Golem
+-- UPDATE `mob_db2` SET `DropCardid` = 4473, `DropCardper` = 1 WHERE `id` = '2019';	-- Ancient Tree
+-- UPDATE `mob_db2` SET `DropCardid` = 4474, `DropCardper` = 1 WHERE `id` = '1979';	-- Zakudam
+-- UPDATE `mob_db2` SET `DropCardid` = 4475, `DropCardper` = 1 WHERE `id` = '1976';	-- Cobalt Mineral
+-- UPDATE `mob_db2` SET `DropCardid` = 4476, `DropCardper` = 1 WHERE `id` = '1995';	-- Pinguicula
+-- UPDATE `mob_db2` SET `DropCardid` = 4477, `DropCardper` = 1 WHERE `id` = '1978';	-- Hell Apocalypse
 
 -- Training Post
 REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,102760448,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
