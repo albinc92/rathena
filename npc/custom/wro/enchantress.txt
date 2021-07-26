@@ -1,0 +1,57 @@
+//===== rAthena Script =======================================
+//= Enchantress NPC
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Apply random magic options upon unenchanted gear.
+//============================================================
+
+roy_in02,44,113,4	script	Enchantress	916,{
+	cutin "ra_usti1.bmp",2;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Salutations, have you come to employ my services?";
+
+L_Menu:
+	// Menu
+	switch(select("Enchant Item:Disenchant Item:Information:Cancel")) {
+
+	// Enchant Item
+	case 1:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Enchant Item~";
+		close2;
+		cutin "", 255;
+		end;
+
+	// Disenchant item
+	case 2:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Disenchant Item~";
+		close2;
+		cutin "", 255;
+		end;
+
+	// Information
+	case 3:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Information~";
+		goto L_Menu;
+
+	//Cancel
+	case 3:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Be seeing you again.";
+		close2;
+		cutin "", 255;
+		end;
+	}
+
+}

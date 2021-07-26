@@ -39,7 +39,8 @@ OnPCLoginEvent:
 		"Looking to change up your style? You can create Costume Copies of any headgear at the Hut in the Foreign District in Royal.",
 		"Talk to the Private MVP Room master in Royal if you want to break open your Bloody Branches in peace.",
 		"You can request songs to be played by the Jukebox inside The Dancing Dragon Inn, in Royal.",
-		"Use the @commands atcommand to see what atcommands are available for use.";
+		"Use the @commands atcommand to see what atcommands are available for use.",
+		"It is possible to receive cards such as Tendrillion, Naght Sieger, or Duneyrr from Mystical Card Albums.";
 
     set .@index, rand(0, getarraysize(.@hints$));
 L_NextHint:
