@@ -48,6 +48,7 @@ L_Menu:
 				next;
 				goto L_Disenchant;
 			case 2:
+			}
 		}
 
 		.@part = .@indices[select(.@menu$)];
