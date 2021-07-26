@@ -3,6 +3,9 @@
 -- ---------------------------------------------------------------------------------------------------------------------
 
 DELETE FROM `item_db2`;
+DELETE FROM `mob_db2`;
+DELETE FROM `mob_skill_db2`;
+DELETE FROM `item_cash_db2`;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                   wro_tables
@@ -204,7 +207,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4374,'Apocalips_H_Card','Vesper Card','Card',20,10,true,true,'bonus bDex,2; bonus2 bIgnoreMdefClassRate,Class_Boss,30;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4430,'Ifrit_Card','Ifrit Card','Card',20,10,true,true,true,'bonus bBaseAtk,(JobLevel/4); bonus bCritical,(JobLevel/4); bonus bHit,(JobLevel/4); bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",5,10;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
 VALUES (4263,'Incant_Samurai_Card','Samurai Spector Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,10000;','if((Hp <= 999) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -999,0; }');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (4403,'Kiel_Card','Kiel-D-01 Card','Card',20,10,true,true,true,true,'bonus bDelayRate,-30;');
@@ -324,7 +327,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4497,'Sealed_Knight_WS_Card','Sealed Stormy Knight Card','Card',20,10,true,true,'bonus3 bAutoSpell,"WZ_STORMGUST",1,20; bonus2 bAddEff,Eff_Freeze,1000;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (4498,'Sealed_Lady_Tanee_Card','Sealed Lady Tanee Card','Card',20,10,true,true,'bonus bMaxHPrate,-20; bonus bMaxSPrate,25; bonus2 bAddMonsterDropItem,513,200; bonus2 bAddItemHealRate,513,300;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
 VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;','if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4500,'Sealed_Orc_Load_Card','Sealed Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,15;');
@@ -385,15 +388,16 @@ VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,tr
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
 
 -- Costume Garments
-REPLACE INTO `item_db2` SELECT (`id`,`name_aegis`,`name_english`,`type`,`location_costume_Garment`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
+SELECT (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
 
 -- Sealed Card Album
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
 VALUES (40006,'Sld_Card_Album','Sealed Card Album','Usable',10000,50,true,true,'getrandgroupitem(IG_SLDCARDALBUM),1;');
 
 -- Hat Box
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
 VALUES (40008,'Headgear_Box','Headgear Box','Usable',1000,200,true,true,'getrandgroupitem(IG_HATBOX),1;');
 
 -- Boarding Halter
@@ -485,22 +489,22 @@ UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",5; specialeffect2
 UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2 180;' WHERE `id` = 12020;
 
 -- Tokens
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
 VALUES (40001,'Event_Token','Event Token','Etc',100,true,true,true,true,true,true,true,true);
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
 VALUES (40002,'PvP_Token','PvP Token','Etc',100,true,true,true,true,true,true,true,true);
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
 VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,true,true,true,true,true);
 
 -- Misc
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
 VALUES (40005,'Cart_Weight','Cart Weight','Etc',25000,10000,100,true,true,true,true,true,true,true,true);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40009,'Rejuv_Flask','Rejuvenation Flask','Healing',0,0,true,7000,100,true,true,true,true,true,true,true,true,'progressbar "000000",1; specialeffect2 325; percentheal 100,100; specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,240000,10; specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40010,'Mastela_Fruit_Potion','Mastela Fruit Potion','Healing',3000,30,'specialeffect2 204; itemheal rand(1905,2430),0;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40013,'Kafra_Teleporter','Kafra Teleporter','Usable',0,0,true,500,100,true,true,true,true,true,true,true,true,'itemskill "AL_TELEPORT",2;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40011,'Iris_Potion','Iris Potion','Healing',12500,30,'specialeffect2 208; itemheal 0,rand(240,360);');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40011,'Iris_Potion','Iris Potion','Healing',12500,30,'specialeffect2 208; itemheal 0,rand(240,360);');
 
 -- Custom Headgear
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
@@ -585,21 +589,21 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40054,'Spell_Staff_C','Costume Spell Staff','Armor',true,1813);
 
 -- Gem Socketing
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40200,'Ruby_G','Ruby','Card','bonus bStr,1;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40201,'Zircon_G','Zircon','Card','bonus bAgi,1;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40202,'Emerald_G','Emerald','Card','bonus bVit,1;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40203,'Sapphire_G','Sapphire','Card','bonus bInt,1;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40204,'Topaz_G','Topaz','Card','bonus bDex,1;');
-REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 
 -- Item Cash DB
-REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 46013, 40039, 40031, 40015) ORDER BY `name_aegis`;
+REPLACE INTO `item_cash_db2` SELECT (0, `id`, 25) FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 46013, 40039, 40031, 40015) ORDER BY `name_aegis`;
 
 -- Misc fixes
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
@@ -671,7 +675,7 @@ REPLACE INTO `mob_db2` VALUES (3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0
 --                                                      mob_skill_db
 -- ---------------------------------------------------------------------------------------------------------------------
 
-REPLACE INTO mob_skill_db2 VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `mob_skill_db2` VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
