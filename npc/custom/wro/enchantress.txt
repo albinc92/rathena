@@ -136,9 +136,11 @@ L_Menu:
 				6, 6, 5;
 
 		if(getiteminfo(getequipid(.@part), 2) == 9) {
-			setrandomoption(.@part,0,.@weaponid[rand(getarraysize(.@weaponid))],0,0);
+			set .@index, rand(getarraysize(.@weaponid));
+			setrandomoption(.@part,0,.@weaponid[.@index], (.@weaponbase[.@index] + rand(.@weaponbonus[.@index])), 0);
 		} else {
-			setrandomoption(.@part,0,.@armorid[rand(getarraysize(.@armorid))],0,0);
+			set .@index, rand(getarraysize(.@armorid));
+			setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(.@armorbonus[.@index])), 0);
 		}
 
 		next;
