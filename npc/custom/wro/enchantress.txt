@@ -45,7 +45,7 @@ L_Menu:
 		goto L_Menu;
 
 	//Cancel
-	case 3:
+	case 4:
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Be seeing you again.";
