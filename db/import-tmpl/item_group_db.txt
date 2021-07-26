@@ -51,8 +51,12 @@ IG_SLDCARDALBUM,32310,2     // Nidhoggur's Shadow
 IG_SLDCARDALBUM,32311,1     // Wounded Morocc Card
 IG_SLDCARDALBUM,32312,2     // Gopinich
 
-IG_MagicCardAlbum,32313,1     // Entweihen Crothen
-IG_MagicCardAlbum,32314,1     // Naght Sieger
+IG_MagicCardAlbum,4451,1     // Entweihen Crothen
+IG_MagicCardAlbum,4457,1     // Naght Sieger
+IG_MagicCardAlbum,4458,1     // Duneyrr
+IG_MagicCardAlbum,4459,1     // Rata
+IG_MagicCardAlbum,4462,1     // Hardrock Mammoth
+IG_MagicCardAlbum,4463,1     // Tendrillion
 
 IG_HATBOX,2201,6	// Sunglasses
 IG_HATBOX,2202,6	// Sunglasses

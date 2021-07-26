@@ -267,12 +267,16 @@ VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonu
 -- Add new world cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4457,'Nahtzigger_Card','Naght Sieger Card','Card',20,10,true,true,'bonus2 bMagicAtkEle,Ele_Ghost,30;');
--- REPLACE INTO `item_db2` VALUES (4458,'Duneirre_Card','Duneyrr Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; autobonus "{ bonus bAspdRate,5; }",10,10000,0,"{ specialeffect2 EF_HASTEUP; }";',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4459,'Lata_Card','Rata Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bMatk,10; autobonus "{ bonus bFixedCastrate,-50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_SUFFRAGIUM; }";',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
+VALUES (4458,'Duneirre_Card','Duneyrr Card','Card',20,10,true,true,true,true,'bonus bBaseAtk,10; autobonus "{ bonus bAspdRate,5; }",10,10000,0,"{ specialeffect2 EF_HASTEUP; }";');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
+VALUES (4459,'Lata_Card','Rata Card','Card',20,10,true,true,true,true,'bonus bMatk,10; autobonus "{ bonus bFixedCastrate,-50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_SUFFRAGIUM; }";');
 -- REPLACE INTO `item_db2` VALUES (4460,'Ringco_Card','Rhyncho Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bHealPower,4; bonus2 bSkillUseSP,"AL_HEAL",-15;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4461,'Pillar_Card','Phylla Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bDex,1; bonus bAgi,1; autobonus "{ bonus bCritical,20; }",15,4000,0,"{ specialeffect2 EF_ENHANCE; }";',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4462,'Hardrock_Mommos_Card','Hardrock Mammoth Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,16,NULL,NULL,NULL,NULL,'.@r = getrefine(); bonus bDef,5; if(.@r>=12) { bonus bDef,20; bonus bMaxHPrate,10; } if(.@r>=14) { bonus bMaxHPrate,3; }',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4463,'Tendrilion_Card','Tendrilrion Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bCritical,5; .@r = getrefine(); if(.@r>=12) { bonus bBaseAtk,35; } if(.@r>=14) { bonus bCritical,10; }',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
+VALUES (4462,'Hardrock_Mommos_Card','Hardrock Mammoth Card','Card',20,10,true,true,'.@r = getrefine(); bonus bDef,5; if(.@r>=12) { bonus bDef,20; bonus bMaxHPrate,10; } if(.@r>=14) { bonus bMaxHPrate,3; }');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_hand_left`,`flag_buyingstore`,`script`)
+VALUES (4463,'Tendrilion_Card','Tendril Lion Card','Card',20,10,true,true,'bonus bCritical,5; .@r = getrefine(); if(.@r>=12) { bonus bBaseAtk,35; } if(.@r>=14) { bonus bCritical,10; }');
 -- REPLACE INTO `item_db2` VALUES (4464,'Aunoe_Card','Aunoe Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bCritAtkRate,20;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4465,'Panat_Card','Fanat Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; if(getiteminfo(getequipid(EQI_HAND_R),11)==W_2HSWORD) { .@r = getrefine(); if(.@r>=10) { bonus bAspd,1; } if(.@r>=14) { bonus bAspd,1; } }',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4466,'Beholder_Master_Card','Beholder Master Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bLongAtkRate,3; if(getiteminfo(getequipid(EQI_HAND_R),11)==W_BOW) { .@r = getrefine(); if(.@r>=10) { bonus bAspd,1; } if(.@r>=14) { bonus bAspd,1; } }',NULL,NULL);
