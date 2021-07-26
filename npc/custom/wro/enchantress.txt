@@ -135,7 +135,7 @@ L_Menu:
 				3, 3, 7, 4,
 				6, 6, 5;
 
-		if(getiteminfo(.@part, 2) == "Armor") {
+		if(getiteminfo(getequipid(.@part), 2) == "Armor") {
 			setrandomoption(.@part,0,.@weaponid[rand(getarraysize(.@weaponid))],0,0);
 		} else {
 			setrandomoption(.@part,0,.@armorid[rand(getarraysize(.@armorid))],0,0);
