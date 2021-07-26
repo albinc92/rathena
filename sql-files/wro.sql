@@ -262,13 +262,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus3 bAutoSpellWhenHit,"NPC_DRAGONFEAR",3,(30+70*(readparam(bStr)>=250));');
 
 -- Add new world cards
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4446,'Enhanced_Skeleton_Card','Enhanced Skeleton Card','Card',20,10,true,true,'bonus bBaseAtk,15; bonus2 bAddEff,Eff_Stun,(BaseLevel>=100?300:200);');
-REPLACE INTO `item_db_re` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`)
-VALUES (4454,'Light_Up_Card1','Light Up Card','Card',20,10,true,true);
-REPLACE INTO `item_db_re` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`)
-VALUES (4455,'Light_Up_Card2','Light Up Card','Card',20,10,true,true);
--- REPLACE INTO `item_db2` VALUES (4457,'Nahtzigger_Card','Naght Sieger Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,16,NULL,NULL,NULL,NULL,'bonus2 bMagicAtkEle,Ele_Ghost,30;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
+VALUES (4457,'Nahtzigger_Card','Naght Sieger Card','Card',20,10,true,true,'bonus2 bMagicAtkEle,Ele_Ghost,30;');
 -- REPLACE INTO `item_db2` VALUES (4458,'Duneirre_Card','Duneyrr Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; autobonus "{ bonus bAspdRate,5; }",10,10000,0,"{ specialeffect2 EF_HASTEUP; }";',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4459,'Lata_Card','Rata Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bMatk,10; autobonus "{ bonus bFixedCastrate,-50; }",5,4000,BF_MAGIC,"{ specialeffect2 EF_SUFFRAGIUM; }";',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4460,'Ringco_Card','Rhyncho Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bHealPower,4; bonus2 bSkillUseSP,"AL_HEAL",-15;',NULL,NULL);
@@ -289,8 +284,6 @@ VALUES (4455,'Light_Up_Card2','Light Up Card','Card',20,10,true,true);
 -- REPLACE INTO `item_db2` VALUES (4475,'Cobalt_Mineral_Card','Cobalt Mineral Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Formless,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4476,'Pinguicula_Card','Pinguicula Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Insect,10;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4477,'Hell_Apocalips_Card','Hell Apocalypse Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus2 bMagicAddRace,RC_Demon,10;',NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4478,'Light_Up_Card3','Light Up Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,64,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
--- REPLACE INTO `item_db2` VALUES (4479,'Light_Up_Card4','Light Up Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,4,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- Add sealed MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
@@ -387,16 +380,12 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,'');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,true,true,'bonus bSPDrainValue,3; bonus bUseSPrate,100;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
-VALUES (32313,'Sealed_Ant_Buyanne_Card','Sealed Entweihen Crothen Card','Card',20,10,true,true,'bonus bMatk,125;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
-VALUES (32314,'Sealed_Nahtzigger_Card','Sealed Naght Sieger Card','Card',20,10,true,true,'bonus2 bMagicAtkEle,Ele_Ghost,15;');
 
 -- Ring of Transendence
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
 
 -- Costume Garments
--- REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
+REPLACE INTO `item_db2` SELECT * FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
 
 -- Sealed Card Album
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
@@ -622,36 +611,31 @@ UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999;
 -- Add new cards to mob drops
 -- First, create copies of mobs in mob_db2
 -- Then, add their respective card to the mob_db2 entry
--- REPLACE INTO `mob_db2` SELECT * FROM mob_db WHERE id IN (2022,1917,1885,1956,2018,2017,2020,2021,1990,1991,1796,1797,1975,1977,2015,2015,1993,1988,2014,2024,2019,1979,1976,1995,1978);
--- UPDATE `mob_db2` SET DropCardid = 4456, DropCardper = 1 WHERE id = '2022';	-- Nidhoggr's Shadow
--- -- UPDATE `mob_db2` SET DropCardid = 4446, DropCardper = 1 WHERE id = '????';	-- Enhanced Skeleton???
--- -- UPDATE `mob_db2` SET DropCardid = 4454, DropCardper = 1 WHERE id = '????';	-- Lightup???
--- -- UPDATE `mob_db2` SET DropCardid = 4455, DropCardper = 1 WHERE id = '????';	-- Lightup???
--- UPDATE `mob_db2` SET DropCardid = 4457, DropCardper = 1 WHERE id = '1956';	-- Naght Sieger
--- UPDATE `mob_db2` SET DropCardid = 4458, DropCardper = 1 WHERE id = '2018';	-- Duneyrr
--- UPDATE `mob_db2` SET DropCardid = 4459, DropCardper = 1 WHERE id = '2017';	-- Rata
--- UPDATE `mob_db2` SET DropCardid = 4460, DropCardper = 1 WHERE id = '2020';	-- Rhyncho
--- UPDATE `mob_db2` SET DropCardid = 4461, DropCardper = 1 WHERE id = '2021';	-- Phylla
--- UPDATE `mob_db2` SET DropCardid = 4462, DropCardper = 1 WHERE id = '1990';	-- Hardrock Mammoth
--- UPDATE `mob_db2` SET DropCardid = 4463, DropCardper = 1 WHERE id = '1991';	-- Tendrilrion
--- UPDATE `mob_db2` SET DropCardid = 4464, DropCardper = 1 WHERE id = '1796';	-- Aunoe
--- UPDATE `mob_db2` SET DropCardid = 4465, DropCardper = 1 WHERE id = '1797';	-- Fanat
--- UPDATE `mob_db2` SET DropCardid = 4466, DropCardper = 1 WHERE id = '1975';	-- Beholder Master
--- UPDATE `mob_db2` SET DropCardid = 4467, DropCardper = 1 WHERE id = '1977';	-- Heavy Metaling
--- UPDATE `mob_db2` SET DropCardid = 4468, DropCardper = 1 WHERE id = '2015';	-- Dark Pinguicula
--- UPDATE `mob_db2` SET DropCardid = 4469, DropCardper = 1 WHERE id = '1993';	-- Naga
--- UPDATE `mob_db2` SET DropCardid = 4470, DropCardper = 1 WHERE id = '1988';	-- Nepenthes
--- UPDATE `mob_db2` SET DropCardid = 4471, DropCardper = 1 WHERE id = '2014';	-- Draco Egg
--- UPDATE `mob_db2` SET DropCardid = 4472, DropCardper = 1 WHERE id = '2024';	-- Bradium Golem
--- UPDATE `mob_db2` SET DropCardid = 4473, DropCardper = 1 WHERE id = '2019';	-- Ancient Tree
--- UPDATE `mob_db2` SET DropCardid = 4474, DropCardper = 1 WHERE id = '1979';	-- Zakudam
--- UPDATE `mob_db2` SET DropCardid = 4475, DropCardper = 1 WHERE id = '1976';	-- Cobalt Mineral
--- UPDATE `mob_db2` SET DropCardid = 4476, DropCardper = 1 WHERE id = '1995';	-- Pinguicula
--- UPDATE `mob_db2` SET DropCardid = 4477, DropCardper = 1 WHERE id = '1978';	-- Hell Apocalypse
--- -- UPDATE `mob_db2` SET DropCardid = 4478, DropCardper = 1 WHERE id = '????';	-- Light Up????
--- -- UPDATE `mob_db2` SET DropCardid = 4479, DropCardper = 1 WHERE id = '????';	-- Light Up????
--- UPDATE `mob_db2` SET DropCardid = 27162, DropCardper = 1 WHERE id = '1885';	-- Gopinich
--- UPDATE `mob_db2` SET DropCardid = 32315, DropCardper = 1 WHERE id = '1917';	-- Wounded Morrocc
+REPLACE INTO `mob_db2` SELECT * FROM `mob_db` WHERE `ID` IN (2022,1917,1885,1956,2018,2017,2020,2021,1990,1991,1796,1797,1975,1977,2015,2015,1993,1988,2014,2024,2019,1979,1976,1995,1978);
+UPDATE `mob_db2` SET `DropCardid` = 4456, `DropCardper` = 1 WHERE `ID` = '2022';	-- Nidhoggr's Shadow
+UPDATE `mob_db2` SET `DropCardid` = 32315, `DropCardper` = 1 WHERE `ID` = '1917';	-- Wounded Morrocc
+UPDATE `mob_db2` SET `DropCardid` = 27162, `DropCardper` = 1 WHERE `ID` = '1885';	-- Gopinich
+UPDATE `mob_db2` SET `DropCardid` = 4457, `DropCardper` = 1 WHERE `ID` = '1956';	-- Naght Sieger
+-- UPDATE `mob_db2` SET `DropCardid` = 4458, `DropCardper` = 1 WHERE id = '2018';	-- Duneyrr
+-- UPDATE `mob_db2` SET `DropCardid` = 4459, `DropCardper` = 1 WHERE id = '2017';	-- Rata
+-- UPDATE `mob_db2` SET `DropCardid` = 4460, `DropCardper` = 1 WHERE id = '2020';	-- Rhyncho
+-- UPDATE `mob_db2` SET `DropCardid` = 4461, `DropCardper` = 1 WHERE id = '2021';	-- Phylla
+-- UPDATE `mob_db2` SET `DropCardid` = 4462, `DropCardper` = 1 WHERE id = '1990';	-- Hardrock Mammoth
+-- UPDATE `mob_db2` SET `DropCardid` = 4463, `DropCardper` = 1 WHERE id = '1991';	-- Tendrilrion
+-- UPDATE `mob_db2` SET `DropCardid` = 4464, `DropCardper` = 1 WHERE id = '1796';	-- Aunoe
+-- UPDATE `mob_db2` SET `DropCardid` = 4465, `DropCardper` = 1 WHERE id = '1797';	-- Fanat
+-- UPDATE `mob_db2` SET `DropCardid` = 4466, `DropCardper` = 1 WHERE id = '1975';	-- Beholder Master
+-- UPDATE `mob_db2` SET `DropCardid` = 4467, `DropCardper` = 1 WHERE id = '1977';	-- Heavy Metaling
+-- UPDATE `mob_db2` SET `DropCardid` = 4468, `DropCardper` = 1 WHERE id = '2015';	-- Dark Pinguicula
+-- UPDATE `mob_db2` SET `DropCardid` = 4469, `DropCardper` = 1 WHERE id = '1993';	-- Naga
+-- UPDATE `mob_db2` SET `DropCardid` = 4470, `DropCardper` = 1 WHERE id = '1988';	-- Nepenthes
+-- UPDATE `mob_db2` SET `DropCardid` = 4471, `DropCardper` = 1 WHERE id = '2014';	-- Draco Egg
+-- UPDATE `mob_db2` SET `DropCardid` = 4472, `DropCardper` = 1 WHERE id = '2024';	-- Bradium Golem
+-- UPDATE `mob_db2` SET `DropCardid` = 4473, `DropCardper` = 1 WHERE id = '2019';	-- Ancient Tree
+-- UPDATE `mob_db2` SET `DropCardid` = 4474, `DropCardper` = 1 WHERE id = '1979';	-- Zakudam
+-- UPDATE `mob_db2` SET `DropCardid` = 4475, `DropCardper` = 1 WHERE id = '1976';	-- Cobalt Mineral
+-- UPDATE `mob_db2` SET `DropCardid` = 4476, `DropCardper` = 1 WHERE id = '1995';	-- Pinguicula
+-- UPDATE `mob_db2` SET `DropCardid` = 4477, `DropCardper` = 1 WHERE id = '1978';	-- Hell Apocalypse
 
 -- Training Post
 REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,102760448,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);

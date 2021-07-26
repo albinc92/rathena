@@ -50,8 +50,9 @@ IG_SLDCARDALBUM,32309,1     // Memory of Thanatos
 IG_SLDCARDALBUM,32310,2     // Nidhoggur's Shadow
 IG_SLDCARDALBUM,32311,1     // Wounded Morocc Card
 IG_SLDCARDALBUM,32312,2     // Gopinich
-IG_SLDCARDALBUM,32313,1     // Entweihen Crothen
-IG_SLDCARDALBUM,32314,1     // Naght Sieger
+
+IG_MagicCardAlbum,32313,1     // Entweihen Crothen
+IG_MagicCardAlbum,32314,1     // Naght Sieger
 
 IG_HATBOX,2201,6	// Sunglasses
 IG_HATBOX,2202,6	// Sunglasses
