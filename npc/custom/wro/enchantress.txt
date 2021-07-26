@@ -32,7 +32,7 @@ L_Menu:
 
 		// Get equipment array
 		setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
-		for(.@i = 1; .@i<getarraysize(.@indices); ++.@i) {
+		for(.@i = 1; .@i < getarraysize(.@indices); ++.@i) {
 			if(getequipisequiped(.@indices[.@i])) {
 				if(!getequiprandomoption(.@indices[.@i], 0, ROA_ID)) {
 					.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
@@ -59,6 +59,7 @@ L_Menu:
 
 		.@part = .@indices[select(.@menu$)];
 
+		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "The enchantment process will cost you ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000 and ^ff0000" + .@cost + "z^000000. Is this okay?";
 		
@@ -78,7 +79,7 @@ L_Menu:
 
 		if(countitem(.@item) < .@amnt) {
 			mes "["+strnpcinfo(1)+"]";
-			mes "You don't have enough " + getitemname(.@item) + " I'm afraid.";
+			mes "You do not have ^ff0000" + .@amnt + " " + getitemname(.@item) + "^000000. Come back later.";
 			close2;
 			cutin "", 255;
 			end;
@@ -91,12 +92,62 @@ L_Menu:
 		mes "["+strnpcinfo(1)+"]";
 		mes "*mumble mumble*";
 		specialeffect EF_BEGINSPELL6;
-		progressbar "#00FF00",3;
+		progressbar_npc "#00FF00",3;
+		specialeffect2 4;
 
 		delitem .@item, .@amnt;
 		set zeny, zeny - .@cost;
-		setrandomoption(.@part,0,RDMOPT_WEAPON_ATTR_NOTHING + rand(10),0,0);
 
+		// Weapon enchants
+		setarray .@weaponid[],
+				3, 4, 5, 6, 7, 8,
+				13, 14, 16, 17, 18, 19, 24,
+				147, 148, 151, 152,
+				164, 166,
+				168, 170, 171, 172;
+		setarray .@weaponbase[] = {
+				1, 1, 1, 1, 1, 1,
+				5, 5, 10, 25, 25, 25, 10,
+				5, 5, 5, 5,
+				10, 5,
+				10, 10, 3, 10
+		};
+		setarray .@weaponbonus[] = {
+				3, 3, 3, 3, 3, 3,
+				6, 6, 16, 26, 76, 26, 16,
+				6, 6, 6, 6,
+				11, 6,
+				16, 16, 5, 16
+		};
+
+		// Armor enchants
+		setarray .@armorid[] = {
+				3, 4, 5, 6, 7, 8,
+				9, 10, 11, 12,
+				20, 21, 22, 23,
+				165, 167, 171
+		};
+		setarray .@armorbase[] = {
+				1, 1, 1, 1, 1, 1,
+				5, 5, 10, 10,
+				1, 1, 5, 3,
+				5, 5, 3
+		};
+		setarray .@armorbonus[] = {
+				3, 3, 3, 3, 3, 3,
+				6, 6, 11, 11,
+				3, 3, 7, 4,
+				6, 6, 5
+		};
+
+		if(getiteminfo(.@part, 2) == "Armor") {
+			setrandomoption(.@part,0,.@weaponid[rand(getarraysize(.@weaponid))],0,0);
+		} else {
+			setrandomoption(.@part,0,.@armorid[rand(getarraysize(.@armorid))],0,0);
+		}
+
+		next;
+		emotion ET_BEST;
 		mes "[Elemental Master]";
 		mes "The process was successful!";
 		goto L_End;
@@ -113,7 +164,16 @@ L_Disenchant:
 	case 3:
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "Information~";
+		mes "I have acquired the knowledge of manipulating magic on weapons and equipment.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "For a small fee I can either bind ^ff00001 Random Magical Affix^000000 unto your equipment, or ^ff0000remove all affixes^000000.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Amazing, right?";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Now, what action would you like me to perform today?";
 		goto L_Menu;
 	}
 
