@@ -11,6 +11,9 @@
 //============================================================
 
 roy_in02,44,113,4	script	Enchantress	916,{
+	set .@cost, 10000;
+	set .@item, 7597;
+	set .@amnt, 3;
 	disable_items;
 
 	cutin "ra_usti1.bmp",2;
@@ -25,7 +28,7 @@ L_Menu:
 	case 1:
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "As I thought. Which item would you like me to enchant today?";
+		mes "Very well. Which item would you like me to enchant?";
 
 		// Get equipment array
 		setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
@@ -42,19 +45,60 @@ L_Menu:
 		// Check if equipped at all
 		// Check if item already has random options
 		if (.@equipped == 0) {
+			next;
 			mes "["+strnpcinfo(1)+"]";
 			mes "Ehm. You are not wearing anything that is enchantable. Maybe you would like me to disenchant something instead?";
 			
 			switch(select("Disenchant item:Cancel")) {
 			case 1:
-				next;
 				goto L_Disenchant;
 			case 2:
+				goto L_End;
 			}
 		}
 
 		.@part = .@indices[select(.@menu$)];
 
+		mes "["+strnpcinfo(1)+"]";
+		mes "The enchantment process will cost you ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000 and ^ff0000" + .@cost + "z^000000. Is this okay?";
+		
+		switch(select("Yes:Cancel")) {
+		case 2:
+			goto L_End;
+		}
+		next;
+
+		if(zeny < .@cost) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "You don't have enough zeny I'm afraid.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+
+		if(countitem(.@item) < .@amnt) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "You don't have enough " + getitemname(.@item) + " I'm afraid.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+
+		mes "["+strnpcinfo(1)+"]";
+		mes "Excellent! I will now commence the enchanting process.";
+		next;
+		
+		mes "["+strnpcinfo(1)+"]";
+		mes "*mumble mumble*";
+		specialeffect EF_BEGINSPELL6;
+		progressbar "#00FF00",3;
+
+		delitem .@item, .@amnt;
+		set zeny, zeny - .@cost;
+		setrandomoption(.@part,0,RDMOPT_WEAPON_ATTR_NOTHING + rand(10),0,0);
+
+		mes "[Elemental Master]";
+		mes "The process was successful!";
 		goto L_End;
 
 	// Disenchant item
@@ -71,17 +115,13 @@ L_Disenchant:
 		mes "["+strnpcinfo(1)+"]";
 		mes "Information~";
 		goto L_Menu;
-
-	//Cancel
-	case 4:
-		next;
 	}
 
 L_End:
+	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Be seeing you.";
 	close2;
 	cutin "", 255;
 	end;
-
 }
