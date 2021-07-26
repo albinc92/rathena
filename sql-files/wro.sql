@@ -388,7 +388,7 @@ VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,tr
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
 
 -- Costume Garments
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
+REPLACE INTO `item_db2`
 SELECT (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 FROM `item_db_re` WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 2573, 20507, 20504, 20737, 20502, 20762);
 
