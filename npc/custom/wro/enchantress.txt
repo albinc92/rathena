@@ -99,20 +99,20 @@ L_Menu:
 		set zeny, zeny - .@cost;
 
 		// Weapon enchants
-		setarray .@weaponid[],
+		setarray .@weaponid[0],
 				3, 4, 5, 6, 7, 8,
 				13, 14, 16, 17, 18, 19, 24,
 				147, 148, 151, 152,
 				164, 166,
 				168, 170, 171, 172;
-		setarray .@weaponbase[] = {
+		setarray .@weaponbase[0],
 				1, 1, 1, 1, 1, 1,
 				5, 5, 10, 25, 25, 25, 10,
 				5, 5, 5, 5,
 				10, 5,
 				10, 10, 3, 10
 		};
-		setarray .@weaponbonus[] = {
+		setarray .@weaponbonus[0],
 				3, 3, 3, 3, 3, 3,
 				6, 6, 16, 26, 76, 26, 16,
 				6, 6, 6, 6,
@@ -121,19 +121,19 @@ L_Menu:
 		};
 
 		// Armor enchants
-		setarray .@armorid[] = {
+		setarray .@armorid[0],
 				3, 4, 5, 6, 7, 8,
 				9, 10, 11, 12,
 				20, 21, 22, 23,
 				165, 167, 171
 		};
-		setarray .@armorbase[] = {
+		setarray .@armorbase[0],
 				1, 1, 1, 1, 1, 1,
 				5, 5, 10, 10,
 				1, 1, 5, 3,
 				5, 5, 3
 		};
-		setarray .@armorbonus[] = {
+		setarray .@armorbonus[0],
 				3, 3, 3, 3, 3, 3,
 				6, 6, 11, 11,
 				3, 3, 7, 4,
