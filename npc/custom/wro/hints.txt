@@ -40,7 +40,8 @@ OnPCLoginEvent:
 		"Talk to the Private MVP Room master in Royal if you want to break open your Bloody Branches in peace.",
 		"You can request songs to be played by the Jukebox inside The Dancing Dragon Inn, in Royal.",
 		"Use the @commands atcommand to see what atcommands are available for use.",
-		"It is possible to receive cards such as Tendrillion, Naght Sieger, or Duneyrr from Mystical Card Albums.";
+		"It is possible to receive cards such as Tendrillion, Naght Sieger, or Duneyrr from Mystical Card Albums.",
+		"You can enchant and disenchant random magic option upon your equipment at The Warlock's Domain in Royal.";
 
     set .@index, rand(0, getarraysize(.@hints$));
 L_NextHint:
