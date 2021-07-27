@@ -10,7 +10,7 @@
 //= Save and manage stat allocations.
 //============================================================
 
-royal,94,180,4	script	Build Manager	86,{
+royal,84,193,6	script	Build Manager	86,{
     function ManageBuild;
 
     cutin "valen_arle01",2;
