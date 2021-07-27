@@ -60,7 +60,7 @@ dew_in01,25,47,3	script	Costume Replicator	626,{
 			}
 			.@i = select( .@menu$ ) - 1;
 			set Zeny, Zeny-.@cost;
-			getitem2 (@inventorylist_id[.@replicaindex[.@i-1]] + 41000),1,1,0,0,254,0,1&0xffff,(1>>16)&0xffff;
+			getitem2 (@inventorylist_id[.@replicaindex[.@i-1]] + 41000),1,1,0,0,254,0,getcharid(0,"Replicator")&0xffff,(getcharid(,"Replicator")>>16)&0xffff;
 			
 			mes "["+strnpcinfo(1)+"]";
 			mes "There we go. Enjoy your costume!";

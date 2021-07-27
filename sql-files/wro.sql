@@ -686,4 +686,4 @@ REPLACE INTO `mob_skill_db2` VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attac
 --                                                          char
 -- ---------------------------------------------------------------------------------------------------------------------
 
-REPLACE INTO `char` (`char_id`, `name`) VALUES (1, 'Replicator');
+REPLACE INTO `char` (`char_id`, `name`) VALUES (999999, 'Replicator');
