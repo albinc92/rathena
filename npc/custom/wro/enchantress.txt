@@ -226,9 +226,6 @@ L_Disenchant:
 		getitem .@item, .@nbr;
 		set zeny, zeny - ((.@cost / 4) * .@nbr);
 
-		delitem .@part;
-		getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
-
 		.@equip_id = getequipid(.@part);
 		.@refine = getequiprefinerycnt(.@part);
 		for (set .@i, 0; .@i < 4; .@i++) {
