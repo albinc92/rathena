@@ -23,8 +23,8 @@ ama_dun01,219,14,6	script	Shinobi	637,{
 	close2;
 	cutin "", 255;
 	end;
-
 }
+
 // Labyrinth Forest
 prt_maze01,101,30,3	script	Hunter	727,{
 	set .@cost, 10000;
@@ -50,5 +50,31 @@ prt_maze01,101,30,3	script	Hunter	727,{
 	close2;
 	cutin "", 255;
 	end;
+}
 
+// Ancient Shrine
+ayo_dun01,262,23,3	script	Wailing Spirit	411,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hail, adventurer~~ The path you seek is arduous. I can escort you through this labyrinth for a fee~";
+
+	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu == 1) {
+		if(zeny < 10000) {
+			mes "You lack sufficient currency~~";
+		} else {
+			mes "Very well then, follow me!";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "ayo_dun01", 24, 280;
+		}
+	} else {
+		mes "You decide your own fate, adventurer~~";
+	}
+	close2;
+	cutin "", 255;
+	end;
 }
