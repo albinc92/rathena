@@ -244,10 +244,10 @@ L_Disenchant:
 	case 3:
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "I have acquired the knowledge of manipulating magic on weapons and equipment.";
+		mes "I have acquired the knowledge of harnessing the magical properties bound within equipment items.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "For a small fee I can either bind ^ff00001 Random Magical Affix^000000 unto your equipment, or ^ff0000remove all affixes^000000.";
+		mes "For a small fee I can either bind ^ff00001 Random Magical Affix^000000 unto your equipment, or ^ff0000remove any affixes^000000.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Amazing, right?";
