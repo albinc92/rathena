@@ -193,11 +193,11 @@ L_Disenchant:
 
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "I see the selected item has ^ff0000" + .@nbr + "^000000 affixes attached to it.";
+		mes "I see the selected item has ^ff0000" + .@nbr + " Magical Affixes^000000 attached to it.";
 
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "The disenchantment process will cost you ^ff0000" + ((.@cost / 4) * .@nbr) + "z^000000 and yield " + .@nbr + " " + getitemname(.@item) + "(s)^000000. Is this okay?";
+		mes "The disenchantment process will thus cost you ^ff0000" + ((.@cost / 4) * .@nbr) + "z^000000 and yield " + .@nbr + " " + getitemname(.@item) + "(s)^000000. Is this okay?";
 		
 		switch(select("Yes:Cancel")) {
 		case 2:
@@ -226,9 +226,16 @@ L_Disenchant:
 		getitem .@item, .@nbr;
 		set zeny, zeny - ((.@cost / 4) * .@nbr);
 
-		for (set .@i, 0; .@i < MAX_ITEM_RDM_OPT; .@i++) {
-			setrandomoption(.@part,.@i,-1, 0, 0);
+		delitem .@part;
+		getitem2 <item id>,<amount>,<identify>,<refine>,<attribute>,<card1>,<card2>,<card3>,<card4>{,<account ID>};
+
+		.@equip_id = getequipid(.@part);
+		.@refine = getequiprefinerycnt(.@part);
+		for (set .@i, 0; .@i < 4; .@i++) {
+			.@card[.@i] = getequipcardid(.@part, .@i);
 		}
+		delequip .@part;
+		getitem2 .@equip_id, 1, 1,.@refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
 
 		next;
 		emotion ET_BEST;
