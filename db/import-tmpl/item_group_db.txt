@@ -168,7 +168,7 @@ IG_HATBOX,5009,6	// Safety Helmet
 IG_HATBOX,5010,6	// Indian Fillet
 IG_HATBOX,5011,6	// Aerial
 IG_HATBOX,5012,6	// Ph.D Hat
-IG_HATBOX,5013,6	// Lord Kaho's Horn
+//IG_HATBOX,5013,6	// Lord Kaho's Horn
 IG_HATBOX,5014,6	// Fin Helm
 IG_HATBOX,5015,6	// Egg Shell
 IG_HATBOX,5016,6	// Boy's Cap

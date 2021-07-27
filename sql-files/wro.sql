@@ -549,7 +549,7 @@ VALUES (40031,'Rune_Ring_C','Costume Rune Ring','Armor',true,1789);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40032,'Valkyrie_Helm_C','Costume Valkyrie Helm','Armor',true,1790);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
-VALUES (40033,'Vesper_Mask_C','Costume Vesper Mask','Armor',true,1791);
+VALUES (40033,'Ver_Mask_C','Costume Vesper Mask','Armor',true,1791);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
 VALUES (40034,'Angeling_Wings_C','Costume Angeling Wings','Armor',true,1792);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
@@ -592,6 +592,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40053,'Spell_Hat_C','Costume Spell Hat','Armor',true,1812);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
 VALUES (40054,'Spell_Staff_C','Costume Spell Staff','Armor',true,1813);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+VALUES (40055,'Lord_Kahos_Horn_C','Costume Lord Kahos Horn','Armor',true,99);
 
 -- Gem Socketing
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
@@ -608,7 +610,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 
 -- Item Cash DB
-REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 46013, 40039, 40031, 40015) ORDER BY `name_aegis`;
+REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 40039, 40031, 40015) ORDER BY `name_aegis`;
 
 -- Misc fixes
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
