@@ -197,7 +197,7 @@ L_Disenchant:
 
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "The disenchantment process will thus cost you ^ff0000" + ((.@cost / 4) * .@nbr) + "z^000000 and yield " + .@nbr + " " + getitemname(.@item) + "(s)^000000. Is this okay?";
+		mes "The disenchantment process will thus cost you ^ff0000" + ((.@cost / 4) * .@nbr) + "z^000000 and yield ^ff0000" + .@nbr + " " + getitemname(.@item) + "(s)^000000. Is this okay?";
 		
 		switch(select("Yes:Cancel")) {
 		case 2:
