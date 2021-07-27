@@ -61,8 +61,8 @@ dew_in01,25,47,3	script	Costume Replicator	626,{
 			.@i = select( .@menu$ ) - 1;
 			set Zeny, Zeny-.@cost;
 
-			.@card3 = getcharid(0,"Replicator") & 65535;
-			.@card4 = getcharid(0,"Replicator") >> 16;
+			.@card3 = 999999 & 65535;
+			.@card4 = 999999 >> 16;
 			getitem2 (@inventorylist_id[.@replicaindex[.@i-1]] + 41000),1,1,0,0,254,0,.@card3,.@card4;
 			mes "["+strnpcinfo(1)+"]";
 			mes "There we go. Enjoy your costume!";
