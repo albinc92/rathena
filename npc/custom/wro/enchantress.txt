@@ -184,7 +184,7 @@ L_Disenchant:
 		.@part = .@indices[select(.@menu$)];
 
 		// Calculate no of random options on item
-		set .@nbr = 1;
+		set .@nbr, 1;
 		for (set .@i, 1; .@i < MAX_ITEM_RDM_OPT; .@i++) {
 			if(getequiprandomoption(.@part, .@i, ROA_ID)) {
 				set .@nbr, .@nbr + 1;
