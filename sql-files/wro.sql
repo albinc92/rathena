@@ -592,7 +592,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40053,'Spell_Hat_C','Costume Spell Hat','Armor',true,1812);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
 VALUES (40054,'Spell_Staff_C','Costume Spell Staff','Armor',true,1813);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40055,'Lord_Kahos_Horn_C','Costume Lord Kahos Horn','Armor',true,99);
 
 -- Gem Socketing
