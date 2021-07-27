@@ -1,61 +1,75 @@
 dew_in01,16,49,4	script	Costume Designer	451,{
 	cutin "ep13_heslanta",2;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Grreeetiiiinngggsss... nooormaaan...";
+	mes "Grreetiiinnggs... noormaaan...";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Meeee maake beaaautifuul gaaarmeeent costuumes...";
-	next;
-	mes "["+strnpcinfo(1)+"]";
-	mes "Whiiiich oneee aaareee youuu looookiing fooor... .?";
-	next;
-	goto L_Main;
+	mes "Meeee maake beaaautifuul gaarmeent costuumes...";
 
 L_Main:
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Whiich gaarment areee youuu loookiing fooor... .?";
+
 	set .@menu, select("Archangel Wings:Fallen Angel Wings:Seraph Wings:Golden Wings:Happiness Wings:Uriel's Wings:Poring Bag:Cupids Pink Wings:Kirin Wings:Little Devil Wings:Great Devil Wings:Wings of Michael:Sword Wings:Blue Fairy Wings:Thanatos Sword");
 	if (.@menu == 1) {
+		next;
 		goto L_Archangel;
 	}
 	if (.@menu == 2) {
+		next;
 		goto L_Fallenangel;
 	}
 	if (.@menu == 3) {
+		next;
 		goto L_Seraph;
 	}
 	if (.@menu == 4) {
+		next;
 		goto L_Golden;
 	}
 	if (.@menu == 5) {
+		next;
 		goto L_Happiness;
 	}
 	if (.@menu == 6) {
+		next;
 		goto L_Uriel;
 	}
 	if (.@menu == 7) {
+		next;
 		goto L_Poring;
 	}
 	if (.@menu == 8) {
+		next;
 		goto L_Cupid;
 	}
 	if (.@menu == 9) {
+		next;
 		goto L_Kirin;
 	}
 	if (.@menu == 10) {
+		next;
 		goto L_Littledevil;
 	}
 	if (.@menu == 11) {
+		next;
 		goto L_Greatdevil;
 	}
 	if (.@menu == 12) {
+		next;
 		goto L_Michael;
 	}
 	if (.@menu == 13) {
+		next;
 		goto L_Swordwing;
 	}
 	if (.@menu == 14) {
+		next;
 		goto L_Bluefairy;
 	}
 	if (.@menu == 15) {
+		next;
 		goto L_Thanatos;
 	}
 	close2;
@@ -218,7 +232,7 @@ function	script	listitems	{
 
 OnSelect:
 	@defaultLook = getlook(LOOK_ROBE);
-	set .@menu, select("Deal:Preview:Cancel");
+	set .@menu, select("Deal:Preview:Back:Cancel");
 		// Deal
 		if(.@menu==1) {
 			// Check zeny arg and amount
@@ -255,8 +269,12 @@ OnSelect:
 			goto OnSelect;
 		}
 
+		if(.@menu==1) {
+			goto L_Main;
+		}
+
 		// Cancel
-		if(.@menu==3) {
+		if(.@menu==4) {
 			changelook LOOK_ROBE, @defaultLook;
 			close2;
 			cutin "", 255;
