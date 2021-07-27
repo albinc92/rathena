@@ -14,6 +14,40 @@ roy_in02,44,113,4	script	Enchantress	916,{
 	set .@cost, 10000;
 	set .@item, 7597;
 	set .@amnt, 3;
+	setarray .@weaponid[0],
+			3, 4, 5, 6, 7, 8,
+			13, 14, 16, 17, 18, 19, 24,
+			147, 148, 151, 152,
+			164, 166,
+			168, 170, 171, 172;
+	setarray .@weaponbase[0],
+			1, 1, 1, 1, 1, 1,
+			5, 5, 10, 25, 25, 25, 10,
+			5, 5, 5, 5,
+			10, 5,
+			10, 10, 3, 10;
+	setarray .@weaponbonus[0],
+			3, 3, 3, 3, 3, 3,
+			6, 6, 16, 26, 76, 26, 16,
+			6, 6, 6, 6,
+			11, 6,
+			16, 16, 5, 16;
+	setarray .@armorid[0],
+			3, 4, 5, 6, 7, 8,
+			9, 10, 11, 12,
+			20, 21, 22, 23,
+			165, 167, 171;
+	setarray .@armorbase[0],
+			1, 1, 1, 1, 1, 1,
+			5, 5, 10, 10,
+			1, 1, 5, 3,
+			5, 5, 3;
+	setarray .@armorbonus[0],
+			3, 3, 3, 3, 3, 3,
+			6, 6, 11, 11,
+			3, 3, 7, 4,
+			6, 6, 5;
+
 	disable_items;
 
 	cutin "ra_usti1.bmp",2;
@@ -25,11 +59,8 @@ L_Menu:
 	switch(select("Enchant item:Disenchant item:Information:Cancel")) {
 
 	// Enchant Item
+L_Enchant:
 	case 1:
-		next;
-		mes "["+strnpcinfo(1)+"]";
-		mes "Very well. Which item would you like me to enchant?";
-
 		// Get equipment array
 		setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
 		for(.@i = 1; .@i < getarraysize(.@indices); ++.@i) {
@@ -56,6 +87,10 @@ L_Menu:
 				goto L_End;
 			}
 		}
+
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Very well. Which item would you like me to enchant?";
 
 		.@part = .@indices[select(.@menu$)];
 
@@ -93,47 +128,10 @@ L_Menu:
 		mes "*mumble mumble*";
 		specialeffect EF_BEGINSPELL6;
 		progressbar_npc "#00FF00",3;
-		specialeffect2 4;
+		specialeffect2 65;
 
 		delitem .@item, .@amnt;
 		set zeny, zeny - .@cost;
-
-		// Weapon enchants
-		setarray .@weaponid[0],
-				3, 4, 5, 6, 7, 8,
-				13, 14, 16, 17, 18, 19, 24,
-				147, 148, 151, 152,
-				164, 166,
-				168, 170, 171, 172;
-		setarray .@weaponbase[0],
-				1, 1, 1, 1, 1, 1,
-				5, 5, 10, 25, 25, 25, 10,
-				5, 5, 5, 5,
-				10, 5,
-				10, 10, 3, 10;
-		setarray .@weaponbonus[0],
-				3, 3, 3, 3, 3, 3,
-				6, 6, 16, 26, 76, 26, 16,
-				6, 6, 6, 6,
-				11, 6,
-				16, 16, 5, 16;
-
-		// Armor enchants
-		setarray .@armorid[0],
-				3, 4, 5, 6, 7, 8,
-				9, 10, 11, 12,
-				20, 21, 22, 23,
-				165, 167, 171;
-		setarray .@armorbase[0],
-				1, 1, 1, 1, 1, 1,
-				5, 5, 10, 10,
-				1, 1, 5, 3,
-				5, 5, 3;
-		setarray .@armorbonus[0],
-				3, 3, 3, 3, 3, 3,
-				6, 6, 11, 11,
-				3, 3, 7, 4,
-				6, 6, 5;
 
 		if(getiteminfo(getequipid(.@part), 2) == 9) {
 			set .@index, rand(getarraysize(.@weaponid));
@@ -145,16 +143,97 @@ L_Menu:
 
 		next;
 		emotion ET_BEST;
-		mes "[Elemental Master]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "The process was successful!";
 		goto L_End;
 
 	// Disenchant item
 L_Disenchant:
 	case 2:
+		// Get equipment array
+		setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
+		for(.@i = 1; .@i < getarraysize(.@indices); ++.@i) {
+			if(getequipisequiped(.@indices[.@i])) {
+				if(getequiprandomoption(.@indices[.@i], 0, ROA_ID)) {
+					.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
+					.@equipped = 1;
+				}
+			}
+			.@menu$ = .@menu$ + ":";
+		}
+
+		// Check if equipped at all
+		// Check if item already has random options
+		if (.@equipped == 0) {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Ehm. You are not wearing anything that is disenchantable. Maybe you would like me to enchant something instead?";
+			
+			switch(select("Enchant item:Cancel")) {
+			case 1:
+				goto L_Enchant;
+			case 2:
+				goto L_End;
+			}
+		}
+
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "Disenchant Item~";
+		mes "Very well. Which item would you like me to enchant?";
+
+		.@part = .@indices[select(.@menu$)];
+
+		// Calculate no of random options on item
+		set .@nbr = 1;
+		for (set .@i, 1; .@i < MAX_ITEM_RDM_OPT; .@i++) {
+			if(getequiprandomoption(.@part, .@i, ROA_ID)) {
+				set .@nbr, .@nbr + 1;
+			}
+		}
+
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I see the selected item has ^ff0000" + .@nbr + "^000000 affixes attached to it.";
+
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The disenchantment process will cost you ^ff0000" + ((.@cost / 4) * .@nbr) + "z^000000 and yield " + .@nbr + " " + getitemname(.@item) + "(s)^000000. Is this okay?";
+		
+		switch(select("Yes:Cancel")) {
+		case 2:
+			goto L_End;
+		}
+		next;
+
+		if(zeny < ((.@cost / 4) * .@nbr)) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "You don't have enough zeny I'm afraid.";
+			close2;
+			cutin "", 255;
+			end;
+		}
+
+		mes "["+strnpcinfo(1)+"]";
+		mes "Excellent! I will now commence the disenchanting process.";
+		next;
+		
+		mes "["+strnpcinfo(1)+"]";
+		mes "*mumble mumble*";
+		specialeffect EF_BEGINSPELL6;
+		progressbar_npc "#00FF00",3;
+		specialeffect2 44;
+
+		getitem .@item, .@nbr;
+		set zeny, zeny - ((.@cost / 4) * .@nbr);
+
+		for (set .@i, 0; .@i < MAX_ITEM_RDM_OPT; .@i++) {
+			setrandomoption(.@part,.@i,-1, 0, 0);
+		}
+
+		next;
+		emotion ET_BEST;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The process was successful!";
 		goto L_End;
 
 	// Information
