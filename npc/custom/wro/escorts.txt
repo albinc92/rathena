@@ -57,7 +57,7 @@ ayo_dun01,262,23,3	script	Wailing Spirit	411,{
 	set .@cost, 10000;
 
 	mes "["+strnpcinfo(1)+"]";
-	mes "Hail, adventurer~~ The path you seek is arduous. I can escort you through this labyrinth for a fee~";
+	mes "Adventurer~~ The labyrinth before you is arduous. I can escort you to the innermost chamber... for a fee~~";
 
 	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
 	next;
@@ -66,10 +66,14 @@ ayo_dun01,262,23,3	script	Wailing Spirit	411,{
 		if(zeny < 10000) {
 			mes "You lack sufficient currency~~";
 		} else {
-			mes "Very well then, follow me!";
+			mes "As promised~~ follow me!";
 			next;
 			set zeny, (zeny - .@cost);
-			warp "ayo_dun01", 24, 280;
+			if(rand(0, 1)) {
+				warp "ayo_dun02", 24, 27;
+			} else {
+				warp "ayo_dun02", 276, 27;
+			}
 		}
 	} else {
 		mes "You decide your own fate, adventurer~~";
