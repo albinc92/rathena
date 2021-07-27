@@ -210,7 +210,7 @@ menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
     	"Einbroch Fields",F8,
     	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
     	"Lighthalzen Fields",F13, "Louyang Field",F14, "Lutie Field",F15,
-    	"Manuk Fields",F17, "Morocc Desert",F24, "Mjolnir Fields",F18,
+    	"Manuk Fields",F17, "Morocc Deserts",F24, "Mjolnir Fields",F18,
     	"Moscovia Fields",F19, "Niflheim Fields",F20, "Payon Forests",F21,
     	"Prontera Fields",F22, "Rachel Fields",F23,
     	"Splendide Fields",F25, "Umbala Fields",F26, "Veins Fields",F27,
@@ -275,7 +275,7 @@ F23: Restrict("Pre-RE",2,7,9,10,11,13);
 	 setarray @c[2],192,162,235,166,202,206,202,208,225,202,202,214,263,196,217,201,87,121,277,181,221,185,175,200,174,197;
 	 Disp("Rachel Field",1,13); Pick("ra_fild");
 F24: setarray @c[2],219,205,177,206,194,182,224,170,198,216,156,187,185,263,206,228,208,238,209,223,85,97,207,202,31,195,38,195;
-	 Disp("Morocc Desert 1:Morocc Desert 2:Morocc Desert 3:Morocc Desert 7:Morocc Desert 11:Morocc Desert 12:Morocc Desert 13:Morocc Desert 16:Morocc Desert 17:Morocc Desert 18:Morocc Desert 19:Morocc Desert 20:Morocc Desert 21:Morocc Desert 22");
+	 Disp("Morocc Deserts 1:Morocc Deserts 2:Morocc Deserts 3:Morocc Deserts 7:Morocc Deserts 11:Morocc Deserts 12:Morocc Deserts 13:Morocc Deserts 16:Morocc Deserts 17:Morocc Deserts 18:Morocc Deserts 19:Morocc Deserts 20:Morocc Deserts 21:Morocc Deserts 22");
 	 Pick("","moc_fild01","moc_fild02","moc_fild03","moc_fild07","moc_fild11","moc_fild12","moc_fild13","moc_fild16","moc_fild17","moc_fild18","moc_fild19","moc_fild20","moc_fild21","moc_fild22");
 F25: setarray @c[2],175,186,236,184,188,204;
 	 Disp("Splendide Field",1,3); Pick("spl_fild");
