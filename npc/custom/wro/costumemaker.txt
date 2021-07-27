@@ -269,7 +269,7 @@ OnSelect:
 			goto OnSelect;
 		}
 
-		if(.@menu==1) {
+		if(.@menu==3) {
 			goto L_Main;
 		}
 
