@@ -82,3 +82,67 @@ ayo_dun01,262,23,3	script	Wailing Spirit	411,{
 	cutin "", 255;
 	end;
 }
+
+// Thanatos Tower 1st Floor
+tha_t01,151,78,6	script	Rekenber Tour	852,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "I offer safe passage up to the second floor for a small fee. Does this interest you, adventurer?";
+
+	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu == 1) {
+		if(zeny < 10000) {
+			mes "You lack sufficient funds.";
+		} else {
+			mes "Right this way.";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "tha_t02",149,128;
+		}
+	} else {
+		mes "Until next time.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+}
+
+// Pyramids
+moc_pryd01,177,12,7	script	Thief	118,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Oi. Lookin' for a way through the maze? I can show you... for a fee of course he-he.";
+
+	set .@menu, select("2nd Floor (^ff0000" + .@cost + "z^000000):Basement (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if (.@menu == 1) {
+		if(zeny < 10000) {
+			mes "You're broke...";
+		} else {
+			mes "Don't fall behind!";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "moc_pryd02",10,192;
+		}
+	} else if (.@menu == 2) {
+		if(zeny < 10000) {
+			mes "You're broke...";
+		} else {
+			mes "Don't fall behind!";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "moc_pryd05",94,96;
+		}
+	} else {
+		mes "You know where to find me~~";
+	}
+	close2;
+	cutin "", 255;
+	end;
+}
+
