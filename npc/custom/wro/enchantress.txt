@@ -269,10 +269,10 @@ L_End:
 // Signpost
 roy_in02,46,110,3	script	List of Enchantments	837,{
 
-L_Browse:
 	mes "["+strnpcinfo(1)+"]";
 	mes "This signpost seems to list potential enchantments for weapons and armor. What type would you like to preview?";
 	
+L_Browse:
 	switch(select("Weapons:Armor:Cancel")) {
 	case 1:
 		next;
