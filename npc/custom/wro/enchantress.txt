@@ -253,10 +253,10 @@ L_Disenchant:
 		mes "Amazing, right?";
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "In order to enchant an item, I require ^ff0000" + .@amnt + " " + getitemname(.@item) + "^000000 as a conduit.";
+		mes "In order to enchant an item, I require ^ff0000" + .@amnt + "x " + getitemname(.@item) + "^000000 as a conduit.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "You can acquire ^ff0000" + getitemname(.@item) + "^000000 by Disenchanting other enchanted items.";
+		mes "You can acquire ^ff0000" + getitemname(.@item) + "s^000000 by Disenchanting other enchanted items.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Neat, huh?";

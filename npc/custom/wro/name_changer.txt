@@ -1,0 +1,73 @@
+//===== rAthena Script =======================================
+//= Name-Changer NPC
+//===== By: ==================================================
+//= albinc92
+//===== Current Version: =====================================
+//= 1.0a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Apply for a name change.
+//============================================================
+
+roy_in02,46,97,3	script	Genie	660,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hello there young adventurer! I am the famous Name Changer!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Renown far and wide for being able to change a persons name!";
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Is this something that would interest you?";
+
+L_Menu:
+	switch(select("Change Name:Cancel")) {
+	case 1:
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "What name would you like? Max 15 characters of format [^ff0000A-Z]^000000, [^ff0000a-z^000000], [^ff00000-9^000000] allowed!";
+		input .@name$;
+
+		if (getstrlen(.@name$) > 15) {
+			mes "["+strnpcinfo(1)+"]";
+			mes "Your name must contain no more than ^ff000015 characters^000000!";
+			goto L_End;
+		}
+
+		set .@found, query_sql("SELECT * FROM `char` WHERE `name` = " + .@name$ + ";");
+		if (getarraysize(.@ladder) == 0) {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Everything looks OK with your requested name: ^ff0000" + .@name$ + "^000000.";
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "Lets work my magic!";
+			next;
+
+			progressbar "#00FF00",2;
+			set .@found, query_sql("SELECT * FROM `char` WHERE `name` = " + .@name$ + ";");
+			if (getarraysize(.@ladder) == 0) {
+				specialeffect2 1;
+				query_sql("UPDATE `char` SET `name` = " + .@name$ + " WHERE `name` = " + strcharinfo(0) + ";");
+				mes "["+strnpcinfo(1)+"]";
+				mes "Congratulations! Your name is now ^ff0000" + .@name$ + "^000000!";
+				goto L_End;
+			} else {
+				next;
+				mes "["+strnpcinfo(1)+"]";
+				mes "I'm afraid that name just got taken by someone else!";
+				goto L_End;
+			}
+		} else {
+			next;
+			mes "["+strnpcinfo(1)+"]";
+			mes "I'm afraid that name has already been taken.";
+			goto L_End;
+		}
+	}
+
+L_End:
+	close2;
+	cutin "", 255;
+	end;
+}
