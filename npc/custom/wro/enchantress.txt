@@ -275,22 +275,22 @@ roy_in02,46,110,3	script	List of Enchantments	837,{
 	case 1:
 		next;
 		mes "[^ff0000Weapon Enchantments^000000]";
-		mes "STR [^ff00001-3^000000]";
-		mes "AGI [^ff00001-3^000000]";
-		mes "VIT [^ff00001-3^000000]";
-		mes "INT [^ff00001-3^000000]";
-		mes "DEX [^ff00001-3^000000]";
-		mes "LUK [^ff00001-3^000000]";
+		mes "STR +(^ff00001 ~ 3^000000)";
+		mes "AGI +(^ff00001 ~ 3^000000)";
+		mes "VIT +(^ff00001 ~ 3^000000)";
+		mes "INT +(^ff00001 ~ 3^000000)";
+		mes "DEX +(^ff00001 ~ 3^000000)";
+		mes "LUK +(^ff00001 ~ 3^000000)";
 		goto L_End;
 	case 2:
 		next;
 		mes "[^ff0000Armor Enchantments^000000]";
-		mes "STR [^ff00001-3^000000]";
-		mes "AGI [^ff00001-3^000000]";
-		mes "VIT [^ff00001-3^000000]";
-		mes "INT [^ff00001-3^000000]";
-		mes "DEX [^ff00001-3^000000]";
-		mes "LUK [^ff00001-3^000000]";
+		mes "STR +(^ff00001 ~ 3^000000)";
+		mes "AGI +(^ff00001 ~ 3^000000)";
+		mes "VIT +(^ff00001 ~ 3^000000)";
+		mes "INT +(^ff00001 ~ 3^000000)";
+		mes "DEX +(^ff00001 ~ 3^000000)";
+		mes "LUK +(^ff00001 ~ 3^000000)";
 		goto L_End;
 	}
 	
