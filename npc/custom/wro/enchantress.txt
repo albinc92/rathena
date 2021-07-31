@@ -253,6 +253,18 @@ L_Disenchant:
 		mes "Amazing, right?";
 		next;
 		mes "["+strnpcinfo(1)+"]";
+		mes "In order to enchant an item, I require ^ff0000" + .@amnt + " " + getitemname(.@item) + "^000000 as a conduit.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You can acquire ^ff0000" + getitemname(.@item) + "^000000 by Disenchanting other enchanted items.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Neat, huh?";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "You can take a look at the Signpost to my right for more information of available magical affixes.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
 		mes "Now, what action would you like me to perform today?";
 		goto L_Menu;
 	}
@@ -267,16 +279,16 @@ L_End:
 }
 
 // Signpost
-roy_in02,46,110,3	script	List of Enchantments	837,{
+roy_in02,46,110,3	script	List of Affixes	837,{
 
 	mes "["+strnpcinfo(1)+"]";
-	mes "This signpost seems to list potential enchantments for weapons and armor. What type would you like to preview?";
+	mes "This signpost seems to list available magical affixes for weapons and armor. What type would you like to preview?";
 	
 L_Browse:
-	switch(select("Weapons:Armor:Cancel")) {
+	switch(select("Weapon affixes:Armor affixes:Cancel")) {
 	case 1:
 		next;
-		mes "[^ff0000Weapon Enchantments^000000]";
+		mes "[^ff0000Weapon Affixes^000000]";
 		mes "STR +(^ff00001 - 3^000000)";
 		mes "AGI +(^ff00001 - 3^000000)";
 		mes "VIT +(^ff00001 - 3^000000)";
@@ -286,7 +298,7 @@ L_Browse:
 		goto L_Browse;
 	case 2:
 		next;
-		mes "[^ff0000Armor Enchantments^000000]";
+		mes "[^ff0000Armor Affixes^000000]";
 		mes "STR +(^ff00001 - 3^000000)";
 		mes "AGI +(^ff00001 - 3^000000)";
 		mes "VIT +(^ff00001 - 3^000000)";
