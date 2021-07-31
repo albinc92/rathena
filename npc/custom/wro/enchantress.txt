@@ -265,3 +265,32 @@ L_End:
 	cutin "", 255;
 	end;
 }
+
+// Signpost
+roy_in02,46,110,3	script	List of Enchantments	837,{
+	mes "["+strnpcinfo(1)+"]";
+	mes "This signpost seems to list potential enchantments for weapons and armor. What type would you like to preview?";
+	
+	switch(select("Weapons:Armor:Cancel")) {
+	case 1:
+		mes "[^ff0000Weapon Enchantments^000000]";
+		mes "STR [^ff00001-3^000000]";
+		mes "AGI [^ff00001-3^000000]";
+		mes "VIT [^ff00001-3^000000]";
+		mes "INT [^ff00001-3^000000]";
+		mes "DEX [^ff00001-3^000000]";
+		mes "LUK [^ff00001-3^000000]";
+	case 2:
+		mes "[^ff0000Armor Enchantments^000000]";
+		mes "STR [^ff00001-3^000000]";
+		mes "AGI [^ff00001-3^000000]";
+		mes "VIT [^ff00001-3^000000]";
+		mes "INT [^ff00001-3^000000]";
+		mes "DEX [^ff00001-3^000000]";
+		mes "LUK [^ff00001-3^000000]";
+	}
+	
+	close2;
+	cutin "", 255;
+	end;
+}
