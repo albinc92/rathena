@@ -41,7 +41,7 @@ L_Menu:
 			mes "Everything looks OK with your requested name: ^ff0000" + .@name$ + "^000000.";
 			next;
 			mes "["+strnpcinfo(1)+"]";
-			mes "Lets work my magic!";
+			mes "Let's work my magic!";
 			next;
 
 			progressbar "#00FF00",2;
