@@ -10,9 +10,9 @@
 //= Apply for a name change.
 //============================================================
 
-roy_in02,46,97,3	script	Genie	660,{
+roy_in02,46,97,3	script	Magic Cascet	801,{
 	mes "["+strnpcinfo(1)+"]";
-	mes "Hello there young adventurer! I am the famous Name Changer!";
+	mes "Hello there young adventurer! I am the famous Magic Cascet!";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Renown far and wide for being able to change a persons name!";
