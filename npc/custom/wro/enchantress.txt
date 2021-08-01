@@ -127,6 +127,7 @@ L_Enchant:
 		delitem .@item, .@amnt;
 		set zeny, zeny - .@cost;
 
+		mes "" + getiteminfo(getequipid(.@part), 2);
 		if(getiteminfo(getequipid(.@part), 2) == 9) {
 			set .@index, rand(getarraysize(.@weaponid));
 			setrandomoption(.@part,0,.@weaponid[.@index], (.@weaponbase[.@index] + rand(0, .@weaponbonus[.@index])), 0);
