@@ -78,14 +78,8 @@ L_Enchant:
 		if (.@equipped == 0) {
 			next;
 			mes "["+strnpcinfo(1)+"]";
-			mes "Ehm. You are not wearing anything that is enchantable. Maybe you would like me to disenchant something instead?";
-			
-			switch(select("Disenchant item:Cancel")) {
-			case 1:
-				goto L_Disenchant;
-			case 2:
-				goto L_End;
-			}
+			mes "Ehm. You are not wearing anything that is enchantable.";
+			goto L_End;
 		}
 
 		next;
@@ -167,14 +161,8 @@ L_Disenchant:
 		if (.@equipped == 0) {
 			next;
 			mes "["+strnpcinfo(1)+"]";
-			mes "Ehm. You are not wearing anything that is disenchantable. Maybe you would like me to enchant something instead?";
-			
-			switch(select("Enchant item:Cancel")) {
-			case 1:
-				goto L_Enchant;
-			case 2:
-				goto L_End;
-			}
+			mes "Ehm. You are not wearing anything that is disenchantable.";
+			goto L_End;
 		}
 
 		next;
