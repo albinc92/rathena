@@ -221,7 +221,7 @@ L_Disenchant:
 		mes "*mumble mumble*";
 		specialeffect EF_BEGINSPELL6;
 		progressbar_npc "#00FF00",1;
-		specialeffect2 44;
+		specialeffect2 234;
 
 		getitem .@item, .@nbr;
 		set zeny, zeny - ((.@cost / 4) * .@nbr);
