@@ -27,11 +27,11 @@ roy_in02,44,113,4	script	Enchantress	916,{
 			10, 5,
 			10, 10, 3, 10;
 	setarray .@weaponbonus[0],
-			3, 3, 3, 3, 3, 3,
-			6, 6, 16, 26, 76, 26, 16,
-			6, 6, 6, 6,
-			11, 6,
-			16, 16, 5, 16;
+			2, 2, 2, 2, 2, 2,
+			5, 5, 15, 25, 75, 25, 15,
+			5, 5, 5, 5,
+			10, 5,
+			15, 15, 4, 15;
 	setarray .@armorid[0],
 			3, 4, 5, 6, 7, 8,
 			9, 10, 11, 12,
@@ -43,10 +43,10 @@ roy_in02,44,113,4	script	Enchantress	916,{
 			1, 1, 5, 3,
 			5, 5, 3;
 	setarray .@armorbonus[0],
-			3, 3, 3, 3, 3, 3,
-			6, 6, 11, 11,
-			3, 3, 7, 4,
-			6, 6, 5;
+			2, 2, 2, 2, 2, 2,
+			5, 5, 10, 10,
+			2, 2, 6, 3,
+			5, 5, 4;
 
 	disable_items;
 
@@ -135,10 +135,10 @@ L_Enchant:
 
 		if(getiteminfo(getequipid(.@part), 2) == 9) {
 			set .@index, rand(getarraysize(.@weaponid));
-			setrandomoption(.@part,0,.@weaponid[.@index], (.@weaponbase[.@index] + rand(.@weaponbonus[.@index])), 0);
+			setrandomoption(.@part,0,.@weaponid[.@index], (.@weaponbase[.@index] + rand(0, .@weaponbonus[.@index])), 0);
 		} else {
 			set .@index, rand(getarraysize(.@armorid));
-			setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(.@armorbonus[.@index])), 0);
+			setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
 		}
 
 		next;
@@ -288,23 +288,68 @@ L_Browse:
 	switch(select("Weapon affixes:Armor affixes:Cancel")) {
 	case 1:
 		next;
-		mes "[^ff0000Weapon Affixes^000000]";
+		mes "[^ff0000Weapon Affixes I^000000]";
 		mes "STR +(^ff00001 - 3^000000)";
 		mes "AGI +(^ff00001 - 3^000000)";
 		mes "VIT +(^ff00001 - 3^000000)";
 		mes "INT +(^ff00001 - 3^000000)";
 		mes "DEX +(^ff00001 - 3^000000)";
 		mes "LUK +(^ff00001 - 3^000000)";
+		next;
+		mes "[^ff0000Weapon Affixes II^000000]";
+		mes "ATK +(^ff00005 - 10^000000)%";
+		mes "MATK +(^ff00005 - 10^000000)%";
+		mes "ATK +(^ff000025 - 50^000000)";
+		mes "MATK +(^ff000025 - 50^000000)";
+		mes "ASPD +(^ff000010 - 25^000000)%";
+		mes "HIT +(^ff000025 - 100^000000)";
+		mes "CRIT +(^ff000010 - 25^000000)%";
+		next;
+		mes "[^ff0000Weapon Affixes III^000000]";
+		mes "Damage vs. Normal Monsters +(^ff00005 - 10^000000)%";
+		mes "Damage vs. Boss Monsters +(^ff00005 - 10^000000)%";
+		mes "Magic Damage vs. Normal Monsters +(^ff00005 - 10^000000)%";
+		mes "Magic Damage vs. Boss Monsters +(^ff00005 - 10^000000)%";
+		next;
+		mes "[^ff0000Weapon Affixes IV^000000]";
+		mes "Critical Damage +(^ff000010 - 20^000000)%";
+		mes "Ranged Attack Damage +(^ff00005 - 10^000000)%";
+		next;
+		mes "[^ff0000Weapon Affixes V^000000]";
+		mes "Heal Power +(^ff000010 - 25^000000)%";
+		mes "Cast Rate -(^ff000010 - 25^000000)%";
+		mes "After-Cast Delay -(^ff00003 - 7^000000)%";
+		mes "SP Consumption -(^ff000010 - 25^000000)%";
+		next;
 		goto L_Browse;
 	case 2:
 		next;
-		mes "[^ff0000Armor Affixes^000000]";
+		mes "[^ff0000Armor Affixes I^000000]";
 		mes "STR +(^ff00001 - 3^000000)";
 		mes "AGI +(^ff00001 - 3^000000)";
 		mes "VIT +(^ff00001 - 3^000000)";
 		mes "INT +(^ff00001 - 3^000000)";
 		mes "DEX +(^ff00001 - 3^000000)";
 		mes "LUK +(^ff00001 - 3^000000)";
+		next;
+		mes "[^ff0000Armor Affixes II^000000]";
+		mes "Max HP +(^ff00005 - 10^000000)%";
+		mes "Max SP +(^ff00005 - 10^000000)%";
+		mes "HP Regeneration +(^ff000010 - 20^000000)%";
+		mes "SP Regeneration +(^ff000010 - 20^000000)%";
+		next;
+		mes "[^ff0000Armor Affixes III^000000]";
+		mes "DEF +(^ff00001 - 3^000000)";
+		mes "MDEF +(^ff00001 - 3^000000)";
+		mes "Flee +(^ff00005 - 11^000000)";
+		mes "Perfect Dodge +(^ff00003 - 6^000000)";
+		next;
+		mes "[^ff0000Armor Affixes IV^000000]";
+		mes "Critical Damage Resist +(^ff00005 - 10^000000)%";
+		mes "Ranged Damage Resist +(^ff00005 - 10^000000)%";
+		next;
+		mes "[^ff0000Armor Affixes IV^000000]";
+		mes "After-Cast Delay -(^ff00003 - 7^000000)%";
 		goto L_Browse;
 	}
 	
