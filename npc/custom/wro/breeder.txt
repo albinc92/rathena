@@ -43,7 +43,7 @@ royal,67,177,6	script	Universal Rental NPC	726,{
 
 	else if(!checkriding() && !checkdragon() && getskilllv("KN_RIDING")) {
 		if(isequipped(40000) == 1) {
-			atcommand "@option 0 0 524288﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿";
+			atcommand "@option 0 0 524288";
 			atcommand "@mountpeco";
 		} else {
 			setriding;
