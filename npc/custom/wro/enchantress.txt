@@ -127,7 +127,7 @@ L_Enchant:
 		mes "["+strnpcinfo(1)+"]";
 		mes "*mumble mumble*";
 		specialeffect EF_BEGINSPELL6;
-		progressbar_npc "#00FF00",3;
+		progressbar_npc "#00FF00",1;
 		specialeffect2 65;
 
 		delitem .@item, .@amnt;
@@ -220,7 +220,7 @@ L_Disenchant:
 		mes "["+strnpcinfo(1)+"]";
 		mes "*mumble mumble*";
 		specialeffect EF_BEGINSPELL6;
-		progressbar_npc "#00FF00",3;
+		progressbar_npc "#00FF00",1;
 		specialeffect2 44;
 
 		getitem .@item, .@nbr;
