@@ -311,7 +311,6 @@ L_OnChoice:
 
 OnPCLoadMapEvent:
     showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-    npctalk "Greetings, " + strcharinfo(0) + "!";
     end;
 }
 
