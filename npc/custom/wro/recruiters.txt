@@ -11,8 +11,8 @@
     showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
     cutin "ep13_captin_edq.bmp", 2;
 
-	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
-    if(.@intro == 2) {
+	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
+    if(.@mainquest == 1) {
 		emotion ET_SMILE;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?.";
@@ -56,7 +56,7 @@
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed, adventurer.";
 
-	query_sql("UPDATE `wrodata` SET `intro` = 2, `char_id` = '" + getcharid(3) + "'");
+	query_sql("UPDATE `wrochardata` SET `mainquest` = 2, `char_id` = '" + getcharid(0) + "'");
 
 L_OnEnd:
     close2;
@@ -64,8 +64,8 @@ L_OnEnd:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wrodata` WHERE `char_id` = '"+getcharid(3)+"'", .@intro);
-    if(.@intro != 2) {
+	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
+    if(.@mainquest != 2) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!";
     }

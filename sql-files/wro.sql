@@ -6,17 +6,25 @@ DELETE FROM `item_db2`;
 DELETE FROM `mob_db2`;
 DELETE FROM `mob_skill_db2`;
 DELETE FROM `item_cash_db2`;
+DROP TABLE `wrodata`;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                   wro_tables
 -- ---------------------------------------------------------------------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `wrodata` (
-  `char_id` int(11) unsigned NOT NULL default '0',
-  `intro` int(11) NOT NULL default '0',
-  `hints` int(11) NOT NULL default '1',
-  PRIMARY KEY (`char_id`),
-  KEY `char_id` (`char_id`)
+CREATE TABLE IF NOT EXISTS `wroaccdata` (
+    `account_id` int(11) unsigned NOT NULL default '0',
+    `intro` int(11) NOT NULL default '0',
+    `hints` int(11) NOT NULL default '1',
+    PRIMARY KEY (`account_id`),
+    KEY `account_id` (`account_id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `wrochardata` (
+    `char_id` int(11) unsigned NOT NULL default '0',
+    `mainquest` int(11) NOT NULL default '0',
+    PRIMARY KEY (`char_id`),
+    KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS `headhunter` (
