@@ -14,7 +14,7 @@
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Greetings, " + strcharinfo(0) + "!";
 
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `char_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
     if(.@intro) {
         goto L_OnEnd;
     }
@@ -161,7 +161,7 @@ L_OnTutorialDone:
     getitem 2414,1;
     getitem 2510,1;
     getitem 2352,1;
-	query_sql("INSERT INTO `wroaccdata` SET `char_id` = '" + getcharid(3) + "', `intro` = 1, `hints` = 1");
+	query_sql("INSERT INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `intro` = 1, `hints` = 1");
 
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed!";
@@ -172,7 +172,7 @@ L_OnEnd:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `char_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
@@ -186,6 +186,18 @@ OnPCLoadMapEvent:
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Greetings, " + strcharinfo(0) + "!";
     next;
+    
+	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+    if(!.@intro) {
+        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
+    }
+    
+	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+    if(!.@intro) {
+        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
+    }
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "The time has come for you to enter the world of Warbound Ragnarok Online!";
@@ -304,7 +316,7 @@ L_OnChoice:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `char_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
     if(!.@intro) {
         setlook LOOK_CLOTHES_COLOR,5;
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
