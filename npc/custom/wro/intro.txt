@@ -14,7 +14,7 @@
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Greetings, " + strcharinfo(0) + "!";
 
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(.@intro) {
         goto L_OnEnd;
     }
@@ -22,16 +22,6 @@
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Allow me to welcome you to Warbound Ragnarok Online!";
-    next;
-
-	query_sql("SELECT COUNT(*) FROM `char` WHERE account_id = '" + getcharid(3) + "'", .@charCnt);
-    if(.@charCnt > 1) {
-        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "I can tell that this isn't the first time playing on this server.";
-    } else {
-        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "I can tell that this is your first time playing on this server.";
-    }
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -161,7 +151,7 @@ L_OnTutorialDone:
     getitem 2414,1;
     getitem 2510,1;
     getitem 2352,1;
-	query_sql("INSERT INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `intro` = 1, `hints` = 1");
+	query_sql("INSERT INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `hints` = 1");
 
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed!";
@@ -172,7 +162,7 @@ L_OnEnd:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
@@ -187,7 +177,7 @@ OnPCLoadMapEvent:
     mes "Greetings, " + strcharinfo(0) + "!";
     next;
     
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Have you spoken with the ^ff0000WarboundRO Guide^000000?";
@@ -196,7 +186,7 @@ OnPCLoadMapEvent:
         end;
     }
     
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
@@ -319,7 +309,7 @@ L_OnChoice:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
+	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         setlook LOOK_CLOTHES_COLOR,5;
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
