@@ -166,7 +166,6 @@ OnPCLoadMapEvent:
 	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!", strnpcinfo(0), bc_self;
     }
     end;
 }
