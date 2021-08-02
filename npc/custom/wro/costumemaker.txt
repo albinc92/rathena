@@ -12,7 +12,7 @@ dew_in01,16,49,4	script	Costume Designer	451,{
 	goto L_Main;
 
 L_Main:
-	set .@menu, select("Archangel Wings:Fallen Angel Wings:Seraph Wings:Golden Wings:Happiness Wings:Uriel's Wings:Poring Bag:Cupids Pink Wings:Kirin Wings:Little Devil Wings:Great Devil Wings:Wings of Michael:Sword Wings:Blue Fairy Wings:Thanatos Sword");
+	set .@menu, select("Archangel Wings:Fallen Angel Wings:Seraph Wings:Golden Wings:Happiness Wings:Poring Bag:Cupids Pink Wings:Kirin Wings:Little Devil Wings:Great Devil Wings:Wings of Michael:Sword Wings:Blue Fairy Wings:Thanatos Sword");
 	if (.@menu == 1) {
 		goto L_Archangel;
 	}
@@ -29,33 +29,30 @@ L_Main:
 		goto L_Happiness;
 	}
 	if (.@menu == 6) {
-		goto L_Uriel;
-	}
-	if (.@menu == 7) {
 		goto L_Poring;
 	}
-	if (.@menu == 8) {
+	if (.@menu == 7) {
 		goto L_Cupid;
 	}
-	if (.@menu == 9) {
+	if (.@menu == 8) {
 		goto L_Kirin;
 	}
-	if (.@menu == 10) {
+	if (.@menu == 9) {
 		goto L_Littledevil;
 	}
-	if (.@menu == 11) {
+	if (.@menu == 10) {
 		goto L_Greatdevil;
 	}
-	if (.@menu == 12) {
+	if (.@menu == 11) {
 		goto L_Michael;
 	}
-	if (.@menu == 13) {
+	if (.@menu == 12) {
 		goto L_Swordwing;
 	}
-	if (.@menu == 14) {
+	if (.@menu == 13) {
 		goto L_Bluefairy;
 	}
-	if (.@menu == 15) {
+	if (.@menu == 14) {
 		goto L_Thanatos;
 	}
 	close2;
@@ -125,13 +122,6 @@ L_Happiness:
 	mes "Spleeendid!";
 	next;
 	callfunc "listitems",20761,10000000,5,7101,200,1013,5,622,250,938,50,7200,50;
-	end;
-
-L_Uriel:
-	mes "["+strnpcinfo(1)+"]";
-	mes "Wooooonderfuuuuul!";
-	next;
-	callfunc "listitems",2573,10000000,8,949,100,7440,250,982,2,975,2,7162,125,7563,125,938,50,7200,50;
 	end;
 
 L_Poring:
