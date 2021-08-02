@@ -310,11 +310,8 @@ L_OnChoice:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
-    if(!.@intro) {
-        setlook LOOK_CLOTHES_COLOR,5;
-        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-    }
+    showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+    npctalk "Greetings, " + strcharinfo(0) + "!";
     end;
 }
 
