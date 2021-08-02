@@ -56,7 +56,7 @@
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed, adventurer.";
 
-	query_sql("UPDATE `wrochardata` SET `mainquest` = 2, `char_id` = '" + getcharid(0) + "'");
+	query_sql("UPDATE `wrochardata` SET `mainquest` = 1, `char_id` = '" + getcharid(0) + "'");
 
 L_OnEnd:
     close2;
@@ -65,7 +65,7 @@ L_OnEnd:
 
 OnPCLoadMapEvent:
 	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
-    if(.@mainquest != 0) {
+    if(.@mainquest == 0) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!";
     }
