@@ -8,14 +8,7 @@
     end;
 
 OnPCLoginEvent:
-	.@res = query_sql("SELECT * FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'");
-
-    if (!.@res) {
-		query_sql("INSERT INTO `wroaccdata` VALUES('" + getcharid(3) + "', 1)");
-		set .@hints,  1;
-	} else {
-		.@res = query_sql("SELECT `hints` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@hints);
-	}
+	.@res = query_sql("SELECT `hints` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@hints);
 
 	if(.@hints == 0) {
 	    end;
