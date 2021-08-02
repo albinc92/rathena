@@ -64,13 +64,11 @@ L_OnEnd:
     end;
 
 OnPCLoadMapEvent:
-	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
-    if(.@mainquest == 0) {
-        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        
-	    getmapxy .@map$, .@x, .@y, BL_PC;
-        if (strnpcinfo(4) == .@map$) {
-            npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!", strnpcinfo(0);
+	getmapxy .@map$, .@x_npc, .@y_npc;
+    if (.@map$ == strnpcinfo(4)) {
+        query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
+        if(.@mainquest == 0) {
+            showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         }
     }
     end;
