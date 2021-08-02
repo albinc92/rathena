@@ -166,13 +166,12 @@ OnPCLoadMapEvent:
 	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
+        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!", strnpcinfo(0), bc_self;
     }
     end;
 }
 
 -	script	Intro2	-1,{
-    showevent QTYPE_NONE, QMARK_NONE, getcharid(0);
 	cutin "nov_magicsoul01",2;
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Greetings, " + strcharinfo(0) + "!";
@@ -185,12 +184,6 @@ OnPCLoadMapEvent:
         close2;
         cutin "",255;
         end;
-    }
-    
-	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
-    if(!.@intro) {
-        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
     }
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
