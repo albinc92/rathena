@@ -533,10 +533,10 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40020,'Burden_of_Thorns_C','Costume Burden of Thorns','Armor',true,1778);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40021,'Faerie_Helm_C','Costume Faerie Helm','Armor',true,1779);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
-VALUES (40022,'Faerie_Wings_C','Costume Faerie Wings','Armor',true,1780);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`location_costume_head_top`,`view`)
-VALUES (40023,'GM_Hat_C','Costume Game Master Hat','Armor',true,true,1781);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`location_costume_head_mid`,`view`)
+VALUES (40022,'Faerie_Wings_C','Costume Faerie Wings','Armor',true,true,1780);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
+VALUES (40023,'GM_Hat_C','Costume Game Master Hat','Armor',true,1781);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
 VALUES (40024,'Gibbet_Dolls_C','Costume Gibbet Dolls','Armor',true,1782);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
