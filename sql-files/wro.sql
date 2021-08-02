@@ -526,7 +526,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40020,'Burden_of_Thorns_C','Costume Burden of Thorns','Armor',true,1778);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40021,'Faerie_Helm_C','Costume Faerie Helm','Armor',true,1779);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40022,'Faerie_Wings_C','Costume Faerie Wings','Armor',true,1780);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40023,'GM_Hat_C','Costume Game Master Hat','Armor',true,1781);
@@ -550,11 +550,11 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40032,'Valkyrie_Helm_C','Costume Valkyrie Helm','Armor',true,1790);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40033,'Ver_Mask_C','Costume Vesper Mask','Armor',true,1791);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40034,'Angeling_Wings_C','Costume Angeling Wings','Armor',true,1792);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40035,'Bloody_B_Wings_C','Costume Bloody Butterfly Wings','Armor',true,1793);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40036,'Drake_Jacket_C','Costume Drake Jacket','Armor',true,1794);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40037,'Evil_Druid_Hat_C','Costume Evil Druid Hat','Armor',true,1795);
@@ -562,11 +562,11 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40038,'Ghostly_Tormentor_C','Costume Ghostly Tormentor','Armor',true,1796);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_low`,`view`)
 VALUES (40039,'Force_Field_C','Costume Force_Field','Armor',true,1797);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40040,'Gargoyle_Wings_C','Costume Gargoyle Wings','Armor',true,1798);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40041,'Golden_Wings_C','Costume Golden Wings','Armor',true,1800);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40042,'Lord_Kahos_Wings_C','Costume Lord Kahos Wings','Armor',true,1801);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40043,'Marduk_Hat_C','Costume Marduk Headdress','Armor',true,1802);
@@ -576,21 +576,21 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costu
 VALUES (40045,'Owl_Baron_Hat_C','Costume Owl Baron Tophat','Armor',true,1804);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40046,'Owl_Duke_Hat_C','Costume Owl Duke Tophat','Armor',true,1805);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40047,'Retribution_Wings_C','Costume Retribution Wings','Armor',true,1806);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40048,'Shinobi_Helm_C','Costume Shinobi Helm','Armor',true,1807);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40049,'Umbral_Helm_C','Costume Umbral Helm','Armor',true,1808);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40050,'Umbral_Wings_C','Costume Umbral Wings','Armor',true,1809);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40051,'Valkyrie_Wings_C','Costume Valkyrie Wings','Armor',true,1810);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40052,'Whisper_Tophat_C','Costume Whisper Tallhat','Armor',true,1811);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40053,'Spell_Hat_C','Costume Spell Hat','Armor',true,1812);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_mid`,`view`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
 VALUES (40054,'Spell_Staff_C','Costume Spell Staff','Armor',true,1813);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40055,'Lord_Kahos_Horn_C','Costume Lord Kahos Horn','Armor',true,99);
