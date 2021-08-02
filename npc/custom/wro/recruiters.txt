@@ -12,14 +12,14 @@
     cutin "ep13_captin_edq.bmp", 2;
 
 	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
-    if(.@mainquest == 1) {
+    if(.@mainquest > 0) {
 		emotion ET_SMILE;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?.";
         next;
 
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "Remember: you can find him inside the ^ff0000Senate Building^000000.";
+        mes "Remember: you can find him inside the ^ff0000Senate Building^000000 in Royal.";
         next;
 
         goto L_OnEnd;
@@ -56,7 +56,7 @@
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed, adventurer.";
 
-	query_sql("UPDATE `wrochardata` SET `mainquest` = 1, `char_id` = '" + getcharid(0) + "'");
+	query_sql("UPDATE `wrochardata` SET `mainquest` = 1 WHERE `char_id` = '" + getcharid(0) + "'");
 
 L_OnEnd:
     close2;
