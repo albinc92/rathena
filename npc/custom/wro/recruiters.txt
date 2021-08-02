@@ -65,7 +65,7 @@ L_OnEnd:
 
 OnPCLoadMapEvent:
 	query_sql("SELECT `mainquest` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@mainquest);
-    if(.@mainquest != 2) {
+    if(.@mainquest != 0) {
         showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
         npctalk strnpcinfo(1) + ": Hey you, " + strcharinfo(0) + "! I want a word with you!";
     }
