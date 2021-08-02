@@ -6,7 +6,6 @@ DELETE FROM `item_db2`;
 DELETE FROM `mob_db2`;
 DELETE FROM `mob_skill_db2`;
 DELETE FROM `item_cash_db2`;
-DROP TABLE `wrodata`;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                   wro_tables
