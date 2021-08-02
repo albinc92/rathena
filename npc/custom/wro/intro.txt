@@ -189,8 +189,11 @@ OnPCLoadMapEvent:
     
 	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
     if(!.@intro) {
-        showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
-        npctalk "Welcome, " + strcharinfo(0) + "! Come speak with me!";
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Have you spoken with the ^ff0000WarboundRO Guide^000000?";
+        close2;
+        cutin "",255;
+        end;
     }
     
 	query_sql("SELECT `intro` FROM `wroaccdata` WHERE `account_id` = '" + getcharid(3) + "'", .@intro);
