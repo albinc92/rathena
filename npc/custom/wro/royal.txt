@@ -96,14 +96,12 @@ royal,142,83,3	script	Sarah	10066,{
 roy_in02,92,61,1	script	Fay	665,{
 	cutin "paycana_a",2;
 	mes "[Fay]";
-	mes "This place is just the best! I learn so much every day!";
+	mes "Gathering professions are just the best!";
 	next;
 	cutin "paycana_b ",2;
 	mes "[Fay]";
-	mes "Hum... I wonder where the rest of my classmates are though.";
+	mes "I get to earn quite a bit of zeny. Hehe~~";
 	next;
-	mes "[Fay]";
-	mes "Oh wait! That outing to juperos was supposed to be today!";
 	close2;
 	cutin "", 255;
 	end;

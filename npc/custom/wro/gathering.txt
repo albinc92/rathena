@@ -68,6 +68,7 @@ roy_in02,29,73,5	script	Herbalism Trainer#crafting	490,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "Greeetings Noorman. Whaat is on youur mind?";
 	next;
+	
 	set .@menu, select("Become a Herbalist:About Herbalism:Cancel");
 	if (.@menu == 1) {
 		goto L_Train;
@@ -80,9 +81,7 @@ roy_in02,29,73,5	script	Herbalism Trainer#crafting	490,{
 	close;
 
 L_Train:
-	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
-	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
-	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	query_sql("SELECT `Herbalism`, `Mining`, `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism, .@Mining, .@Enchanting);
 	mes "["+strnpcinfo(1)+"]";
 	if(.@Herbalism) {
 	    mes "Very fuunnyy normaan. Yoou aalready knoow this profession~~";
@@ -162,9 +161,7 @@ roy_in02,27,73,5	script	Mining Trainer#crafting	848,{
 	close;
 
 L_Train:
-	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
-	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
-	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	query_sql("SELECT `Herbalism`, `Mining`, `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism, .@Mining, .@Enchanting);
 	mes "["+strnpcinfo(1)+"]";
 	if(.@Mining) {
 	    mes "Hey don't try to play me! I can tell you already know this trade!";
@@ -244,9 +241,7 @@ roy_in02,25,73,5	script	Enchanting Trainer#crafting	618,{
 	close;
 
 L_Train:
-	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
-	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
-	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	query_sql("SELECT `Herbalism`, `Mining`, `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism, .@Mining, .@Enchanting);
 	mes "["+strnpcinfo(1)+"]";
 	if(.@Enchanting) {
 	    mes "Very amusing, the records show that you already know this profession. Good day.";
@@ -325,27 +320,27 @@ L_About:
 
 }
 
-roy_in02,64,70,0	script	Mining Stove	10045,{
-	mes "["+strnpcinfo(1)+"]";
-	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
-	makerune 1;
-	close;
-	end;
+//roy_in02,64,70,0	script	Mining Stove	10045,{
+//	mes "["+strnpcinfo(1)+"]";
+//	mes "You can melt down materials gathered from ^0000ff[Mining]^000000 nodes here.";
+//	makerune 1;
+//	close;
+//	end;
+//
+//OnInit:
+//	waitingroom "Mining Stove",0;
+//}
 
-OnInit:
-	waitingroom "Mining Stove",0;
-}
-
-roy_in02,90,70,0	script	Herbalism Workbench	10043,{
-	mes "["+strnpcinfo(1)+"]";
-	mes "You can grind down materials gathered from ^0000ff[Herbalism]^000000 nodes here.";
-	cooking 11;
-	close;
-	end;
-
-OnInit:
-	waitingroom "Herbalism Workbench",0;
-}
+//roy_in02,90,70,0	script	Herbalism Workbench	10043,{
+//	mes "["+strnpcinfo(1)+"]";
+//	mes "You can grind down materials gathered from ^0000ff[Herbalism]^000000 nodes here.";
+//	cooking 11;
+//	close;
+//	end;
+//
+//OnInit:
+//	waitingroom "Herbalism Workbench",0;
+//}
 
 royal,221,115,2	script	Signpost#crafting1	837,{
 	end;
@@ -362,7 +357,7 @@ OnInit:
 
 
 // Merchants
-roy_in02,64,68,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000
+roy_in02,94,70,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000
 
 
 
@@ -371,9 +366,7 @@ roy_in02,64,68,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000
     end;
 
 OnAtcommand:
-	query_sql("SELECT `Herbalism` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism);
-	query_sql("SELECT `Mining` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Mining);
-	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+	query_sql("SELECT `Herbalism`, `Mining`, `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Herbalism, .@Mining, .@Enchanting);
 	dispbottom "--------------- Gathering Skill Values --------------";
 	dispbottom "Herbalism ~ (" + .@Herbalism + " / 300)";
 	dispbottom "Mining ~ (" + .@Mining + " / 300)";
