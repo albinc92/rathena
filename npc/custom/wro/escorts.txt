@@ -157,7 +157,7 @@ moc_pryd01,177,12,7	script	Thief	118,{
 
 
 // Sphinx
-in_sphinx01,290,17,3	script	Archaeologist	702,{
+in_sphinx1,290,17,3	script	Archaeologist	702,{
 	set .@cost, 10000;
 
 	mes "["+strnpcinfo(1)+"]";
