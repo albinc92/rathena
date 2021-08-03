@@ -54,7 +54,7 @@ L_Information:
 	mes "You can buy these tools from the ^ff0000Tool Merchant^000000 just inside the room to my right.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "^Enchanting is slightly different from the other two professions.";
+	mes "Enchanting is slightly different from the other two professions.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "It requires the use of ^ff0000Old Magicbook^000000 to disenchant items that have bound ^ff0000Magical Affixes^000000.";
@@ -137,18 +137,14 @@ L_ChangeProf:
 
 L_About:
 	mes "["+strnpcinfo(1)+"]";
-	mes "^ff0000Herbalism^000000 is the fiiine art of colleecting and uuutilizing the magical proopertiies of vaarious plants.";
+	mes "^ff0000Herbalism^000000 is the fiiine art of haarvesting variouus compoonents of plants.";
     next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Youu need to haave a ^ff0000Field Shovel^000000 in youur inventoory in order to haarvest plant nodes.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Materials gaained from haarvesting plant nodes caan bee used to craaft vaarious ^ff0000Status Boosting Foods^000000.";
-    next;
-	mes "["+strnpcinfo(1)+"]";
-	mes "To leaarn moore about whaat ^ff0000Status Foods^000000 youu caan craaft, see the tablooids in the oother room across thee haaall froom this oone.";
+	mes "Items gaained from haarvesting plant nodes usuaally haave heaaling prooperties ooor miight proviide beeneficiaal boonuses to the imbiiber.";
 	close;
-
 }
 
 roy_in02,27,73,5	script	Mining Trainer#crafting	848,{
@@ -217,18 +213,14 @@ L_ChangeProf:
 
 L_About:
 	mes "["+strnpcinfo(1)+"]";
-	mes "I'll tell ya! ^ff0000Mining^000000 is the process of harvesting minerals and using their magical minerals to power up your gear!";
+	mes "I'll tell ya! ^ff0000Mining^000000 is the process of harvesting minerals and using them in order to power up your gear!";
     next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "You need an ^ff0000Old Pick^000000 on your personage first before you can start mining away though.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "The magical gemstones you mine up can be used to craft ^ff0000Socketing Minerals^000000 that can be inserted into your armor to give them a nice power-up!";
-    next;
-	mes "["+strnpcinfo(1)+"]";
-	mes "To learn more about these awesome ^ff0000Socketing Minerals^000000 and how to craft them, look up the tabloids in the other room across the hall from this one!";
+	mes "The items you mine up can usually be either be used to give your equipment a nice power-up!";
 	close;
-
 }
 
 roy_in02,25,73,5	script	Enchanting Trainer#crafting	618,{
@@ -297,25 +289,25 @@ L_ChangeProf:
 
 L_About:
 	mes "["+strnpcinfo(1)+"]";
-	mes "^ff0000Enchanting^000000 is the ever so delicate process of harnessing the ^ff0000Magical Properties^000000 you might find on equipment looted from slain monsters.";
+	mes "^ff0000Enchanting^000000 is the ever so delicate process of harnessing the ^ff0000Magical Affixes^000000 you might find on equipment looted from slain monsters.";
     next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "You must use an ^ff0000Old Magicbook^000000 in order to do this.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Simply activate the spellbook and select which magical item you would wish to harness energy from.";
+	mes "Simply activate the one and select which magical item you would wish to harness energy from.";
     next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Note that the targeted item will loose its magical properties once the harnessing process has been completed.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Upon completing this process you will receive some ^ff0000Magical Residue^000000.";
+	mes "Upon completing this process you will receive some ^ff0000Magical Stones^000000.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "The amount of residue you will receive is directly tied to the amount of magic bound to the item you harnessed from.";
+	mes "The amount you will receive is directly tied to the amount of magic bound to the item you harnessed from.";
     next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "The residue can in turn be used to enchant items with ^ff0000Random Magical Bonusses^000000!";
+	mes "The stones can in turn be used to enchant items with ^ff0000Random Magical Affixes^000000!";
     next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Simply use an ^ff0000Old Magicbook^000000 again and use its powers to enchant the item of your choice!";
@@ -323,7 +315,6 @@ L_About:
 	mes "["+strnpcinfo(1)+"]";
 	mes "To learn more about which bonuses you might generate in this way, see the tabloids in the other room across the hall from this one.";
 	close;
-
 }
 
 //roy_in02,64,70,0	script	Mining Stove	10045,{
