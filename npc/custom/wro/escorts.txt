@@ -25,6 +25,8 @@ ama_dun01,219,14,6	script	Shinobi	637,{
 	end;
 }
 
+
+
 // Labyrinth Forest
 prt_maze01,101,30,3	script	Hunter	727,{
 	set .@cost, 10000;
@@ -51,6 +53,8 @@ prt_maze01,101,30,3	script	Hunter	727,{
 	cutin "", 255;
 	end;
 }
+
+
 
 // Ancient Shrine
 ayo_dun01,262,23,3	script	Wailing Spirit	411,{
@@ -83,6 +87,8 @@ ayo_dun01,262,23,3	script	Wailing Spirit	411,{
 	end;
 }
 
+
+
 // Thanatos Tower 1st Floor
 tha_t01,151,78,6	script	Rekenber Tour	852,{
 	set .@cost, 10000;
@@ -109,6 +115,8 @@ tha_t01,151,78,6	script	Rekenber Tour	852,{
 	cutin "", 255;
 	end;
 }
+
+
 
 // Pyramids
 moc_pryd01,177,12,7	script	Thief	118,{
@@ -146,3 +154,31 @@ moc_pryd01,177,12,7	script	Thief	118,{
 	end;
 }
 
+
+
+// Sphinx
+in_sphinx01,290,17,3	script	Archaeologist	702,{
+	set .@cost, 10000;
+
+	mes "["+strnpcinfo(1)+"]";
+	mes "Hey there. I've been working down in this labyrinth for years. If you want, I can show you the way to the next floor?";
+
+	set .@menu, select("Escort Me (^ff0000" + .@cost + "z^000000):Cancel");
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	if(.@menu == 1) {
+		if(zeny < 10000) {
+			mes "You do not have enough zeny I'm afraid.";
+		} else {
+			mes "Right this way please.";
+			next;
+			set zeny, (zeny - .@cost);
+			warp "in_sphinx2",149,81;
+		}
+	} else {
+		mes "Be seeing you.";
+	}
+	close2;
+	cutin "", 255;
+	end;
+}
