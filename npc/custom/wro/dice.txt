@@ -38,7 +38,7 @@ royal,124,125,6	script	Dice Event Warper#1	10179,{
 		mes "Those standing in the box that corresponds with the number rolled will be in for a nasty surprise!";
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "The others will be rewarded with a shower of ^0000ffPoring Coins^000000!";
+		mes "The others will be rewarded with a shower of ^0000ffEvent Tokens^000000!";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "They must then hurry up to pick up these coins before they get picked up by someone else, or disappear.";
