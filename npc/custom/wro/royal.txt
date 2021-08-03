@@ -97,11 +97,6 @@ roy_in02,92,61,1	script	Fay	665,{
 	cutin "paycana_a",2;
 	mes "[Fay]";
 	mes "Gathering professions are just the best!";
-	next;
-	cutin "paycana_b ",2;
-	mes "[Fay]";
-	mes "I get to earn quite a bit of zeny. Hehe~~";
-	next;
 	close2;
 	cutin "", 255;
 	end;
