@@ -15,13 +15,11 @@
     if(.@mainquest > 0) {
 		emotion ET_SMILE;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?.";
+        mes "Hail. Did you manage to see governor ^ff0000Artemia^000000 yet?";
         next;
 
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Remember: you can find him inside the ^ff0000Senate Building^000000 in Royal.";
-        next;
-
         goto L_OnEnd;
     }
 

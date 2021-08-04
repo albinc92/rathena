@@ -1784,3 +1784,89 @@ OnInit:
 nyd_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#2	10248
 dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#3	10248
 dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#4	10248
+
+
+
+// Item Functions
+
+// ==========================================================
+// Amulet
+// ==========================================================
+function	script	F_Enchanting	{
+	set .@item, 7597;
+	set .@amnt, 3;
+
+	mes "^0000ffYou awoke the power inside an amulet...^000000";
+	mes " ";
+	mes "What action would you like to perform?";
+	switch(select("Enchant:Disenchant:Cancel")) {
+	case 1:
+		goto L_Enchant;
+	case 2:
+		goto L_Disenchant;
+	case 3:
+		goto L_End;
+	}
+
+L_Enchant:
+	// Get equipment array
+	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
+	for(.@i = 1; .@i < getarraysize(.@indices); ++.@i) {
+		if(getequipisequiped(.@indices[.@i])) {
+			if(!getequiprandomoption(.@indices[.@i], 0, ROA_ID)) {
+				.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
+				.@equipped = 1;
+			}
+		}
+		.@menu$ = .@menu$ + ":";
+	}
+
+	// Check if equipped at all
+	// Check if item already has random options
+	if (.@equipped == 0) {
+		message strcharinfo(0),"You are not wearing anything that is possible to enchant.";
+		goto L_End;
+	}
+
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "Which item would you like to enchant?";
+
+	.@part = .@indices[select(.@menu$)];
+
+	next;
+	mes "["+strnpcinfo(1)+"]";
+	mes "The enchantment process requires ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000. Continue?";
+	
+	switch(select("Yes:Cancel")) {
+	case 2:
+		goto L_End;
+	}
+	next;
+
+	if(countitem(.@item) < .@amnt) {
+		message strcharinfo(0),"You do not have enough [" + getitemname(.@item) + "s].";
+		goto L_End;
+	}
+	
+	specialeffect2 EF_BEGINSPELL6;
+	progressbar "#00FF00",1;
+	specialeffect2 65;
+
+	delitem .@item, .@amnt;
+	set zeny, zeny - .@cost;
+
+	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
+		set .@index, rand(getarraysize(.@weaponid));
+		setrandomoption(.@part,0,.@weaponid[.@index], (.@weaponbase[.@index] + rand(0, .@weaponbonus[.@index])), 0);
+	} else {
+		set .@index, rand(getarraysize(.@armorid));
+		setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
+	}
+	goto L_End;
+
+L_Disenchant:
+
+L_End:
+	return;
+}
