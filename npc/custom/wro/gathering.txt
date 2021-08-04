@@ -354,7 +354,7 @@ OnInit:
 
 
 // Merchants
-roy_in02,94,70,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000
+roy_in02,94,70,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000,7578:-1
 
 
 
@@ -1796,17 +1796,17 @@ function	script	F_Enchanting	{
 	set .@item, 7597;
 	set .@amnt, 3;
 
-	mes "^0000ffYou awoke the power inside an amulet...^000000";
-	mes " ";
-	mes "What action would you like to perform?";
-	switch(select("Enchant:Disenchant:Cancel")) {
-	case 1:
-		goto L_Enchant;
-	case 2:
-		goto L_Disenchant;
-	case 3:
-		goto L_End;
-	}
+	mes "^0000ffYou called upon the power bound within the crytal...^000000";
+	//mes " ";
+	//mes "What action would you like to perform?";
+	//switch(select("Enchant:Disenchant:Cancel")) {
+	//case 1:
+	//	goto L_Enchant;
+	//case 2:
+	//	goto L_Disenchant;
+	//case 3:
+	//	goto L_End;
+	//}
 
 L_Enchant:
 	// Get equipment array
@@ -1868,5 +1868,8 @@ L_Enchant:
 L_Disenchant:
 
 L_End:
+	close2;
+	cutin "", 255;
+	end;
 	return;
 }
