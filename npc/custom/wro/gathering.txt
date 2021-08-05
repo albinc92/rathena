@@ -1796,7 +1796,7 @@ function	script	F_Enchanting	{
 	set .@item, 7597;
 	set .@amnt, 3;
 	
-	if (getarg() == 2) {
+	if (getarg(0) == 2) {
 		goto L_Disenchant;
 	}
 
