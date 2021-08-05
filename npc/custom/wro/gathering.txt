@@ -1793,6 +1793,14 @@ dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#4	10248
 // Amulet
 // ==========================================================
 function	script	F_Enchanting	{
+
+	query_sql("SELECT `Enchanting` FROM `gathering` WHERE `char_id` = " + getcharid(0), .@Enchanting);
+
+	if (.@Enchanting == 0) {
+		message strcharinfo(0),"You need to have the [Enchanting] profession to use this item.";
+		return;
+	}
+
 	set .@item, 7597;
 	set .@amnt, 3;
 	
