@@ -1795,18 +1795,10 @@ dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#4	10248
 function	script	F_Enchanting	{
 	set .@item, 7597;
 	set .@amnt, 3;
-
-	mes "^0000ffYou called upon the power bound within the crytal...^000000";
-	//mes " ";
-	//mes "What action would you like to perform?";
-	//switch(select("Enchant:Disenchant:Cancel")) {
-	//case 1:
-	//	goto L_Enchant;
-	//case 2:
-	//	goto L_Disenchant;
-	//case 3:
-	//	goto L_End;
-	//}
+	
+	if (getarg() == 2) {
+		goto L_Disenchant;
+	}
 
 L_Enchant:
 	// Get equipment array
@@ -1828,14 +1820,9 @@ L_Enchant:
 		goto L_End;
 	}
 
-	next;
-	mes "["+strnpcinfo(1)+"]";
-	mes "Which item would you like to enchant?";
-
 	.@part = .@indices[select(.@menu$)];
 
 	next;
-	mes "["+strnpcinfo(1)+"]";
 	mes "The enchantment process requires ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000. Continue?";
 	
 	switch(select("Yes:Cancel")) {
@@ -1854,7 +1841,6 @@ L_Enchant:
 	specialeffect2 65;
 
 	delitem .@item, .@amnt;
-	set zeny, zeny - .@cost;
 
 	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
 		set .@index, rand(getarraysize(.@weaponid));
@@ -1866,6 +1852,61 @@ L_Enchant:
 	goto L_End;
 
 L_Disenchant:
+	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
+	for(.@i = 1; .@i < getarraysize(.@indices); ++.@i) {
+		if(getequipisequiped(.@indices[.@i])) {
+			if(getequiprandomoption(.@indices[.@i], 0, ROA_ID)) {
+				.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]) + "-[" + getequipname(.@indices[.@i]) + "]";
+				.@equipped = 1;
+			}
+		}
+		.@menu$ = .@menu$ + ":";
+	}
+
+	// Check if equipped at all
+	// Check if item already has random options
+	if (.@equipped == 0) {
+		message strcharinfo(0),"You are not wearing anything that is possible to disenchant.";
+		goto L_End;
+	}
+
+	.@part = .@indices[select(.@menu$)];
+
+	// Calculate no of random options on item
+	set .@nbr, 1;
+	for (set .@i, 1; .@i < MAX_ITEM_RDM_OPT; .@i++) {
+		if(getequiprandomoption(.@part, .@i, ROA_ID)) {
+			set .@nbr, .@nbr + 1;
+		}
+	}
+
+	next;
+	mes "The selected item has ^ff0000" + .@nbr + " Magical Affixes^000000 attached to it.";
+
+	next;
+	mes "The disenchantment process will thus yield ^ff0000" + .@nbr + " " + getitemname(.@item) + "(s)^000000. Continue?";
+	
+	switch(select("Yes:Cancel")) {
+	case 2:
+		goto L_End;
+	}
+	next;
+
+	specialeffect2 EF_BEGINSPELL6;
+	progressbar "#00FF00",1;
+	specialeffect2 234;
+
+	getitem .@item, .@nbr;
+
+	.@equip_id = getequipid(.@part);
+	.@refine = getequiprefinerycnt(.@part);
+	for (set .@i, 0; .@i < 4; .@i++) {
+		.@card[.@i] = getequipcardid(.@part, .@i);
+	}
+	delequip .@part;
+	getitem2 .@equip_id, 1, 1,.@refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
+	goto L_End;
+	
 
 L_End:
 	close2;

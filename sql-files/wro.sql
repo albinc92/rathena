@@ -621,7 +621,7 @@ REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (4
 
 -- Enchanting Consumable
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 609;
-UPDATE `item_db2` SET `id` = 7578, `name_aegis` = 'Anti_Spell_Bead',`name_english` = 'Countermagic Crystal', `script` = 'callfunc "F_Enchanting";' WHERE `id` = 609;
+UPDATE `item_db2` SET `id` = 7578, `name_aegis` = 'Anti_Spell_Bead',`name_english` = 'Countermagic Crystal', `script` = 'callfunc ("F_Enchanting", 1);' WHERE `id` = 609;
 
 -- Misc fixes
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
