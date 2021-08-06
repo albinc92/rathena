@@ -265,6 +265,9 @@ L_OnChoice:
     mes "Off you go then!";
     sleep2 1600;
 
+    atcommand "@channel join #global";
+    atcommand "@channel join #support";
+    atcommand "@channel join #trade";
     getitem .@weaponID, 1;
     if (.@warpTo$ == "prontera") {
         savepoint "prontera",117,72,1,1;

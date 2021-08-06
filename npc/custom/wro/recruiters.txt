@@ -40,6 +40,21 @@
     next;
 
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Is this something that would interest you?";
+	switch(select("Yes:Not now")) {
+	case 2:
+        next;
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "Very well, then. You know where to find me should you change your mind.";
+        goto L_End;
+    }
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+    mes "Excellent!";
+    next;
+
+    mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "So I would ask you brave one: travel to Royal to seek out governor ^ff0000Artemia^000000 in the ^ff0000Senate Building^000000.";
     next;
 
