@@ -151,8 +151,8 @@ L_OnTutorialDone:
     getitem 2414,1;
     getitem 2510,1;
     getitem 2352,1;
-	query_sql("INSERT INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `mainquest` = 0");
-	query_sql("INSERT INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `hints` = 1");
+	query_sql("REPLACE INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `mainquest` = 0");
+	query_sql("REPLACE INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `hints` = 1");
 
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed!";
