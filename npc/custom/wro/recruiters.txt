@@ -46,7 +46,9 @@
         next;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "Very well, then. You know where to find me should you change your mind.";
-        goto L_End;
+        close2;
+        cutin "",255;
+        end;
     }
     next;
 
