@@ -1928,9 +1928,9 @@ L_Enchant:
 		}
 	}
 
-	set .@rng, rand(1, 3);
-	query_sql("UPDATE `Gathering` SET `Enchanting` = (.@Enchanting + .@rng) WHERE `char_id` = " + getcharid(0));
-	message strcharinfo(0),"Your [Enchanting] skill increased to " + (.@Enchanting + .@rng) + "!";
+	set .@increase, .@Enchannting + rand(1, 3);
+	query_sql("UPDATE `Gathering` SET `Enchanting` = " + .@increase + " WHERE `char_id` = " + getcharid(0));
+	message strcharinfo(0),"Your [Enchanting] skill increased to " + .@increase + "!";
 	goto L_End;
 
 L_Disenchant:
