@@ -1900,6 +1900,7 @@ L_Enchant:
 		for(set .@i, 4; .@i >= 0; .@i--) {
 			for(set .@j, .@i - 1; .@j >= 0; .@j--) {
 				if(.@index[.@j] == .@index[.@i]) {
+					message strcharinfo(0),"The enchanting process failed.";
 					goto L_End;
 				}
 			}
@@ -1934,6 +1935,7 @@ L_Enchant:
 		for(set .@i, 4; .@i >= 0; .@i--) {
 			for(set .@j, .@i - 1; .@j >= 0; .@j--) {
 				if(.@index[.@j] == .@index[.@i]) {
+					message strcharinfo(0),"The enchanting process failed.";
 					goto L_End;
 				}
 			}
