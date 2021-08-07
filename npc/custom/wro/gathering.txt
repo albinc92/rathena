@@ -1847,7 +1847,7 @@ L_Enchant:
 	specialeffect2 EF_BEGINSPELL6;
 	progressbar "#00FF00",1;
 
-	set .@optAmt = 0;
+	set .@optAmt, 0;
     set .@r, (rand(1, 750) - .@Enchanting;
     if(.@r < 251 && .@r > 125) {
         .@optAmt = 1;
