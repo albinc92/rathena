@@ -1890,6 +1890,10 @@ L_Enchant:
 		set .@index, rand(getarraysize(.@armorid));
 		setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
 	}
+
+	query_sql("UPDATE `Gathering` SET `Enchanting` = (.@Enchanting + 1) WHERE `char_id` = " + getcharid(0));
+	message strcharinfo(0),"Your [" + Enchanting + "] skill increased to " + (.@Enchanting + 1) + "!";
+
 	goto L_End;
 
 L_Disenchant:
