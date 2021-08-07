@@ -1830,7 +1830,6 @@ L_Enchant:
 
 	.@part = .@indices[select(.@menu$)];
 
-	next;
 	mes "The enchantment process requires ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000. Continue?";
 	
 	switch(select("Yes:Cancel")) {
@@ -1962,7 +1961,6 @@ L_Disenchant:
 		}
 	}
 
-	next;
 	mes "The selected item has ^ff0000" + .@nbr + " Magical Affixes^000000 attached to it.";
 
 	next;
