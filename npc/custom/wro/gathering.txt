@@ -1898,8 +1898,8 @@ L_Enchant:
 				5, 5, 5, 5,
 				10, 5,
 				15, 15, 4, 15;
-		set .@index, rand(getarraysize(.@weaponid));
 		for (set .@i, 0; .@i < .@optAmt; .@i++) {
+		set .@index, rand(getarraysize(.@weaponid));
 			setrandomoption(.@part,.@i,.@weaponid[.@index], (.@weaponbase[.@index] + rand(0, .@weaponbonus[.@index])), 0);
 		}
 	} else {
@@ -1922,8 +1922,8 @@ L_Enchant:
 				5, 5, 10, 10,
 				2, 2, 6, 3,
 				5, 5, 4;
-		set .@index, rand(getarraysize(.@armorid));
 		for (set .@i, 0; .@i < .@optAmt; .@i++) {
+		set .@index, rand(getarraysize(.@armorid));
 			setrandomoption(.@part,.@i,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
 		}
 	}
