@@ -1927,10 +1927,12 @@ L_Enchant:
 		}
 	}
 
-	set .@increase, .@Enchannting + rand(1, 3);
+	set .@increase, .@Enchanting + rand(1, 3);
 	query_sql("UPDATE `gathering` SET `Enchanting` = " + .@increase + " WHERE `char_id` = " + getcharid(0));
 	message strcharinfo(0),"Your [Enchanting] skill increased to " + .@increase + "!";
 	goto L_End;
+
+
 
 L_Disenchant:
 	setarray .@indices[1], EQI_HEAD_TOP, EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R, EQI_HEAD_MID, EQI_HEAD_LOW;
