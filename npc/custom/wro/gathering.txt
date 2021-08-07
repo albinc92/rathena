@@ -1825,7 +1825,7 @@ L_Enchant:
 	// Check if item already has random options
 	if (.@equipped == 0) {
 		message strcharinfo(0),"You are not wearing anything that is possible to enchant.";
-		goto L_End;
+		return;
 	}
 
 	.@part = .@indices[select(.@menu$)];
@@ -1994,5 +1994,4 @@ L_End:
 	close2;
 	cutin "", 255;
 	end;
-	return;
 }
