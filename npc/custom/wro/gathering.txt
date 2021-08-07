@@ -354,7 +354,7 @@ OnInit:
 
 
 // Merchants
-roy_in02,94,70,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:1000,7578:-1
+roy_in02,94,70,7	shop	Tool Merchant	50,7318:1000,6381:1000,1006:-1,7578:-1
 
 
 
