@@ -1992,6 +1992,6 @@ L_Disenchant:
 
 L_End:
 	close2;
-	cutin "", 255;
-	end;
+	cutin "",255;
+	return;
 }
