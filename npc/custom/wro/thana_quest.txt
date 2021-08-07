@@ -1533,7 +1533,9 @@ tha_t06,204,181,0	script	Splendid Sword#tt5	111,3,3,{
 					specialeffect EF_CHANGEDARK;
 					next;
 					mes "^4d4dff All of a sudden, a Black Key appears from the smoke and you feel a great cursed power from it.^000000";
-					getitem 7425,1; //Key_Black
+					if(countitem(7425) == 0) {
+						getitem 7425,1; //Key_Black
+					}
 					if (thana_tower != 8) close;
 					next;
 					mes "A drawer had snapped open under the table while you picked up the key and observed it.";
@@ -1639,7 +1641,7 @@ tha_t08,90,153,0	script	Shining Crystal#tt_r1	844,{
 		mes "You feel isolated and depressed deep inside your heart...";
 		next;
 		mes "^4d4dffYou have found a Red Charm Stone that is concentrated with cruel fate and a deep darkness.^000000";
-		//delitem 7421,1; //Key_Red
+		delitem 7421,1; //Key_Red
 		getitem 7426,1; //Magic_Gem_Red
 		close;
 	}
@@ -1673,8 +1675,10 @@ tha_t08,49,153,0	script	Shining Crystal#tt_y1	844,{
 		mes "Your heart begins to throb as though you are suffering from a broken heart.";
 		next;
 		mes "^4d4dffYou have found a Yellow Charm Stone that is concentrated with grief and mysterious power.^000000";
-		//delitem 7422,1; //Key_Yellow
-		getitem 7427,1; //Magic_Gem_Yellow
+		delitem 7422,1; //Key_Yellow
+		if(countitem(7427) == 0) {
+			getitem 7427,1; //Magic_Gem_Yellow
+		}
 		close;
 	}
 	mes "The Crystal ball is emitting mysterious power.";
@@ -1707,8 +1711,10 @@ tha_t08,49,65,0	script	Shining Crystal#tt_b1	844,{
 		mes "Someone's sobbing comes into your ears as you smell blood on the wind and suddenly you become angry.";
 		next;
 		mes "^4d4dffYou have found a Blue Charm Stone that is concentrated with grudge and mysterious power.^000000";
-		//delitem 7423,1; //Key_Blue
-		getitem 7428,1; //Magic_Gem_Blue
+		delitem 7423,1; //Key_Blue
+		if(countitem(7428) == 0) {
+			getitem 7428,1; //Magic_Gem_Blue
+		}
 		close;
 	}
 	mes "The Crystal ball is emitting mysterious power.";
@@ -1741,8 +1747,10 @@ tha_t08,90,65,0	script	Shining Crystal#tt_g1	844,{
 		mes "Your head starts to ache and you feel worried and anxious about something.";
 		next;
 		mes "^4d4dffYou have found a Green Charm Stone that is concentrated with deep suffering.^000000";
-		//delitem 7424,1; //Key_Green
-		getitem 7429,1; //Magic_Gem_Green
+		delitem 7424,1; //Key_Green
+		if(countitem(7429) == 0) {
+			getitem 7429,1; //Magic_Gem_Green
+		}
 		close;
 	}
 	mes "The Crystal ball is emitting mysterious power.";
@@ -2271,7 +2279,9 @@ OnTouch:
 			mes "The barricade is removed through the power from newly formed black magic gem.";
 			close2;
 			//delitem 7425,1; //Key_Black
-			getitem 7430,1; //Magic_Gem_Black
+			if(countitem(7430) == 0) {
+				getitem 7430,1; //Magic_Gem_Black
+			}
 			warp "thana_step",69,369;
 			end;
 		}
