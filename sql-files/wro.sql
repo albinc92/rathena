@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
 -- to make them more viable in comparison to carded
 -- 4 socketed alternatives
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `weapon_level` > 1;
-UPDATE `item_db2` SET `attack` = `attack` * 1.5 WHERE  `weapon_level` = 2;
-UPDATE `item_db2` SET `attack` = `attack` * 2 WHERE  `weapon_level` = 3;
-UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 4;
+UPDATE `item_db2` SET `attack` = `attack` * 2 WHERE  `weapon_level` = 2;
+UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 3;
+UPDATE `item_db2` SET `attack` = `attack` * 3 WHERE  `weapon_level` = 4;
 
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
@@ -137,7 +137,7 @@ WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = 
 -- Make all quest items non-sellable etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE `ID` IN (7160);
+WHERE `ID` IN (7160, 7285, 7287);
 
 UPDATE `item_db2`
 SET `weight` = 0,
@@ -150,7 +150,7 @@ SET `weight` = 0,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE `ID` IN (7160);
+WHERE `ID` IN (7160, 7285, 7287);
 
 -- Make certain items droppable etc.
 REPLACE INTO `item_db2`
@@ -502,11 +502,11 @@ UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2
 
 -- Tokens
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40001,'Event_Token','Event Token','Etc',100,true,true,true,true,true,true,true,true);
+VALUES (40001,'Event_Token','Event Token','Etc',100,true,true,true,true,false,true,true,true);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40002,'PvP_Token','PvP Token','Etc',100,true,true,true,true,true,true,true,true);
+VALUES (40002,'PvP_Token','PvP Token','Etc',100,true,true,true,true,false,true,true,true);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,true,true,true,true,true);
+VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,true,false,true,true,true);
 
 -- Misc
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
