@@ -91,12 +91,13 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 	if(.@d[UMOB_SIZE] == 2) {
 		set .@size$, "Large";
 	}
-	if(.@d[UMOB_MODE] == 0x4200000) {
-		set .@mode$, "Normal";
-	} else if(.@d[UMOB_MODE] == 0x4280000) {
-		set .@mode$, "Boss";
-	}
-	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000):Type - (^ff0000"+.@mode$+"^000000)");
+	//if(.@d[UMOB_MODE] == 0x4200000) {
+	//	set .@mode$, "Normal";
+	//} else if(.@d[UMOB_MODE] == 0x4280000) {
+	//	set .@mode$, "Boss";
+	//}
+	//set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000):Type - (^ff0000"+.@mode$+"^000000)");
+	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000)");
 	if(.@menu==1) {
 		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired DEF (0 - 100).";
