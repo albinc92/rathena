@@ -1875,6 +1875,21 @@ L_Enchant:
         .@optAmt = 1;
     }
 
+    // Limit maximum random options based on enchanting level
+	if(.@Enchanting < 75)) {
+		if(.@optAmt > 1) {
+        	.@optAmt = 1;
+		}
+	} else if(.@Enchanting > 74 && .@Enchanting < 150) {
+		if(.@optAmt > 2) {
+        	.@optAmt = 2;
+		}
+	} else if(.@Enchanting > 149 && .@Enchanting < 225) {
+		if(.@optAmt > 3) {
+        	.@optAmt = 3;
+		}
+	}
+
 	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
 		setarray .@weaponid[0],
 				3, 4, 5, 6, 7, 8,
