@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
 -- to make them more viable in comparison to carded
 -- 4 socketed alternatives
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `weapon_level` > 1;
-UPDATE `item_db2` SET `attack` = `attack` * 2 WHERE  `weapon_level` = 2;
-UPDATE `item_db2` SET `attack` = `attack` * 2.5 WHERE  `weapon_level` = 3;
-UPDATE `item_db2` SET `attack` = `attack` * 3 WHERE  `weapon_level` = 4;
+UPDATE `item_db2` SET `attack` = `attack` + 167 WHERE  `weapon_level` = 2;
+UPDATE `item_db2` SET `attack` = `attack` + 333 WHERE  `weapon_level` = 3;
+UPDATE `item_db2` SET `attack` = `attack` + 500 WHERE  `weapon_level` = 4;
 
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
