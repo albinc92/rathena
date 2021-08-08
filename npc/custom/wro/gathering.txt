@@ -1876,7 +1876,7 @@ L_Enchant:
     }
 
     // Limit maximum random options based on enchanting level
-	if(.@Enchanting < 75)) {
+	if(.@Enchanting < 75) {
 		if(.@optAmt > 1) {
         	.@optAmt = 1;
 		}
