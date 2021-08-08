@@ -91,7 +91,12 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 	if(.@d[UMOB_SIZE] == 2) {
 		set .@size$, "Large";
 	}
-	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000)");
+	if(.@d[UMOB_MODE] == 0x4200000) {
+		set .@mode$, "Normal";
+	} else {
+		set .@mode$, "Boss";
+	}
+	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000):Type - (^ff0000"+.@mode$+"^000000)");
 	if(.@menu==1) {
 		mes "["+strnpcinfo(0)+"]";
 		mes "Select desired DEF (0 - 100).";
@@ -220,6 +225,26 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		}
 		if(.@size == 2) {
 			npctalk strnpcinfo(0) + " : Size set to Large";
+		}
+	}
+	if(.@menu==6) {
+		mes "["+strnpcinfo(0)+"]";
+		mes "Select desired Type.";
+		mes "Current: ^ff0000" + .@mode$ +"^000000";
+		mes " ";
+		mes "0 ~ Normal.";
+		mes "1 ~ Boss.";
+		input .@mode;
+		if(.@mode > 0) {
+			set .@mode, 2;
+		}
+		if(.@mode == 0) {
+			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000;
+			npctalk strnpcinfo(0) + " : Type set to Normal";
+		}
+		if(.@mode == 1) {
+			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000|0x0080000;
+			npctalk strnpcinfo(0) + " : Type set to Boss";
 		}
 	}
 	close;
