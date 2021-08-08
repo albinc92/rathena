@@ -92,7 +92,7 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		set .@size$, "Large";
 	}
 	mes "Mode: ^ff0000" + .@d[UMOB_MODE] +"^000000";
-	if(.@d[UMOB_MODE] == 0x4200000) {
+	if(.@d[UMOB_MODE] == 69206016) {
 		set .@mode$, "Normal";
 	} else {
 		set .@mode$, "Boss";
