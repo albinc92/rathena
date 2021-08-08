@@ -16,7 +16,7 @@
 //==================================================================
 roy_in02,135,105,0	script	Control Panel#1	10081,{
 
-	mes "["+strnpcinfo(0)+"]";
+	mes "["+strnpcinfo(1)+"]";
 	mes "It appears as though you can customize the Training Post with this device.";
 	mes "Select which property to modify:";
 	next;
@@ -91,7 +91,6 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 	if(.@d[UMOB_SIZE] == 2) {
 		set .@size$, "Large";
 	}
-	mes "Mode: ^ff0000" + .@d[UMOB_MODE] +"^000000";
 	if(.@d[UMOB_MODE] == 69206016) {
 		set .@mode$, "Normal";
 	} else {
@@ -99,7 +98,7 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 	}
 	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000):Type - (^ff0000"+.@mode$+"^000000)");
 	if(.@menu==1) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired DEF (0 - 100).";
 		mes "Current: ^ff0000" + .@d[UMOB_DEF] +"^000000";
 		input .@def;
@@ -107,11 +106,12 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@def, 100;
 		}
 		setunitdata .gid[.@dupid],UMOB_DEF,.@def;
-		mes "["+strnpcinfo(0)+"]";
+		next;
+		mes "["+strnpcinfo(1)+"]";
 		mes "DEF set to "+.@def+".";
 	}
 	if(.@menu==2) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired MDEF (0 - 100).";
 		mes "Current: ^ff0000" + .@d[UMOB_MDEF] +"^000000";
 		input .@mdef;
@@ -119,11 +119,12 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@mdef, 100;
 		}
 		setunitdata .gid[.@dupid],UMOB_MDEF,.@mdef;
-		mes "["+strnpcinfo(0)+"]";
+		next;
+		mes "["+strnpcinfo(1)+"]";
 		mes "MDEF set to "+.@mdef+".";
 	}
 	if(.@menu==3) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired Element.";
 		mes "Current: ^ff0000" + .@d[UMOB_ELETYPE] +"^000000";
 		mes " ";
@@ -143,7 +144,7 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		}
 		setunitdata .gid[.@dupid],UMOB_ELETYPE,.@eletype;
 		next;
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired Element level:";
 		mes "Current: ^ff0000" + .@d[UMOB_ELELEVEL] +"^000000";
 		input .@elelvl;
@@ -154,49 +155,50 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@elelvl, 4;
 		}
 		setunitdata .gid[.@dupid],UMOB_ELELEVEL,.@elelvl;
+		next;
 		if(.@eletype == 0) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Neutral " + .@elelvl + ".";
 		}
 		if(.@eletype == 1) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Water " + .@elelvl + ".";
 		}
 		if(.@eletype == 2) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Earth " + .@elelvl + ".";
 		}
 		if(.@eletype == 3) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Fire " + .@elelvl + ".";
 		}
 		if(.@eletype == 4) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Wind " + .@elelvl + ".";
 		}
 		if(.@eletype == 5) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Poison " + .@elelvl + ".";
 		}
 		if(.@eletype == 6) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Holy " + .@elelvl + ".";
 		}
 		if(.@eletype == 7) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Shadow " + .@elelvl + ".";
 		}
 		if(.@eletype == 8) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Ghost " + .@elelvl + ".";
 		}
 		if(.@eletype == 9) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Element set to Undead " + .@elelvl + ".";
 		}
 	}
 	if(.@menu==4) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired Race.";
 		mes "Current: ^ff0000" + .@d[UMOB_RACE] +"^000000";
 		mes " ";
@@ -215,11 +217,12 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@race, 9;
 		}
 		setunitdata .gid[.@dupid],UMOB_RACE,.@race;
-		mes "["+strnpcinfo(0)+"]";
+		next;
+		mes "["+strnpcinfo(1)+"]";
 		mes "Race set to "+.@race+".";
 	}
 	if(.@menu==5) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired Size.";
 		mes "Current: ^ff0000" + .@d[UMOB_SIZE] +"^000000";
 		mes " ";
@@ -231,38 +234,42 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@size, 2;
 		}
 		setunitdata .gid[.@dupid],UMOB_SIZE,.@size;
+		next;
 		if(.@size == 0) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Size set to Small";
 		}
 		if(.@size == 1) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Size set to Medium";
 		}
 		if(.@size == 2) {
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Size set to Large";
 		}
 	}
 	if(.@menu==6) {
-		mes "["+strnpcinfo(0)+"]";
+		mes "["+strnpcinfo(1)+"]";
 		mes "Select desired Type.";
 		mes "Current: ^ff0000" + .@mode$ +"^000000";
 		mes " ";
 		mes "0 ~ Normal.";
 		mes "1 ~ Boss.";
 		input .@mode;
-		if(.@mode > 0) {
-			set .@mode, 2;
+		if(.@mode == 0) {
+			set .@mode, 0;
+		} else {
+			set .@mode, 1;
 		}
+		next;
 		if(.@mode == 0) {
 			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000;
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Type set to Normal";
 		}
 		if(.@mode == 1) {
 			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000|0x0080000;
-			mes "["+strnpcinfo(0)+"]";
+			mes "["+strnpcinfo(1)+"]";
 			mes "Type set to Boss";
 		}
 	}
