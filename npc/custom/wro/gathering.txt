@@ -1847,7 +1847,7 @@ L_Enchant:
 	progressbar "#00FF00",1;
 
 	set .@optAmt, 0;
-    set .@r, (rand(1, 750) - .@Enchanting);
+    set .@r, (rand(1, 350) - (.@Enchanting / 3));
     if(.@r < 251 && .@r > 125) {
         .@optAmt = 1;
     } else if(.@r < 126 && .@r > 62) {
