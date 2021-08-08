@@ -92,9 +92,9 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		set .@size$, "Large";
 	}
 	if(.@d[UMOB_MODE] == 69206016) {
-		set .@mode$, "Normal";
+		set .@mode$, "Normal" + " : " + .@d[UMOB_MODE];
 	} else {
-		set .@mode$, "Boss";
+		set .@mode$, "Boss" + " : " + .@d[UMOB_MODE];
 	}
 	set .@menu, select("DEF - (^ff0000"+.@d[UMOB_DEF]+"^000000):MDEF - (^ff0000"+.@d[UMOB_MDEF]+"^000000):Element - (^ff0000"+.@eletype$+" "+.@d[UMOB_ELELEVEL]+"^000000):Race - (^ff0000"+.@race$+"^000000):Size - (^ff0000"+.@size$+"^000000):Type - (^ff0000"+.@mode$+"^000000)");
 	if(.@menu==1) {
