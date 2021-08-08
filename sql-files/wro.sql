@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
 -- to make them more viable in comparison to carded
 -- 4 socketed alternatives
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `weapon_level` > 1;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,17;") WHERE  `weapon_level` = 2;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,33;") WHERE  `weapon_level` = 3;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,50;") WHERE  `weapon_level` = 4;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,25;") WHERE  `weapon_level` = 2;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,50;") WHERE  `weapon_level` = 3;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,75;") WHERE  `weapon_level` = 4;
 
 -- Create costume copies of all headgears in item_db
 -- and updates their stats to reflect their nature.
