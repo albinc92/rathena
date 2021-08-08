@@ -107,7 +107,8 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@def, 100;
 		}
 		setunitdata .gid[.@dupid],UMOB_DEF,.@def;
-		npctalk strnpcinfo(0) + " : DEF set to "+.@def+".";
+		mes "["+strnpcinfo(0)+"]";
+		mes "DEF set to "+.@def+".";
 	}
 	if(.@menu==2) {
 		mes "["+strnpcinfo(0)+"]";
@@ -118,7 +119,8 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@mdef, 100;
 		}
 		setunitdata .gid[.@dupid],UMOB_MDEF,.@mdef;
-		npctalk strnpcinfo(0) + " : MDEF set to "+.@mdef+".";
+		mes "["+strnpcinfo(0)+"]";
+		mes "MDEF set to "+.@mdef+".";
 	}
 	if(.@menu==3) {
 		mes "["+strnpcinfo(0)+"]";
@@ -153,34 +155,44 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		}
 		setunitdata .gid[.@dupid],UMOB_ELELEVEL,.@elelvl;
 		if(.@eletype == 0) {
-			npctalk strnpcinfo(0) + " : Element set to Neutral " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Neutral " + .@elelvl + ".";
 		}
 		if(.@eletype == 1) {
-			npctalk strnpcinfo(0) + " : Element set to Water " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Water " + .@elelvl + ".";
 		}
 		if(.@eletype == 2) {
-			npctalk strnpcinfo(0) + " : Element set to Earth " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Earth " + .@elelvl + ".";
 		}
 		if(.@eletype == 3) {
-			npctalk strnpcinfo(0) + " : Element set to Fire " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Fire " + .@elelvl + ".";
 		}
 		if(.@eletype == 4) {
-			npctalk strnpcinfo(0) + " : Element set to Wind " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Wind " + .@elelvl + ".";
 		}
 		if(.@eletype == 5) {
-			npctalk strnpcinfo(0) + " : Element set to Poison " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Poison " + .@elelvl + ".";
 		}
 		if(.@eletype == 6) {
-			npctalk strnpcinfo(0) + " : Element set to Holy " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Holy " + .@elelvl + ".";
 		}
 		if(.@eletype == 7) {
-			npctalk strnpcinfo(0) + " : Element set to Shadow " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Shadow " + .@elelvl + ".";
 		}
 		if(.@eletype == 8) {
-			npctalk strnpcinfo(0) + " : Element set to Ghost " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Ghost " + .@elelvl + ".";
 		}
 		if(.@eletype == 9) {
-			npctalk strnpcinfo(0) + " : Element set to Undead " + .@elelvl + ".";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Element set to Undead " + .@elelvl + ".";
 		}
 	}
 	if(.@menu==4) {
@@ -203,7 +215,8 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 			set .@race, 9;
 		}
 		setunitdata .gid[.@dupid],UMOB_RACE,.@race;
-		npctalk strnpcinfo(0) + " : Race set to "+.@race+".";
+		mes "["+strnpcinfo(0)+"]";
+		mes "Race set to "+.@race+".";
 	}
 	if(.@menu==5) {
 		mes "["+strnpcinfo(0)+"]";
@@ -219,13 +232,16 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		}
 		setunitdata .gid[.@dupid],UMOB_SIZE,.@size;
 		if(.@size == 0) {
-			npctalk strnpcinfo(0) + " : Size set to Small";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Size set to Small";
 		}
 		if(.@size == 1) {
-			npctalk strnpcinfo(0) + " : Size set to Medium";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Size set to Medium";
 		}
 		if(.@size == 2) {
-			npctalk strnpcinfo(0) + " : Size set to Large";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Size set to Large";
 		}
 	}
 	if(.@menu==6) {
@@ -241,11 +257,13 @@ roy_in02,135,105,0	script	Control Panel#1	10081,{
 		}
 		if(.@mode == 0) {
 			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000;
-			npctalk strnpcinfo(0) + " : Type set to Normal";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Type set to Normal";
 		}
 		if(.@mode == 1) {
 			setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000|0x0080000;
-			npctalk strnpcinfo(0) + " : Type set to Boss";
+			mes "["+strnpcinfo(0)+"]";
+			mes "Type set to Boss";
 		}
 	}
 	close;
