@@ -137,7 +137,7 @@ WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = 
 -- Make all quest items non-sellable etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE `ID` IN (7160, 7285, 7287);
+WHERE `id` IN (7160, 7285, 7287);
 
 UPDATE `item_db2`
 SET `weight` = 0,
@@ -150,12 +150,12 @@ SET `weight` = 0,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE `ID` IN (7160, 7285, 7287);
+WHERE `id` IN (7160, 7285, 7287);
 
 -- Make certain items droppable etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE `ID` IN (7821);
+WHERE `id` IN (7821);
 
 UPDATE `item_db2`
 SET `trade_nodrop` = false,
@@ -167,7 +167,7 @@ SET `trade_nodrop` = false,
     `trade_noguildstorage` = false,
     `trade_nomail` = false,
     `trade_noauction` = false
-WHERE `ID` IN (7821);
+WHERE `id` IN (7821);
 
 -- Update scripts of MvP cards
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)

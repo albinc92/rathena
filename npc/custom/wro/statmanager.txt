@@ -33,7 +33,9 @@ royal,84,193,6	script	Build Manager	86,{
                                     ( getd( "Slot_"+.@Slot+"$" ) == "" )?"":"^FF0000Clear" );
                 ManageBuild( .@Slot,.@Option);
             }while( .@Option != 1 );
-    close;
+    close2;
+    cutin "", 255;
+    end;
 
     function	ManageBuild	{
     switch( getarg(1) ){
