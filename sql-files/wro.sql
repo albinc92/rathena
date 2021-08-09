@@ -663,7 +663,7 @@ UPDATE `mob_db2` SET `DropCardid` = 4463, `DropCardper` = 1 WHERE `id` = '1991';
 -- UPDATE `mob_db2` SET `DropCardid` = 4477, `DropCardper` = 1 WHERE `id` = '1978';	-- Hell Apocalypse
 
 -- Training Post
-REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,0x,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,102760448,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Imperial Guards
 REPLACE INTO `mob_db2` VALUES (3611,'IMPERIAL_GUARD','Imperial_Guard','Imperial Guard',250,55817,1769,0,0,9,995,995,25,20,20,215,99,52,259,13,10,12,1,7,20,132,1000,800,432,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
