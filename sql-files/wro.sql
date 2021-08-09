@@ -232,8 +232,8 @@ WHERE `id` IN (7821);
 -- VALUES (4146,'Maya_Card','Maya Card','Card',20,10,true,true,'bonus bMagicDamageReturn,50;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 -- VALUES (4132,'Mistress_Card','Mistress Card','Card',20,10,true,true,true,true,'bonus bNoGemStone; bonus bUseSPrate,25; bonus3 bAutoSpellWhenHit,"WZ_JUPITEL",1,100;');
--- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
--- VALUES (4131,'Moonlight_Flower_Card','Moonlight Flower Card','Card',20,10,true,true,'skill "AL_INCAGI",3;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
+VALUES (4131,'Moonlight_Flower_Card','Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,25; bonus bFleeRate,10;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 -- VALUES (4143,'Orc_Hero_Card','Orc Hero Card','Card',20,10,true,true,true,true,'bonus bVit,3; bonus2 bResEff,Eff_Stun,10000;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
@@ -321,7 +321,7 @@ VALUES (4488,'Sealed_D_Lord_Card','Sealed Dark Lord Card','Card',20,10,true,true
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (4489,'Sealed_Pharaoh_Card','Sealed Pharaoh Card','Card',20,10,true,true,true,true,'bonus bUseSPrate,-15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (4490,'Sealed_M_Flower_Card','Sealed Moonlight Flower Card','Card',20,10,true,true,'skill "AL_INCAGI",1;');
+VALUES (4490,'Sealed_M_Flower_Card','Sealed Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,13; bonus bFleeRate,5;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4491,'Sealed_B_Shecil_Card','Sealed Sniper Card','Card',20,10,true,true,'bonus2 bHPDrainRate,50,10; bonus bHPrecovRate,-100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
@@ -663,7 +663,7 @@ UPDATE `mob_db2` SET `DropCardid` = 4463, `DropCardper` = 1 WHERE `id` = '1991';
 -- UPDATE `mob_db2` SET `DropCardid` = 4477, `DropCardper` = 1 WHERE `id` = '1978';	-- Hell Apocalypse
 
 -- Training Post
-REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,102760448,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Post',98,999999999,0,0,0,1,0,0,0,0,1,17,1,80,126,20,10,12,1,7,20,0x,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Imperial Guards
 REPLACE INTO `mob_db2` VALUES (3611,'IMPERIAL_GUARD','Imperial_Guard','Imperial Guard',250,55817,1769,0,0,9,995,995,25,20,20,215,99,52,259,13,10,12,1,7,20,132,1000,800,432,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
