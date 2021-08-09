@@ -509,8 +509,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override
 VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,true,false,true,true,true);
 
 -- Misc
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`)
-VALUES (40005,'Cart_Weight','Cart Weight','Etc',25000,10000);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+VALUES (40005,'Cart_Weight','Cart Weight','Etc',25000,10000,100,false,false,false,false,false,false,false,false);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_noconsume`,`delay_duration`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_tradepartner`,`trade_nosell`,`trade_nocart`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`)
 VALUES (40009,'Rejuv_Flask','Rejuvenation Flask','Healing',0,0,true,7000,100,true,true,true,true,true,true,true,true,'progressbar "000000",1; specialeffect2 325; percentheal 100,100; specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,240000,10; specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10;');
 REPLACE INTO `item_db` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`script`) VALUES (40010,'Mastela_Fruit_Potion','Mastela Fruit Potion','Healing',3000,30,'specialeffect2 204; itemheal rand(1905,2430),0;');
