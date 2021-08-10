@@ -24,7 +24,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 				if (.@wait_button_chk == 0) set .@wait_button_chk,1;
 				else next;
 
-				switch(select("Vending Square:Clan Hall:Disguise Event:Dice Event:Stylist:PvP Arena:Gemstone Socketing:Supply Master:Quest Board:Wise One:Harbor:Graveyard:Cancel")) {
+				switch(select("Vending Square:Clan Hall:Disguise Event:Dice Event:Stylist:PvP Arena:Gemstone Socketing:Supply Master:Craftsmen's Guild:Deckard Cain:Harbor:Graveyard:Card Remover:Strength Trainer:Costume Makers:Cancel")) {
 				case 1:
 					mes "[Royal Guide]";
 					mes "The ^ff0000Vending Square^000000 is due west from here. Speak with the ^FF0000Vending Helper^000000 for more information.";
@@ -75,17 +75,13 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 					break;
 				case 9:
 					mes "[Royal Guide]";
-					mes "The ^ff0000Quest Board^000000 is located inside the ^ff0000Imperial Senate Building^000000. It lists numerous quests you can complete in order to gain ^ff0000Zeny^000000 and ^ff0000Experience^000000!";
+					mes "The ^ff0000Craftmen's Guild^000000 is located in the eastern part of town.";
 					if (.@compass_check)
-						viewpoint 1,134,166,5,0xFF00FF;
+						viewpoint 1,223,112,5,0xFF00FF;
 					break;
 				case 10:
 					mes "[Royal Guide]";
-					mes "The ^ff0000Wise One^000000 can identify any item you carry. She charges an absurd amount of Zeny for it though.";
-					next;
-					mes "[Royal Guide]";
-					mes "Any item identifed by her can however generate ^ff0000Random Magical Bonuses^000000!";
-					next;
+					mes "The ^ff0000Deckard Cain^000000 can identify any item you carry. She charges an absurd amount of Zeny for it though.";
 					if (.@compass_check)
 						viewpoint 1,177,177,5,0xFF00FF;
 					break;
@@ -106,6 +102,24 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 						viewpoint 1,89,100,5,0xFF00FF;
 					break;
 				case 13:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Card Remover^000000 service can be found in the south-eastern part of town, in the ^ff0000foreign district^000000.";
+					if (.@compass_check)
+						viewpoint 1,177,84,5,0xFF00FF;
+					break;
+				case 14:
+					mes "[Royal Guide]";
+					mes "^ff0000Galtun^000000 offers his ^ff0000Strength Training^000000 service in the south-eastern part of town, in the ^ff0000foreign district^000000.";
+					if (.@compass_check)
+						viewpoint 1,192,57,5,0xFF00FF;
+					break;
+				case 15:
+					mes "[Royal Guide]";
+					mes "The ^ff0000Hut^000000 is a small building in which various ^ff0000Costume Headgear^000000 craftsmen offer their services. It is located in the south-eastern part of town, in the ^ff0000foreign district^000000.";
+					if (.@compass_check)
+						viewpoint 1,183,62,5,0xFF00FF;
+					break;
+				case 16:
 					mes "[Royal Guide]";
 					mes "Please ask me to ''Remove";
 					mes "Marks from Mini-Map'' if you";

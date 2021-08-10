@@ -506,6 +506,12 @@ OnInit:
 	waitingroom "Socketing Craftsman",0;
 }
 
+royal,179,60,1	script	Signpost#hut	837,{
+	end;
+OnInit:
+	waitingroom "The Hut",0;
+}
+
 royal,86,98,4	script	Signpost#fild	837,{
 	mes "[Signpost]";
 	mes "Venture down the crypt at your own peril!";
