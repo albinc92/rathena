@@ -41,7 +41,8 @@ OnPCLoginEvent:
 		"You can request songs to be played by the Jukebox inside The Dancing Dragon Inn, in Royal.",
 		"Use the @commands atcommand to see what atcommands are available for use.",
 		"It is possible to receive cards such as Tendrillion, Naght Sieger, or Duneyrr from Mystical Card Albums.",
-		"You can enchant and disenchant random magic option upon your equipment at The Warlock's Domain in Royal.";
+		"You can enchant and disenchant random magic option upon your equipment at The Warlock's Domain in Royal.",
+		"Speak with the Guide on the main plaza in Royal for directions to noteworthy services that exist in town.";
 
     set .@index, rand(0, getarraysize(.@hints$));
 L_NextHint:
