@@ -179,7 +179,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 			mes "Completing the hunting missions that they provide will reward adventurers with ^ff0000Zeny^000000 and ^ff0000Experience^000000!";
 			next;
 			mes "[Royal Guide]";
-			mes "You should also seek out the ^ff0000Supply Master^000000, located inside the ^ff0000Senate Building^000000!;
+			mes "You should also seek out the ^ff0000Supply Master^000000, located inside the ^ff0000Senate Building^000000!";
 			next;
 			mes "[Royal Guide]";
 			mes "I hear he has ^ff0000Battle Manuals^000000 for sale!;
