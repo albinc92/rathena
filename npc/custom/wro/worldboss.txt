@@ -1,8 +1,8 @@
 -	script	worldboss	-1,{
 
 OnInit:
-	//set .cleared, 1;
-
+	set .cleared, 1;
+	
 OnClock0100:
 OnClock0300:
 OnClock0500:
