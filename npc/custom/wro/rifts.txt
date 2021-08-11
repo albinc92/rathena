@@ -31,55 +31,55 @@ OnInit:
 	set .map2$, .maps$[.mapIndex] + .mapNo$;
 
 	if (.maps$[.mapIndex] == "ama_fild") {
-		set .map2$, "Amatsu Field " + .mapNo;
+		set .map3$, "Amatsu Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "ayo_fild") {
-		set .map2$, "Ayothaya Field " + .mapNo;
+		set .map3$, "Ayothaya Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "cmd_fild") {
-		set .map2$, "Comodo Field " + .mapNo;
+		set .map3$, "Comodo Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "ein_fild") {
-		set .map2$, "Einbroch Field " + .mapNo;
+		set .map3$, "Einbroch Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "gef_fild") {
-		set .map2$, "Geffen Field " + .mapNo;
+		set .map3$, "Geffen Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "gon_fild") {
-		set .map2$, "Gonryun Field " + .mapNo;
+		set .map3$, "Gonryun Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "hu_fild") {
-		set .map2$, "Hugel Field " + .mapNo;
+		set .map3$, "Hugel Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "lhz_fild") {
-		set .map2$, "Lighthalzen Field " + .mapNo;
+		set .map3$, "Lighthalzen Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "lou_fild") {
-		set .map2$, "Louyang Field " + .mapNo;
+		set .map3$, "Louyang Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "xmas_fild") {
-		set .map2$, "Lutie Field " + .mapNo;
+		set .map3$, "Lutie Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "man_fild") {
-		set .map2$, "Manuk Field " + .mapNo;
+		set .map3$, "Manuk Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "moc_fild") {
-		set .map2$, "Morocc Field " + .mapNo;
+		set .map3$, "Morocc Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "mjolnir_") {
-		set .map2$, "Mt. Mjolnir " + .mapNo;
+		set .map3$, "Mt. Mjolnir " + .mapNo;
 	} else if (.maps$[.mapIndex] == "mosk_fild") {
-		set .map2$, "Moscovia Field " + .mapNo;
+		set .map3$, "Moscovia Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "nif_fild") {
-		set .map2$, "Niflheim Field " + .mapNo;
+		set .map3$, "Niflheim Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "pay_fild") {
-		set .map2$, "Payon Field " + .mapNo;
+		set .map3$, "Payon Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "prt_fild") {
-		set .map2$, "Prontera Field " + .mapNo;
+		set .map3$, "Prontera Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "ra_fild") {
-		set .map2$, "Rachel Field " + .mapNo;
+		set .map3$, "Rachel Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "ra_fild") {
-		set .map2$, "Rachel Field " + .mapNo;
+		set .map3$, "Rachel Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "spl_fild") {
-		set .map2$, "Splendide Field " + .mapNo;
+		set .map3$, "Splendide Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "um_fild") {
-		set .map2$, "Umbala Field " + .mapNo;
+		set .map3$, "Umbala Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "ve_fild") {
-		set .map2$, "Veins Field " + .mapNo;
+		set .map3$, "Veins Field " + .mapNo;
 	} else if (.maps$[.mapIndex] == "yuno_fild") {
-		set .map2$, "Yuno Field " + .mapNo;
+		set .map3$, "Yuno Field " + .mapNo;
 	}
 
-	monster .map$,0,0,"Rift Spawn",3612,.amnt1,strnpcinfo(0)+"::OnMonsterDead";
-	announce "A dimensional rift has opened on " + .map2$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+	monster .map2$,0,0,"Rift Spawn",3612,.amnt1,strnpcinfo(0)+"::OnMonsterDead";
+	announce "A dimensional rift has opened on " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
 	end;
 
 OnMonsterDead:
