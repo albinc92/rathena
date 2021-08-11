@@ -1,4 +1,4 @@
-royal,0,0,3	script	Dimensional Rift#1	10005,{
+-	script	worldboss	-1,{
 
 OnInit:
 OnClock0100:
@@ -78,11 +78,8 @@ OnClock2300:
 	}
 
 	set .map2$, .maps$[.mapIndex] + .mapNo$;
-	unitwarp getnpcid(0),.map2$,-1,-1;
-	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	announce .@map$ + " " + .@x_npc + ", " + .@y_npc,bc_all,"0x70dbdb";
-	announce "A dimensional rift has opened on " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
-	monster .map2$,0,0,"Rift Spawn",3612,1,strnpcinfo(0)+"::OnMonsterDead";
+	announce "[Continental Guard] : Warning! A Root of Corruption has been spotted on " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+	monster .map2$,0,0,"Root of Corruption",2475,1,strnpcinfo(0)+"::OnBossDead";
 	end;
 
 OnMonsterDead:
@@ -96,7 +93,7 @@ OnMonsterDead:
 
 OnBossDead:
 	set .cleared, 1;
-	announce "The monster invasion has been repelled! Congratulations!",bc_all,0x00FFFF,FW_NORMAL,16;
+	announce "[Continental Guard] : The Root of Corruption has been repelled!",bc_all,0x00FFFF,FW_NORMAL,16;
 	end;
 
 }
