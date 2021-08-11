@@ -81,7 +81,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 					break;
 				case 10:
 					mes "[Royal Guide]";
-					mes "The ^ff0000Deckard Cain^000000 can identify any item you carry. She charges an absurd amount of Zeny for it though.";
+					mes "^ff0000Deckard Cain^000000 can identify any item you carry. She charges an absurd amount of Zeny for it though.";
 					if (.@compass_check)
 						viewpoint 1,177,177,5,0xFF00FF;
 					break;
@@ -97,7 +97,6 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 					next;
 					mes "[Royal Guide]";
 					mes "Take great care if you venture down the crypt! I hear trouble has been brewing there as of late!";
-					next;
 					if (.@compass_check)
 						viewpoint 1,89,100,5,0xFF00FF;
 					break;
@@ -121,7 +120,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 					break;
 				case 16:
 					mes "[Royal Guide]";
-					mes "The ^ff0000Enchantress^000000 works at ^ff0000The Warlock's Domain^000000, at the ^ff0000Western Plaze^000000.";
+					mes "The ^ff0000Enchantress^000000 works at ^ff0000The Warlock's Domain^000000, at the ^ff0000Western Plaza^000000.";
 					if (.@compass_check)
 						viewpoint 1,78,118,5,0xFF00FF;
 					break;
