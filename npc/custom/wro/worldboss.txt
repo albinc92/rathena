@@ -1,6 +1,8 @@
 -	script	worldboss	-1,{
 
 OnInit:
+	//set .cleared, 1;
+
 OnClock0100:
 OnClock0300:
 OnClock0500:
@@ -13,6 +15,10 @@ OnClock1700:
 OnClock1900:
 OnClock2100:
 OnClock2300:
+
+	if(!.cleared) {
+		announce "[Continental Guard] : A Root of Corruption is still running rampant at " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+	}
 
 	if(agitcheck()) {
 		end;
