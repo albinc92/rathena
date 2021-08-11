@@ -1,5 +1,6 @@
--	script	rifts	-1,{
+royal,0,0,3	script	Dimensional Rift#1	10005,{
 
+OnInit:
 OnClock0100:
 OnClock0300:
 OnClock0500:
@@ -12,7 +13,7 @@ OnClock1700:
 OnClock1900:
 OnClock2100:
 OnClock2300:
-OnInit:
+
 	if(agitcheck()) {
 		end;
 	}
@@ -27,8 +28,6 @@ OnInit:
 	if(.mapNo < 10) {
 		set .mapNo$, "0" + .mapNo$;
 	}
-
-	set .map2$, .maps$[.mapIndex] + .mapNo$;
 
 	if (.maps$[.mapIndex] == "ama_fild") {
 		set .map3$, "Amatsu Field " + .mapNo;
@@ -78,8 +77,12 @@ OnInit:
 		set .map3$, "Yuno Field " + .mapNo;
 	}
 
-	monster .map2$,0,0,"Rift Spawn",3612,.amnt1,strnpcinfo(0)+"::OnMonsterDead";
+	set .map2$, .maps$[.mapIndex] + .mapNo$;
+	unitwarp getnpcid(0),.map2$,-1,-1;
+	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
+	announce .@map$ + " " + .@x_npc + ", " + .@y_npc,bc_all,"0x70dbdb";
 	announce "A dimensional rift has opened on " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+	monster .map2$,0,0,"Rift Spawn",3612,1,strnpcinfo(0)+"::OnMonsterDead";
 	end;
 
 OnMonsterDead:
