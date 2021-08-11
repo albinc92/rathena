@@ -85,21 +85,8 @@ OnClock2300:
 	}
 
 	set .map2$, .maps$[.mapIndex] + .mapNo$;
-	unitwarp getnpcid(0,"BossDummy"),.map2$,-1,-1;
-	getmapxy .@map$, .x, .y, BL_NPC, "BossDummy";
-	announce "" + .x + ", " + .y,bc_all,0x00FFFF,FW_NORMAL,16;
-
 	announce "[Continental Guard] : Warning! A Root of Corruption has been spotted on " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
-	monster .map2$,.x,.y,"Root of Corruption",2475,1,strnpcinfo(0)+"::OnBossDead";
-	end;
-
-OnMonsterDead:
-	set .mobTot, .mobTot-1;
-	mapannounce .rmap$,.mobTot + " monsters remain!",bc_blue;
-	if(.mobTot == 0) {
-		mapannounce .rmap$,"The invasion commander approaches!",bc_blue;
-		monster .rmap$,0,0,"Invasion Commander",3614,1,strnpcinfo(0)+"::OnBossDead";
-	}
+	monster .map2$,0,0,"Root of Corruption",2475,1,strnpcinfo(0)+"::OnBossDead",2;
 	end;
 
 OnBossDead:
@@ -107,9 +94,4 @@ OnBossDead:
 	announce "[Continental Guard] : The Root of Corruption has been repelled!",bc_all,0x00FFFF,FW_NORMAL,16;
 	end;
 
-}
-
-// Coordinate Dummy NPC
-royal,0,0,3	script	BossDummy	139,{
-	end;
 }
