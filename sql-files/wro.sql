@@ -415,7 +415,7 @@ VALUES (40008,'Headgear_Box','Headgear Box','Usable',1000,200,true,true,'getrand
 -- Boarding Halter
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`flag_noconsume`,`delay_duration`,`delay_status`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`,`script`,`unequip_script`)
 VALUES (12622,'Boarding_Halter','Reins Of Mount','Usable',true,3000,'All_Riding_Reuse_Limit',100,true,true,true,true,true,true,true,true,'setmounting();','if (ismounting()) setmounting();');
-
+-- Update Script
 UPDATE `item_db2` SET `script` = 'if (ismounting(getcharid(0)) == 0) { progressbar "000000",1; }; atcommand "@mount2";  specialeffect2 6; specialeffect2 26;' WHERE `id` = 12622;
 
 -- Mercenary scrolls level restrictions
@@ -669,14 +669,12 @@ REPLACE INTO `mob_db2` VALUES (3610,'TRAINING_POST','Training_Post','Training Po
 REPLACE INTO `mob_db2` VALUES (3611,'IMPERIAL_GUARD','Imperial_Guard','Imperial Guard',250,55817,1769,0,0,9,995,995,25,20,20,215,99,52,259,13,10,12,1,7,20,132,1000,800,432,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- World Boss
-REPLACE INTO `mob_db2` VALUES (2475,'MG_CORRUPTION_ROOT','Root of Corruption','Root of Corruption',250,1820000,1,2199906,2008478,8,13887,13887,50,50,201,20,90,201,201,20,10,12,2,6,68,0x6280084,2000,576,672,480,0,0,0,0,0,0,0,616,5000,617,10000,0,0,607,10000,0,0,7566,10000,0,0,0,0,0,0,0,0);
+REPLACE INTO `mob_db2` VALUES (2475,'MG_CORRUPTION_ROOT','Root of Corruption','Root of Corruption',250,1820000,1,2199906,2008478,8,13887,13887,50,50,201,20,90,201,201,20,10,12,2,6,28,0x6280084,2000,576,672,480,0,0,0,0,0,0,0,616,5000,617,10000,0,0,607,10000,0,0,7566,10000,0,0,0,0,0,0,0,0);
 
 -- Gathering Nodes
-
 -- Mob avail dummy data
 REPLACE INTO `mob_db2` VALUES (3742,'PURPLESTONE','Purplestone','Purple Ore',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 REPLACE INTO `mob_db2` VALUES (3743,'SEAANEMONE','Seaanemone','Sea Anemone',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-
 -- Actual nodes
 REPLACE INTO `mob_db2` VALUES (3700,'HERB_LVL1','Red Herb','Red Herb',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 REPLACE INTO `mob_db2` VALUES (3701,'HERB_LVL2','Red Herb','Red Herb',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);

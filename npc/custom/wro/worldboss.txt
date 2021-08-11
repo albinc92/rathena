@@ -16,8 +16,9 @@ OnClock1900:
 OnClock2100:
 OnClock2300:
 
-	if(!.cleared) {
+	if(.cleared != 1) {
 		announce "[Continental Guard] : A Root of Corruption is still running rampant at " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+		end;
 	}
 
 	if(agitcheck()) {
