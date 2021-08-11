@@ -182,7 +182,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 			mes "You should also seek out the ^ff0000Supply Master^000000, located inside the ^ff0000Senate Building^000000!";
 			next;
 			mes "[Royal Guide]";
-			mes "I hear he has ^ff0000Battle Manuals^000000 for sale!;
+			mes "I hear he has ^ff0000Battle Manuals^000000 for sale!";
 			next;
 			mes "[Royal Guide]";
 			mes "Battle Manuals will increase the amount of experience you receive from monsters by a certain amount for a period of time.";
