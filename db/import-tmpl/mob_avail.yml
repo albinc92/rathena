@@ -133,12 +133,6 @@ Body:
     Weapon: Crimson_Bolt
     HeadTop: Imperial_Cap_C
     HeadMid: Sunglasses
-  - Mob: INVADING_WARRIOR
-    Sprite: RAYDRIC
-  - Mob: INVADING_ARCHER
-    Sprite: RAYDRIC_ARCHER
-  - Mob: INVADING_COMMANDER
-    Sprite: KNIGHT_OF_ABYSS
   - Mob: HERB_LVL1
     Sprite: SEAANEMONE
   - Mob: HERB_LVL1
