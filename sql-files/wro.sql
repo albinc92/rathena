@@ -137,7 +137,7 @@ WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = 
 -- Make all quest items non-sellable etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE `id` IN (7160, 7285, 7287);
+WHERE `id` IN (7160, 7285, 7287, 7181);
 
 UPDATE `item_db2`
 SET `weight` = 0,
@@ -150,7 +150,7 @@ SET `weight` = 0,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE `id` IN (7160, 7285, 7287);
+WHERE `id` IN (7160, 7285, 7287, 7181);
 
 -- Make certain items droppable etc.
 REPLACE INTO `item_db2`

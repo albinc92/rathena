@@ -60,6 +60,15 @@ function Go {
         mes "You don't have enough zeny.";
 	} else {
         next;
+        mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+        mes "So you want to warp to " + getarg(0) + ". Is this correct?";
+		switch(select("Confirm:Cancel")) {
+		case 2:
+			close2;
+			cutin "", 255;
+			end;
+		}
+		next;
 	    set zeny, zeny - .@cost;
         set lastwarp$, getarg(0);
         set lastwarpx, getarg(1,0);
