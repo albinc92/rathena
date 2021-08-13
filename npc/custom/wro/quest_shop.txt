@@ -61,7 +61,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Consumables","Miscellaneous","Event Token Exchange","Glorious Weapons","Valorous Weapons","Brave Weapons","Soldier Weapons","Glorious Armor","Battleground Armor","Cards","Costume Items";
+	setarray .Shops$[1],"Consumables","Miscellaneous","Event Token Exchange","Glorious Weapons","Valorous Weapons","Brave Weapons","Soldier Weapons","Glorious Armor","Battleground Armor","Card Token Exchange","Costume Items";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -105,8 +105,6 @@ OnInit:
 	Add(1,693,1,10000,0);
 	Add(1,12215,1,10000,0);
 	Add(1,12216,1,10000,0);
-	Add(1,12246,1,0,0,40112,8);
-	Add(1,40006,1,0,0,40112,10);
 	Add(1,12103,1,0,0,604,25);
 	Add(1,40008,1,10000,0,603,50);
 
@@ -233,10 +231,12 @@ OnInit:
 	Add(9,2724,1,0,0,7420,10);
 	Add(9,2725,1,0,0,7420,10);
 
-	// Cards
+	// Card Token Exchange
 	Add(10,4018,1,0,0,40112,1);
 	Add(10,4130,1,0,0,40112,1);
 	Add(10,4059,1,0,0,40112,1);
+	Add(1,12246,1,0,0,40112,8);
+	Add(1,40006,1,0,0,40112,10);
 
 	// Costume Items
 	Add(11,40043,1,2500000,0,1045,1,994,100,919,100,2522,50);
