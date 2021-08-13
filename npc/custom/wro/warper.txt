@@ -54,6 +54,7 @@ L_Main:
 // --------------------------------------------------
 
 function Go {
+    set .@cost, (1900 + (BaseLevel * 100));
 	if(zeny < .@cost) {
         next;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -61,7 +62,7 @@ function Go {
 	} else {
         next;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
-        mes "So you want to warp to " + getarg(0) + ". Is this correct?";
+        mes "So you want to warp to ^ff0000" + getarg(0) + "^000000. Is this correct?";
 		switch(select("Confirm:Cancel")) {
 		case 2:
 			close2;
