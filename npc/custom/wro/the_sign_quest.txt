@@ -6001,7 +6001,8 @@ alberta_in,154,171,5	script	Maid#s10	758,{
 	}
 }
 
--	script	Soldier#s11_	-1,{
+//-	script	Soldier#s11_	-1,{
+prt_castle,107,58,5	script	Soldier#s11	8W_SOLDIER,{
 	callfunc "F_UpdateSignVars";
 	mes "[Maruin]";
 	if (sign_q < 49) {
