@@ -6833,7 +6833,7 @@ yuno,330,100,4	script	Knight#ss	734,{
 			mes "so he knows you did";
 			mes "a good job for me.";
 			mes "Thanks again!";
-			delitem 7049;
+			delitem 7049,1;
 			set sign_q,39;
 			getitem 7181,1; //Receipt_01
 			if (checkre(3)) {
