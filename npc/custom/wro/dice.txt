@@ -90,17 +90,17 @@ OnDice:
 		enablenpc "select2_2";
 		enablenpc "select3_2";
 		enablenpc "select4_2";
-		mapannounce "quiz_02","Please step into one of the four boxes!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","Please step into one of the four boxes!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 6000;
-		mapannounce "quiz_02","Anyone not standing in a box by the time i roll the dice will be disqualified and warped to town!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","Anyone not standing in a box by the time i roll the dice will be disqualified and warped to town!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 8000;
-		mapannounce "quiz_02","I will roll in 3!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","I will roll in 3!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 1000;
-		mapannounce "quiz_02","I will roll in 2!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","I will roll in 2!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 1000;
-		mapannounce "quiz_02","I will roll in 1!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","I will roll in 1!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 1000;
-		mapannounce "quiz_02","And the unlucky number is...",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","And the unlucky number is...",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 3000;
 		areawarp "quiz_02",32,95,80,76,"royal",134,159;
 		disablenpc "select1_2";
@@ -108,7 +108,7 @@ OnDice:
 		disablenpc "select3_2";
 		disablenpc "select4_2";
 		set .@roll, rand(1,4);
-		mapannounce "quiz_02",.@roll+"!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02",.@roll+"!",bc_map,0x00FFFF,FW_NORMAL,16;
 
 		if(.@roll == 1) {
 			movenpc "EffectDummy",37,62;
@@ -149,7 +149,7 @@ OnDice:
 		}
 
 		sleep 3000;
-		mapannounce "quiz_02","Congratulations to those who survived this round!",BC_YELLOW,FW_NORMAL,16;
+		announce "quiz_02","Congratulations to those who survived this round!",bc_map,0x00FFFF,FW_NORMAL,16;
 		sleep 10000;
 		.dice++;
 	}
@@ -157,9 +157,9 @@ OnDice:
 	enablenpc "select2_2";
 	enablenpc "select3_2";
 	enablenpc "select4_2";
-	mapannounce "quiz_02","That was the last round people!",BC_YELLOW,FW_NORMAL,16;
+	announce "quiz_02","That was the last round people!",bc_map,0x00FFFF,FW_NORMAL,16;
 	sleep 3000;
-	mapannounce "quiz_02","Thank you for playing!",BC_YELLOW,FW_NORMAL,16;
+	announce "quiz_02","Thank you for playing!",bc_map,0x00FFFF,FW_NORMAL,16;
 	sleep 3000;
 	set .dice, 0;
 	end;
