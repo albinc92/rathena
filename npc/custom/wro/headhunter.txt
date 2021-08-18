@@ -222,7 +222,7 @@ L_OnMissionInfo:
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
-            query_sql("REPLACE INTO `headhunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + "", " + .@zenyReward + ")");
+            query_sql("REPLACE INTO `headhunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ", " + .@zenyReward + ")");
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Excellent. I shall await your return!";
