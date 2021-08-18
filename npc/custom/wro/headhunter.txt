@@ -222,7 +222,7 @@ L_OnMissionInfo:
 
     switch(select("Accept mission:Monster information:Location information:Pick another mission:Cancel")) {
         case 1:
-            query_sql("REPLACE INTO `headhunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + ")");
+            query_sql("REPLACE INTO `headhunter` VALUES(" + getcharid(0) + "," + .@mobToHunt + "," + 0 + ", " + .@amnt + "", " + .@zenyReward + ")");
             next;
             mes "^0000ff[" + strnpcinfo(1) + "]^000000";
             mes "Excellent. I shall await your return!";
@@ -315,7 +315,7 @@ nameless_n,165,181,7	duplicate(Headhunter)	Headhunter#abbey	481
 amatsu,202,82,1	duplicate(Headhunter)	Headhunter#ama	481
 ama_in02,124,175,3	duplicate(Headhunter)	Headhunter#ama_dun	481
 gonryun,168,115,1	duplicate(Headhunter)	Headhunter#gon	481
-gonryun,169,190,3	duplicate(Headhunter)	Headhunter#gon_dun	415
+gonryun,169,190,3	duplicate(Headhunter)	Headhunter#gon_dun	481
 louyang,226,108,1	duplicate(Headhunter)	Headhunter#lou	481
 louyang,50,286,4	duplicate(Headhunter)	Headhunter#lou_dun	481
 ayothaya,198,163,0	duplicate(Headhunter)	Headhunter#ayo	481
@@ -325,7 +325,7 @@ mosk_fild02,188,250,5	duplicate(Headhunter)	Headhunter#mosk_dun	481
 manuk,289,131,1	duplicate(Headhunter)	Headhunter#man	481
 splendide,193,155,4	duplicate(Headhunter)	Headhunter#spl	481
 spl_fild01,359,106,1	duplicate(Headhunter)	Headhunter#ygg	481
-spl_fild01,355,105,7	duplicate(Headhunter)	Headhunter#nyd	415
+spl_fild01,355,105,7	duplicate(Headhunter)	Headhunter#nyd	481
 e_tower,82,110,5	duplicate(Headhunter)	Headhunter#et	481
 gef_fild10,245,200,4	duplicate(Headhunter)	Headhunter#orcmemory	481
 monk_test,309,142,5	duplicate(Headhunter)	Headhunter#shrine	481
@@ -395,7 +395,7 @@ monk_test	mapflag	loadevent
 // Scripts
 -	script	killtracker	-1,{
 OnNPCKillEvent:
-    query_sql("SELECT `mob_id`, `count`, `max`  FROM `headhunter` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max);
+    query_sql("SELECT `mob_id`, `count`, `max`, `zeny`  FROM `headhunter` WHERE `char_id` = " + getcharid(0) + "", .@mobid, .@count, .@max, .@zenyReward);
     if(killedrid == .@mobid && .@count != .@max) {
         set .@count, .@count + 1;
         message strcharinfo(0),"" + strmobinfo(1, killedrid) + " killed: (" + .@count + " / " + .@max + ")";
@@ -405,7 +405,7 @@ OnNPCKillEvent:
             set .@bExp, (strmobinfo(6, .@mobid) * (.@max * 2));
             set .@jExp, (strmobinfo(7, .@mobid) * (.@max * 2));
             getexp .@bExp, .@jExp;
-            set zeny, zeny + ((strmobinfo(3, .@mobid) * 100) + 1900);
+            set zeny, zeny + .@zenyReward;
             specialeffect2 885;
 		    message strcharinfo(0),"You have completed your hunt! Your reward is Zeny and Experience Points.";
         }
