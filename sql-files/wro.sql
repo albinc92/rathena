@@ -144,7 +144,7 @@ UPDATE `item_db2`
 SET `weight` = 0,
     `trade_nodrop` = true,
     `trade_notrade` = true,
-    `trade_tradepartner` = true,
+    `trade_tradepartner` = false,
     `trade_nosell` = true,
     `trade_nocart` = true,
     `trade_nostorage` = true,
@@ -161,7 +161,7 @@ WHERE `id` IN (7821);
 UPDATE `item_db2`
 SET `trade_nodrop` = false,
     `trade_notrade` = false,
-    `trade_tradepartner` = false,
+    `trade_tradepartner` = true,
     `trade_nosell` = false,
     `trade_nocart` = false,
     `trade_nostorage` = false,
@@ -169,6 +169,41 @@ SET `trade_nodrop` = false,
     `trade_nomail` = false,
     `trade_noauction` = false
 WHERE `id` IN (7821);
+
+-- Make PvP Gear Sellable, Storeable, etc.
+REPLACE INTO `item_db2`
+SELECT * FROM `item_db`
+WHERE `name_english` LIKE "Glorious %"
+OR `name_english` LIKE "Valorous %"
+OR `name_english` LIKE "Brave %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Captain's %"
+OR `name_english` LIKE "Commander's %"
+OR `name_english` LIKE "Medal of Honor"
+OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382);
+
+UPDATE `item_db2`
+SET `trade_nodrop` = true,
+    `trade_notrade` = true,
+    `trade_tradepartner` = true,
+    `trade_nosell` = false,
+    `trade_nocart` = false,
+    `trade_nostorage` = false,
+    `trade_noguildstorage` = true,
+    `trade_nomail` = true,
+    `trade_noauction` = true
+WHERE `name_english` LIKE "Glorious %"
+OR `name_english` LIKE "Valorous %"
+OR `name_english` LIKE "Brave %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Soldier %"
+OR `name_english` LIKE "Captain's %"
+OR `name_english` LIKE "Commander's %"
+OR `name_english` LIKE "Medal of Honor"
+OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382);
 
 -- Update scripts of MvP cards
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
@@ -264,7 +299,7 @@ VALUES (4131,'Moonlight_Flower_Card','Moonlight Flower Card','Card',20,10,true,t
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 -- VALUES (4352,'B_Ygnizem_Card','General Egnigem Cenia Card','Card',20,10,true,true,'bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bHPRegenRate,50,10000; bonus2 bSPRegenRate,10,10000;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
--- VALUES (4451,'Ant_Buyanne_Card','Entweihen Crothen Card','Card',20,10,true,true,'bonus bMatk,250;');
+-- VALUES (4451,'Ant_Buyanne_Card','Entweihen Crothen Card','Card',20,10,true,true,'bonus bMatk,100;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 -- VALUES (4456,'Nidhogg_Shadow_Card','Nidhoggurs Shadow Card','Card',20,10,true,true,'bonus bInt,5; if (Class == Job_High_Wizard || Class == Job_Baby_Warlock || Class == Job_Warlock || Class == Job_Warlock_T) bonus bFixedCastrate,-50;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
