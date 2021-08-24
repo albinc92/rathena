@@ -1970,8 +1970,8 @@ L_Enchant:
 			set .@Enchanting, 300;
 		}
 		query_sql("UPDATE `gathering` SET `Enchanting` = " + .@Enchanting + " WHERE `char_id` = " + getcharid(0));
+		message strcharinfo(0),"Your [Enchanting] skill increased to " + .@Enchanting + "!";
 	}
-	message strcharinfo(0),"Your [Enchanting] skill increased to " + .@Enchanting + "!";
 	goto L_End;
 
 
