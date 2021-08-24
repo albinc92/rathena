@@ -736,10 +736,15 @@ REPLACE INTO `mob_db2` VALUES (3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0
 REPLACE INTO `mob_skill_db2` VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- Invasion Event
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,1500,3000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,1500,3000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,1500,1000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,1500,1000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@AL_TELEPORT','idle',26,1,10000,0,0,'yes','self','rudeattacked',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,2500,3000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,2500,3000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,2500,1000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,2500,1000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','idle',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_SIGHTRASHER','attack',81,10,1000,0,20000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
