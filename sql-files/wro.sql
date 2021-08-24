@@ -173,7 +173,7 @@ WHERE `id` IN (7821);
 -- Make PvP Gear Sellable, Storeable, etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE `name_english` LIKE "Glorious %"
+WHERE (`name_english` LIKE "Glorious %"
 OR `name_english` LIKE "Valorous %"
 OR `name_english` LIKE "Brave %"
 OR `name_english` LIKE "Soldier %"
@@ -182,7 +182,8 @@ OR `name_english` LIKE "Soldier %"
 OR `name_english` LIKE "Captain's %"
 OR `name_english` LIKE "Commander's %"
 OR `name_english` LIKE "Medal of Honor"
-OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382);
+OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382))
+AND `name_english` NOT LIKE "% Card";
 
 UPDATE `item_db2`
 SET `trade_nodrop` = true,
@@ -194,7 +195,7 @@ SET `trade_nodrop` = true,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE `name_english` LIKE "Glorious %"
+WHERE (`name_english` LIKE "Glorious %"
 OR `name_english` LIKE "Valorous %"
 OR `name_english` LIKE "Brave %"
 OR `name_english` LIKE "Soldier %"
@@ -203,7 +204,8 @@ OR `name_english` LIKE "Soldier %"
 OR `name_english` LIKE "Captain's %"
 OR `name_english` LIKE "Commander's %"
 OR `name_english` LIKE "Medal of Honor"
-OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382);
+OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382))
+AND `name_english` NOT LIKE "% Card";
 
 -- Update scripts of MvP cards
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
