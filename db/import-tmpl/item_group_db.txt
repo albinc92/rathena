@@ -36,7 +36,7 @@ IG_SLDCARDALBUM,4539,1      // Fallen Bishop Hibram
 IG_SLDCARDALBUM,4540,4      // Lord of the Dead
 IG_SLDCARDALBUM,4541,1      // High Wizard Katrinn
 IG_SLDCARDALBUM,4542,1      // Detale
-IG_SLDCARDALBUM,4543,1      // Garm
+IG_SLDCARDALBUM,4543,1      // Hatii
 IG_SLDCARDALBUM,4544,1      // Evil Snake Lord
 IG_SLDCARDALBUM,27211,1     // Baphomet
 IG_SLDCARDALBUM,27212,1     // Maya
@@ -57,6 +57,54 @@ IG_MagicCardAlbum,4458,1     // Duneyrr
 IG_MagicCardAlbum,4459,1     // Rata
 IG_MagicCardAlbum,4462,1     // Hardrock Mammoth
 IG_MagicCardAlbum,4463,1     // Tendrillion
+
+IG_BLOODYALBUM,4236,1      // Amon Ra
+IG_BLOODYALBUM,4359,1      // Assassin Cross Eremes
+IG_BLOODYALBUM,4425,4      // Atroce
+IG_BLOODYALBUM,4372,4      // Bacsojin
+IG_BLOODYALBUM,4147,1      // Baphomet
+IG_BLOODYALBUM,4145,2      // Berzebub
+IG_BLOODYALBUM,4168,1      // Dark Lord
+IG_BLOODYALBUM,4386,1      // Detale
+IG_BLOODYALBUM,4142,4      // Doppelganger
+IG_BLOODYALBUM,4134,4      // Dracula
+IG_BLOODYALBUM,4137,1      // Drake
+IG_BLOODYALBUM,4123,1      // Eddga
+IG_BLOODYALBUM,4330,1      // Evil Snake Lord
+IG_BLOODYALBUM,4441,1      // Fallen Bishop Hibram
+IG_BLOODYALBUM,4324,1      // Hatii
+IG_BLOODYALBUM,4408,4      // Gloom Under Night
+IG_BLOODYALBUM,4128,1      // Golden Thief Bug
+IG_BLOODYALBUM,27162,2     // Gopinich
+IG_BLOODYALBUM,4363,2      // High Priest Magaleta
+IG_BLOODYALBUM,4365,1      // High Wizard Katrinn
+IG_BLOODYALBUM,4430,2      // Ifrit
+IG_BLOODYALBUM,4263,1      // Samurai Spector
+IG_BLOODYALBUM,4403,2      // Kiel D-01
+IG_BLOODYALBUM,4318,4      // Stormy Knight
+IG_BLOODYALBUM,4419,1      // Ktullanux
+IG_BLOODYALBUM,4376,1      // Lady Tanee
+IG_BLOODYALBUM,4357,1      // Lord Knight
+IG_BLOODYALBUM,4276,4      // Lord of the Dead
+IG_BLOODYALBUM,4146,1      // Maya
+IG_BLOODYALBUM,4132,2      // Mistress
+IG_BLOODYALBUM,4131,1      // Moonlight Flower
+IG_BLOODYALBUM,4456,2      // Nidhoggur's Shadow
+IG_BLOODYALBUM,4143,2      // Orc Hero
+IG_BLOODYALBUM,4135,1      // Orc Lord
+IG_BLOODYALBUM,4144,1      // Osiris
+IG_BLOODYALBUM,4148,2      // Pharaoh
+IG_BLOODYALBUM,4121,1      // Phreeoni
+IG_BLOODYALBUM,4342,1      // RSX-0806
+IG_BLOODYALBUM,4367,4      // Sniper Shecil
+IG_BLOODYALBUM,4302,1      // Tao Gunka
+IG_BLOODYALBUM,4399,1      // Memory of Thanatos
+IG_BLOODYALBUM,4305,4      // Turtle General
+IG_BLOODYALBUM,4407,1      // Valkyrie Randgris
+IG_BLOODYALBUM,4374,2      // Vesper
+IG_BLOODYALBUM,4361,1      // Whitesmith Harword
+IG_BLOODYALBUM,32315,1     // Wounded Morocc Card
+IG_BLOODYALBUM,4352,1      // General Ygnizem Cenia
 
 IG_HATBOX,2201,6	// Sunglasses
 IG_HATBOX,2202,6	// Sunglasses

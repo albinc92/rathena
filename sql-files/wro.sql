@@ -446,6 +446,10 @@ WHERE `id` IN (20500, 20516, 20511, 20514, 20510, 20764, 20746, 20727, 20761, 25
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
 VALUES (40006,'Sld_Card_Album','Sealed Card Album','Usable',10000,50,true,true,'getrandgroupitem(IG_SLDCARDALBUM),1;');
 
+-- Card Booster Box
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
+VALUES (40056,'Card_Booster_Box','Card Booster Box','Usable',10000,50,true,true,'getrandgroupitem(IG_CARDALBUM),3; getrandgroupitem(IG_MagicCardAlbum),2; if(rand(1000) > 250) { getrandgroupitem(IG_SLDCARDALBUM),1; } else { getrandgroupitem(IG_BLOODYALBUM),1; };');
+
 -- Hat Box
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
 VALUES (40008,'Headgear_Box','Headgear Box','Usable',1000,200,true,true,'getrandgroupitem(IG_HATBOX),1;');
@@ -656,6 +660,7 @@ VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 
 -- Item Cash DB
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 25 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40055, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 40039, 40031, 40015) ORDER BY `name_aegis`;
+REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40056);
 
 -- Enchanting Consumable
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 609;
