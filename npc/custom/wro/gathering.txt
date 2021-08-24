@@ -1858,6 +1858,7 @@ L_Enchant:
     } else if(.@r < 32 && .@r > 16) {
         .@optAmt = 4;
     }
+	message strcharinfo(0),".@optAmt = " + .@optAmt;
 
 	if(.@optAmt == 0) {
 		message strcharinfo(0),"The enchanting process failed.";
