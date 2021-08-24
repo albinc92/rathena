@@ -709,7 +709,7 @@ REPLACE INTO `mob_db2` VALUES (3611,'IMPERIAL_GUARD','Imperial_Guard','Imperial 
 -- Invasion Event
 REPLACE INTO `mob_db2` VALUES (3612,'INVADING_WARRIOR','Invading_Warrior','Invading Warrior',52,8613,0,3410,1795,1,830,930,40,15,58,47,42,5,69,26,10,12,2,7,47,12437,150,824,780,420,0,0,0,0,0,0,0,40001,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 REPLACE INTO `mob_db2` VALUES (3613,'INVADING_ARCHER','Invading_Archer','Invading Archer',52,5250,0,3025,2125,9,415,500,35,5,15,25,22,5,145,35,10,12,1,6,47,33562757,200,1152,1152,480,0,0,0,0,0,0,0,40001,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-REPLACE INTO `mob_db2` VALUES (2475,'MG_CORRUPTION_ROOT','Root of Corruption','Root of Corruption',250,1820000,1,2199906,2008478,8,13887,13887,50,50,201,20,90,201,201,20,10,12,2,6,28,0x6280084,2000,576,672,480,0,0,0,0,0,0,0,40001,10000,40001,10000,40001,10000,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+REPLACE INTO `mob_db2` VALUES (2475,'MG_CORRUPTION_ROOT','Root of Corruption','Root of Corruption',250,1820000,1,2199906,2008478,8,13887,13887,50,50,201,20,90,201,201,20,10,12,2,6,88,0x6280084,2000,576,672,480,0,0,0,0,0,0,0,40001,10000,40001,10000,40001,10000,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 
 -- Gathering Nodes
@@ -736,8 +736,10 @@ REPLACE INTO `mob_db2` VALUES (3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0
 REPLACE INTO `mob_skill_db2` VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- Invasion Event
-REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,5,2000,3000,1000,'no','randomtarget','longrangeattacked',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,5,2000,3000,1000,'no','randomtarget','casttargeted',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,1500,1000,'no','randomtarget','longrangeattacked',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,1500,1000,'no','randomtarget','casttargeted',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,1500,3000,'no','randomtarget','longrangeattacked',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,1500,3000,'no','randomtarget','casttargeted',NULL,NULL,NULL,NULL,NULL,NULL,'6',NULL);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
