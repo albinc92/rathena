@@ -1,0 +1,112 @@
+-	script	mobinvasion	-1,{
+
+OnInit:
+	set .cleared, 1;
+	//end;
+
+OnClock0100:
+OnClock0300:
+OnClock0500:
+OnClock0700:
+OnClock0900:
+OnClock1100:
+OnClock1300:
+OnClock1500:
+OnClock1700:
+OnClock1900:
+OnClock2100:
+OnClock2300:
+	if(agitcheck()) {
+		end;
+	}
+	if(.cleared == 1) {
+		set .cleared, 0;
+	} else {
+		announce "[Continental Guard] : A monster invasion is still going strong in " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+		end;
+	}
+	
+	setarray .maps$[0],"ama_fild","ayo_fild","cmd_fild","ein_fild","gef_fild","gon_fild","hu_fild","lhz_fild","lou_fild","xmas_fild","man_fild","moc_fild","mjolnir_","mosk_fild","nif_fild","pay_fild","prt_fild","ra_fild","spl_fild","um_fild","ve_fild","yuno_fild";
+	setarray .MapCount[0],1,2,9,10,14,1,7,3,1,1,3,3,12,2,2,11,11,13,3,4,7,12;
+
+	set .mapIndex, rand(0, (getarraysize(.maps$) - 1));
+	set .mapNo, .MapCount[.mapIndex];
+
+	set .mapNo$, "" + .mapNo;
+	if(.mapNo < 10) {
+		set .mapNo$, "0" + .mapNo$;
+	}
+
+	if (.maps$[.mapIndex] == "ama_fild") {
+		set .map3$, "Amatsu Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "ayo_fild") {
+		set .map3$, "Ayothaya Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "cmd_fild") {
+		set .map3$, "Comodo Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "ein_fild") {
+		set .map3$, "Einbroch Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "gef_fild") {
+		set .map3$, "Geffen Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "gon_fild") {
+		set .map3$, "Gonryun Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "hu_fild") {
+		set .map3$, "Hugel Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "lhz_fild") {
+		set .map3$, "Lighthalzen Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "lou_fild") {
+		set .map3$, "Louyang Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "xmas_fild") {
+		set .map3$, "Lutie Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "man_fild") {
+		set .map3$, "Manuk Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "moc_fild") {
+		set .map3$, "Morocc Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "mjolnir_") {
+		set .map3$, "Mt. Mjolnir " + .mapNo;
+	} else if (.maps$[.mapIndex] == "mosk_fild") {
+		set .map3$, "Moscovia Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "nif_fild") {
+		set .map3$, "Niflheim Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "pay_fild") {
+		set .map3$, "Payon Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "prt_fild") {
+		set .map3$, "Prontera Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "ra_fild") {
+		set .map3$, "Rachel Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "ra_fild") {
+		set .map3$, "Rachel Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "spl_fild") {
+		set .map3$, "Splendide Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "um_fild") {
+		set .map3$, "Umbala Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "ve_fild") {
+		set .map3$, "Veins Field " + .mapNo;
+	} else if (.maps$[.mapIndex] == "yuno_fild") {
+		set .map3$, "Yuno Field " + .mapNo;
+	}
+
+	set .map2$, .maps$[.mapIndex] + .mapNo$;
+	announce "[Continental Guard] : Warning! A monster invasion has begun in " + .map3$ + "!",bc_all,0x00FFFF,FW_NORMAL,16;
+	
+	set .amnt1, rand(23, 43);
+	set .amnt2, rand(23, 33);
+	set .mobTot, .amnt1 + .amnt2;
+	monster .map2$,0,0,"Invading Monster",3612,.amnt1,strnpcinfo(0)+"::OnMonsterDead";
+	monster .map2$,0,0,"Invading Monster",3613,.amnt2,strnpcinfo(0)+"::OnMonsterDead";
+	end;
+
+OnMonsterDead:
+	set .mobTot, .mobTot-1;
+	mapannounce .map2$,.mobTot + " monsters remain!",bc_blue;
+	if(.mobTot == 0) {
+		mapannounce .map2$,"[Continental Guard] : Beware! We've had sightings of a huge monstrosity!",bc_blue;
+		monster .map2$,0,0,"Root of Invasion",2475,1,strnpcinfo(0)+"::OnBossDead",2;
+	}
+	end;
+
+OnBossDead:
+	set .cleared, 1;
+	announce "The monster invasion has been repelled! Congratulations!",bc_all,0x00FFFF,FW_NORMAL,16;
+	end;
+
+}
