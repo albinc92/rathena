@@ -1848,6 +1848,7 @@ L_Enchant:
 
 	set .@optAmt, 0;
     set .@r, rand(1, (350 - (.@Enchanting / 3)));
+	message strcharinfo(0),".@r = " + .@r;
     if(.@r < 251 && .@r > 125) {
         .@optAmt = 1;
     } else if(.@r < 126 && .@r > 62) {
