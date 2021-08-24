@@ -1913,12 +1913,25 @@ L_Enchant:
 				15, 15, 4, 15;
 
 		// Set affixes and check that no duplicates exist
-		setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
-		for(set .@i, 4; .@i >= 0; .@i--) {
-			for(set .@j, .@i - 1; .@j >= 0; .@j--) {
-				if(.@index[.@j] == .@index[.@i]) {
-					message strcharinfo(0),"The enchanting process failed.";
-					goto L_End;
+		if(.@optAmt == 1) {
+			setarray .@index[0], rand(getarraysize(.@weaponid));
+		} else if(.@optAmt == 2) {
+			setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
+		} else if(.@optAmt == 3) {
+			setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
+		} else if(.@optAmt == 4) {
+			setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
+		} else {
+			setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
+		}
+		
+		if(getarraysize(@index) > 1) {
+			for(set .@i, getarraysize(@index); .@i > 0; .@i--) {
+				for(set .@j, .@i - 1; .@j == 0; .@j--) {
+					if(.@index[.@j] == .@index[.@i]) {
+						message strcharinfo(0),"The enchanting process failed.";
+						goto L_End;
+					}
 				}
 			}
 		}
