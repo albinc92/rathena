@@ -1964,14 +1964,14 @@ L_Enchant:
 	specialeffect2 65;
 	delitem .@item, .@amnt;
 	set .@increase, rand(1, 3);
-	if((.@Enchanting + .@increase) < 300) {
+	if(.@Enchanting < 300) {
 		set .@Enchanting, (.@Enchanting + .@increase);
 		if(.@Enchanting > 300) {
 			set .@Enchanting, 300;
 		}
 		query_sql("UPDATE `gathering` SET `Enchanting` = " + .@Enchanting + " WHERE `char_id` = " + getcharid(0));
 	}
-	message strcharinfo(0),"Your [Enchanting] skill increased to " + .@increase + "!";
+	message strcharinfo(0),"Your [Enchanting] skill increased to " + .@Enchanting + "!";
 	goto L_End;
 
 
