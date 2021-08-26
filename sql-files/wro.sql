@@ -747,8 +747,8 @@ REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','a
 REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','idle',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_SIGHTRASHER','attack',81,10,1000,0,20000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WL_FROSTMISTY','attack',2203,5,5000,0,10000,'no','target','always','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@NPC_WIDESLEEP','attack',668,5,2000,500,5000,'no','self','always','0',NULL,NULL,NULL,NULL,NULL,'2',NULL);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
