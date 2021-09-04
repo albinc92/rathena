@@ -42,7 +42,8 @@ OnPCLoginEvent:
 		"Use the @commands atcommand to see what atcommands are available for use.",
 		"It is possible to receive cards such as Tendrillion, Naght Sieger, or Duneyrr from Mystical Card Albums.",
 		"You can enchant and disenchant random magic option upon your equipment at The Warlock's Domain in Royal.",
-		"Speak with the Guide on the main plaza in Royal for directions to noteworthy services that exist in town.";
+		"Speak with the Guide on the main plaza in Royal for directions to noteworthy services that exist in town.",
+		"You earn Zeny each time you kill a monster. Type @showzeny to toggle your monetary gains on/off in the chat window.";
 
     set .@index, rand(0, getarraysize(.@hints$));
 L_NextHint:
