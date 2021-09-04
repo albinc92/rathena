@@ -159,3 +159,5 @@ Body:
     Sprite: RAYDRIC
   - Mob: INVADING_ARCHER
     Sprite: RAYDRIC_ARCHER
+  - Mob: INVADING_BOSS
+    Sprite: AB_ARTHUR

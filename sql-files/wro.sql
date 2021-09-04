@@ -712,7 +712,7 @@ REPLACE INTO `mob_db2` VALUES (3611,'IMPERIAL_GUARD','Imperial_Guard','Imperial 
 -- Invasion Event
 REPLACE INTO `mob_db2` VALUES (3612,'INVADING_WARRIOR','Invading_Warrior','Invading Warrior',52,8613,0,3410,1795,1,830,930,40,15,58,47,42,5,69,26,10,12,2,7,47,12437,150,824,780,420,0,0,0,0,0,0,0,40001,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 REPLACE INTO `mob_db2` VALUES (3613,'INVADING_ARCHER','Invading_Archer','Invading Archer',52,5250,0,3025,2125,9,415,500,35,5,15,25,22,5,145,35,10,12,1,6,47,33562757,200,1152,1152,480,0,0,0,0,0,0,0,40001,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-REPLACE INTO `mob_db2` VALUES (2475,'MG_CORRUPTION_ROOT','Root of Corruption','Root of Corruption',250,1820000,1,2199906,2008478,21,13887,13887,50,50,201,20,90,201,201,20,21,21,2,6,88,0x6280084,2000,576,672,480,0,0,0,0,0,0,0,40001,10000,40001,10000,40001,10000,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Commander',99,4290000,1,2291324,2197024,3,5290,3900,30,40,255,39,90,169,166,20,10,12,2,1,89,0x6283695,120,312,1200,432,0,0,0,0,0,0,0,616,5000,617,10000,6607,5000,607,10000,1186,1000,1004,10000,0,0,0,0,0,0,4601,1);
 
 -- Emperium
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
@@ -738,19 +738,13 @@ REPLACE INTO `mob_db2` VALUES (3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- Imperial Guards
-REPLACE INTO `mob_skill_db2` VALUES (3611,'IMPERIAL_GUARD@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `mob_skill_db2` VALUES (3611,'Imperial Guard@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 -- Invasion Event
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@AL_TELEPORT','idle',26,1,10000,0,0,'yes','self','rudeattacked',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,2500,3000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','idle',91,99,2000,2500,3000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,2500,1000,'no','randomtarget','longrangeattacked',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WZ_HEAVENDRIVE','attack',91,99,2000,2500,1000,'no','randomtarget','casttargeted',0,NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','idle',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
-REPLACE INTO `mob_skill_db2` VALUES (2475,'Root of Corruption@WL_FROSTMISTY','attack',2203,5,5000,0,10000,'no','target','always','0',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-REPLACE INTO `mob_skill_db` VALUES (2475,'Root of Corruption@NPC_WIDESLEEP','attack',668,5,2000,500,5000,'no','self','always','0',NULL,NULL,NULL,NULL,NULL,'2',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@AL_TELEPORT','idle',26,1,10000,0,0,'yes','self','rudeattacked',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','idle',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
