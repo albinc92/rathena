@@ -126,7 +126,7 @@ OnBreak:
 	set .occupied, 0;
 	end;
 
-OnTimer30000:
+OnTimer120000:
 	mapannounce "job3_arch01","Yeah you're way too slow for this... I'll just kick you outta here~~",bc_blue;
 	sleep 3000;
 	delwaitingroom;
