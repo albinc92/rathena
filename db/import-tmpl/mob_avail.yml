@@ -155,3 +155,7 @@ Body:
     Sprite: PURPLESTONE
   - Mob: NODE_LVL5
     Sprite: PURPLESTONE
+  - Mob: INVADING_WARRIOR
+    Sprite: RAYDRIC
+  - Mob: INVADING_ARCHER
+    Sprite: RAYDRIC_ARCHER
