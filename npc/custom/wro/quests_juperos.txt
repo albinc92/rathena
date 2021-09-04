@@ -1820,7 +1820,11 @@ OnTimer1200000:
 	end;
 
 OnTouch_:
-	warp "jupe_gate",50,167;
+	if(q_jupe) {
+		warp "jupe_core",rand(149,151),286;
+	} else {
+		warp "jupe_gate",50,167;
+	}
 	end;
 }
 
@@ -4900,11 +4904,11 @@ OnTimer22000:
 	disablenpc "4F Enter#ufe";
 	end;
 
-OnTimer24000:
+OnTimer34000:
 	mapwarp "jupe_ele","jupe_core",150,286;
 	end;
 
-OnTimer25000:
+OnTimer35000:
 	mapwarp "jupe_ele","jupe_core",151,286;
 	end;
 
@@ -4922,6 +4926,7 @@ OnInit:
 	end;
 
 OnTouch_:
+	set q_jupe,1;
 	warp "jupe_core",rand(149,151),286;
 	end;
 }
