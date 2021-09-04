@@ -77,8 +77,22 @@ roy_in02,132,122,4	script	Emperium Breaker	467,{
 OnPCLoadMapEvent:
 	if(strcharinfo(3) == "job3_arch01") {
 		sleep 2000;
-		mapannounce "job3_arch01","Alright, you have three seconds to get ready...",bc_blue;
+		mapannounce "job3_arch01","Alright, you have ten seconds to get ready...",bc_blue;
 		sleep 3000;
+		mapannounce "job3_arch01","10...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","9...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","8...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","7...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","6...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","5...",bc_blue;
+		sleep 1000;
+		mapannounce "job3_arch01","4...",bc_blue;
+		sleep 1000;
 		mapannounce "job3_arch01","3...",bc_blue;
 		sleep 1000;
 		mapannounce "job3_arch01","2...",bc_blue;
