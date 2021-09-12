@@ -19,12 +19,12 @@ royal,0,0,3	script	Treasure Chest#1	10005,{
         end;
     }
 
-    setarray .@items[0],670,671,672,673,674,675,676,677,718,719,720,721,722,723,725,726,727,728,729,730,731,732,969,12103,40006,40008;
-    set .@MAX_ITEMS, 10;
+    setarray .@items[0],670,671,672,673,674,675,676,677,718,719,720,721,722,723,725,726,727,728,729,730,731,732,969,12103,40006,40008,40056;
+	set .@MAX_ITEMS, rand(5, 5 + ((readparam(bLuk) / 100) * 2));
     progressbar "0xffff00",3;
 	specialeffect EF_COIN;
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
-	for(set .@i, 5; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
+	for(set .@i, 0; .@i <= .@MAX_ITEMS; set .@i, .@i+1) {
 	    set .@x2, rand((.@x_npc-1),(.@x_npc+1));
 	    set .@y2, rand((.@y_npc-1),(.@y_npc+1));
 	    makeitem .@items[rand(0,getarraysize(.@items)-1)],1, strnpcinfo(4), .@x2, .@y2;
