@@ -1,7 +1,7 @@
 //======================================================================================================================
 //                                                    NPCs
 //======================================================================================================================
-royal,142,125,6	script	Continenal Scout#1	654,{
+royal,142,125,3	script	Continenal Scout#1	654,{
 
 	set .cleared, getvariableofnpc(.cleared, "mobinvasion");
 	set .map3$, getvariableofnpc(.map3$, "mobinvasion");

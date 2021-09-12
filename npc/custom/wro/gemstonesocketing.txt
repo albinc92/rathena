@@ -1,7 +1,7 @@
-roy_in02,232,40,3	script	Socketing Craftsman#r1	10301,{
+roy_in02,232,40,3	script	Socketing Craftsman#r1	951,{
     setarray .@cost[0],10000,20000,40000;
 
-	cutin "ep171_elyumina01.bmp",2;
+	cutin "arquien_n_atnad03",2;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Hello ^0000FF"+strcharinfo(0)+"^000000, I am the Socketing Craftsman. I can socket gems into your equipment for additional bonuses.";
 	next;
