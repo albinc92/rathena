@@ -42,7 +42,7 @@ L_Main:
 		mes "["+strnpcinfo(1)+"]";
 		mes "Adventurers who brave the danger of facing these monsters will be rewarded with ^ff0000Event Tokens^000000.";
 		next;
-		goto L_Main:
+		goto L_Main;
 	}
 	close2;
 	cutin "", 255;
