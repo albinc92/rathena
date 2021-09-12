@@ -448,7 +448,7 @@ VALUES (40006,'Sld_Card_Album','Sealed Card Album','Usable',10000,50,true,true,'
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
 VALUES (40056,'Bloody_Card_Album','Bloody Card Album','Usable',10000,50,true,true,'getrandgroupitem(IG_BLOODYALBUM),1;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
-VALUES (40057,'Card_Booster_Box','Card Booster Box','Usable',10000,50,true,true,'getrandgroupitem(IG_CARDALBUM),3; getrandgroupitem(IG_MagicCardAlbum),2; set .@rng, rand(1, 3); if(.@rng > 1) { getrandgroupitem(IG_SLDCARDALBUM),1; } else { getrandgroupitem(IG_BLOODYALBUM),1; };');
+VALUES (40057,'Card_Booster_Box','Card Booster Box','Usable',10000,50,true,true,'set .@rng, rand(1, 3); if(.@rng > 1) { getrandgroupitem(IG_SLDCARDALBUM),1; } else { getrandgroupitem(IG_BLOODYALBUM),1; }; getrandgroupitem(IG_MagicCardAlbum),1; getrandgroupitem(IG_MagicCardAlbum),1; getrandgroupitem(IG_CARDALBUM),1; getrandgroupitem(IG_CARDALBUM),1; getrandgroupitem(IG_CARDALBUM),1;');
 
 -- Hat Box
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)

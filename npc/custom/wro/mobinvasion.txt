@@ -51,7 +51,7 @@ L_Main:
 OnPCLoadMapEvent:
 OnInit:
 	set .cleared, getvariableofnpc(.cleared, "mobinvasion");
-	if(.cleared) {
+	if(.cleared != 0) {
     	showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
 	}
 	end;
