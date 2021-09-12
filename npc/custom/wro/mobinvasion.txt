@@ -1,3 +1,74 @@
+//======================================================================================================================
+//                                                    NPCs
+//======================================================================================================================
+royal,142,125,6	script	Continenal Scout#1	654,{
+
+	set .cleared, getvariableofnpc(.cleared, "mobinvasion");
+	set .map3$, getvariableofnpc(.map3$, "mobinvasion");
+
+L_Main:
+	if(.cleared == 1) {
+		cutin "gl_barmund2.bmp",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "I am glad to annouce there are currently no known monster invasions present at this time.";
+	} else {
+		cutin "gl_barmund3.bmp",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "A monster invasion is currently ongoing in ^ff0000" + .map3$ + "^000000! Please assist the Continental Guard in repelling this threat!";
+	}
+
+	set .@menu, select("Information:Cancel");
+	if(.@menu == 1) {
+		cutin "gl_barmund1.bmp",2;
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Lately, we have seen an increased presence of monsters roaming the countryside.";
+		next;
+		cutin "gl_barmund1.bmp",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "They appear every once in a while, seemingly at random, and in huge numbers.";
+		next;
+		cutin "gl_barmund3.bmp",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "The Continental Guard has been hard at work eradicating these... monster invasions.";
+		next;
+		cutin "gl_barmund1.bmp",2;
+		mes "["+strnpcinfo(1)+"]";
+		mes "We gladly accept any help we can get!";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Especially against the nuisance boss monsters that appear whenever the minor monsters have all been cleared out.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "Adventurers who brave the danger of facing these monsters will be rewarded with ^ff0000Event Tokens^000000.";
+		next;
+		goto L_Main:
+	}
+	close2;
+	cutin "", 255;
+	end;
+
+OnPCLoadMapEvent:
+OnInit:
+	set .cleared, getvariableofnpc(.cleared, "mobinvasion");
+	if(.cleared) {
+    	showevent QTYPE_QUEST, QMARK_NONE, getcharid(0);
+	}
+	end;
+}
+
+
+
+//======================================================================================================================
+//                                                    Mapflags
+//======================================================================================================================
+royal	mapflag	loadevent
+
+
+
+//======================================================================================================================
+//                                                    Scripts
+//======================================================================================================================
 -	script	mobinvasion	-1,{
 
 OnInit:
