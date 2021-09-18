@@ -435,6 +435,18 @@ VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,tr
 
 -- Ring of Transendence
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`job_all`,`location_right_accessory`,`location_left_accessory`,`equip_level_min`,`script`) VALUES (40058,'Merchants_Ring','Merchant's Ring','Armor',0,100,true,true,true,1,'skill "MC_PUSHCART",10; skill "MC_DISCOUNT",10; skill "MC_OVERCHARGE",10; skill "MC_VENDING",10;');
+UPDATE `item_db2`
+SET `trade_nodrop` = true,
+    `trade_notrade` = true,
+    `trade_tradepartner` = true,
+    `trade_nosell` = true,
+    `trade_nocart` = false,
+    `trade_nostorage` = false,
+    `trade_noguildstorage` = true,
+    `trade_nomail` = true,
+    `trade_noauction` = true
+WHERE `id` IN (2601);
 
 -- Costume Garments
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_garment`,`view`)
@@ -661,6 +673,7 @@ VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 -- Item Cash DB
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 1 FROM `item_db2` WHERE `id` IN (40008);
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 3 FROM `item_db2` WHERE `id` IN (40057);
+REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40058);
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40055, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 40039, 40031, 40015) ORDER BY `name_aegis`;
 
 -- Enchanting Consumable
