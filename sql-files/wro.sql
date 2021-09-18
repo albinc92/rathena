@@ -359,7 +359,7 @@ VALUES (4488,'Sealed_D_Lord_Card','Sealed Dark Lord Card','Card',20,10,true,true
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 VALUES (4489,'Sealed_Pharaoh_Card','Sealed Pharaoh Card','Card',20,10,true,true,true,true,'bonus bUseSPrate,-15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (4490,'Sealed_M_Flower_Card','Sealed Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,15; bonus bFleeRate,5;');
+VALUES (4490,'Sealed_M_Flower_Card','Sealed Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,20; bonus bFleeRate,5;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4491,'Sealed_B_Shecil_Card','Sealed Sniper Card','Card',20,10,true,true,'bonus2 bHPDrainRate,50,10; bonus bHPrecovRate,-100;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
