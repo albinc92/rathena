@@ -435,7 +435,7 @@ VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,tr
 
 -- Ring of Transendence
 -- REPLACE INTO `item_db2` VALUES (40000,'3rd_Job_Ring','Seal of Transcendence',4,0,0,100,NULL,NULL,NULL,1,4294967295,7,2,136,NULL,250,0,0,'bonus bAllStats,3; bonus bMdef,3;',NULL,NULL);
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`job_all`,`location_right_accessory`,`location_left_accessory`,`equip_level_min`,`script`) VALUES (40058,'Merchants_Ring','Merchants Ring','Armor',0,100,true,true,true,1,'skill "MC_PUSHCART",10; skill "MC_DISCOUNT",10; skill "MC_OVERCHARGE",10; skill "MC_VENDING",10;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`job_all`,`location_right_accessory`,`location_left_accessory`,`equip_level_min`,`script`) VALUES (40058,'Merchants_Ring','Merchants Ring','Armor',0,100,true,true,true,1,'skill "MC_PUSHCART",10; skill "MC_DISCOUNT",10; skill "MC_OVERCHARGE",10; skill "MC_VENDING",10; skill "MC_CHANGECART",1;');
 UPDATE `item_db2`
 SET `trade_nodrop` = true,
     `trade_notrade` = true,
