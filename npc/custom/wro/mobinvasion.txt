@@ -171,7 +171,7 @@ OnMonsterDead:
 	mapannounce .map2$,.mobTot + " monsters remain!",bc_blue;
 	if(.mobTot == 0) {
 		mapannounce .map2$,"[Continental Guard] : Beware! A huge monstrosity has appeared!",bc_blue;
-		monster .map2$,0,0,"Root of Invasion",2475,1,strnpcinfo(0)+"::OnBossDead",2;
+		monster .map2$,0,0,"Root of Invasion",2476,1,strnpcinfo(0)+"::OnBossDead",2;
 	}
 	end;
 
