@@ -301,7 +301,7 @@ VALUES (4352,'B_Ygnizem_Card','General Egnigem Cenia Card','Card',20,10,true,tru
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (27162,'Gopinich_Card','Gopinich Card','Card',20,10,true,true,true,'bonus bMatk,(JobLevel/4); bonus bFlee2,(JobLevel/4); bonus bFlee,(JobLevel/4); bonus3 bAutoSpellWhenHit,"NPC_DRAGONFEAR",5,10;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",1,(30+70*(readparam(bStr)>=250)),BF_MAGIC,0;');
+VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",1,(75+175*(readparam(bStr)>=250)),BF_MAGIC,0;');
 
 -- Mini Boss Cards
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
@@ -427,7 +427,7 @@ VALUES (32309,'Sealed_Thanatos_Card','Sealed Memory of Thanatos Card','Card',20,
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (32310,'Sealed_Nidhogg_Shadow_Card','Sealed Nidhoggurs Shadow Card','Card',20,10,true,true,'bonus bInt,3; if (Class == Job_High_Wizard || Class == Job_Baby_Warlock || Class == Job_Warlock || Class == Job_Warlock_T) bonus bFixedCastrate,-25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",1,(15+35*(readparam(bStr)>=250)),BF_MAGIC,0;');
+VALUES (32311,'Sealed_W_Morocc_Card','Sealed Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus5 bAutoSpellWhenHit,"NPC_MAGICMIRROR",1,(38+87*(readparam(bStr)>=250)),BF_MAGIC,0;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (32312,'Sealed_Gopinich_Card','Sealed Gopinich Card','Card',20,10,true,true,true,'bonus bMatk,(JobLevel/8); bonus bFlee2,(JobLevel/8); bonus bFlee,(JobLevel/8); bonus3 bAutoSpellWhenHit,"NPC_DRAGONFEAR",3,10;');
 
