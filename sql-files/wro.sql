@@ -301,7 +301,7 @@ VALUES (4352,'B_Ygnizem_Card','General Egnigem Cenia Card','Card',20,10,true,tru
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (27162,'Gopinich_Card','Gopinich Card','Card',20,10,true,true,true,'bonus bMatk,(JobLevel/4); bonus bFlee2,(JobLevel/4); bonus bFlee,(JobLevel/4); bonus3 bAutoSpellWhenHit,"NPC DRAGONFEAR",5,10;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"NPC MAGICMIRROR",1,(30+70*(readparam(bStr)>=250));');
+VALUES (32315,'W_Morocc_Card','Wounded Morocc Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"NPC_MAGICMIRROR",1,(30+70*(readparam(bStr)>=250));');
 
 -- Mini Boss Cards
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
