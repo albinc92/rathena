@@ -229,7 +229,7 @@ VALUES (4142,'Doppelganger_Card','Doppelganger Card','Card',20,10,true,true,'bon
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 -- VALUES (4134,'Dracula_Card','Dracula Card','Card',20,10,true,true,'bonus2 bSPDrainRate,100,5;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4137,'Drake_Card','Drake Card','Card',20,10,true,true,'bonus bNoSizeFix; bonus2 bAddMonsterDropItem,7444,10;');
+VALUES (4137,'Drake_Card','Drake Card','Card',20,10,true,true,'bonus bNoSizeFix; bonus2 bAddMonsterDropItem,7721,10;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 -- VALUES (4123,'Eddga_Card','Eddga Card','Card',20,10,true,true,'bonus bMaxHPrate,-10; bonus bNoWalkDelay;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
@@ -369,7 +369,7 @@ VALUES (4494,'Sealed_TurtleG_Card','Sealed Turtle General Card','Card',20,10,tru
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
 VALUES (4495,'Sealed_Amon_Ra_Card','Sealed Amon Ra Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",5,(30+70*(readparam(bInt)>=250));');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4496,'Sealed_Drake_Card','Sealed Drake Card','Card',20,10,true,true,'bonus bNoSizeFix; bonus2 bAddMonsterDropItem,7444,5;');
+VALUES (4496,'Sealed_Drake_Card','Sealed Drake Card','Card',20,10,true,true,'bonus bNoSizeFix; bonus2 bAddMonsterDropItem,7721,5;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4497,'Sealed_Knight_WS_Card','Sealed Stormy Knight Card','Card',20,10,true,true,'bonus3 bAutoSpell,"WZ_STORMGUST",1,20; bonus2 bAddEff,Eff_Freeze,1000;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
@@ -683,6 +683,8 @@ UPDATE `item_db2` SET `id` = 1006, `name_aegis` = 'Old_Magic_Book', `name_englis
 -- Misc fixes
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
 UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddClass,Class_All,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; skill "GM_SANDMAN",1; bonus bDelayRate,-100;' WHERE `id` = 1599;
+REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 7721;   -- Drake Card Drop
+UPDATE `item_db2` SET `price_sell` = 1000 WHERE `id` = 7721;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_db2
