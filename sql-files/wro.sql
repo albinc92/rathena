@@ -684,7 +684,7 @@ UPDATE `item_db2` SET `id` = 1006, `name_aegis` = 'Old_Magic_Book', `name_englis
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
 UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddClass,Class_All,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; skill "GM_SANDMAN",1; bonus bDelayRate,-100;' WHERE `id` = 1599;
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 7721;   -- Drake Card Drop
-UPDATE `item_db2` SET `price_sell` = 1000 WHERE `id` = 7721;
+UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_db2
