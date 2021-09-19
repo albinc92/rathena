@@ -272,8 +272,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4131,'Moonlight_Flower_Card','Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,50; bonus bFleeRate,10;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 -- VALUES (4143,'Orc_Hero_Card','Orc Hero Card','Card',20,10,true,true,true,true,'bonus bVit,3; bonus2 bResEff,Eff_Stun,10000;');
--- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
--- VALUES (4135,'Orc_Load_Card','Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,30;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+VALUES (4135,'Orc_Load_Card','Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,30;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4144,'Osiris_Card','Osiris Card','Card',20,10,true,true,true,'skill "SL_KAIZEL",7;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
@@ -376,7 +376,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4498,'Sealed_Lady_Tanee_Card','Sealed Lady Tanee Card','Card',20,10,true,true,'bonus bMaxHPrate,-20; bonus bMaxSPrate,25; bonus2 bAddMonsterDropItem,513,200; bonus2 bAddItemHealRate,513,300;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
 VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;','if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
 VALUES (4500,'Sealed_Orc_Load_Card','Sealed Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4501,'Sealed_B_Magaleta_Card','Sealed High Priest Card','Card',20,10,true,true,true,'bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,25,BF_WEAPON|BF_MAGIC,0;');
