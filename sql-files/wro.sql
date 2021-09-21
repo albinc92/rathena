@@ -212,8 +212,8 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4236,'Amon_Ra_Card','Amon Ra Card','Card',20,10,true,true,'bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=250));');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_garment`,`flag_buyingstore`,`script`,`unequip_script`)
 -- VALUES (4359,'B_Eremes_Card','Assassin Cross Card','Card',20,10,true,true,'skill "AS_CLOAKING",3;','sc_end SC_CLOAKING;');
--- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
--- VALUES (4425,'Atroce_Card','Atroce Card','Card',20,10,true,true,'bonus bBaseAtk,75; autobonus "{ bonus bAspdRate,100; }",5,10000,0,"{ specialeffect2 EF_POTION_BERSERK; }";');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
+VALUES (4425,'Atroce_Card','Atroce Card','Card',20,10,true,true,'bonus bAtkRate,10; bonus bMaxSPrate,-50; bonus2 bAddRace,RC_Angel,50; bonus2 bAddRace,RC_DemiHuman,50;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4372,'Bacsojin_Card','White Lady Card','Card',20,10,true,true,'bonus bHealPower,15; bonus bUseSPrate,7;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
@@ -234,8 +234,8 @@ VALUES (4137,'Drake_Card','Drake Card','Card',20,10,true,true,'bonus bNoSizeFix;
 -- VALUES (4123,'Eddga_Card','Eddga Card','Card',20,10,true,true,'bonus bMaxHPrate,-10; bonus bNoWalkDelay;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 -- VALUES (4330,'Dark_Snake_Lord_Card','Evil Snake Lord Card','Card',20,10,true,true,true,true,'bonus bInt,3; bonus2 bResEff,Eff_Blind,10000; bonus2 bResEff,Eff_Curse,10000;');
--- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
--- VALUES (4441,'Fallen_Bishop_Card','Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,10; bonus bMaxSPrate,-50; bonus2 bMagicAddRace,RC_Angel,50; bonus2 bMagicAddRace,RC_DemiHuman,50; bonus2 bMagicAddRace,RC_Player_Human,50;');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
+VALUES (4441,'Fallen_Bishop_Card','Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,10; bonus bMaxSPrate,-50; bonus2 bMagicAddRace,RC_Angel,50; bonus2 bMagicAddRace,RC_DemiHuman,50;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 -- VALUES (4324,'Garm_Card','Hatii Card','Card',20,10,true,true,'bonus2 bAddEffWhenHit,Eff_Freeze,5000;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
@@ -272,7 +272,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4131,'Moonlight_Flower_Card','Moonlight Flower Card','Card',20,10,true,true,'bonus bSpeedRate,50; bonus bFleeRate,10;');
 -- REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
 -- VALUES (4143,'Orc_Hero_Card','Orc Hero Card','Card',20,10,true,true,true,true,'bonus bVit,3; bonus2 bResEff,Eff_Stun,10000;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4135,'Orc_Load_Card','Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,30;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4144,'Osiris_Card','Osiris Card','Card',20,10,true,true,true,'skill "SL_KAIZEL",7;');
@@ -376,7 +376,7 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4498,'Sealed_Lady_Tanee_Card','Sealed Lady Tanee Card','Card',20,10,true,true,'bonus bMaxHPrate,-20; bonus bMaxSPrate,25; bonus2 bAddMonsterDropItem,513,200; bonus2 bAddItemHealRate,513,300;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`,`unequip_script`)
 VALUES (4499,'Sealed_Samurai_Card','Sealed Incantation Samurai Card','Card',20,10,true,true,'bonus bIgnoreDefClass,Class_Normal; bonus bHPrecovRate,-100; bonus2 bHPLossRate,666,5000;','if((Hp <= 1998) && !getmapflag(strcharinfo(3),mf_pvp) && !getmapflag(strcharinfo(3),mf_pvp_noparty) && !getmapflag(strcharinfo(3),mf_pvp_noguild)) { heal (1-Hp),0; } else { heal -1998,0; }');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4500,'Sealed_Orc_Load_Card','Sealed Orc Lord Card','Card',20,10,true,true,'bonus bShortWeaponDamageReturn,15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_accessory`,`location_left_accessory`,`flag_buyingstore`,`script`)
 VALUES (4501,'Sealed_B_Magaleta_Card','Sealed High Priest Card','Card',20,10,true,true,true,'bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,25,BF_WEAPON|BF_MAGIC,0;');
@@ -388,14 +388,14 @@ REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`we
 VALUES (4504,'Sealed_Eddga_Card','Sealed Eddga Card','Card',20,10,true,true,'bonus bMaxHPrate,-20; bonus bNoWalkDelay;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4535,'Sealed_Rand_Card','Sealed Valkyrie Randgris Card','Card',20,10,true,true,'bonus bUnbreakableWeapon; bonus2 bAddClass,Class_All,5; bonus3 bAutoSpell,"SA_DISPELL",1,25;');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
-VALUES (4536,'Sealed_Atroce_Card','Sealed Atroce Card','Card',20,10,true,true,'bonus bBaseAtk,38; autobonus "{ bonus bAspdRate,50; }",5,10000,0,"{ specialeffect2 EF_POTION_BERSERK; }";');
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
+VALUES (4536,'Sealed_Atroce_Card','Sealed Atroce Card','Card',20,10,true,true,'bonus bAtkRate,5; bonus bMaxSPrate,-25; bonus2 bAddRace,RC_Angel,25; bonus2 bAddRace,RC_DemiHuman,25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4537,'Sealed_Phreeoni_Card','Sealed Phreeoni Card','Card',20,10,true,true,'bonus bHit,125;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4538,'Sealed_Bacsojin_Card','Sealed White Lady Card','Card',20,10,true,true,'bonus bHealPower,7; bonus bUseSPrate,15;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
-VALUES (4539,'Sealed_F_Bishop_Card','Sealed Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,5; bonus bMaxSPrate,-75; bonus2 bMagicAddRace,RC_Angel,25; bonus2 bMagicAddRace,RC_DemiHuman,25; bonus2 bMagicAddRace,RC_Player_Human,25;');
+VALUES (4539,'Sealed_F_Bishop_Card','Sealed Fallen Bishop Hibram Card','Card',20,10,true,true,'bonus bMatkRate,5; bonus bMaxSPrate,-75; bonus2 bMagicAddRace,RC_Angel,25; bonus2 bMagicAddRace,RC_DemiHuman,25;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4540,'SLD_Lord_Of_Death_Card','Sealed Lord of The Dead Card','Card',20,10,true,true,'bonus3 bAddEff,Eff_Stun,250,ATF_SHORT; bonus3 bAddEff,Eff_Curse,250,ATF_SHORT; bonus3 bAddEff,Eff_Silence,250,ATF_SHORT; bonus3 bAddEff,Eff_Poison,250,ATF_SHORT; bonus3 bAddEff,Eff_Bleeding,250,ATF_SHORT; bonus2 bComaClass,Class_Normal,1;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_head_top`,`location_head_mid`,`location_head_low`,`flag_buyingstore`,`script`)
