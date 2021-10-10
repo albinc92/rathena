@@ -690,6 +690,63 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 --                                                      mob_db2
 -- ---------------------------------------------------------------------------------------------------------------------
 
+-- Remove all equipment from monster drop tables
+REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop2id` = 0 WHERE `Drop2id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop3id` = 0 WHERE `Drop3id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop4id` = 0 WHERE `Drop4id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop5id` = 0 WHERE `Drop5id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop6id` = 0 WHERE `Drop6id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop7id` = 0 WHERE `Drop7id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop8id` = 0 WHERE `Drop8id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+UPDATE `mob_db2` SET `Drop9id` = 0 WHERE `Drop9id` IN (
+    SELECT `id` FROM `item_db` WHERE `type` IN (
+        'Weapon',
+        'Armor'
+    )
+);
+
 -- Add new cards to mob drops
 -- First, create copies of mobs in mob_db2
 -- Then, add their respective card to the mob_db2 entry
