@@ -9,7 +9,7 @@ OnNPCKillEvent:
 	}
 
 	set .@moblv, getmonsterinfo(killedrid, MOB_LV);
-	.@count = query_sql("SELECT `id` FROM `drop_armor` WHERE `item_level` < " + .@moblv + " ORDER BY `id`, `item_level` ASC", .@drops);
+	.@count = query_sql("SELECT `id` FROM `drop_armor` WHERE `item_level` <= " + .@moblv, .@drops);
 
 	if(.@count) {
 		getmapxy(.@map$, .@x, .@y);
