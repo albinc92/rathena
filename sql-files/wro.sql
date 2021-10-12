@@ -103,6 +103,16 @@ WHERE `id` IN (
     15000
 );
 
+UPDATE `drop_armor` da
+SET `item_level` = (SELECT (`defense` * 4) FROM `item_db` idb WHERE idb.id = da.id)
+WHERE `item_level` IS NULL;
+
+-- Wedding Dress
+UPDATE `drop_armor` SET `item_level` = 30 WHERE `id` = 2338;
+
+-- Valk Armor
+UPDATE `drop_armor` SET `item_level` = 90 WHERE `id` = 2357;
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     item_db
 -- ---------------------------------------------------------------------------------------------------------------------

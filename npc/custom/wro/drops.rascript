@@ -1,0 +1,19 @@
+-	script	drops	-1,{
+
+OnNPCKillEvent:
+
+	// No drop?
+	set .@drop, rand(1, 100);
+	if(.@drop < 10) {
+		end;
+	}
+
+	set .@moblv, getmonsterinfo(killedrid, MOB_LV);
+	.@count = query_sql("SELECT `id` FROM `drop_armor` WHERE `item_level` <= " + .@moblv, .@drops);
+
+	if(.@count) {
+		getmapxy(.@map$, .@x, .@y);
+		makeitem .@drops[0], 1, .@map$, rand(.@x-1, .@x+1), rand(.@y-1, .@y+1);
+	}
+	end;
+}
