@@ -15,10 +15,10 @@ OnNPCKillEvent:
 		end;
 	}
 
-	getmapxy(.@map$, .@x, .@y);
-	setarray .@OptID[0];
-	setarray .@OptVal[0];
-	setarray .@OptParam[0];
-	makeitem3 .@drops[0], 1, .@map$, rand(.@x-1, .@x+1), rand(.@y-1, .@y+1), 0, 0, 0, 0, 0, 0, 0, .@OptID, .@OptVal, .@OptParam;
+	getmapxy(.@map$, .@x, .@y, BL_PC);
+	setarray .@OptID[0],RDMOPT_ATTR_TOLERACE_NOTHING,RDMOPT_RACE_TOLERACE_HUMAN;
+	setarray .@OptVal[0],10,5;
+	setarray .@OptParam[0],0;
+	makeitem3 .@drops[rand(0,(getarraysize(.@drops)-1))],1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@OptID,.@OptVal,.@OptParam;
 	end;
 }
