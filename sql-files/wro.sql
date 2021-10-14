@@ -43,6 +43,17 @@ CREATE TABLE IF NOT EXISTS `drop_armor` (
     KEY `id` (`id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS `drop_shield` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+-- ---------------------------------------------------------------------------------------------------------------------
+--                                                     item_db
+-- ---------------------------------------------------------------------------------------------------------------------
+
 REPLACE INTO `drop_armor`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
@@ -111,11 +122,45 @@ WHERE `item_level` IS NULL;
 UPDATE `drop_armor` SET `item_level` = 30 WHERE `id` = 2338;
 
 -- Valk Armor
-UPDATE `drop_armor` SET `item_level` = 90 WHERE `id` = 2357;
+UPDATE `drop_armor` SET `item_level` = 92 WHERE `id` = 2357;
 
--- ---------------------------------------------------------------------------------------------------------------------
---                                                     item_db
--- ---------------------------------------------------------------------------------------------------------------------
+REPLACE INTO `drop_shield`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2101,
+    2102,
+    2104,
+    2106,
+    2108,
+    2109,
+    2110,
+    2111,
+    2114,
+    2115,
+    2116,
+    2122,
+    2123,
+    2124,
+    2125,
+    2129,
+    2130,
+    2131,
+    2133,
+    2134,
+    2135,
+    2138
+);
+
+-- Mirror Shield
+UPDATE `drop_shield` SET `item_level` = 50 WHERE `id` = 2108;
+
+-- Memory Book
+UPDATE `drop_shield` SET `item_level` = 32 WHERE `id` = 2109;
+
+UPDATE `drop_shield` ds
+SET `item_level` = (SELECT (`defense` * 4) FROM `item_db` idb WHERE idb.id = ds.id)
+WHERE `item_level` IS NULL;
 
 -- Copies all weapons of weapon lvl > 1 from item_db into item_db2
 -- Updates ATK of all weapons based on weapon level
