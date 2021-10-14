@@ -50,10 +50,39 @@ CREATE TABLE IF NOT EXISTS `drop_shield` (
     KEY `id` (`id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS `drop_garment` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_boots` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_accessory` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
 -- ---------------------------------------------------------------------------------------------------------------------
---                                                     item_db
+--                                                     drop_tables
 -- ---------------------------------------------------------------------------------------------------------------------
 
+-- Armors
 REPLACE INTO `drop_armor`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
@@ -114,16 +143,17 @@ WHERE `id` IN (
     15000
 );
 
-UPDATE `drop_armor` da
-SET `item_level` = (SELECT (`defense` * 4) FROM `item_db` idb WHERE idb.id = da.id)
-WHERE `item_level` IS NULL;
-
 -- Wedding Dress
 UPDATE `drop_armor` SET `item_level` = 30 WHERE `id` = 2338;
 
 -- Valk Armor
 UPDATE `drop_armor` SET `item_level` = 92 WHERE `id` = 2357;
 
+UPDATE `drop_armor` da
+SET `item_level` = (SELECT (`defense` * 4) FROM `item_db` idb WHERE idb.id = da.id)
+WHERE `item_level` IS NULL;
+
+-- Shields
 REPLACE INTO `drop_shield`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
@@ -161,6 +191,47 @@ UPDATE `drop_shield` SET `item_level` = 32 WHERE `id` = 2109;
 UPDATE `drop_shield` ds
 SET `item_level` = (SELECT (`defense` * 4) FROM `item_db` idb WHERE idb.id = ds.id)
 WHERE `item_level` IS NULL;
+
+-- Garments
+REPLACE INTO `drop_garment`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2502,
+    2504,
+    2505,
+    2506,
+    2507,
+    2508,
+    2509,
+    2513,
+    2514,
+    2515,
+    2516,
+    2517,
+    2518,
+    2519,
+    2520,
+    2521,
+    2522,
+    2524,
+    2527,
+    2528,
+    2529,
+    2530,
+    2531,
+    2532,
+    2536,
+    2537,
+    2542,
+    2544,
+    2545,
+    2554
+);
+
+-- ---------------------------------------------------------------------------------------------------------------------
+--                                                     item_db
+-- ---------------------------------------------------------------------------------------------------------------------
 
 -- Copies all weapons of weapon lvl > 1 from item_db into item_db2
 -- Updates ATK of all weapons based on weapon level
