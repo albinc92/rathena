@@ -26,6 +26,6 @@ OnDrop:
 	// Magic options here...
 
 	getmapxy(.@map$, .@x, .@y, BL_PC);
-	makeitem2 .@itemindex,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0;
+	makeitem2 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0;
 	end;
 }
