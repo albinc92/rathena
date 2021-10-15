@@ -57,14 +57,7 @@ CREATE TABLE IF NOT EXISTS `drop_garment` (
     KEY `id` (`id`)
 ) ENGINE=MyISAM;
 
-CREATE TABLE IF NOT EXISTS `drop_boots` (
-    `id` int(10) unsigned NOT NULL DEFAULT '0',
-    `item_level` tinyint(3) unsigned DEFAULT NULL,
-    PRIMARY KEY (`id`),
-    KEY `id` (`id`)
-) ENGINE=MyISAM;
-
-CREATE TABLE IF NOT EXISTS `drop_headgear` (
+CREATE TABLE IF NOT EXISTS `drop_footgear` (
     `id` int(10) unsigned NOT NULL DEFAULT '0',
     `item_level` tinyint(3) unsigned DEFAULT NULL,
     PRIMARY KEY (`id`),
@@ -72,6 +65,27 @@ CREATE TABLE IF NOT EXISTS `drop_headgear` (
 ) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS `drop_accessory` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_upper` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_middle` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_lower` (
     `id` int(10) unsigned NOT NULL DEFAULT '0',
     `item_level` tinyint(3) unsigned DEFAULT NULL,
     PRIMARY KEY (`id`),
@@ -228,6 +242,499 @@ WHERE `id` IN (
     2545,
     2554
 );
+
+-- Ragamuffin Manteau
+UPDATE `drop_garment` SET `item_level` = 50 WHERE `id` = 2508;
+
+-- Undershirt
+UPDATE `drop_garment` SET `item_level` = 32 WHERE `id` = 2522;
+
+-- Valkyrian Manteau
+UPDATE `drop_garment` SET `item_level` = 92 WHERE `id` = 2524;
+
+-- Diabolus Manteau
+UPDATE `drop_garment` SET `item_level` = 96 WHERE `id` = 2537;
+
+-- Leather of Tendrilion
+UPDATE `drop_garment` SET `item_level` = 70 WHERE `id` = 2544;
+
+UPDATE `drop_garment` dg
+SET `item_level` = (SELECT (`defense` * 16) FROM `item_db` idb WHERE idb.id = dg.id)
+WHERE `item_level` IS NULL;
+
+-- Footgear
+REPLACE INTO `drop_footgear`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2402,
+    2404,
+    2405,
+    2406,
+    2407,
+    2408,
+    2409,
+    2412,
+    2417,
+    2418,
+    2419,
+    2420,
+    2421,
+    2422,
+    2423,
+    2424,
+    2425,
+    2426,
+    2433,
+    2440,
+    2450
+);
+
+-- Crystal Pumps
+UPDATE `drop_footgear` SET `item_level` = 70 WHERE `id` = 2407;
+
+-- Shackles
+UPDATE `drop_footgear` SET `item_level` = 40 WHERE `id` = 2408;
+
+-- High Heels
+UPDATE `drop_footgear` SET `item_level` = 36 WHERE `id` = 2409;
+
+-- Valkyrian Shoes
+UPDATE `drop_footgear` SET `item_level` = 92 WHERE `id` = 2421;
+
+-- Diabolus Boots
+UPDATE `drop_footgear` SET `item_level` = 96 WHERE `id` = 2433;
+
+UPDATE `drop_footgear` df
+SET `item_level` = (SELECT (`defense` * 13) FROM `item_db` idb WHERE idb.id = df.id)
+WHERE `item_level` IS NULL;
+
+-- Accessory
+REPLACE INTO `drop_accessory`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2601,
+    2602,
+    2603,
+    2604,
+    2605,
+    2607,
+    2608,
+    2609,
+    2610,
+    2611,
+    2612,
+    2613,
+    2614,
+    2615,
+    2616,
+    2617,
+    2618,
+    2619,
+    2620,
+    2621,
+    2622,
+    2623,
+    2624,
+    2625,
+    2626,
+    2627,
+    2648,
+    2649,
+    2650,
+    2651,
+    2652,
+    2654,
+    2655,
+    2656,
+    2659,
+    2660,
+    2661,
+    2662,
+    2677,
+    2678,
+    2679,
+    2680,
+    2700,
+    2701,
+    2702,
+    2703,
+    2716,
+    2717,
+    2718,
+    2719,
+    2726,
+    2727,
+    2728,
+    2729,
+    2743,
+    2744,
+    2745,
+    2746,
+    2747,
+    2748,
+    2749,
+    2783,
+    2789
+);
+
+-- Clip
+UPDATE `drop_accessory` SET `item_level` = 15 WHERE `id` = 2607;
+
+-- Skull Ring
+UPDATE `drop_accessory` SET `item_level` = 5 WHERE `id` = 2609;
+
+-- Gold Ring
+UPDATE `drop_accessory` SET `item_level` = 15 WHERE `id` = 2610;
+
+-- Silver Ring
+UPDATE `drop_accessory` SET `item_level` = 10 WHERE `id` = 2611;
+
+-- Flower Ring
+UPDATE `drop_accessory` SET `item_level` = 1 WHERE `id` = 2612;
+
+-- Diamond Ring
+UPDATE `drop_accessory` SET `item_level` = 23 WHERE `id` = 2613;
+
+-- Bloodied Shackle Ball
+UPDATE `drop_accessory` SET `item_level` = 50 WHERE `id` = 2655;
+
+-- Armor Charm
+UPDATE `drop_accessory` SET `item_level` = 75 WHERE `id` = 2656;
+
+-- Vesper Cores
+UPDATE `drop_accessory` SET `item_level` = 80 WHERE `id` IN (2659, 2660, 2661, 2662);
+
+-- Spiritual Ring
+UPDATE `drop_accessory` SET `item_level` = 80 WHERE `id` = 2677;
+
+-- Ring of Resonance/Flame Lord
+UPDATE `drop_accessory` SET `item_level` = 99 WHERE `id` IN (2678, 2679);
+
+-- Lesser Elemental Ring
+UPDATE `drop_accessory` SET `item_level` = 85 WHERE `id` = 2680;
+
+-- Diabolus Ring
+UPDATE `drop_accessory` SET `item_level` = 92 WHERE `id` = 2729;
+
+-- Headgear Upper
+REPLACE INTO `drop_headgear_upper`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2206,
+    2207,
+    2208,
+    2209,
+    2210,
+    2211,
+    2213,
+    2217,
+    2220,
+    2221,
+    2226,
+    2227,
+    2229,
+    2231,
+    2233,
+    2234,
+    2235,
+    2244,
+    2245,
+    2246,
+    2247,
+    2248,
+    2249,
+    2250,
+    2251,
+    2252,
+    2253,
+    2254,
+    2255,
+    2256,
+    2257,
+    2258,
+    2259,
+    2272,
+    2274,
+    2275,
+    2277,
+    2279,
+    2282,
+    2283,
+    2285,
+    2287,
+    2289,
+    2294,
+    2298,
+    2299,
+    5002,
+    5003,
+    5007,
+    5008,
+    5009,
+    5010,
+    5011,
+    5012,
+    5015,
+    5017,
+    5019,
+    5025,
+    5027,
+    5030,
+    5035,
+    5037,
+    5042,
+    5045,
+    5066,
+    5072,
+    5111,
+    5116,
+    5118,
+    5119,
+    5120,
+    5122,
+    5123,
+    5124,
+    5125,
+    5126,
+    5127,
+    5128,
+    5141,
+    5160,
+    5162,
+    5172,
+    5398,
+    5399
+);
+
+-- Wedding Veil
+UPDATE `drop_headgear_upper` SET `item_level` = 20 WHERE `id` = 2206;
+
+-- Fancy Flower
+UPDATE `drop_headgear_upper` SET `item_level` = 3 WHERE `id` = 2207;
+
+-- Ribbon
+UPDATE `drop_headgear_upper` SET `item_level` = 13 WHERE `id` IN (2208, 2209);
+
+-- Hair Band
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 2210;
+
+-- Bandana
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 2211;
+
+-- Kitty Band
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 2213;
+
+-- Biretta
+UPDATE `drop_headgear_upper` SET `item_level` = 43 WHERE `id` = 2217;
+
+-- Hat(s)
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` IN (2220, 2221);
+
+-- Cap(s)
+UPDATE `drop_headgear_upper` SET `item_level` = 40 WHERE `id` IN (2226, 2227);
+
+-- Helm [1]
+UPDATE `drop_headgear_upper` SET `item_level` = 51 WHERE `id` = 2229;
+
+-- Gemmed Sallet
+UPDATE `drop_headgear_upper` SET `item_level` = 43 WHERE `id` = 2231;
+
+-- Circlet
+UPDATE `drop_headgear_upper` SET `item_level` = 35 WHERE `id` = 2233;
+
+-- Big Ribbon
+UPDATE `drop_headgear_upper` SET `item_level` = 27 WHERE `id` = 2244;
+
+-- Sweet Gent
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 2245;
+
+-- Golden Gear
+UPDATE `drop_headgear_upper` SET `item_level` = 50 WHERE `id` = 2246;
+
+-- Romantic Gent
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 2247;
+
+-- Western Grace
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 2248;
+
+-- Coronet
+UPDATE `drop_headgear_upper` SET `item_level` = 30 WHERE `id` = 2249;
+
+-- Cute Ribbon
+UPDATE `drop_headgear_upper` SET `item_level` = 10 WHERE `id` = 2250;
+
+-- Monk Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 50 WHERE `id` = 2251;
+
+-- Wizard Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 36 WHERE `id` = 2252;
+
+-- Sunflower
+UPDATE `drop_headgear_upper` SET `item_level` = 10 WHERE `id` = 2253;
+
+-- Angel Wing & Evil Wing
+UPDATE `drop_headgear_upper` SET `item_level` = 40 WHERE `id` IN (2254, 2255);
+
+-- Majestic Goat
+UPDATE `drop_headgear_upper` SET `item_level` = 45 WHERE `id` = 2256;
+
+-- Unicorn Horn
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 2257;
+
+-- Mini Propeller
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 2259;
+
+-- Stop Post
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 2272;
+
+-- Ghost Bandana
+UPDATE `drop_headgear_upper` SET `item_level` = 15 WHERE `id` = 2274;
+
+-- Red Bandana
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 2275;
+
+-- Nurse Cap
+UPDATE `drop_headgear_upper` SET `item_level` = 18 WHERE `id` = 2277;
+
+-- Bomb Wick
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 2279;
+
+-- Halo
+UPDATE `drop_headgear_upper` SET `item_level` = 12 WHERE `id` = 2282;
+
+-- Ear Muffs
+UPDATE `drop_headgear_upper` SET `item_level` = 27 WHERE `id` = 2283;
+
+-- Pirate Bandana
+UPDATE `drop_headgear_upper` SET `item_level` = 26 WHERE `id` = 2287;
+
+-- Poo Poo Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 3 WHERE `id` = 2289;
+
+-- Stellar
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 2294;
+
+-- Green Feeler
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 2298;
+
+-- Orc Helm
+UPDATE `drop_headgear_upper` SET `item_level` = 40 WHERE `id` = 2299;
+
+-- Joker Jester
+UPDATE `drop_headgear_upper` SET `item_level` = 31 WHERE `id` = 5003;
+
+-- Puppy Love
+UPDATE `drop_headgear_upper` SET `item_level` = 8 WHERE `id` = 5008;
+
+-- Safety Helmet
+UPDATE `drop_headgear_upper` SET `item_level` = 33 WHERE `id` = 5009;
+
+-- Indian Fillet
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 5010;
+
+-- Aerial
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 5011;
+
+-- Ph.D Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 5012;
+
+-- Egg Shell
+UPDATE `drop_headgear_upper` SET `item_level` = 24 WHERE `id` = 5015;
+
+-- Corsair
+UPDATE `drop_headgear_upper` SET `item_level` = 42 WHERE `id` = 5019;
+
+-- Cake Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 10 WHERE `id` = 5024;
+
+-- Mage Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 18 WHERE `id` = 5027;
+
+-- Banana Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 5116;
+
+-- Puppy Headband
+UPDATE `drop_headgear_upper` SET `item_level` = 16 WHERE `id` = 5118;
+
+-- Bucket Hat
+UPDATE `drop_headgear_upper` SET `item_level` = 34 WHERE `id` = 5120;
+
+-- Majestic Goat [1]
+UPDATE `drop_headgear_upper` SET `item_level` = 55 WHERE `id` = 5160;
+
+-- Beret
+UPDATE `drop_headgear_upper` SET `item_level` = 3 WHERE `id` = 5172;
+
+-- Headgear Middle
+REPLACE INTO `drop_headgear_middle`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2263,
+    2276,
+    2286,
+    2291,
+    2296,
+    5014,
+    5085,
+    5104
+);
+
+-- Zorro Masque
+UPDATE `drop_headgear_middle` SET `item_level` = 1 WHERE `id` = 2263;
+
+-- Angled Glasses
+UPDATE `drop_headgear_middle` SET `item_level` = 10 WHERE `id` = 2276;
+
+-- Masquerade
+UPDATE `drop_headgear_middle` SET `item_level` = 21 WHERE `id` = 2291;
+
+-- Dark Blinder
+UPDATE `drop_headgear_middle` SET `item_level` = 86 WHERE `id` = 5104;
+
+-- Headgear Lower
+REPLACE INTO `drop_headgear_lower`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2241,
+    2262,
+    2265,
+    2266,
+    2267,
+    2268,
+    2269,
+    2270,
+    5096,
+    5113
+);
+
+-- Grampa Beard
+UPDATE `drop_headgear_lower` SET `item_level` = 61 WHERE `id` = 2241;
+
+-- Clown Nose
+UPDATE `drop_headgear_lower` SET `item_level` = 3 WHERE `id` = 2262;
+
+-- Gangster Mask
+UPDATE `drop_headgear_lower` SET `item_level` = 23 WHERE `id` = 2265;
+
+-- Cigarette
+UPDATE `drop_headgear_lower` SET `item_level` = 24 WHERE `id` = 2267;
+
+-- Pipe
+UPDATE `drop_headgear_lower` SET `item_level` = 65 WHERE `id` = 2268;
+
+-- Romantic Flower
+UPDATE `drop_headgear_lower` SET `item_level` = 56 WHERE `id` = 2269;
+
+-- Romantic Leaf
+UPDATE `drop_headgear_lower` SET `item_level` = 39 WHERE `id` = 2270;
+
+-- Angry Snarl
+UPDATE `drop_headgear_lower` SET `item_level` = 51 WHERE `id` = 5113;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     item_db
@@ -885,54 +1392,63 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 
 -- Remove all equipment from monster drop tables
 REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop2id` = 0 WHERE `Drop2id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop3id` = 0 WHERE `Drop3id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop4id` = 0 WHERE `Drop4id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop5id` = 0 WHERE `Drop5id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop6id` = 0 WHERE `Drop6id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop7id` = 0 WHERE `Drop7id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop8id` = 0 WHERE `Drop8id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
         'Armor'
     )
 );
+
 UPDATE `mob_db2` SET `Drop9id` = 0 WHERE `Drop9id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
@@ -943,7 +1459,7 @@ UPDATE `mob_db2` SET `Drop9id` = 0 WHERE `Drop9id` IN (
 -- Add new cards to mob drops
 -- First, create copies of mobs in mob_db2
 -- Then, add their respective card to the mob_db2 entry
-REPLACE INTO `mob_db2` SELECT * FROM `mob_db` WHERE `ID` IN (2022,1917,1885,1956,2018,2017,2020,2021,1990,1991,1796,1797,1975,1977,2015,2015,1993,1988,2014,2024,2019,1979,1976,1995,1978);
+-- (COMMENTED OUT WITH CUSTOM EQUIPMENT DROP CHANGES) REPLACE INTO `mob_db2` SELECT * FROM `mob_db` WHERE `ID` IN (2022,1917,1885,1956,2018,2017,2020,2021,1990,1991,1796,1797,1975,1977,2015,2015,1993,1988,2014,2024,2019,1979,1976,1995,1978);
 UPDATE `mob_db2` SET `DropCardid` = 4456, `DropCardper` = 1 WHERE `id` = '2022';	-- Nidhoggr's Shadow
 UPDATE `mob_db2` SET `DropCardid` = 32315, `DropCardper` = 1 WHERE `id` = '1917';	-- Wounded Morrocc
 UPDATE `mob_db2` SET `DropCardid` = 27162, `DropCardper` = 1 WHERE `id` = '1885';	-- Gopinich
