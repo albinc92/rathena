@@ -14,7 +14,7 @@ OnDrop:
 
 	set .@moblv, getmonsterinfo(killedrid,MOB_LV);
 
-	setarray .@table$[0], "drop_armor", "drop_shield";
+	setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_middle", "drop_headgear_lower";
 	.@count = query_sql("SELECT `id` FROM `" + .@table$[rand(0, getarraysize(.@table$) - 1)] + "` WHERE `item_level` <= " + .@moblv + " ORDER BY `item_level` ASC", .@drops);
 
 	if(!.@count) {
@@ -23,7 +23,7 @@ OnDrop:
 
 	set .@id, .@drops[rand(0,(getarraysize(.@drops)-1))];
 
-	// Magic options here...
+	// TODO: Magic properties here...
 
 	getmapxy(.@map$, .@x, .@y, BL_PC);
 	makeitem2 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0;
