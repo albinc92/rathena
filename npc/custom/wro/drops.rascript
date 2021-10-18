@@ -4,12 +4,12 @@ OnNPCKillEvent:
 	set .@retry, (getstatus(SC_ITEMBOOST, 1) / 100) - 1;
 
 OnDrop:
-	set .@rate, 1000;
-	set .@lukrate, readparam(bLuk) * 4;
+	set .@rate, 2500;
+	set .@lukrate, readparam(bLuk) * (.@rate / 250);
 
-	message strcharinfo(0),".@rate = " + .@rate;
-	message strcharinfo(0),".@lukrate = " + .@lukrate;
-	message strcharinfo(0),"SC_ITEMBOOST = " + .@retry;
+	// message strcharinfo(0),".@rate = " + .@rate;
+	// message strcharinfo(0),".@lukrate = " + .@lukrate;
+	// message strcharinfo(0),"SC_ITEMBOOST = " + .@retry;
 
 	if(rand(1, 10000) > (.@rate + .@lukrate)) {
 		if(.@retry) {
