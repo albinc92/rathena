@@ -4,7 +4,14 @@ OnNPCKillEvent:
 	set .@retry, getstatus(SC_ITEMBOOST);
 
 OnDrop:
-	if(rand(1, 10000) > (1000 + (readparam(bLuk) * 4))) {
+	set .@rate, 1000;
+	set .@lukrate, readparam(bLuk) * 4;
+
+	message strcharinfo(0),".@rate = " + .@rate;
+	message strcharinfo(0),".@lukrate = " + .@lukrate;
+	message strcharinfo(0),"SC_ITEMBOOST = " + .@retry;
+
+	if(rand(1, 10000) > (.@rate + .@lukrate)) {
 		if(.@retry) {
 			.@retry--;
 			goto OnDrop;
@@ -14,7 +21,7 @@ OnDrop:
 
 	set .@moblv, getmonsterinfo(killedrid,MOB_LV);
 
-	setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_middle", "drop_headgear_lower", "drop_headgear_upper_middle", "drop_headgear_middle_lower", "drop_headgear_upper_lower", "drop_headgear_all";
+	setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_middle", "drop_headgear_lower", "drop_headgear_upper_middle", "drop_headgear_upper_middle", "drop_headgear_middle_lower", "drop_headgear_upper_lower", "drop_headgear_all";
 	.@count = query_sql("SELECT `id` FROM `" + .@table$[rand(0, getarraysize(.@table$) - 1)] + "` WHERE `item_level` <= " + .@moblv + " ORDER BY `item_level` ASC", .@drops);
 
 	if(!.@count) {
