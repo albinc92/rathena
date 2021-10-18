@@ -92,6 +92,34 @@ CREATE TABLE IF NOT EXISTS `drop_headgear_lower` (
     KEY `id` (`id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS `drop_headgear_upper_middle` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_middle_lower` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_upper_lower` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `drop_headgear_all` (
+    `id` int(10) unsigned NOT NULL DEFAULT '0',
+    `item_level` tinyint(3) unsigned DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `id` (`id`)
+) ENGINE=MyISAM;
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     drop_tables
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -735,6 +763,85 @@ UPDATE `drop_headgear_lower` SET `item_level` = 39 WHERE `id` = 2270;
 
 -- Angry Snarl
 UPDATE `drop_headgear_lower` SET `item_level` = 51 WHERE `id` = 5113;
+
+-- Headgear Upper & Middle
+REPLACE INTO `drop_headgear_upper_middle`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2224,
+    2225,
+    5022,
+    5093
+);
+
+-- Goggles
+UPDATE `drop_headgear_upper_middle` SET `item_level` = 18 WHERE `id` IN (2224, 2225);
+
+-- Hat of the Sun God
+UPDATE `drop_headgear_upper_middle` SET `item_level` = 50 WHERE `id` = 5022;
+
+-- Headgear Middle & Lower
+REPLACE INTO `drop_headgear_middle_lower`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2288,
+    2297,
+    5005,
+    5087,
+    5088,
+    5089,
+    5090
+);
+
+-- Mr. Scream
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 69 WHERE `id` = 2288;
+
+-- Goblin Mask
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 2297;
+
+-- Gas Mask
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 38 WHERE `id` = 5005;
+
+-- Poker Face
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5087;
+
+-- Surprised Mask
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5088;
+
+-- Annoyed Mask
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5089;
+
+-- Goblin Leader Mask
+UPDATE `drop_headgear_middle_lower` SET `item_level` = 64 WHERE `id` = 5090;
+
+-- Headgear Upper & Lower
+REPLACE INTO `drop_headgear_upper_lower`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    5053
+);
+
+-- Headgear All
+REPLACE INTO `drop_headgear_all`
+SELECT `id`, `equip_level_min`
+FROM `item_db`
+WHERE `id` IN (
+    2264,
+    5046,
+    5808
+);
+
+-- Munak Hat
+UPDATE `drop_headgear_all` SET `item_level` = 30 WHERE `id` = 2264;
+
+-- Bongun Hat
+UPDATE `drop_headgear_all` SET `item_level` = 32 WHERE `id` = 5046;
+
+-- Dark Bacilium
+UPDATE `drop_headgear_all` SET `item_level` = 97 WHERE `id` = 5808;
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     item_db
