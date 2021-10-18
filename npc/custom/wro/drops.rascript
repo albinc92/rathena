@@ -1,7 +1,7 @@
--	script	drops	-1,{
+-	script	drops	-1,{ 
 
 OnNPCKillEvent:
-	set .@retry, getstatus(SC_ITEMBOOST, 1);
+	set .@retry, (getstatus(SC_ITEMBOOST, 1) / 100) - 1;
 
 OnDrop:
 	set .@rate, 1000;
