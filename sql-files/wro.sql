@@ -697,7 +697,7 @@ UPDATE `drop_headgear_upper` SET `item_level` = 55 WHERE `id` = 5160;
 UPDATE `drop_headgear_upper` SET `item_level` = 3 WHERE `id` = 5172;
 
 -- Headgear Middle
-REPLACE INTO `drop_headgear_middle`
+REPLACE INTO `drop_headgear_all`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
 WHERE `id` IN (
@@ -712,19 +712,19 @@ WHERE `id` IN (
 );
 
 -- Zorro Masque
-UPDATE `drop_headgear_middle` SET `item_level` = 1 WHERE `id` = 2263;
+UPDATE `drop_headgear_all` SET `item_level` = 1 WHERE `id` = 2263;
 
 -- Angled Glasses
-UPDATE `drop_headgear_middle` SET `item_level` = 10 WHERE `id` = 2276;
+UPDATE `drop_headgear_all` SET `item_level` = 10 WHERE `id` = 2276;
 
 -- Masquerade
-UPDATE `drop_headgear_middle` SET `item_level` = 21 WHERE `id` = 2291;
+UPDATE `drop_headgear_all` SET `item_level` = 21 WHERE `id` = 2291;
 
 -- Dark Blinder
-UPDATE `drop_headgear_middle` SET `item_level` = 86 WHERE `id` = 5104;
+UPDATE `drop_headgear_all` SET `item_level` = 86 WHERE `id` = 5104;
 
 -- Headgear Lower
-REPLACE INTO `drop_headgear_lower`
+REPLACE INTO `drop_headgear_all`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
 WHERE `id` IN (
@@ -741,31 +741,31 @@ WHERE `id` IN (
 );
 
 -- Grampa Beard
-UPDATE `drop_headgear_lower` SET `item_level` = 61 WHERE `id` = 2241;
+UPDATE `drop_headgear_all` SET `item_level` = 61 WHERE `id` = 2241;
 
 -- Clown Nose
-UPDATE `drop_headgear_lower` SET `item_level` = 3 WHERE `id` = 2262;
+UPDATE `drop_headgear_all` SET `item_level` = 3 WHERE `id` = 2262;
 
 -- Gangster Mask
-UPDATE `drop_headgear_lower` SET `item_level` = 23 WHERE `id` = 2265;
+UPDATE `drop_headgear_all` SET `item_level` = 23 WHERE `id` = 2265;
 
 -- Cigarette
-UPDATE `drop_headgear_lower` SET `item_level` = 24 WHERE `id` = 2267;
+UPDATE `drop_headgear_all` SET `item_level` = 24 WHERE `id` = 2267;
 
 -- Pipe
-UPDATE `drop_headgear_lower` SET `item_level` = 65 WHERE `id` = 2268;
+UPDATE `drop_headgear_all` SET `item_level` = 65 WHERE `id` = 2268;
 
 -- Romantic Flower
-UPDATE `drop_headgear_lower` SET `item_level` = 56 WHERE `id` = 2269;
+UPDATE `drop_headgear_all` SET `item_level` = 56 WHERE `id` = 2269;
 
 -- Romantic Leaf
-UPDATE `drop_headgear_lower` SET `item_level` = 39 WHERE `id` = 2270;
+UPDATE `drop_headgear_all` SET `item_level` = 39 WHERE `id` = 2270;
 
 -- Angry Snarl
-UPDATE `drop_headgear_lower` SET `item_level` = 51 WHERE `id` = 5113;
+UPDATE `drop_headgear_all` SET `item_level` = 51 WHERE `id` = 5113;
 
 -- Headgear Upper & Middle
-REPLACE INTO `drop_headgear_upper_middle`
+REPLACE INTO `drop_headgear_all`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
 WHERE `id` IN (
@@ -776,13 +776,13 @@ WHERE `id` IN (
 );
 
 -- Goggles
-UPDATE `drop_headgear_upper_middle` SET `item_level` = 18 WHERE `id` IN (2224, 2225);
+UPDATE `drop_headgear_all` SET `item_level` = 18 WHERE `id` IN (2224, 2225);
 
 -- Hat of the Sun God
-UPDATE `drop_headgear_upper_middle` SET `item_level` = 50 WHERE `id` = 5022;
+UPDATE `drop_headgear_all` SET `item_level` = 50 WHERE `id` = 5022;
 
 -- Headgear Middle & Lower
-REPLACE INTO `drop_headgear_middle_lower`
+REPLACE INTO `drop_headgear_all`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
 WHERE `id` IN (
@@ -796,28 +796,28 @@ WHERE `id` IN (
 );
 
 -- Mr. Scream
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 69 WHERE `id` = 2288;
+UPDATE `drop_headgear_all` SET `item_level` = 69 WHERE `id` = 2288;
 
 -- Goblin Mask
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 2297;
+UPDATE `drop_headgear_all` SET `item_level` = 24 WHERE `id` = 2297;
 
 -- Gas Mask
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 38 WHERE `id` = 5005;
+UPDATE `drop_headgear_all` SET `item_level` = 38 WHERE `id` = 5005;
 
 -- Poker Face
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5087;
+UPDATE `drop_headgear_all` SET `item_level` = 24 WHERE `id` = 5087;
 
 -- Surprised Mask
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5088;
+UPDATE `drop_headgear_all` SET `item_level` = 24 WHERE `id` = 5088;
 
 -- Annoyed Mask
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 24 WHERE `id` = 5089;
+UPDATE `drop_headgear_all` SET `item_level` = 24 WHERE `id` = 5089;
 
 -- Goblin Leader Mask
-UPDATE `drop_headgear_middle_lower` SET `item_level` = 64 WHERE `id` = 5090;
+UPDATE `drop_headgear_all` SET `item_level` = 64 WHERE `id` = 5090;
 
 -- Headgear Upper & Lower
-REPLACE INTO `drop_headgear_upper_lower`
+REPLACE INTO `drop_headgear_all`
 SELECT `id`, `equip_level_min`
 FROM `item_db`
 WHERE `id` IN (
