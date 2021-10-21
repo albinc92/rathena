@@ -28,7 +28,14 @@ OnDrop:
 		end;
 	}
 
-	set .@id, .@drops[rand(0,(getarraysize(.@drops)-1))];
+	// Propability distribution calculation
+	// Lower level items have a higher bias to drop
+	set .@min, 0;
+	set .@max, getarraysize(.@drops) - 1;
+	set .@p, 5;	// Bias power factor, higher numbers reduce probability for higher values
+	set .@bias, pow(rand(0, 1), .@p);
+	set .@id, .@drops[round(.@min + (.@max - .@min) * .@bias)];
+	message strcharinfo(0),".@id = " + .@id;
 
 	// TODO: Magic properties here...
 
