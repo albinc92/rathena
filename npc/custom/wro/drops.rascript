@@ -4,12 +4,8 @@ OnNPCKillEvent:
 	set .@retry, (getstatus(SC_ITEMBOOST, 1) / 100) - 1;
 
 OnDrop:
-	set .@rate, 2500;
-	set .@lukrate, readparam(bLuk) * (.@rate / 250);
-
-	// message strcharinfo(0),".@rate = " + .@rate;
-	// message strcharinfo(0),".@lukrate = " + .@lukrate;
-	// message strcharinfo(0),"SC_ITEMBOOST = " + .@retry;
+	set .@rate, 2500; // 25.00% base drop rate
+	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
 	if(rand(1, 10000) > (.@rate + .@lukrate)) {
 		if(.@retry) {
@@ -20,28 +16,24 @@ OnDrop:
 	}
 
 	set .@moblv, getmonsterinfo(killedrid,MOB_LV);
-
 	setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_all";
-	.@count = query_sql("SELECT `id` FROM `" + .@table$[rand(0, getarraysize(.@table$) - 1)] + "` WHERE `item_level` <= " + .@moblv + " ORDER BY `item_level` ASC", .@drops);
-
-	if(!.@count) {
-		end;
+	while(!.@count) {
+		.@count = query_sql("SELECT `id` FROM `" + .@table$[rand(0, getarraysize(.@table$) - 1)] + "` WHERE `item_level` <= " + .@moblv + " ORDER BY `item_level` ASC", .@drops);
 	}
 
 	// Propability distribution calculation
 	// Lower level items have a higher bias to drop
 	set .@min, 0;
 	set .@max, getarraysize(.@drops) - 1;
-	set .@p, 5;	// Bias power factor, higher numbers reduce probability for higher values
-	set .@bias, pow(rand(0, 1), .@p);
-	set .@res, .@min + (.@max - .@min) * .@bias;
+	set .@p, 4; // Large values skews probability more towards lower values, negtive have opposite effect
+	set .@res, floor((.@min + (.@max + 1 - .@min) * (pow(rand(.@max), .@p))), 0);
 	message strcharinfo(0),".@res = " + .@res;
 
 	// ID of dropped item
 	set .@id, .@drops[.@res];
 
 	// Set magic properties
-	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
+	if(getiteminfo(getequipid(.@id),2) == IT_WEAPON) {
 		setarray .@idlist[0],
 				3, 4, 5, 6, 7, 8,
 				13, 14, 16, 17, 18, 19, 24,
