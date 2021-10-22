@@ -82,10 +82,11 @@ OnDrop:
 				5, 5, 4;
 	}
 	
-	// set .@index, rand(getarraysize(.@armorid));
-	// setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
-
-	getmapxy(.@map$, .@x, .@y, BL_PC);
-	makeitem3 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@armorid[.@index],(.@armorbase[.@index] + rand(0, .@armorbonus[.@index])),0;
+	getmapxy(.@map$, .@x, .@y, BL_NPC, "");
+	set .@index, rand(getarraysize(.@armorid));
+	setarray .@OptID[0],.@armorid[.@index];
+	setarray .@OptVal[0],(.@armorbase[.@index] + rand(0, .@armorbonus[.@index]));
+	setarray .@OptParam[0],0;
+	makeitem3 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@OptID,.@OptVal,.@OptParam;
 	end;
 }
