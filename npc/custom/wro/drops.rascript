@@ -82,11 +82,11 @@ OnDrop:
 				5, 5, 4;
 	}
 	
-	getmapxy(.@map$, .@x, .@y, BL_NPC, "");
 	set .@index, rand(getarraysize(.@idlist));
 	setarray .@OptID[0],.@idlist[.@index];
 	setarray .@OptVal[0],(.@base[.@index] + rand(0, .@bonus[.@index]));
 	setarray .@OptParam[0],0;
+	getmapxy(.@map$, .@x, .@y, BL_PC);
 	makeitem3 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@OptID,.@OptVal,.@OptParam;
 	end;
 }
