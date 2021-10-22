@@ -34,12 +34,58 @@ OnDrop:
 	set .@max, getarraysize(.@drops) - 1;
 	set .@p, 5;	// Bias power factor, higher numbers reduce probability for higher values
 	set .@bias, pow(rand(0, 1), .@p);
-	set .@id, .@drops[.@min + (.@max - .@min) * .@bias];
-	message strcharinfo(0),".@id = " + .@id;
+	set .@res, .@min + (.@max - .@min) * .@bias;
+	message strcharinfo(0),".@res = " + .@res;
 
-	// TODO: Magic properties here...
+	// ID of dropped item
+	set .@id, .@drops[.@res];
+
+	// Set magic properties
+	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
+		setarray .@id[0],
+				3, 4, 5, 6, 7, 8,
+				13, 14, 16, 17, 18, 19, 24,
+				147, 148, 151, 152,
+				164, 166,
+				168, 170, 171, 172;
+
+		setarray .@base[0],
+				1, 1, 1, 1, 1, 1,
+				5, 5, 10, 25, 25, 25, 10,
+				5, 5, 5, 5,
+				10, 5,
+				10, 10, 3, 10;
+
+		setarray .@bonus[0],
+				2, 2, 2, 2, 2, 2,
+				5, 5, 15, 25, 75, 25, 15,
+				5, 5, 5, 5,
+				10, 5,
+				15, 15, 4, 15;
+	} else {
+		setarray .@id[0],
+				3, 4, 5, 6, 7, 8,
+				9, 10, 11, 12,
+				20, 21, 22, 23,
+				165, 167, 171;
+
+		setarray .@base[0],
+				1, 1, 1, 1, 1, 1,
+				5, 5, 10, 10,
+				1, 1, 5, 3,
+				5, 5, 3;
+
+		setarray .@bonus[0],
+				2, 2, 2, 2, 2, 2,
+				5, 5, 10, 10,
+				2, 2, 6, 3,
+				5, 5, 4;
+	}
+	
+	// set .@index, rand(getarraysize(.@armorid));
+	// setrandomoption(.@part,0,.@armorid[.@index], (.@armorbase[.@index] + rand(0, .@armorbonus[.@index])), 0);
 
 	getmapxy(.@map$, .@x, .@y, BL_PC);
-	makeitem2 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0;
+	makeitem3 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@armorid[.@index],(.@armorbase[.@index] + rand(0, .@armorbonus[.@index])),0;
 	end;
 }
