@@ -42,7 +42,7 @@ OnDrop:
 
 	// Set magic properties
 	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {
-		setarray .@id[0],
+		setarray .@idlist[0],
 				3, 4, 5, 6, 7, 8,
 				13, 14, 16, 17, 18, 19, 24,
 				147, 148, 151, 152,
@@ -63,7 +63,7 @@ OnDrop:
 				10, 5,
 				15, 15, 4, 15;
 	} else {
-		setarray .@id[0],
+		setarray .@idlist[0],
 				3, 4, 5, 6, 7, 8,
 				9, 10, 11, 12,
 				20, 21, 22, 23,
@@ -83,9 +83,9 @@ OnDrop:
 	}
 	
 	getmapxy(.@map$, .@x, .@y, BL_NPC, "");
-	set .@index, rand(getarraysize(.@armorid));
-	setarray .@OptID[0],.@armorid[.@index];
-	setarray .@OptVal[0],(.@armorbase[.@index] + rand(0, .@armorbonus[.@index]));
+	set .@index, rand(getarraysize(.@idlist));
+	setarray .@OptID[0],.@idlist[.@index];
+	setarray .@OptVal[0],(.@base[.@index] + rand(0, .@bonus[.@index]));
 	setarray .@OptParam[0],0;
 	makeitem3 .@id,1,.@map$,rand(.@x-1,.@x+1),rand(.@y-1,.@y+1),0,0,0,0,0,0,0,.@OptID,.@OptVal,.@OptParam;
 	end;
