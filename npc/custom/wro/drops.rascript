@@ -26,7 +26,7 @@ OnDrop:
 	set .@max, getarraysize(.@drops) - 1;
 	set .@p, 8;
 	set .@bias, pow(rand(0, 10000), .@p);
-	set .@res, (.@max * .@bias) / 10000;
+	set .@res, .@max * .@bias;
 	message strcharinfo(0),".@res = " + .@res;
 
 	// ID of dropped item
