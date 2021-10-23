@@ -23,7 +23,7 @@ OnDrop:
 
 	// Propability distribution calculation
 	// Lower level items have a higher bias to drop
-	set .@res, 1 - (1 - sqrt(0, getarraysize(.@drops) - 1));
+	set .@res, 1 - sqrt(1 - (getarraysize(.@drops) - 1));
 	message strcharinfo(0),".@res = " + .@res;
 
 	// ID of dropped item
