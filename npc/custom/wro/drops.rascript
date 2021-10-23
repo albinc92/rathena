@@ -18,7 +18,8 @@ OnDrop:
 
 	// Query DB
 	set .@moblv, getmonsterinfo(killedrid,MOB_LV);
-	setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_all";
+	//setarray .@table$[0], "drop_armor", "drop_shield", "drop_garment", "drop_footgear", "drop_accessory", "drop_headgear_upper", "drop_headgear_all";
+	setarray .@table$[0], "drop_armor";
 	set .@count, 0;
 	while(!.@count) {
 		.@count = query_sql("SELECT `id` FROM `" + .@table$[rand(0, getarraysize(.@table$) - 1)] + "` WHERE `item_level` <= " + .@moblv + " ORDER BY `item_level` ASC", .@drops);
