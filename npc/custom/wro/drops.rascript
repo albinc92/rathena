@@ -23,9 +23,7 @@ OnDrop:
 
 	// Propability distribution calculation
 	// Lower level items have a higher bias to drop
-	set .@max, getarraysize(.@drops);
-	set .@p, 4; // Probability bias factor, higher values skews probability to lower values
-	set .@res, floor(.@max * pow(rand(.@max), .@p), 0);
+	set .@res, pow(rand(getarraysize(.@drops)), 4);
 	message strcharinfo(0),".@res = " + .@res;
 
 	// ID of dropped item
