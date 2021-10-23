@@ -30,7 +30,7 @@ OnDrop:
 	set .@id, .@drops[.@res];
 
 	// Set magic properties
-	if(getiteminfo(getequipid(.@id),2) == IT_WEAPON) {
+	if(getiteminfo(.@id, 2) == IT_WEAPON) {
 		setarray .@idlist[0],
 				3, 4, 5, 6, 7, 8,
 				13, 14, 16, 17, 18, 19, 24,
