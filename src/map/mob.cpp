@@ -2306,8 +2306,9 @@ t_itemid set_drop_id() {
 		2342
 	};
 
-	int max = 19;
-	return itemid[rnd() % max];
+	int max = sizeof(itemids) / sizeof(itemids[0]);
+	int id = floor((max * pow(rand() % 10, 2)) / 100);
+	return itemid[id];
 }
 
 /*==========================================
