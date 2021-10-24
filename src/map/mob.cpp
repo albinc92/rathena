@@ -2975,6 +2975,15 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			mob_item_drop(md, dlist, ditem, 0, battle_config.finding_ore_rate/10, homkillonly);
 		}
 
+		// Random equipment drop
+		if (sd == mvp_sd) {
+			struct s_mob_drop mobdrop;
+			memset(&mobdrop, 0, sizeof(struct s_mob_drop));
+			mobdrop.nameid = 2301;
+			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+			mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+		}
+
 		if(sd) {
 			// process script-granted extra drop bonuses
 			t_itemid dropid = 0;
