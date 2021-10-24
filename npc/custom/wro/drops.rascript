@@ -2,11 +2,12 @@
 
 OnNPCKillEvent:
 	set .@retries, 1 + ((getstatus(SC_ITEMBOOST, 1) / 100) - 1);
-	set .@rate, 1000; // 25.00% base drop rate
+	set .@rate, 1000; // 10.00% base drop rate
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
 	// Drop criteria loop
 	while(.@retries) {
+		message strcharinfo(0),".@retries = " + .@retries;
 		if(rand(1, 10000) > (.@rate + .@lukrate)) {
 			if(.@retries) {
 				end;
