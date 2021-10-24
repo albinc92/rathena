@@ -1,19 +1,19 @@
 -	script	drops	-1,{ 
 
 OnNPCKillEvent:
-	set .@retry, (getstatus(SC_ITEMBOOST, 1) / 100) - 1;
-
-OnDrop:
+	set .@retries, 1 + ((getstatus(SC_ITEMBOOST, 1) / 100) - 1);
 	set .@rate, 1000; // 25.00% base drop rate
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
-	// Drop loop
-	if(rand(1, 10000) > (.@rate + .@lukrate)) {
-		if(.@retry) {
-			.@retry--;
-			goto OnDrop;
+	// Drop criteria loop
+	while(.@retries) {
+		if(rand(1, 10000) > (.@rate + .@lukrate)) {
+			if(.@retries) {
+				end;
+			} else {
+				.@retries--;
+			}
 		}
-		end;
 	}
 
 	// Query DB
@@ -40,7 +40,7 @@ OnDrop:
 
 	// Generate number of affixes
 	set .@optAmt, 0;
-    set .@r, rand(1, 375);
+    set .@r, rand(1, 750);
     if(.@r < 251 && .@r > 125) {
         .@optAmt = 1;
     } else if(.@r < 126 && .@r > 62) {
@@ -67,7 +67,7 @@ OnDrop:
 		}
 	}
 
-	// Check item type and setup data
+	// Check item type and setup affix data
 	if(getiteminfo(.@id, 2) == IT_WEAPON) {
 		setarray .@optionid[0],
 				3, 4, 5, 6, 7, 8,
@@ -111,6 +111,7 @@ OnDrop:
 				5, 5, 4;
 	}
 
+	// Generate base array
 	if(.@optAmt == 1) {
 		setarray .@index[0], rand(getarraysize(.@optionid));
 	} else if(.@optAmt == 2) {
@@ -123,6 +124,7 @@ OnDrop:
 		setarray .@index[0], rand(getarraysize(.@optionid)), rand(getarraysize(.@optionid)), rand(getarraysize(.@optionid)), rand(getarraysize(.@optionid)), rand(getarraysize(.@optionid));
 	}
 
+	// Check for duplicate affixes
 	if(getarraysize(@index) > 0) {
 		for(set .@i, getarraysize(@index); .@i > 0; .@i--) {
 			for(set .@j, .@i - 1; .@j == 0; .@j--) {
