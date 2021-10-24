@@ -2307,7 +2307,7 @@ t_itemid set_drop_id() {
 	};
 
 	int max = 19;
-	return itemid[(max * pow((rnd() % 10), 2)) / 100];
+	return itemid[floor((max * pow((rnd() % 10), 2)) / 100)];
 }
 
 /*==========================================
