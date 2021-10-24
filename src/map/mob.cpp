@@ -2280,6 +2280,37 @@ void mob_setdropitem_option2(struct item *itm) {
     }
 }
 
+/**
+ * Returns an item id to be dropped at random
+ **/
+t_itemid set_drop_id() {
+	t_itemid itemid[19] = {
+		2301,
+		2302,
+		2302,
+		2304,
+		2305,
+		2306,
+		2308,
+		2324,
+		2333,
+		2329,
+		2310,
+		2320,
+		2311,
+		2312,
+		2313,
+		2315,
+		2316,
+		2317,
+		2342
+	};
+
+	int max = (*(&itemid + 1) - itemid) - 1;
+	t_itemid = (max * pow(rnd() % 10, 2)) / 100;
+	return 0;
+}
+
 /*==========================================
  * Initializes the delay drop structure for mob-dropped items.
  *------------------------------------------*/
@@ -2979,7 +3010,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		if (sd == mvp_sd) {
 			struct s_mob_drop mobdrop;
 			memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-			mobdrop.nameid = 2301;
+			mobdrop.nameid = set_drop_id();
 			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
 			mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
 		}
