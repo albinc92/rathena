@@ -6,8 +6,8 @@ OnNPCKillEvent:
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
 	// Drop criteria loop
+	message strcharinfo(0),".@retries = " + .@retries;
 	while(.@retries) {
-		message strcharinfo(0),".@retries = " + .@retries;
 		if(rand(1, 10000) > (.@rate + .@lukrate)) {
 			if(.@retries) {
 				end;
