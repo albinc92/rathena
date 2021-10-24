@@ -1,7 +1,8 @@
 -	script	drops	-1,{ 
 
 OnNPCKillEvent:
-	set .@retries, 1 + ((getstatus(SC_ITEMBOOST, 1) / 100) - 1);
+	set .@retries, 1;
+	set .@retries, .@retries + ((getstatus(SC_ITEMBOOST, 1) / 100) - 1); // Drop modifying item account
 	set .@rate, 1000; // 10.00% base drop rate
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
