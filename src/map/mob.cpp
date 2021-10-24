@@ -2284,7 +2284,7 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id() {
-	t_itemid itemid[19] = {
+	t_itemid itemids[19] = {
 		2301,
 		2302,
 		2302,
@@ -2308,7 +2308,7 @@ t_itemid set_drop_id() {
 
 	int max = sizeof(itemids) / sizeof(itemids[0]);
 	int id = floor((max * pow(rand() % 10, 2)) / 100);
-	return itemid[id];
+	return itemids[id];
 }
 
 /*==========================================
