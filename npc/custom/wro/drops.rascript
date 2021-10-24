@@ -5,13 +5,13 @@ OnNPCKillEvent:
 	set .@rate, 1000; // A value of 1000 = 10.00%
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
-OnDrop:
+OnTryDrop:
 	// Drop check
 	message strcharinfo(0),".@itemboost = " + .@itemboost;
 	if(rand(1, 10000) > (.@rate + .@lukrate)) {
-		if(.@itemboost) {
+		if(.@itemboost > 0) {
 			.@itemboost--;
-			goto OnDrop;
+			goto OnTryDrop;
 		}
 		end;
 	}
