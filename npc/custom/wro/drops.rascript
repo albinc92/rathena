@@ -1,6 +1,7 @@
 -	script	drops	-1,{ 
 
 OnNPCKillEvent:
+	message strcharinfo(0),"SC_ITEMBOOST(2) = " + getstatus(SC_ITEMBOOST, 2);
 	set .@itemboost, ((getstatus(SC_ITEMBOOST, 1) / 100) - 1); // Drop modifying item account
 	set .@rate, 1000; // A value of 1000 = 10.00%
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
