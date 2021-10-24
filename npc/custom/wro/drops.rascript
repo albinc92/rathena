@@ -1,21 +1,19 @@
 -	script	drops	-1,{ 
 
 OnNPCKillEvent:
-	set .@retries, 1;
-	set .@retries, .@retries + ((getstatus(SC_ITEMBOOST, 1) / 100) - 1); // Drop modifying item account
-	set .@rate, 1000; // 10.00% base drop rate
+	set .@itemboost, ((getstatus(SC_ITEMBOOST, 1) / 100) - 1); // Drop modifying item account
+	set .@rate, 1000; // A value of 1000 = 10.00%
 	set .@lukrate, readparam(bLuk) * (.@rate / 250); // Every 250 pts in LUK doubles drop rate
 
-	// Drop criteria loop
-	message strcharinfo(0),".@retries = " + .@retries;
-	while(.@retries) {
-		if(rand(1, 10000) > (.@rate + .@lukrate)) {
-			if(.@retries) {
-				end;
-			} else {
-				.@retries--;
-			}
+OnDrop:
+	// Drop check
+	message strcharinfo(0),".@itemboost = " + .@itemboost;
+	if(rand(1, 10000) > (.@rate + .@lukrate)) {
+		if(.@itemboost) {
+			.@itemboost--;
+			goto OnDrop;
 		}
+		end;
 	}
 
 	// Query DB
