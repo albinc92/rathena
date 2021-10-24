@@ -2306,7 +2306,7 @@ t_itemid set_drop_id() {
 		2342
 	};
 
-	int max = (*(&itemid + 1) - itemid) - 1;
+	int max = 19;
 	return itemid[(max * pow((rnd() % 10), 2)) / 100];
 }
 
