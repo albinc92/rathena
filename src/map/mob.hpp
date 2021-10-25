@@ -5,7 +5,6 @@
 #define MOB_HPP
 
 #include <vector>
-#include <string>
 
 #include "../common/database.hpp"
 #include "../common/mmo.hpp" // struct item

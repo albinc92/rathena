@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <unordered_map>
 #include <vector>
-#include <string>
 
 #include "../common/cbasetypes.hpp"
 #include "../common/db.hpp"
@@ -2286,16 +2285,11 @@ void mob_setdropitem_option2(struct item *itm) {
  **/
 t_itemid set_drop_id(int mob_level) {
 	int item_type_count = 2;
-	std:string item_types[item_type_count] = { 
-		"ARMOR", 
-		"SHIELD" 
-	};
-
 	int type_index = rnd() % item_type_count;
-	std::string drop_type = item_types[type_index];
 	std::vector<random_equipment_drop> id_range;
 	
-	if(drop_type == "ARMOR") {
+	// ARMOR
+	if(type_index == 0) {
 		id_range.push_back({2301, 9});
 		id_range.push_back({2302, 9});
 		id_range.push_back({2303, 18});
@@ -2315,7 +2309,10 @@ t_itemid set_drop_id(int mob_level) {
 		id_range.push_back({2316, 90});
 		id_range.push_back({2317, 90});
 		id_range.push_back({2342, 99});
-	} else if(drop_type == "SHIELD") {
+	}
+	
+	// SHIELD
+	else if(type_index == 1) {
 		id_range.push_back({2101, 38});
 		id_range.push_back({2102, 38});
 		id_range.push_back({2104, 51});
@@ -2338,7 +2335,8 @@ t_itemid set_drop_id(int mob_level) {
 	}
 
 	int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 3)) / 1000);
-	return drop_ids.at(drop_index);
+	random_equipment_drop drop_id = drop_ids.at(drop_index);
+	return drop_id.item_id;
 }
 
 /*==========================================
