@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <unordered_map>
 #include <vector>
+#include <string>
 
 #include "../common/cbasetypes.hpp"
 #include "../common/db.hpp"
@@ -2289,43 +2290,40 @@ t_itemid set_drop_id(int mob_level) {
 		"SHIELD" 
 	};
 	
-	std::string type_to_drop = item_types[rnd() % (sizeof(item_types) / sizeof(item_types[0])))];
-	if(type_to_drop == "ARMOR") {
-		random_equipment_drop id_range[19] = {
-			{2301, 9},
-			{2302, 9},
-			{2303, 18},
-			{2304, 18},
-			{2305, 27},
-			{2306, 27},
-			{2308, 36},
-			{2324, 36},
-			{2333, 36},
-			{2329, 36},
-			{2310, 45},
-			{2320, 45},
-			{2311, 54},
-			{2312, 63},
-			{2313, 63},
-			{2315, 72},
-			{2316, 90},
-			{2317, 90},
-			{2342, 99}
-		};
-	} else if(type_to_drop == "SHIELD") {
-		random_equipment_drop id_range[4] = {
-			{2101, 38},
-			{2102, 38},
-			{2104, 51},
-			{2106, 77},
-		}
+	std::vector<random_equipment_drop> id_range;
+	std::string drop_type = item_types[rnd() % (sizeof(item_types) / sizeof(item_types[0]))];
+	if(drop_type == "ARMOR") {
+		id_range.push_back({2301, 9});
+		id_range.push_back({2302, 9});
+		id_range.push_back({2303, 18});
+		id_range.push_back({2304, 18});
+		id_range.push_back({2305, 27});
+		id_range.push_back({2306, 27});
+		id_range.push_back({2308, 36});
+		id_range.push_back({2324, 36});
+		id_range.push_back({2333, 36});
+		id_range.push_back({2329, 36});
+		id_range.push_back({2310, 45});
+		id_range.push_back({2320, 45});
+		id_range.push_back({2311, 54});
+		id_range.push_back({2312, 63});
+		id_range.push_back({2313, 63});
+		id_range.push_back({2315, 72});
+		id_range.push_back({2316, 90});
+		id_range.push_back({2317, 90});
+		id_range.push_back({2342, 99});
+	} else if(drop_type == "SHIELD") {
+		id_range.push_back({2101, 38});
+		id_range.push_back({2102, 38});
+		id_range.push_back({2104, 51});
+		id_range.push_back({2106, 77});
 	}
 
 	std::vector<random_equipment_drop> drop_ids;
-	for(int i = 0; i < (sizeof(id_range) / sizeof(id_range[0])); i++) {
-		random_equipment_drop curr = id_range[i];
+	for(int i = 0; i < id_range.size(); i++) {
+		random_equipment_drop curr = id_range.at(i);
 		if(curr.item_lv <= mob_level) {
-			drop_ids.push_back(id_range[i]);
+			drop_ids.push_back(curr);
 		} else {
 			break;
 		}
@@ -2333,7 +2331,7 @@ t_itemid set_drop_id(int mob_level) {
 
 	// No drop available
 	if(drop_ids.size() == 0) {
-		return -1;
+		return 0;
 	}
 
 	int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 3)) / 1000);
@@ -3035,7 +3033,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			mob_item_drop(md, dlist, ditem, 0, battle_config.finding_ore_rate/10, homkillonly);
 		}
 
-		// Random equipment drop
+		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
 			t_itemid id = set_drop_id(md->level);
 			if(id > 0) {
