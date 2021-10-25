@@ -326,6 +326,11 @@ struct item_drop_list {
 	int first_charid, second_charid, third_charid; // charid's of players with higher pickup priority
 	struct item_drop* item;            // linked list of drops
 };
+// The data structures for storing random item drops (WarboundRO)
+struct random_equipment_drop {
+	t_itemid item_id;
+	int16 item_lv;
+};
 
 struct mob_db *mob_db(int mob_id);
 uint16 mobdb_searchname(const char * const str);
@@ -405,6 +410,8 @@ void mvptomb_create(struct mob_data *md, char *killer, time_t time);
 void mvptomb_destroy(struct mob_data *md);
 
 void mob_setdropitem_option(struct item *itm, struct s_mob_drop *mobdrop);
+
+// WarboundRO custom functions
 void mob_setdropitem_option2(struct item *itm);
 t_itemid set_drop_id();
 

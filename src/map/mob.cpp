@@ -2283,32 +2283,61 @@ void mob_setdropitem_option2(struct item *itm) {
 /**
  * Returns an item id to be dropped at random
  **/
-t_itemid set_drop_id() {
-	t_itemid itemids[19] = {
-		2301,
-		2302,
-		2302,
-		2304,
-		2305,
-		2306,
-		2308,
-		2324,
-		2333,
-		2329,
-		2310,
-		2320,
-		2311,
-		2312,
-		2313,
-		2315,
-		2316,
-		2317,
-		2342
+t_itemid set_drop_id(int mob_level) {
+	std:string item_types[2] = { 
+		"ARMOR", 
+		"SHIELD" 
 	};
+	
+	std::string type_to_drop = item_types[rnd() % (sizeof(item_types) / sizeof(item_types[0])))];
+	if(type_to_drop == "ARMOR") {
+		random_equipment_drop id_range[19] = {
+			{2301, 9},
+			{2302, 9},
+			{2303, 18},
+			{2304, 18},
+			{2305, 27},
+			{2306, 27},
+			{2308, 36},
+			{2324, 36},
+			{2333, 36},
+			{2329, 36},
+			{2310, 45},
+			{2320, 45},
+			{2311, 54},
+			{2312, 63},
+			{2313, 63},
+			{2315, 72},
+			{2316, 90},
+			{2317, 90},
+			{2342, 99}
+		};
+	} else if(type_to_drop == "SHIELD") {
+		random_equipment_drop id_range[4] = {
+			{2101, 38},
+			{2102, 38},
+			{2104, 51},
+			{2106, 77},
+		}
+	}
 
-	int max = sizeof(itemids) / sizeof(itemids[0]);
-	int id = floor((max * pow(rand() % 10, 2)) / 100);
-	return itemids[id];
+	std::vector<random_equipment_drop> drop_ids;
+	for(int i = 0; i < (sizeof(id_range) / sizeof(id_range[0])); i++) {
+		random_equipment_drop curr = id_range[i];
+		if(curr.item_lv <= mob_level) {
+			drop_ids.push_back(id_range[i]);
+		} else {
+			break;
+		}
+	}
+
+	// No drop available
+	if(drop_ids.size() == 0) {
+		return -1;
+	}
+
+	int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 3)) / 1000);
+	return drop_ids.at(drop_index);
 }
 
 /*==========================================
@@ -3008,11 +3037,14 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop
 		if (sd == mvp_sd) {
-			struct s_mob_drop mobdrop;
-			memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-			mobdrop.nameid = set_drop_id();
-			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-			mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+			t_itemid id = set_drop_id(md->level);
+			if(id > 0) {
+				struct s_mob_drop mobdrop;
+				memset(&mobdrop, 0, sizeof(struct s_mob_drop));
+				mobdrop.nameid = id;
+				ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+				mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+			}
 		}
 
 		if(sd) {
