@@ -2290,25 +2290,60 @@ t_itemid set_drop_id(int mob_level) {
 	
 	// ARMOR
 	if(type_index == 0) {
-		id_range.push_back({2301, 9});
-		id_range.push_back({2302, 9});
-		id_range.push_back({2303, 18});
-		id_range.push_back({2304, 18});
-		id_range.push_back({2305, 27});
-		id_range.push_back({2306, 27});
-		id_range.push_back({2308, 36});
-		id_range.push_back({2324, 36});
-		id_range.push_back({2333, 36});
-		id_range.push_back({2329, 36});
-		id_range.push_back({2310, 45});
-		id_range.push_back({2320, 45});
-		id_range.push_back({2311, 54});
-		id_range.push_back({2312, 63});
-		id_range.push_back({2313, 63});
-		id_range.push_back({2315, 72});
-		id_range.push_back({2316, 90});
-		id_range.push_back({2317, 90});
-		id_range.push_back({2342, 99});
+		int rarity = rnd() % 1000;
+		if(rarity < 750) {
+			id_range.push_back({2301, 9});
+			id_range.push_back({2302, 9});
+			id_range.push_back({2303, 18});
+			id_range.push_back({2304, 18});
+			id_range.push_back({2305, 27});
+			id_range.push_back({2306, 27});
+			id_range.push_back({2308, 36});
+			id_range.push_back({2324, 36});
+			id_range.push_back({2333, 36});
+			id_range.push_back({2329, 36});
+			id_range.push_back({2310, 45});
+			id_range.push_back({2320, 45});
+			id_range.push_back({2311, 54});
+			id_range.push_back({2312, 63});
+			id_range.push_back({2313, 63});
+			id_range.push_back({2315, 72});
+			id_range.push_back({2316, 90});
+			id_range.push_back({2317, 90});
+			id_range.push_back({2342, 99});
+		} else {
+			id_range.push_back({2338, 0});
+			id_range.push_back({2365, 18});
+			id_range.push_back({2322, 27});
+			id_range.push_back({2387, 27});
+			id_range.push_back({2355, 36});
+			id_range.push_back({2388, 36});
+			id_range.push_back({2344, 36});
+			id_range.push_back({2345, 36});
+			id_range.push_back({2339, 36});
+			id_range.push_back({2389, 45});
+			id_range.push_back({2386, 45});
+			id_range.push_back({2334, 45});
+			id_range.push_back({2343, 45});
+			id_range.push_back({2367, 45});
+			id_range.push_back({2374, 54});
+			id_range.push_back({2366, 54});
+			id_range.push_back({2390, 54});
+			id_range.push_back({2353, 54});
+			id_range.push_back({2326, 54});
+			id_range.push_back({2336, 54});
+			id_range.push_back({2331, 54});
+			id_range.push_back({2357, 54});
+			id_range.push_back({15000, 63});
+			id_range.push_back({2375, 63});
+			id_range.push_back({2319, 63});
+			id_range.push_back({2354, 63});
+			id_range.push_back({2327, 63});
+			id_range.push_back({2337, 63});
+			id_range.push_back({2318, 72});
+			id_range.push_back({2391, 81});
+			id_range.push_back({2364, 90});
+		}
 	}
 	
 	// SHIELDS
@@ -2322,7 +2357,7 @@ t_itemid set_drop_id(int mob_level) {
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
-		if(curr.item_lv <= mob_level) {
+		if(curr.item_lv <= mob_level && curr.item_lv > (mob_level - 27)) {
 			drop_ids.push_back(curr);
 		} else {
 			break;
