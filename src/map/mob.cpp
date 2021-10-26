@@ -2288,8 +2288,8 @@ t_itemid set_drop_id(int mob_level) {
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
-	// ARMOR
 	int rarity = rnd() % 1000;
+	// ARMOR
 	if(type_index == 0) {
 		if(rarity < 750) {
 			id_range.push_back({2301, 9});
@@ -2377,7 +2377,7 @@ t_itemid set_drop_id(int mob_level) {
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
-		if(curr.item_lv <= mob_level) {
+		if((curr.item_lv <= mob_level) && (curr.item_lv >= (mob_level - 33))) {
 			drop_ids.push_back(curr);
 		} else {
 			break;
