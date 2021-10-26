@@ -2382,8 +2382,10 @@ t_itemid set_drop_id(int mob_level) {
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
-		if(curr.item_lv <= mob_level && curr.item_lv >= lower_bound) {
-			drop_ids.push_back(curr);
+		if(curr.item_lv <= mob_level) {
+			if(curr.item_lv > lower_bound) {
+				drop_ids.push_back(curr);
+			}
 		} else {
 			break;
 		}
