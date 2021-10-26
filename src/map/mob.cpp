@@ -2289,8 +2289,8 @@ t_itemid set_drop_id(int mob_level) {
 	std::vector<random_equipment_drop> id_range;
 	
 	// ARMOR
+	int rarity = rnd() % 1000;
 	if(type_index == 0) {
-		int rarity = rnd() % 1000;
 		if(rarity < 750) {
 			id_range.push_back({2301, 9});
 			id_range.push_back({2302, 9});
@@ -2348,16 +2348,36 @@ t_itemid set_drop_id(int mob_level) {
 	
 	// SHIELDS
 	else if(type_index == 1) {
-		id_range.push_back({2101, 38});
-		id_range.push_back({2102, 38});
-		id_range.push_back({2104, 51});
-		id_range.push_back({2106, 77});
+		if(rarity < 750) {
+			id_range.push_back({2101, 38});
+			id_range.push_back({2102, 38});
+			id_range.push_back({2104, 51});
+			id_range.push_back({2106, 77});
+		} else {
+			id_range.push_back({2131, 18});
+			id_range.push_back({2116, 27});
+			id_range.push_back({2109, 27});
+			id_range.push_back({2134, 27});
+			id_range.push_back({2114, 27});
+			id_range.push_back({2115, 27});
+			id_range.push_back({2108, 36});
+			id_range.push_back({2135, 36});
+			id_range.push_back({2125, 36});
+			id_range.push_back({2138, 45});
+			id_range.push_back({2129, 45});
+			id_range.push_back({2123, 45});
+			id_range.push_back({2122, 45});
+			id_range.push_back({2111, 45});
+			id_range.push_back({2124, 45});
+			id_range.push_back({2133, 45});
+			id_range.push_back({2130, 54});
+		}
 	}
 
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
-		if(curr.item_lv <= mob_level && curr.item_lv > (mob_level - 27)) {
+		if(curr.item_lv <= mob_level && curr.item_lv >= (mob_level - 54)) {
 			drop_ids.push_back(curr);
 		} else {
 			break;
