@@ -2285,8 +2285,7 @@ void mob_setdropitem_option2(struct item *itm) {
  **/
 t_itemid set_drop_id(int mob_level) {
 	int item_type_count = 3;
-	// int type_index = rnd() % item_type_count;
-	int type_index = 0;	// TESTING ARMORS ONLY
+	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
 	int rarity = rnd() % 1000;
