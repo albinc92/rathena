@@ -2463,7 +2463,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 
-	int lower_bound = mob_level - 33;
+	int lower_bound = (floor(mob_level / 10) * 7);
 	if(lower_bound < 0) {
 		lower_bound = 0;
 	}
