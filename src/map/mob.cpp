@@ -2284,20 +2284,29 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
-	int item_type_count = 2;
-	int type_index = rnd() % item_type_count;
+	int item_type_count = 3;
+	// int type_index = rnd() % item_type_count;
+	int type_index = 0;	// TESTING ARMORS ONLY
 	std::vector<random_equipment_drop> id_range;
 	
 	int rarity = rnd() % 1000;
+	int slotted = 0;
+	if ((rnd() % 1000) < 333) {
+		slotted = 1;
+	}
+
 	// ARMOR
 	if(type_index == 0) {
 		if(rarity < 750) {
-			id_range.push_back({2301, 9});
-			id_range.push_back({2302, 9});
-			id_range.push_back({2303, 18});
-			id_range.push_back({2304, 18});
-			id_range.push_back({2305, 27});
-			id_range.push_back({2306, 27});
+			if(!slotted) {
+				id_range.push_back({2301, 9});
+				id_range.push_back({2303, 18});
+				id_range.push_back({2305, 27});
+			} else {
+				id_range.push_back({2302, 9});
+				id_range.push_back({2304, 18});
+				id_range.push_back({2306, 27});
+			}
 			id_range.push_back({2308, 36});
 			id_range.push_back({2324, 36});
 			id_range.push_back({2333, 36});
@@ -2305,11 +2314,17 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2310, 45});
 			id_range.push_back({2320, 45});
 			id_range.push_back({2311, 54});
-			id_range.push_back({2312, 63});
-			id_range.push_back({2313, 63});
+			if(!slotted) {
+				id_range.push_back({2312, 63});
+			} else {
+				id_range.push_back({2313, 63});
+			}
 			id_range.push_back({2315, 72});
-			id_range.push_back({2316, 90});
-			id_range.push_back({2317, 90});
+			if(!slotted) {
+				id_range.push_back({2316, 90});
+			} else {
+				id_range.push_back({2317, 90});
+			}
 			id_range.push_back({2342, 99});
 		} else {
 			id_range.push_back({2338, 0});
@@ -2346,11 +2361,14 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 	
-	// SHIELDS
+	// SHIELD
 	else if(type_index == 1) {
 		if(rarity < 750) {
-			id_range.push_back({2101, 38});
-			id_range.push_back({2102, 38});
+			if(!slotted) {
+				id_range.push_back({2101, 38});
+			} else {
+				id_range.push_back({2102, 38});
+			}
 			id_range.push_back({2104, 51});
 			id_range.push_back({2106, 77});
 		} else {
@@ -2371,6 +2389,78 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2124, 45});
 			id_range.push_back({2133, 45});
 			id_range.push_back({2130, 54});
+		}
+	}
+	
+	// GARMENT
+	else if(type_index == 2) {
+		if(rarity < 750) {
+			if(!slotted) {
+			id_range.push_back({2502, 16});
+			id_range.push_back({2504, 32});
+			if(!slotted) {
+				id_range.push_back({2505, 64});
+			} else {
+				id_range.push_back({2506, 64});
+			}
+			id_range.push_back({2514, 80});
+		} else {
+			id_range.push_back({2509, 0});
+			id_range.push_back({2515, 16});
+			id_range.push_back({2508, 16});
+			id_range.push_back({2507, 32});
+			id_range.push_back({2521, 32});
+			id_range.push_back({2545, 32});
+			id_range.push_back({2536, 32});
+			id_range.push_back({2522, 32});
+			id_range.push_back({2516, 48});
+			id_range.push_back({2520, 48});
+			id_range.push_back({2513, 48});
+			id_range.push_back({2544, 48});
+			id_range.push_back({2532, 48});
+			id_range.push_back({2518, 48});
+			id_range.push_back({2519, 48});
+			id_range.push_back({2531, 48});
+			id_range.push_back({2524, 48});
+			id_range.push_back({2528, 48});
+			id_range.push_back({2527, 64});
+			id_range.push_back({2542, 64});
+			id_range.push_back({2529, 64});
+			id_range.push_back({2530, 64});
+			id_range.push_back({2517, 64});
+			id_range.push_back({2537, 80});
+			id_range.push_back({2554, 80});
+		}
+	}
+	
+	// FOOTGEAR
+	else if(type_index == 2) {
+		if(rarity < 750) {
+			id_range.push_back({2402, 13});
+			id_range.push_back({2404, 26});
+			if(!slotted) {
+				id_range.push_back({2405, 52});
+			} else {
+				id_range.push_back({2406, 52});
+			}
+			id_range.push_back({2412, 65});
+		} else {
+			id_range.push_back({2407, 0});
+			id_range.push_back({2426, 0});
+			id_range.push_back({2420, 26});
+			id_range.push_back({2422, 26});
+			id_range.push_back({2409, 26});
+			id_range.push_back({2440, 26});
+			id_range.push_back({2417, 39});
+			id_range.push_back({2408, 39});
+			id_range.push_back({2424, 39});
+			id_range.push_back({2423, 39});
+			id_range.push_back({2425, 52});
+			id_range.push_back({2433, 52});
+			id_range.push_back({2419, 52});
+			id_range.push_back({2421, 52});
+			id_range.push_back({2418, 52});
+			id_range.push_back({2450, 52});
 		}
 	}
 
