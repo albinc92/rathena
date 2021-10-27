@@ -2395,7 +2395,6 @@ t_itemid set_drop_id(int mob_level) {
 	// GARMENT
 	else if(type_index == 2) {
 		if(rarity < 750) {
-			if(!slotted) {
 			id_range.push_back({2502, 16});
 			id_range.push_back({2504, 32});
 			if(!slotted) {
@@ -2434,7 +2433,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// FOOTGEAR
-	else if(type_index == 2) {
+	else if(type_index == 3) {
 		if(rarity < 750) {
 			id_range.push_back({2402, 13});
 			id_range.push_back({2404, 26});
