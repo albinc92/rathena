@@ -2284,9 +2284,11 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
-	int mob_level_capped = 0;
+
+	// Cap mob_level to 99 (eg. max level mob Nydhogg (117) level is reduced by 18 to become 99)
+	int mob_level_capped = mob_level;
 	if(mob_level > 99) {
-		mob_level_capped = mob_level - 18;	// Nydhogg capped at lv99
+		mob_level_capped = mob_level - 18;
 	}
 
 	int item_type_count = 6;
@@ -2299,7 +2301,7 @@ t_itemid set_drop_id(int mob_level) {
 		slotted = 1;
 	}
 
-	// ARMOR (ilv based on highest 99 / DEF available)
+	// ARMOR (ilv based on the level of the monster that drops the item with highest DEF / DEF)
 	if(type_index == 0) {
 		if(rarity < 750) {
 			if(!slotted) {
@@ -2379,7 +2381,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 	
-	// SHIELD (ilv based on highest 99 / DEF available)
+	// SHIELD (ilv based on the level of the monster that drops the item with highest DEF / DEF)
 	else if(type_index == 1) {
 		if(rarity < 750) {
 			if(!slotted) {
@@ -2416,7 +2418,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 	
-	// GARMENT (ilv based on highest 99 / DEF available)
+	// GARMENT (ilv based on the level of the monster that drops the item with highest DEF / DEF)
 	else if(type_index == 2) {
 		if(rarity < 750) {
 			id_range.push_back({2502, 16});
@@ -2466,7 +2468,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 	
-	// FOOTGEAR (ilv based on highest 99 / DEF available)
+	// FOOTGEAR (ilv based on the level of the monster that drops the item with highest DEF / DEF)
 	else if(type_index == 3) {
 		if(rarity < 750) {
 			id_range.push_back({2402, 13});
