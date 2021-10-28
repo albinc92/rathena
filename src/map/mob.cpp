@@ -2284,7 +2284,7 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
-	int item_type_count = 3;
+	int item_type_count = 4;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2461,6 +2461,68 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2450, 52});
 		}
 	}
+	
+	// ACCESSORY
+	else if(type_index == 4) {
+		id_range.push_back({2609, 10});
+		id_range.push_back({2602, 31});
+		id_range.push_back({2618, 31});
+		id_range.push_back({2611, 37});
+		id_range.push_back({2604, 37});
+		id_range.push_back({2612, 38});
+		id_range.push_back({2617, 40});
+		id_range.push_back({2605, 41});
+		id_range.push_back({2719, 42});
+		id_range.push_back({2716, 43});
+		id_range.push_back({2610, 46});
+		id_range.push_back({2603, 47});
+		id_range.push_back({2619, 48});
+		id_range.push_back({2608, 49});
+		id_range.push_back({2626, 51});
+		id_range.push_back({2607, 58});
+		id_range.push_back({2717, 58});
+		id_range.push_back({2624, 61});
+		id_range.push_back({2625, 61});
+		id_range.push_back({2627, 62});
+		id_range.push_back({2601, 62});
+		id_range.push_back({2614, 62});
+		id_range.push_back({2620, 62});
+		id_range.push_back({2726, 62});
+		id_range.push_back({2727, 67});
+		id_range.push_back({2622, 69});
+		id_range.push_back({2654, 69});
+		id_range.push_back({2749, 70});
+		id_range.push_back({2652, 71});
+		id_range.push_back({2718, 71});
+		id_range.push_back({2613, 75});
+		id_range.push_back({2656, 75});
+		id_range.push_back({2703, 75});
+		id_range.push_back({2621, 77});
+		id_range.push_back({2677, 80});
+		id_range.push_back({2701, 80});
+		id_range.push_back({2745, 80});
+		id_range.push_back({2615, 81});
+		id_range.push_back({2748, 84});
+		id_range.push_back({2680, 85});
+		id_range.push_back({2700, 85});
+		id_range.push_back({2623, 90});
+		id_range.push_back({2648, 90});
+		id_range.push_back({2649, 90});
+		id_range.push_back({2650, 90});
+		id_range.push_back({2651, 90});
+		id_range.push_back({2728, 96});
+		id_range.push_back({2659 + (rnd() % 4), 97}); // Vesper Cores
+		id_range.push_back({2729, 98});
+		id_range.push_back({2616, 99});
+		id_range.push_back({2655, 99});
+		id_range.push_back({2678, 99});
+		id_range.push_back({2679, 99});
+		id_range.push_back({2744, 104});
+		id_range.push_back({2783, 107});
+		id_range.push_back({2743, 108});
+		id_range.push_back({2746, 110});
+		id_range.push_back({2747, 110});
+}
 
 	int lower_bound = (floor(mob_level / 10) * 7);
 	if(lower_bound < 0) {
