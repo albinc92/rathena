@@ -2775,6 +2775,7 @@ t_itemid set_drop_id(int mob_level) {
 			std::vector<t_itemid> lv_99_2hsword_r = { 1175, 1182, 1186, 1189, 1165, 1168, 1181 };
 			id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
 		}
+	}
 
 	int lower_bound = (floor(mob_level_capped / 10) * 7);
 	if(lower_bound < 0) {
