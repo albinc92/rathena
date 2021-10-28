@@ -2511,7 +2511,8 @@ t_itemid set_drop_id(int mob_level) {
 		id_range.push_back({2650, 90});
 		id_range.push_back({2651, 90});
 		id_range.push_back({2728, 96});
-		id_range.push_back({2659 + (rnd() % 4), 97}); // Vesper Cores
+		t_itemid vesper_core = 2659 + (rnd() % 4);
+		id_range.push_back({vesper_core, 97}); // Vesper Cores
 		id_range.push_back({2729, 98});
 		id_range.push_back({2616, 99});
 		id_range.push_back({2655, 99});
@@ -2522,7 +2523,7 @@ t_itemid set_drop_id(int mob_level) {
 		id_range.push_back({2743, 108});
 		id_range.push_back({2746, 110});
 		id_range.push_back({2747, 110});
-}
+	}
 
 	int lower_bound = (floor(mob_level / 10) * 7);
 	if(lower_bound < 0) {
