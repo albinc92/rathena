@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 6;
+	int item_type_count = 8;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2690,6 +2690,91 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({1237, 90});
 		}
 	}
+	
+	// 1-H SWORD (ilv based on ATK / 2, to a max of lv99)
+	else if(type_index == 6) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1104, 20});
+			} else {
+				id_range.push_back({1105, 20});
+			}
+			id_range.push_back({1108, 27});
+			id_range.push_back({1111, 35});
+			id_range.push_back({1114, 43});
+			//id_range.push_back({1125, 50});
+			//id_range.push_back({1147, 50});
+			std::vector<t_itemid> lv_50_1hsword = { 1125, 1147 };
+			id_range.push_back({lv_50_1hsword.at(rnd() % lv_50_1hsword.size()), 50});
+			id_range.push_back({1127, 58});
+			id_range.push_back({1120, 65});
+		} else {
+			id_range.push_back({1144, 38});
+			id_range.push_back({1136, 43});
+			id_range.push_back({1124, 45});
+			//id_range.push_back({1133, 50});
+			//id_range.push_back({1131, 50});
+			std::vector<t_itemid> lv_50_1hsword_r = { 1133, 1131 };
+			id_range.push_back({lv_50_1hsword_r.at(rnd() % lv_50_1hsword_r.size()), 50});
+			id_range.push_back({1142, 52});
+			id_range.push_back({13414, 53});
+			id_range.push_back({1132, 58});
+			//id_range.push_back({1128, 60});
+			//id_range.push_back({1130, 60});
+			std::vector<t_itemid> lv_60_1hsword_r = { 1128, 1130 };
+			id_range.push_back({lv_60_1hsword_r.at(rnd() % lv_60_1hsword_r.size()), 60});
+			id_range.push_back({13405, 63});
+			id_range.push_back({13404, 65});
+			//id_range.push_back({1143, 70});
+			//id_range.push_back({1141, 70});
+			//id_range.push_back({1148, 70});
+			std::vector<t_itemid> lv_70_1hsword_r = { 1143, 1141, 1148 };
+			id_range.push_back({lv_70_1hsword_r.at(rnd() % lv_70_1hsword_r.size()), 70});
+			//id_range.push_back({1140, 75});
+			//id_range.push_back({1135, 75});
+			std::vector<t_itemid> lv_75_1hsword_r = { 1140, 1135 };
+			id_range.push_back({lv_75_1hsword_r.at(rnd() % lv_75_1hsword_r.size()), 75});
+			id_range.push_back({13412, 75});
+			id_range.push_back({13413, 80});
+			//id_range.push_back({1138, 85});
+			//id_range.push_back({13421, 85});
+			std::vector<t_itemid> lv_85_1hsword_r = { 1138, 13421 };
+			id_range.push_back({lv_85_1hsword_r.at(rnd() % lv_85_1hsword_r.size()), 85});
+		}
+	}
+	
+	// 2-H SWORD (ilv based on ATK / 2, to a max of lv99)
+	else if(type_index == 7) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1116, 30});
+			} else {
+				id_range.push_back({1117, 30});
+			}
+			id_range.push_back({1152, 45});
+			id_range.push_back({1155, 58});
+			id_range.push_back({1158, 80});
+			id_range.push_back({1163, 90});
+		} else {
+			id_range.push_back({1162, 70});
+			id_range.push_back({1166, 75});
+			id_range.push_back({1164, 78});
+			//id_range.push_back({1176, 80});
+			//id_range.push_back({1167, 80});
+			std::vector<t_itemid> lv_80_2hsword_r = { 1176, 1167 };
+			id_range.push_back({lv_80_2hsword_r.at(rnd() % lv_80_2hsword_r.size()), 80});
+			id_range.push_back({1170, 88});
+			id_range.push_back({1188, 90});
+			//id_range.push_back({1175, 99});
+			//id_range.push_back({1182, 99});
+			//id_range.push_back({1186, 99});
+			//id_range.push_back({1189, 99});
+			//id_range.push_back({1165, 99});
+			//id_range.push_back({1168, 99});
+			//id_range.push_back({1181, 99});
+			std::vector<t_itemid> lv_99_2hsword_r = { 1175, 1182, 1186, 1189, 1165, 1168, 1181 };
+			id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
+		}
 
 	int lower_bound = (floor(mob_level_capped / 10) * 7);
 	if(lower_bound < 0) {
