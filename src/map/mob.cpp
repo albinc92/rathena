@@ -2284,6 +2284,11 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
+	int mob_level_capped = 0;
+	if(mob_level > 99) {
+		mob_level_capped = mob_level - 18;	// Nydhogg capped at lv99
+	}
+
 	int item_type_count = 6;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
@@ -2610,7 +2615,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 
-	int lower_bound = (floor(mob_level / 10) * 7);
+	int lower_bound = (floor(mob_level_capped / 10) * 7);
 	if(lower_bound < 0) {
 		lower_bound = 0;
 	}
@@ -2618,7 +2623,7 @@ t_itemid set_drop_id(int mob_level) {
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
-		if(curr.item_lv <= mob_level) {
+		if(curr.item_lv <= mob_level_capped) {
 			if(curr.item_lv > lower_bound) {
 				drop_ids.push_back(curr);
 			}
