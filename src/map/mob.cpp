@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 8;
+	int item_type_count = 10;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2774,6 +2774,70 @@ t_itemid set_drop_id(int mob_level) {
 			//id_range.push_back({1181, 99});
 			std::vector<t_itemid> lv_99_2hsword_r = { 1175, 1182, 1186, 1189, 1165, 1168, 1181 };
 			id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
+		}
+	}
+	
+	// 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
+	else if(type_index == 8) {
+		if(rarity < 750) {
+			id_range.push_back({1402, 16});
+			id_range.push_back({1405, 24});
+			id_range.push_back({1408, 33});
+		} else {
+			id_range.push_back({1415, 56});
+			id_range.push_back({1413, 67});
+			id_range.push_back({1421, 78});
+			id_range.push_back({1420, 83});
+			id_range.push_back({1417, 89});
+			id_range.push_back({1422, 99});
+		}
+	}
+	
+	// 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
+	else if(type_index == 9) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1451, 42});
+				id_range.push_back({1454, 52});
+			} else {
+				id_range.push_back({1452, 42});
+				id_range.push_back({1455, 52});
+			}
+			id_range.push_back({1485, 56});
+			id_range.push_back({1458, 62});
+			if(!slotted) {
+				id_range.push_back({1460, 75});
+			} else {
+				id_range.push_back({1461, 75});
+			}
+			id_range.push_back({1464, 83});
+			id_range.push_back({1411, 93});
+		} else {
+			id_range.push_back({1478, 60});
+			id_range.push_back({1484, 75});
+			//id_range.push_back({1474, 80});
+			//id_range.push_back({1483, 80});
+			std::vector<t_itemid> lv_80_2hsper_r = { 1474, 1483 };
+			id_range.push_back({lv_80_2hsper_r.at(rnd() % lv_80_2hsper_r.size()), 80});
+			//id_range.push_back({1477, 85});
+			//id_range.push_back({1468, 85});
+			std::vector<t_itemid> lv_85_2hsper_r = { 1477, 1468 };
+			id_range.push_back({lv_85_2hsper_r.at(rnd() % lv_85_2hsper_r.size()), 85});
+			//if(!slotted) {
+			//	id_range.push_back({1466, 90});
+			//} else {
+			//	id_range.push_back({1476, 90});
+			}
+			//id_range.push_back({1469, 90});
+			std::vector<t_itemid> lv_90_2hsper_r = { 1469 };
+			if(!slotted) {
+				lv_90_2hsper_r.push_back(1466);
+			} else {
+				lv_90_2hsper_r.push_back(1476);
+			}
+			id_range.push_back({lv_90_2hsper_r.at(rnd() % lv_90_2hsper_r.size()), 90});
+			id_range.push_back({1470, 95});
+			id_range.push_back({1471, 99});
 		}
 	}
 
