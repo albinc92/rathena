@@ -2310,11 +2310,11 @@ t_itemid set_drop_id(int mob_level) {
 			//id_range.push_back({2324, 36});
 			//id_range.push_back({2333, 36});
 			//id_range.push_back({2329, 36});
-			t_itemid lv_36_armor = { 2308, 2324, 2333, 2329 };
+			t_itemid lv_36_armor[4] = { 2308, 2324, 2333, 2329 };
 			id_range.push_back({lv_36_armors[rnd() % 4], 36});
 			//id_range.push_back({2310, 45});
 			//id_range.push_back({2320, 45});
-			t_itemid lv_45_armor = { 2310, 2320 };
+			t_itemid lv_45_armor[2] = { 2310, 2320 };
 			id_range.push_back({lv_45_armor[rnd() % 2], 45});
 			id_range.push_back({2311, 54});
 			if(!slotted) {
@@ -2334,21 +2334,21 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2365, 18});
 			//id_range.push_back({2322, 27});
 			//id_range.push_back({2387, 27});
-			t_itemid lv_27_armor_r = { 2322, 2387 };
+			t_itemid lv_27_armor_r[2] = { 2322, 2387 };
 			id_range.push_back({lv_27_armor_r[rnd() % 2], 27});
 			//id_range.push_back({2355, 36});
 			//id_range.push_back({2388, 36});
 			//id_range.push_back({2344, 36});
 			//id_range.push_back({2345, 36});
 			//id_range.push_back({2339, 36});
-			t_itemid lv_36_armor_r = { 2355, 2388, 2344, 2345, 2339 };
+			t_itemid lv_36_armor_r[5] = { 2355, 2388, 2344, 2345, 2339 };
 			id_range.push_back({lv_36_armor_r[rnd() % 5], 36});
 			//id_range.push_back({2389, 45});
 			//id_range.push_back({2386, 45});
 			//id_range.push_back({2334, 45});
 			//id_range.push_back({2343, 45});
 			//id_range.push_back({2367, 45});
-			t_itemid lv_45_armor_r = { 2389, 2386, 2334, 2343, 2367 };
+			t_itemid lv_45_armor_r[5] = { 2389, 2386, 2334, 2343, 2367 };
 			id_range.push_back({lv_45_armor_r[rnd() % 5], 45});
 			//id_range.push_back({2374, 54});
 			//id_range.push_back({2366, 54});
@@ -2358,7 +2358,7 @@ t_itemid set_drop_id(int mob_level) {
 			//id_range.push_back({2336, 54});
 			//id_range.push_back({2331, 54});
 			//id_range.push_back({2357, 54});
-			t_itemid lv_54_armor_r = { 2374, 2366, 2390, 2353, 2326, 2336, 2331, 2357 };
+			t_itemid lv_54_armor_r[8] = { 2374, 2366, 2390, 2353, 2326, 2336, 2331, 2357 };
 			id_range.push_back({lv_54_armor_r[rnd() % 8], 54});
 			//id_range.push_back({15000, 63});
 			//id_range.push_back({2375, 63});
@@ -2366,7 +2366,7 @@ t_itemid set_drop_id(int mob_level) {
 			//id_range.push_back({2354, 63});
 			//id_range.push_back({2327, 63});
 			//id_range.push_back({2337, 63});
-			t_itemid lv_63_armor_r = { 15000, 2375, 2319, 2354, 2327, 2337 };
+			t_itemid lv_63_armor_r[6] = { 15000, 2375, 2319, 2354, 2327, 2337 };
 			id_range.push_back({lv_63_armor_r[rnd() % 6], 63});
 			id_range.push_back({2318, 72});
 			id_range.push_back({2391, 81});
