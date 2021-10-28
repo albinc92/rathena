@@ -2284,7 +2284,7 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
-	int item_type_count = 4;
+	int item_type_count = 5;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
