@@ -2827,7 +2827,7 @@ t_itemid set_drop_id(int mob_level) {
 			//	id_range.push_back({1466, 90});
 			//} else {
 			//	id_range.push_back({1476, 90});
-			}
+			//}
 			//id_range.push_back({1469, 90});
 			std::vector<t_itemid> lv_90_2hsper_r = { 1469 };
 			if(!slotted) {
