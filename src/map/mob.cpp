@@ -2284,7 +2284,7 @@ void mob_setdropitem_option2(struct item *itm) {
  * Returns an item id to be dropped at random
  **/
 t_itemid set_drop_id(int mob_level) {
-	int item_type_count = 5;
+	int item_type_count = 6;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2523,6 +2523,77 @@ t_itemid set_drop_id(int mob_level) {
 		id_range.push_back({2743, 108});
 		id_range.push_back({2746, 110});
 		id_range.push_back({2747, 110});
+	}
+	
+	// DAGGER
+	else if(type_index == 5) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1201, 9});
+			} else {
+				id_range.push_back({1202, 9});
+			}
+			id_range.push_back({1205, 15});
+			if(!slotted) {
+				id_range.push_back({1207, 16});
+			} else {
+				id_range.push_back({1208, 16});
+			}
+			id_range.push_back({1211, 30});
+			id_range.push_back({1214, 36});
+			if(!slotted) {
+				id_range.push_back({1216, 43});
+				id_range.push_back({1219, 53});
+			} else {
+				id_range.push_back({1217, 43});
+				id_range.push_back({1220, 53});
+			}
+			id_range.push_back({1246, 55});
+			id_range.push_back({1226, 59});
+		} else {
+			id_range.push_back({1249, 20});
+			id_range.push_back({13011, 25});
+			id_range.push_back({1234, 25});
+			id_range.push_back({13035, 25});
+			id_range.push_back({1241, 27});
+			id_range.push_back({1239, 32});
+			id_range.push_back({1238, 32});
+			id_range.push_back({1231, 35});
+			id_range.push_back({13017, 35});
+			id_range.push_back({13008, 35});
+			id_range.push_back({1229, 38});
+			id_range.push_back({1228, 40});
+			id_range.push_back({13004, 40});
+			id_range.push_back({1230, 40});
+			id_range.push_back({1233, 45});
+			id_range.push_back({1223, 45});
+			if(!slotted) {
+				id_range.push_back({13012, 48});
+			} else {
+				id_range.push_back({13013, 48});
+			}
+			id_range.push_back({1235, 55});
+			id_range.push_back({13001, 55});
+			id_range.push_back({13046, 55});
+			id_range.push_back({13038, 60});
+			if(!slotted) {
+				id_range.push_back({13014, 60});
+			} else {
+				id_range.push_back({13014, 60});
+			}
+			id_range.push_back({13027, 60});
+			id_range.push_back({13009, 63});
+			id_range.push_back({13034, 65});
+			id_range.push_back({13039, 65});
+			id_range.push_back({13028, 65});
+			id_range.push_back({13047, 68});
+			id_range.push_back({1232, 70});
+			id_range.push_back({1242, 70});
+			id_range.push_back({1236, 70});
+			id_range.push_back({13002, 74});
+			id_range.push_back({13006, 75});
+			id_range.push_back({1237, 90});
+		}
 	}
 
 	int lower_bound = (floor(mob_level / 10) * 7);
