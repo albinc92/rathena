@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 12;
+	int item_type_count = 13;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2882,6 +2882,46 @@ t_itemid set_drop_id(int mob_level) {
 			} else {
 				id_range.push_back({1302, 99});
 			}
+		}
+	}
+	
+	// MACE (ilv based on highest weapon atk / 100)
+	else if(type_index == 12) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1501, 14});
+			} else {
+				id_range.push_back({1502, 14});
+			}
+			id_range.push_back({1505, 22});
+			id_range.push_back({1508, 33});
+			if(!slotted) {
+				id_range.push_back({1510, 42});
+				id_range.push_back({1519, 51});
+				id_range.push_back({1513, 67});
+			} else {
+				id_range.push_back({1511, 42});
+				id_range.push_back({1520, 51});
+				id_range.push_back({1514, 67});
+			}
+			id_range.push_back({1517, 79});
+		} else {
+			id_range.push_back({1523, 51});
+			//id_range.push_back({1524, 67});
+			//id_range.push_back({1544, 67});
+			std::vector<t_itemid> lv_67_mace_r = { 1524, 1544 };
+			id_range.push_back({lv_67_mace_r.at(rnd() % lv_67_mace_r.size()), 67});
+			id_range.push_back({1531, 70});
+			id_range.push_back({1541, 73});
+			//id_range.push_back({16000, 79});
+			//id_range.push_back({16001, 79});
+			std::vector<t_itemid> lv_79_mace_r = { 16000, 16001 };
+			id_range.push_back({lv_79_mace_r.at(rnd() % lv_79_mace_r.size()), 79});
+			id_range.push_back({1525, 81});
+			id_range.push_back({1528, 85});
+			id_range.push_back({1529, 94});
+			id_range.push_back({1548, 97});
+			id_range.push_back({1527, 99});
 		}
 	}
 
