@@ -2967,6 +2967,57 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({1637, 95});
 		}
 	}
+	
+	// MACE (ilv based on level of mobs that normally drop items)
+	else if(type_index == 13) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1701, 5});
+			} else {
+				id_range.push_back({1702, 5});
+			}
+			id_range.push_back({1705, 28});
+			id_range.push_back({1708, 31});
+			id_range.push_back({1711, 33});
+			id_range.push_back({1715, 52});
+			id_range.push_back({1716, 60});
+			id_range.push_back({1722, 85});
+		} else {
+			id_range.push_back({1734, 49});
+			id_range.push_back({1732, 50});
+			id_range.push_back({1731, 55});
+			//id_range.push_back({1736, 56});
+			//id_range.push_back({1733, 56});
+			std::vector<t_itemid> lv_56_bow_r = { 1736, 1733 };
+			id_range.push_back({lv_56_bow_r.at(rnd() % lv_56_bow_r.size()), 56});
+			id_range.push_back({1740, 75});
+			id_range.push_back({1723, 80});
+			id_range.push_back({1745, 82});
+			//id_range.push_back({1730, 85});
+			//id_range.push_back({1737, 85});
+			std::vector<t_itemid> lv_85_bow_r = { 1730, 1737 };
+			id_range.push_back({lv_85_bow_r.at(rnd() % lv_85_bow_r.size()), 85});
+			id_range.push_back({1741, 92});
+			//id_range.push_back({1724, 99});
+			//id_range.push_back({1720, 99});
+			std::vector<t_itemid> lv_99_bow_r = { 1724, 1720 };
+			id_range.push_back({lv_99_bow_r.at(rnd() % lv_99_bow_r.size()), 99});
+		}
+	}
+	
+	// BOW (ilv based on level of mobs that normally drop items)
+	else if(type_index == 14) {
+		if(rarity > 749) {
+			id_range.push_back({1473, 64});
+			id_range.push_back({1472, 75});
+			id_range.push_back({2004, 80});
+			//id_range.push_back({2005, 81});
+			//id_range.push_back({2001, 81});
+			std::vector<t_itemid> lv_81_2hstaff_r = { 2005, 2001 };
+			id_range.push_back({lv_81_2hstaff_r.at(rnd() % lv_81_2hstaff_r.size()), 81});
+			id_range.push_back({2000, 98});
+		}
+	}
 
 	int lower_bound = (floor(mob_level_capped / 10) * 7);
 	if(lower_bound < 0) {
