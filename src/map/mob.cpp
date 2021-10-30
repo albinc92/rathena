@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 13;
+	int item_type_count = 20;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -3016,6 +3016,189 @@ t_itemid set_drop_id(int mob_level) {
 			std::vector<t_itemid> lv_81_2hstaff_r = { 2005, 2001 };
 			id_range.push_back({lv_81_2hstaff_r.at(rnd() % lv_81_2hstaff_r.size()), 81});
 			id_range.push_back({2000, 98});
+		}
+	}
+	
+	// KNUCKLE (ilv based on highest atk + 2)
+	else if(type_index == 15) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({1801, 32});
+			} else {
+				id_range.push_back({1802, 32});
+			}
+			id_range.push_back({1806, 67});
+			id_range.push_back({1812, 99});
+		} else {
+			id_range.push_back({1822, 32});
+			t_itemid elemental_knuckle = 1818 + (rnd() % 4);
+			id_range.push_back({elemental_knuckle, 82}); // elemental_knuckles
+			id_range.push_back({1810, 88});
+			id_range.push_back({1825, 99});
+		}
+	}
+	
+	// MUSICAL INSTRUMENT (ilv based on highest atk / 100)
+	else if(type_index == 16) {
+		if(rarity < 750) {
+			id_range.push_back({1902, 33});
+			id_range.push_back({1904, 60});
+			id_range.push_back({1906, 70});
+			id_range.push_back({1908, 95});
+		} else {
+			t_itemid elemental_guitar = 1914 + (rnd() % 4);	// Elemental guitars
+			//id_range.push_back({elemental_guitar, 82});
+			//id_range.push_back({1925, 73});
+			//id_range.push_back({1913, 73});
+			std::vector<t_itemid> lv_73_guitar_r = { elemental_guitar, 1925, 1913 };
+			id_range.push_back({lv_73_guitar_r.at(rnd() % lv_73_guitar_r.size()), 73});
+			if(!slotted) {
+				id_range.push_back({1909, 76});
+			} else {
+				id_range.push_back({1910, 76});
+			}
+			id_range.push_back({1926, 80});
+			id_range.push_back({1919, 87});
+			id_range.push_back({1920, 91});	// Berserk guitar special case
+			id_range.push_back({1918, 99});
+		}
+	}
+	
+	// WHIP (ilv based on highest atk / 100)
+	else if(type_index == 17) {
+		if(rarity < 750) {
+			id_range.push_back({1951, 24});
+			id_range.push_back({1957, 73});
+		} else {
+			//id_range.push_back({1972, 54});
+			//id_range.push_back({1962, 54});
+			t_itemid elemental_whip = 1965 + (rnd() % 4);	// Elemental whips
+			//id_range.push_back({elemental_whip, 60});
+			id_range.push_back({1973, 54});
+			id_range.push_back({1980, 54});
+			std::vector<t_itemid> lv_54_whip_r = { 1972, 1962, elemental_whip, 1973, 1980 };
+			id_range.push_back({lv_54_whip_r.at(rnd() % lv_54_whip_r.size()), 54});
+			id_range.push_back({1963, 62});
+			//id_range.push_back({1968, 65});
+			//id_range.push_back({1979, 65});
+			std::vector<t_itemid> lv_65_whip_r = { 1968, 1979 };
+			id_range.push_back({lv_65_whip_r.at(rnd() % lv_65_whip_r.size()), 65});
+			id_range.push_back({1964, 73});
+			id_range.push_back({1969, 76});
+			id_range.push_back({1970, 81});
+			id_range.push_back({1974, 99});
+		}
+	}
+	
+	// BOOK (ilv based on highest atk / 100)
+	else if(type_index == 18) {
+		if(rarity < 750) {
+			id_range.push_back({1550, 60});
+			id_range.push_back({1552, 89});
+		} else {
+			id_range.push_back({1573, 21});
+			//id_range.push_back({1558, 43});
+			//id_range.push_back({1572, 43});
+			std::vector<t_itemid> lv_43_book_r = { 1558, 1572 };
+			id_range.push_back({lv_43_book_r.at(rnd() % lv_43_book_r.size()), 43});
+			t_itemid elemental_book = 1553 + (rnd() % 4);	// Elemental books
+			id_range.push_back({elemental_book, 64});
+			id_range.push_back({1560, 71});
+			id_range.push_back({1564, 79});
+			id_range.push_back({1551, 82});
+			id_range.push_back({1557, 86});
+			id_range.push_back({1559, 93});
+			id_range.push_back({1565, 98});
+			id_range.push_back({1561, 99});
+		}
+	}
+	
+	// KATAR (ilv based on highest atk / 100)
+	else if(type_index == 19) {
+		if(rarity < 750) {
+			id_range.push_back({1251, 76});
+			id_range.push_back({1253, 90});
+			id_range.push_back({1255, 99});
+		} else {
+			id_range.push_back({1264, 54});
+			t_itemid elemental_katar = 1256 + (rnd() % 4);	// Elemental katar
+			id_range.push_back({elemental_katar, 66});
+			id_range.push_back({1270, 67});
+			id_range.push_back({1262, 70});
+			//id_range.push_back({1271, 73});
+			//id_range.push_back({1265, 73});
+			//id_range.push_back({1284, 73});
+			std::vector<t_itemid> lv_73_katar_r = { 1271, 1265, 1284 };
+			id_range.push_back({lv_73_katar_r.at(rnd() % lv_73_katar_r.size()), 73});
+			id_range.push_back({1285, 79});
+			//id_range.push_back({1261, 84});
+			//id_range.push_back({1269, 84});
+			std::vector<t_itemid> lv_84_katar_r = { 1261, 1269 };
+			id_range.push_back({lv_84_katar_r.at(rnd() % lv_84_katar_r.size()), 84});
+			//id_range.push_back({1260, 91});
+			//id_range.push_back({1263, 91});
+			std::vector<t_itemid> lv_91_katar_r = { 1260, 1263 };
+			id_range.push_back({lv_91_katar_r.at(rnd() % lv_91_katar_r.size()), 91});
+			id_range.push_back({1268, 97});
+		}
+	}
+	
+	// REVOLVER (ilv based on highest atk / 100)
+	else if(type_index == 20) {
+		if(rarity < 750) {
+			id_range.push_back({13101, 43});
+			id_range.push_back({13103, 64});
+			id_range.push_back({13104, 99});
+		} else {
+			id_range.push_back({13106, 29});
+			id_range.push_back({13107, 97});
+		}
+	}
+	
+	// RIFLE (ilv based on highest atk / 100)
+	else if(type_index == 21) {
+		if(rarity < 750) {
+			id_range.push_back({13150, 33});
+		} else {
+			id_range.push_back({13152, 80});
+			id_range.push_back({13170, 92});
+			id_range.push_back({13153, 99});
+			id_range.push_back({13164, 99});
+		}
+	}
+	
+	// SHOTGUN (ilv based on highest atk / 100)
+	else if(type_index == 22) {
+		if(rarity > 749) {
+			id_range.push_back({13169, 38});
+			id_range.push_back({13167, 95});
+			id_range.push_back({13156, 99});
+		}
+	}
+	
+	// GRENADE LAUNCHER (ilv based on highest atk / 100)
+	else if(type_index == 23) {
+		if(rarity > 749) {
+			if(!slotted) {
+				id_range.push_back({13160, 99});
+			} else {
+				id_range.push_back({13161, 99});
+			}
+		}
+	}
+	
+	// HUUMA SHURIKEN (ilv based on highest atk / 100)
+	else if(type_index == 23) {
+		if(rarity < 750) {
+			if(!slotted) {
+				id_range.push_back({13301, 27});
+			} else {
+				id_range.push_back({13302, 27});
+			}
+		} else {
+			id_range.push_back({13304, 60});
+			id_range.push_back({13300, 81});
+			id_range.push_back({13303, 99});
 		}
 	}
 
