@@ -2303,7 +2303,7 @@ t_itemid set_drop_id(int mob_level) {
 
 	// ARMOR 
 	if(type_index == 0) {
-		if(rarity < 750) {(	// iLv based on the level of the monster that drops the item with highest DEF / DEF)
+		if(rarity < 750) {	// iLv based on the level of the monster that drops the item with highest DEF / DEF)
 			if(!slotted) {
 				id_range.push_back({2301, 9});
 				id_range.push_back({2303, 18});
