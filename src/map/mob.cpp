@@ -2301,9 +2301,12 @@ t_itemid set_drop_id(int mob_level) {
 		slotted = 1;
 	}
 
-	// ARMOR 
+	// iLv of NORMAL items is based on the level of the monster that drops the item with highest DEF / DEF)
+	// iLv of RARE items is based on the mobLv of the monster that usually drops them
+	
+	// ARMOR
 	if(type_index == 0) {
-		if(rarity < 750) {	// iLv based on the level of the monster that drops the item with highest DEF / DEF)
+		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({2301, 9});
 				id_range.push_back({2303, 18});
@@ -2313,14 +2316,8 @@ t_itemid set_drop_id(int mob_level) {
 				id_range.push_back({2304, 18});
 				id_range.push_back({2306, 27});
 			}
-			//id_range.push_back({2308, 36});
-			//id_range.push_back({2324, 36});
-			//id_range.push_back({2333, 36});
-			//id_range.push_back({2329, 36});
 			std::vector<t_itemid> lv_36_armor = { 2308, 2324, 2333, 2329 };
 			id_range.push_back({lv_36_armor.at(rnd() % lv_36_armor.size()), 36});
-			//id_range.push_back({2310, 45});
-			//id_range.push_back({2320, 45});
 			std::vector<t_itemid> lv_45_armor = { 2310, 2320 };
 			id_range.push_back({lv_45_armor.at(rnd() % lv_45_armor.size()), 45});
 			id_range.push_back({2311, 54});
@@ -2336,55 +2333,38 @@ t_itemid set_drop_id(int mob_level) {
 				id_range.push_back({2317, 90});
 			}
 			id_range.push_back({2342, 99});
-		} else {	// iLvl based on mob lvl that usually drops
+		} else {
 			id_range.push_back({2322, 16});
 			id_range.push_back({2339, 23});
 			id_range.push_back({2337, 30});
-			//id_range.push_back({2338, 31});
-			//id_range.push_back({2326, 31});
 			std::vector<t_itemid> lv_31_armor_r = { 2338, 2326 };
 			id_range.push_back({lv_31_armor_r.at(rnd() % lv_31_armor_r.size()), 31});
 			id_range.push_back({2355, 36});	// Angelic Protection special case (based on same formula as normal type)
 			id_range.push_back({2331, 38});
 			id_range.push_back({2388, 62});
-			//id_range.push_back({2366, 69});
-			//id_range.push_back({2336, 69});
 			std::vector<t_itemid> lv_69_armor_r = { 2366, 2336 };
 			id_range.push_back({lv_69_armor_r.at(rnd() % lv_69_armor_r.size()), 69});
 			id_range.push_back({2386, 70});
 			id_range.push_back({2318, 79});
-			//id_range.push_back({2334, 80});
-			//id_range.push_back({2367, 80});
 			std::vector<t_itemid> lv_80_armor_r = { 2334, 2367 };
 			id_range.push_back({lv_80_armor_r.at(rnd() % lv_80_armor_r.size()), 80});
-			//id_range.push_back({2365, 81});
-			//id_range.push_back({2353, 81});
 			std::vector<t_itemid> lv_81_armor_r = { 2334, 2367 };
 			id_range.push_back({lv_81_armor_r.at(rnd() % lv_81_armor_r.size()), 81});
 			id_range.push_back({2390, 82});
 			id_range.push_back({2354, 83});
 			id_range.push_back({2344, 85});
 			id_range.push_back({2391, 86});
-			//id_range.push_back({2319, 90});
-			//id_range.push_back({2327, 90});
 			std::vector<t_itemid> lv_90_armor_r = { 2319, 2327 };
 			id_range.push_back({lv_90_armor_r.at(rnd() % lv_90_armor_r.size()), 90});
-			//id_range.push_back({2387, 91});
-			//id_range.push_back({2364, 91});
 			std::vector<t_itemid> lv_91_armor_r = { 2387, 2364 };
 			id_range.push_back({lv_91_armor_r.at(rnd() % lv_91_armor_r.size()), 91});
 			id_range.push_back({2389, 93});
-			//id_range.push_back({2345, 99});
-			//id_range.push_back({2343, 99});
-			//id_range.push_back({2374, 99});
-			//id_range.push_back({2357, 99});
-			//id_range.push_back({2375, 99});
 			std::vector<t_itemid> lv_99_armor_r = { 2345, 2343, 2374, 2374, 2357, 2375 };
 			id_range.push_back({lv_99_armor_r.at(rnd() % lv_99_armor_r.size()), 99});
 		}
 	}
 	
-	// SHIELD (iLv based on the level of the monster that drops the item with highest DEF / DEF)
+	// SHIELD
 	else if(type_index == 1) {
 		if(rarity < 750) {
 			if(!slotted) {
@@ -2394,12 +2374,10 @@ t_itemid set_drop_id(int mob_level) {
 			}
 			id_range.push_back({2104, 51});
 			id_range.push_back({2106, 77});
-		} else {	// iLvl based on mob lvl that usually drops
+		} else {
 			id_range.push_back({2116, 27});	// Angelic Guard special case (based on same formula as normal type)
 			id_range.push_back({2124, 50});
 			id_range.push_back({2109, 62});
-			//id_range.push_back({2131, 63});
-			//id_range.push_back({2108, 63});
 			std::vector<t_itemid> lv_63_shield_r = { 2131, 2108 };
 			id_range.push_back({lv_63_shield_r.at(rnd() % lv_63_shield_r.size()), 63});
 			id_range.push_back({2123, 69});
@@ -2409,9 +2387,6 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2135, 84});
 			id_range.push_back({2122, 86});
 			id_range.push_back({2134, 93});
-			//id_range.push_back({2111, 97});
-			//id_range.push_back({2133, 97});
-			//id_range.push_back({2130, 97});
 			std::vector<t_itemid> lv_97_shield_r = { 2111, 2133, 2130 };
 			id_range.push_back({lv_97_shield_r.at(rnd() % lv_97_shield_r.size()), 97});
 			id_range.push_back({2129, 98});
@@ -2419,7 +2394,7 @@ t_itemid set_drop_id(int mob_level) {
 		}
 	}
 	
-	// GARMENT (iLv based on the level of the monster that drops the item with highest DEF / DEF)
+	// GARMENT
 	else if(type_index == 2) {
 		if(rarity < 750) {
 			id_range.push_back({2502, 16});
@@ -2430,7 +2405,7 @@ t_itemid set_drop_id(int mob_level) {
 				id_range.push_back({2506, 66});
 			}
 			id_range.push_back({2514, 82});
-		} else {	// iLvl based on mob lvl that usually drops
+		} else {
 			id_range.push_back({2521, 33});	// Angelic Cardigan special case (based on same formula as normal type)
 			id_range.push_back({2531, 44});
 			id_range.push_back({2529, 55});
@@ -2439,8 +2414,6 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2545, 62});
 			id_range.push_back({2527, 65});
 			id_range.push_back({2518, 69});
-			//id_range.push_back({2516, 75});
-			//id_range.push_back({2517, 75});
 			std::vector<t_itemid> lv_75_garment_r = { 2516, 2517 };
 			id_range.push_back({lv_75_garment_r.at(rnd() % lv_75_garment_r.size()), 75});
 			id_range.push_back({2507, 80});
@@ -2450,22 +2423,15 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({2532, 88});
 			id_range.push_back({2520, 92});
 			id_range.push_back({2544, 95});
-			//id_range.push_back({2536, 97});
-			//id_range.push_back({2537, 97});
 			std::vector<t_itemid> lv_97_garment_r = { 2536, 2537 };
 			id_range.push_back({lv_97_garment_r.at(rnd() % lv_97_garment_r.size()), 97});
 			id_range.push_back({2509, 98});
-			//id_range.push_back({2515, 99});
-			//id_range.push_back({2519, 99});
-			//id_range.push_back({2524, 99});
-			//id_range.push_back({2542, 99});
-			//id_range.push_back({2554, 99});
 			std::vector<t_itemid> lv_99_garment_r = { 2515, 2519, 2524, 2542, 2554 };
 			id_range.push_back({lv_99_garment_r.at(rnd() % lv_99_garment_r.size()), 99});
 		}
 	}
 	
-	// FOOTGEAR (ilv based on the level of the monster that drops the item with highest DEF / DEF)
+	// FOOTGEAR
 	else if(type_index == 3) {
 		if(rarity < 750) {
 			id_range.push_back({2402, 16});
@@ -2476,35 +2442,33 @@ t_itemid set_drop_id(int mob_level) {
 				id_range.push_back({2406, 66});
 			}
 			id_range.push_back({2412, 82});
-		} else {	// iLvl based on mob lvl that usually drops
+		} else {
 			id_range.push_back({2408, 23});
 			id_range.push_back({2420, 32});	// Angels Reincarnation special case (based on same formula as normal type)
 			id_range.push_back({2407, 41});
 			id_range.push_back({2409, 51});
 			id_range.push_back({2417, 60});
 			id_range.push_back({2425, 60});
+			std::vector<t_itemid> lv_60_footgear_r = { 2417, 2425 };
+			id_range.push_back({lv_60_footgear_r.at(rnd() % lv_60_footgear_r.size()), 60});
 			id_range.push_back({2426, 61});
 			id_range.push_back({2422, 62});
 			id_range.push_back({2418, 65});
 			id_range.push_back({2424, 75});
 			id_range.push_back({2450, 85});
-			id_range.push_back({2440, 88});
-			id_range.push_back({2419, 88});
+			std::vector<t_itemid> lv_88_footgear_r = { 2440, 2419 };
+			id_range.push_back({lv_88_footgear_r.at(rnd() % lv_88_footgear_r.size()), 88});
 			id_range.push_back({2423, 98});
-			id_range.push_back({2433, 99});
-			id_range.push_back({2421, 99});
+			std::vector<t_itemid> lv_99_footgear_r = { 2433, 2421 };
+			id_range.push_back({lv_99_footgear_r.at(rnd() % lv_99_footgear_r.size()), 99});
 		}
 	}
 	
 	// ACCESSORY (ilv based on moblv who normally drops)
 	else if(type_index == 4) {
 		id_range.push_back({2609, 10});
-		//id_range.push_back({2602, 31});
-		//id_range.push_back({2618, 31});
 		std::vector<t_itemid> lv_31_accessory = { 2602, 2618 };
 		id_range.push_back({lv_31_accessory.at(rnd() % lv_31_accessory.size()), 31});
-		//id_range.push_back({2611, 37});
-		//id_range.push_back({2604, 37});
 		std::vector<t_itemid> lv_37_accessory = { 2611, 2604 };
 		id_range.push_back({lv_37_accessory.at(rnd() % lv_37_accessory.size()), 37});
 		id_range.push_back({2612, 38});
@@ -2517,77 +2481,43 @@ t_itemid set_drop_id(int mob_level) {
 		id_range.push_back({2619, 48});
 		id_range.push_back({2608, 49});
 		id_range.push_back({2626, 51});
-		//id_range.push_back({2607, 58});
-		//id_range.push_back({2717, 58});
 		std::vector<t_itemid> lv_58_accessory = { 2607, 2717 };
 		id_range.push_back({lv_58_accessory.at(rnd() % lv_58_accessory.size()), 58});
-		//id_range.push_back({2624, 61});
-		//id_range.push_back({2625, 61});
 		std::vector<t_itemid> lv_61_accessory = { 2624, 2625 };
 		id_range.push_back({lv_61_accessory.at(rnd() % lv_61_accessory.size()), 61});
-		//id_range.push_back({2627, 62});
-		//id_range.push_back({2601, 62});
-		//id_range.push_back({2614, 62});
-		//id_range.push_back({2620, 62});
-		//id_range.push_back({2726, 62});
 		std::vector<t_itemid> lv_62_accessory = { 2627, 2601, 2614, 2620, 2726 };
 		id_range.push_back({lv_62_accessory.at(rnd() % lv_62_accessory.size()), 62});
-		//id_range.push_back({2727, 67});
-		//id_range.push_back({2622, 69});
-		//id_range.push_back({2654, 69});
 		std::vector<t_itemid> lv_69_accessory = { 2727, 2622, 2654 };
 		id_range.push_back({lv_69_accessory.at(rnd() % lv_69_accessory.size()), 69});
 		id_range.push_back({2749, 70});
-		//id_range.push_back({2652, 71});
-		//id_range.push_back({2718, 71});
 		std::vector<t_itemid> lv_71_accessory = { 2652, 2718 };
 		id_range.push_back({lv_71_accessory.at(rnd() % lv_71_accessory.size()), 71});
-		//id_range.push_back({2613, 75});
-		//id_range.push_back({2656, 75});
-		//id_range.push_back({2703, 75});
 		std::vector<t_itemid> lv_75_accessory = { 2613, 2656, 2703 };
 		id_range.push_back({lv_75_accessory.at(rnd() % lv_75_accessory.size()), 75});
 		id_range.push_back({2621, 77});
 		id_range.push_back({2677, 80});
-		//id_range.push_back({2701, 80});
-		//id_range.push_back({2745, 80});
 		std::vector<t_itemid> lv_80_accessory = { 2701, 2745 };
 		id_range.push_back({lv_80_accessory.at(rnd() % lv_80_accessory.size()), 80});
 		id_range.push_back({2615, 81});
 		id_range.push_back({2748, 84});
-		//id_range.push_back({2680, 85});
-		//id_range.push_back({2700, 85});
 		std::vector<t_itemid> lv_85_accessory = { 2680, 2700 };
 		id_range.push_back({lv_85_accessory.at(rnd() % lv_85_accessory.size()), 85});
-		id_range.push_back({2744, 104 - 18}); // lv86
-		id_range.push_back({2783, 107 - 18}); // lv89
-		//id_range.push_back({2623, 90});
-		//id_range.push_back({2648, 90});
-		//id_range.push_back({2649, 90});
-		//id_range.push_back({2650, 90});
-		//id_range.push_back({2651, 90});
-		std::vector<t_itemid> lv_90_accessory = { 2623, 2648, 2649, 2650, 2651 };
+		id_range.push_back({2744, 87});
+		id_range.push_back({2783, 89});
+		std::vector<t_itemid> lv_90_accessory = { 2623, 2648, 2649, 2650, 2651, 2743 };
 		id_range.push_back({lv_90_accessory.at(rnd() % lv_90_accessory.size()), 90});
-		id_range.push_back({2743, 108 - 18}); // lv90
-		//id_range.push_back({2746, 110 - 18}); // lv92
-		//id_range.push_back({2747, 110 - 18}); // lv92
 		std::vector<t_itemid> lv_92_accessory = { 2746, 2747 };
 		id_range.push_back({lv_92_accessory.at(rnd() % lv_92_accessory.size()), 92});
 		id_range.push_back({2728, 96});
 		t_itemid vesper_core = 2659 + (rnd() % 4);
 		id_range.push_back({vesper_core, 97}); // Vesper Cores
-		//id_range.push_back({2729, 98});
-		//id_range.push_back({2616, 99});
-		//id_range.push_back({2655, 99});
-		//id_range.push_back({2678, 99});
-		//id_range.push_back({2679, 99});
 		std::vector<t_itemid> lv_99_accessory = { 2729, 2616, 2655, 2678, 2679 };
 		id_range.push_back({lv_99_accessory.at(rnd() % lv_99_accessory.size()), 99});
 	}
 	
-	// DAGGER (ilv based on ATK / 2, to a max of lv99)
+	// DAGGER
 	else if(type_index == 5) {
-		if(rarity < 750) {
+		if(rarity < 750) {	// TODO NORMAL DAGGERS !!!!!!!!!!!!!!!
 			if(!slotted) {
 				id_range.push_back({1201, 9});
 			} else {
@@ -2610,73 +2540,43 @@ t_itemid set_drop_id(int mob_level) {
 			}
 			id_range.push_back({1246, 55});
 			id_range.push_back({1226, 59});
-		} else {
-			id_range.push_back({1249, 20});
-			//id_range.push_back({13011, 25});
-			//id_range.push_back({1234, 25});
-			//id_range.push_back({13035, 25});
-			std::vector<t_itemid> lv_25_dagger_r = { 13011, 1234, 13035 };
-			id_range.push_back({lv_25_dagger_r.at(rnd() % lv_25_dagger_r.size()), 25});
-			id_range.push_back({1241, 27});
-			//id_range.push_back({1239, 32});
-			//id_range.push_back({1238, 32});
-			std::vector<t_itemid> lv_32_dagger_r = { 1239, 1238 };
-			id_range.push_back({lv_32_dagger_r.at(rnd() % lv_32_dagger_r.size()), 32});
-			//id_range.push_back({1231, 35});
-			//id_range.push_back({13017, 35});
-			//id_range.push_back({13008, 35});
-			std::vector<t_itemid> lv_35_dagger_r = { 1231, 13017, 13008 };
-			id_range.push_back({lv_35_dagger_r.at(rnd() % lv_35_dagger_r.size()), 35});
-			id_range.push_back({1229, 38});
-			//id_range.push_back({1228, 40});
-			//id_range.push_back({13004, 40});
-			//id_range.push_back({1230, 40});
-			std::vector<t_itemid> lv_40_dagger_r = { 1228, 13004, 1230 };
-			id_range.push_back({lv_40_dagger_r.at(rnd() % lv_40_dagger_r.size()), 40});
-			//id_range.push_back({1233, 45});
-			//id_range.push_back({1223, 45});
-			std::vector<t_itemid> lv_45_dagger_r = { 1233, 1223 };
-			id_range.push_back({lv_45_dagger_r.at(rnd() % lv_45_dagger_r.size()), 45});
+		} else {	// iLvl based on mob lvl that usually drops
+			id_range.push_back({13011, 9});
+			id_range.push_back({13012, 30});
+			id_range.push_back({13014, 33});
+			id_range.push_back({13008, 41});
+			id_range.push_back({13006, 45});
+			id_range.push_back({13009, 56});
+			id_range.push_back({13027, 59});
+			id_range.push_back({1239, 61});
+			std::vector<t_itemid> lv_62_dagger_r = { 13004, 1223 };
+			id_range.push_back({lv_62_dagger_r.at(rnd() % lv_62_dagger_r.size()), 62});
+			id_range.push_back({13034, 64});
+			id_range.push_back({13046, 65});
+			id_range.push_back({1234, 67});
+			std::vector<t_itemid> lv_69_dagger_r = { 13013, 13047, 1236 };
+			id_range.push_back({lv_69_dagger_r.at(rnd() % lv_69_dagger_r.size()), 69});
+			std::vector<t_itemid> lv_71_dagger_r = { 1235, 13028 };
+			id_range.push_back({lv_71_dagger_r.at(rnd() % lv_71_dagger_r.size()), 71});
+			std::vector<t_itemid> lv_72_dagger_r = { 1229, 13002 };
+			id_range.push_back({lv_72_dagger_r.at(rnd() % lv_72_dagger_r.size()), 72});
+			std::vector<t_itemid> lv_73_dagger_r = { 13035, 13038 };
+			id_range.push_back({lv_73_dagger_r.at(rnd() % lv_73_dagger_r.size()), 73});
+			id_range.push_back({13015, 74});
+			id_range.push_back({1232, 78});
+			id_range.push_back({1237, 80});
+			std::vector<t_itemid> lv_86_dagger_r = { 1242 };
 			if(!slotted) {
-				id_range.push_back({13012, 48});
+				lv_86_dagger_r.push_back({1230, 86});
 			} else {
-				id_range.push_back({13013, 48});
+				lv_86_dagger_r.push_back({13017, 86});
 			}
-			//id_range.push_back({1235, 55});
-			//id_range.push_back({13001, 55});
-			//id_range.push_back({13046, 55});
-			std::vector<t_itemid> lv_55_dagger_r = { 1235, 13001, 13046 };
-			id_range.push_back({lv_55_dagger_r.at(rnd() % lv_55_dagger_r.size()), 55});
-			//id_range.push_back({13038, 60});
-			//if(!slotted) {
-			//	id_range.push_back({13014, 60});
-			//} else {
-			//	id_range.push_back({13015, 60});
-			//}
-			//id_range.push_back({13027, 60});
-			std::vector<t_itemid> lv_60_dagger_r = { 13038 };
-			if(!slotted) {
-				lv_60_dagger_r.push_back(13014);
-			} else {
-				lv_60_dagger_r.push_back(13015);
-			}
-			lv_60_dagger_r.push_back(13027);
-			id_range.push_back({lv_60_dagger_r.at(rnd() % lv_60_dagger_r.size()), 60});
-			id_range.push_back({13009, 63});
-			//id_range.push_back({13034, 65});
-			//id_range.push_back({13039, 65});
-			//id_range.push_back({13028, 65});
-			std::vector<t_itemid> lv_65_dagger_r = { 13034, 13039, 13028 };
-			id_range.push_back({lv_65_dagger_r.at(rnd() % lv_65_dagger_r.size()), 65});
-			id_range.push_back({13047, 68});
-			//id_range.push_back({1232, 70});
-			//id_range.push_back({1242, 70});
-			//id_range.push_back({1236, 70});
-			std::vector<t_itemid> lv_70_dagger_r = { 1232, 1242, 1236 };
-			id_range.push_back({lv_70_dagger_r.at(rnd() % lv_70_dagger_r.size()), 70});
-			id_range.push_back({13002, 74});
-			id_range.push_back({13006, 75});
-			id_range.push_back({1237, 90});
+			id_range.push_back({lv_86_dagger_r.at(rnd() % lv_86_dagger_r.size()), 86});
+			id_range.push_back({13001, 91});
+			id_range.push_back({1231, 93});
+			id_range.push_back({13039, 98});
+			std::vector<t_itemid> lv_99_dagger_r = { 1241, 1238, 1228, 1233 };
+			id_range.push_back({lv_99_dagger_r.at(rnd() % lv_99_dagger_r.size()), 99});
 		}
 	}
 	
