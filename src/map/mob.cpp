@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 5;
+	int item_type_count = 6;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2519,27 +2519,27 @@ t_itemid set_drop_id(int mob_level) {
 	else if(type_index == 5) {
 		if(rarity < 750) {	// TODO NORMAL DAGGERS !!!!!!!!!!!!!!!
 			if(!slotted) {
-				id_range.push_back({1201, 9});
+				id_range.push_back({1201, 10});
 			} else {
-				id_range.push_back({1202, 9});
+				id_range.push_back({1202, 10});
 			}
-			id_range.push_back({1205, 15});
+			id_range.push_back({1205, 17});
 			if(!slotted) {
-				id_range.push_back({1207, 16});
+				id_range.push_back({1207, 24});
 			} else {
-				id_range.push_back({1208, 16});
+				id_range.push_back({1208, 24});
 			}
-			id_range.push_back({1211, 30});
-			id_range.push_back({1214, 36});
+			id_range.push_back({1211, 34});
+			id_range.push_back({1214, 42});
 			if(!slotted) {
-				id_range.push_back({1216, 43});
-				id_range.push_back({1219, 53});
+				id_range.push_back({1216, 50});
+				id_range.push_back({1219, 60});
 			} else {
-				id_range.push_back({1217, 43});
-				id_range.push_back({1220, 53});
+				id_range.push_back({1217, 50});
+				id_range.push_back({1220, 60});
 			}
-			id_range.push_back({1246, 55});
-			id_range.push_back({1226, 59});
+			id_range.push_back({1246, 62});
+			id_range.push_back({1226, 67});
 		} else {	// iLvl based on mob lvl that usually drops
 			id_range.push_back({13011, 9});
 			id_range.push_back({13012, 30});
