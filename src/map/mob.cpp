@@ -2567,9 +2567,9 @@ t_itemid set_drop_id(int mob_level) {
 			id_range.push_back({1237, 80});
 			std::vector<t_itemid> lv_86_dagger_r = { 1242 };
 			if(!slotted) {
-				lv_86_dagger_r.push_back({1230, 86});
+				lv_86_dagger_r.push_back(1230);
 			} else {
-				lv_86_dagger_r.push_back({13017, 86});
+				lv_86_dagger_r.push_back(13017);
 			}
 			id_range.push_back({lv_86_dagger_r.at(rnd() % lv_86_dagger_r.size()), 86});
 			id_range.push_back({13001, 91});
