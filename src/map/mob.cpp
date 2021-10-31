@@ -3756,13 +3756,22 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
-			t_itemid id = set_drop_id(md->level);
-			if(id > 0) {
-				struct s_mob_drop mobdrop;
-				memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-				mobdrop.nameid = id;
-				ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-				mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+			int loot_count = 1;
+
+			// MVPs drop 3-5 items
+			if(md->get_bosstype != BOSSTYPE_NONE) {
+				loot_count = 3 + (rnd() % 3);
+			}
+
+			for(int i = 0; i < loot_count; i++) {
+				t_itemid id = set_drop_id(md->level);
+				if(id > 0) {
+					struct s_mob_drop mobdrop;
+					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
+					mobdrop.nameid = id;
+					ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+					mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+				}
 			}
 		}
 
