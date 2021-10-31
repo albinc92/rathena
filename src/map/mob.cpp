@@ -2875,52 +2875,45 @@ t_itemid set_drop_id(int mob_level) {
 	// MUSICAL INSTRUMENT
 	else if(type_index == 16) {
 		if(rarity < 750) {
-			id_range.push_back({1902, 33});
-			id_range.push_back({1904, 60});
-			id_range.push_back({1906, 70});
-			id_range.push_back({1908, 95});
+			id_range.push_back({1902, 20});
+			id_range.push_back({1904, 36});
+			id_range.push_back({1906, 41});
+			id_range.push_back({1908, 56});
 		} else {
-			t_itemid elemental_guitar = 1914 + (rnd() % 4);	// Elemental guitars
-			//id_range.push_back({elemental_guitar, 82});
-			//id_range.push_back({1925, 73});
-			//id_range.push_back({1913, 73});
-			std::vector<t_itemid> lv_73_guitar_r = { elemental_guitar, 1925, 1913 };
-			id_range.push_back({lv_73_guitar_r.at(rnd() % lv_73_guitar_r.size()), 73});
+			id_range.push_back({1918, 63});
+			t_itemid elemental_guitar = 1914 + (rnd() % 4);
+			std::vector<t_itemid> lv_74_guitar_r = { 1913, elemental_guitar };
+			id_range.push_back({lv_74_guitar_r.at(rnd() % lv_74_guitar_r.size()), 74});	// Special case, using normal type formula
+			std::vector<t_itemid> lv_75_guitar_r = { elemental_guitar, 1919, 1926 };
+			id_range.push_back({lv_75_guitar_r.at(rnd() % lv_75_guitar_r.size()), 75});
 			if(!slotted) {
-				id_range.push_back({1909, 76});
+				id_range.push_back({1909, 77});
 			} else {
-				id_range.push_back({1910, 76});
+				id_range.push_back({1910, 77});
 			}
-			id_range.push_back({1926, 80});
-			id_range.push_back({1919, 87});
-			id_range.push_back({1920, 91});	// Berserk guitar special case
-			id_range.push_back({1918, 99});
+			id_range.push_back({1925, 89});
+			id_range.push_back({1920, 91});
 		}
 	}
 	
 	// WHIP
 	else if(type_index == 17) {
 		if(rarity < 750) {
-			id_range.push_back({1951, 24});
-			id_range.push_back({1957, 73});
+			id_range.push_back({1951, 16});
+			id_range.push_back({1957, 49});
 		} else {
-			//id_range.push_back({1972, 54});
-			//id_range.push_back({1962, 54});
-			t_itemid elemental_whip = 1965 + (rnd() % 4);	// Elemental whips
-			//id_range.push_back({elemental_whip, 60});
-			id_range.push_back({1973, 54});
-			id_range.push_back({1980, 54});
-			std::vector<t_itemid> lv_54_whip_r = { 1972, 1962, elemental_whip, 1973, 1980 };
-			id_range.push_back({lv_54_whip_r.at(rnd() % lv_54_whip_r.size()), 54});
-			id_range.push_back({1963, 62});
-			//id_range.push_back({1968, 65});
-			//id_range.push_back({1979, 65});
-			std::vector<t_itemid> lv_65_whip_r = { 1968, 1979 };
-			id_range.push_back({lv_65_whip_r.at(rnd() % lv_65_whip_r.size()), 65});
-			id_range.push_back({1964, 73});
-			id_range.push_back({1969, 76});
-			id_range.push_back({1970, 81});
-			id_range.push_back({1974, 99});
+			std::vector<t_itemid> elemental_whips = { 1965, 1966, 1967, 1971 };
+			std::vector<t_itemid> lv_40_whip_r = { 1968, elemental_whips.at(rnd() % elemental_whips.size()) };
+			id_range.push_back({lv_40_whip_r.at(rnd() % lv_40_whip_r.size()), 40});
+			id_range.push_back({1969, 49});
+			id_range.push_back({1964, 50});
+			id_range.push_back({1962, 55});
+			id_range.push_back({1970, 63});
+			id_range.push_back({1974, 65});
+			id_range.push_back({1979, 75});
+			id_range.push_back({1972, 76});
+			id_range.push_back({1973, 79});
+			id_range.push_back({1980, 80});
 		}
 	}
 	
@@ -2928,111 +2921,113 @@ t_itemid set_drop_id(int mob_level) {
 	else if(type_index == 18) {
 		if(rarity < 750) {
 			id_range.push_back({1550, 60});
-			id_range.push_back({1552, 89});
+			id_range.push_back({1551, 81});
+			id_range.push_back({1552, 88});
 		} else {
-			id_range.push_back({1573, 21});
-			//id_range.push_back({1558, 43});
-			//id_range.push_back({1572, 43});
-			std::vector<t_itemid> lv_43_book_r = { 1558, 1572 };
-			id_range.push_back({lv_43_book_r.at(rnd() % lv_43_book_r.size()), 43});
-			t_itemid elemental_book = 1553 + (rnd() % 4);	// Elemental books
-			id_range.push_back({elemental_book, 64});
-			id_range.push_back({1560, 71});
-			id_range.push_back({1564, 79});
-			id_range.push_back({1551, 82});
-			id_range.push_back({1557, 86});
-			id_range.push_back({1559, 93});
+			id_range.push_back({1558, 30});
+			id_range.push_back({1573, 61});
+			id_range.push_back({1572, 63});
+			id_range.push_back({1564, 64});
+			id_range.push_back({1559, 65});
+			id_range.push_back({1557, 85});
+			t_itemid elemental_book = 1553 + (rnd() % 4);
+			id_range.push_back({elemental_book, 63});	// Special case, based on normal type formula
+			id_range.push_back({1561, 90});
 			id_range.push_back({1565, 98});
-			id_range.push_back({1561, 99});
+			id_range.push_back({1560, 99});
 		}
 	}
 	
 	// KATAR
 	else if(type_index == 19) {
 		if(rarity < 750) {
-			id_range.push_back({1251, 76});
-			id_range.push_back({1253, 90});
-			id_range.push_back({1255, 99});
+			id_range.push_back({1251, 39});
+			id_range.push_back({1253, 46});
+			id_range.push_back({1255, 51});
 		} else {
-			id_range.push_back({1264, 54});
-			t_itemid elemental_katar = 1256 + (rnd() % 4);	// Elemental katar
-			id_range.push_back({elemental_katar, 66});
-			id_range.push_back({1270, 67});
-			id_range.push_back({1262, 70});
-			//id_range.push_back({1271, 73});
-			//id_range.push_back({1265, 73});
-			//id_range.push_back({1284, 73});
-			std::vector<t_itemid> lv_73_katar_r = { 1271, 1265, 1284 };
-			id_range.push_back({lv_73_katar_r.at(rnd() % lv_73_katar_r.size()), 73});
-			id_range.push_back({1285, 79});
-			//id_range.push_back({1261, 84});
-			//id_range.push_back({1269, 84});
-			std::vector<t_itemid> lv_84_katar_r = { 1261, 1269 };
-			id_range.push_back({lv_84_katar_r.at(rnd() % lv_84_katar_r.size()), 84});
-			//id_range.push_back({1260, 91});
-			//id_range.push_back({1263, 91});
-			std::vector<t_itemid> lv_91_katar_r = { 1260, 1263 };
-			id_range.push_back({lv_91_katar_r.at(rnd() % lv_91_katar_r.size()), 91});
-			id_range.push_back({1268, 97});
+			t_itemid elemental_katar = 1256 + (rnd() % 4);
+			id_range.push_back({elemental_katar, 32});	// Special case, based on normal type formula
+			id_range.push_back({1260, 40});
+			id_range.push_back({1261, 49});
+			id_range.push_back({1263, 50});
+			id_range.push_back({1265, 53});
+			id_range.push_back({1262, 56});
+			id_range.push_back({1271, 70});
+			id_range.push_back({1268, 71});
+			id_range.push_back({1270, 75});
+			id_range.push_back({1285, 78});
+			id_range.push_back({1269, 80});
+			std::vector<t_itemid> lv_87_katar_r = { 1264, 1284 };
+			id_range.push_back({lv_87_katar_r.at(rnd() % lv_87_katar_r.size()), 87});
 		}
 	}
 	
 	// REVOLVER
 	else if(type_index == 20) {
 		if(rarity < 750) {
-			id_range.push_back({13101, 43});
-			id_range.push_back({13103, 64});
-			id_range.push_back({13104, 99});
+			id_range.push_back({13101, 15});
+			id_range.push_back({13103, 23});
+			id_range.push_back({13104, 35});
 		} else {
-			id_range.push_back({13106, 29});
-			id_range.push_back({13107, 97});
+			id_range.push_back({13106, 71});
+			id_range.push_back({13107, 75});
 		}
 	}
 	
 	// RIFLE
 	else if(type_index == 21) {
 		if(rarity < 750) {
-			id_range.push_back({13150, 33});
+			id_range.push_back({13150, 35});
 		} else {
-			id_range.push_back({13152, 80});
-			id_range.push_back({13170, 92});
-			id_range.push_back({13153, 99});
-			id_range.push_back({13164, 99});
+			id_range.push_back({13152, 47});
+			id_range.push_back({13170, 60});
+			id_range.push_back({13153, 79});
+			id_range.push_back({13164, 80});
+		}
+	}
+	
+	// GATLING GUN
+	else if(type_index == 22) {
+		if(rarity < 750) {
+			id_range.push_back({13157, 72});
+		} else {
+			id_range.push_back({13158, 59});
+			id_range.push_back({13159, 72});
 		}
 	}
 	
 	// SHOTGUN
-	else if(type_index == 22) {
+	else if(type_index == 23) {
 		if(rarity > 749) {
-			id_range.push_back({13169, 38});
-			id_range.push_back({13167, 95});
-			id_range.push_back({13156, 99});
+			id_range.push_back({13167, 79});
+			id_range.push_back({13156, 82});
+			id_range.push_back({13169, 89});
 		}
 	}
 	
 	// GRENADE LAUNCHER
-	else if(type_index == 23) {
+	else if(type_index == 24) {
 		if(rarity > 749) {
 			if(!slotted) {
-				id_range.push_back({13160, 99});
+				id_range.push_back({13160, 66});
 			} else {
-				id_range.push_back({13161, 99});
+				id_range.push_back({13161, 66});
 			}
 		}
 	}
 	
 	// HUUMA SHURIKEN
-	else if(type_index == 24) {
+	else if(type_index == 25) {
 		if(rarity < 750) {
 			if(!slotted) {
-				id_range.push_back({13301, 27});
+				id_range.push_back({13301, 65});
 			} else {
-				id_range.push_back({13302, 27});
+				id_range.push_back({13302, 65});
 			}
 		} else {
-			id_range.push_back({13304, 60});
-			id_range.push_back({13300, 81});
-			id_range.push_back({13303, 99});
+			id_range.push_back({13304, 41});
+			id_range.push_back({13300, 71});
+			id_range.push_back({13303, 76});
 		}
 	}
 
