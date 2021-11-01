@@ -2291,7 +2291,7 @@ t_itemid set_drop_id(int mob_level) {
 		mob_level_capped = mob_level - 18;
 	}
 
-	int item_type_count = 16;
+	int item_type_count = 28;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -2465,7 +2465,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// ACCESSORY (ilv based on moblv who normally drops)
-	else if(type_index == 4) {
+	else if(type_index == 4 || type_index == 5) {
 		id_range.push_back({2609, 10});
 		std::vector<t_itemid> lv_31_accessory = { 2602, 2618 };
 		id_range.push_back({lv_31_accessory.at(rnd() % lv_31_accessory.size()), 31});
@@ -2516,7 +2516,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// DAGGER
-	else if(type_index == 5) {
+	else if(type_index == 6) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1201, 10});
@@ -2581,7 +2581,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 1-H SWORD
-	else if(type_index == 6) {
+	else if(type_index == 7) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1104, 13});
@@ -2615,7 +2615,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 2-H SWORD
-	else if(type_index == 7) {
+	else if(type_index == 8) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1116, 25});
@@ -2644,7 +2644,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
-	else if(type_index == 8) {
+	else if(type_index == 9) {
 		if(rarity < 750) {
 			id_range.push_back({1402, 7});
 			id_range.push_back({1405, 10});
@@ -2660,7 +2660,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
-	else if(type_index == 9) {
+	else if(type_index == 10) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1451, 33});
@@ -2697,7 +2697,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 1-H AXE
-	else if(type_index == 10) {
+	else if(type_index == 11) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1301, 12});
@@ -2713,7 +2713,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 2-H AXE
-	else if(type_index == 11) {
+	else if(type_index == 12) {
 		if(rarity < 750) {
 			id_range.push_back({1352, 23});
 			id_range.push_back({1355, 34});
@@ -2740,7 +2740,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// MACE
-	else if(type_index == 12) {
+	else if(type_index == 13) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1501, 6});
@@ -2777,7 +2777,7 @@ t_itemid set_drop_id(int mob_level) {
 	
 	// 1H-STAFF
 	// Special case, normal types are dropped by mob lv that usually drops them
-	else if(type_index == 12) {
+	else if(type_index == 14) {
 		if(rarity < 750) {
 			id_range.push_back({1602, 3});
 			if(!slotted) {
@@ -2810,7 +2810,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// 2H-STAFF
-	else if(type_index == 13) {
+	else if(type_index == 15) {
 		if(rarity > 749) {
 			id_range.push_back({1473, 64});
 			id_range.push_back({1472, 75});
@@ -2823,7 +2823,7 @@ t_itemid set_drop_id(int mob_level) {
 	
 	// BOW
 	// Special case, normal types are dropped by mob lv that usually drops them
-	else if(type_index == 14) {
+	else if(type_index == 16) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1701, 5});
@@ -2854,7 +2854,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// KNUCKLE
-	else if(type_index == 15) {
+	else if(type_index == 17) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({1801, 13});
@@ -2873,7 +2873,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// MUSICAL INSTRUMENT
-	else if(type_index == 16) {
+	else if(type_index == 18) {
 		if(rarity < 750) {
 			id_range.push_back({1902, 20});
 			id_range.push_back({1904, 36});
@@ -2897,7 +2897,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// WHIP
-	else if(type_index == 17) {
+	else if(type_index == 19) {
 		if(rarity < 750) {
 			id_range.push_back({1951, 16});
 			id_range.push_back({1957, 49});
@@ -2918,7 +2918,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// BOOK
-	else if(type_index == 18) {
+	else if(type_index == 20) {
 		if(rarity < 750) {
 			id_range.push_back({1550, 60});
 			id_range.push_back({1551, 81});
@@ -2939,7 +2939,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// KATAR
-	else if(type_index == 19) {
+	else if(type_index == 21) {
 		if(rarity < 750) {
 			id_range.push_back({1251, 39});
 			id_range.push_back({1253, 46});
@@ -2963,7 +2963,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// REVOLVER
-	else if(type_index == 20) {
+	else if(type_index == 22) {
 		if(rarity < 750) {
 			id_range.push_back({13101, 15});
 			id_range.push_back({13103, 23});
@@ -2975,7 +2975,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// RIFLE
-	else if(type_index == 21) {
+	else if(type_index == 23) {
 		if(rarity < 750) {
 			id_range.push_back({13150, 35});
 		} else {
@@ -2987,7 +2987,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// GATLING GUN
-	else if(type_index == 22) {
+	else if(type_index == 24) {
 		if(rarity < 750) {
 			id_range.push_back({13157, 72});
 		} else {
@@ -2997,7 +2997,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// SHOTGUN
-	else if(type_index == 23) {
+	else if(type_index == 25) {
 		if(rarity > 749) {
 			id_range.push_back({13167, 79});
 			id_range.push_back({13156, 82});
@@ -3006,7 +3006,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// GRENADE LAUNCHER
-	else if(type_index == 24) {
+	else if(type_index == 26) {
 		if(rarity > 749) {
 			if(!slotted) {
 				id_range.push_back({13160, 66});
@@ -3017,7 +3017,7 @@ t_itemid set_drop_id(int mob_level) {
 	}
 	
 	// HUUMA SHURIKEN
-	else if(type_index == 25) {
+	else if(type_index == 27) {
 		if(rarity < 750) {
 			if(!slotted) {
 				id_range.push_back({13301, 65});
