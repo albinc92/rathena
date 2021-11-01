@@ -3756,15 +3756,15 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
-			int loot_count = md->get_bosstype + 1;
+			int loot_count = md->get_bosstype() + 1;
 
 			// Mini MVPs drop 2-3 items
-			if(md->get_bosstype == 1) {
+			if(md->get_bosstype() == 1) {
 				loot_count = loot_count + (rnd() % loot_count);
 			}
 
 			// MVPs drop 3-5 items
-			if(md->get_bosstype == 2) {
+			if(md->get_bosstype() == 2) {
 				loot_count = loot_count + (rnd() % loot_count);
 			}
 
