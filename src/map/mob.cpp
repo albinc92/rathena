@@ -2283,13 +2283,11 @@ void mob_setdropitem_option2(struct item *itm) {
 /**
  * Returns an item id to be dropped at random
  **/
-t_itemid set_drop_id(int mob_level) {
+t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 
-	// Cap mob_level to 99 (eg. max level mob Nydhogg (117) level is reduced by 18 to become 99)
 	int mob_level_capped = mob_level;
-	if(mob_level > 99) {
-		mob_level_capped = mob_level - 18;
-	}
+	if (boss_type) mob_level_capped += (10 * (boss_type + 1));
+	if (mob_level_capped > 99) mob_level_capped = 99;
 
 	int item_type_count = 28;
 	int type_index = rnd() % item_type_count;
@@ -3769,7 +3767,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			}
 
 			for(int i = 0; i < loot_count; i++) {
-				t_itemid id = set_drop_id(md->level);
+				t_itemid id = set_drop_id(md->level, md->get_bosstype());
 				if(id > 0) {
 					struct s_mob_drop mobdrop;
 					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
