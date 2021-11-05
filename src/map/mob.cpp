@@ -3116,7 +3116,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		int headgear_type = rnd() % 5;
 		
 		// MIDDLE HEADGEAR
-		else if(headgear_type == 0) {
+		if(headgear_type == 0) {
 			if(rarity < 750) {
 				id_range.push_back({2263, 23});
 				id_range.push_back({2276, 26});
@@ -3184,6 +3184,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		
 		// UPPER & MIDDLE & LOWER HEADGEAR
 		else if(headgear_type == 5) {
+			if(rarity > 749) {
 				id_range.push_back({2264, 30});
 				id_range.push_back({5046, 32});
 			} else {
