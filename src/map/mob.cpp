@@ -2289,7 +2289,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	if (boss_type) mob_level_capped += (10 * (boss_type + 1)) + 2;	// Lady solace will count as ilv 99
 	if (mob_level_capped > 99) mob_level_capped = 99;
 
-	int item_type_count = 28;
+	int item_type_count = 30;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
@@ -3108,6 +3108,87 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 			id_range.push_back({5002, 90});
 			id_range.push_back({5398, 98});
 			id_range.push_back({5025, 99});
+		}
+	}
+	
+	// OTHER HEADGEARS
+	if(type_index == 29) {
+		int headgear_type = rnd() % 5;
+		
+		// MIDDLE HEADGEAR
+		else if(headgear_type == 0) {
+			if(rarity < 750) {
+				id_range.push_back({2263, 23});
+				id_range.push_back({2276, 26});
+				id_range.push_back({5014, 31});
+				id_range.push_back({5085, 62});
+			} else {
+				id_range.push_back({2291, 21});
+				id_range.push_back({2286, 29});
+				id_range.push_back({2296, 70});
+				id_range.push_back({5104, 86});
+			}
+		}
+		
+		// LOWER HEADGEAR
+		else if(headgear_type == 1) {
+			if(rarity < 750) {
+				id_range.push_back({2262, 3});
+				id_range.push_back({2241, 48});
+				id_range.push_back({5113, 51});
+				id_range.push_back({2266, 52});
+				id_range.push_back({5096, 71});
+			} else {
+				id_range.push_back({2265, 23});
+				id_range.push_back({2267, 24});
+				id_range.push_back({2270, 39});
+				id_range.push_back({2269, 56});
+				id_range.push_back({2268, 65});
+			}
+		}
+		
+		// UPPER & MIDDLE HEADGEAR
+		else if(headgear_type == 2) {
+			if(rarity < 750) {
+				if(!slotted) {
+					id_range.push_back({2224, 18});
+				} else {
+					id_range.push_back({2225, 18});
+				}
+			} else {
+				id_range.push_back({5093, 80});
+				id_range.push_back({5022, 99});
+			}
+		}
+		
+		// MIDDLE & LOWER HEADGEAR
+		else if(headgear_type == 3) {
+			if(rarity < 750) {
+				id_range.push_back({5089, 22});
+				id_range.push_back({5087, 23});
+				id_range.push_back({5088, 24});
+				id_range.push_back({2297, 28});
+				id_range.push_back({5090, 64});
+				id_range.push_back({2288, 69});
+			} else {
+				id_range.push_back({5005, 38});
+			}
+		}
+		
+		// UPPER & LOWER HEADGEAR
+		else if(headgear_type == 4) {
+			if(rarity > 749) {
+				id_range.push_back({5053, 78});
+			}
+		}
+		
+		// UPPER & MIDDLE & LOWER HEADGEAR
+		else if(headgear_type == 5) {
+				id_range.push_back({2264, 30});
+				id_range.push_back({5046, 32});
+			} else {
+				id_range.push_back({5808, 99});
+			}
 		}
 	}
 
