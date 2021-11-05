@@ -2286,7 +2286,7 @@ void mob_setdropitem_option2(struct item *itm) {
 t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 
 	int mob_level_capped = mob_level;
-	if (boss_type) mob_level_capped += (10 * (boss_type + 1));
+	if (boss_type) mob_level_capped += (10 * (boss_type + 1)) + 2;	// Lady solace will count as ilv 99
 	if (mob_level_capped > 99) mob_level_capped = 99;
 
 	int item_type_count = 28;
@@ -3028,16 +3028,98 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 			id_range.push_back({13303, 76});
 		}
 	}
+	
+	// UPPER HEADGEAR
+	else if(type_index == 28) {
+		if(rarity < 750) {
+			id_range.push_back({5015, 4});
+			id_range.push_back({2245, 8});
+			std::vector<t_itemid> lv_9_upper_head = { 2298, 5008 };
+			id_range.push_back({lv_9_upper_head.at(rnd() % sizeof.lv_9_upper_head()), 9});
+			id_range.push_back({5035, 15});
+			id_range.push_back({2220, 16});
+			std::vector<t_itemid> lv_18_upper_head = { 2213, 2247 };
+			id_range.push_back({lv_18_upper_head.at(rnd() % sizeof.lv_18_upper_head()), 18});
+			id_range.push_back({2221, 19});
+			std::vector<t_itemid> lv_24_upper_head = { 2248, 2275, 5010 };
+			id_range.push_back({lv_24_upper_head.at(rnd() % sizeof.lv_24_upper_head()), 24});
+			id_range.push_back({2211, 25});
+			id_range.push_back({2299, 28});
+			id_range.push_back({2227, 29});
+			std::vector<t_itemid> lv_30_upper_head = { 2257, 5030 };
+			id_range.push_back({lv_30_upper_head.at(rnd() % sizeof.lv_30_upper_head()), 30});
+			id_range.push_back({5118, 33});
+			std::vector<t_itemid> lv_34_upper_head = { 2279, 2282 };
+			id_range.push_back({lv_34_upper_head.at(rnd() % sizeof.lv_34_upper_head()), 34});
+			id_range.push_back({5037, 38});
+			id_range.push_back({2272, 40});
+			id_range.push_back({2294, 41});
+			id_range.push_back({2259, 42});
+			id_range.push_back({5012, 43});
+			id_range.push_back({5011, 47});
+			id_range.push_back({5120, 55});
+			id_range.push_back({2217, 58});
+			id_range.push_back({5042, 59});
+			id_range.push_back({2226, 61});
+			id_range.push_back({2246, 64});
+			id_range.push_back({2258, 72});
+			id_range.push_back({2210, 81});
+			id_range.push_back({2229, 91});
+		} else {
+			id_range.push_back({2250, 6});
+			id_range.push_back({2209, 8});
+			id_range.push_back({2207, 16});
+			id_range.push_back({5009, 18});
+			std::vector<t_itemid> lv_25_upper_head_r = { 2287, 2289, 2283 };
+			id_range.push_back({lv_25_upper_head_r.at(rnd() % sizeof.lv_25_upper_head_r()), 25});
+			id_range.push_back({2253, 26});
+			std::vector<t_itemid> lv_31_upper_head_r = { 2206, 2285 };
+			id_range.push_back({lv_31_upper_head_r.at(rnd() % sizeof.lv_31_upper_head_r()), 31});
+			id_range.push_back({2277, 33});
+			id_range.push_back({2251, 35});
+			id_range.push_back({5119, 36});
+			id_range.push_back({2244, 38});
+			id_range.push_back({5116, 39});
+			id_range.push_back({5125, 40});	// Angels kiss special case
+			id_range.push_back({5141, 41});
+			id_range.push_back({2252, 44});
+			id_range.push_back({2233, 47});
+			id_range.push_back({2208, 50});
+			std::vector<t_itemid> lv_51_upper_head_r = { 5003, 5027 };
+			id_range.push_back({lv_51_upper_head_r.at(rnd() % sizeof.lv_51_upper_head_r()), 51});
+			id_range.push_back({5172, 59});
+			id_range.push_back({5111, 61});
+			id_range.push_back({5017, 63});
+			id_range.push_back({2255, 68});
+			std::vector<t_itemid> lv_70_upper_head_r = { 2231, 5019 };
+			id_range.push_back({lv_70_upper_head_r.at(rnd() % sizeof.lv_70_upper_head_r()), 70});
+			id_range.push_back({2274, 73});
+			std::vector<t_itemid> lv_74_upper_head_r = { 2249, 5007 };
+			id_range.push_back({lv_74_upper_head_r.at(rnd() % sizeof.lv_74_upper_head_r()), 74});
+			std::vector<t_itemid> lv_75_upper_head_r = { 5045, 5072, 5399 };
+			id_range.push_back({lv_75_upper_head_r.at(rnd() % sizeof.lv_75_upper_head_r()), 75});
+			id_range.push_back({2235, 78});
+			id_range.push_back({5162, 80});
+			std::vector<t_itemid> lv_81_upper_head_r = { 2234, 2254, 2256, 5160 };
+			id_range.push_back({lv_81_upper_head_r.at(rnd() % sizeof.lv_81_upper_head_r()), 81});
+			id_range.push_back({5066, 85});
+			std::vector<t_itemid> set_helmets = { 5122, 5123, 5124, 5126, 5127, 5128 };
+			id_range.push_back({set_helmets.at(rnd() % sizeof.set_helmets()), 89});
+			id_range.push_back({5002, 90});
+			id_range.push_back({5398, 98});
+			id_range.push_back({5025, 99});
+		}
+	}
 
-	int lower_bound = 1;
-	if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
+	//int lower_bound = 1;
+	//if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
 
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
 		if(curr.item_lv <= mob_level_capped) {
-			if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
-			//drop_ids.push_back(curr);
+			//if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
+			drop_ids.push_back(curr);
 		} else {
 			break;
 		}
