@@ -2283,7 +2283,7 @@ void mob_setdropitem_option2(struct item *itm) {
 /**
  * Returns an item id to be dropped at random
  **/
-t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk) {
+t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 
 	int mob_level_capped = mob_level;
 	// if (boss_type) mob_level_capped += (10 * (boss_type + 1)) + 2;
@@ -2293,7 +2293,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
-	int rarity = rnd() % 1000 + luk;
+	int rarity = rnd() % 1000;
 	int slotted = 0;
 	if ((rnd() % 1000) < 333) {
 		slotted = 1;
