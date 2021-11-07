@@ -27,4 +27,4 @@
 
 // Duplicates
 //============================================================
-cmd_fild08,25,240,6	duplicate(Nightmare_Warper)	Nightmare Warper#anthell	999
+cmd_fild08,327,358,6	duplicate(Nightmare_Warper)	Nightmare Warper#anthell	999
