@@ -3925,15 +3925,9 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			if(md->get_bosstype() == 2) {
 				loot_count = loot_count + (rnd() % loot_count);
 			}
-			
-			// LHZ Mobs Special Case
-			int mob_id = md->mob_id;
-			if(mob_id == 1634 || mob_id == 1635 || mob_id == 1636 || mob_id == 1637 || mob_id == 1638 || mob_id == 1639) {
-				loot_count = loot_count + (rnd() % loot_count);
-			}
 
 			for(int i = 0; i < loot_count; i++) {
-				t_itemid id = set_drop_id(md->level, md->get_bosstype(), sd->status.luk);
+				t_itemid id = set_drop_id(md->level, md->get_bosstype());
 				if(id > 0) {
 					struct s_mob_drop mobdrop;
 					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
