@@ -159,3 +159,19 @@ Body:
     Sprite: RAYDRIC
   - Mob: INVADING_ARCHER
     Sprite: RAYDRIC_ARCHER
+  - Mob: NM_FARMILIAR
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_ANDRE
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_ANT_EGG
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_DENIRO
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_GIEARTH
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_PIERE
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_VITATA
+    Sprite: RAYDRIC_ARCHER
+  - Mob: NM_MAYA_PUPLE
+    Sprite: RAYDRIC_ARCHER
