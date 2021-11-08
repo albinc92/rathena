@@ -6,9 +6,9 @@
 	next;
 
 	if(strnpcinfo(2) == "anthell") {
-		set .@dungeon$, "anthell01";
-		set .@x, 0;
-		set .@y, 0;
+		set .@dungeon$, "anthell01n";
+		set .@x, 35;
+		set .@y, 262;
 	}
 
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
