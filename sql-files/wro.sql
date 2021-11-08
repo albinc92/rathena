@@ -690,6 +690,17 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 --                                                      mob_db2
 -- ---------------------------------------------------------------------------------------------------------------------
 
+-- Nightmare Monsters
+-- 
+REPLACE INTO `mob_db2` SELECT * FROM `mob_db` WHERE `id` IN (
+    '1005'
+);
+
+UPDATE `mob_db2`
+SET `id` = `id` + 4000,
+    `kName` = CONCAT('NM_', `kName`),
+    `iName` = CONCAT('NM_', `iName`);
+
 -- Remove all equipment from monster drop tables
 REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
 
