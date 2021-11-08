@@ -816,7 +816,7 @@ REPLACE INTO `mob_db2` VALUES (3708,'NODE_LVL4','Red Herb','Red Herb',1,10,0,0,0
 REPLACE INTO `mob_db2` VALUES (3709,'NODE_LVL5','Red Herb','Red Herb',1,10,0,0,0,1,1,2,100,99,0,0,0,0,0,0,7,12,0,3,22,1507328,2000,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Nightmare Monsters
-REPLACE INTO `mob_db2` (`ID`, `Sprite`, `kName`, `iName`)
+INSERT INTO `mob_db2` (`ID`, `Sprite`, `kName`, `iName`)
 SELECT `ID` + 4000, `Sprite`, CONCAT('NM_', `kName`), CONCAT('NM_', `iName`)
 FROM `mob_db2` WHERE `ID` IN ( '1005' );
 
