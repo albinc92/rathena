@@ -20,10 +20,7 @@
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Sweet duude ~~";
-		next;
-		warp "quiz_02", 55, 85;
-	}
-	if(.@menu == 3) {
+	} else if(.@menu == 3) {
 		close2;
 		cutin "", 255;
 		end;
@@ -39,6 +36,8 @@
 	sleep2 1600;
 	warp .@dungeon$,.@x,.@y;
 
+	close2;
+	cutin "", 255;
 	end;
 }
 
