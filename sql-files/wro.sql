@@ -874,7 +874,7 @@ SELECT
     `Drop9id`,
     `Drop9per`,
     `DropCardid`,
-    `DropCardper`,
+    `DropCardper`
 FROM `mob_db2`
 WHERE `ID` IN ( '1005' );
 
