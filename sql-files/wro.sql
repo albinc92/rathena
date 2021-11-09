@@ -756,7 +756,7 @@ UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
 
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
 
-UPDATE `mob_skill_db` SET `lv` = 2 WHERE `skill_id` = 196 AND `lv` > 2;
+UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
 
 -- Remove all equipment from monster drop tables
 -- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
