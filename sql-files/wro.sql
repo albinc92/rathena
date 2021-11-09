@@ -694,7 +694,7 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 -- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
 
 -- TESTING :D:D:D:D
-REPLACE INTO `mob_db2`
+INSERT INTO `mob_db2`
 SELECT 
     `ID`,
     `Sprite`,
