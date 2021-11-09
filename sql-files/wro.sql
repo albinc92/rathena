@@ -800,7 +800,7 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Nightmare Monsters
-REPLACE INTO `mob_db2`
+INSERT INTO `mob_db2`
 SELECT 
     `ID` + 20020,
     CONCAT('NM_', `Sprite`),
