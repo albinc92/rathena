@@ -703,8 +703,8 @@ SELECT
     `LV` * 2.525,
     `HP` * 2.525,
     `SP` * 2.525,
-    `EXP`,
-    `JEXP`,
+    `EXP` * 2.525,
+    `JEXP` * 2.525,
     `Range1`,
     `ATK1` * 2.525,
     `ATK2` * 2.525,
@@ -753,7 +753,7 @@ SELECT
     `Drop9per`,
     `DropCardid`,
     `DropCardper`
-FROM `mob_db2`;
+FROM `mob_db`;
 
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
