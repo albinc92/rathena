@@ -546,11 +546,16 @@ UPDATE `item_db2` SET `equip_level_min` = 50, `price_buy` = 50000 WHERE `id` IN 
 
 -- Elemental Converters
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` IN (12114, 12115, 12116, 12117, 12020);
-UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",4; specialeffect2 255;' WHERE `id` = 12114;
-UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",2; specialeffect2 256;' WHERE `id` = 12115;
-UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",3; specialeffect2 258;' WHERE `id` = 12116;
-UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",5; specialeffect2 257;' WHERE `id` = 12117;
-UPDATE `item_db2` SET `script` = 'itemskill "ITEM_ENCHANTARMS",8; specialeffect2 180;' WHERE `id` = 12020;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 255;') WHERE `id` = 12114;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 256;') WHERE `id` = 12115;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 258;') WHERE `id` = 12116;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 257;') WHERE `id` = 12117;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 180;') WHERE `id` = 12020;
+
+-- Holy/Undead Scrolls
+REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` IN (12280, 12279);
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 178;') WHERE `id` = 12280;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 172;') WHERE `id` = 12279;
 
 -- Tokens
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
