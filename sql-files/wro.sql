@@ -752,10 +752,14 @@ SELECT
     `DropCardper`
 FROM `mob_db`;
 
+-- Limit monster level to 250
 UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
 
+-- Remove Earthquake and Dispell from monsters
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289;
 
+-- Limit slave count to 2 for monsters
 UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
 
 -- Remove all equipment from monster drop tables
