@@ -2288,6 +2288,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	int mob_level_capped = mob_level;
 	// if (boss_type) mob_level_capped += (10 * (boss_type + 1)) + 2;
 	if (mob_level_capped > 99) mob_level_capped = 99;
+	mob_level_capped = round(mob_level_capped * 0.396);
 
 	int item_type_count = 30;
 	int type_index = rnd() % item_type_count;

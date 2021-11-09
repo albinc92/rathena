@@ -554,8 +554,7 @@ UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 180;') WHERE 
 
 -- Holy/Undead Scrolls
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` IN (12280, 12279);
-UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 178;') WHERE `id` = 12280;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 172;') WHERE `id` = 12279;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 812;') WHERE `id` = 12279;
 
 -- Tokens
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
