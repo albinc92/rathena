@@ -691,7 +691,69 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- Remove all equipment from monster drop tables
-REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+-- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+
+-- TESTING :D:D:D:D
+REPLACE INTO `mob_db2`
+SELECT 
+    `ID`,
+    `Sprite`,
+    `kName`, 
+    `iName`,
+    `LV` * 2.525,
+    `HP` * 2.525,
+    `SP` * 2.525,
+    `EXP`,
+    `JEXP`,
+    `Range1`,
+    `ATK1` * 2.525,
+    `ATK2` * 2.525,
+    `DEF`,
+    `MDEF`,
+    `STR` * 2.525,
+    `AGI` * 2.525,
+    `VIT` * 2.525,
+    `INT` * 2.525,
+    `DEX` * 2.525,
+    `LUK` * 2.525,
+    `Range2`,
+    `Range3`,
+    `Scale`,
+    `Race`,
+    `Element`,
+    `Mode`,
+    `Speed`,
+    `aDelay`,
+    `aMotion`,
+    `dMotion`,
+    `MEXP`,
+    `MVP1id`,
+    `MVP1per`,
+    `MVP2id`,
+    `MVP2per`,
+    `MVP3id`,
+    `MVP3per`,
+    `Drop1id`,
+    `Drop1per`,
+    `Drop2id`,
+    `Drop2per`,
+    `Drop3id`,
+    `Drop3per`,
+    `Drop4id`,
+    `Drop4per`,
+    `Drop5id`,
+    `Drop5per`,
+    `Drop6id`,
+    `Drop6per`,
+    `Drop7id`,
+    `Drop7per`,
+    `Drop8id`,
+    `Drop8per`,
+    `Drop9id`,
+    `Drop9per`,
+    `DropCardid`,
+    `DropCardper`
+FROM `mob_db2`;
 
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
@@ -806,7 +868,7 @@ SELECT
     CONCAT('NM_', `Sprite`),
     CONCAT('NM_', `kName`), 
     CONCAT('NM_', `iName`),
-    `LV` * 2.5,
+    `LV`,
     `HP`,
     `SP`,
     `EXP`,
@@ -862,6 +924,12 @@ SELECT
 FROM `mob_db2`
 WHERE `ID` IN ( '1005', '1095', '1097', '1105', '1121', '1160', '1176', '1289');
 
+-- Anthell
+UPDATE `mob_db2`
+SET `Element` = 87,
+    `Speed` = `Speed` - 25,
+WHERE `id` = '21025';
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_skill_db
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -875,6 +943,8 @@ REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD',
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db` VALUES (2476,'Invasion Commander@NPC_GRANDDARKNESS','attack',339,5,500,2000,30000,'no','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+
+-- Anthell
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
