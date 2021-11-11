@@ -694,81 +694,13 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 --                                                      mob_db2
 -- ---------------------------------------------------------------------------------------------------------------------
 
--- Make monsters scale up to Lv. 250
--- Except some special cases
--- INSERT INTO `mob_db2`
--- SELECT
---     `ID`,
---     `Sprite`,
---     `kName`, 
---     `iName`,
---     `LV` + (`LV` * 1.546) - 2,
---     `HP` + (`HP` * 1.546) - 2,
---     `SP`,
---     `EXP` + (`EXP` * 1.546) - 2,
---     `JEXP` + (`JEXP` * 1.546) - 2,
---     `Range1`,
---     `ATK1` + (`ATK1` * 1.546) - 2,
---     `ATK2` + (`ATK2` * 1.546) - 2,
---     `DEF`,
---     `MDEF`,
---     `STR` + (`STR` * 1.546) - 2,
---     `AGI` + (`AGI` * 1.546) - 2,
---     `VIT` + (`VIT` * 1.546) - 2,
---     `INT` + (`INT` * 1.546) - 2,
---     `DEX` + (`DEX` * 1.546) - 2,
---     `LUK` + (`LUK` * 1.546) - 2,
---     `Range2`,
---     `Range3`,
---     `Scale`,
---     `Race`,
---     `Element`,
---     `Mode`,
---     `Speed`,
---     `aDelay`,
---     `aMotion`,
---     `dMotion`,
---     `MEXP`,
---     `MVP1id`,
---     `MVP1per`,
---     `MVP2id`,
---     `MVP2per`,
---     `MVP3id`,
---     `MVP3per`,
---     `Drop1id`,
---     `Drop1per`,
---     `Drop2id`,
---     `Drop2per`,
---     `Drop3id`,
---     `Drop3per`,
---     `Drop4id`,
---     `Drop4per`,
---     `Drop5id`,
---     `Drop5per`,
---     `Drop6id`,
---     `Drop6per`,
---     `Drop7id`,
---     `Drop7per`,
---     `Drop8id`,
---     `Drop8per`,
---     `Drop9id`,
---     `Drop9per`,
---     `DropCardid`,
---     `DropCardper`
--- FROM `mob_db`;
-
--- Limit monster level to 250
--- UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
-
--- Remove Earthquake and Dispell from monsters
+-- Remove Earthquake from all mobs and Dispell from Randgris
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND `mob_id` LIKE 1751;
 
--- Limit slave count to 2 for monsters
--- UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
-
 -- Remove all equipment from monster drop tables
--- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
