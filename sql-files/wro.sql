@@ -695,28 +695,29 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- Make monsters scale up to Lv. 250
+-- Except some special cases
 INSERT INTO `mob_db2`
 SELECT
     `ID`,
     `Sprite`,
     `kName`, 
     `iName`,
-    `LV` * 2.525,
-    `HP` * 2.525,
-    `SP` * 2.525,
-    `EXP` * 2.525,
-    `JEXP` * 2.525,
+    `LV` + `LV` * 1,526,
+    `HP` + `HP` * 1,526,
+    `SP` + `SP` * 1,526,
+    `EXP` + `EXP` * 1,526,
+    `JEXP` + `JEXP` * 1,526,
     `Range1`,
-    `ATK1` * 2.525,
-    `ATK2` * 2.525,
+    `ATK1` + `ATK1` * 1,526,
+    `ATK2` + `ATK2` * 1,526,
     `DEF`,
     `MDEF`,
-    `STR` * 2.525,
-    `AGI` * 2.525,
-    `VIT` * 2.525,
-    `INT` * 2.525,
-    `DEX` * 2.525,
-    `LUK` * 2.525,
+    `STR` + `STR` * 1,526,
+    `AGI` + `AGI` * 1,526,
+    `VIT` + `VIT` * 1,526,
+    `INT` + `INT` * 1,526,
+    `DEX` + `DEX` * 1,526,
+    `LUK` + `LUK` * 1,526,
     `Range2`,
     `Range3`,
     `Scale`,
@@ -761,7 +762,7 @@ UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
 
 -- Remove Earthquake and Dispell from monsters
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 289;
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND ´id´ = 1751;
 
 -- Limit slave count to 2 for monsters
 UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
