@@ -151,6 +151,8 @@ L_OnTutorialDone:
     getitem 2414,1;
     getitem 2510,1;
     getitem 2352,1;
+    getitem 501,50;
+    set zeny, zeny + 10000;
 	query_sql("REPLACE INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `mainquest` = 0");
 	query_sql("INSERT IGNORE INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `hints` = 1");
 
