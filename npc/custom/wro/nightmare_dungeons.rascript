@@ -82,10 +82,6 @@ anthell01n,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#7	613
 anthell01n,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#8	613
 
 // Mining
-anthell01n,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#5	10248
-anthell01n,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#6	10248
-anthell01n,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#7	10248
-anthell01n,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#8	10248
 
 
 
