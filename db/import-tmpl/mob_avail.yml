@@ -122,6 +122,28 @@ Body:
 #  - Mob: EP14_3_DEATH_B_MOB3
 #    Sprite: DARK_LORD
 
+  - Mob: HERB_LVL1
+    Sprite: SEAANEMONE
+  - Mob: HERB_LVL1
+    Sprite: BLUE_PLANT
+  - Mob: HERB_LVL2
+    Sprite: GREEN_PLANT
+  - Mob: HERB_LVL3
+    Sprite: YELLOW_PLANT
+  - Mob: HERB_LVL4
+    Sprite: RED_PLANT
+  - Mob: HERB_LVL5
+    Sprite: SHINING_PLANT
+  - Mob: NODE_LVL1
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL2
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL3
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL4
+    Sprite: PURPLESTONE
+  - Mob: NODE_LVL5
+    Sprite: PURPLESTONE
   - Mob: TRAINING_POST
     Sprite: BARRICADE
   - Mob: IMPERIAL_GUARD
