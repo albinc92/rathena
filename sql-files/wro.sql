@@ -702,22 +702,22 @@ SELECT
     `Sprite`,
     `kName`, 
     `iName`,
-    `LV` + `LV` * 1,526,
-    `HP` + `HP` * 1,526,
-    `SP` + `SP` * 1,526,
-    `EXP` + `EXP` * 1,526,
-    `JEXP` + `JEXP` * 1,526,
+    `LV` * 2.525,
+    `HP` * 2.525,
+    `SP` * 2.525,
+    `EXP` * 2.525,
+    `JEXP` * 2.525,
     `Range1`,
-    `ATK1` + `ATK1` * 1,526,
-    `ATK2` + `ATK2` * 1,526,
+    `ATK1` * 2.525,
+    `ATK2` * 2.525,
     `DEF`,
     `MDEF`,
-    `STR` + `STR` * 1,526,
-    `AGI` + `AGI` * 1,526,
-    `VIT` + `VIT` * 1,526,
-    `INT` + `INT` * 1,526,
-    `DEX` + `DEX` * 1,526,
-    `LUK` + `LUK` * 1,526,
+    `STR` * 2.525,
+    `AGI` * 2.525,
+    `VIT` * 2.525,
+    `INT` * 2.525,
+    `DEX` * 2.525,
+    `LUK` * 2.525,
     `Range2`,
     `Range3`,
     `Scale`,
@@ -762,7 +762,7 @@ UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
 
 -- Remove Earthquake and Dispell from monsters
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND ´id´ = 1751;
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289;
 
 -- Limit slave count to 2 for monsters
 UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
