@@ -762,7 +762,7 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 
 -- Remove Earthquake and Dispell from monsters
 DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND `id` = 1751;
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND `mod_id` LIKE 1751;
 
 -- Limit slave count to 2 for monsters
 -- UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
