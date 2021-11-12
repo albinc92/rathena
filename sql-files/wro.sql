@@ -843,7 +843,7 @@ SELECT
     `Scale`,
     `Race`,
     `Element`,
-    `Mode`,
+    `Mode` + 524288,
     `Speed`,
     `aDelay`,
     `aMotion`,
