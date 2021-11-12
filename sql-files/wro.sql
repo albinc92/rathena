@@ -816,8 +816,8 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Nightmare Monsters
-DECLARE lv_bonus tinyint(6) unsigned NOT NULL default '0',
-SET lv_bonus = 151;
+DECLARE lv_bonus tinyint(6) unsigned,
+SET lv_bonus = '151';
 
 INSERT INTO `mob_db2`
 SELECT 
