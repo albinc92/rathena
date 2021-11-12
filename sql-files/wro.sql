@@ -816,7 +816,8 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Nightmare Monsters
-SET LV_BONUS = 151;
+DECLARE lv_bonus tinyint(6) unsigned NOT NULL default '0',
+SET lv_bonus = 151;
 
 INSERT INTO `mob_db2`
 SELECT 
@@ -824,14 +825,14 @@ SELECT
     CONCAT('NM_', `Sprite`),
     CONCAT('NM_', `kName`), 
     CONCAT('NM_', `iName`),
-    `LV` + LV_BONUS,
-    (`HP` / `LV`) * (`LV` + LV_BONUS),
-    (`SP` / `LV`) * (`SP` + LV_BONUS),
+    `LV` + lv_bonus,
+    (`HP` / `LV`) * (`LV` + lv_bonus),
+    (`SP` / `LV`) * (`SP` + lv_bonus),
     `EXP`,
     `JEXP`,
     `Range1`,
-    (`ATK1` / `LV`) * (`LV` + LV_BONUS),
-    (`ATK2` / `LV`) * (`LV` + LV_BONUS),
+    (`ATK1` / `LV`) * (`LV` + lv_bonus),
+    (`ATK2` / `LV`) * (`LV` + lv_bonus),
     `DEF`,
     `MDEF`,
     `STR`,
