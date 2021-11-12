@@ -816,20 +816,22 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- Nightmare Monsters
+SET LV_BONUS = 151;
+
 INSERT INTO `mob_db2`
 SELECT 
     `ID` + 20020,
     CONCAT('NM_', `Sprite`),
     CONCAT('NM_', `kName`), 
     CONCAT('NM_', `iName`),
-    `LV`,
-    `HP`,
-    `SP`,
+    `LV` + LV_BONUS,
+    (`HP` / `LV`) * (`LV` + LV_BONUS),
+    (`SP` / `LV`) * (`SP` + LV_BONUS),
     `EXP`,
     `JEXP`,
     `Range1`,
-    `ATK1`,
-    `ATK2`,
+    (`ATK1` / `LV`) * (`LV` + LV_BONUS),
+    (`ATK2` / `LV`) * (`LV` + LV_BONUS),
     `DEF`,
     `MDEF`,
     `STR`,
@@ -876,7 +878,7 @@ SELECT
     `DropCardid`,
     `DropCardper`
 FROM `mob_db2`
-WHERE `ID` IN ( '1005', '1095', '1097', '1105', '1121', '1160', '1176', '1289');
+WHERE `ID` IN ( 1005, 1095, 1097, 1105, 1121, 1160, 1176, 1289 );
 
 -- Anthell
 UPDATE `mob_db2`
