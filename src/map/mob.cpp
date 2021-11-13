@@ -2283,18 +2283,19 @@ void mob_setdropitem_option2(struct item *itm) {
 /**
  * Returns an item id to be dropped at random
  **/
-t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
+t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk) {
 
 	int mob_level_capped = mob_level;
-	// if (boss_type) mob_level_capped += (10 * (boss_type + 1)) + 2;
-	if (mob_level_capped > 99) mob_level_capped = mob_level - 17;
-	mob_level_capped = round(mob_level_capped * 0.396);
+	mob_level_capped = round(mob_level_capped * 0.396);	// Buffed mob lv. normalization
+	//if (mob_level_capped > 99) mob_level_capped = mob_level - 17;	// Renewal mob lv normalization (unusued with buffed mob lvls)
+	if (boss_type) mob_level_capped += (boss_type * 20) + 2;	// Miniboss & MvP have boosted iLvls +22/42
+	if (mob_level_capped > 99) mob_level_capped = 99;	// Cap to lv. 99
 
 	int item_type_count = 30;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
-	int rarity = rnd() % 1000;
+	int rarity = rnd() % (1000 + luk);
 	int slotted = 0;
 	if ((rnd() % 1000) < 333) {
 		slotted = 1;
@@ -3915,7 +3916,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
-			int loot_count = md->get_bosstype() + 1;
+			int loot_count = md->get_bosstype() + 2;
 
 			// Mini MVPs drop 2-3 items
 			if(md->get_bosstype() == 1) {
@@ -3928,7 +3929,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			}
 
 			for(int i = 0; i < loot_count; i++) {
-				t_itemid id = set_drop_id(md->level, md->get_bosstype());
+				t_itemid id = set_drop_id(md->level, md->get_bosstype(), sd->status.luk);
 				if(id > 0) {
 					struct s_mob_drop mobdrop;
 					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
