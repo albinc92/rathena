@@ -413,7 +413,7 @@ void mob_setdropitem_option(struct item *itm, struct s_mob_drop *mobdrop);
 
 // WarboundRO custom functions
 void mob_setdropitem_option2(struct item *itm);
-t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type);
+t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk);
 
 #define CHK_MOBSIZE(size) ((size) >= SZ_SMALL && (size) < SZ_MAX) /// Check valid Monster Size
 
