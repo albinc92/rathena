@@ -3195,15 +3195,15 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 		}
 	}
 
-	//int lower_bound = 1;
-	//if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
+	int lower_bound = 1;
+	if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
 
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
 		if(curr.item_lv <= mob_level_capped) {
-			//if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
-			drop_ids.push_back(curr);
+			if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
+			//drop_ids.push_back(curr);
 		} else {
 			break;
 		}
