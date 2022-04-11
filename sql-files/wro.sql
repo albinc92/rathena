@@ -43,13 +43,13 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
 -- Copies all weapons of weapon lvl > 1 from item_db into item_db2
 -- Updates ATK of all weapons based on weapon level
 -- to make them more viable in comparison to carded
--- 4 socketed alternatives
+-- 4 socket alternatives
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `weapon_level` > 1;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,25;") WHERE `weapon_level` = 2;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,50;") WHERE `weapon_level` = 3;
-UPDATE `item_db2` SET `script` = CONCAT(`script`, " bonus2 bAddClass,Class_All,75;") WHERE `weapon_level` = 4;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' bonus2 bAddClass,Class_All,25;') WHERE `weapon_level` = 2;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' bonus2 bAddClass,Class_All,50;') WHERE `weapon_level` = 3;
+UPDATE `item_db2` SET `script` = CONCAT(`script`, ' bonus2 bAddClass,Class_All,75;') WHERE `weapon_level` = 4;
 
--- Create costume copies of all headgears in item_db
+-- Create costume copies of all headgear in item_db
 -- and updates their stats to reflect their nature.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
@@ -113,9 +113,9 @@ AND (`location_head_top` = true
 OR `location_head_mid` = true
 OR `location_head_low` = true);
 
--- Copy all headgears to item_db2 and set their sell flag to true
--- This part must come after the costume headgear commands, otherwise
--- they will be overwritten as costume headgears.
+-- Copy all headgear to item_db2 and set their sell flag to true
+-- This part must come after the costume headgear conversion (above), otherwise
+-- they will be overwritten as costume headgear.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
 WHERE `type` = 'Armor'
@@ -170,20 +170,20 @@ SET `trade_nodrop` = false,
     `trade_noauction` = false
 WHERE `id` IN (7821);
 
--- Make PvP Gear Sellable, Storeable, etc.
+-- Make PvP Gear Sellable, Storable, etc.
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
-WHERE (`name_english` LIKE "Glorious %"
-OR `name_english` LIKE "Valorous %"
-OR `name_english` LIKE "Brave %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Captain's %"
-OR `name_english` LIKE "Commander's %"
-OR `name_english` LIKE "Medal of Honor"
+WHERE (`name_english` LIKE 'Glorious %'
+OR `name_english` LIKE 'Valorous %'
+OR `name_english` LIKE 'Brave %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Captain\'s %'
+OR `name_english` LIKE 'Commander\'s %'
+OR `name_english` LIKE 'Medal of Honor'
 OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382))
-AND `name_english` NOT LIKE "% Card";
+AND `name_english` NOT LIKE '% Card';
 
 UPDATE `item_db2`
 SET `trade_nodrop` = true,
@@ -195,17 +195,17 @@ SET `trade_nodrop` = true,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE (`name_english` LIKE "Glorious %"
-OR `name_english` LIKE "Valorous %"
-OR `name_english` LIKE "Brave %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Soldier %"
-OR `name_english` LIKE "Captain's %"
-OR `name_english` LIKE "Commander's %"
-OR `name_english` LIKE "Medal of Honor"
+WHERE (`name_english` LIKE 'Glorious %'
+OR `name_english` LIKE 'Valorous %'
+OR `name_english` LIKE 'Brave %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Soldier %'
+OR `name_english` LIKE 'Captain\'s %'
+OR `name_english` LIKE 'Commander\'s %'
+OR `name_english` LIKE 'Medal of Honor'
 OR `id` IN (2435, 2436, 2437, 2376, 2377, 2378, 2379, 2380, 2381, 2382))
-AND `name_english` NOT LIKE "% Card";
+AND `name_english` NOT LIKE '% Card';
 
 -- Update scripts of MvP cards
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_shoes`,`flag_buyingstore`,`script`)
@@ -658,7 +658,7 @@ VALUES (40054,'Spell_Staff_C','Costume Spell Staff','Armor',true,1813);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`location_costume_head_top`,`view`)
 VALUES (40055,'Lord_Kahos_Horn_C','Costume Lord Kahos Horn','Armor',true,99);
 
--- Gem Socketing
+-- Gem Socket
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
 VALUES (40200,'Ruby_G','Ruby','Card','bonus bStr,1;');
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`script`)
@@ -678,7 +678,7 @@ REPLACE INTO `item_cash_db2` SELECT 0, `id`, 3 FROM `item_db2` WHERE `id` IN (40
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40058);
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40055, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 40039, 40031, 40015) ORDER BY `name_aegis`;
 
--- Enchanting Consumable
+-- Enchanting Consumables
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 609;
 UPDATE `item_db2` SET `id` = 7578, `name_aegis` = 'Anti_Spell_Bead', `name_english` = 'Countermagic Crystal', `price_buy` = 200, `price_sell` = 100, `weight` = 100, `script` = 'callfunc ("F_Enchanting", 1);' WHERE `id` = 609;
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 609;
@@ -687,8 +687,8 @@ UPDATE `item_db2` SET `id` = 1006, `name_aegis` = 'Old_Magic_Book', `name_englis
 -- Misc fixes
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra Manyu
 UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddClass,Class_All,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; skill "GM_SANDMAN",1; bonus bDelayRate,-100;' WHERE `id` = 1599;
-REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 7721;   -- Drake Card Drop
-UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
+REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 7721;   -- Adjust Drake Card Value
+UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;   -- Adjust Drake Card Value
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_db2
@@ -700,7 +700,7 @@ INSERT INTO `mob_db2`
 SELECT
     `ID`,
     `Sprite`,
-    `kName`, 
+    `kName`,
     `iName`,
     `LV` + (`LV` * 1.546) - 2,
     `HP` + (`HP` * 1.546) - 2,
@@ -763,12 +763,12 @@ UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
 -- Limit slave count to 2 for monsters
 UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
 
--- Remove Earthquake from all mobs and Dispell from Randgris
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 653;
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND `mob_id` = 1751;
+-- Remove Earthquake from almost all mobs and Dispel from Randgris
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 653 AND MOB_ID IN (1751, 1916, 1990);
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND MOB_ID = 1751;
 
 -- Remove all equipment from monster drop tables
---REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
+-- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
     SELECT `id` FROM `item_db` WHERE `type` IN (
         'Weapon',
@@ -883,75 +883,6 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 -- Emperium
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
--- Nightmare Monsters
---INSERT INTO `mob_db2`
---SELECT 
---    `ID` + 20020,
---    CONCAT('NM_', `Sprite`),
---    CONCAT('NM_', `kName`), 
---    CONCAT('NM_', `iName`),
---    `LV` + (151 + `LV`),
---    `HP` / (250 - `LV`) * 250,
---    (`SP` / 250 - `LV`) * 250,
---    (`EXP` / 250 - `LV`) * 250,
---    (`JEXP` / 250 - `LV`) * 250,
---    `Range1`,
---    (`ATK1` / `LV`) * 250,
---    (`ATK2` / `LV`) * 250,
---    `DEF`,
---    `MDEF`,
---    (`STR` / `LV`) * 250,
---    (`AGI` / `LV`) * 250,
---    (`VIT` / `LV`) * 250,
---    (`INT` / `LV`) * 250,
---    (`DEX` / `LV`) * 250,
---    (`LUK` / `LV`) * 250,
---    `Range2`,
---    `Range3`,
---    `Scale`,
---    `Race`,
---    `Element`,
---    `Mode` + 69206016,
---    `Speed`,
---    `aDelay`,
---    `aMotion`,
---    `dMotion`,
---    `MEXP`,
---    `MVP1id`,
---    `MVP1per`,
---    `MVP2id`,
---    `MVP2per`,
---    `MVP3id`,
---    `MVP3per`,
---    `Drop1id`,
---    `Drop1per`,
---    `Drop2id`,
---    `Drop2per`,
---    `Drop3id`,
---    `Drop3per`,
---    `Drop4id`,
---    `Drop4per`,
---    `Drop5id`,
---    `Drop5per`,
---    `Drop6id`,
---    `Drop6per`,
---    `Drop7id`,
---    `Drop7per`,
---    `Drop8id`,
---    `Drop8per`,
---    `Drop9id`,
---    `Drop9per`,
---    `DropCardid`,
---    `DropCardper`
---FROM `mob_db2`
---WHERE `ID` IN ( 1005, 1095, 1097, 1105, 1121, 1160, 1176, 1289 );
-
--- Anthell
---UPDATE `mob_db2`
---SET `Element` = 87,
---    `Speed` = `Speed` - 25
---WHERE `id` = '21025';
-
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_skill_db
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -965,8 +896,6 @@ REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD',
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db` VALUES (2476,'Invasion Commander@NPC_GRANDDARKNESS','attack',339,5,500,2000,30000,'no','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
-
--- Anthell
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char

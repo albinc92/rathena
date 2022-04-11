@@ -17,7 +17,7 @@ passwd: ~45Qt9$?=&bM
 // The map server connects to the character server using this IP address.
 // NOTE: This is useful when you are running behind a firewall or are on
 // a machine with multiple interfaces.
-char_ip: 127.0.0.1
+char_ip: 192.168.1.64
 
 // Map Server IP
 // The IP address which clients will use to connect.
