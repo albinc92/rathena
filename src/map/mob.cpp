@@ -3214,7 +3214,10 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 		return 0;
 	}
 
-	int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 2)) / 100);
+    int test = round(drop_ids.size() * 0.5);
+    ShowInfo("test %d\n", test);
+
+    int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 2)) / 100);
 	random_equipment_drop drop_id = drop_ids.at(drop_index);
 	return drop_id.item_id;
 }
