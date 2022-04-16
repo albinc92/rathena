@@ -3217,7 +3217,13 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
     int min = 0, max = drop_ids.size();
     int drop_range = rand() % 100;
     if(drop_range < 75) {
-        ShowInfo("Haha!: %d\n", max);
+        max = round(rand() % (drop_ids.size() * 0.5));
+    } else {
+        min = round(rand() % ((drop_ids.size() * 0.5) + 1));
+    }
+
+    if(min >= max) {
+        min = max - 1;
     }
 
     int drop_index = (rand() % (max - min)) + min;
