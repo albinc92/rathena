@@ -3195,15 +3195,15 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 		}
 	}
 
-	int lower_bound = 1;
-	if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
+	//int lower_bound = 1;
+    //if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
 
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
 		if(curr.item_lv <= mob_level_capped) {
-			if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
-			//drop_ids.push_back(curr);
+            //if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
+			drop_ids.push_back(curr);
 		} else {
 			break;
 		}
@@ -3216,18 +3216,25 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 
     int min = 0, max = drop_ids.size();
     int drop_range = rand() % 100;
-    if(drop_range < 75) {
-        max = round(drop_ids.size() * 0.5);
+    if(drop_range < 40) {
+        max = round(drop_ids.size() * 0.4);
+    } else if(drop_range > 39 && drop_range < 70) {
+        min = round((drop_ids.size() * 0.4) + 1);
+        max = round(drop_ids.size() * 0.7);
+    } else if(drop_range > 69 && drop_range < 90) {
+        min = round((drop_ids.size() * 0.7) + 1);
+        max = round(drop_ids.size() * 0.9);
     } else {
-        min = round((drop_ids.size() * 0.5) + 1);
+        min = round((drop_ids.size() * 0.9) + 1);
     }
 
+    // Crash safeguard
     if(min >= max) {
         min = max - 1;
     }
 
     int drop_index = (rand() % (max - min)) + min;
-    ShowInfo("Max: %d, Min: %d, Index: %d, Item ID: %d\n", max, min, drop_index, drop_ids.at(drop_index));
+    //ShowInfo("Max: %d, Min: %d, Index: %d, Item ID: %d\n", max, min, drop_index, drop_ids.at(drop_index));
 
     //int drop_index = floor((drop_ids.size() * pow(rnd() % 10, 2)) / 100);
 	random_equipment_drop drop_id = drop_ids.at(drop_index);
