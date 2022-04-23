@@ -3216,15 +3216,12 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 
     int min = 0, max = drop_ids.size();
     int drop_range = rand() % 100;
-    if(drop_range < 40) {
+    if (drop_range < 40) {
         max = round(drop_ids.size() * 0.4);
-    } else {
-        min = round(drop_ids.size() * 0.9);
-    }
-
-    // Crash safeguard
-    if(min >= max) {
-        min = max - 1;
+    } if (drop_range > 39 && drop_range < 70) {
+        max = round(drop_ids.size() * 0.7);
+    } if (drop_range > 69 && drop_range < 90) {
+        max = round(drop_ids.size() * 0.9);
     }
 
     int drop_index = (rand() % (max - min)) + min;
