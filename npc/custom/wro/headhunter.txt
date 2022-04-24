@@ -104,7 +104,7 @@ L_Missions:
     }
 
     //switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
-    switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 54^000000]:Monsters [^ff0000Lv. 57 - 82^000000]:Monsters [^ff0000Lv. 82 - 118^000000]:Monsters [^ff0000Lv. 120 - 163^000000]:Monsters [^ff0000Lv. 163 - 250^000000]:Monsters [^ff0000Lv. 250 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 3 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 250 - 250^000000]:^ff0000MvPs^000000 [^ff0000Lv. 161 - 250^000000]")) {
+    switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 54^000000]:Monsters [^ff0000Lv. 57 - 82^000000]:Monsters [^ff0000Lv. 82 - 118^000000]:Monsters [^ff0000Lv. 120 - 163^000000]:Monsters [^ff0000Lv. 163 - 250^000000]:Monsters [^ff0000Lv. 250 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 3 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 250 - 250^000000]:^ff0000Bosses^000000 [^ff0000Lv. 161 - 250^000000]")) {
         case 1:
             if(@lastMob == 0) {
                 next;
