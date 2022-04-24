@@ -2295,7 +2295,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 	
-	int rarity = rnd() % (1000 + luk);
+	int rarity = rnd() % 1000;
 	int slotted = 0;
 	if ((rnd() % 1000) < 333) {
 		slotted = 1;
@@ -2303,7 +2303,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 
 	// iLv of NORMAL items is based on the level of the monster that drops the item with highest DEF/ATK divided by DEF of item)
 	// iLv of RARE items is based on the mobLv of the monster that usually drops them
-	
+
 	// ARMOR
 	if(type_index == 0) {
 		if(rarity < 750) {
@@ -2363,7 +2363,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_armor_r.at(rnd() % lv_99_armor_r.size()), 99});
 		}
 	}
-	
+
 	// SHIELD
 	else if(type_index == 1) {
 		if(rarity < 750) {
@@ -2393,7 +2393,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({2115, 99});
 		}
 	}
-	
+
 	// GARMENT
 	else if(type_index == 2) {
 		if(rarity < 750) {
@@ -2430,7 +2430,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_garment_r.at(rnd() % lv_99_garment_r.size()), 99});
 		}
 	}
-	
+
 	// FOOTGEAR
 	else if(type_index == 3) {
 		if(rarity < 750) {
@@ -2463,7 +2463,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_footgear_r.at(rnd() % lv_99_footgear_r.size()), 99});
 		}
 	}
-	
+
 	// ACCESSORY (ilv based on moblv who normally drops)
 	else if(type_index == 4 || type_index == 5) {
 		id_range.push_back({2609, 10});
