@@ -93,7 +93,7 @@ L_Train:
 	    mes "Very fuunnyy normaan. Yoou aalready knoow this profession~~";
 	    close;
 	} else if(.@Mining || .@Enchanting) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "Sooo youu wouuld like too learn thee ^ff0000Herbalism^000000 profession hmmm?";
 	next;
@@ -169,7 +169,7 @@ L_Train:
 	    mes "Hey don't try to play me! I can tell you already know this trade!";
 	    close;
 	} else if(.@Herbalism || .@Enchanting) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "Interested in becoming a ^ff0000Mining^000000 professional hmmm?";
 	next;
@@ -245,7 +245,7 @@ L_Train:
 	    mes "Very amusing, the records show that you already know this profession. Good day.";
 	    close;
 	} else if(.@Mining || .@Herbalism) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "So you would like to become an ^ff0000Enchanter^000000, correct?";
 	next;
