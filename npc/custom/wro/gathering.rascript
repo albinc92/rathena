@@ -51,13 +51,13 @@ L_Information:
 	mes "Herbalism requires you to have a ^ff0000Field Shovel^000000 in your inventory, while Mining requires an ^ff0000Old Pick^000000.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "You can buy these tools from the ^ff0000Tool Merchant^000000 just inside the room to my right.";
+	mes "You can buy these tools from the ^ff0000Tool Merchant^000000 to my right.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Enchanting is slightly different from the other two professions.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "It requires the use of ^ff0000Old Magicbook^000000 to disenchant items that have bound ^ff0000Magical Affixes^000000.";
+	mes "It requires use of the item ^ff0000Old Magicbook^000000 to disenchant items that have bound ^ff0000Magical Affixes^000000.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "To learn more about each profession, see the ^ff0000Profession Trainers^000000 in the room down past that sofa!";

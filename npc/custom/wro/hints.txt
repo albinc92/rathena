@@ -20,7 +20,7 @@ OnPCLoginEvent:
 		"Pressing the Ctrl button while attacking a monster will cause your character to automatically attack it.",
 		"Use the Navigation Interface and the World Map to more easily navigate Rune-Midgard.",
 		"Cast rate is affected by both the DEX and INT attributes according to the renewal formula.",
-		"You can learn a profession in order to earn extra Zeny and gain various benefits! Find out more at the Craftsmen's Guild in Royal.",
+		"Learn a profession in order to earn extra Zeny and useful items! Find out more at the Craftsmen's Guild in Royal.",
 		"You can buy Elemental Converters at the Astronomer's Facility in Royal. They can change the elemental property of your weapon temporarily.",
 		"Hire a Mercenary from the Mercenary Contractor in Royal to aid you when leveling.",
 		"Make sure you check out the Supply Master inside the Senate building in Royal to see what he has in store.",
