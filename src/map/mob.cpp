@@ -290,15 +290,15 @@ void mvptomb_destroy(struct mob_data *md) {
 static bool mobdb_searchname_sub(uint16 mob_id, const char * const str, bool full_cmp)
 {
 	const struct mob_db * const mob = mob_db(mob_id);
-	
+
 	if( mobdb_checkid(mob_id) <= 0 )
 		return false; // invalid mob_id (includes clone check)
 	if(!mob->base_exp && !mob->job_exp && !mob_has_spawn(mob_id))
 		return false; // Monsters with no base/job exp and no spawn point are, by this criteria, considered "slave mobs" and excluded from search results
 	if( full_cmp ) {
 		// str must equal the db value
-		if( strcmpi(mob->name, str) == 0 || 
-			strcmpi(mob->jname, str) == 0 || 
+		if( strcmpi(mob->name, str) == 0 ||
+			strcmpi(mob->jname, str) == 0 ||
 			strcmpi(mob->sprite, str) == 0 )
 			return true;
 	} else {
@@ -519,7 +519,7 @@ int mob_get_random_id(int type, enum e_random_monster_flags flag, int lv)
 
 	if (type == MOBG_Bloody_Dead_Branch && flag&RMF_MOB_NOT_BOSS)
 		flag = static_cast<e_random_monster_flags>(flag&~RMF_MOB_NOT_BOSS);
-	
+
 	if (!msummon) {
 		ShowError("mob_get_random_id: Invalid type (%d) of random monster.\n", type);
 		return 0;
@@ -586,7 +586,7 @@ bool mob_ksprotected (struct block_list *src, struct block_list *target)
 		struct map_session_data *pl_sd; // Owner
 		struct map_data *mapdata = map_getmapdata(md->bl.m);
 		char output[128];
-		
+
 		if( mapdata->flag[MF_ALLOWKS] || mapdata_flag_ks(mapdata) )
 			return false; // Ignores GVG, PVP and AllowKS map flags
 
@@ -1793,7 +1793,7 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 				) )
 			{ // Rude attacked
 				if (abl->id != md->bl.id //Self damage does not cause rude attack
-				&& md->state.attacked_count++ >= RUDE_ATTACKED_COUNT				
+				&& md->state.attacked_count++ >= RUDE_ATTACKED_COUNT
 				&& !mobskill_use(md, tick, MSC_RUDEATTACKED) && can_move
 				&& !tbl && unit_escape(&md->bl, abl, rnd()%10 +1))
 				{	//Escaped.
@@ -1930,7 +1930,7 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 	//At this point we know the target is attackable, we just gotta check if the range matches.
 	if (battle_check_range(&md->bl, tbl, md->status.rhw.range) && !(md->sc.option&OPTION_HIDE))
 	{	//Target within range and able to use normal attack, engage
-		if (md->ud.target != tbl->id || md->ud.attacktimer == INVALID_TIMER) 
+		if (md->ud.target != tbl->id || md->ud.attacktimer == INVALID_TIMER)
 		{ //Only attack if no more attack delay left
 			if(tbl->type == BL_PC)
 				mob_log_damage(md, tbl, 0); //Log interaction (counts as 'attacker' for the exp bonus)
@@ -1950,9 +1950,9 @@ static bool mob_ai_sub_hard(struct mob_data *md, t_tick tick)
 	}
 
 	//Monsters in berserk state, unable to use normal attacks, will always attempt a skill
-	if(md->ud.walktimer == INVALID_TIMER && (md->state.skillstate == MSS_BERSERK || md->state.skillstate == MSS_ANGRY)) 
+	if(md->ud.walktimer == INVALID_TIMER && (md->state.skillstate == MSS_BERSERK || md->state.skillstate == MSS_ANGRY))
 	{
-		if (DIFF_TICK(md->ud.canmove_tick, tick) <= MIN_MOBTHINKTIME && DIFF_TICK(md->ud.canact_tick, tick) < -MIN_MOBTHINKTIME*IDLE_SKILL_INTERVAL) 
+		if (DIFF_TICK(md->ud.canmove_tick, tick) <= MIN_MOBTHINKTIME && DIFF_TICK(md->ud.canact_tick, tick) < -MIN_MOBTHINKTIME*IDLE_SKILL_INTERVAL)
 		{ //Only use skill if able to walk on next tick and not used a skill the last second
 			if (mobskill_use(md, tick, -1))
 				return true;
@@ -2294,7 +2294,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 	int item_type_count = 30;
 	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
-	
+
 	int rarity = rnd() % 1000;
 	int slotted = 0;
 	if ((rnd() % 1000) < 333) {
@@ -2514,7 +2514,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 		std::vector<t_itemid> lv_99_accessory = { 2729, 2616, 2655, 2678, 2679 };
 		id_range.push_back({lv_99_accessory.at(rnd() % lv_99_accessory.size()), 99});
 	}
-	
+
 	// DAGGER
 	else if(type_index == 6) {
 		if(rarity < 750) {
@@ -2579,7 +2579,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_dagger_r.at(rnd() % lv_99_dagger_r.size()), 99});
 		}
 	}
-	
+
 	// 1-H SWORD
 	else if(type_index == 7) {
 		if(rarity < 750) {
@@ -2613,7 +2613,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_1hsword_r.at(rnd() % lv_99_1hsword_r.size()), 99});
 		}
 	}
-	
+
 	// 2-H SWORD
 	else if(type_index == 8) {
 		if(rarity < 750) {
@@ -2642,7 +2642,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
 		}
 	}
-	
+
 	// 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
 	else if(type_index == 9) {
 		if(rarity < 750) {
@@ -2658,7 +2658,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1415, 99});
 		}
 	}
-	
+
 	// 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
 	else if(type_index == 10) {
 		if(rarity < 750) {
@@ -2695,7 +2695,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_2hsper_r.at(rnd() % lv_99_2hsper_r.size()), 99});
 		}
 	}
-	
+
 	// 1-H AXE
 	else if(type_index == 11) {
 		if(rarity < 750) {
@@ -2711,7 +2711,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1311, 83});
 		}
 	}
-	
+
 	// 2-H AXE
 	else if(type_index == 12) {
 		if(rarity < 750) {
@@ -2738,7 +2738,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_2haxe_r.at(rnd() % lv_99_2haxe_r.size()), 99});
 		}
 	}
-	
+
 	// MACE
 	else if(type_index == 13) {
 		if(rarity < 750) {
@@ -2774,7 +2774,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_mace_r.at(rnd() % lv_99_mace_r.size()), 99});
 		}
 	}
-	
+
 	// 1H-STAFF
 	// Special case, normal types are dropped by mob lv that usually drops them
 	else if(type_index == 14) {
@@ -2808,7 +2808,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1637, 95});
 		}
 	}
-	
+
 	// 2H-STAFF
 	else if(type_index == 15) {
 		if(rarity > 749) {
@@ -2820,7 +2820,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({2000, 98});
 		}
 	}
-	
+
 	// BOW
 	// Special case, normal types are dropped by mob lv that usually drops them
 	else if(type_index == 16) {
@@ -2852,7 +2852,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_99_bow_r.at(rnd() % lv_99_bow_r.size()), 99});
 		}
 	}
-	
+
 	// KNUCKLE
 	else if(type_index == 17) {
 		if(rarity < 750) {
@@ -2871,7 +2871,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1825, 88});
 		}
 	}
-	
+
 	// MUSICAL INSTRUMENT
 	else if(type_index == 18) {
 		if(rarity < 750) {
@@ -2895,7 +2895,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1920, 91});
 		}
 	}
-	
+
 	// WHIP
 	else if(type_index == 19) {
 		if(rarity < 750) {
@@ -2916,7 +2916,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1980, 80});
 		}
 	}
-	
+
 	// BOOK
 	else if(type_index == 20) {
 		if(rarity < 750) {
@@ -2937,7 +2937,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({1560, 99});
 		}
 	}
-	
+
 	// KATAR
 	else if(type_index == 21) {
 		if(rarity < 750) {
@@ -2961,7 +2961,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({lv_87_katar_r.at(rnd() % lv_87_katar_r.size()), 87});
 		}
 	}
-	
+
 	// REVOLVER
 	else if(type_index == 22) {
 		if(rarity < 750) {
@@ -2973,7 +2973,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({13107, 75});
 		}
 	}
-	
+
 	// RIFLE
 	else if(type_index == 23) {
 		if(rarity < 750) {
@@ -2985,7 +2985,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({13164, 80});
 		}
 	}
-	
+
 	// GATLING GUN
 	else if(type_index == 24) {
 		if(rarity < 750) {
@@ -2995,7 +2995,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({13159, 72});
 		}
 	}
-	
+
 	// SHOTGUN
 	else if(type_index == 25) {
 		if(rarity > 749) {
@@ -3004,7 +3004,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({13169, 89});
 		}
 	}
-	
+
 	// GRENADE LAUNCHER
 	else if(type_index == 26) {
 		if(rarity > 749) {
@@ -3015,7 +3015,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			}
 		}
 	}
-	
+
 	// HUUMA SHURIKEN
 	else if(type_index == 27) {
 		if(rarity < 750) {
@@ -3030,7 +3030,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({13303, 76});
 		}
 	}
-	
+
 	// UPPER HEADGEAR
 	else if(type_index == 28) {
 		if(rarity < 750) {
@@ -3112,11 +3112,11 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 			id_range.push_back({5025, 99});
 		}
 	}
-	
+
 	// OTHER HEADGEARS
 	if(type_index == 29) {
 		int headgear_type = rnd() % 5;
-		
+
 		// MIDDLE HEADGEAR
 		if(headgear_type == 0) {
 			if(rarity < 750) {
@@ -3131,7 +3131,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 				id_range.push_back({5104, 86});
 			}
 		}
-		
+
 		// LOWER HEADGEAR
 		else if(headgear_type == 1) {
 			if(rarity < 750) {
@@ -3148,7 +3148,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 				id_range.push_back({2268, 65});
 			}
 		}
-		
+
 		// UPPER & MIDDLE HEADGEAR
 		else if(headgear_type == 2) {
 			if(rarity < 750) {
@@ -3162,7 +3162,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 				id_range.push_back({5022, 99});
 			}
 		}
-		
+
 		// MIDDLE & LOWER HEADGEAR
 		else if(headgear_type == 3) {
 			if(rarity < 750) {
@@ -3176,14 +3176,14 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 				id_range.push_back({5005, 38});
 			}
 		}
-		
+
 		// UPPER & LOWER HEADGEAR
 		else if(headgear_type == 4) {
 			if(rarity > 749) {
 				id_range.push_back({5053, 78});
 			}
 		}
-		
+
 		// UPPER & MIDDLE & LOWER HEADGEAR
 		else if(headgear_type == 5) {
 			if(rarity > 749) {
@@ -3312,7 +3312,7 @@ static void mob_item_drop(struct mob_data *md, struct item_drop_list *dlist, str
 	sd = map_charid2sd(dlist->first_charid);
 	if( sd == NULL ) sd = map_charid2sd(dlist->second_charid);
 	if( sd == NULL ) sd = map_charid2sd(dlist->third_charid);
-	test_autoloot = sd 
+	test_autoloot = sd
 		&& (drop_rate <= sd->state.autoloot || pc_isautolooting(sd, ditem->item_data.nameid))
 		&& (flag?(battle_config.homunculus_autoloot?(battle_config.hom_idle_no_share == 0 || !pc_isidle_hom(sd)):0):
 			(battle_config.idle_no_autoloot == 0 || DIFF_TICK(last_tick, sd->idletime) < battle_config.idle_no_autoloot));
@@ -3933,27 +3933,45 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
-			int loot_count = md->get_bosstype() + 2;
+            int drop_rate_eqi = 1000;   // 10% base drop rate of items
 
-			// Mini MVPs drop 2-3 items
-			if(md->get_bosstype() == 1) {
-				loot_count = loot_count + (rnd() % loot_count);
+            // LUK affect drops?
+            if (src) {
+                if (battle_config.drops_by_luk)
+                    drop_rate_eqi += status_get_luk(src)*battle_config.drops_by_luk/100;
+                if (battle_config.drops_by_luk2)
+                    drop_rate_eqi += (int)(0.5+drop_rate_eqi*status_get_luk(src)*battle_config.drops_by_luk2/10000.);
+            }
+
+            // Player specific drop rate adjustments
+            int drop_rate_bonus_eqi = 0;
+            if( battle_config.pk_mode && (int)(md->level - sd->status.base_level) >= 20 )
+                drop_rate_eqi = (int)(drop_rate_eqi*1.25);
+            if (sd->sc.data[SC_ITEMBOOST])
+                drop_rate_bonus_eqi += sd->sc.data[SC_ITEMBOOST]->val1;
+            drop_rate_bonus_eqi = (int)(0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
+            drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
+
+            // Normal monsters drop 1 item
+			int loot_count = 1;
+			if(md->get_bosstype() == 1) { // Mini MVPs drop 1-2 items
+				loot_count = md->get_bosstype() + (rnd() % 2);
+			} else if(md->get_bosstype() == 2) { // MVPs drop 3-5 items
+				loot_count = md->get_bosstype() + (rnd() % 3 + 1);
 			}
 
-			// MVPs drop 3-5 items
-			if(md->get_bosstype() == 2) {
-				loot_count = loot_count + (rnd() % loot_count);
-			}
-
+            // Attempt to drop equipment
 			for(int i = 0; i < loot_count; i++) {
-				t_itemid id = set_drop_id(md->level, md->get_bosstype(), sd->status.luk);
-				if(id > 0) {
-					struct s_mob_drop mobdrop;
-					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-					mobdrop.nameid = id;
-					ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-					mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
-				}
+                if(rnd() % 10000 <= drop_rate_eqi) {
+                    t_itemid id = set_drop_id(md->level, md->get_bosstype(), sd->status.luk);
+                    if(id > 0) {
+                        struct s_mob_drop mobdrop;
+                        memset(&mobdrop, 0, sizeof(struct s_mob_drop));
+                        mobdrop.nameid = id;
+                        ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+                        mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+                    }
+                }
 			}
 		}
 
@@ -4379,14 +4397,14 @@ void mob_add_spawn(uint16 mob_id, const struct spawn_info& new_spawn)
 
 	std::vector<spawn_info>& spawns = mob_spawn_data[mob_id];
 	// Search if the map is already in spawns
-	auto itSameMap = std::find_if(spawns.begin(), spawns.end(), 
+	auto itSameMap = std::find_if(spawns.begin(), spawns.end(),
 		[&m] (const spawn_info &s) { return (s.mapindex == m); });
-	
+
 	if( itSameMap != spawns.end() )
 		itSameMap->qty += new_spawn.qty; // add quantity, if map is found
 	else
 		spawns.push_back(new_spawn); // else, add the whole spawn info
-	
+
 	// sort spawns by spawn quantity
 	std::sort(spawns.begin(), spawns.end(),
 		[](const spawn_info & a, const spawn_info & b) -> bool
@@ -5928,7 +5946,7 @@ static bool mob_parse_row_chatdb(char* fields[], int columns, int current)
 			return false;
 		}
 	}
-	
+
 	//MSG ID
 	ms->msg_id=msg_id;
 	//Color
@@ -6253,7 +6271,7 @@ static int mob_read_sqlskilldb(void)
 			for( i = 0; i < 19; ++i )
 			{
 				Sql_GetData(mmysql_handle, i, &str[i], NULL);
-				if( str[i] == NULL ) 
+				if( str[i] == NULL )
 					str[i] = dummy; // get rid of NULL columns
 			}
 
@@ -6637,7 +6655,7 @@ static void mob_skill_db_set_single(struct s_mob_skill *skill) {
 			mob_skill_db_set_single_sub(&pair.second, skill);
 		}
 	}
-	
+
 }
 
 /**
@@ -6714,7 +6732,7 @@ static void mob_load(void)
 		}
 	}
 
-	for(int i = 0; i < ARRAYLENGTH(dbsubpath); i++){	
+	for(int i = 0; i < ARRAYLENGTH(dbsubpath); i++){
 		int n1 = strlen(db_path)+strlen(dbsubpath[i])+1;
 		int n2 = strlen(db_path)+strlen(DBPATH)+strlen(dbsubpath[i])+1;
 
