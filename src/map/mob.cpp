@@ -3952,24 +3952,25 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
             drop_rate_bonus_eqi = (int)(0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
             drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
 
-            // Normal monsters drop 1 item
-			int loot_count = 1;
-			if(md->get_bosstype() == 1) { // Mini MVPs drop 1-2 items
-				loot_count = md->get_bosstype() + (rnd() % 2);
-			} else if(md->get_bosstype() == 2) { // MVPs drop 3-5 items
-				loot_count = md->get_bosstype() + (rnd() % 3 + 1);
+            // Item count to drop
+            e_mob_bosstype boss_type = md->get_bosstype();
+			int loot_count = 1; // Normal monsters drop 1 item
+			if(boss_type == BOSSTYPE_MINIBOSS) {
+				loot_count += rnd() % 2; // Mini MVPs drop 1-2 items
+			} else if(boss_type == BOSSTYPE_MVP) {
+				loot_count += (rnd() % 3) + 2; // MVPs drop 3-5 items
 			}
 
             // Attempt to drop equipment
 			for(int i = 0; i < loot_count; i++) {
-                if(rnd() % 10000 <= drop_rate_eqi) {
-                    t_itemid id = set_drop_id(md->level, md->get_bosstype(), sd->status.luk);
+                if (rnd() % 10000 <= drop_rate_eqi) {
+                    t_itemid id = set_drop_id(md->level, boss_type, sd->status.luk);
                     if(id > 0) {
                         struct s_mob_drop mobdrop;
                         memset(&mobdrop, 0, sizeof(struct s_mob_drop));
                         mobdrop.nameid = id;
                         ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-                        mob_item_drop(md, dlist, ditem, 0, 100, homkillonly);
+                        mob_item_drop(md, dlist, ditem, 0, 1000, homkillonly);
                     }
                 }
 			}
