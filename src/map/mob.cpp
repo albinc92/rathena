@@ -3935,6 +3935,14 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		if (sd == mvp_sd) {
             int drop_rate_eqi = 1000;   // 10% base drop rate of items
 
+            // change drops depending on monsters size [Valaris]
+            if (battle_config.mob_size_influence) {
+                if (md->special_state.size == SZ_MEDIUM && drop_rate_eqi >= 2)
+                    drop_rate_eqi /= 2;
+                else if( md->special_state.size == SZ_BIG)
+                    drop_rate_eqi *= 2;
+            }
+
             // LUK affect drops?
             if (src) {
                 if (battle_config.drops_by_luk)
@@ -3944,13 +3952,15 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
             }
 
             // Player specific drop rate adjustments
-            int drop_rate_bonus_eqi = 0;
-            if( battle_config.pk_mode && (int)(md->level - sd->status.base_level) >= 20 )
-                drop_rate_eqi = (int)(drop_rate_eqi*1.25);
-            if (sd->sc.data[SC_ITEMBOOST])
-                drop_rate_bonus_eqi += sd->sc.data[SC_ITEMBOOST]->val1;
-            drop_rate_bonus_eqi = (int)(0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
-            drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
+            if ( sd ) {
+                int drop_rate_bonus_eqi = 0;
+                if (battle_config.pk_mode && (int) (md->level - sd->status.base_level) >= 20)
+                    drop_rate_eqi = (int) (drop_rate_eqi * 1.25);
+                if (sd->sc.data[SC_ITEMBOOST])
+                    drop_rate_bonus_eqi += sd->sc.data[SC_ITEMBOOST]->val1;
+                drop_rate_bonus_eqi = (int) (0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
+                drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
+            }
 
             // Item count to drop
             e_mob_bosstype boss_type = md->get_bosstype();
