@@ -163,7 +163,7 @@ item_logarithmic_drops: yes
 // Makes your LUK value affect drop rates on a relative basis.
 // Setting to 100 means each luk adds 1% chance to find items
 // (So at 100 luk, everything will have double chance of dropping).
-drops_by_luk2: 40
+// drops_by_luk2: 40
 
 // The rate of monsters dropping ores by the skill Ore Discovery (Default is 100)
 finding_ore_rate: 10000

@@ -2288,11 +2288,10 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 	int mob_level_capped = mob_level;
 	mob_level_capped = round(mob_level_capped * 0.396);	// Buffed mob lv. normalization
 	//if (mob_level_capped > 99) mob_level_capped = mob_level - 17;	// Renewal mob lv normalization (unusued with buffed mob lvls)
-	if (boss_type) mob_level_capped += (boss_type * 20) + 2;	// Miniboss & MvP have boosted iLvls +22/42
+	if (boss_type) mob_level_capped += (boss_type * 20) + 2;	// Miniboss & MvP have boosted iLvls +22/42 meaning that
+                                                                // Lady Solace (miniboss) will drop ilvl 99 items at mob lv. 77
 	if (mob_level_capped > 99) mob_level_capped = 99;	// Cap to lv. 99
 
-	int item_type_count = 30;
-	int type_index = rnd() % item_type_count;
 	std::vector<random_equipment_drop> id_range;
 
 	int rarity = rnd() % 1000;
@@ -2304,912 +2303,751 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 	// iLv of NORMAL items is based on the level of the monster that drops the item with highest DEF/ATK divided by DEF of item)
 	// iLv of RARE items is based on the mobLv of the monster that usually drops them
 
-	// ARMOR
-	if(type_index == 0) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({2301, 9});
-				id_range.push_back({2303, 18});
-				id_range.push_back({2305, 27});
-			} else {
-				id_range.push_back({2302, 9});
-				id_range.push_back({2304, 18});
-				id_range.push_back({2306, 27});
-			}
-			std::vector<t_itemid> lv_36_armor = { 2308, 2324, 2333, 2329 };
-			id_range.push_back({lv_36_armor.at(rnd() % lv_36_armor.size()), 36});
-			std::vector<t_itemid> lv_45_armor = { 2310, 2320 };
-			id_range.push_back({lv_45_armor.at(rnd() % lv_45_armor.size()), 45});
-			id_range.push_back({2311, 54});
-			if(!slotted) {
-				id_range.push_back({2312, 63});
-			} else {
-				id_range.push_back({2313, 63});
-			}
-			id_range.push_back({2315, 72});
-			if(!slotted) {
-				id_range.push_back({2316, 90});
-			} else {
-				id_range.push_back({2317, 90});
-			}
-			id_range.push_back({2342, 99});
-		} else {
-			id_range.push_back({2322, 16});
-			id_range.push_back({2339, 23});
-			id_range.push_back({2337, 30});
-			std::vector<t_itemid> lv_31_armor_r = { 2338, 2326 };
-			id_range.push_back({lv_31_armor_r.at(rnd() % lv_31_armor_r.size()), 31});
-			id_range.push_back({2355, 36});	// Angelic Protection special case (based on same formula as normal type)
-			id_range.push_back({2331, 38});
-			id_range.push_back({2388, 62});
-			std::vector<t_itemid> lv_69_armor_r = { 2366, 2336 };
-			id_range.push_back({lv_69_armor_r.at(rnd() % lv_69_armor_r.size()), 69});
-			id_range.push_back({2386, 70});
-			id_range.push_back({2318, 79});
-			std::vector<t_itemid> lv_80_armor_r = { 2334, 2367 };
-			id_range.push_back({lv_80_armor_r.at(rnd() % lv_80_armor_r.size()), 80});
-			std::vector<t_itemid> lv_81_armor_r = { 2334, 2367 };
-			id_range.push_back({lv_81_armor_r.at(rnd() % lv_81_armor_r.size()), 81});
-			id_range.push_back({2390, 82});
-			id_range.push_back({2354, 83});
-			id_range.push_back({2344, 85});
-			id_range.push_back({2391, 86});
-			std::vector<t_itemid> lv_90_armor_r = { 2319, 2327 };
-			id_range.push_back({lv_90_armor_r.at(rnd() % lv_90_armor_r.size()), 90});
-			std::vector<t_itemid> lv_91_armor_r = { 2387, 2364 };
-			id_range.push_back({lv_91_armor_r.at(rnd() % lv_91_armor_r.size()), 91});
-			id_range.push_back({2389, 93});
-			std::vector<t_itemid> lv_99_armor_r = { 2345, 2343, 2374, 2374, 2357, 2375 };
-			id_range.push_back({lv_99_armor_r.at(rnd() % lv_99_armor_r.size()), 99});
-		}
-	}
+    // NORMAL ITEMS
+    if(rarity < 750) {
+        // ARMOR
+        if(!slotted) {
+            id_range.push_back({2301, 9});
+            id_range.push_back({2303, 18});
+            id_range.push_back({2305, 27});
+        } else {
+            id_range.push_back({2302, 9});
+            id_range.push_back({2304, 18});
+            id_range.push_back({2306, 27});
+        }
+        std::vector<t_itemid> lv_36_armor = { 2308, 2324, 2333, 2329 };
+        id_range.push_back({lv_36_armor.at(rnd() % lv_36_armor.size()), 36});
+        std::vector<t_itemid> lv_45_armor = { 2310, 2320 };
+        id_range.push_back({lv_45_armor.at(rnd() % lv_45_armor.size()), 45});
+        id_range.push_back({2311, 54});
+        if(!slotted) {
+            id_range.push_back({2312, 63});
+        } else {
+            id_range.push_back({2313, 63});
+        }
+        id_range.push_back({2315, 72});
+        if(!slotted) {
+            id_range.push_back({2316, 90});
+        } else {
+            id_range.push_back({2317, 90});
+        }
+        id_range.push_back({2342, 99});
+        // SHIELD
+        if(!slotted) {
+            id_range.push_back({2101, 38});
+        } else {
+            id_range.push_back({2102, 38});
+        }
+        id_range.push_back({2104, 51});
+        id_range.push_back({2106, 77});
+        // GARMENT
+        id_range.push_back({2502, 16});
+        id_range.push_back({2504, 33});
+        if(!slotted) {
+            id_range.push_back({2505, 66});
+        } else {
+            id_range.push_back({2506, 66});
+        }
+        id_range.push_back({2514, 82});
+        // FOOTGEAR
+        id_range.push_back({2402, 16});
+        id_range.push_back({2404, 32});
+        if(!slotted) {
+            id_range.push_back({2405, 66});
+        } else {
+            id_range.push_back({2406, 66});
+        }
+        id_range.push_back({2412, 82});
+        // DAGGER
+        if(!slotted) {
+            id_range.push_back({1201, 10});
+        } else {
+            id_range.push_back({1202, 10});
+        }
+        id_range.push_back({1205, 17});
+        if(!slotted) {
+            id_range.push_back({1207, 24});
+        } else {
+            id_range.push_back({1208, 24});
+        }
+        id_range.push_back({1211, 34});
+        id_range.push_back({1214, 42});
+        if(!slotted) {
+            id_range.push_back({1216, 50});
+            id_range.push_back({1219, 60});
+        } else {
+            id_range.push_back({1217, 50});
+            id_range.push_back({1220, 60});
+        }
+        id_range.push_back({1246, 62});
+        id_range.push_back({1226, 67});
+        // 1-H SWORD
+        if(!slotted) {
+            id_range.push_back({1104, 13});
+        } else {
+            id_range.push_back({1105, 13});
+        }
+        id_range.push_back({1108, 16});
+        id_range.push_back({1111, 23});
+        id_range.push_back({1114, 28});
+        std::vector<t_itemid> lv_50_1hsword = { 1125, 1147 };
+        id_range.push_back({lv_50_1hsword.at(rnd() % lv_50_1hsword.size()), 33});
+        id_range.push_back({1127, 38});
+        id_range.push_back({1120, 43});
+        // 2-H SWORD
+        if(!slotted) {
+            id_range.push_back({1116, 25});
+        } else {
+            id_range.push_back({1117, 25});
+        }
+        id_range.push_back({1152, 38});
+        id_range.push_back({1155, 49});
+        id_range.push_back({1158, 68});
+        id_range.push_back({1163, 76});
+        // 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
+        id_range.push_back({1402, 7});
+        id_range.push_back({1405, 10});
+        id_range.push_back({1408, 14});
+        // 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
+        if(!slotted) {
+            id_range.push_back({1451, 33});
+            id_range.push_back({1454, 40});
+        } else {
+            id_range.push_back({1452, 33});
+            id_range.push_back({1455, 40});
+        }
+        id_range.push_back({1485, 44});
+        id_range.push_back({1458, 48});
+        if(!slotted) {
+            id_range.push_back({1460, 58});
+        } else {
+            id_range.push_back({1461, 58});
+        }
+        id_range.push_back({1464, 64});
+        id_range.push_back({1411, 72});
+        // 1-H AXE
+        if(!slotted) {
+            id_range.push_back({1301, 12});
+        } else {
+            id_range.push_back({1302, 12});
+        }
+        id_range.push_back({1304, 24});
+        // 2-H AXE
+        id_range.push_back({1352, 23});
+        id_range.push_back({1355, 34});
+        id_range.push_back({1358, 44});
+        id_range.push_back({1361, 52});
+        // MACE
+        if(!slotted) {
+            id_range.push_back({1501, 6});
+        } else {
+            id_range.push_back({1502, 6});
+        }
+        id_range.push_back({1505, 9});
+        id_range.push_back({1508, 14});
+        if(!slotted) {
+            id_range.push_back({1510, 18});
+            id_range.push_back({1519, 21});
+            id_range.push_back({1513, 28});
+        } else {
+            id_range.push_back({1511, 18});
+            id_range.push_back({1520, 21});
+            id_range.push_back({1514, 28});
+        }
+        id_range.push_back({1517, 33});
+        // 1H-STAFF
+        // Special case, normal types are dropped by mob lv that usually drops them
+        id_range.push_back({1602, 3});
+        if(!slotted) {
+            id_range.push_back({1604, 19});
+        } else {
+            id_range.push_back({1605, 19});
+        }
+        id_range.push_back({1613, 33});
+        id_range.push_back({1622, 34});
+        std::vector<t_itemid> lv_40_1hstaff = { 1608, 1614 };
+        id_range.push_back({lv_40_1hstaff.at(rnd() % lv_40_1hstaff.size()), 40});
+        id_range.push_back({1525, 81});
+        id_range.push_back({1611, 44});
+        // BOW
+        // Special case, normal types are dropped by mob lv that usually drops them
+        if(!slotted) {
+            id_range.push_back({1701, 5});
+        } else {
+            id_range.push_back({1702, 5});
+        }
+        id_range.push_back({1705, 28});
+        id_range.push_back({1708, 31});
+        id_range.push_back({1711, 33});
+        id_range.push_back({1715, 52});
+        id_range.push_back({1716, 60});
+        id_range.push_back({1722, 85});
+        // KNUCKLE
+        if(!slotted) {
+            id_range.push_back({1801, 13});
+        } else {
+            id_range.push_back({1802, 13});
+        }
+        id_range.push_back({1806, 27});
+        id_range.push_back({1812, 41});
+        // MUSICAL INSTRUMENT
+        id_range.push_back({1902, 20});
+        id_range.push_back({1904, 36});
+        id_range.push_back({1906, 41});
+        id_range.push_back({1908, 56});
+        // WHIP
+        id_range.push_back({1951, 16});
+        id_range.push_back({1957, 49});
+        // BOOK
+        id_range.push_back({1550, 60});
+        id_range.push_back({1551, 81});
+        id_range.push_back({1552, 88});
+        // KATAR
+        id_range.push_back({1251, 39});
+        id_range.push_back({1253, 46});
+        id_range.push_back({1255, 51});
+        // REVOLVER
+        id_range.push_back({13101, 15});
+        id_range.push_back({13103, 23});
+        id_range.push_back({13104, 35});
+        // RIFLE
+        id_range.push_back({13150, 35});
+        // GATLING GUN
+        id_range.push_back({13157, 72});
+        // HUUMA SHURIKEN
+        if(!slotted) {
+            id_range.push_back({13301, 65});
+        } else {
+            id_range.push_back({13302, 65});
+        }
+        // UPPER HEADGEAR
+        id_range.push_back({5015, 4});
+        id_range.push_back({2245, 8});
+        std::vector<t_itemid> lv_9_upper_head = { 2298, 5008 };
+        id_range.push_back({lv_9_upper_head.at(rnd() % lv_9_upper_head.size()), 9});
+        id_range.push_back({5035, 15});
+        id_range.push_back({2220, 16});
+        std::vector<t_itemid> lv_18_upper_head = { 2213, 2247 };
+        id_range.push_back({lv_18_upper_head.at(rnd() % lv_18_upper_head.size()), 18});
+        id_range.push_back({2221, 19});
+        std::vector<t_itemid> lv_24_upper_head = { 2248, 2275, 5010 };
+        id_range.push_back({lv_24_upper_head.at(rnd() % lv_24_upper_head.size()), 24});
+        id_range.push_back({2211, 25});
+        id_range.push_back({2299, 28});
+        id_range.push_back({2227, 29});
+        std::vector<t_itemid> lv_30_upper_head = { 2257, 5030 };
+        id_range.push_back({lv_30_upper_head.at(rnd() % lv_30_upper_head.size()), 30});
+        id_range.push_back({5118, 33});
+        std::vector<t_itemid> lv_34_upper_head = { 2279, 2282 };
+        id_range.push_back({lv_34_upper_head.at(rnd() % lv_34_upper_head.size()), 34});
+        id_range.push_back({5037, 38});
+        id_range.push_back({2272, 40});
+        id_range.push_back({2294, 41});
+        id_range.push_back({2259, 42});
+        id_range.push_back({5012, 43});
+        id_range.push_back({5011, 47});
+        id_range.push_back({5120, 55});
+        id_range.push_back({2217, 58});
+        id_range.push_back({5042, 59});
+        id_range.push_back({2226, 61});
+        id_range.push_back({2246, 64});
+        id_range.push_back({2258, 72});
+        id_range.push_back({2210, 81});
+        id_range.push_back({2229, 91});
+        // MIDDLE HEADGEAR
+        id_range.push_back({2263, 23});
+        id_range.push_back({2276, 26});
+        id_range.push_back({5014, 31});
+        id_range.push_back({5085, 62});
+        // LOWER HEADGEAR
+        id_range.push_back({2262, 3});
+        id_range.push_back({2241, 48});
+        id_range.push_back({5113, 51});
+        id_range.push_back({2266, 52});
+        id_range.push_back({5096, 71});
+        // UPPER & MIDDLE HEADGEAR
+        if(!slotted) {
+            id_range.push_back({2224, 18});
+        } else {
+            id_range.push_back({2225, 18});
+        }
+        // MIDDLE & LOWER HEADGEAR
+        id_range.push_back({5089, 22});
+        id_range.push_back({5087, 23});
+        id_range.push_back({5088, 24});
+        id_range.push_back({2297, 28});
+        id_range.push_back({5090, 64});
+        id_range.push_back({2288, 69});
+        // UPPER & MIDDLE & LOWER HEADGEAR
+        id_range.push_back({2264, 30});
+        id_range.push_back({5046, 32});
+    }
 
-	// SHIELD
-	else if(type_index == 1) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({2101, 38});
-			} else {
-				id_range.push_back({2102, 38});
-			}
-			id_range.push_back({2104, 51});
-			id_range.push_back({2106, 77});
-		} else {
-			id_range.push_back({2116, 27});	// Angelic Guard special case (based on same formula as normal type)
-			id_range.push_back({2124, 50});
-			id_range.push_back({2109, 62});
-			std::vector<t_itemid> lv_63_shield_r = { 2131, 2108 };
-			id_range.push_back({lv_63_shield_r.at(rnd() % lv_63_shield_r.size()), 63});
-			id_range.push_back({2123, 69});
-			id_range.push_back({2114, 80});
-			id_range.push_back({2125, 82});
-			id_range.push_back({2138, 83});
-			id_range.push_back({2135, 84});
-			id_range.push_back({2122, 86});
-			id_range.push_back({2134, 93});
-			std::vector<t_itemid> lv_97_shield_r = { 2111, 2133, 2130 };
-			id_range.push_back({lv_97_shield_r.at(rnd() % lv_97_shield_r.size()), 97});
-			id_range.push_back({2129, 98});
-			id_range.push_back({2115, 99});
-		}
-	}
 
-	// GARMENT
-	else if(type_index == 2) {
-		if(rarity < 750) {
-			id_range.push_back({2502, 16});
-			id_range.push_back({2504, 33});
-			if(!slotted) {
-				id_range.push_back({2505, 66});
-			} else {
-				id_range.push_back({2506, 66});
-			}
-			id_range.push_back({2514, 82});
-		} else {
-			id_range.push_back({2521, 33});	// Angelic Cardigan special case (based on same formula as normal type)
-			id_range.push_back({2531, 44});
-			id_range.push_back({2529, 55});
-			id_range.push_back({2508, 58});
-			id_range.push_back({2522, 61});
-			id_range.push_back({2545, 62});
-			id_range.push_back({2527, 65});
-			id_range.push_back({2518, 69});
-			std::vector<t_itemid> lv_75_garment_r = { 2516, 2517 };
-			id_range.push_back({lv_75_garment_r.at(rnd() % lv_75_garment_r.size()), 75});
-			id_range.push_back({2507, 80});
-			id_range.push_back({2528, 81});
-			id_range.push_back({2513, 85});
-			id_range.push_back({2530, 86});
-			id_range.push_back({2532, 88});
-			id_range.push_back({2520, 92});
-			id_range.push_back({2544, 95});
-			std::vector<t_itemid> lv_97_garment_r = { 2536, 2537 };
-			id_range.push_back({lv_97_garment_r.at(rnd() % lv_97_garment_r.size()), 97});
-			id_range.push_back({2509, 98});
-			std::vector<t_itemid> lv_99_garment_r = { 2515, 2519, 2524, 2542, 2554 };
-			id_range.push_back({lv_99_garment_r.at(rnd() % lv_99_garment_r.size()), 99});
-		}
-	}
 
-	// FOOTGEAR
-	else if(type_index == 3) {
-		if(rarity < 750) {
-			id_range.push_back({2402, 16});
-			id_range.push_back({2404, 32});
-			if(!slotted) {
-				id_range.push_back({2405, 66});
-			} else {
-				id_range.push_back({2406, 66});
-			}
-			id_range.push_back({2412, 82});
-		} else {
-			id_range.push_back({2408, 23});
-			id_range.push_back({2420, 32});	// Angels Reincarnation special case (based on same formula as normal type)
-			id_range.push_back({2407, 41});
-			id_range.push_back({2409, 51});
-			id_range.push_back({2417, 60});
-			id_range.push_back({2425, 60});
-			std::vector<t_itemid> lv_60_footgear_r = { 2417, 2425 };
-			id_range.push_back({lv_60_footgear_r.at(rnd() % lv_60_footgear_r.size()), 60});
-			id_range.push_back({2426, 61});
-			id_range.push_back({2422, 62});
-			id_range.push_back({2418, 65});
-			id_range.push_back({2424, 75});
-			id_range.push_back({2450, 85});
-			std::vector<t_itemid> lv_88_footgear_r = { 2440, 2419 };
-			id_range.push_back({lv_88_footgear_r.at(rnd() % lv_88_footgear_r.size()), 88});
-			id_range.push_back({2423, 98});
-			std::vector<t_itemid> lv_99_footgear_r = { 2433, 2421 };
-			id_range.push_back({lv_99_footgear_r.at(rnd() % lv_99_footgear_r.size()), 99});
-		}
-	}
+    // RARE ITEMS
+    else {
+        // ARMOR
+        id_range.push_back({2322, 16});
+        id_range.push_back({2339, 23});
+        id_range.push_back({2337, 30});
+        std::vector<t_itemid> lv_31_armor_r = { 2338, 2326 };
+        id_range.push_back({lv_31_armor_r.at(rnd() % lv_31_armor_r.size()), 31});
+        id_range.push_back({2355, 36});	// Angelic Protection special case (based on same formula as normal type)
+        id_range.push_back({2331, 38});
+        id_range.push_back({2388, 62});
+        std::vector<t_itemid> lv_69_armor_r = { 2366, 2336 };
+        id_range.push_back({lv_69_armor_r.at(rnd() % lv_69_armor_r.size()), 69});
+        id_range.push_back({2386, 70});
+        id_range.push_back({2318, 79});
+        std::vector<t_itemid> lv_80_armor_r = { 2334, 2367 };
+        id_range.push_back({lv_80_armor_r.at(rnd() % lv_80_armor_r.size()), 80});
+        std::vector<t_itemid> lv_81_armor_r = { 2334, 2367 };
+        id_range.push_back({lv_81_armor_r.at(rnd() % lv_81_armor_r.size()), 81});
+        id_range.push_back({2390, 82});
+        id_range.push_back({2354, 83});
+        id_range.push_back({2344, 85});
+        id_range.push_back({2391, 86});
+        std::vector<t_itemid> lv_90_armor_r = { 2319, 2327 };
+        id_range.push_back({lv_90_armor_r.at(rnd() % lv_90_armor_r.size()), 90});
+        std::vector<t_itemid> lv_91_armor_r = { 2387, 2364 };
+        id_range.push_back({lv_91_armor_r.at(rnd() % lv_91_armor_r.size()), 91});
+        id_range.push_back({2389, 93});
+        std::vector<t_itemid> lv_99_armor_r = { 2345, 2343, 2374, 2374, 2357, 2375 };
+        id_range.push_back({lv_99_armor_r.at(rnd() % lv_99_armor_r.size()), 99});
+        // SHIELD
+        id_range.push_back({2116, 27});	// Angelic Guard special case (based on same formula as normal type)
+        id_range.push_back({2124, 50});
+        id_range.push_back({2109, 62});
+        std::vector<t_itemid> lv_63_shield_r = { 2131, 2108 };
+        id_range.push_back({lv_63_shield_r.at(rnd() % lv_63_shield_r.size()), 63});
+        id_range.push_back({2123, 69});
+        id_range.push_back({2114, 80});
+        id_range.push_back({2125, 82});
+        id_range.push_back({2138, 83});
+        id_range.push_back({2135, 84});
+        id_range.push_back({2122, 86});
+        id_range.push_back({2134, 93});
+        std::vector<t_itemid> lv_97_shield_r = { 2111, 2133, 2130 };
+        id_range.push_back({lv_97_shield_r.at(rnd() % lv_97_shield_r.size()), 97});
+        id_range.push_back({2129, 98});
+        id_range.push_back({2115, 99});
+        // GARMENT
+        id_range.push_back({2521, 33});	// Angelic Cardigan special case (based on same formula as normal type)
+        id_range.push_back({2531, 44});
+        id_range.push_back({2529, 55});
+        id_range.push_back({2508, 58});
+        id_range.push_back({2522, 61});
+        id_range.push_back({2545, 62});
+        id_range.push_back({2527, 65});
+        id_range.push_back({2518, 69});
+        std::vector<t_itemid> lv_75_garment_r = { 2516, 2517 };
+        id_range.push_back({lv_75_garment_r.at(rnd() % lv_75_garment_r.size()), 75});
+        id_range.push_back({2507, 80});
+        id_range.push_back({2528, 81});
+        id_range.push_back({2513, 85});
+        id_range.push_back({2530, 86});
+        id_range.push_back({2532, 88});
+        id_range.push_back({2520, 92});
+        id_range.push_back({2544, 95});
+        std::vector<t_itemid> lv_97_garment_r = { 2536, 2537 };
+        id_range.push_back({lv_97_garment_r.at(rnd() % lv_97_garment_r.size()), 97});
+        id_range.push_back({2509, 98});
+        std::vector<t_itemid> lv_99_garment_r = { 2515, 2519, 2524, 2542, 2554 };
+        id_range.push_back({lv_99_garment_r.at(rnd() % lv_99_garment_r.size()), 99});
+        // FOOTGEAR
+        id_range.push_back({2408, 23});
+        id_range.push_back({2420, 32});	// Angels Reincarnation special case (based on same formula as normal type)
+        id_range.push_back({2407, 41});
+        id_range.push_back({2409, 51});
+        id_range.push_back({2417, 60});
+        id_range.push_back({2425, 60});
+        std::vector<t_itemid> lv_60_footgear_r = { 2417, 2425 };
+        id_range.push_back({lv_60_footgear_r.at(rnd() % lv_60_footgear_r.size()), 60});
+        id_range.push_back({2426, 61});
+        id_range.push_back({2422, 62});
+        id_range.push_back({2418, 65});
+        id_range.push_back({2424, 75});
+        id_range.push_back({2450, 85});
+        std::vector<t_itemid> lv_88_footgear_r = { 2440, 2419 };
+        id_range.push_back({lv_88_footgear_r.at(rnd() % lv_88_footgear_r.size()), 88});
+        id_range.push_back({2423, 98});
+        std::vector<t_itemid> lv_99_footgear_r = { 2433, 2421 };
+        id_range.push_back({lv_99_footgear_r.at(rnd() % lv_99_footgear_r.size()), 99});
+        // DAGGER (iLvl based on mob lvl that usually drops)
+        id_range.push_back({13011, 9});
+        id_range.push_back({13012, 30});
+        id_range.push_back({13014, 33});
+        id_range.push_back({13008, 41});
+        id_range.push_back({13006, 45});
+        id_range.push_back({13009, 56});
+        id_range.push_back({13027, 59});
+        id_range.push_back({1239, 61});
+        std::vector<t_itemid> lv_62_dagger_r = { 13004, 1223 };
+        id_range.push_back({lv_62_dagger_r.at(rnd() % lv_62_dagger_r.size()), 62});
+        id_range.push_back({13034, 64});
+        id_range.push_back({13046, 65});
+        id_range.push_back({1234, 67});
+        std::vector<t_itemid> lv_69_dagger_r = { 13013, 13047, 1236 };
+        id_range.push_back({lv_69_dagger_r.at(rnd() % lv_69_dagger_r.size()), 69});
+        std::vector<t_itemid> lv_71_dagger_r = { 1235, 13028 };
+        id_range.push_back({lv_71_dagger_r.at(rnd() % lv_71_dagger_r.size()), 71});
+        std::vector<t_itemid> lv_72_dagger_r = { 1229, 13002 };
+        id_range.push_back({lv_72_dagger_r.at(rnd() % lv_72_dagger_r.size()), 72});
+        std::vector<t_itemid> lv_73_dagger_r = { 13035, 13038 };
+        id_range.push_back({lv_73_dagger_r.at(rnd() % lv_73_dagger_r.size()), 73});
+        id_range.push_back({13015, 74});
+        id_range.push_back({1232, 78});
+        id_range.push_back({1237, 80});
+        std::vector<t_itemid> lv_86_dagger_r = { 1242 };
+        if(!slotted) {
+            lv_86_dagger_r.push_back(1230);
+        } else {
+            lv_86_dagger_r.push_back(13017);
+        }
+        id_range.push_back({lv_86_dagger_r.at(rnd() % lv_86_dagger_r.size()), 86});
+        id_range.push_back({13001, 91});
+        id_range.push_back({1231, 93});
+        id_range.push_back({13039, 98});
+        std::vector<t_itemid> lv_99_dagger_r = { 1241, 1238, 1228, 1233 };
+        id_range.push_back({lv_99_dagger_r.at(rnd() % lv_99_dagger_r.size()), 99});
+        // 1-H SWORD
+        id_range.push_back({1148, 46});	// Special case based on normal type formula
+        std::vector<t_itemid> lv_70_1hsword_r = { 1128, 1135 };
+        id_range.push_back({lv_70_1hsword_r.at(rnd() % lv_70_1hsword_r.size()), 70});
+        id_range.push_back({13414, 72});
+        id_range.push_back({1131, 73});
+        id_range.push_back({1133, 65});
+        id_range.push_back({13405, 75});
+        std::vector<t_itemid> lv_77_1hsword_r = { 1124, 13404 };
+        id_range.push_back({lv_77_1hsword_r.at(rnd() % lv_77_1hsword_r.size()), 77});
+        id_range.push_back({1130, 79});
+        id_range.push_back({13421, 91});
+        id_range.push_back({1136, 93});
+        id_range.push_back({1141, 97});
+        std::vector<t_itemid> lv_99_1hsword_r = { 1144, 1142, 1132, 1143, 1140, 13412, 13413, 1138 };
+        id_range.push_back({lv_99_1hsword_r.at(rnd() % lv_99_1hsword_r.size()), 99});
+        // 2-H SWORD
+        id_range.push_back({1189, 70});
+        id_range.push_back({1165, 71});
+        id_range.push_back({1164, 74});
+        id_range.push_back({1167, 79});
+        std::vector<t_itemid> lv_82_2hsword_r = { 1170, 1175 };
+        id_range.push_back({lv_82_2hsword_r.at(rnd() % lv_82_2hsword_r.size()), 82});
+        std::vector<t_itemid> lv_86_2hsword_r = { 1176, 1168 };
+        id_range.push_back({lv_86_2hsword_r.at(rnd() % lv_86_2hsword_r.size()), 86});
+        id_range.push_back({1188, 90});
+        id_range.push_back({1182, 96});
+        id_range.push_back({1186, 96});
+        std::vector<t_itemid> lv_99_2hsword_r = { 1166, 1181 };
+        id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
+        // 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
+        id_range.push_back({1413, 74});
+        id_range.push_back({1421, 79});
+        id_range.push_back({1422, 80});
+        id_range.push_back({1417, 82});
+        id_range.push_back({1420, 91});
+        id_range.push_back({1415, 99});
+        // 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
+        id_range.push_back({1477, 67});
+        id_range.push_back({1478, 68});
+        std::vector<t_itemid> lv_73_2hsper_r = { 1474, 1471 };
+        id_range.push_back({lv_73_2hsper_r.at(rnd() % lv_73_2hsper_r.size()), 73});
+        id_range.push_back({1468, 77});
+        if(!slotted) {
+            id_range.push_back({1466, 81});
+        } else {
+            id_range.push_back({1476, 81});
+        }
+        id_range.push_back({1484, 86});
+        id_range.push_back({1483, 98});
+        std::vector<t_itemid> lv_99_2hsper_r = { 1469, 1470 };
+        id_range.push_back({lv_99_2hsper_r.at(rnd() % lv_99_2hsper_r.size()), 99});
+        // 1-H AXE
+        id_range.push_back({1307, 66});
+        id_range.push_back({1306, 70});
+        id_range.push_back({1311, 83});
+        // 2-H AXE
+        id_range.push_back({1375, 65});
+        id_range.push_back({1364, 70});
+        id_range.push_back({1363, 74});
+        id_range.push_back({1376, 76});
+        std::vector<t_itemid> lv_77_2haxe_r = { 1366, 1387 };
+        id_range.push_back({lv_77_2haxe_r.at(rnd() % lv_77_2haxe_r.size()), 77});
+        if(!slotted) {
+            id_range.push_back({1370, 86});
+        } else {
+            id_range.push_back({1371, 86});
+        }
+        id_range.push_back({1377, 89});
+        id_range.push_back({1384, 90});
+        id_range.push_back({1385, 97});
+        std::vector<t_itemid> lv_99_2haxe_r = { 1365, 1368, 1369 };
+        id_range.push_back({lv_99_2haxe_r.at(rnd() % lv_99_2haxe_r.size()), 99});
+        // MACE
+        id_range.push_back({1523, 59});
+        id_range.push_back({1524, 64});
+        id_range.push_back({1525, 67});
+        std::vector<t_itemid> lv_74_mace_r = { 16000, 16001 };
+        id_range.push_back({lv_74_mace_r.at(rnd() % lv_74_mace_r.size()), 74});
+        id_range.push_back({1531, 86});
+        id_range.push_back({1544, 89});
+        id_range.push_back({1548, 90});
+        id_range.push_back({1529, 94});
+        id_range.push_back({1541, 97});
+        std::vector<t_itemid> lv_99_mace_r = { 1528, 1527 };
+        id_range.push_back({lv_99_mace_r.at(rnd() % lv_99_mace_r.size()), 99});
+        // 1H-STAFF
+        id_range.push_back({1630, 49});
+        id_range.push_back({1615, 58});
+        id_range.push_back({1616, 61});
+        id_range.push_back({1648, 67});
+        std::vector<t_itemid> lv_75_1hstaff_r = { 1625, 1629 };
+        id_range.push_back({lv_75_1hstaff_r.at(rnd() % lv_75_1hstaff_r.size()), 75});
+        id_range.push_back({1643, 84});
+        id_range.push_back({1626, 85});
+        id_range.push_back({1624, 88});
+        std::vector<t_itemid> lv_90_1hstaff_r = { 1618, 1631, 1636, 1647 };
+        id_range.push_back({lv_90_1hstaff_r.at(rnd() % lv_90_1hstaff_r.size()), 90});
+        std::vector<t_itemid> lv_92_1hstaff_r = { 1620, 1646 };
+        id_range.push_back({lv_92_1hstaff_r.at(rnd() % lv_92_1hstaff_r.size()), 92});
+        id_range.push_back({1637, 95});
+        // BOW
+        id_range.push_back({1734, 49});
+        id_range.push_back({1732, 50});
+        id_range.push_back({1731, 55});
+        std::vector<t_itemid> lv_56_bow_r = { 1736, 1733 };
+        id_range.push_back({lv_56_bow_r.at(rnd() % lv_56_bow_r.size()), 56});
+        id_range.push_back({1740, 75});
+        id_range.push_back({1723, 80});
+        id_range.push_back({1745, 82});
+        std::vector<t_itemid> lv_85_bow_r = { 1730, 1737 };
+        id_range.push_back({lv_85_bow_r.at(rnd() % lv_85_bow_r.size()), 85});
+        id_range.push_back({1741, 92});
+        std::vector<t_itemid> lv_99_bow_r = { 1724, 1720 };
+        id_range.push_back({lv_99_bow_r.at(rnd() % lv_99_bow_r.size()), 99});
+        // KNUCKLE
+        id_range.push_back({1822, 31});
+        id_range.push_back({1810, 75});
+        t_itemid elemental_fists = 1818 + (rnd() % 4);
+        id_range.push_back({elemental_fists, 70});
+        id_range.push_back({1825, 88});
+        // MUSICAL INSTRUMENT
+        id_range.push_back({1918, 63});
+        t_itemid elemental_guitar = 1914 + (rnd() % 4);
+        std::vector<t_itemid> lv_74_guitar_r = { 1913, elemental_guitar };
+        id_range.push_back({lv_74_guitar_r.at(rnd() % lv_74_guitar_r.size()), 74});	// Special case, using normal type formula
+        std::vector<t_itemid> lv_75_guitar_r = { elemental_guitar, 1919, 1926 };
+        id_range.push_back({lv_75_guitar_r.at(rnd() % lv_75_guitar_r.size()), 75});
+        if(!slotted) {
+            id_range.push_back({1909, 77});
+        } else {
+            id_range.push_back({1910, 77});
+        }
+        id_range.push_back({1925, 89});
+        id_range.push_back({1920, 91});
+        // WHIP
+        std::vector<t_itemid> elemental_whips = { 1965, 1966, 1967, 1971 };
+        std::vector<t_itemid> lv_40_whip_r = { 1968, elemental_whips.at(rnd() % elemental_whips.size()) };
+        id_range.push_back({lv_40_whip_r.at(rnd() % lv_40_whip_r.size()), 40});
+        id_range.push_back({1969, 49});
+        id_range.push_back({1964, 50});
+        id_range.push_back({1962, 55});
+        id_range.push_back({1970, 63});
+        id_range.push_back({1974, 65});
+        id_range.push_back({1979, 75});
+        id_range.push_back({1972, 76});
+        id_range.push_back({1973, 79});
+        id_range.push_back({1980, 80});
+        // BOOK
+        id_range.push_back({1558, 30});
+        id_range.push_back({1573, 61});
+        id_range.push_back({1572, 63});
+        id_range.push_back({1564, 64});
+        id_range.push_back({1559, 65});
+        id_range.push_back({1557, 85});
+        t_itemid elemental_book = 1553 + (rnd() % 4);
+        id_range.push_back({elemental_book, 63});	// Special case, based on normal type formula
+        id_range.push_back({1561, 90});
+        id_range.push_back({1565, 98});
+        id_range.push_back({1560, 99});
+        // KATAR
+        t_itemid elemental_katar = 1256 + (rnd() % 4);
+        id_range.push_back({elemental_katar, 32});	// Special case, based on normal type formula
+        id_range.push_back({1260, 40});
+        id_range.push_back({1261, 49});
+        id_range.push_back({1263, 50});
+        id_range.push_back({1265, 53});
+        id_range.push_back({1262, 56});
+        id_range.push_back({1271, 70});
+        id_range.push_back({1268, 71});
+        id_range.push_back({1270, 75});
+        id_range.push_back({1285, 78});
+        id_range.push_back({1269, 80});
+        std::vector<t_itemid> lv_87_katar_r = { 1264, 1284 };
+        id_range.push_back({lv_87_katar_r.at(rnd() % lv_87_katar_r.size()), 87});
+        // REVOLVER
+        id_range.push_back({13106, 71});
+        id_range.push_back({13107, 75});
+        // RIFLE
+        id_range.push_back({13152, 47});
+        id_range.push_back({13170, 60});
+        id_range.push_back({13153, 79});
+        id_range.push_back({13164, 80});
+        // GATLING GUN
+        id_range.push_back({13158, 59});
+        id_range.push_back({13159, 72});
+        // HUUMA SHURIKEN
+        id_range.push_back({13304, 41});
+        id_range.push_back({13300, 71});
+        id_range.push_back({13303, 76});
+        // UPPER HEADGEAR
+        id_range.push_back({2250, 6});
+        id_range.push_back({2209, 8});
+        id_range.push_back({2207, 16});
+        id_range.push_back({5009, 18});
+        std::vector<t_itemid> lv_25_upper_head_r = { 2287, 2289, 2283 };
+        id_range.push_back({lv_25_upper_head_r.at(rnd() % lv_25_upper_head_r.size()), 25});
+        id_range.push_back({2253, 26});
+        std::vector<t_itemid> lv_31_upper_head_r = { 2206, 2285 };
+        id_range.push_back({lv_31_upper_head_r.at(rnd() % lv_31_upper_head_r.size()), 31});
+        id_range.push_back({2277, 33});
+        id_range.push_back({2251, 35});
+        id_range.push_back({5119, 36});
+        id_range.push_back({2244, 38});
+        id_range.push_back({5116, 39});
+        id_range.push_back({5125, 40});	// Angels kiss special case
+        id_range.push_back({5141, 41});
+        id_range.push_back({2252, 44});
+        id_range.push_back({2233, 47});
+        id_range.push_back({2208, 50});
+        std::vector<t_itemid> lv_51_upper_head_r = { 5003, 5027 };
+        id_range.push_back({lv_51_upper_head_r.at(rnd() % lv_51_upper_head_r.size()), 51});
+        id_range.push_back({5172, 59});
+        id_range.push_back({5111, 61});
+        id_range.push_back({5017, 63});
+        id_range.push_back({2255, 68});
+        std::vector<t_itemid> lv_70_upper_head_r = { 2231, 5019 };
+        id_range.push_back({lv_70_upper_head_r.at(rnd() % lv_70_upper_head_r.size()), 70});
+        id_range.push_back({2274, 73});
+        std::vector<t_itemid> lv_74_upper_head_r = { 2249, 5007 };
+        id_range.push_back({lv_74_upper_head_r.at(rnd() % lv_74_upper_head_r.size()), 74});
+        std::vector<t_itemid> lv_75_upper_head_r = { 5045, 5072, 5399 };
+        id_range.push_back({lv_75_upper_head_r.at(rnd() % lv_75_upper_head_r.size()), 75});
+        id_range.push_back({2235, 78});
+        id_range.push_back({5162, 80});
+        std::vector<t_itemid> lv_81_upper_head_r = { 2234, 2254, 2256, 5160 };
+        id_range.push_back({lv_81_upper_head_r.at(rnd() % lv_81_upper_head_r.size()), 81});
+        id_range.push_back({5066, 85});
+        std::vector<t_itemid> set_helmets = { 5122, 5123, 5124, 5126, 5127, 5128 };
+        id_range.push_back({set_helmets.at(rnd() % set_helmets.size()), 89});
+        id_range.push_back({5002, 90});
+        id_range.push_back({5398, 98});
+        id_range.push_back({5025, 99});
+        // MIDDLE HEADGEAR
+        id_range.push_back({2291, 21});
+        id_range.push_back({2286, 29});
+        id_range.push_back({2296, 70});
+        id_range.push_back({5104, 86});
+        // LOWER HEADGEAR
+        id_range.push_back({2265, 23});
+        id_range.push_back({2267, 24});
+        id_range.push_back({2270, 39});
+        id_range.push_back({2269, 56});
+        id_range.push_back({2268, 65});
+        // UPPER & MIDDLE HEADGEAR
+        id_range.push_back({5093, 80});
+        id_range.push_back({5022, 99});
+        // MIDDLE & LOWER HEADGEAR
+        id_range.push_back({5005, 38});
+        // UPPER & MIDDLE & LOWER HEADGEAR
+        id_range.push_back({5808, 99});
+    }
 
-	// ACCESSORY (ilv based on moblv who normally drops)
-	else if(type_index == 4 || type_index == 5) {
-		id_range.push_back({2609, 10});
-		std::vector<t_itemid> lv_31_accessory = { 2602, 2618 };
-		id_range.push_back({lv_31_accessory.at(rnd() % lv_31_accessory.size()), 31});
-		std::vector<t_itemid> lv_37_accessory = { 2611, 2604 };
-		id_range.push_back({lv_37_accessory.at(rnd() % lv_37_accessory.size()), 37});
-		id_range.push_back({2612, 38});
-		id_range.push_back({2617, 40});
-		id_range.push_back({2605, 41});
-		id_range.push_back({2719, 42});
-		id_range.push_back({2716, 43});
-		id_range.push_back({2610, 46});
-		id_range.push_back({2603, 47});
-		id_range.push_back({2619, 48});
-		id_range.push_back({2608, 49});
-		id_range.push_back({2626, 51});
-		std::vector<t_itemid> lv_58_accessory = { 2607, 2717 };
-		id_range.push_back({lv_58_accessory.at(rnd() % lv_58_accessory.size()), 58});
-		std::vector<t_itemid> lv_61_accessory = { 2624, 2625 };
-		id_range.push_back({lv_61_accessory.at(rnd() % lv_61_accessory.size()), 61});
-		std::vector<t_itemid> lv_62_accessory = { 2627, 2601, 2614, 2620, 2726 };
-		id_range.push_back({lv_62_accessory.at(rnd() % lv_62_accessory.size()), 62});
-		std::vector<t_itemid> lv_69_accessory = { 2727, 2622, 2654 };
-		id_range.push_back({lv_69_accessory.at(rnd() % lv_69_accessory.size()), 69});
-		id_range.push_back({2749, 70});
-		std::vector<t_itemid> lv_71_accessory = { 2652, 2718 };
-		id_range.push_back({lv_71_accessory.at(rnd() % lv_71_accessory.size()), 71});
-		std::vector<t_itemid> lv_75_accessory = { 2613, 2656, 2703 };
-		id_range.push_back({lv_75_accessory.at(rnd() % lv_75_accessory.size()), 75});
-		id_range.push_back({2621, 77});
-		id_range.push_back({2677, 80});
-		std::vector<t_itemid> lv_80_accessory = { 2701, 2745 };
-		id_range.push_back({lv_80_accessory.at(rnd() % lv_80_accessory.size()), 80});
-		id_range.push_back({2615, 81});
-		id_range.push_back({2748, 84});
-		std::vector<t_itemid> lv_85_accessory = { 2680, 2700 };
-		id_range.push_back({lv_85_accessory.at(rnd() % lv_85_accessory.size()), 85});
-		id_range.push_back({2744, 87});
-		id_range.push_back({2783, 89});
-		std::vector<t_itemid> lv_90_accessory = { 2623, 2648, 2649, 2650, 2651, 2743 };
-		id_range.push_back({lv_90_accessory.at(rnd() % lv_90_accessory.size()), 90});
-		std::vector<t_itemid> lv_92_accessory = { 2746, 2747 };
-		id_range.push_back({lv_92_accessory.at(rnd() % lv_92_accessory.size()), 92});
-		id_range.push_back({2728, 96});
-		t_itemid vesper_core = 2659 + (rnd() % 4);
-		id_range.push_back({vesper_core, 97}); // Vesper Cores
-		std::vector<t_itemid> lv_99_accessory = { 2729, 2616, 2655, 2678, 2679 };
-		id_range.push_back({lv_99_accessory.at(rnd() % lv_99_accessory.size()), 99});
-	}
+    // ACCESSORY (no rare/normal types. ilv based on moblv who normally drops)
+    id_range.push_back({2609, 10});
+    std::vector<t_itemid> lv_31_accessory = { 2602, 2618 };
+    id_range.push_back({lv_31_accessory.at(rnd() % lv_31_accessory.size()), 31});
+    std::vector<t_itemid> lv_37_accessory = { 2611, 2604 };
+    id_range.push_back({lv_37_accessory.at(rnd() % lv_37_accessory.size()), 37});
+    id_range.push_back({2612, 38});
+    id_range.push_back({2617, 40});
+    id_range.push_back({2605, 41});
+    id_range.push_back({2719, 42});
+    id_range.push_back({2716, 43});
+    id_range.push_back({2610, 46});
+    id_range.push_back({2603, 47});
+    id_range.push_back({2619, 48});
+    id_range.push_back({2608, 49});
+    id_range.push_back({2626, 51});
+    std::vector<t_itemid> lv_58_accessory = { 2607, 2717 };
+    id_range.push_back({lv_58_accessory.at(rnd() % lv_58_accessory.size()), 58});
+    std::vector<t_itemid> lv_61_accessory = { 2624, 2625 };
+    id_range.push_back({lv_61_accessory.at(rnd() % lv_61_accessory.size()), 61});
+    std::vector<t_itemid> lv_62_accessory = { 2627, 2601, 2614, 2620, 2726 };
+    id_range.push_back({lv_62_accessory.at(rnd() % lv_62_accessory.size()), 62});
+    std::vector<t_itemid> lv_69_accessory = { 2727, 2622, 2654 };
+    id_range.push_back({lv_69_accessory.at(rnd() % lv_69_accessory.size()), 69});
+    id_range.push_back({2749, 70});
+    std::vector<t_itemid> lv_71_accessory = { 2652, 2718 };
+    id_range.push_back({lv_71_accessory.at(rnd() % lv_71_accessory.size()), 71});
+    std::vector<t_itemid> lv_75_accessory = { 2613, 2656, 2703 };
+    id_range.push_back({lv_75_accessory.at(rnd() % lv_75_accessory.size()), 75});
+    id_range.push_back({2621, 77});
+    id_range.push_back({2677, 80});
+    std::vector<t_itemid> lv_80_accessory = { 2701, 2745 };
+    id_range.push_back({lv_80_accessory.at(rnd() % lv_80_accessory.size()), 80});
+    id_range.push_back({2615, 81});
+    id_range.push_back({2748, 84});
+    std::vector<t_itemid> lv_85_accessory = { 2680, 2700 };
+    id_range.push_back({lv_85_accessory.at(rnd() % lv_85_accessory.size()), 85});
+    id_range.push_back({2744, 87});
+    id_range.push_back({2783, 89});
+    std::vector<t_itemid> lv_90_accessory = { 2623, 2648, 2649, 2650, 2651, 2743 };
+    id_range.push_back({lv_90_accessory.at(rnd() % lv_90_accessory.size()), 90});
+    std::vector<t_itemid> lv_92_accessory = { 2746, 2747 };
+    id_range.push_back({lv_92_accessory.at(rnd() % lv_92_accessory.size()), 92});
+    id_range.push_back({2728, 96});
+    t_itemid vesper_core = 2659 + (rnd() % 4);
+    id_range.push_back({vesper_core, 97}); // Vesper Cores
+    std::vector<t_itemid> lv_99_accessory = { 2729, 2616, 2655, 2678, 2679 };
+    id_range.push_back({lv_99_accessory.at(rnd() % lv_99_accessory.size()), 99});
 
-	// DAGGER
-	else if(type_index == 6) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1201, 10});
-			} else {
-				id_range.push_back({1202, 10});
-			}
-			id_range.push_back({1205, 17});
-			if(!slotted) {
-				id_range.push_back({1207, 24});
-			} else {
-				id_range.push_back({1208, 24});
-			}
-			id_range.push_back({1211, 34});
-			id_range.push_back({1214, 42});
-			if(!slotted) {
-				id_range.push_back({1216, 50});
-				id_range.push_back({1219, 60});
-			} else {
-				id_range.push_back({1217, 50});
-				id_range.push_back({1220, 60});
-			}
-			id_range.push_back({1246, 62});
-			id_range.push_back({1226, 67});
-		} else {	// iLvl based on mob lvl that usually drops
-			id_range.push_back({13011, 9});
-			id_range.push_back({13012, 30});
-			id_range.push_back({13014, 33});
-			id_range.push_back({13008, 41});
-			id_range.push_back({13006, 45});
-			id_range.push_back({13009, 56});
-			id_range.push_back({13027, 59});
-			id_range.push_back({1239, 61});
-			std::vector<t_itemid> lv_62_dagger_r = { 13004, 1223 };
-			id_range.push_back({lv_62_dagger_r.at(rnd() % lv_62_dagger_r.size()), 62});
-			id_range.push_back({13034, 64});
-			id_range.push_back({13046, 65});
-			id_range.push_back({1234, 67});
-			std::vector<t_itemid> lv_69_dagger_r = { 13013, 13047, 1236 };
-			id_range.push_back({lv_69_dagger_r.at(rnd() % lv_69_dagger_r.size()), 69});
-			std::vector<t_itemid> lv_71_dagger_r = { 1235, 13028 };
-			id_range.push_back({lv_71_dagger_r.at(rnd() % lv_71_dagger_r.size()), 71});
-			std::vector<t_itemid> lv_72_dagger_r = { 1229, 13002 };
-			id_range.push_back({lv_72_dagger_r.at(rnd() % lv_72_dagger_r.size()), 72});
-			std::vector<t_itemid> lv_73_dagger_r = { 13035, 13038 };
-			id_range.push_back({lv_73_dagger_r.at(rnd() % lv_73_dagger_r.size()), 73});
-			id_range.push_back({13015, 74});
-			id_range.push_back({1232, 78});
-			id_range.push_back({1237, 80});
-			std::vector<t_itemid> lv_86_dagger_r = { 1242 };
-			if(!slotted) {
-				lv_86_dagger_r.push_back(1230);
-			} else {
-				lv_86_dagger_r.push_back(13017);
-			}
-			id_range.push_back({lv_86_dagger_r.at(rnd() % lv_86_dagger_r.size()), 86});
-			id_range.push_back({13001, 91});
-			id_range.push_back({1231, 93});
-			id_range.push_back({13039, 98});
-			std::vector<t_itemid> lv_99_dagger_r = { 1241, 1238, 1228, 1233 };
-			id_range.push_back({lv_99_dagger_r.at(rnd() % lv_99_dagger_r.size()), 99});
-		}
-	}
+	// 2H-STAFF (no rare/normal types)
+    id_range.push_back({1473, 64});
+    id_range.push_back({1472, 75});
+    id_range.push_back({2004, 80});
+    std::vector<t_itemid> lv_81_2hstaff_r = { 2005, 2001 };
+    id_range.push_back({lv_81_2hstaff_r.at(rnd() % lv_81_2hstaff_r.size()), 81});
+    id_range.push_back({2000, 98});
 
-	// 1-H SWORD
-	else if(type_index == 7) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1104, 13});
-			} else {
-				id_range.push_back({1105, 13});
-			}
-			id_range.push_back({1108, 16});
-			id_range.push_back({1111, 23});
-			id_range.push_back({1114, 28});
-			std::vector<t_itemid> lv_50_1hsword = { 1125, 1147 };
-			id_range.push_back({lv_50_1hsword.at(rnd() % lv_50_1hsword.size()), 33});
-			id_range.push_back({1127, 38});
-			id_range.push_back({1120, 43});
-		} else {
-			id_range.push_back({1148, 46});	// Special case based on normal type formula
-			std::vector<t_itemid> lv_70_1hsword_r = { 1128, 1135 };
-			id_range.push_back({lv_70_1hsword_r.at(rnd() % lv_70_1hsword_r.size()), 70});
-			id_range.push_back({13414, 72});
-			id_range.push_back({1131, 73});
-			id_range.push_back({1133, 65});
-			id_range.push_back({13405, 75});
-			std::vector<t_itemid> lv_77_1hsword_r = { 1124, 13404 };
-			id_range.push_back({lv_77_1hsword_r.at(rnd() % lv_77_1hsword_r.size()), 77});
-			id_range.push_back({1130, 79});
-			id_range.push_back({13421, 91});
-			id_range.push_back({1136, 93});
-			id_range.push_back({1141, 97});
-			std::vector<t_itemid> lv_99_1hsword_r = { 1144, 1142, 1132, 1143, 1140, 13412, 13413, 1138 };
-			id_range.push_back({lv_99_1hsword_r.at(rnd() % lv_99_1hsword_r.size()), 99});
-		}
-	}
+	// SHOTGUN (no rare/normal types)
+    id_range.push_back({13167, 79});
+    id_range.push_back({13156, 82});
+    id_range.push_back({13169, 89});
 
-	// 2-H SWORD
-	else if(type_index == 8) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1116, 25});
-			} else {
-				id_range.push_back({1117, 25});
-			}
-			id_range.push_back({1152, 38});
-			id_range.push_back({1155, 49});
-			id_range.push_back({1158, 68});
-			id_range.push_back({1163, 76});
-		} else {
-			id_range.push_back({1189, 70});
-			id_range.push_back({1165, 71});
-			id_range.push_back({1164, 74});
-			id_range.push_back({1167, 79});
-			std::vector<t_itemid> lv_82_2hsword_r = { 1170, 1175 };
-			id_range.push_back({lv_82_2hsword_r.at(rnd() % lv_82_2hsword_r.size()), 82});
-			std::vector<t_itemid> lv_86_2hsword_r = { 1176, 1168 };
-			id_range.push_back({lv_86_2hsword_r.at(rnd() % lv_86_2hsword_r.size()), 86});
-			id_range.push_back({1188, 90});
-			id_range.push_back({1182, 96});
-			id_range.push_back({1186, 96});
-			std::vector<t_itemid> lv_99_2hsword_r = { 1166, 1181 };
-			id_range.push_back({lv_99_2hsword_r.at(rnd() % lv_99_2hsword_r.size()), 99});
-		}
-	}
+	// GRENADE LAUNCHER (no rare/normal types)
+    if(!slotted) {
+        id_range.push_back({13160, 66});
+    } else {
+        id_range.push_back({13161, 66});
+    }
 
-	// 1-H SPEAR (ilv based on highest weapon atk (180 in this case) / 100)
-	else if(type_index == 9) {
-		if(rarity < 750) {
-			id_range.push_back({1402, 7});
-			id_range.push_back({1405, 10});
-			id_range.push_back({1408, 14});
-		} else {
-			id_range.push_back({1413, 74});
-			id_range.push_back({1421, 79});
-			id_range.push_back({1422, 80});
-			id_range.push_back({1417, 82});
-			id_range.push_back({1420, 91});
-			id_range.push_back({1415, 99});
-		}
-	}
+    // UPPER & LOWER HEADGEAR (no rare/normal types)
+    id_range.push_back({5053, 78});
 
-	// 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
-	else if(type_index == 10) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1451, 33});
-				id_range.push_back({1454, 40});
-			} else {
-				id_range.push_back({1452, 33});
-				id_range.push_back({1455, 40});
-			}
-			id_range.push_back({1485, 44});
-			id_range.push_back({1458, 48});
-			if(!slotted) {
-				id_range.push_back({1460, 58});
-			} else {
-				id_range.push_back({1461, 58});
-			}
-			id_range.push_back({1464, 64});
-			id_range.push_back({1411, 72});
-		} else {
-			id_range.push_back({1477, 67});
-			id_range.push_back({1478, 68});
-			std::vector<t_itemid> lv_73_2hsper_r = { 1474, 1471 };
-			id_range.push_back({lv_73_2hsper_r.at(rnd() % lv_73_2hsper_r.size()), 73});
-			id_range.push_back({1468, 77});
-			if(!slotted) {
-				id_range.push_back({1466, 81});
-			} else {
-				id_range.push_back({1476, 81});
-			}
-			id_range.push_back({1484, 86});
-			id_range.push_back({1483, 98});
-			std::vector<t_itemid> lv_99_2hsper_r = { 1469, 1470 };
-			id_range.push_back({lv_99_2hsper_r.at(rnd() % lv_99_2hsper_r.size()), 99});
-		}
-	}
-
-	// 1-H AXE
-	else if(type_index == 11) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1301, 12});
-			} else {
-				id_range.push_back({1302, 12});
-			}
-			id_range.push_back({1304, 24});
-		} else {
-			id_range.push_back({1307, 66});
-			id_range.push_back({1306, 70});
-			id_range.push_back({1311, 83});
-		}
-	}
-
-	// 2-H AXE
-	else if(type_index == 12) {
-		if(rarity < 750) {
-			id_range.push_back({1352, 23});
-			id_range.push_back({1355, 34});
-			id_range.push_back({1358, 44});
-			id_range.push_back({1361, 52});
-		} else {
-			id_range.push_back({1375, 65});
-			id_range.push_back({1364, 70});
-			id_range.push_back({1363, 74});
-			id_range.push_back({1376, 76});
-			std::vector<t_itemid> lv_77_2haxe_r = { 1366, 1387 };
-			id_range.push_back({lv_77_2haxe_r.at(rnd() % lv_77_2haxe_r.size()), 77});
-			if(!slotted) {
-				id_range.push_back({1370, 86});
-			} else {
-				id_range.push_back({1371, 86});
-			}
-			id_range.push_back({1377, 89});
-			id_range.push_back({1384, 90});
-			id_range.push_back({1385, 97});
-			std::vector<t_itemid> lv_99_2haxe_r = { 1365, 1368, 1369 };
-			id_range.push_back({lv_99_2haxe_r.at(rnd() % lv_99_2haxe_r.size()), 99});
-		}
-	}
-
-	// MACE
-	else if(type_index == 13) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1501, 6});
-			} else {
-				id_range.push_back({1502, 6});
-			}
-			id_range.push_back({1505, 9});
-			id_range.push_back({1508, 14});
-			if(!slotted) {
-				id_range.push_back({1510, 18});
-				id_range.push_back({1519, 21});
-				id_range.push_back({1513, 28});
-			} else {
-				id_range.push_back({1511, 18});
-				id_range.push_back({1520, 21});
-				id_range.push_back({1514, 28});
-			}
-			id_range.push_back({1517, 33});
-		} else {
-			id_range.push_back({1523, 59});
-			id_range.push_back({1524, 64});
-			id_range.push_back({1525, 67});
-			std::vector<t_itemid> lv_74_mace_r = { 16000, 16001 };
-			id_range.push_back({lv_74_mace_r.at(rnd() % lv_74_mace_r.size()), 74});
-			id_range.push_back({1531, 86});
-			id_range.push_back({1544, 89});
-			id_range.push_back({1548, 90});
-			id_range.push_back({1529, 94});
-			id_range.push_back({1541, 97});
-			std::vector<t_itemid> lv_99_mace_r = { 1528, 1527 };
-			id_range.push_back({lv_99_mace_r.at(rnd() % lv_99_mace_r.size()), 99});
-		}
-	}
-
-	// 1H-STAFF
-	// Special case, normal types are dropped by mob lv that usually drops them
-	else if(type_index == 14) {
-		if(rarity < 750) {
-			id_range.push_back({1602, 3});
-			if(!slotted) {
-				id_range.push_back({1604, 19});
-			} else {
-				id_range.push_back({1605, 19});
-			}
-			id_range.push_back({1613, 33});
-			id_range.push_back({1622, 34});
-			std::vector<t_itemid> lv_40_1hstaff = { 1608, 1614 };
-			id_range.push_back({lv_40_1hstaff.at(rnd() % lv_40_1hstaff.size()), 40});
-			id_range.push_back({1525, 81});
-			id_range.push_back({1611, 44});
-		} else {
-			id_range.push_back({1630, 49});
-			id_range.push_back({1615, 58});
-			id_range.push_back({1616, 61});
-			id_range.push_back({1648, 67});
-			std::vector<t_itemid> lv_75_1hstaff_r = { 1625, 1629 };
-			id_range.push_back({lv_75_1hstaff_r.at(rnd() % lv_75_1hstaff_r.size()), 75});
-			id_range.push_back({1643, 84});
-			id_range.push_back({1626, 85});
-			id_range.push_back({1624, 88});
-			std::vector<t_itemid> lv_90_1hstaff_r = { 1618, 1631, 1636, 1647 };
-			id_range.push_back({lv_90_1hstaff_r.at(rnd() % lv_90_1hstaff_r.size()), 90});
-			std::vector<t_itemid> lv_92_1hstaff_r = { 1620, 1646 };
-			id_range.push_back({lv_92_1hstaff_r.at(rnd() % lv_92_1hstaff_r.size()), 92});
-			id_range.push_back({1637, 95});
-		}
-	}
-
-	// 2H-STAFF
-	else if(type_index == 15) {
-		if(rarity > 749) {
-			id_range.push_back({1473, 64});
-			id_range.push_back({1472, 75});
-			id_range.push_back({2004, 80});
-			std::vector<t_itemid> lv_81_2hstaff_r = { 2005, 2001 };
-			id_range.push_back({lv_81_2hstaff_r.at(rnd() % lv_81_2hstaff_r.size()), 81});
-			id_range.push_back({2000, 98});
-		}
-	}
-
-	// BOW
-	// Special case, normal types are dropped by mob lv that usually drops them
-	else if(type_index == 16) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1701, 5});
-			} else {
-				id_range.push_back({1702, 5});
-			}
-			id_range.push_back({1705, 28});
-			id_range.push_back({1708, 31});
-			id_range.push_back({1711, 33});
-			id_range.push_back({1715, 52});
-			id_range.push_back({1716, 60});
-			id_range.push_back({1722, 85});
-		} else {
-			id_range.push_back({1734, 49});
-			id_range.push_back({1732, 50});
-			id_range.push_back({1731, 55});
-			std::vector<t_itemid> lv_56_bow_r = { 1736, 1733 };
-			id_range.push_back({lv_56_bow_r.at(rnd() % lv_56_bow_r.size()), 56});
-			id_range.push_back({1740, 75});
-			id_range.push_back({1723, 80});
-			id_range.push_back({1745, 82});
-			std::vector<t_itemid> lv_85_bow_r = { 1730, 1737 };
-			id_range.push_back({lv_85_bow_r.at(rnd() % lv_85_bow_r.size()), 85});
-			id_range.push_back({1741, 92});
-			std::vector<t_itemid> lv_99_bow_r = { 1724, 1720 };
-			id_range.push_back({lv_99_bow_r.at(rnd() % lv_99_bow_r.size()), 99});
-		}
-	}
-
-	// KNUCKLE
-	else if(type_index == 17) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({1801, 13});
-			} else {
-				id_range.push_back({1802, 13});
-			}
-			id_range.push_back({1806, 27});
-			id_range.push_back({1812, 41});
-		} else {
-			id_range.push_back({1822, 31});
-			id_range.push_back({1810, 75});
-			t_itemid elemental_fists = 1818 + (rnd() % 4);
-			id_range.push_back({elemental_fists, 70});
-			id_range.push_back({1825, 88});
-		}
-	}
-
-	// MUSICAL INSTRUMENT
-	else if(type_index == 18) {
-		if(rarity < 750) {
-			id_range.push_back({1902, 20});
-			id_range.push_back({1904, 36});
-			id_range.push_back({1906, 41});
-			id_range.push_back({1908, 56});
-		} else {
-			id_range.push_back({1918, 63});
-			t_itemid elemental_guitar = 1914 + (rnd() % 4);
-			std::vector<t_itemid> lv_74_guitar_r = { 1913, elemental_guitar };
-			id_range.push_back({lv_74_guitar_r.at(rnd() % lv_74_guitar_r.size()), 74});	// Special case, using normal type formula
-			std::vector<t_itemid> lv_75_guitar_r = { elemental_guitar, 1919, 1926 };
-			id_range.push_back({lv_75_guitar_r.at(rnd() % lv_75_guitar_r.size()), 75});
-			if(!slotted) {
-				id_range.push_back({1909, 77});
-			} else {
-				id_range.push_back({1910, 77});
-			}
-			id_range.push_back({1925, 89});
-			id_range.push_back({1920, 91});
-		}
-	}
-
-	// WHIP
-	else if(type_index == 19) {
-		if(rarity < 750) {
-			id_range.push_back({1951, 16});
-			id_range.push_back({1957, 49});
-		} else {
-			std::vector<t_itemid> elemental_whips = { 1965, 1966, 1967, 1971 };
-			std::vector<t_itemid> lv_40_whip_r = { 1968, elemental_whips.at(rnd() % elemental_whips.size()) };
-			id_range.push_back({lv_40_whip_r.at(rnd() % lv_40_whip_r.size()), 40});
-			id_range.push_back({1969, 49});
-			id_range.push_back({1964, 50});
-			id_range.push_back({1962, 55});
-			id_range.push_back({1970, 63});
-			id_range.push_back({1974, 65});
-			id_range.push_back({1979, 75});
-			id_range.push_back({1972, 76});
-			id_range.push_back({1973, 79});
-			id_range.push_back({1980, 80});
-		}
-	}
-
-	// BOOK
-	else if(type_index == 20) {
-		if(rarity < 750) {
-			id_range.push_back({1550, 60});
-			id_range.push_back({1551, 81});
-			id_range.push_back({1552, 88});
-		} else {
-			id_range.push_back({1558, 30});
-			id_range.push_back({1573, 61});
-			id_range.push_back({1572, 63});
-			id_range.push_back({1564, 64});
-			id_range.push_back({1559, 65});
-			id_range.push_back({1557, 85});
-			t_itemid elemental_book = 1553 + (rnd() % 4);
-			id_range.push_back({elemental_book, 63});	// Special case, based on normal type formula
-			id_range.push_back({1561, 90});
-			id_range.push_back({1565, 98});
-			id_range.push_back({1560, 99});
-		}
-	}
-
-	// KATAR
-	else if(type_index == 21) {
-		if(rarity < 750) {
-			id_range.push_back({1251, 39});
-			id_range.push_back({1253, 46});
-			id_range.push_back({1255, 51});
-		} else {
-			t_itemid elemental_katar = 1256 + (rnd() % 4);
-			id_range.push_back({elemental_katar, 32});	// Special case, based on normal type formula
-			id_range.push_back({1260, 40});
-			id_range.push_back({1261, 49});
-			id_range.push_back({1263, 50});
-			id_range.push_back({1265, 53});
-			id_range.push_back({1262, 56});
-			id_range.push_back({1271, 70});
-			id_range.push_back({1268, 71});
-			id_range.push_back({1270, 75});
-			id_range.push_back({1285, 78});
-			id_range.push_back({1269, 80});
-			std::vector<t_itemid> lv_87_katar_r = { 1264, 1284 };
-			id_range.push_back({lv_87_katar_r.at(rnd() % lv_87_katar_r.size()), 87});
-		}
-	}
-
-	// REVOLVER
-	else if(type_index == 22) {
-		if(rarity < 750) {
-			id_range.push_back({13101, 15});
-			id_range.push_back({13103, 23});
-			id_range.push_back({13104, 35});
-		} else {
-			id_range.push_back({13106, 71});
-			id_range.push_back({13107, 75});
-		}
-	}
-
-	// RIFLE
-	else if(type_index == 23) {
-		if(rarity < 750) {
-			id_range.push_back({13150, 35});
-		} else {
-			id_range.push_back({13152, 47});
-			id_range.push_back({13170, 60});
-			id_range.push_back({13153, 79});
-			id_range.push_back({13164, 80});
-		}
-	}
-
-	// GATLING GUN
-	else if(type_index == 24) {
-		if(rarity < 750) {
-			id_range.push_back({13157, 72});
-		} else {
-			id_range.push_back({13158, 59});
-			id_range.push_back({13159, 72});
-		}
-	}
-
-	// SHOTGUN
-	else if(type_index == 25) {
-		if(rarity > 749) {
-			id_range.push_back({13167, 79});
-			id_range.push_back({13156, 82});
-			id_range.push_back({13169, 89});
-		}
-	}
-
-	// GRENADE LAUNCHER
-	else if(type_index == 26) {
-		if(rarity > 749) {
-			if(!slotted) {
-				id_range.push_back({13160, 66});
-			} else {
-				id_range.push_back({13161, 66});
-			}
-		}
-	}
-
-	// HUUMA SHURIKEN
-	else if(type_index == 27) {
-		if(rarity < 750) {
-			if(!slotted) {
-				id_range.push_back({13301, 65});
-			} else {
-				id_range.push_back({13302, 65});
-			}
-		} else {
-			id_range.push_back({13304, 41});
-			id_range.push_back({13300, 71});
-			id_range.push_back({13303, 76});
-		}
-	}
-
-	// UPPER HEADGEAR
-	else if(type_index == 28) {
-		if(rarity < 750) {
-			id_range.push_back({5015, 4});
-			id_range.push_back({2245, 8});
-			std::vector<t_itemid> lv_9_upper_head = { 2298, 5008 };
-			id_range.push_back({lv_9_upper_head.at(rnd() % lv_9_upper_head.size()), 9});
-			id_range.push_back({5035, 15});
-			id_range.push_back({2220, 16});
-			std::vector<t_itemid> lv_18_upper_head = { 2213, 2247 };
-			id_range.push_back({lv_18_upper_head.at(rnd() % lv_18_upper_head.size()), 18});
-			id_range.push_back({2221, 19});
-			std::vector<t_itemid> lv_24_upper_head = { 2248, 2275, 5010 };
-			id_range.push_back({lv_24_upper_head.at(rnd() % lv_24_upper_head.size()), 24});
-			id_range.push_back({2211, 25});
-			id_range.push_back({2299, 28});
-			id_range.push_back({2227, 29});
-			std::vector<t_itemid> lv_30_upper_head = { 2257, 5030 };
-			id_range.push_back({lv_30_upper_head.at(rnd() % lv_30_upper_head.size()), 30});
-			id_range.push_back({5118, 33});
-			std::vector<t_itemid> lv_34_upper_head = { 2279, 2282 };
-			id_range.push_back({lv_34_upper_head.at(rnd() % lv_34_upper_head.size()), 34});
-			id_range.push_back({5037, 38});
-			id_range.push_back({2272, 40});
-			id_range.push_back({2294, 41});
-			id_range.push_back({2259, 42});
-			id_range.push_back({5012, 43});
-			id_range.push_back({5011, 47});
-			id_range.push_back({5120, 55});
-			id_range.push_back({2217, 58});
-			id_range.push_back({5042, 59});
-			id_range.push_back({2226, 61});
-			id_range.push_back({2246, 64});
-			id_range.push_back({2258, 72});
-			id_range.push_back({2210, 81});
-			id_range.push_back({2229, 91});
-		} else {
-			id_range.push_back({2250, 6});
-			id_range.push_back({2209, 8});
-			id_range.push_back({2207, 16});
-			id_range.push_back({5009, 18});
-			std::vector<t_itemid> lv_25_upper_head_r = { 2287, 2289, 2283 };
-			id_range.push_back({lv_25_upper_head_r.at(rnd() % lv_25_upper_head_r.size()), 25});
-			id_range.push_back({2253, 26});
-			std::vector<t_itemid> lv_31_upper_head_r = { 2206, 2285 };
-			id_range.push_back({lv_31_upper_head_r.at(rnd() % lv_31_upper_head_r.size()), 31});
-			id_range.push_back({2277, 33});
-			id_range.push_back({2251, 35});
-			id_range.push_back({5119, 36});
-			id_range.push_back({2244, 38});
-			id_range.push_back({5116, 39});
-			id_range.push_back({5125, 40});	// Angels kiss special case
-			id_range.push_back({5141, 41});
-			id_range.push_back({2252, 44});
-			id_range.push_back({2233, 47});
-			id_range.push_back({2208, 50});
-			std::vector<t_itemid> lv_51_upper_head_r = { 5003, 5027 };
-			id_range.push_back({lv_51_upper_head_r.at(rnd() % lv_51_upper_head_r.size()), 51});
-			id_range.push_back({5172, 59});
-			id_range.push_back({5111, 61});
-			id_range.push_back({5017, 63});
-			id_range.push_back({2255, 68});
-			std::vector<t_itemid> lv_70_upper_head_r = { 2231, 5019 };
-			id_range.push_back({lv_70_upper_head_r.at(rnd() % lv_70_upper_head_r.size()), 70});
-			id_range.push_back({2274, 73});
-			std::vector<t_itemid> lv_74_upper_head_r = { 2249, 5007 };
-			id_range.push_back({lv_74_upper_head_r.at(rnd() % lv_74_upper_head_r.size()), 74});
-			std::vector<t_itemid> lv_75_upper_head_r = { 5045, 5072, 5399 };
-			id_range.push_back({lv_75_upper_head_r.at(rnd() % lv_75_upper_head_r.size()), 75});
-			id_range.push_back({2235, 78});
-			id_range.push_back({5162, 80});
-			std::vector<t_itemid> lv_81_upper_head_r = { 2234, 2254, 2256, 5160 };
-			id_range.push_back({lv_81_upper_head_r.at(rnd() % lv_81_upper_head_r.size()), 81});
-			id_range.push_back({5066, 85});
-			std::vector<t_itemid> set_helmets = { 5122, 5123, 5124, 5126, 5127, 5128 };
-			id_range.push_back({set_helmets.at(rnd() % set_helmets.size()), 89});
-			id_range.push_back({5002, 90});
-			id_range.push_back({5398, 98});
-			id_range.push_back({5025, 99});
-		}
-	}
-
-	// OTHER HEADGEARS
-	if(type_index == 29) {
-		int headgear_type = rnd() % 5;
-
-		// MIDDLE HEADGEAR
-		if(headgear_type == 0) {
-			if(rarity < 750) {
-				id_range.push_back({2263, 23});
-				id_range.push_back({2276, 26});
-				id_range.push_back({5014, 31});
-				id_range.push_back({5085, 62});
-			} else {
-				id_range.push_back({2291, 21});
-				id_range.push_back({2286, 29});
-				id_range.push_back({2296, 70});
-				id_range.push_back({5104, 86});
-			}
-		}
-
-		// LOWER HEADGEAR
-		else if(headgear_type == 1) {
-			if(rarity < 750) {
-				id_range.push_back({2262, 3});
-				id_range.push_back({2241, 48});
-				id_range.push_back({5113, 51});
-				id_range.push_back({2266, 52});
-				id_range.push_back({5096, 71});
-			} else {
-				id_range.push_back({2265, 23});
-				id_range.push_back({2267, 24});
-				id_range.push_back({2270, 39});
-				id_range.push_back({2269, 56});
-				id_range.push_back({2268, 65});
-			}
-		}
-
-		// UPPER & MIDDLE HEADGEAR
-		else if(headgear_type == 2) {
-			if(rarity < 750) {
-				if(!slotted) {
-					id_range.push_back({2224, 18});
-				} else {
-					id_range.push_back({2225, 18});
-				}
-			} else {
-				id_range.push_back({5093, 80});
-				id_range.push_back({5022, 99});
-			}
-		}
-
-		// MIDDLE & LOWER HEADGEAR
-		else if(headgear_type == 3) {
-			if(rarity < 750) {
-				id_range.push_back({5089, 22});
-				id_range.push_back({5087, 23});
-				id_range.push_back({5088, 24});
-				id_range.push_back({2297, 28});
-				id_range.push_back({5090, 64});
-				id_range.push_back({2288, 69});
-			} else {
-				id_range.push_back({5005, 38});
-			}
-		}
-
-		// UPPER & LOWER HEADGEAR
-		else if(headgear_type == 4) {
-			if(rarity > 749) {
-				id_range.push_back({5053, 78});
-			}
-		}
-
-		// UPPER & MIDDLE & LOWER HEADGEAR
-		else if(headgear_type == 5) {
-			if(rarity > 749) {
-				id_range.push_back({2264, 30});
-				id_range.push_back({5046, 32});
-			} else {
-				id_range.push_back({5808, 99});
-			}
-		}
-	}
-
-    //int lower_bound = 1;
-    //if (boss_type) lower_bound = (floor(mob_level_capped / 10) * (3 + boss_type));
+    // End of Weapons
+    // -----------------------------------------------------------------------------------------------------------------
 
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
 		if(curr.item_lv <= mob_level_capped) {
-            //if (curr.item_lv > lower_bound) drop_ids.push_back(curr);
             drop_ids.push_back(curr);
-		} else {
-			break;
 		}
 	}
 
-	// No drop available
+	// No drops available
 	if(drop_ids.size() == 0) {
 		return 0;
 	}
@@ -3933,7 +3771,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 		// Random equipment drop (WarboundRO)
 		if (sd == mvp_sd) {
-            int drop_rate_eqi = 1000;   // 10% base drop rate of items
+            int drop_rate_eqi = 2500;   // 25% base drop rate of items
 
             // change drops depending on monsters size [Valaris]
             if (battle_config.mob_size_influence) {
@@ -3980,7 +3818,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
                         memset(&mobdrop, 0, sizeof(struct s_mob_drop));
                         mobdrop.nameid = id;
                         ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-                        mob_item_drop(md, dlist, ditem, 0, 1000, homkillonly);
+                        mob_item_drop(md, dlist, ditem, 0, 2500, homkillonly);
                     }
                 }
 			}
