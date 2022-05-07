@@ -177,16 +177,8 @@ L_Missions:
 L_ListMobs:
     set .@huntmenu$, "";
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
-        set .@textColor$, "^ff0000";
-        if (.@type == 1 && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 8))) {
-            set .@textColor$, "^808080";
-        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 8)) && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 12))) {
-            set .@textColor$, "^00BE00";
-        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 12)) && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 13))) {
-            set .@textColor$, "^ff8000";
-        }
         if (.@i) set .@huntmenu$,.@huntmenu$+":";
-        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ " + .@textColor$ + "Lv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
+        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ "^0000ffLv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
     }
     set .@selection, select(.@huntmenu$);
 
@@ -426,7 +418,7 @@ OnNPCKillEvent:
 
 OnAtcommand:
     query_sql("SELECT mob_id, count, max FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
-	dispbottom "----------- Current Headhunt Progress ----------";
+	dispbottom "------------ Current Headhunt Progress ----------";
 	dispbottom strmobinfo(1,.@mobid) + " ~ (" + .@count + " / " + .@max + ")";
 	dispbottom "-------------------------------------------------------------";
 	end;
@@ -438,4 +430,3 @@ OnInit:
     bindatcmd "hh",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
-
