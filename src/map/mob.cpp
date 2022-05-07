@@ -2283,7 +2283,7 @@ void mob_setdropitem_option2(struct item *itm) {
 /**
  * Returns an item id to be dropped at random
  **/
-t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk) {
+t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 
 	int mob_level_capped = mob_level;
 	mob_level_capped = round(mob_level_capped * 0.396);	// Buffed mob lv. normalization
@@ -3036,9 +3036,10 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
     // UPPER & LOWER HEADGEAR (no rare/normal types)
     id_range.push_back({5053, 78});
 
-    // End of Weapons
+    // End of Item list
     // -----------------------------------------------------------------------------------------------------------------
 
+    // Add appropriate ilvl items to drop list
 	std::vector<random_equipment_drop> drop_ids;
 	for(int i = 0; i < id_range.size(); i++) {
 		random_equipment_drop curr = id_range.at(i);
@@ -3052,6 +3053,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type, unsigned short luk
 		return 0;
 	}
 
+    // Configure drop rarity. Higher ilvl items are rarer.
     int min = 0, max = drop_ids.size();
     int drop_range = rand() % 100;
     if (drop_range < 40) {
@@ -3770,59 +3772,57 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		}
 
 		// Random equipment drop (WarboundRO)
-		if (sd == mvp_sd) {
-            int drop_rate_eqi = 2500;   // 25% base drop rate of items
+        int drop_rate_eqi = 2500;   // 25% base drop rate of items
 
-            // change drops depending on monsters size [Valaris]
-            if (battle_config.mob_size_influence) {
-                if (md->special_state.size == SZ_MEDIUM && drop_rate_eqi >= 2)
-                    drop_rate_eqi /= 2;
-                else if( md->special_state.size == SZ_BIG)
-                    drop_rate_eqi *= 2;
-            }
+        // change drops depending on monsters size [Valaris]
+        if (battle_config.mob_size_influence) {
+            if (md->special_state.size == SZ_MEDIUM && drop_rate_eqi >= 2)
+                drop_rate_eqi /= 2;
+            else if( md->special_state.size == SZ_BIG)
+                drop_rate_eqi *= 2;
+        }
 
-            // LUK affect drops?
-            if (src) {
-                if (battle_config.drops_by_luk)
-                    drop_rate_eqi += status_get_luk(src)*battle_config.drops_by_luk/100;
-                if (battle_config.drops_by_luk2)
-                    drop_rate_eqi += (int)(0.5+drop_rate_eqi*status_get_luk(src)*battle_config.drops_by_luk2/10000.);
-            }
+        // LUK affect drops?
+        if (src) {
+            if (battle_config.drops_by_luk)
+                drop_rate_eqi += status_get_luk(src)*battle_config.drops_by_luk/100;
+            if (battle_config.drops_by_luk2)
+                drop_rate_eqi += (int)(0.5+drop_rate_eqi*status_get_luk(src)*battle_config.drops_by_luk2/10000.);
+        }
 
-            // Player specific drop rate adjustments
-            if ( sd ) {
-                int drop_rate_bonus_eqi = 0;
-                if (battle_config.pk_mode && (int) (md->level - sd->status.base_level) >= 20)
-                    drop_rate_eqi = (int) (drop_rate_eqi * 1.25);
-                if (sd->sc.data[SC_ITEMBOOST])
-                    drop_rate_bonus_eqi += sd->sc.data[SC_ITEMBOOST]->val1;
-                drop_rate_bonus_eqi = (int) (0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
-                drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
-            }
+        // Player specific drop rate adjustments
+        if ( sd ) {
+            int drop_rate_bonus_eqi = 0;
+            if (battle_config.pk_mode && (int) (md->level - sd->status.base_level) >= 20)
+                drop_rate_eqi = (int) (drop_rate_eqi * 1.25);
+            if (sd->sc.data[SC_ITEMBOOST])
+                drop_rate_bonus_eqi += sd->sc.data[SC_ITEMBOOST]->val1;
+            drop_rate_bonus_eqi = (int) (0.5 + drop_rate_eqi * drop_rate_bonus_eqi / 100.);
+            drop_rate_eqi = i32max(drop_rate_eqi, cap_value(drop_rate_bonus_eqi, 0, 9000));
+        }
 
-            // Item count to drop
-            e_mob_bosstype boss_type = md->get_bosstype();
-			int loot_count = 1; // Normal monsters drop 1 item
-			if(boss_type == BOSSTYPE_MINIBOSS) {
-				loot_count += rnd() % 2; // Mini MVPs drop 1-2 items
-			} else if(boss_type == BOSSTYPE_MVP) {
-				loot_count += (rnd() % 3) + 2; // MVPs drop 3-5 items
-			}
+        // Item count to drop
+        e_mob_bosstype boss_type = md->get_bosstype();
+        int loot_count = 1; // Normal monsters drop 1 item
+        if(boss_type == BOSSTYPE_MINIBOSS) {
+            loot_count += rnd() % 3; // Mini MVPs drop 1-3 items
+        } else if(boss_type == BOSSTYPE_MVP) {
+            loot_count += (rnd() % 3) + 2; // MVPs drop 3-5 items
+        }
 
-            // Attempt to drop equipment
-			for(int i = 0; i < loot_count; i++) {
-                if (rnd() % 10000 <= drop_rate_eqi) {
-                    t_itemid id = set_drop_id(md->level, boss_type, sd->status.luk);
-                    if(id > 0) {
-                        struct s_mob_drop mobdrop;
-                        memset(&mobdrop, 0, sizeof(struct s_mob_drop));
-                        mobdrop.nameid = id;
-                        ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-                        mob_item_drop(md, dlist, ditem, 0, 2500, homkillonly);
-                    }
+        // Attempt to drop equipment
+        for(int i = 0; i < loot_count; i++) {
+            if (rnd() % 10000 <= drop_rate_eqi) {
+                t_itemid id = set_drop_id(md->level, boss_type);
+                if(id > 0) {
+                    struct s_mob_drop mobdrop;
+                    memset(&mobdrop, 0, sizeof(struct s_mob_drop));
+                    mobdrop.nameid = id;
+                    ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+                    mob_item_drop(md, dlist, ditem, 0, 2500, homkillonly);
                 }
-			}
-		}
+            }
+        }
 
 		if(sd) {
 			// process script-granted extra drop bonuses
