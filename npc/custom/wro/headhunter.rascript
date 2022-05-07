@@ -103,8 +103,8 @@ L_Missions:
         set .@lastMob$, strmobinfo(1,@lastMob);
     }
 
-    //switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 22^000000]:Monsters [^ff0000Lv. 23 - 33^000000]:Monsters [^ff0000Lv. 33 - 47^000000]:Monsters [^ff0000Lv. 48 - 65^000000]:Monsters [^ff0000Lv. 65 - 104^000000]:Monsters [^ff0000Lv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 113 - 115^000000]:^ff0000MvPs^000000")) {
-    switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^ff0000Lv. 1 - 54^000000]:Monsters [^ff0000Lv. 57 - 82^000000]:Monsters [^ff0000Lv. 82 - 118^000000]:Monsters [^ff0000Lv. 120 - 163^000000]:Monsters [^ff0000Lv. 163 - 250^000000]:Monsters [^ff0000Lv. 250 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 3 - 250^000000]:^ff8000Mini Bosses^000000 [^ff0000Lv. 250 - 250^000000]:^ff0000Bosses^000000 [^ff0000Lv. 161 - 250^000000]")) {
+    //switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^0000ffLv. 1 - 22^000000]:Monsters [^0000ffLv. 23 - 33^000000]:Monsters [^0000ffLv. 33 - 47^000000]:Monsters [^0000ffLv. 48 - 65^000000]:Monsters [^0000ffLv. 65 - 104^000000]:Monsters [^0000ffLv. 105 - 114^000000]:^ff8000Mini Bosses^000000 [^0000ffLv. 2 - 107^000000]:^ff8000Mini Bosses^000000 [^0000ffLv. 113 - 115^000000]:^ff0000MvPs^000000")) {
+    switch(select("~ Last Headhunt [^0000ff"+.@lastMob$+"^000000]:Monsters [^0000ffLv. 1 - 54^000000]:Monsters [^0000ffLv. 57 - 82^000000]:Monsters [^0000ffLv. 82 - 118^000000]:Monsters [^0000ffLv. 120 - 163^000000]:Monsters [^0000ffLv. 163 - 250^000000]:Monsters [^0000ffLv. 250 - 250^000000]:^ff8000Mini Bosses^000000 [^0000ffLv. 3 - 250^000000]:^ff8000Mini Bosses^000000 [^0000ffLv. 250 - 250^000000]:^ff0000Bosses^000000 [^0000ffLv. 161 - 250^000000]")) {
         case 1:
             if(@lastMob == 0) {
                 next;
@@ -176,11 +176,11 @@ L_ListMobs:
     set .@huntmenu$, "";
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
         set .@textColor$, "^ff0000";
-        if (.@type == 1 && (strmobinfo(3, .@id[.@i]) <= (((baseLevel / 10) * 7) - 5))) {
+        if (.@type == 1 && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 8))) {
             set .@textColor$, "^808080";
-        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > (((baseLevel / 10) * 7) - 5)) && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 7))) {
+        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 8)) && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 12))) {
             set .@textColor$, "^00BE00";
-        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 7)) && (strmobinfo(3, .@id[.@i]) <= (((baseLevel / 10) * 7) + 3))) {
+        } else if (.@type == 1 && (strmobinfo(3, .@id[.@i]) > ((baseLevel / 10) * 12)) && (strmobinfo(3, .@id[.@i]) <= ((baseLevel / 10) * 13))) {
             set .@textColor$, "^ff8000";
         }
         if (.@i) set .@huntmenu$,.@huntmenu$+":";
