@@ -178,7 +178,7 @@ L_ListMobs:
     set .@huntmenu$, "";
     for( set .@i, 0; .@i < getarraysize(.@id); set .@i, .@i + 1) {
         if (.@i) set .@huntmenu$,.@huntmenu$+":";
-        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [ "^0000ffLv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
+        set .@huntmenu$, .@huntmenu$ + strmobinfo(1, .@id[.@i]) + " [^0000ffLv. " + strmobinfo(3, .@id[.@i]) + "^000000]";
     }
     set .@selection, select(.@huntmenu$);
 
