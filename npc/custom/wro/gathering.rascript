@@ -74,7 +74,7 @@ roy_in02,29,73,5	script	Herbalism Trainer#crafting	490,{
 	mes "["+strnpcinfo(1)+"]";
 	mes "Greeetings Noorman. Whaat is on youur mind?";
 	next;
-	
+
 	set .@menu, select("Become a Herbalist:About Herbalism:Cancel");
 	if (.@menu == 1) {
 		goto L_Train;
@@ -373,7 +373,8 @@ OnAtcommand:
 
 OnInit:
     query_sql("CREATE TABLE IF NOT EXISTS `gathering` (`char_id` int(11) unsigned NOT NULL default '0',`Herbalism` int(11) NOT NULL default '0',`Mining` int(11) NOT NULL default '0',`Enchanting` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
-	bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
+	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
+    bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "profs",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "prof",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "gathering",strnpcinfo(3) + "::OnAtcommand";
@@ -1803,7 +1804,7 @@ function	script	F_Enchanting	{
 
 	set .@item, 7597;
 	set .@amnt, 3;
-	
+
 	if (getarg(0) == 1) {
 		goto L_Disenchant;
 	}
@@ -1831,7 +1832,7 @@ L_Enchant:
 	.@part = .@indices[select(.@menu$)];
 
 	mes "The enchantment process requires ^ff0000" + .@amnt + " " + getitemname(.@item) +"^000000. Continue?";
-	
+
 	switch(select("Yes:Cancel")) {
 	case 2:
 		goto L_End;
@@ -1842,7 +1843,7 @@ L_Enchant:
 		message strcharinfo(0),"You do not have enough [" + getitemname(.@item) + "s].";
 		goto L_End;
 	}
-	
+
 	specialeffect2 EF_BEGINSPELL6;
 	progressbar "#00FF00",1;
 
@@ -1922,7 +1923,7 @@ L_Enchant:
 		} else {
 			setarray .@index[0], rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid)), rand(getarraysize(.@weaponid));
 		}
-		
+
 		if(getarraysize(@index) > 1) {
 			for(set .@i, getarraysize(@index); .@i > 0; .@i--) {
 				for(set .@j, .@i - 1; .@j == 0; .@j--) {
@@ -2022,7 +2023,7 @@ L_Disenchant:
 
 	next;
 	mes "The disenchantment process will thus yield ^ff0000" + .@nbr + " " + getitemname(.@item) + "(s)^000000. Continue?";
-	
+
 	switch(select("Yes:Cancel")) {
 	case 2:
 		goto L_End;
@@ -2043,7 +2044,7 @@ L_Disenchant:
 	delequip .@part;
 	getitem2 .@equip_id, 1, 1,.@refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
 	goto L_End;
-	
+
 
 L_End:
 	close2;
