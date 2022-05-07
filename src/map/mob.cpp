@@ -3772,7 +3772,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		}
 
 		// Random equipment drop (WarboundRO)
-        int drop_rate_eqi = 2500;   // 25% base drop rate of items
+        int drop_rate_eqi = 3300;   // 33% base drop rate of items
 
         // change drops depending on monsters size [Valaris]
         if (battle_config.mob_size_influence) {
@@ -3803,11 +3803,11 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
         // Item count to drop
         e_mob_bosstype boss_type = md->get_bosstype();
-        int loot_count = 1; // Normal monsters drop 1 item
+        int loot_count = 1; // Normal monsters drop up to 2 items
         if(boss_type == BOSSTYPE_MINIBOSS) {
-            loot_count += rnd() % 3; // Mini MVPs drop 1-3 items
+            loot_count = 3; // Mini MVPs drop up to 3 items
         } else if(boss_type == BOSSTYPE_MVP) {
-            loot_count += (rnd() % 3) + 2; // MVPs drop 3-5 items
+            loot_count = 5; // MVPs drop up to 5 items
         }
 
         // Attempt to drop equipment
@@ -3819,7 +3819,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
                     memset(&mobdrop, 0, sizeof(struct s_mob_drop));
                     mobdrop.nameid = id;
                     ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
-                    mob_item_drop(md, dlist, ditem, 0, 2500, homkillonly);
+                    mob_item_drop(md, dlist, ditem, 0, 3300, homkillonly);
                 }
             }
         }
