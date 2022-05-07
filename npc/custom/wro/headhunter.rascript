@@ -7,8 +7,8 @@
 -	script	Headhunter	-1,{
 
     cutin "3rd_sc_doomk02.bmp", 2;
-    query_sql("SELECT (`mob_id`, `count`, `max`) FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
-    
+    query_sql("SELECT mob_id, count, max FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
+
     // If on a mission
     if(.@mobid) {
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
