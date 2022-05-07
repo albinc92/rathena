@@ -37,7 +37,7 @@
         mes "Reward (Job EXP): ^ff0000" + .@jExp + "^000000";
         mes "Reward (Zeny): ^ff0000" + .@zenyReward + "^000000";
         mes "^f7f7f7_^000000";
-        mes "^808080(Use @headhunter/@hh atcommand to current progress)";
+        mes "^808080(Use @headhunter/@hh atcommand to display mission progress)";
 
         if(.@count <= .@max) {
             L_OnCurrentMissionInfo:
@@ -426,7 +426,7 @@ OnNPCKillEvent:
 
 OnAtcommand:
     query_sql("SELECT mob_id, count, max FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
-	dispbottom "------------------ Current Headhunt Progress ----------------";
+	dispbottom "------------ Current Headhunt Progress -----------";
 	dispbottom strmobinfo(1,.@mobid) + " ~ (" + .@count + " / " + .@max + ")";
 	dispbottom "-------------------------------------------------------------";
 	end;
