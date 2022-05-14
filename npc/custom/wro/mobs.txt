@@ -2,65 +2,9 @@
 royal,0,0	monster	Wild Rose	1261,1,7200000,3600000
 
 // Royal Field 01
-roy_fild01,0,0	monster	Cobalt Mineral	1976,70,0,0
-
-// Niflheim
-niflheim,0,0,0,0	boss_monster	Lord of the Dead	1373,1,7980000,7980000
-
-// Mainquest
-//mag_dun02,0,0,0,0	boss_monster	Skoll	3092,1,18000000,600000
-//iz_dun04,0,0,0,0	boss_monster	Jormungandr	2534,1,18000000,600000
-//dew_dun01,0,0,0,0	boss_monster	Surtr	2476,1,18000000,600000
-
-// Sort by element, then EXP per hp, descending, pick top 20, sort by level, multiply
-// spawn count based on monster level to fit current room difficulty
-
-// Sandwich (Poison & Wind)
-pvp_n_5-1,0,0	monster	Centipede	1987,4,0,0	// Lv. 110
-pvp_n_5-1,0,0	monster	Eremes	1635,4,0,0	// Lv. 87
-pvp_n_5-1,0,0	monster	Dark Pinguicula	2015,4,0,0	// Lv. 83
-pvp_n_4-1,0,0	monster	Centipede Larva	1999,4,0,0	// Lv. 80
-pvp_n_4-1,0,0	monster	Nephentes	1988,4,0,0	// Lv. 75
-pvp_n_4-1,0,0	monster	Ancient Worm	1305,4,0,0	// Lv. 67
-pvp_n_4-1,0,0	monster	Whikebain	1653,4,0,0	// Lv. 62
-pvp_n_3-1,0,0	monster	Penomena	1216,4,0,0	// Lv. 57
-pvp_n_3-1,0,0	monster	Cramp	1209,4,0,0	// Lv. 56
-pvp_n_3-1,0,0	monster	Demon Pungus	1378,4,0,0	// Lv. 56
-pvp_n_3-1,0,0	monster	Giant Spider	1304,4,0,0	// Lv. 55
-pvp_n_2-1,0,0	monster	Ungoliant	1618,4,0,0	// Lv. 46
-pvp_n_2-1,0,0	monster	Side Winder	1037,4,0,0	// Lv. 43
-pvp_n_2-1,0,0	monster	Venomous	1621,4,0,0	// Lv. 42
-pvp_n_2-1,0,0	monster	Argiope	1099,4,0,0	// Lv. 41
-pvp_n_1-1,0,0	monster	Myst	1151,4,0,0	// Lv. 38
-pvp_n_1-1,0,0	monster	Kobold	1134,4,0,0	// Lv. 31
-pvp_n_1-1,0,0	monster	Argos	1100,4,0,0	// Lv. 25
-pvp_n_1-1,0,0	monster	Goblin	1124,4,0,0	// Lv. 24
-
-pvp_n_5-1,0,0	monster	Luciola Vespa	1994,4,0,0	// Lv. 104
-pvp_n_5-1,0,0	monster	Shecil	1638,4,0,0	// Lv. 82
-pvp_n_5-1,0,0	monster	Venatu	1677,4,0,0	// Lv. 80
-pvp_n_4-1,0,0	monster	Wander Man	1208,4,0,0	// Lv. 74
-pvp_n_4-1,0,0	monster	Assaulter	1315,4,0,0	// Lv. 71
-pvp_n_4-1,0,0	monster	Seeer	1774,4,0,0	// Lv. 65
-pvp_n_4-1,0,0	monster	Creamy Fear	1293,4,0,0	// Lv. 62
-pvp_n_3-1,0,0	monster	Dragon Tail	1321,4,0,0	// Lv. 61
-pvp_n_3-1,0,0	monster	Kavac	1656,4,0,0	// Lv. 60
-pvp_n_3-1,0,0	monster	Panzer Goblin	1308,4,0,0	// Lv. 59
-pvp_n_3-1,0,0	monster	Beholder	1633,4,0,0	// Lv. 56
-pvp_n_2-1,0,0	monster	Breeze	1692,4,0,0	// Lv. 56
-pvp_n_2-1,0,0	monster	Giant Hornet	1303,4,0,0	// Lv. 56
-pvp_n_2-1,0,0	monster	Wind Ghost	1263,4,0,0	// Lv. 51
-pvp_n_2-1,0,0	monster	Gargoyle	1253,4,0,0	// Lv. 48
-pvp_n_1-1,0,0	monster	Hill Wind	1680,4,0,0	// Lv. 45
-pvp_n_1-1,0,0	monster	Hill Wind	1629,4,0,0	// Lv. 43
-pvp_n_1-1,0,0	monster	Punk	1199,4,0,0	// Lv. 43
-pvp_n_1-1,0,0	monster	Anopheles	1627,4,0,0	// Lv. 23
-
-
-// Rock On (Water & Fire)
-
-// Four (Earth & Shadow)
-
-// Undercross (Undead & Ghost)
-
-// Copass (Holy & Neutral)
+roy_fild01,0,0	monster	Poring	1002,40,0,0
+roy_fild01,0,0	monster	Green Plant	1080,10,0,0
+roy_fild01,0,0	monster	Fabre	1007,40,0,0
+roy_fild01,0,0	monster	Lunatic	1063,40,0,0
+roy_fild01,0,0	monster	Picky	1049,40,0,0
+roy_fild01,0,0	monster	Drops	1113,40,0,0

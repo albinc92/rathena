@@ -93,7 +93,7 @@ L_Train:
 	    mes "Very fuunnyy normaan. Yoou aalready knoow this profession~~";
 	    close;
 	} else if(.@Mining || .@Enchanting) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "Sooo youu wouuld like too learn thee ^ff0000Herbalism^000000 profession hmmm?";
 	next;
@@ -130,7 +130,8 @@ L_Train2:
 L_ChangeProf:
 	mes "["+strnpcinfo(1)+"]";
 	mes "I heeereby proclaim yoou a Heerbalist!";
-	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",1,0,0)");
+	//query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",1,0,0)");
+	query_sql("UPDATE `gathering` SET `Herbalism` = 1");
 	specialeffect2 568;
 	message strcharinfo(0),"You have learnt the [Herbalism] profession.";
 	close;
@@ -169,7 +170,7 @@ L_Train:
 	    mes "Hey don't try to play me! I can tell you already know this trade!";
 	    close;
 	} else if(.@Herbalism || .@Enchanting) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "Interested in becoming a ^ff0000Mining^000000 professional hmmm?";
 	next;
@@ -206,7 +207,8 @@ L_Train2:
 L_ChangeProf:
 	mes "["+strnpcinfo(1)+"]";
 	mes "I hereby proclaim you Miner extraordinaire!";
-	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,1,0)");
+	//query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,1,0)");
+	query_sql("UPDATE `gathering` SET `Mining` = 1");
 	specialeffect2 568;
 	message strcharinfo(0),"You have learnt the [Mining] profession.";
 	close;
@@ -245,7 +247,7 @@ L_Train:
 	    mes "Very amusing, the records show that you already know this profession. Good day.";
 	    close;
 	} else if(.@Mining || .@Herbalism) {
-	    goto L_Train2;
+	    //goto L_Train2;
 	}
 	mes "So you would like to become an ^ff0000Enchanter^000000, correct?";
 	next;
@@ -282,7 +284,8 @@ L_Train2:
 L_ChangeProf:
 	mes "["+strnpcinfo(1)+"]";
 	mes "I am proud to announce you an Enchanter!";
-	query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,0,1)");
+	//query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,0,1)");
+	query_sql("UPDATE `gathering` SET `Enchanting` = 1");
 	specialeffect2 568;
 	message strcharinfo(0),"You have learnt the [Enchanting] profession.";
 	close;
@@ -372,7 +375,6 @@ OnAtcommand:
 	end;
 
 OnInit:
-    query_sql("CREATE TABLE IF NOT EXISTS `gathering` (`char_id` int(11) unsigned NOT NULL default '0',`Herbalism` int(11) NOT NULL default '0',`Mining` int(11) NOT NULL default '0',`Enchanting` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
     bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "profs",strnpcinfo(3) + "::OnAtcommand";

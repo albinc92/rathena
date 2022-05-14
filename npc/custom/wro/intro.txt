@@ -155,6 +155,7 @@ L_OnTutorialDone:
     set zeny, zeny + 10000;
 	query_sql("REPLACE INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `mainquest` = 0");
 	query_sql("INSERT IGNORE INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `hints` = 1");
+	query_sql("REPLACE INTO `gathering` VALUES ('" + getcharid(0) + "', 0, 0, 0)");
 
 	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Godspeed!";

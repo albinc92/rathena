@@ -36,6 +36,15 @@ CREATE TABLE IF NOT EXISTS `headhunter` (
     KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS `gathering` (
+    `char_id` int(11) unsigned NOT NULL default '0',
+    `herbalism` int(11) NOT NULL default '0',
+    `mining` int(11) NOT NULL default '0',
+    `enchanting` int(11) NOT NULL default '0',
+    PRIMARY KEY (`char_id`),
+    KEY `char_id` (`char_id`)
+) ENGINE=MyISAM;
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     item_db
 -- ---------------------------------------------------------------------------------------------------------------------
