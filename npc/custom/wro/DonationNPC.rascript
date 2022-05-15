@@ -1,4 +1,4 @@
-royal,148,159,6	script	Donor Rewards Redeemer	987,{
+royal,141,165,3	script	Donor Rewards Redeemer	987,{
 	// ----------------- NPC Settings -----------------
 	// --- SET THESE BEFORE LOADING THE SCRIPT! ---
 	
