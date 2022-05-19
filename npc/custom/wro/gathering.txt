@@ -379,14 +379,6 @@ OnAtcommand:
 
 OnInit:
 	bindatcmd "professions",strnpcinfo(3) + "::OnAtcommand";
-    bindatcmd "profession",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "profs",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "prof",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "gathering",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "gather",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "crafting",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "craft",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "cr",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }
 

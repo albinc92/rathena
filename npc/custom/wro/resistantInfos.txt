@@ -118,10 +118,6 @@ OnGetResist:
 	return .@realValue;
 
 OnInit:
-	bindatcmd "resistanceinfo",strnpcinfo(3) + "::OnAtcommand";
 	bindatcmd "resinfo",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "resi",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "res",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "ri",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }

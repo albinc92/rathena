@@ -417,7 +417,7 @@ OnNPCKillEvent:
     end;
 
 OnAtcommand:
-    query_sql("SELECT mob_id, count, max FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
+  query_sql("SELECT mob_id, count, max FROM `headhunter` WHERE `char_id` = " + getcharid(0), .@mobid, .@count, .@max);
 	dispbottom "------------ Current Headhunt Progress ----------";
 	dispbottom strmobinfo(1,.@mobid) + " ~ (" + .@count + " / " + .@max + ")";
 	dispbottom "-------------------------------------------------------------";
@@ -425,8 +425,5 @@ OnAtcommand:
 
 OnInit:
 	bindatcmd "headhunter",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "headhunt",strnpcinfo(3) + "::OnAtcommand";
-	bindatcmd "headh",strnpcinfo(3) + "::OnAtcommand";
-    bindatcmd "hh",strnpcinfo(3) + "::OnAtcommand";
 	end;
 }

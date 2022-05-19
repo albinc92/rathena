@@ -31,3 +31,43 @@ ACMD_FUNC(arealoot)
 
  return 0;
 }
+
+ACMD_FUNC(professions)
+{
+  return 0;
+}
+
+ACMD_FUNC(headhunter)
+{
+  return 0;
+}
+
+ACMD_FUNC(hints)
+{
+  return 0;
+}
+
+ACMD_FUNC(showrank)
+{
+  return 0;
+}
+
+ACMD_FUNC(pvpscore)
+{
+  return 0;
+}
+
+ACMD_FUNC(battlestats)
+{
+  return 0;
+}
+
+ACMD_FUNC(whosell)
+{
+  return 0;
+}
+
+ACMD_FUNC(whobuy)
+{
+  return 0;
+}
