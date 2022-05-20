@@ -1,7 +1,0 @@
-// Boarding Halter Shop
-royal,171,59,7	shop	Mount Breeder	102,12622:1000000;
-
-// Animals
-royal,176,57,2	script	Frog	614,{}
-royal,170,55,8	script	Lamb	890,{}
-royal,167,58,8	script	Camel	938,{}

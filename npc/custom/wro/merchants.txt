@@ -35,3 +35,11 @@ roy_in02,135,33,3	shop	Lower Headgear	407,2218:-1,2241:-1
 roy_in02,135,30,3	shop	Middle Headgear	476,2201:-1,2203:-1,2205:-1,2212:-1,2239:-1,2242:-1,2243:-1
 roy_in02,135,28,3	shop	Upper Headgear	448,2208:-1,2211:-1,2216:-1,2220:-1,2222:-1,2226:-1,2228:-1,2230:-1,2232:-1,5112:-1,5114:-1,2224:-1,5092:-1
 roy_in02,38,103,7	shop	Accessories	125,2608:-1,2609:-1,2612:-1,2613:-1,2627:-1,2628:-1
+
+// Boarding Halter Shop
+royal,171,59,7	shop	Mount Breeder	102,12622:1000000;
+
+// Animals
+royal,176,57,2	script	Frog	614,{}
+royal,170,55,8	script	Lamb	890,{}
+royal,167,58,8	script	Camel	938,{}
