@@ -7,10 +7,10 @@ roy_in02,133,39,4	script	Look Changer	10007,{
 		close;
 	}
 
-	if(!countitem(40000)) {
-		mes "*BEEP* A ^0000ffToken of Heroism^000000 is required.";
-		close;
-	}
+	//if(!countitem(40000)) {
+	//	mes "*BEEP* A ^0000ffToken of Heroism^000000 is required.";
+	//	close;
+	//}
 
 	mes "*BEEP* Select desired function.";
 	switch(select("Transcend <on/off>:Change Look:Cancel")) {
@@ -24,16 +24,4 @@ roy_in02,133,39,4	script	Look Changer	10007,{
 			end;
 	}
 	end;
-
-OnPCLoginEvent:
-	set look, look2;
-	if(look && countitem(40000)) {
-		setlook LOOK_BODY2,1;
-	}
-	end;
-
-OnPCLogoutEvent:
-	setlook LOOK_BODY2,0;
-	end;
-
 }
