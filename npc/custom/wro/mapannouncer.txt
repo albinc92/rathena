@@ -37,6 +37,7 @@ OnInit:
 		"payon",        "Payon Town",
 		"prontera",     "Prontera City, Capital of Rune-Midgard",
 		"rachel",       "Rachel, Capital of Arunafelz, the Study Nation",
+		"royal",       	"Royal, the Schwarzwald Satellite",
 		"splendide",    "Splendide",
 		"prt_monk",     "the St. Capitolina Abbey",
 		"thor_camp",    "Thor Camp",
