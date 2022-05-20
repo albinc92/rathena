@@ -572,11 +572,15 @@ UPDATE `item_db2` SET `script` = CONCAT(`script`, ' specialeffect2 812;') WHERE 
 
 -- Tokens
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40001,'Event_Token','Event Token','Etc',100,true,true,true,true,false,true,true,true);
+VALUES (40000,'Token of Heroism','Token of Heroism','Etc',100,true,true,true,true,true,true,true,true);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40002,'PvP_Token','PvP Token','Etc',100,true,true,true,true,false,true,true,true);
+VALUES (40001,'Event_Token','Event Token','Etc',100,true,true,true,false,false,true,true,true);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
-VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,true,false,true,true,true);
+VALUES (40002,'PvP_Token','PvP Token','Etc',100,true,true,true,false,false,true,true,true);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,false,false,true,true,true);
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)
+VALUES (40112,'Card_Token','Card Token','Etc',100,true,true,true,false,false,true,true,true);
 
 -- Misc
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`trade_override`,`trade_nodrop`,`trade_notrade`,`trade_nosell`,`trade_nocart`,`trade_nostorage`,`trade_noguildstorage`,`trade_nomail`,`trade_noauction`)

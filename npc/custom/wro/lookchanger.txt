@@ -1,6 +1,5 @@
 roy_in02,133,39,4	script	Look Changer	10007,{
-
-	if(true) {
+	if(countitem(40000)) {
 		if(Class != 4008 && Class != 4009 && Class != 4010 && Class != 4011 && Class != 4012 && Class != 4013 && Class != 4014 && Class != 4015 && Class != 4016 && Class != 4017 && Class != 4018 && Class != 4019 && Class != 4020 && Class != 4021) {
 			message strcharinfo(0),"Your class is not applicable for a look change.";
 			end;
@@ -17,13 +16,13 @@ roy_in02,133,39,4	script	Look Changer	10007,{
 		message strcharinfo(0),"Look changed.";
 		specialeffect2 26;
 	} else {
-		message strcharinfo(0),"You need to have a Seal of Transcendence equipped.";
+		message strcharinfo(0),"You need to have a ^0000ffToken of Heroism^000000.";
 	}
 	end;
 
 OnPCLoginEvent:
 	set look, look2;
-	if(look) {
+	if(look && countitem(40000)) {
 		setlook LOOK_BODY2,1;
 	}
 	end;
