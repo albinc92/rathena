@@ -1,22 +1,28 @@
 roy_in02,133,39,4	script	Look Changer	10007,{
-	if(countitem(40000)) {
-		if(Class != 4008 && Class != 4009 && Class != 4010 && Class != 4011 && Class != 4012 && Class != 4013 && Class != 4014 && Class != 4015 && Class != 4016 && Class != 4017 && Class != 4018 && Class != 4019 && Class != 4020 && Class != 4021) {
-			message strcharinfo(0),"Your class is not applicable for a look change.";
-			end;
-		}
-		if(look) {
-			setlook LOOK_BODY2,0;
-			set look, 0;
-			set look2, 0;
-		} else {
-			setlook LOOK_BODY2,1;
-			set look, 1;
-			set look2, 1;
-		}
-		message strcharinfo(0),"Look changed.";
-		specialeffect2 26;
-	} else {
-		message strcharinfo(0),"You need to have a ^0000ffToken of Heroism^000000.";
+
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+
+	if(Class != 4008 && Class != 4009 && Class != 4010 && Class != 4011 && Class != 4012 && Class != 4013 && Class != 4014 && Class != 4015 && Class != 4016 && Class != 4017 && Class != 4018 && Class != 4019 && Class != 4020 && Class != 4021) {
+		message strcharinfo(0),"*BEEP* Your class is not applicable for a look change.";
+		close;
+	}
+
+	if(!countitem(40000)) {
+		message strcharinfo(0),"*BEEP* A ^0000ffToken of Heroism^000000 is required.";
+		close;
+	}
+
+	next;
+	mes "^0000ff[" + strnpcinfo(1) + "]^000000";
+	message strcharinfo(0),"*BEEP* Select desired function.";
+	switch(select("Transcend <on/off>:Change Look:Cancel")) {
+	  case 1:
+			message strcharinfo(0),"Transcendence applied!";
+			close;
+	  case 2:
+			message strcharinfo(0),"Look changed.";
+			specialeffect2 26;
+			close;
 	}
 	end;
 
