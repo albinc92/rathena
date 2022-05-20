@@ -15,7 +15,7 @@ roy_in02,133,39,4	script	Look Changer	10007,{
 	mes "*BEEP* Select desired function.";
 	switch(select("Transcend <on/off>:Change Look:Cancel")) {
 	  case 1:
-			bonus_script "changebase roclass(eaclass()|EAJL_THIRD);﻿",-1,512;
+			bonus_script "changebase roclass(eaclass()|EAJL_THIRD);﻿",10,512;
 			message strcharinfo(0),"Transcendence applied!";
 			end;
 	  case 2:
