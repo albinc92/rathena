@@ -23,7 +23,7 @@ roy_in02,133,39,4	script	Look Changer	10007,{
 
 OnPCLoginEvent:
 	set look, look2;
-	if(look && isequipped(40000)) {
+	if(look) {
 		setlook LOOK_BODY2,1;
 	}
 	end;
