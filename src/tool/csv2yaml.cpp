@@ -3840,6 +3840,7 @@ void init_random_option_constants() {
 	export_constant2("RDMOPT_RACE_IGNORE_MDEF_PERCENT_PLAYER_DORAM", 217);
 	export_constant2("RDMOPT_MELEE_ATTACK_DAMAGE_TARGET", 219);
 	export_constant2("RDMOPT_MELEE_ATTACK_DAMAGE_USER", 220);
+	export_constant2("RDMOPT_MAGIC_FIND", 221);
 
 	#undef export_constant2
 }

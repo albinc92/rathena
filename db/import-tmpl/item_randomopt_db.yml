@@ -889,3 +889,7 @@ Body:
     Option: MELEE_ATTACK_DAMAGE_USER
     Script: |
       bonus bNearAtkDef,getrandomoptinfo(ROA_VALUE);
+  - Id: 221
+    Option: MAGIC_FIND
+    Script: |
+      bonus bMagicFind,getrandomoptinfo(ROA_VALUE);

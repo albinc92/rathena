@@ -2180,55 +2180,61 @@ void mob_setdropitem_option(item *item, s_mob_drop *mobdrop) {
  * Set random options for item when dropped from monster
  * @param itm Item data
  **/
-void mob_setdropitem_option2(struct item *itm) {
+void mob_setdropitem_option2(struct item *itm, int magicfindrate) {
     if (!itemdb_isequip(itm->nameid) || itemdb_isidentified(itm->nameid))
         return;
 
     short id = 0, val = 0;
     char param = '0';
-    const int MAX_WEAPON_INDEX = 23, MAX_ARMOR_INDEX = 17;
+    const int MAX_WEAPON_INDEX = 24, MAX_ARMOR_INDEX = 18;
     short weaponid[MAX_WEAPON_INDEX] = {
             3, 4, 5, 6, 7, 8,
             13, 14, 16, 17, 18, 19, 24,
             147, 148, 151, 152,
             164, 166,
-            168, 170, 171, 172
+            168, 170, 171, 172,
+						221
     };
     short weaponbase[MAX_WEAPON_INDEX] = {
             1, 1, 1, 1, 1, 1,
             5, 5, 10, 25, 25, 25, 10,
             5, 5, 5, 5,
             10, 5,
-            10, 10, 3, 10
+            10, 10, 3, 10,
+						10
     };
     short weaponbonus[MAX_WEAPON_INDEX] = {
             3, 3, 3, 3, 3, 3,
             6, 6, 16, 26, 76, 26, 16,
             6, 6, 6, 6,
             11, 6,
-            16, 16, 5, 16
+            16, 16, 5, 16,
+						25
     };
     short armorid[MAX_ARMOR_INDEX] = {
             3, 4, 5, 6, 7, 8,
             9, 10, 11, 12,
             20, 21, 22, 23,
-            165, 167, 171
+            165, 167, 171,
+						221
     };
     short armorbase[MAX_ARMOR_INDEX] = {
             1, 1, 1, 1, 1, 1,
             5, 5, 10, 10,
             1, 1, 5, 3,
-            5, 5, 3
+            5, 5, 3,
+						10
     };
     short armorbonus[MAX_ARMOR_INDEX] = {
             3, 3, 3, 3, 3, 3,
             6, 6, 11, 11,
             3, 3, 7, 4,
-            6, 6, 5
+            6, 6, 5,
+						25
     };
 
     int r, optAmt = 0;
-    r = rand() % 750 + 1;
+    r = rand() % (750 - magicfindrate) + 1;
     if(r < 501 && r > 250) {
         optAmt = MAX_ITEM_RDM_OPT - 4;
     } else if(r < 251 && r > 125) {
@@ -3079,7 +3085,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 /*==========================================
  * Initializes the delay drop structure for mob-dropped items.
  *------------------------------------------*/
-static struct item_drop* mob_setdropitem(struct s_mob_drop *mobdrop, int qty, unsigned short mob_id)
+static struct item_drop* mob_setdropitem(struct s_mob_drop *mobdrop, int qty, unsigned short mob_id, int magicfindrate)
 {
 	struct item_drop *drop = ers_alloc(item_drop_ers, struct item_drop);
 	memset(&drop->item_data, 0, sizeof(struct item));
@@ -3087,7 +3093,7 @@ static struct item_drop* mob_setdropitem(struct s_mob_drop *mobdrop, int qty, un
 	drop->item_data.amount = qty;
 	drop->item_data.identify = itemdb_isidentified(mobdrop->nameid);
 	mob_setdropitem_option(&drop->item_data, mobdrop);
-    mob_setdropitem_option2(&drop->item_data);
+  mob_setdropitem_option2(&drop->item_data, magicfindrate);
 	drop->mob_id = mob_id;
 	drop->next = NULL;
 	return drop;
@@ -3748,7 +3754,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				continue;
 			}
 
-			ditem = mob_setdropitem(&md->db->dropitem[i], 1, md->mob_id);
+			ditem = mob_setdropitem(&md->db->dropitem[i], 1, md->mob_id, sd->magicfindrate);
 
 			//A Rare Drop Global Announce by Lupus
 			if( mvp_sd && drop_rate <= battle_config.rare_drop_announce ) {
@@ -3767,7 +3773,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			struct s_mob_drop mobdrop;
 			memset(&mobdrop, 0, sizeof(struct s_mob_drop));
 			mobdrop.nameid = itemdb_searchrandomid(IG_FINDINGORE,1);
-			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+			ditem = mob_setdropitem(&mobdrop, 1, md->mob_id, sd->magicfindrate);
 			mob_item_drop(md, dlist, ditem, 0, battle_config.finding_ore_rate/10, homkillonly);
 		}
 
@@ -3818,7 +3824,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
                     struct s_mob_drop mobdrop;
                     memset(&mobdrop, 0, sizeof(struct s_mob_drop));
                     mobdrop.nameid = id;
-                    ditem = mob_setdropitem(&mobdrop, 1, md->mob_id);
+                    ditem = mob_setdropitem(&mobdrop, 1, md->mob_id, sd->magicfindrate);
                     mob_item_drop(md, dlist, ditem, 0, 3300, homkillonly);
                 }
             }
@@ -3853,7 +3859,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 					memset(&mobdrop, 0, sizeof(struct s_mob_drop));
 					mobdrop.nameid = dropid;
 
-					mob_item_drop(md, dlist, mob_setdropitem(&mobdrop,1,md->mob_id), 0, drop_rate, homkillonly);
+					mob_item_drop(md, dlist, mob_setdropitem(&mobdrop,1,md->mob_id,sd->magicfindrate), 0, drop_rate, homkillonly);
 				}
 			}
 
@@ -3982,7 +3988,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				}
 
 				mob_setdropitem_option(&item, &mdrop[i]);
-                mob_setdropitem_option2(&item);
+        //mob_setdropitem_option2(&item, sd->magicfindrate);
 
 				if((temp = pc_additem(mvp_sd,&item,1,LOG_TYPE_PICKDROP_PLAYER)) != 0) {
 					clif_additem(mvp_sd,0,0,temp);

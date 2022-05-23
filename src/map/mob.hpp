@@ -412,7 +412,7 @@ void mvptomb_destroy(struct mob_data *md);
 void mob_setdropitem_option(struct item *itm, struct s_mob_drop *mobdrop);
 
 // WarboundRO custom functions
-void mob_setdropitem_option2(struct item *itm);
+void mob_setdropitem_option2(struct item *itm, int magicfindrate);
 t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type);
 
 #define CHK_MOBSIZE(size) ((size) >= SZ_SMALL && (size) < SZ_MAX) /// Check valid Monster Size
