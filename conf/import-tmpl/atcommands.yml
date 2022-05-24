@@ -40,3 +40,42 @@ Body:
     Help: |
       Params: <on|off|#>
       Toggle picking up multiple items at the same time.
+  - Command: professions
+    Aliases:
+      - profession
+      - prof
+      - pf
+    Help: |
+      Display your current skill levels for Herbalism, Mining, and Enchanting.
+  - Command: headhunter
+    Aliases:
+      - headhunt
+      - hh
+    Help: |
+      Display progress of current headhunt.
+  - Command: hints
+    Aliases:
+      - hint
+    Help: |
+      Params: <on|off|#>
+      Toggle the display of Tip of the Day upon login.
+  - Command: pvpscore
+    Aliases:
+      - ps
+    Help: |
+      Display current weekly score in PvP.
+  - Command: battlestats
+    Aliases:
+      - bs
+    Help: |
+      Display hidden status info such as after-cast delay, and HP regeneration rate.
+  - Command: whosell
+    Aliases:
+      - ws
+    Help: |
+      Display position of characters that sells specific items.
+  - Command: whobuy
+    Aliases:
+      - wb
+    Help: |
+      Display position of characters that buys specific items.
