@@ -37,17 +37,17 @@ ACMD_FUNC(battlestats)
   struct msg_val { std::string msg; int val; };
   std::vector<msg_val> data_info;
 
-  data_info.push_back({"Neutral : %d%%", sd->s_indexed_bonus.subele[ELE_NEUTRAL]});
-  data_info.push_back({"Water   : %d%%", sd->s_indexed_bonus.subele[ELE_WATER]});
-  data_info.push_back({"Earth   : %d%%", sd->s_indexed_bonus.subele[ELE_EARTH]});
-  data_info.push_back({"Fire    : %d%%", sd->s_indexed_bonus.subele[ELE_FIRE]});
-  data_info.push_back({"Wind    : %d%%", sd->s_indexed_bonus.subele[ELE_WIND]});
-  data_info.push_back({"Poison  : %d%%", sd->s_indexed_bonus.subele[ELE_POISON]});
-  data_info.push_back({"Holy    : %d%%", sd->s_indexed_bonus.subele[ELE_HOLY]});
-  data_info.push_back({"Shadow  : %d%%", sd->s_indexed_bonus.subele[ELE_DARK]});
-  data_info.push_back({"Ghost   : %d%%", sd->s_indexed_bonus.subele[ELE_GHOST]});
-  data_info.push_back({"Undead  : %d%%", sd->s_indexed_bonus.subele[ELE_UNDEAD]});
-  data_info.push_back({"All     : %d%%", sd->s_indexed_bonus.subele[ELE_ALL]});
+  data_info.push_back({"Neutral : %d%%", sd->indexed_bonus.subele[ELE_NEUTRAL]});
+  data_info.push_back({"Water   : %d%%", sd->indexed_bonus.subele[ELE_WATER]});
+  data_info.push_back({"Earth   : %d%%", sd->indexed_bonus.subele[ELE_EARTH]});
+  data_info.push_back({"Fire    : %d%%", sd->indexed_bonus.subele[ELE_FIRE]});
+  data_info.push_back({"Wind    : %d%%", sd->indexed_bonus.subele[ELE_WIND]});
+  data_info.push_back({"Poison  : %d%%", sd->indexed_bonus.subele[ELE_POISON]});
+  data_info.push_back({"Holy    : %d%%", sd->indexed_bonus.subele[ELE_HOLY]});
+  data_info.push_back({"Shadow  : %d%%", sd->indexed_bonus.subele[ELE_DARK]});
+  data_info.push_back({"Ghost   : %d%%", sd->indexed_bonus.subele[ELE_GHOST]});
+  data_info.push_back({"Undead  : %d%%", sd->indexed_bonus.subele[ELE_UNDEAD]});
+  data_info.push_back({"All     : %d%%", sd->indexed_bonus.subele[ELE_ALL]});
 
 	char buf[50] = "";
   clif_displaymessage(fd, "------ Elemental Resistances ------");
