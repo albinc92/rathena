@@ -3806,7 +3806,6 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	sd->sprate = 100;
 	sd->castrate = 100;
 	sd->delayrate = 100;
-	sd->magicfindrate = 0;
 	sd->dsprate = 100;
 	sd->hprecov_rate = 100;
 	sd->sprecov_rate = 100;
@@ -3815,6 +3814,7 @@ int status_calc_pc_sub(struct map_session_data* sd, enum e_status_calc_opt opt)
 	sd->def_rate = sd->def2_rate = sd->mdef_rate = sd->mdef2_rate = 100;
 	sd->regen.state.block = 0;
 	sd->add_max_weight = 0;
+	sd->mf_rate = 0;
 
 	sd->indexed_bonus = {};
 
