@@ -59,6 +59,10 @@ ACMD_FUNC(pvpscore)
 
 ACMD_FUNC(battlestats)
 {
+  clif_displaymessage(fd, "------ Battle Stats ------");
+  clif_displaymessage(fd, "Fire resistance: +" + sd->indexed_bonus.subele[ELE_FIRE] + "%");
+  clif_displaymessage(fd, "After-cast delay: -" + sd->status.delayrate + "%");
+  clif_displaymessage(fd, "Better chance of finding magic items: +" + sd->status.magicfindrate + "%");
   return 0;
 }
 
