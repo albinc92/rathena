@@ -68,6 +68,7 @@ Body:
     Aliases:
       - bs
     Help: |
+      Params: <1=defensive|2=offensive|3=miscellaneous>
       Display hidden status info such as after-cast delay, and HP regeneration rate.
   - Command: whosell
     Aliases:
