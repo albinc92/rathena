@@ -3476,7 +3476,7 @@ void pc_bonus(struct map_session_data *sd,int type,int val)
 			break;
 		case SP_MAGIC_FIND:
 			if(sd->state.lr_flag != 2)
-				sd->mf_rate += val;
+				sd->bonus.magic_find += val;
 			break;
 		case SP_RESTART_FULL_RECOVER:
 			if(sd->state.lr_flag != 2)
@@ -8868,7 +8868,6 @@ int64 pc_readparam(struct map_session_data* sd,int64 type)
 		case SP_DEF2_RATE:       val = sd->def2_rate; break;
 		case SP_MDEF_RATE:       val = sd->mdef_rate; break;
 		case SP_MDEF2_RATE:      val = sd->mdef2_rate; break;
-		case SP_MAGIC_FIND:      val = sd->mf_rate; break;
 		case SP_RESTART_FULL_RECOVER: val = sd->special_state.restart_full_recover?1:0; break;
 		case SP_NO_CASTCANCEL:   val = sd->special_state.no_castcancel?1:0; break;
 		case SP_NO_CASTCANCEL2:  val = sd->special_state.no_castcancel2?1:0; break;
@@ -8922,6 +8921,7 @@ int64 pc_readparam(struct map_session_data* sd,int64 type)
 		case SP_FIXCASTRATE:     val = sd->bonus.fixcastrate; break;
 		case SP_ADD_FIXEDCAST:   val = sd->bonus.add_fixcast; break;
 		case SP_ADD_VARIABLECAST:  val = sd->bonus.add_varcast; break;
+		case SP_MAGIC_FIND:	val = sd->bonus.magic_find; break;
 		case SP_CASTRATE:
 		case SP_VARCASTRATE:
 #ifdef RENEWAL_CAST
