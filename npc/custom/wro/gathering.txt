@@ -1909,7 +1909,7 @@ L_Enchant:
 				5, 5, 5, 5,
 				10, 5,
 				15, 15, 4, 15,
-				15;
+				40;
 
 		// Set affixes and check that no duplicates exist
 		if(.@optAmt == 1) {
@@ -1960,7 +1960,7 @@ L_Enchant:
 				5, 5, 10, 10,
 				2, 2, 6, 3,
 				5, 5, 4,
-				15;
+				40;
 
 		// Set affixes and check that no duplicates exist
 		setarray .@index[0], rand(getarraysize(.@armorid)), rand(getarraysize(.@armorid)), rand(getarraysize(.@armorid)), rand(getarraysize(.@armorid)), rand(getarraysize(.@armorid));

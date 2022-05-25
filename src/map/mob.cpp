@@ -2209,7 +2209,7 @@ void mob_setdropitem_option2(struct item *itm, int magic_find) {
             6, 6, 6, 6,
             11, 6,
             16, 16, 5, 16,
-						15
+						40
     };
     short armorid[MAX_ARMOR_INDEX] = {
             3, 4, 5, 6, 7, 8,
@@ -2230,7 +2230,7 @@ void mob_setdropitem_option2(struct item *itm, int magic_find) {
             6, 6, 11, 11,
             3, 3, 7, 4,
             6, 6, 5,
-						15
+						40
     };
 
     int r, optAmt = 0;

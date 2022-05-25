@@ -55,15 +55,39 @@ ACMD_FUNC(battlestats)
   if(type == 1) {
     data.push_back({"----- Resistance VS. Element -----", 0});
     data.push_back({"Neutral : %d%%", sd->indexed_bonus.subele[ELE_NEUTRAL] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_NEUTRAL] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Water :%d%%", sd->indexed_bonus.subele[ELE_WATER] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_WATER] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Earth :%d%%", sd->indexed_bonus.subele[ELE_EARTH] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_EARTH] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Fire :%d%%", sd->indexed_bonus.subele[ELE_FIRE] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_FIRE] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Wind :%d%%", sd->indexed_bonus.subele[ELE_WIND] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_WIND] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Poison :%d%%", sd->indexed_bonus.subele[ELE_POISON] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_POISON] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Holy :%d%%", sd->indexed_bonus.subele[ELE_HOLY] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_HOLY] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Shadow :%d%%", sd->indexed_bonus.subele[ELE_DARK] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_DARK] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Ghost :%d%%", sd->indexed_bonus.subele[ELE_GHOST] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_GHOST] + sd->indexed_bonus.subele_script[ELE_ALL]});
-    data.push_back({"Undead :%d%%", sd->indexed_bonus.subele[ELE_UNDEAD] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_UNDEAD] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Water : %d%%", sd->indexed_bonus.subele[ELE_WATER] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_WATER] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Earth : %d%%", sd->indexed_bonus.subele[ELE_EARTH] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_EARTH] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Fire : %d%%", sd->indexed_bonus.subele[ELE_FIRE] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_FIRE] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Wind : %d%%", sd->indexed_bonus.subele[ELE_WIND] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_WIND] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Poison : %d%%", sd->indexed_bonus.subele[ELE_POISON] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_POISON] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Holy : %d%%", sd->indexed_bonus.subele[ELE_HOLY] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_HOLY] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Shadow : %d%%", sd->indexed_bonus.subele[ELE_DARK] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_DARK] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Ghost : %d%%", sd->indexed_bonus.subele[ELE_GHOST] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_GHOST] + sd->indexed_bonus.subele_script[ELE_ALL]});
+    data.push_back({"Undead : %d%%", sd->indexed_bonus.subele[ELE_UNDEAD] + sd->indexed_bonus.subele[ELE_ALL] + sd->indexed_bonus.subele_script[ELE_UNDEAD] + sd->indexed_bonus.subele_script[ELE_ALL]});
+
+    data.push_back({"----- Physical Resistance VS. Enemy With Defense Element -----", 0});
+    data.push_back({"Neutral : %d%%", sd->indexed_bonus.subdefele[ELE_NEUTRAL] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Water : %d%%", sd->indexed_bonus.subdefele[ELE_WATER] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Earth : %d%%", sd->indexed_bonus.subdefele[ELE_EARTH] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Fire : %d%%", sd->indexed_bonus.subdefele[ELE_FIRE] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Wind : %d%%", sd->indexed_bonus.subdefele[ELE_WIND] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Poison : %d%%", sd->indexed_bonus.subdefele[ELE_POISON] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Holy : %d%%", sd->indexed_bonus.subdefele[ELE_HOLY] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Shadow : %d%%", sd->indexed_bonus.subdefele[ELE_DARK] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Ghost : %d%%", sd->indexed_bonus.subdefele[ELE_GHOST] + sd->indexed_bonus.subdefele[ELE_ALL]});
+    data.push_back({"Undead : %d%%", sd->indexed_bonus.subdefele[ELE_UNDEAD] + sd->indexed_bonus.subdefele[ELE_ALL]});
+
+    data.push_back({"----- Magical Resistance VS. Enemy With Defense Element -----", 0});
+    data.push_back({"Neutral : %d%%", sd->indexed_bonus.magic_subdefele[ELE_NEUTRAL] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Water : %d%%", sd->indexed_bonus.magic_subdefele[ELE_WATER] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Earth : %d%%", sd->indexed_bonus.magic_subdefele[ELE_EARTH] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Fire : %d%%", sd->indexed_bonus.magic_subdefele[ELE_FIRE] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Wind : %d%%", sd->indexed_bonus.magic_subdefele[ELE_WIND] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Poison : %d%%", sd->indexed_bonus.magic_subdefele[ELE_POISON] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Holy : %d%%", sd->indexed_bonus.magic_subdefele[ELE_HOLY] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Shadow : %d%%", sd->indexed_bonus.magic_subdefele[ELE_DARK] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Ghost : %d%%", sd->indexed_bonus.magic_subdefele[ELE_GHOST] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
+    data.push_back({"Undead : %d%%", sd->indexed_bonus.magic_subdefele[ELE_UNDEAD] + sd->indexed_bonus.magic_subdefele[ELE_ALL]});
 
     data.push_back({"----- Resistance VS. Race -----", 0});
     data.push_back({"Formless : %d%%", sd->indexed_bonus.subrace[RC_FORMLESS] + sd->indexed_bonus.subrace[RC_ALL]});
