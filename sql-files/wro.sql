@@ -707,6 +707,8 @@ REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 1599;    -- Angra M
 UPDATE `item_db2` SET `script` = 'bonus bNoMagicDamage,100; bonus bAllStats,999; bonus bBaseAtk,3800; bonus bMatkRate,200; bonus2 bHPDrainRate,1000,100; bonus2 bSPDrainRate,1000,20; bonus bHealPower,200; bonus2 bAddClass,Class_All,100; skill "WZ_STORMGUST",10; Skill "WZ_METEOR",10; Skill "WZ_VERMILION",10; skill "GM_SANDMAN",1; bonus bDelayRate,-100;' WHERE `id` = 1599;
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE `id` = 7721;   -- Adjust Drake Card Value
 UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;   -- Adjust Drake Card Value
+REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE name_english = 'Gemmed Sallet';
+UPDATE `item_db2` SET view = 1799 WHERE name_english LIKE '%Gemmed Sallet';  -- Sprite for Gemmed Sallet
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_db2
