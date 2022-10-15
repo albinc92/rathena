@@ -2295,25 +2295,21 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	mob_level_capped = round(mob_level_capped * 0.396);	// Buffed mob lv. normalization
 	//if (mob_level_capped > 99) mob_level_capped = mob_level - 17;	// Renewal mob lv normalization (unusued with buffed mob lvls)
 	if (boss_type) mob_level_capped += (boss_type * 20) + 2;	// Miniboss & MvP have boosted iLvls +22/42 meaning that
-                                                                // Lady Solace (miniboss) will drop ilvl 99 items at mob lv. 77
+                                                            // Lady Solace (miniboss) will drop ilvl 99 items at mob lv. 77
 	if (mob_level_capped > 99) mob_level_capped = 99;	// Cap to lv. 99
 
 	std::vector<random_equipment_drop> id_range;
+	boolean is_rare = (rnd() % 100 < 25) ? true : false;
+	boolean is_slotted = (rnd() % 100 < 33) ? true : false;
+	int item_type = 0;
 
-	int rarity = rnd() % 1000;
-	int slotted = 0;
-	if ((rnd() % 1000) < 333) {
-		slotted = 1;
-	}
-
+	// Prepare item IDs available for drop
 	// iLv of NORMAL items is based on the level of the monster that drops the item with highest DEF/ATK divided by DEF of item)
 	// iLv of RARE items is based on the mobLv of the monster that usually drops them
-
-	int item_type = 0;
-	if(rarity < 750) { // NORMAL ITEMS
+	if(!is_rare) { // NORMAL ITEMS
 		item_type = rnd() % 189;
 		if(item_type < 10) { // ARMOR
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({2301, 9});
 		      id_range.push_back({2303, 18});
 		      id_range.push_back({2305, 27});
@@ -2327,13 +2323,13 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  std::vector<t_itemid> lv_45_armor = { 2310, 2320 };
 		  id_range.push_back({lv_45_armor.at(rnd() % lv_45_armor.size()), 45});
 		  id_range.push_back({2311, 54});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({2312, 63});
 		  } else {
 		      id_range.push_back({2313, 63});
 		  }
 		  id_range.push_back({2315, 72});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({2316, 90});
 		  } else {
 		      id_range.push_back({2317, 90});
@@ -2341,7 +2337,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({2342, 99});
 		}
 		else if(item_type > 9 && item_type < 13) { // SHIELD
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({2101, 38});
 		  } else {
 		      id_range.push_back({2102, 38});
@@ -2352,7 +2348,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		else if(item_type > 12 && item_type < 17) { // GARMENT
 		  id_range.push_back({2502, 16});
 		  id_range.push_back({2504, 33});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({2505, 66});
 		  } else {
 		      id_range.push_back({2506, 66});
@@ -2362,7 +2358,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		else if(item_type > 16 && item_type < 21) { // FOOTGEAR
 			id_range.push_back({2402, 16});
 			id_range.push_back({2404, 32});
-			if(!slotted) {
+			if(!is_slotted) {
 					id_range.push_back({2405, 66});
 			} else {
 					id_range.push_back({2406, 66});
@@ -2419,20 +2415,20 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({lv_99_accessory.at(rnd() % lv_99_accessory.size()), 99});
 		}
 		else if(item_type > 53 && item_type < 63) { // DAGGER
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1201, 10});
 		  } else {
 		      id_range.push_back({1202, 10});
 		  }
 		  id_range.push_back({1205, 17});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({1207, 24});
 		  } else {
 		      id_range.push_back({1208, 24});
 		  }
 		  id_range.push_back({1211, 34});
 		  id_range.push_back({1214, 42});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({1216, 50});
 		      id_range.push_back({1219, 60});
 		  } else {
@@ -2443,7 +2439,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1226, 67});
 		}
 		else if(item_type > 62 && item_type < 70) { // 1-H SWORD
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1104, 13});
 		  } else {
 		      id_range.push_back({1105, 13});
@@ -2457,7 +2453,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1120, 43});
 		}
 		else if(item_type > 69 && item_type < 75) { // 2-H SWORD
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1116, 25});
 		  } else {
 		      id_range.push_back({1117, 25});
@@ -2473,7 +2469,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1408, 14});
 		}
 		else if(item_type > 77 && item_type < 85) { // 2-H SPEAR (ilv based on highest weapon atk (200 in this case) / 100)
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1451, 33});
 		      id_range.push_back({1454, 40});
 		  } else {
@@ -2482,7 +2478,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  }
 		  id_range.push_back({1485, 44});
 		  id_range.push_back({1458, 48});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({1460, 58});
 		  } else {
 		      id_range.push_back({1461, 58});
@@ -2491,7 +2487,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1411, 72});
 		}
 		else if(item_type > 84 && item_type < 87) { // 1-H AXE
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1301, 12});
 		  } else {
 		      id_range.push_back({1302, 12});
@@ -2505,14 +2501,14 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1361, 52});
 		}
 		else if(item_type > 90 && item_type < 98) { // MACE
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1501, 6});
 		  } else {
 		      id_range.push_back({1502, 6});
 		  }
 		  id_range.push_back({1505, 9});
 		  id_range.push_back({1508, 14});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({1510, 18});
 		      id_range.push_back({1519, 21});
 		      id_range.push_back({1513, 28});
@@ -2525,7 +2521,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		}
 		else if(item_type > 97 && item_type < 105) { // 1H-STAFF (Special case, normal types are dropped by mob lv that usually drops them)
 			id_range.push_back({1602, 3});
-		  if(!slotted) {
+		  if(!is_slotted) {
 		      id_range.push_back({1604, 19});
 		  } else {
 		      id_range.push_back({1605, 19});
@@ -2538,7 +2534,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1611, 44});
 		}
 		else if(item_type > 104 && item_type < 112) { // BOW (Special case, normal types are dropped by mob lv that usually drops them)
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1701, 5});
 		  } else {
 		      id_range.push_back({1702, 5});
@@ -2551,7 +2547,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({1722, 85});
 		}
 		else if(item_type > 111 && item_type < 115) { // KNUCKLE
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({1801, 13});
 		  } else {
 		      id_range.push_back({1802, 13});
@@ -2591,7 +2587,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 			id_range.push_back({13157, 72});
 		}
 		else if(item_type > 131 && item_type < 133) { // HUUMA SHURIKEN
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({13301, 65});
 		  } else {
 		      id_range.push_back({13302, 65});
@@ -2646,7 +2642,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({5096, 71});
 		}
 		else if(item_type > 169 && item_type < 171) { // UPPER & MIDDLE HEADGEAR
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({2224, 18});
 		  } else {
 		      id_range.push_back({2225, 18});
@@ -2678,7 +2674,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 			id_range.push_back({13169, 89});
 		}
 		else if(item_type > 186 && item_type < 188) { // GRENADE LAUNCHER (no rare/normal types)
-			if(!slotted) {
+			if(!is_slotted) {
 	        id_range.push_back({13160, 66});
 	    } else {
 	        id_range.push_back({13161, 66});
@@ -2687,9 +2683,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		else { // UPPER & LOWER HEADGEAR (no rare/normal types)
 			id_range.push_back({5053, 78});
 		}
-	}
-
-	else { // RARE ITEMS
+	} else { // RARE ITEMS
 		item_type = rnd() % 305;
 		if(item_type < 20) { // ARMOR
 			id_range.push_back({2322, 16});
@@ -2808,7 +2802,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    id_range.push_back({1232, 78});
 	    id_range.push_back({1237, 80});
 	    std::vector<t_itemid> lv_86_dagger_r = { 1242 };
-	    if(!slotted) {
+	    if(!is_slotted) {
 	        lv_86_dagger_r.push_back(1230);
 	    } else {
 	        lv_86_dagger_r.push_back(13017);
@@ -2866,7 +2860,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    std::vector<t_itemid> lv_73_2hsper_r = { 1474, 1471 };
 	    id_range.push_back({lv_73_2hsper_r.at(rnd() % lv_73_2hsper_r.size()), 73});
 	    id_range.push_back({1468, 77});
-	    if(!slotted) {
+	    if(!is_slotted) {
 	        id_range.push_back({1466, 81});
 	    } else {
 	        id_range.push_back({1476, 81});
@@ -2888,7 +2882,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    id_range.push_back({1376, 76});
 	    std::vector<t_itemid> lv_77_2haxe_r = { 1366, 1387 };
 	    id_range.push_back({lv_77_2haxe_r.at(rnd() % lv_77_2haxe_r.size()), 77});
-	    if(!slotted) {
+	    if(!is_slotted) {
 	        id_range.push_back({1370, 86});
 	    } else {
 	        id_range.push_back({1371, 86});
@@ -2958,7 +2952,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    id_range.push_back({lv_74_guitar_r.at(rnd() % lv_74_guitar_r.size()), 74});	// Special case, using normal type formula
 	    std::vector<t_itemid> lv_75_guitar_r = { elemental_guitar, 1919, 1926 };
 	    id_range.push_back({lv_75_guitar_r.at(rnd() % lv_75_guitar_r.size()), 75});
-	    if(!slotted) {
+	    if(!is_slotted) {
 	        id_range.push_back({1909, 77});
 	    } else {
 	        id_range.push_back({1910, 77});
@@ -3158,7 +3152,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  id_range.push_back({13169, 89});
 		}
 		else if(item_type > 302 && item_type < 304) { // GRENADE LAUNCHER (no rare/normal types)
-			if(!slotted) {
+			if(!is_slotted) {
 		      id_range.push_back({13160, 66});
 		  } else {
 		      id_range.push_back({13161, 66});
@@ -3168,9 +3162,6 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 			id_range.push_back({5053, 78});
 		}
 	}
-
-  // End of Item list
-  // -----------------------------------------------------------------------------------------------------------------
 
   // Add appropriate ilvl items to drop list
 	std::vector<random_equipment_drop> drop_ids;
