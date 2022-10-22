@@ -2299,8 +2299,8 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	if (mob_level_capped > 99) mob_level_capped = 99;	// Cap to lv. 99
 
 	std::vector<random_equipment_drop> id_range;
-	boolean is_rare = (rnd() % 100 < 25) ? true : false;
-	boolean is_slotted = (rnd() % 100 < 33) ? true : false;
+	bool is_rare = (rnd() % 100 < 25) ? true : false;
+	bool is_slotted = (rnd() % 100 < 33) ? true : false;
 	int item_type = 0;
 
 	// Prepare item IDs available for drop
