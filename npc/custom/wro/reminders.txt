@@ -13,7 +13,7 @@ OnInit:
 		"Never give out your account name or password to anyone!",
 		"Do not forget to keep yourself updated with the latest news at our forums! www.warboundro.boards.net",
 		"Found a bug or having issues with the server? Make a post at our forums! www.warboundro.boards.net",
-		"Enjoying your stay at WarboundRO? Don't forget leave a review on ratemyserver!";
+		"Enjoying your stay at WarboundRO? Don't forget to leave a review on ratemyserver!";
 
 	sleep ( 60000 );
     while(1) {

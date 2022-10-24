@@ -479,7 +479,7 @@ OnInit:
 	.BabySummoner = false;			// Enable Baby Summoner?
 	.LastJob = true;				// Enforce linear class changes?
 	.SkillPointCheck = true;		// Force player to use up all skill points?
-	.Platinum = false;				// Get platinum skills automatically?
+	.Platinum = true;				// Get platinum skills automatically?
 	.GetJobEquip = false;			// Get job equipment (mostly weapons) on job change?
 
 	// Level Requirements
