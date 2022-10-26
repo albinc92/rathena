@@ -6,13 +6,16 @@
 
 -	script	Coins	-1,{
 
-OnInit:
+OnPCLoginEvent:
   set .Time, 60;		// Tick every x Minute.
+  set .Item, 40001; // Event Token
+  set .ItemAmount, 2;
 
-	sleep ( 60000 );
-    while(1) {
-      getitem 40001, 2; // Get event token
-      sleep ( .Time * 60000 );
+  while(1) {
+    sleep ( .Time * 60000 );
+    .@format$ = "You got " + getitemname(.Item) + " (%d).";
+  	dispbottom(sprintf(.@format$, .ItemAmount)),0x00FFFF;
+    getitem 40001, 2; // Get event token
 	}
   end;
 }
