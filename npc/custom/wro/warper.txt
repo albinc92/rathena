@@ -54,8 +54,9 @@ L_Main:
 // --------------------------------------------------
 
 function Go {
-    set .@cost, (1900 + (BaseLevel * 100));
-	if(zeny < .@cost) {
+  set .@cost, (1190 + (BaseLevel * 10));
+
+  if(zeny < .@cost) {
         next;
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
         mes "You don't have enough zeny.";
