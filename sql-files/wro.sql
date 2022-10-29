@@ -692,7 +692,7 @@ VALUES (40205,'Sardonyx_G','Sardonyx','Card','bonus bLuk,1;');
 
 -- Item Cash DB
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 1 FROM `item_db2` WHERE `id` IN (40008);
-REPLACE INTO `item_cash_db2` SELECT 0, `id`, 3 FROM `item_db2` WHERE `id` IN (40057);
+--REPLACE INTO `item_cash_db2` SELECT 0, `id`, 3 FROM `item_db2` WHERE `id` IN (40057);
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40058);
 REPLACE INTO `item_cash_db2` SELECT 0, `id`, 10 FROM `item_db2` WHERE `id` IN (40021, 40022, 40026, 40042, 40055, 40032, 40051, 40049, 40050, 40041, 40053, 40054, 40039, 40031, 40015) ORDER BY `name_aegis`;
 

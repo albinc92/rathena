@@ -6,16 +6,18 @@ OnPCLoginEvent:
 	end;
 
 OnPointGet:
-	while(checkvending() >= 1 || checkchatting() == 1 || checkidle() >= .dlimit) {
+	//while(checkvending() >= 1 || checkchatting() == 1 || checkidle() >= .dlimit) {
+	while(checkvending() >= 1) {
 		sleep2 .check_delay;
 		if(.@mes$=="") {
 			set @continue_flag, 1;
-			dispbottom set(.@mes$, "The hourly reward system paused because you were vending, chatting, or being idle.", 0x00FFFF);
+			//dispbottom set(.@mes$, "The hourly reward system paused because you were vending, chatting, or being idle.", 0x00FFFF);
+			dispbottom set(.@mes$, "The hourly reward system paused because you were vending.", 0x00FFFF);
 		}
 	}
 
 	if(@continue_flag) {
-		dispbottom("The hourly reward system has now been resumed.", 0x00FFFF);
+		dispbottom "The hourly reward system has now been resumed.", 0x00FFFF;
 		set @continue_flag, 0;
 	}
 
