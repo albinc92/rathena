@@ -775,7 +775,8 @@ SELECT
     `Drop9per`,
     `DropCardid`,
     `DropCardper`
-FROM `mob_db`;
+FROM `mob_db`
+WHERE `LV` < 100;
 
 -- Limit monster level to 250
 UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
