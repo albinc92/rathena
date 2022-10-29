@@ -1,49 +1,50 @@
 royal,141,165,3	script	Donor Rewards Redeemer	987,{
 	set .npcName$, "[Donor Rewards Redeemer]";
 
-	mes "[" + strnpcinfo(0) + "]";
+	mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 	mes "A very fine day to you " + (Sex ? "good sir!" : "young madam!");
 	mes "How may I be of assistance to you?";
 	next;
 
-	mes "[" + strnpcinfo(0) + "]";
 	prompt("Redeem Cash Points:Information:Cancel");
 	switch(@menu) {
 		case 1:
+			next;
 			query_sql "SELECT `balance` FROM `cp_credits` WHERE `account_id` = " + getcharid(3), .@balance;
-
 			if (.@balance) {
-				mes "[" + strnpcinfo(0) + "]";
+				mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 				mes "Ah, very good! You are egligble to receive ^FF0000" + .@balance + " Cash Points^000000.";
 				mes "Would you like to claims these now?";
 				next;
 				set .@menu, select("Claim:Cancel");
 				if(.@menu == 1) {
-					mes "[" + strnpcinfo(0) + "]";
+					mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 					mes "Splendid, I have now transfered you the appropriate amount (^FF0000" + .@balance + "^000000).";
 					query_sql "DELETE FROM  `cp_credits` WHERE `account_id` = " + getcharid(3);
 					atcommand "#cash " + strcharinfo(0) + " " + .@balance;
 					next;
-					mes "[" + strnpcinfo(0) + "]";
+						mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 					mes "Thank you, and fare thee well!";
 					close;
 				} else {
-					mes "[" + strnpcinfo(0) + "]";
+					mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 					mes "Very well then. Until next time!";
 					close;
 				}
 			} else {
-				mes "[" + strnpcinfo(0) + "]";
+				mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 				mes "I'm sorry, but my records indicate that you are currently not applicable for withdrawal of Cash Points.";
 			}
 			break;
 		case 2:
-			mes "[" + strnpcinfo(0) + "]";
+			next;
+			mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 			mes "My job is to provide adequate compensation to those whom have so generously donated to this server.";
 			next;
-			mes "[" + strnpcinfo(0) + "]";
+			mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 			mes "If you have made a donation, you willl be egligble to receive ^FF0000Cash Points^000000 - which in turn can be used as currency in the Cash Shop.";
 			next;
+			mes "[^0000FF" + strnpcinfo(0) + "^000000]";
 			mes "Donations may be made to the server via the Control Panel at our website.";
 			break;
 		default:

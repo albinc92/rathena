@@ -22,7 +22,11 @@ OnPointGet:
 	}
 
 	@hour_cnt++;
-	set @item_qty = (@hour_cnt <= .max_qty) ? @hour_cnt : .max_qty;
+	if(@hour_cnt <= .max_qty) {
+		set @item_qty, @hour_cnt;
+	} else {
+		set @item_qty, .max_qty;
+	}
 	getitem .itemID, @item_qty;
 	.@format$ = "You got %s (%d) by being online for %d consecutive hour(s).";
 	dispbottom(sprintf(.@format$, getitemname(.itemID), @item_qty, @hour_cnt), 0x00FFFF);
