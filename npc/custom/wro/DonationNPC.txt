@@ -33,7 +33,7 @@ royal,141,165,3	script	Donor Rewards Redeemer	987,{
 				}
 			} else {
 				mes "[^0000FF" + strnpcinfo(0) + "^000000]";
-				mes "I'm sorry, but my records indicate that you are currently not applicable for withdrawal of Cash Points.";
+				mes "I'm sorry, but my records indicate that you are currently not egligble to receive any Cash Points.";
 			}
 			break;
 		case 2:
