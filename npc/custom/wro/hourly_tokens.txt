@@ -1,0 +1,38 @@
+-	script	hourlypoints	-1,{
+
+OnPCLoginEvent:
+	set @hour_cnt, 0;
+	addtimer .timer, "hourlypoints::OnPointGet";
+	end;
+
+OnPointGet:
+	while(checkvending() >= 1 || checkchatting() == 1 || checkidle() >= .dlimit) {
+		sleep2 .check_delay;
+		if(.@mes$=="") {
+			set @continue_flag, 1;
+			dispbottom set(.@mes$, "The hourly reward system paused because you were vending, chatting, or being idle.", 0x00FFFF);
+		}
+	}
+
+	if(@continue_flag) {
+		dispbottom("The hourly reward system has now been resumed.", 0x00FFFF);
+		set @continue_flag, 0;
+	}
+
+	@hour_cnt++;
+	set @item_qty = (@hour_cnt <= .max_qty) ? @hour_cnt : .max_qty;
+	getitem .itemID, @item_qty;
+	.@format$ = "You got %s (%d) by being online for %d consecutive hour(s).";
+	dispbottom(sprintf(.@format$, getitemname(.itemID), @item_qty, @hour_cnt), 0x00FFFF);
+
+	addtimer .timer, "hourlypoints::OnPointGet";
+	end;
+
+OnInit:
+	set .timer, 1000 * 60 * 60;	//Timer in milliseconds.
+	set .itemID, 40001;					//Reward item ID.
+	set .max_qty, 3;						//Reward item quantity.
+	set .check_delay, 1000;			//Time for idle re-check in ms.
+	set .dlimit, 60 * 10;				//Idle time allowed in seconds.
+	end;
+}
