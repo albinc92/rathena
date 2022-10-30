@@ -715,7 +715,7 @@ UPDATE `item_db2` SET view = 1799 WHERE name_english LIKE '%Gemmed Sallet';  -- 
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- Make monsters scale up to Lv. 250
--- Except some special cases
+-- Pre-renewal monsters
 INSERT INTO `mob_db2`
 SELECT
     `ID`,
@@ -778,8 +778,69 @@ SELECT
 FROM `mob_db`
 WHERE `LV` < 100;
 
--- Limit monster level to 250
-UPDATE `mob_db2` SET `lv` = 250 WHERE `lv` > 250;
+-- Make monsters scale up to Lv. 250
+-- Renewal monsters
+INSERT INTO `mob_db2`
+SELECT
+    `ID`,
+    `Sprite`,
+    `kName`,
+    `iName`,
+    `LV` + (`LV` * 1.136),
+    `HP` + (`HP` * 1.136),
+    `SP`,
+    `EXP` + (`EXP` * 1.136),
+    `JEXP` + (`JEXP` * 1.136),
+    `Range1`,
+    `ATK1` + (`ATK1` * 1.136),
+    `ATK2` + (`ATK2` * 1.136),
+    `DEF`,
+    `MDEF`,
+    `STR` + (`STR` * 1.136),
+    `AGI` + (`AGI` * 1.136),
+    `VIT` + (`VIT` * 1.136),
+    `INT` + (`INT` * 1.136),
+    `DEX` + (`DEX` * 1.136),
+    `LUK` + (`LUK` * 1.136),
+    `Range2`,
+    `Range3`,
+    `Scale`,
+    `Race`,
+    `Element`,
+    `Mode`,
+    `Speed`,
+    `aDelay`,
+    `aMotion`,
+    `dMotion`,
+    `MEXP`,
+    `MVP1id`,
+    `MVP1per`,
+    `MVP2id`,
+    `MVP2per`,
+    `MVP3id`,
+    `MVP3per`,
+    `Drop1id`,
+    `Drop1per`,
+    `Drop2id`,
+    `Drop2per`,
+    `Drop3id`,
+    `Drop3per`,
+    `Drop4id`,
+    `Drop4per`,
+    `Drop5id`,
+    `Drop5per`,
+    `Drop6id`,
+    `Drop6per`,
+    `Drop7id`,
+    `Drop7per`,
+    `Drop8id`,
+    `Drop8per`,
+    `Drop9id`,
+    `Drop9per`,
+    `DropCardid`,
+    `DropCardper`
+FROM `mob_db`
+WHERE `LV` > 99;
 
 -- Limit slave count to 2 for monsters
 UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
