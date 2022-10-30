@@ -109,7 +109,7 @@ roy_in02,177,27,1	script	Jukebox	563,{
 	set .@menu, select("Request a song:Cancel");
 	if(.@menu==1) {
         mes "[" + strnpcinfo(0) + "]";
-        mes "^808080*Brzzzt*^000000 Input 3 digit number of the ^808080*Brzzzt*^000000 BGM you w-wish to be played";
+        mes "^808080*Brzzzt*^000000 Input digit number of the ^808080*Brzzzt*^000000 BGM you w-wish to be played";
         input .@song$;
         next;
 	    set .@size, getstrlen(.@song$);
