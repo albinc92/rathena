@@ -13,6 +13,23 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 			if ( !@inventorylist_identify[.@i] ) {
 				set .@found, 1;
 
+				// Get Magic Stone for magical affixes
+				if(@inventorylist_option_id1[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id2[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id3[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id4[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id5[.@i]) {
+					getitem 7597, 1;
+				}
+
 				// IF WEAPON
 				if(getiteminfo(@inventorylist_id[.@i],2)==5) {
 					delitem @inventorylist_id[.@i],1;
@@ -59,13 +76,16 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 		mes "If you can bring me any type of unidentified piece of equipment, I can deconstruct it for you.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
-		mes "Once deconstructed, an item will be converted back to its base material.";
+		mes "Once deconstructed, an item will be converted back to its base material(s).";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "A level 1 weapon will generate a Phracon, for instance. While a level 3 or 4 item will generate an Oridecon.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Any piece of armor will generate Elunium.";
+		next;
+		mes "["+strnpcinfo(1)+"]";
+		mes "If the unidentified item had any magical affixes tied to it, a Magic Stone will be generated from each affix.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Got all that? Good.";
@@ -82,7 +102,7 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 royal,93,116,0	script	HD Tempering Stove#2	111,1,1,{
 
 	mes "[Instructions]";
-	mes "Enter stacks of ^ff000010 Oridecon^000000 into the stove to produce ^ff00001 HD Oridecon^000000, or stacks of ^ff000010 Elunium^000000 into the stove to produce ^ff00001 HD Elunium^000000.";
+	mes "Enter stacks of ^ff00003 Oridecon^000000 into the stove to produce ^ff00001 HD Oridecon^000000, or stacks of ^ff00003 Elunium^000000 into the stove to produce ^ff00001 HD Elunium^000000.";
 	next;
 	goto L_Main;
 
@@ -98,34 +118,34 @@ L_Main:
 	}
 
 L_Oridecon:
-	mes "How many ^ff0000HD Oridecon^000000 would I like to produce? (^ff000010 Oridecon^000000 ea.)";
+	mes "How many ^ff0000HD Oridecon^000000 would I like to produce? (^ff00003 Oridecon^000000 ea.)";
 	input @test;
 	next;
 
 	// Item & input check
-	if(@test==0 || countitem(984)<(@test*10)) {
+	if(@test==0 || countitem(984)<(@test*3)) {
 		mes "It seems I don't have enough to produce that amount.";
 		close;
 	}
 
 	getitem 6240,@test;
-	delitem 984,(@test*10);
+	delitem 984,(@test*3);
 	specialeffect 96,AREA,"HD Tempering Stove#2";
 	close;
 
 L_Elunium:
-	mes "How many ^ff0000HD Elunium^000000 would I like to produce? (^ff000010 Oridecon^000000 ea.)";
+	mes "How many ^ff0000HD Elunium^000000 would I like to produce? (^ff00003 Oridecon^000000 ea.)";
 	input @test;
 	next;
 
 	// Item & input check
-	if(@test==0 || countitem(985)<(@test*10)) {
+	if(@test==0 || countitem(985)<(@test*3)) {
 		mes "It seems I don't have enough to produce that amount.";
 		close;
 	}
 
 	getitem 6241,@test;
-	delitem 985,(@test*10);
+	delitem 985,(@test*3);
 	specialeffect 96,AREA,"HD Tempering Stove#2";
 	close;
 
