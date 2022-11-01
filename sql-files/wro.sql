@@ -171,7 +171,13 @@ SET `weight` = 0,
     `trade_noguildstorage` = true,
     `trade_nomail` = true,
     `trade_noauction` = true
-WHERE `id` IN (7160, 7285, 7287, 7181);
+WHERE `id` IN (
+  7160, --Feudal lord permit
+  7285, 7287, --Holy/holier threads
+  7181, --Recepit
+  7426, 7427, 7428, 7429, 7430, --Thana Charm stones
+  7421, 7422, 7423, 7424, 7425 --Thana keys
+);
 
 -- Make certain items droppable etc.
 REPLACE INTO `item_db2`
