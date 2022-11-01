@@ -728,7 +728,7 @@ UPDATE `item_db2` SET view = 1799 WHERE name_english LIKE '%Gemmed Sallet';  -- 
 
 -- Make monsters scale up to Lv. 250
 -- Pre-renewal monsters
-INSERT INTO `mob_db2`
+REPLACE INTO `mob_db2`
 SELECT
     `ID`,
     `Sprite`,
@@ -792,7 +792,7 @@ WHERE `LV` < 100;
 
 -- Make monsters scale up to Lv. 250
 -- Renewal monsters
-INSERT INTO `mob_db2`
+REPLACE INTO `mob_db2`
 SELECT
     `ID`,
     `Sprite`,
@@ -804,8 +804,8 @@ SELECT
     `EXP` + (`EXP` * 1.136),
     `JEXP` + (`JEXP` * 1.136),
     `Range1`,
-    `ATK1` + (`ATK1` * 1.136),
-    `ATK2` + (`ATK2` * 1.136),
+    `ATK1`,
+    `ATK2`,
     `DEF`,
     `MDEF`,
     `STR` + (`STR` * 1.136),
