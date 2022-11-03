@@ -288,7 +288,7 @@ L_ChangeProf:
 	mes "["+strnpcinfo(1)+"]";
 	mes "I am proud to announce you an Enchanter!";
 	//query_sql("REPLACE INTO `gathering` VALUES (" + getcharid(0) + ",0,0,1)");
-	query_sql("UPDATE `gathering` SET `Enchanting` = 1 char_id = " + getcharid(0));
+	query_sql("UPDATE `gathering` SET `Enchanting` = 1 WHERE char_id = " + getcharid(0));
 	specialeffect2 568;
 	message strcharinfo(0),"You have learnt the [Enchanting] profession.";
 	close;
