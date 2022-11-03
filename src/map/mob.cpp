@@ -2395,8 +2395,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 		  std::vector<t_itemid> lv_75_accessory = { 2613, 2656, 2703 };
 		  id_range.push_back({lv_75_accessory.at(rnd() % lv_75_accessory.size()), 75});
 		  id_range.push_back({2621, 77});
-		  id_range.push_back({2677, 80});
-		  std::vector<t_itemid> lv_80_accessory = { 2701, 2745 };
+		  std::vector<t_itemid> lv_80_accessory = { 2677, 2701, 2745 };
 		  id_range.push_back({lv_80_accessory.at(rnd() % lv_80_accessory.size()), 80});
 		  id_range.push_back({2615, 81});
 		  id_range.push_back({2748, 84});
