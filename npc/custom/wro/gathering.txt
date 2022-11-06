@@ -475,9 +475,9 @@ function	script	harvestnode	{
 
 // ==========================================================
 // Herbs, Level 1
-// Up to Level 25 dungeons
+// Up to Level 60 fields
 // ==========================================================
-anthell01,0,0,3	script	Green Stem#1	10229,{
+ayo_fild01,0,0,3	script	Green Stem#1	10229,{
 	callfunc "checkprofession","Herbalism";
 
     getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -514,123 +514,540 @@ OnInit:
 	end;
 
 }
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#2	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#23	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#24	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#25	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#26	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#27	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#28	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#29	10229
-anthell01,0,0,3	duplicate(Green Stem#1)	Green Stem#30	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#3	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#4	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#31	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#32	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#33	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#34	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#35	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#36	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#37	10229
-anthell02,0,0,3	duplicate(Green Stem#1)	Green Stem#38	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#5	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#6	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#39	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#40	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#41	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#42	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#43	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#44	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#45	10229
-beach_dun3,0,0,3	duplicate(Green Stem#1)	Green Stem#46	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#7	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#8	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#47	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#48	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#49	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#50	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#51	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#52	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#53	10229
-iz_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#54	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#9	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#10	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#55	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#56	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#57	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#58	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#59	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#60	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#61	10229
-iz_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#62	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#11	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#12	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#63	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#64	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#65	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#66	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#67	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#68	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#69	10229
-mjo_dun01,0,0,3	duplicate(Green Stem#1)	Green Stem#70	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#13	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#14	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#71	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#72	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#73	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#74	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#75	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#76	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#77	10229
-mjo_dun02,0,0,3	duplicate(Green Stem#1)	Green Stem#78	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#15	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#16	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#79	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#80	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#81	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#82	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#83	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#84	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#85	10229
-prt_maze01,0,0,3	duplicate(Green Stem#1)	Green Stem#86	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#17	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#18	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#87	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#88	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#89	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#90	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#91	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#92	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#93	10229
-prt_maze02,0,0,3	duplicate(Green Stem#1)	Green Stem#94	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#19	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#20	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#95	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#96	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#97	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#98	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#99	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#100	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#101	10229
-orcsdun01,0,0,3	duplicate(Green Stem#1)	Green Stem#102	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#21	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#103	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#104	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#105	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#106	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#107	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#108	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#109	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#110	10229
-pay_dun00,0,0,3	duplicate(Green Stem#1)	Green Stem#111	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_2	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_3	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_4	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_5	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_6	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_7	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_8	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_9	10229
 
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_1	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_2	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_3	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_4	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_5	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_6	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_7	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_8	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_9	10229
 
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_1	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_2	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_3	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_4	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_5	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_6	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_7	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_8	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_9	10229
+
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_1	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_2	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_3	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_4	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_5	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_6	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_7	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_8	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_9	10229
+
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_1	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_2	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_3	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_4	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_5	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_6	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_7	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_8	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_9	10229
+
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_1	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_2	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_3	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_4	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_5	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_6	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_7	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_8	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_9	10229
+
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_1	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_2	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_3	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_4	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_5	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_6	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_7	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_8	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_9	10229
+
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_1	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_2	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_3	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_4	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_5	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_6	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_7	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_8	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_9	10229
+
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_1	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_2	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_3	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_4	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_5	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_6	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_7	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_8	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_9	10229
+
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_1	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_2	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_3	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_4	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_5	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_6	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_7	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_8	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_9	10229
+
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_1	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_2	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_3	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_4	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_5	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_6	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_7	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_8	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_9	10229
+
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_1	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_2	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_3	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_4	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_5	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_6	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_7	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_8	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_9	10229
+
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_1	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_2	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_3	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_4	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_5	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_6	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_7	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_8	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_9	10229
+
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_1	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_2	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_3	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_4	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_5	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_6	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_7	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_8	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_9	10229
+
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_1	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_2	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_3	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_4	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_5	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_6	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_7	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_8	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_9	10229
+
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_1	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_2	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_3	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_4	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_5	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_6	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_7	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_8	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_9	10229
+
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_1	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_2	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_3	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_4	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_5	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_6	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_7	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_8	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_9	10229
+
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_1	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_2	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_3	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_4	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_5	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_6	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_7	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_8	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_9	10229
+
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_1	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_2	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_3	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_4	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_5	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_6	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_7	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_8	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_9	10229
+
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_1	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_2	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_3	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_4	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_5	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_6	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_7	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_8	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_9	10229
+
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_1	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_2	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_3	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_4	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_5	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_6	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_7	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_8	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_9	10229
+
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_1	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_2	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_3	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_4	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_5	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_6	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_7	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_8	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_9	10229
+
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_1	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_2	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_3	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_4	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_5	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_6	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_7	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_8	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_9	10229
+
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_1	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_2	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_3	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_4	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_5	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_6	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_7	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_8	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_9	10229
+
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_1	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_2	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_3	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_4	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_5	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_6	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_7	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_8	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_9	10229
+
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_1	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_2	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_3	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_4	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_5	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_6	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_7	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_8	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_9	10229
+
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_1	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_2	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_3	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_4	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_5	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_6	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_7	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_8	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_9	10229
+
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_1	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_2	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_3	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_4	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_5	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_6	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_7	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_8	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_9	10229
+
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_1	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_2	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_3	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_4	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_5	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_6	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_7	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_8	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_9	10229
+
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_1	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_2	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_3	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_4	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_5	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_6	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_7	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_8	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_9	10229
+
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_1	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_2	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_3	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_4	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_5	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_6	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_7	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_8	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_9	10229
+
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_1	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_2	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_3	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_4	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_5	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_6	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_7	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_8	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_9	10229
+
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_1	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_2	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_3	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_4	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_5	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_6	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_7	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_8	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_9	10229
+
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_1	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_2	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_3	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_4	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_5	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_6	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_7	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_8	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_9	10229
+
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_1	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_2	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_3	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_4	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_5	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_6	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_7	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_8	10229
+prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_9	10229
+
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_1	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_2	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_3	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_4	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_5	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_6	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_7	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_8	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_9	10229
+
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_1	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_2	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_3	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_4	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_5	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_6	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_7	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_8	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_9	10229
+
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_1	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_2	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_3	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_4	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_5	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_6	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_7	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_8	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_9	10229
+
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_1	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_2	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_3	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_4	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_5	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_6	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_7	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_8	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_9	10229
+
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_1	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_2	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_3	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_4	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_5	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_6	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_7	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_8	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_9	10229
+
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_1	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_2	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_3	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_4	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_5	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_6	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_7	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_8	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_9	10229
+
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_1	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_2	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_3	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_4	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_5	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_6	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_7	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_8	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_9	10229
+
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_1	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_2	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_3	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_4	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_5	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_6	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_7	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_8	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_9	10229
+
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_1	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_2	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_3	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_4	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_5	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_6	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_7	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_8	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_9	10229
+
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_1	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_2	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_3	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_4	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_5	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_6	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_7	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_8	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_9	10229
+
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_1	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_2	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_3	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_4	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_5	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_6	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_7	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_8	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_9	10229
+
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_1	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_2	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_3	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_4	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_5	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_6	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_7	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_8	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_9	10229
+
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_1	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_2	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_3	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_4	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_5	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_6	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_7	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_8	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_9	10229
+
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_1	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_2	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_3	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_4	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_5	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_6	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_7	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_8	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_9	10229
+
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_1	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_2	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_3	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_4	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_5	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_6	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_7	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_8	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_9	10229
+
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_1	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_2	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_3	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_4	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_5	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_6	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_7	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_8	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_9	10229
+
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_1	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_2	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_3	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_4	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_5	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_6	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_7	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_8	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_9	10229
+
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_1	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_2	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_3	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_4	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_5	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_6	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_7	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_8	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_9	10229
 
 // ==========================================================
 // Herbs, Level 2
-// Up to Level 50 dungeons
+// Up to Level 120 fields
 // ==========================================================
-ama_dun02,0,0,3	script	Jack o' Pumpkin#1	10174,{
+ama_fild01,0,0,3	script	Jack o' Pumpkin#1	10174,{
 	callfunc "checkprofession","Herbalism";
 
     getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -667,172 +1084,534 @@ OnInit:
 	end;
 
 }
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#2	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#3	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#4	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#5	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#6	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#7	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#8	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#9	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#10	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#11	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#12	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#13	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#14	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#15	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#16	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#17	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#18	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#19	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#20	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#21	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#22	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#23	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#24	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#25	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#26	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#27	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#28	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#29	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#30	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#31	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#32	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#33	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#34	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#35	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#36	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#37	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#38	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#39	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#40	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_2	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_3	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_4	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_5	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_6	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_7	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_8	10174
 
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#41	10174
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#42	10174
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#43	10174
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#44	10174
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#45	10174
-ama_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#46	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#47	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#48	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#49	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#50	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#51	10174
-iz_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#52	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#53	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#54	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#55	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#56	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#57	10174
-iz_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#58	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#59	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#60	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#61	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#62	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#63	10174
-iz_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#64	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#65	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#66	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#67	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#68	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#69	10174
-mjo_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#70	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#71	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#72	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#73	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#74	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#75	10174
-ein_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#76	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#77	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#78	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#79	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#80	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#81	10174
-gef_dun00,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#82	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#83	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#84	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#85	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#86	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#87	10174
-gef_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#88	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#89	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#90	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#91	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#92	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#93	10174
-gef_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#94	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#95	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#96	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#97	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#98	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#99	10174
-prt_maze03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#100	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#101	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#102	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#103	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#104	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#105	10174
-ice_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#106	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#107	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#108	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#109	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#110	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#111	10174
-mosk_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#112	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#113	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#114	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#115	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#116	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#117	10174
-mosk_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#118	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#119	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#120	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#121	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#122	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#123	10174
-orcsdun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#124	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#125	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#126	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#127	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#128	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#129	10174
-pay_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#130	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#131	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#132	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#133	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#134	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#135	10174
-pay_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#136	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#137	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#138	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#139	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#140	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#141	10174
-pay_dun03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#142	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#143	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#144	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#145	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#146	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#147	10174
-pay_dun04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#148	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#149	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#150	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#151	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#152	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#153	10174
-um_dun01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#154	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#155	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#156	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#157	10174
-um_dun02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#158	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_1	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_2	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_3	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_4	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_5	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_6	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_7	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_8	10174
+
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_1	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_2	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_3	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_4	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_5	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_6	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_7	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_8	10174
+
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_1	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_2	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_3	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_4	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_5	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_6	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_7	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_8	10174
+
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_1	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_2	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_3	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_4	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_5	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_6	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_7	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_8	10174
+
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_1	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_2	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_3	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_4	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_5	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_6	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_7	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_8	10174
+
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_1	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_2	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_4	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_4	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_5	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_6	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_7	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_8	10174
+
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_1	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_2	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_3	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_4	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_5	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_6	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_7	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_8	10174
+
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_1	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_2	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_3	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_4	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_5	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_6	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_7	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_8	10174
+
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_1	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_2	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_3	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_4	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_5	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_6	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_7	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_8	10174
+
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_1	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_2	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_3	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_4	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_5	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_6	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_7	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_8	10174
+
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_1	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_2	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_3	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_4	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_5	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_6	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_7	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_8	10174
+
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_1	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_2	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_3	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_4	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_5	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_6	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_7	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_8	10174
+
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_1	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_2	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_3	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_4	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_5	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_6	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_7	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_8	10174
+
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_1	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_2	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_3	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_4	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_5	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_6	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_7	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_8	10174
+
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_1	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_2	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_3	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_4	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_5	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_6	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_7	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_8	10174
+
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_1	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_2	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_3	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_4	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_5	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_6	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_7	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_8	10174
+
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_1	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_2	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_3	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_4	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_5	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_6	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_7	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_8	10174
+
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_1	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_2	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_3	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_4	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_5	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_6	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_7	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_8	10174
+
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_1	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_2	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_3	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_4	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_5	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_6	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_7	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_8	10174
+
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_1	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_2	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_3	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_4	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_5	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_6	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_7	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_8	10174
+
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_1	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_2	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_3	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_4	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_5	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_6	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_7	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_8	10174
+
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_1	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_2	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_3	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_4	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_5	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_6	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_7	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_8	10174
+
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_1	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_2	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_3	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_4	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_5	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_6	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_7	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_8	10174
+
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_1	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_2	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_3	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_4	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_5	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_6	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_7	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_8	10174
+
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_1	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_2	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_3	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_4	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_5	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_6	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_7	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_8	10174
+
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_1	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_2	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_3	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_4	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_5	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_6	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_7	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_8	10174
+
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_1	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_2	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_3	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_4	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_5	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_6	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_7	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_8	10174
+
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_1	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_2	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_3	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_4	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_5	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_6	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_7	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_8	10174
+
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_1	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_2	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_3	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_4	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_5	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_6	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_7	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_8	10174
+
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_1	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_2	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_3	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_4	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_5	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_6	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_7	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_8	10174
+
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_1	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_2	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_3	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_4	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_5	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_6	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_7	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_8	10174
+
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_1	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_2	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_3	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_4	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_5	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_6	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_7	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_8	10174
+
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_1	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_2	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_3	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_4	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_5	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_6	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_7	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_8	10174
+
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_1	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_2	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_3	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_4	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_5	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_6	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_7	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_8	10174
+
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_1	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_2	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_3	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_4	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_5	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_6	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_7	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_8	10174
+
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_1	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_2	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_3	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_4	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_5	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_6	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_7	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_8	10174
+
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_1	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_2	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_3	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_4	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_5	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_6	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_7	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_8	10174
+
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_1	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_2	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_3	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_4	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_5	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_6	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_7	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_8	10174
+
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_1	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_2	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_3	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_4	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_5	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_6	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_7	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_8	10174
+
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_1	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_2	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_3	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_4	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_5	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_6	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_7	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_8	10174
+
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_1	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_2	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_3	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_4	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_5	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_6	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_7	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_8	10174
+
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_1	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_2	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_3	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_4	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_5	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_6	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_7	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_8	10174
+
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_1	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_2	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_3	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_4	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_5	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_6	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_7	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_8	10174
+
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_1	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_2	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_3	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_4	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_5	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_6	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_7	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_8	10174
+
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_1	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_2	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_3	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_4	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_5	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_6	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_7	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_8	10174
+
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_1	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_2	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_3	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_4	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_5	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_6	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_7	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_8	10174
+
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_1	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_2	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_3	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_4	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_5	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_6	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_7	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_8	10174
+
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_1	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_2	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_3	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_4	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_5	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_6	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_7	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_8	10174
+
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_1	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_2	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_3	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_4	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_5	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_6	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_7	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_8	10174
+
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_1	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_2	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_3	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_4	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_5	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_6	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_7	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_8	10174
+
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_1	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_2	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_3	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_4	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_5	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_6	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_7	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_8	10174
+
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_1	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_2	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_3	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_4	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_5	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_6	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_7	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_8	10174
+
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_1	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_2	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_3	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_4	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_5	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_6	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_7	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_8	10174
+
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_1	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_2	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_3	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_4	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_5	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_6	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_7	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_8	10174
+
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_1	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_2	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_3	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_4	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_5	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_6	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_7	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_8	10174
+
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_1	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_2	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_3	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_4	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_5	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_6	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_7	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_8	10174
 
 
 
 // ==========================================================
 // Herbs, Level 3
-// Up to Level 75 dungeons
+// Up to Level 180 fields
 // ==========================================================
-abyss_01,0,0,3	script	Wigglewort#1	527,{
+cmd_fild02,0,0,3	script	Wigglewort#1	527,{
 	callfunc "checkprofession","Herbalism";
 
     getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -869,146 +1648,188 @@ OnInit:
 	end;
 
 }
-abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#2	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#3	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#4	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#5	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#6	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#7	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#8	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#9	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#10	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#11	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#12	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#13	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#14	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#23	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#24	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#25	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#26	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#27	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#28	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#29	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#30	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#31	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#32	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#33	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#34	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#35	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#36	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#37	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#38	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#39	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#40	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#41	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#42	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#43	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#44	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#45	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#46	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#47	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#48	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#49	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#50	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#51	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#52	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_2	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_3	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_4	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_5	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_6	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_7	527
 
-abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#53	527
-abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#54	527
-abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#55	527
-abyss_01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#56	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#57	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#58	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#59	527
-abyss_02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#60	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#61	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#62	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#63	527
-beach_dun2,0,0,3	duplicate(Wigglewort#1)	Wigglewort#64	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#65	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#66	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#67	527
-ein_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#68	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#69	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#70	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#71	527
-gon_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#72	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#73	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#74	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#75	527
-gon_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#76	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#77	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#78	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#79	527
-gon_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#80	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#81	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#82	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#83	527
-ice_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#84	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#85	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#86	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#87	527
-ice_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#88	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#89	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#90	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#91	527
-lou_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#92	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#93	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#94	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#95	527
-lou_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#96	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#97	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#98	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#99	527
-lou_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#100	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#101	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#102	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#103	527
-mag_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#104	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#105	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#106	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#107	527
-mag_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#108	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#109	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#110	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#111	527
-mosk_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#112	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#113	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#114	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#115	527
-odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#116	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#117	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#118	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#119	527
-odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#120	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#121	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#122	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#123	527
-thor_v02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#124	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#125	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#126	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#127	527
-tur_dun01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#128	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#129	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#130	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#131	527
-tur_dun02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#132	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#133	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#134	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#135	527
-tur_dun03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#136	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#137	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#138	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#139	527
-tur_dun04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#140	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_1	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_2	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_3	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_4	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_5	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_6	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_7	527
+
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_1	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_2	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_3	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_4	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_5	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_6	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_7	527
+
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_1	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_2	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_3	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_4	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_5	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_6	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_7	527
+
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_1	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_2	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_3	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_4	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_5	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_6	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_7	527
+
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_1	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_2	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_3	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_4	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_5	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_6	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_7	527
+
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_1	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_2	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_3	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_4	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_5	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_6	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_7	527
+
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_1	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_2	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_3	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_4	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_5	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_6	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_7	527
+
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_1	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_2	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_3	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_4	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_5	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_6	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_7	527
+
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_1	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_2	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_3	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_4	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_5	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_6	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_7	527
+
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_1	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_2	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_3	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_4	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_5	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_6	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_7	527
+
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_1	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_2	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_3	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_4	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_5	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_6	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_7	527
+
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_1	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_2	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_3	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_4	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_5	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_6	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_7	527
+
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_1	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_2	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_3	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_4	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_5	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_6	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_7	527
+
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_1	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_2	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_3	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_4	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_5	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_6	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_7	527
+
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_1	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_2	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_3	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_4	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_5	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_6	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_7	527
+
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_1	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_2	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_3	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_4	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_5	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_6	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_7	527
+
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_1	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_2	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_3	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_4	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_5	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_6	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_7	527
+
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_1	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_2	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_3	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_4	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_5	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_6	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_7	527
+
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_1	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_2	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_3	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_4	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_5	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_6	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_7	527
+
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_1	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_2	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_3	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_4	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_5	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_6	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_7	527
+
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_1	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_2	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_3	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_4	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_5	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_6	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_7	527
 
 
 
 // ==========================================================
 // Herbs, Level 4
-// Up to Level 100 dungeons
+// Up to Level 240 fields
 // ==========================================================
-abyss_03,0,0,3	script	Silvervine Gourd#1	1816,{
+man_fild02,0,0,3	script	Silvervine Gourd#1	1816,{
 	callfunc "checkprofession","Herbalism";
 
     getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -1045,52 +1866,54 @@ OnInit:
 	end;
 
 }
-abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#2	1816
-beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#3	1816
-beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#4	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#5	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#6	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#7	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#8	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#9	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#10	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#11	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#12	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#13	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#14	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_2	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_3	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_4	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_5	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_6	1816
 
-abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#15	1816
-abyss_03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#16	1816
-beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#17	1816
-beach_dun,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#18	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#19	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#20	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#21	1816
-juperos_01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#22	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#23	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#24	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#25	1816
-nameless_n,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#26	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#27	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#28	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#29	1816
-odin_tem03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#30	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#31	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#32	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#33	1816
-thor_v01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#34	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#35	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#36	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#37	1816
-thor_v03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#38	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_1	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_2	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_3	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_4	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_5	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_6	1816
+
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_1	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_2	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_3	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_4	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_5	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_6	1816
+
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_1	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_2	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_3	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_4	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_5	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_6	1816
+
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_1	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_2	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_3	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_4	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_5	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_6	1816
+
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_1	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_2	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_3	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_4	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_5	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_6	1816
 
 
 
 // ==========================================================
 // Herbs, Level 5
-// From Level 100 dungeons
+// From Level 240 fields
 // ==========================================================
-nyd_dun01,0,0,3	script	Fairy Deadleaf#1	613,{
+moc_fild22,0,0,3	script	Fairy Deadleaf#1	613,{
 	callfunc "checkprofession","Herbalism";
 
     getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -1127,9 +1950,10 @@ OnInit:
 	end;
 
 }
-nyd_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#2	613
-dew_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#3	613
-dew_dun01,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#4	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_2	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_3	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_4	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_5	613
 
 
 
