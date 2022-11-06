@@ -1139,7 +1139,7 @@ cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_8	10174
 
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_1	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_2	10174
-cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_4	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_3	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_4	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_5	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_6	10174
@@ -1381,13 +1381,13 @@ mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_7	101
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_8	10174
 
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
-mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_2	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_3	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_4	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_5	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_6	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_7	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_8	10174
 
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_1	10174
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_2	10174
