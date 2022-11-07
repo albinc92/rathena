@@ -480,30 +480,30 @@ function	script	harvestnode	{
 ayo_fild01,0,0,3	script	Green Stem#1	10229,{
 	callfunc "checkprofession","Herbalism";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+      end;
+  }
 
 	callfunc "checkitem",6381;
-    set .@skillLv, callfunc("checkskilllv","Herbalism",1);
-    callfunc "harvestnode",.@skillLv,60;
+  set .@skillLv, callfunc("checkskilllv","Herbalism",1);
+  callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],905,7033,522,11520,683,7015,749,5206;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],905,7033,522,11520,683,7015,749,5206;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Herbalism",60;
@@ -512,7 +512,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_2	10229
 ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_3	10229
@@ -1050,30 +1049,30 @@ yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_9	10229
 ama_fild01,0,0,3	script	Jack o' Pumpkin#1	10174,{
 	callfunc "checkprofession","Herbalism";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+      end;
+  }
 
 	callfunc "checkitem",6381;
-    set .@skillLv, callfunc("checkskilllv","Herbalism",61);
-    callfunc "harvestnode",.@skillLv,120;
+  set .@skillLv, callfunc("checkskilllv","Herbalism",61);
+  callfunc "harvestnode",.@skillLv,120;
 
-    setarray .@items[0],1062,7012,12292,518,604,743,7140,5202;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],1062,7012,12292,518,604,743,7140,5202;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Herbalism",120;
@@ -1082,7 +1081,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_2	10174
 ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_3	10174
@@ -1614,30 +1612,30 @@ yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_8	101
 cmd_fild02,0,0,3	script	Wigglewort#1	527,{
 	callfunc "checkprofession","Herbalism";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+      end;
+  }
 
 	callfunc "checkitem",6381;
-    set .@skillLv, callfunc("checkskilllv","Herbalism",121);
-    callfunc "harvestnode",.@skillLv,180;
+  set .@skillLv, callfunc("checkskilllv","Herbalism",121);
+  callfunc "harvestnode",.@skillLv,180;
 
-    setarray .@items[0],7100,7763,12405,576,12338,752,7140,18596,511;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
-    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+  setarray .@items[0],7100,7763,12405,576,12338,752,7140,18596,511;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+  setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Herbalism",180;
@@ -1646,7 +1644,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_2	527
 cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_3	527
@@ -1832,30 +1829,30 @@ yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_7	527
 man_fild02,0,0,3	script	Silvervine Gourd#1	1816,{
 	callfunc "checkprofession","Herbalism";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+      end;
+  }
 
 	callfunc "checkitem",6381;
-    set .@skillLv, callfunc("checkskilllv","Herbalism",181);
-    callfunc "harvestnode",.@skillLv,240;
+  set .@skillLv, callfunc("checkskilllv","Herbalism",181);
+  callfunc "harvestnode",.@skillLv,240;
 
-    setarray .@items[0],7771,6041,608,587,684,743,706,5533,610;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
-    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+  setarray .@items[0],7771,6041,608,587,684,743,706,5533,610;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+  setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Herbalism",240;
@@ -1864,7 +1861,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_2	1816
 man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_3	1816
@@ -1916,30 +1912,30 @@ spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_6	181
 moc_fild22,0,0,3	script	Fairy Deadleaf#1	613,{
 	callfunc "checkprofession","Herbalism";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can harvest the plant.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can harvest the plant.";
+      end;
+  }
 
 	callfunc "checkitem",6381;
-    set .@skillLv, callfunc("checkskilllv","Herbalism",241);
-    callfunc "harvestnode",.@skillLv,300;
+  set .@skillLv, callfunc("checkskilllv","Herbalism",241);
+  callfunc "harvestnode",.@skillLv,300;
 
-    setarray .@items[0],7198,6035,607,12293,12103,7141,7510,5399,526;
-    setarray .@chance[0],10000,7500,3300,3300,1000,1000,500,250,3300;
-    setarray .@count[0],3,2,1,1,1,1,1,1,1;
+  setarray .@items[0],7198,6035,607,12293,12103,7141,7510,5399,526;
+  setarray .@chance[0],10000,7500,3300,3300,1000,1000,500,250,3300;
+  setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Herbalism",300;
@@ -1948,7 +1944,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_2	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_3	613
@@ -1964,30 +1959,30 @@ moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_5	613
 anthell01,0,0,3	script	Iolite Deposit#1	3742,{
 	callfunc "checkprofession","Mining";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can mine the node.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can mine the node.";
+      end;
+  }
 
 	callfunc "checkitem",7318;
-    set .@skillLv, callfunc("checkskilllv","Mining",1);
-    callfunc "harvestnode",.@skillLv,60;
+  set .@skillLv, callfunc("checkskilllv","Mining",1);
+  callfunc "harvestnode",.@skillLv,60;
 
-    setarray .@items[0],7049,1002,1010,985,723,994,730,5009;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],7049,1002,1010,985,723,994,730,5009;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Mining",60;
@@ -1996,7 +1991,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#2	3742
 anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#23	3742
@@ -2117,30 +2111,30 @@ pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#111	3742
 ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
 	callfunc "checkprofession","Mining";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can mine the node.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can mine the node.";
+      end;
+  }
 
 	callfunc "checkitem",7318;
-    set .@skillLv, callfunc("checkskilllv","Mining",61);
-    callfunc "harvestnode",.@skillLv,120;
+  set .@skillLv, callfunc("checkskilllv","Mining",61);
+  callfunc "harvestnode",.@skillLv,120;
 
-    setarray .@items[0],998,1003,1011,985,729,995,731,2413;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],998,1003,1011,985,729,995,731,2413;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Mining",120;
@@ -2149,7 +2143,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#2	1914
 iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#3	1914
@@ -2321,30 +2314,30 @@ um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#160	1914
 abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
 	callfunc "checkprofession","Mining";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can mine the node.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can mine the node.";
+      end;
+  }
 
 	callfunc "checkitem",7318;
-    set .@skillLv, callfunc("checkskilllv","Mining",121);
-    callfunc "harvestnode",.@skillLv,180;
+  set .@skillLv, callfunc("checkskilllv","Mining",121);
+  callfunc "harvestnode",.@skillLv,180;
 
-    setarray .@items[0],7232,715,984,6241,721,996,732,2794;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],7232,715,984,6241,721,996,732,2794;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Mining",180;
@@ -2353,7 +2346,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#2	1915
 abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#3	1915
@@ -2497,30 +2489,30 @@ tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#141	1915
 abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
 	callfunc "checkprofession","Mining";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can mine the node.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can mine the node.";
+      end;
+  }
 
 	callfunc "checkitem",7318;
-    set .@skillLv, callfunc("checkskilllv","Mining",181);
-    callfunc "harvestnode",.@skillLv,240;
+  set .@skillLv, callfunc("checkskilllv","Mining",181);
+  callfunc "harvestnode",.@skillLv,240;
 
-    setarray .@items[0],7233,716,984,6241,726,997,969,1148;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],7233,716,984,6241,726,997,969,1148;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Mining",240;
@@ -2529,7 +2521,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#2	1907
 beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#3	1907
@@ -2569,30 +2560,30 @@ thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#28	1907
 nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
 	callfunc "checkprofession","Mining";
 
-    getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
-    getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
-    if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
-		message strcharinfo(0),"You have to get closer before you can mine the node.";
-        end;
-    }
+  getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
+  getmapxy $@mapname$, $@mapxPC, $@mapyPC, BL_PC;
+  if (distance($@mapxNPC, $@mapyNPC, $@mapxPC, $@mapyPC) > 3) {
+	message strcharinfo(0),"You have to get closer before you can mine the node.";
+      end;
+  }
 
 	callfunc "checkitem",7318;
-    set .@skillLv, callfunc("checkskilllv","Mining",241);
-    callfunc "harvestnode",.@skillLv,300;
+  set .@skillLv, callfunc("checkskilllv","Mining",241);
+  callfunc "harvestnode",.@skillLv,300;
 
-    setarray .@items[0],7231,717,6240,6241,728,1000,7444,1535;
-    setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
-    setarray .@count[0],3,2,1,1,1,1,1,1;
+  setarray .@items[0],7231,717,6240,6241,728,1000,7444,1535;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	for(set .@i, 0; .@i < getarraysize(.@items); set .@i, (.@i + 1)) {
-	    if(rand(1, 10000) <= (.@chance[.@i] + (readparam(bLuk) * 10))) {
-	        for(set .@j, 1; .@j <= rand(1, .@count[.@i]); set .@j, (.@j + 1)) {
-	            set .@x2, rand((.@x_npc-1),(.@x_npc+1));
-	            set .@y2, rand((.@y_npc-1),(.@y_npc+1));
-	            makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
-	        }
+		for(set .@j, 0; .@j < .@count[.@i]; set .@j, (.@j + 1)) {
+			if(rand(1, 10000) <= .@chance[.@i]) {
+				set .@x2, rand((.@x_npc-1),(.@x_npc+1));
+				set .@y2, rand((.@y_npc-1),(.@y_npc+1));
+				makeitem .@items[.@i], 1, strnpcinfo(4), .@x2, .@y2;
 	    }
+		}
 	}
 
 	callfunc "incgatherskill","Mining",300;
@@ -2601,7 +2592,6 @@ OnInit:
 	getmapxy .map$, .x_npc, .y_npc, BL_NPC;
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
-
 }
 nyd_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#2	10248
 dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#3	10248
