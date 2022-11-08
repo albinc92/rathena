@@ -39,7 +39,7 @@ L_Information:
 	mes "There are three different professions you can pick from: ^ff0000Herbalism^000000, ^ff0000Mining^000000, and ^ff0000Enchanting^000000.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Herbalism and Mining requires you to harvest nodes that can be found throughout various dungeons.";
+	mes "Herbalism and Mining requires you to harvest nodes that can be found throughout your journeys in Midgard.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Whenever you harvest a node, you will gain 1-3 skill levels to your profession - in addition to some valuable items.";
