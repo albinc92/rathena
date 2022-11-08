@@ -886,18 +886,6 @@ pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_8	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_9	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_10	10229
 
-pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_1	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_1	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_2	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_3	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_4	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_5	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_6	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_7	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_8	10229
-prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_9	10229
-pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_10	10229
-
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_1	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_2	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_3	10229
@@ -2317,14 +2305,14 @@ mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_8	3742
 mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_9	3742
 
 mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_2	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_3	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_4	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_5	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_6	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_7	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_8	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_9	3742
 
 orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_1	3742
 orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_2	3742
@@ -2703,17 +2691,6 @@ gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_8	1915
 gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_9	1915
 gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_10	1915
 
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_1	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_2	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_3	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_4	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_5	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_6	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_7	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_8	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_9	1915
-gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_10	1915
-
 gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_1	1915
 gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_2	1915
 gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_3	1915
@@ -2964,49 +2941,49 @@ beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_8	190
 beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_9	1907
 beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_10	1907
 
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_1	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_2	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_3	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_4	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_5	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_6	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_7	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_8	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_9	1907
-geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_10	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_1	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_2	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_3	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_4	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_5	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_6	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_7	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_8	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_9	1907
+gefenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia01_10	1907
 
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_1	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_2	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_3	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_4	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_5	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_6	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_7	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_8	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_9	1907
-geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_10	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_1	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_2	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_3	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_4	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_5	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_6	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_7	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_8	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_9	1907
+gefenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia02_10	1907
 
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_1	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_2	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_3	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_4	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_5	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_6	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_7	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_8	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_9	1907
-geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_10	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_1	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_2	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_3	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_4	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_5	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_6	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_7	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_8	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_9	1907
+gefenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia03_10	1907
 
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_1	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_2	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_3	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_4	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_5	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_6	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_7	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_8	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_9	1907
-geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_10	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_1	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_2	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_3	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_4	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_5	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_6	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_7	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_8	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_9	1907
+gefenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gefenia04_10	1907
 
 gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_1	1907
 gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_2	1907
@@ -3171,14 +3148,14 @@ thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_9	10248
 thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_10	10248
 
 thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
-thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_2	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_3	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_4	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_5	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_6	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_7	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_8	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_9	10248
 thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_10	10248
 
 
