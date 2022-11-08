@@ -521,6 +521,7 @@ ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_6	10229
 ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_7	10229
 ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_8	10229
 ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_9	10229
+ayo_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ayo_fild01_10	10229
 
 cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_1	10229
 cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_2	10229
@@ -531,6 +532,7 @@ cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_6	10229
 cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_7	10229
 cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_8	10229
 cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_9	10229
+cmd_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild07_10	10229
 
 cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_1	10229
 cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_2	10229
@@ -541,6 +543,7 @@ cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_6	10229
 cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_7	10229
 cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_8	10229
 cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_9	10229
+cmd_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#cmd_fild09_10	10229
 
 ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_1	10229
 ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_2	10229
@@ -551,6 +554,7 @@ ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_6	10229
 ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_7	10229
 ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_8	10229
 ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_9	10229
+ein_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ein_fild08_10	10229
 
 gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_1	10229
 gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_2	10229
@@ -561,6 +565,7 @@ gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_6	10229
 gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_7	10229
 gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_8	10229
 gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_9	10229
+gef_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild00_10	10229
 
 gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_1	10229
 gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_2	10229
@@ -571,6 +576,7 @@ gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_6	10229
 gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_7	10229
 gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_8	10229
 gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_9	10229
+gef_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild01_10	10229
 
 gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_1	10229
 gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_2	10229
@@ -581,6 +587,7 @@ gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_6	10229
 gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_7	10229
 gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_8	10229
 gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_9	10229
+gef_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild02_10	10229
 
 gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_1	10229
 gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_2	10229
@@ -591,6 +598,7 @@ gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_6	10229
 gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_7	10229
 gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_8	10229
 gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_9	10229
+gef_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild03_10	10229
 
 gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_1	10229
 gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_2	10229
@@ -601,6 +609,7 @@ gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_6	10229
 gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_7	10229
 gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_8	10229
 gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_9	10229
+gef_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild04_10	10229
 
 gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_1	10229
 gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_2	10229
@@ -611,6 +620,7 @@ gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_6	10229
 gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_7	10229
 gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_8	10229
 gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_9	10229
+gef_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild07_10	10229
 
 gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_1	10229
 gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_2	10229
@@ -621,6 +631,7 @@ gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_6	10229
 gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_7	10229
 gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_8	10229
 gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_9	10229
+gef_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild09_10	10229
 
 gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_1	10229
 gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_2	10229
@@ -631,6 +642,7 @@ gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_6	10229
 gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_7	10229
 gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_8	10229
 gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_9	10229
+gef_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#gef_fild11_10	10229
 
 moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_1	10229
 moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_2	10229
@@ -641,6 +653,7 @@ moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_6	10229
 moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_7	10229
 moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_8	10229
 moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_9	10229
+moc_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild01_10	10229
 
 moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_1	10229
 moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_2	10229
@@ -651,6 +664,7 @@ moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_6	10229
 moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_7	10229
 moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_8	10229
 moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_9	10229
+moc_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild02_10	10229
 
 moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_1	10229
 moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_2	10229
@@ -661,6 +675,7 @@ moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_6	10229
 moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_7	10229
 moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_8	10229
 moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_9	10229
+moc_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild03_10	10229
 
 moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_1	10229
 moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_2	10229
@@ -671,6 +686,7 @@ moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_6	10229
 moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_7	10229
 moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_8	10229
 moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_9	10229
+moc_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild07_10	10229
 
 moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_1	10229
 moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_2	10229
@@ -681,6 +697,7 @@ moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_6	10229
 moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_7	10229
 moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_8	10229
 moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_9	10229
+moc_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild12_10	10229
 
 moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_1	10229
 moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_2	10229
@@ -691,6 +708,7 @@ moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_6	10229
 moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_7	10229
 moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_8	10229
 moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_9	10229
+moc_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild13_10	10229
 
 moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_1	10229
 moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_2	10229
@@ -701,6 +719,7 @@ moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_6	10229
 moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_7	10229
 moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_8	10229
 moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_9	10229
+moc_fild18,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild18_10	10229
 
 moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_1	10229
 moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_2	10229
@@ -711,6 +730,7 @@ moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_6	10229
 moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_7	10229
 moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_8	10229
 moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_9	10229
+moc_fild20,0,0,3	duplicate(Green Stem#1)	Green Stem#moc_fild20_10	10229
 
 mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_1	10229
 mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_2	10229
@@ -721,6 +741,7 @@ mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_6	10229
 mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_7	10229
 mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_8	10229
 mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_9	10229
+mjolnir_01,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_01_10	10229
 
 mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_1	10229
 mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_2	10229
@@ -731,6 +752,7 @@ mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_6	10229
 mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_7	10229
 mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_8	10229
 mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_9	10229
+mjolnir_04,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_04_10	10229
 
 mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_1	10229
 mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_2	10229
@@ -741,6 +763,7 @@ mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_6	10229
 mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_7	10229
 mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_8	10229
 mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_9	10229
+mjolnir_06,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_06_10	10229
 
 mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_1	10229
 mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_2	10229
@@ -751,6 +774,7 @@ mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_6	10229
 mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_7	10229
 mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_8	10229
 mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_9	10229
+mjolnir_07,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_07_10	10229
 
 mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_1	10229
 mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_2	10229
@@ -761,6 +785,7 @@ mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_6	10229
 mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_7	10229
 mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_8	10229
 mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_9	10229
+mjolnir_08,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_08_10	10229
 
 mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_1	10229
 mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_2	10229
@@ -771,6 +796,7 @@ mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_6	10229
 mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_7	10229
 mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_8	10229
 mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_9	10229
+mjolnir_09,0,0,3	duplicate(Green Stem#1)	Green Stem#mjolnir_09_10	10229
 
 pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_1	10229
 pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_2	10229
@@ -781,6 +807,7 @@ pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_6	10229
 pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_7	10229
 pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_8	10229
 pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_9	10229
+pay_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild01_10	10229
 
 pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_1	10229
 pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_2	10229
@@ -791,6 +818,7 @@ pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_6	10229
 pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_7	10229
 pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_8	10229
 pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_9	10229
+pay_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild02_10	10229
 
 pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_1	10229
 pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_2	10229
@@ -801,6 +829,7 @@ pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_6	10229
 pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_7	10229
 pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_8	10229
 pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_9	10229
+pay_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild03_10	10229
 
 pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_1	10229
 pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_2	10229
@@ -811,6 +840,7 @@ pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_6	10229
 pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_7	10229
 pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_8	10229
 pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_9	10229
+pay_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild04_10	10229
 
 pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_1	10229
 pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_2	10229
@@ -821,6 +851,7 @@ pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_6	10229
 pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_7	10229
 pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_8	10229
 pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_9	10229
+pay_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild05_10	10229
 
 pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_1	10229
 pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_2	10229
@@ -831,6 +862,7 @@ pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_6	10229
 pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_7	10229
 pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_8	10229
 pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_9	10229
+pay_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild06_10	10229
 
 pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_1	10229
 pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_2	10229
@@ -841,6 +873,7 @@ pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_6	10229
 pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_7	10229
 pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_8	10229
 pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_9	10229
+pay_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild07_10	10229
 
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_1	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_2	10229
@@ -851,7 +884,9 @@ pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_6	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_7	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_8	10229
 pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_9	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_10	10229
 
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_1	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_1	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_2	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_3	10229
@@ -861,6 +896,7 @@ prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_6	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_7	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_8	10229
 prt_fild00,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild00_9	10229
+pay_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#pay_fild08_10	10229
 
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_1	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_2	10229
@@ -871,6 +907,7 @@ prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_6	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_7	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_8	10229
 prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_9	10229
+prt_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild01_10	10229
 
 prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_1	10229
 prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_2	10229
@@ -881,6 +918,7 @@ prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_6	10229
 prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_7	10229
 prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_8	10229
 prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_9	10229
+prt_fild02,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild02_10	10229
 
 prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_1	10229
 prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_2	10229
@@ -891,6 +929,7 @@ prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_6	10229
 prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_7	10229
 prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_8	10229
 prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_9	10229
+prt_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild03_10	10229
 
 prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_1	10229
 prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_2	10229
@@ -901,6 +940,7 @@ prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_6	10229
 prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_7	10229
 prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_8	10229
 prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_9	10229
+prt_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild04_10	10229
 
 prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_1	10229
 prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_2	10229
@@ -911,6 +951,7 @@ prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_6	10229
 prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_7	10229
 prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_8	10229
 prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_9	10229
+prt_fild05,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild05_10	10229
 
 prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_1	10229
 prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_2	10229
@@ -921,6 +962,7 @@ prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_6	10229
 prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_7	10229
 prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_8	10229
 prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_9	10229
+prt_fild06,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild06_10	10229
 
 prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_1	10229
 prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_2	10229
@@ -931,6 +973,7 @@ prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_6	10229
 prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_7	10229
 prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_8	10229
 prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_9	10229
+prt_fild07,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild07_10	10229
 
 prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_1	10229
 prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_2	10229
@@ -941,6 +984,7 @@ prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_6	10229
 prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_7	10229
 prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_8	10229
 prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_9	10229
+prt_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild08_10	10229
 
 prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_1	10229
 prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_2	10229
@@ -951,6 +995,7 @@ prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_6	10229
 prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_7	10229
 prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_8	10229
 prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_9	10229
+prt_fild09,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild09_10	10229
 
 prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_1	10229
 prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_2	10229
@@ -961,6 +1006,7 @@ prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_6	10229
 prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_7	10229
 prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_8	10229
 prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_9	10229
+prt_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#prt_fild11_10	10229
 
 ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_1	10229
 ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_2	10229
@@ -971,6 +1017,7 @@ ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_6	10229
 ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_7	10229
 ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_8	10229
 ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_9	10229
+ra_fild08,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild08_10	10229
 
 ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_1	10229
 ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_2	10229
@@ -981,6 +1028,7 @@ ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_6	10229
 ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_7	10229
 ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_8	10229
 ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_9	10229
+ra_fild11,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild11_10	10229
 
 ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_1	10229
 ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_2	10229
@@ -991,6 +1039,7 @@ ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_6	10229
 ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_7	10229
 ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_8	10229
 ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_9	10229
+ra_fild12,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild12_10	10229
 
 ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_1	10229
 ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_2	10229
@@ -1001,6 +1050,7 @@ ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_6	10229
 ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_7	10229
 ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_8	10229
 ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_9	10229
+ra_fild13,0,0,3	duplicate(Green Stem#1)	Green Stem#ra_fild13_10	10229
 
 ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_1	10229
 ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_2	10229
@@ -1011,6 +1061,7 @@ ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_6	10229
 ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_7	10229
 ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_8	10229
 ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_9	10229
+ve_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#ve_fild01_10	10229
 
 yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_1	10229
 yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_2	10229
@@ -1021,6 +1072,7 @@ yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_6	10229
 yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_7	10229
 yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_8	10229
 yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_9	10229
+yuno_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild01_10	10229
 
 yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_1	10229
 yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_2	10229
@@ -1031,6 +1083,7 @@ yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_6	10229
 yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_7	10229
 yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_8	10229
 yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_9	10229
+yuno_fild03,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild03_10	10229
 
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_1	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_2	10229
@@ -1041,6 +1094,7 @@ yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_6	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_7	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_8	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_9	10229
+yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_10	10229
 
 // ==========================================================
 // Herbs, Level 2
@@ -1089,6 +1143,8 @@ ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_5	10174
 ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_6	10174
 ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_7	10174
 ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_8	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_9	10174
+ama_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ama_fild01_10	10174
 
 ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_1	10174
 ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_2	10174
@@ -1098,6 +1154,8 @@ ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_5	10174
 ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_6	10174
 ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_7	10174
 ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_8	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_9	10174
+ayo_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ayo_fild02_10	10174
 
 cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_1	10174
 cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_2	10174
@@ -1107,6 +1165,8 @@ cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_5	10174
 cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_6	10174
 cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_7	10174
 cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_8	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_9	10174
+cmd_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild01_10	10174
 
 cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_1	10174
 cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_2	10174
@@ -1116,6 +1176,8 @@ cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_5	10174
 cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_6	10174
 cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_7	10174
 cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_8	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_9	10174
+cmd_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild04_10	10174
 
 cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_1	10174
 cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_2	10174
@@ -1125,6 +1187,8 @@ cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_5	10174
 cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_6	10174
 cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_7	10174
 cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_8	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_9	10174
+cmd_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild05_10	10174
 
 cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_1	10174
 cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_2	10174
@@ -1134,6 +1198,8 @@ cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_5	10174
 cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_6	10174
 cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_7	10174
 cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_8	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_9	10174
+cmd_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild06_10	10174
 
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_1	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_2	10174
@@ -1143,6 +1209,8 @@ cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_5	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_6	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_7	10174
 cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_8	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_9	10174
+cmd_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#cmd_fild08_10	10174
 
 ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_1	10174
 ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_2	10174
@@ -1152,6 +1220,8 @@ ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_5	10174
 ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_6	10174
 ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_7	10174
 ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_8	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_9	10174
+ein_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild01_10	10174
 
 ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_1	10174
 ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_2	10174
@@ -1161,6 +1231,8 @@ ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_5	10174
 ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_6	10174
 ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_7	10174
 ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_8	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_9	10174
+ein_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild02_10	10174
 
 ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_1	10174
 ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_2	10174
@@ -1170,6 +1242,8 @@ ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_5	10174
 ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_6	10174
 ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_7	10174
 ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_8	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_9	10174
+ein_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild03_10	10174
 
 ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_1	10174
 ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_2	10174
@@ -1179,6 +1253,8 @@ ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_5	10174
 ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_6	10174
 ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_7	10174
 ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_8	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_9	10174
+ein_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild07_10	10174
 
 ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_1	10174
 ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_2	10174
@@ -1188,6 +1264,8 @@ ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_5	10174
 ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_6	10174
 ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_7	10174
 ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_8	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_9	10174
+ein_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild09_10	10174
 
 ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_1	10174
 ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_2	10174
@@ -1197,6 +1275,8 @@ ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_5	10174
 ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_6	10174
 ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_7	10174
 ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_8	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_9	10174
+ein_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ein_fild10_10	10174
 
 gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_1	10174
 gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_2	10174
@@ -1206,6 +1286,8 @@ gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_5	10174
 gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_6	10174
 gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_7	10174
 gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_8	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_9	10174
+gef_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild05_10	10174
 
 gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_1	10174
 gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_2	10174
@@ -1215,6 +1297,8 @@ gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_5	10174
 gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_6	10174
 gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_7	10174
 gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_8	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_9	10174
+gef_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild06_10	10174
 
 gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_1	10174
 gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_2	10174
@@ -1224,6 +1308,8 @@ gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_5	10174
 gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_6	10174
 gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_7	10174
 gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_8	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_9	10174
+gef_fild08,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild08_10	10174
 
 gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_1	10174
 gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_2	10174
@@ -1233,6 +1319,8 @@ gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_5	10174
 gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_6	10174
 gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_7	10174
 gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_8	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_9	10174
+gef_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild10_10	10174
 
 gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_1	10174
 gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_2	10174
@@ -1242,6 +1330,8 @@ gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_5	10174
 gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_6	10174
 gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_7	10174
 gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_8	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_9	10174
+gef_fild12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gef_fild12_10	10174
 
 gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_1	10174
 gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_2	10174
@@ -1251,6 +1341,8 @@ gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_5	10174
 gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_6	10174
 gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_7	10174
 gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_8	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_9	10174
+gon_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#gon_fild01_10	10174
 
 hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_1	10174
 hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_2	10174
@@ -1260,6 +1352,8 @@ hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_5	10174
 hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_6	10174
 hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_7	10174
 hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_8	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_9	10174
+hu_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild02_10	10174
 
 hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_1	10174
 hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_2	10174
@@ -1269,6 +1363,8 @@ hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_5	10174
 hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_6	10174
 hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_7	10174
 hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_8	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_9	10174
+hu_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild03_10	10174
 
 hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_1	10174
 hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_2	10174
@@ -1278,6 +1374,8 @@ hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_5	10174
 hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_6	10174
 hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_7	10174
 hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_8	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_9	10174
+hu_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild04_10	10174
 
 hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_1	10174
 hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_2	10174
@@ -1287,6 +1385,8 @@ hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_5	10174
 hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_6	10174
 hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_7	10174
 hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_8	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_9	10174
+hu_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild06_10	10174
 
 hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_1	10174
 hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_2	10174
@@ -1296,6 +1396,8 @@ hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_5	10174
 hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_6	10174
 hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_7	10174
 hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_8	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_9	10174
+hu_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#hu_fild07_10	10174
 
 lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_1	10174
 lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_2	10174
@@ -1305,6 +1407,8 @@ lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_5	10174
 lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_6	10174
 lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_7	10174
 lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_8	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_9	10174
+lhz_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild01_10	10174
 
 lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_1	10174
 lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_2	10174
@@ -1314,6 +1418,8 @@ lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_5	10174
 lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_6	10174
 lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_7	10174
 lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_8	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_9	10174
+lhz_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild02_10	10174
 
 lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_1	10174
 lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_2	10174
@@ -1323,6 +1429,8 @@ lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_5	10174
 lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_6	10174
 lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_7	10174
 lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_8	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_9	10174
+lhz_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lhz_fild03_10	10174
 
 lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_1	10174
 lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_2	10174
@@ -1332,6 +1440,8 @@ lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_5	10174
 lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_6	10174
 lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_7	10174
 lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_8	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_9	10174
+lou_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#lou_fild01_10	10174
 
 xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_1	10174
 xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_2	10174
@@ -1341,6 +1451,8 @@ xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_5	101
 xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_6	10174
 xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_7	10174
 xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_8	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_9	10174
+xmas_fild01,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#xmas_fild01_10	10174
 
 moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_1	10174
 moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_2	10174
@@ -1350,6 +1462,8 @@ moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_5	10174
 moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_6	10174
 moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_7	10174
 moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_8	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_9	10174
+moc_fild11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild11_10	10174
 
 moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_1	10174
 moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_2	10174
@@ -1359,6 +1473,8 @@ moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_5	10174
 moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_6	10174
 moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_7	10174
 moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_8	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_9	10174
+moc_fild16,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild16_10	10174
 
 moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_1	10174
 moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_2	10174
@@ -1368,6 +1484,8 @@ moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_5	10174
 moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_6	10174
 moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_7	10174
 moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_8	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_9	10174
+moc_fild17,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#moc_fild17_10	10174
 
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_1	10174
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_2	10174
@@ -1377,6 +1495,8 @@ mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_5	101
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_6	10174
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_7	10174
 mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_8	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_9	10174
+mosk_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mosk_fild02_10	10174
 
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_1	10174
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_2	10174
@@ -1386,6 +1506,8 @@ mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_5	10174
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_6	10174
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_7	10174
 mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_8	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_9	10174
+mjolnir_02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_02_10	10174
 
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_1	10174
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_2	10174
@@ -1395,6 +1517,8 @@ mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_5	10174
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_6	10174
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_7	10174
 mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_8	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_9	10174
+mjolnir_03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_03_10	10174
 
 mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_1	10174
 mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_2	10174
@@ -1404,6 +1528,8 @@ mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_5	10174
 mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_6	10174
 mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_7	10174
 mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_8	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_9	10174
+mjolnir_05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_05_10	10174
 
 mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_1	10174
 mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_2	10174
@@ -1413,6 +1539,8 @@ mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_5	10174
 mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_6	10174
 mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_7	10174
 mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_8	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_9	10174
+mjolnir_10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_10_10	10174
 
 mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_1	10174
 mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_2	10174
@@ -1422,6 +1550,8 @@ mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_5	10174
 mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_6	10174
 mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_7	10174
 mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_8	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_9	10174
+mjolnir_11,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_11_10	10174
 
 mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_1	10174
 mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_2	10174
@@ -1431,6 +1561,8 @@ mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_5	10174
 mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_6	10174
 mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_7	10174
 mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_8	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_9	10174
+mjolnir_12,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#mjolnir_12_10	10174
 
 pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_1	10174
 pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_2	10174
@@ -1440,6 +1572,8 @@ pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_5	10174
 pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_6	10174
 pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_7	10174
 pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_8	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_9	10174
+pay_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild09_10	10174
 
 pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_1	10174
 pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_2	10174
@@ -1449,6 +1583,8 @@ pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_5	10174
 pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_6	10174
 pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_7	10174
 pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_8	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_9	10174
+pay_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#pay_fild10_10	10174
 
 ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_1	10174
 ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_2	10174
@@ -1458,6 +1594,8 @@ ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_5	10174
 ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_6	10174
 ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_7	10174
 ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_8	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_9	10174
+ra_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild03_10	10174
 
 ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_1	10174
 ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_2	10174
@@ -1467,6 +1605,8 @@ ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_5	10174
 ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_6	10174
 ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_7	10174
 ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_8	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_9	10174
+ra_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild04_10	10174
 
 ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_1	10174
 ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_2	10174
@@ -1476,6 +1616,8 @@ ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_5	10174
 ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_6	10174
 ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_7	10174
 ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_8	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_9	10174
+ra_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild05_10	10174
 
 ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_1	10174
 ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_2	10174
@@ -1485,6 +1627,8 @@ ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_5	10174
 ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_6	10174
 ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_7	10174
 ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_8	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_9	10174
+ra_fild06,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild06_10	10174
 
 ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_1	10174
 ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_2	10174
@@ -1494,6 +1638,8 @@ ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_5	10174
 ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_6	10174
 ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_7	10174
 ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_8	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_9	10174
+ra_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild07_10	10174
 
 ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_1	10174
 ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_2	10174
@@ -1503,6 +1649,8 @@ ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_5	10174
 ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_6	10174
 ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_7	10174
 ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_8	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_9	10174
+ra_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild09_10	10174
 
 ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_1	10174
 ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_2	10174
@@ -1512,6 +1660,8 @@ ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_5	10174
 ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_6	10174
 ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_7	10174
 ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_8	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_9	10174
+ra_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ra_fild10_10	10174
 
 um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_1	10174
 um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_2	10174
@@ -1521,6 +1671,8 @@ um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_5	10174
 um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_6	10174
 um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_7	10174
 um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_8	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_9	10174
+um_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild02_10	10174
 
 um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_1	10174
 um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_2	10174
@@ -1530,6 +1682,8 @@ um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_5	10174
 um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_6	10174
 um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_7	10174
 um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_8	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_9	10174
+um_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#um_fild04_10	10174
 
 ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_1	10174
 ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_2	10174
@@ -1539,6 +1693,8 @@ ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_5	10174
 ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_6	10174
 ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_7	10174
 ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_8	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_9	10174
+ve_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild02_10	10174
 
 ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_1	10174
 ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_2	10174
@@ -1548,6 +1704,8 @@ ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_5	10174
 ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_6	10174
 ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_7	10174
 ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_8	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_9	10174
+ve_fild03,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild03_10	10174
 
 ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_1	10174
 ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_2	10174
@@ -1557,6 +1715,8 @@ ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_5	10174
 ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_6	10174
 ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_7	10174
 ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_8	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_9	10174
+ve_fild04,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild04_10	10174
 
 ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_1	10174
 ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_2	10174
@@ -1566,6 +1726,8 @@ ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_5	10174
 ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_6	10174
 ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_7	10174
 ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_8	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_9	10174
+ve_fild07,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#ve_fild07_10	10174
 
 yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_1	10174
 yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_2	10174
@@ -1575,6 +1737,8 @@ yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_5	101
 yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_6	10174
 yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_7	10174
 yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_8	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_9	10174
+yuno_fild02,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild02_10	10174
 
 yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_1	10174
 yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_2	10174
@@ -1584,6 +1748,8 @@ yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_5	101
 yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_6	10174
 yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_7	10174
 yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_8	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_9	10174
+yuno_fild05,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild05_10	10174
 
 yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_1	10174
 yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_2	10174
@@ -1593,6 +1759,8 @@ yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_5	101
 yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_6	10174
 yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_7	10174
 yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_8	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_9	10174
+yuno_fild09,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild09_10	10174
 
 yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_1	10174
 yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_2	10174
@@ -1602,6 +1770,8 @@ yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_5	101
 yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_6	10174
 yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_7	10174
 yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_8	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_9	10174
+yuno_fild10,0,0,3	duplicate(Jack o' Pumpkin#1)	Jack o' Pumpkin#yuno_fild10_10	10174
 
 
 
@@ -1651,6 +1821,9 @@ cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_4	527
 cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_5	527
 cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_6	527
 cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_7	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_8	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_9	527
+cmd_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild02_10	527
 
 cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_1	527
 cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_2	527
@@ -1659,6 +1832,9 @@ cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_4	527
 cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_5	527
 cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_6	527
 cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_7	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_8	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_9	527
+cmd_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#cmd_fild03_10	527
 
 ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_1	527
 ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_2	527
@@ -1667,6 +1843,9 @@ ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_4	527
 ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_5	527
 ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_6	527
 ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_7	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_8	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_9	527
+ein_fild04,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild04_10	527
 
 ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_1	527
 ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_2	527
@@ -1675,6 +1854,9 @@ ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_4	527
 ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_5	527
 ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_6	527
 ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_7	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_8	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_9	527
+ein_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild05_10	527
 
 ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_1	527
 ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_2	527
@@ -1683,6 +1865,9 @@ ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_4	527
 ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_5	527
 ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_6	527
 ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_7	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_8	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_9	527
+ein_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ein_fild06_10	527
 
 gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_1	527
 gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_2	527
@@ -1691,6 +1876,9 @@ gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_4	527
 gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_5	527
 gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_6	527
 gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_7	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_8	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_9	527
+gef_fild13,0,0,3	duplicate(Wigglewort#1)	Wigglewort#gef_fild13_10	527
 
 hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_1	527
 hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_2	527
@@ -1699,6 +1887,9 @@ hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_4	527
 hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_5	527
 hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_6	527
 hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_7	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_8	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_9	527
+hu_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild01_10	527
 
 hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_1	527
 hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_2	527
@@ -1707,6 +1898,9 @@ hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_4	527
 hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_5	527
 hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_6	527
 hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_7	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_8	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_9	527
+hu_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#hu_fild05_10	527
 
 man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_1	527
 man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_2	527
@@ -1715,6 +1909,9 @@ man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_4	527
 man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_5	527
 man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_6	527
 man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_7	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_8	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_9	527
+man_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#man_fild01_10	527
 
 nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_1	527
 nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_2	527
@@ -1723,6 +1920,9 @@ nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_4	527
 nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_5	527
 nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_6	527
 nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_7	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_8	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_9	527
+nif_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild01_10	527
 
 nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_1	527
 nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_2	527
@@ -1731,6 +1931,9 @@ nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_4	527
 nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_5	527
 nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_6	527
 nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_7	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_8	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_9	527
+nif_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#nif_fild02_10	527
 
 pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_1	527
 pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_2	527
@@ -1739,6 +1942,9 @@ pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_4	527
 pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_5	527
 pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_6	527
 pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_7	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_8	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_9	527
+pay_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#pay_fild11_10	527
 
 ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_1	527
 ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_2	527
@@ -1747,6 +1953,9 @@ ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_4	527
 ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_5	527
 ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_6	527
 ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_7	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_8	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_9	527
+ra_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild01_10	527
 
 ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_1	527
 ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_2	527
@@ -1755,6 +1964,9 @@ ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_4	527
 ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_5	527
 ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_6	527
 ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_7	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_8	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_9	527
+ra_fild02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ra_fild02_10	527
 
 um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_1	527
 um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_2	527
@@ -1763,6 +1975,9 @@ um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_4	527
 um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_5	527
 um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_6	527
 um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_7	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_8	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_9	527
+um_fild01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild01_10	527
 
 um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_1	527
 um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_2	527
@@ -1771,6 +1986,9 @@ um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_4	527
 um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_5	527
 um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_6	527
 um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_7	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_8	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_9	527
+um_fild03,0,0,3	duplicate(Wigglewort#1)	Wigglewort#um_fild03_10	527
 
 ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_1	527
 ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_2	527
@@ -1779,6 +1997,9 @@ ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_4	527
 ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_5	527
 ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_6	527
 ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_7	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_8	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_9	527
+ve_fild05,0,0,3	duplicate(Wigglewort#1)	Wigglewort#ve_fild05_10	527
 
 yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_1	527
 yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_2	527
@@ -1787,6 +2008,9 @@ yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_4	527
 yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_5	527
 yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_6	527
 yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_7	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_8	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_9	527
+yuno_fild06,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild06_10	527
 
 yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_1	527
 yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_2	527
@@ -1795,6 +2019,9 @@ yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_4	527
 yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_5	527
 yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_6	527
 yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_7	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_8	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_9	527
+yuno_fild07,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild07_10	527
 
 yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_1	527
 yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_2	527
@@ -1803,6 +2030,9 @@ yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_4	527
 yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_5	527
 yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_6	527
 yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_7	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_8	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_9	527
+yuno_fild08,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild08_10	527
 
 yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_1	527
 yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_2	527
@@ -1811,6 +2041,9 @@ yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_4	527
 yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_5	527
 yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_6	527
 yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_7	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_8	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_9	527
+yuno_fild11,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild11_10	527
 
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_1	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_2	527
@@ -1819,6 +2052,9 @@ yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_4	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_5	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_6	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_7	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_8	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_9	527
+yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_10	527
 
 
 
@@ -1867,6 +2103,10 @@ man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_3	181
 man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_4	1816
 man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_5	1816
 man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_6	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_7	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_8	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_9	1816
+man_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild02_10	1816
 
 man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_1	1816
 man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_2	1816
@@ -1874,6 +2114,10 @@ man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_3	181
 man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_4	1816
 man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_5	1816
 man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_6	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_7	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_8	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_9	1816
+man_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#man_fild03_10	1816
 
 moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_1	1816
 moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_2	1816
@@ -1881,6 +2125,10 @@ moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_3	181
 moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_4	1816
 moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_5	1816
 moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_6	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_7	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_8	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_9	1816
+moc_fild21,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#moc_fild21_10	1816
 
 spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_1	1816
 spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_2	1816
@@ -1888,6 +2136,10 @@ spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_3	181
 spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_4	1816
 spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_5	1816
 spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_6	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_7	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_8	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_9	1816
+spl_fild01,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild01_10	1816
 
 spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_1	1816
 spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_2	1816
@@ -1895,6 +2147,10 @@ spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_3	181
 spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_4	1816
 spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_5	1816
 spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_6	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_7	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_8	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_9	1816
+spl_fild02,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild02_10	1816
 
 spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_1	1816
 spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_2	1816
@@ -1902,6 +2158,10 @@ spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_3	181
 spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_4	1816
 spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_5	1816
 spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_6	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_7	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_8	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_9	1816
+spl_fild03,0,0,3	duplicate(Silvervine Gourd#1)	Silvervine Gourd#spl_fild03_10	1816
 
 
 
@@ -1949,6 +2209,11 @@ moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_2	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_3	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_4	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_5	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_6	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_7	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_8	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_9	613
+moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_10	613
 
 
 
@@ -1992,115 +2257,94 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#2	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#23	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#24	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#25	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#26	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#27	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#28	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#29	3742
-anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#30	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#3	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#4	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#31	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#32	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#33	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#34	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#35	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#36	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#37	3742
-anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#38	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#5	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#6	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#39	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#40	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#41	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#42	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#43	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#44	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#45	3742
-beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#46	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#7	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#8	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#47	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#48	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#49	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#50	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#51	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#52	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#53	3742
-iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#54	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#9	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#10	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#55	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#56	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#57	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#58	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#59	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#60	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#61	3742
-iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#62	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#11	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#12	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#63	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#64	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#65	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#66	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#67	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#68	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#69	3742
-mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#70	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#13	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#14	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#71	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#72	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#73	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#74	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#75	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#76	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#77	3742
-mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#78	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#15	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#16	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#79	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#80	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#81	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#82	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#83	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#84	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#85	3742
-prt_maze01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#86	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#17	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#18	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#87	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#88	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#89	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#90	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#91	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#92	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#93	3742
-prt_maze02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#94	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#19	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#20	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#95	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#96	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#97	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#98	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#99	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#100	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#101	3742
-orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#102	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#21	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#103	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#104	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#105	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#106	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#107	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#108	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#109	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#110	3742
-pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#111	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_2	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_3	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_4	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_5	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_6	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_7	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_8	3742
+anthell01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell01_9	3742
+
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_1	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_2 	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_3	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_4	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_5	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_6	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_7	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_8	3742
+anthell02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#anthell02_9	3742
+
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_1	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_2	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_3	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_4	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_5	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_6	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_7	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_8	3742
+beach_dun3,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#beach_dun3_9	3742
+
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_1	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_2	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_3	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_4	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_5	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_6	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_7	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_8	3742
+iz_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun00_9	3742
+
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_1	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_2	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_3	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_4	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_5	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_6	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_7	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_8	3742
+iz_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#iz_dun01_9	3742
+
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_1	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_2	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_3	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_4	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_5	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_6	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_7	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_8	3742
+mjo_dun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun01_9	3742
+
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+mjo_dun02,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#mjo_dun02_1	3742
+
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_1	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_2	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_3	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_4	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_5	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_6	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_7	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_8	3742
+orcsdun01,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#orcsdun01_9	3742
+
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_1	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_2	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_3	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_4	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_5	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_6	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_7	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_8	3742
+pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#pay_dun00_9	3742
 
 
 
@@ -2108,7 +2352,7 @@ pay_dun00,0,0,3	duplicate(Iolite Deposit#1)	Iolite Deposit#111	3742
 // Mining, Level 2
 // Up to Level 50 dungeons
 // ==========================================================
-ama_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
+iz_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
 	callfunc "checkprofession","Mining";
 
   getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -2144,166 +2388,180 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#2	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#3	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#4	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#5	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#6	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#7	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#8	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#9	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#10	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#11	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#12	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#13	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#14	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#15	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#16	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#17	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#18	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#19	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#20	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#21	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#22	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#23	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#24	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#25	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#26	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#27	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#28	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#29	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#30	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#31	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#32	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#33	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#34	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#35	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#36	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#37	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#38	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#39	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#40	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_2	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_3	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_4	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_5	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_6	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_7	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_8	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_9	1914
+iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun02_10	1914
 
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#41	1914
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#42	1914
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#43	1914
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#44	1914
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#45	1914
-ama_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#46	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#47	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#48	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#49	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#50	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#51	1914
-iz_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#52	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#53	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#54	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#55	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#56	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#57	1914
-iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#58	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#59	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#60	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#61	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#62	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#63	1914
-iz_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#64	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#65	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#66	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#67	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#68	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#69	1914
-mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#70	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#71	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#72	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#73	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#74	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#75	1914
-ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#76	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#77	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#78	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#79	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#80	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#81	1914
-gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#82	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#83	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#84	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#85	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#86	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#87	1914
-gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#88	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#89	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#90	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#91	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#92	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#93	1914
-gef_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#94	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#95	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#96	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#97	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#98	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#99	1914
-prt_maze03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#100	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#101	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#102	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#103	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#104	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#105	1914
-ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#106	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#107	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#108	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#109	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#110	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#111	1914
-mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#112	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#113	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#114	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#115	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#116	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#117	1914
-mosk_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#118	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#119	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#120	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#121	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#122	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#123	1914
-orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#124	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#125	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#126	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#127	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#128	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#129	1914
-pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#130	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#131	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#132	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#133	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#134	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#135	1914
-pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#136	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#137	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#138	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#139	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#140	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#141	1914
-pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#142	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#143	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#144	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#145	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#146	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#147	1914
-pay_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#148	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#149	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#150	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#151	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#152	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#153	1914
-um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#154	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#155	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#156	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#157	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#158	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#159	1914
-um_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#160	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_1	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_2	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_3	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_4	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_5	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_6	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_7	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_8	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_9	1914
+iz_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#iz_dun03_10	1914
+
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_1	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_2	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_3	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_4	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_5	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_6	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_7	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_8	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_9	1914
+alde_dun04,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#alde_dun04_10	1914
+
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_1	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_2	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_3	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_4	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_5	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_6	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_7	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_8	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_9	1914
+mjo_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mjo_dun03_10	1914
+
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_1	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_2	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_3	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_4	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_5	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_6	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_7	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_8	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_9	1914
+ein_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ein_dun01_10	1914
+
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_1	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_2	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_3	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_4	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_5	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_6	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_7	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_8	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_9	1914
+gef_dun00,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun00_10	1914
+
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_1	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_2	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_3	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_4	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_5	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_6	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_7	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_8	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_9	1914
+gef_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#gef_dun01_10	1914
+
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_1	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_2	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_3	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_4	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_5	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_6	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_7	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_8	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_9	1914
+prt_maze01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze01_10	1914
+
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_1	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_2	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_3	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_4	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_5	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_6	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_7	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_8	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_9	1914
+prt_maze02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#prt_maze02_10	1914
+
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_1	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_2	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_3	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_4	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_5	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_6	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_7	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_8	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_9	1914
+ice_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#ice_dun01_10	1914
+
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_1	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_2	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_3	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_4	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_5	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_6	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_7	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_8	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_9	1914
+mosk_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#mosk_dun01_10	1914
+
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_1	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_2	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_3	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_4	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_5	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_6	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_7	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_8	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_9	1914
+orcsdun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#orcsdun02_10	1914
+
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_1	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_2	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_3	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_4	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_5	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_6	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_7	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_8	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_9	1914
+pay_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun01_10	1914
+
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_1	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_2	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_3	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_4	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_5	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_6	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_7	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_8	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_9	1914
+pay_dun02,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun02_10	1914
+
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_1	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_2	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_3	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_4	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_5	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_6	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_7	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_8	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_9	1914
+pay_dun03,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#pay_dun03_10	1914
+
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_1	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_2	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_3	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_4	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_5	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_6	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_7	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_8	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_9	1914
+um_dun01,0,0,3	duplicate(Kyanite Deposit#1)	Kyanite Deposit#um_dun01_10	1914
 
 
 
@@ -2347,138 +2605,290 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#2	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#3	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#4	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#5	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#6	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#7	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#8	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#9	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#10	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#11	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#12	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#13	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#14	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#23	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#24	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#25	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#26	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#27	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#28	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#29	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#30	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#31	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#32	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#33	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#34	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#35	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#36	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#37	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#38	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#39	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#40	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#41	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#42	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#43	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#44	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#45	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#46	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#47	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#48	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#49	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#50	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#51	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#52	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_2	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_3	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_4	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_5	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_6	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_7	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_8	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_9	1915
+abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#abyss_01_10	1915
 
-abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#53	1915
-abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#54	1915
-abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#55	1915
-abyss_01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#56	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#57	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#58	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#59	1915
-abyss_02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#60	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#61	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#62	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#63	1915
-beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#64	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#65	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#66	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#67	1915
-ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#68	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#69	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#70	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#71	1915
-gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#72	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#73	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#74	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#75	1915
-gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#76	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#77	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#78	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#79	1915
-gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#80	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#81	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#82	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#83	1915
-ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#84	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#85	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#86	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#87	1915
-ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#88	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#89	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#90	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#91	1915
-lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#92	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#93	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#94	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#95	1915
-lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#96	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#97	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#98	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#99	1915
-lou_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#100	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#101	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#102	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#103	1915
-mag_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#104	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#105	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#106	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#108	1915
-mag_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#109	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#110	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#111	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#112	1915
-mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#113	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#114	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#115	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#116	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#117	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#118	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#119	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#120	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#121	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#122	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#123	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#124	1915
-thor_v02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#125	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#126	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#127	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#128	1915
-tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#129	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#130	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#131	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#132	1915
-tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#133	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#134	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#135	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#136	1915
-tur_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#137	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#138	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#139	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#140	1915
-tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#141	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_1	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_2	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_3	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_4	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_5	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_6	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_7	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_8	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_9	1915
+beach_dun2,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#beach_dun2_10	1915
+
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_1	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_2	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_3	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_4	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_5	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_6	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_7	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_8	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_9	1915
+iz_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#iz_dun04_10	1915
+
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_1	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_2	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_3	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_4	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_5	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_6	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_7	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_8	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_9	1915
+alde_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun01_10	1915
+
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_1	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_2	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_3	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_4	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_5	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_6	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_7	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_8	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_9	1915
+alde_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun02_10	1915
+
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_1	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_2	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_3	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_4	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_5	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_6	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_7	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_8	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_9	1915
+alde_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#alde_dun03_10	1915
+
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_1	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_2	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_3	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_4	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_5	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_6	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_7	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_8	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_9	1915
+ein_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ein_dun02_10	1915
+
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_1	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_2	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_3	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_4	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_5	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_6	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_7	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_8	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_9	1915
+gef_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gef_dun02_10	1915
+
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_1	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_2	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_3	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_4	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_5	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_6	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_7	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_8	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_9	1915
+gl_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun02_10	1915
+
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_1	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_2	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_3	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_4	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_5	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_6	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_7	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_8	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_9	1915
+gl_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gl_dun03_10	1915
+
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_1	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_2	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_3	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_4	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_5	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_6	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_7	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_8	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_9	1915
+gon_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun01_10	1915
+
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_1	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_2	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_3	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_4	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_5	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_6	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_7	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_8	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_9	1915
+gon_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun02_10	1915
+
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_1	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_2	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_3	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_4	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_5	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_6	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_7	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_8	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_9	1915
+gon_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#gon_dun03_10	1915
+
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_1	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_2	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_3	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_4	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_5	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_6	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_7	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_8	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_9	1915
+prt_maze03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#prt_maze03_10	1915
+
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_1	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_2	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_3	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_4	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_5	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_6	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_7	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_8	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_9	1915
+ice_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun02_10	1915
+
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_1	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_2	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_3	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_4	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_5	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_6	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_7	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_8	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_9	1915
+ice_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#ice_dun03_10	1915
+
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_1	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_2	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_3	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_4	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_5	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_6	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_7	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_8	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_9	1915
+lou_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun01_10	1915
+
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_1	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_2	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_3	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_4	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_5	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_6	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_7	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_8	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_9	1915
+lou_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#lou_dun02_10	1915
+
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_1	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_2	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_3	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_4	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_5	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_6	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_7	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_8	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_9	1915
+mosk_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun02_10	1915
+
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_1	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_2	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_3	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_4	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_5	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_6	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_7	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_8	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_9	1915
+mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_10	1915
+
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_1	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_2	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_3	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_4	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_5	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_6	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_7	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_8	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_9	1915
+odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_10	1915
+
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_1	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_2	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_3	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_4	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_5	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_6	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_7	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_8	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_9	1915
+odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_10	1915
+
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_1	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_2	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_3	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_4	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_5	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_6	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_7	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_8	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_9	1915
+pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_10	1915
+
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_1	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_2	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_3	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_4	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_5	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_6	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_7	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_8	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_9	1915
+tur_dun01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun01_10	1915
+
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_1	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_2	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_3	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_4	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_5	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_6	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_7	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_8	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_9	1915
+tur_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#tur_dun02_10	1915
+
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_1	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_2	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_3	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_4	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_5	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_6	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_7	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_8	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_9	1915
+um_dun02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#um_dun02_10	1915
 
 
 
@@ -2486,7 +2896,7 @@ tur_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#141	1915
 // Mining, Level 4
 // From Level 100 dungeons
 // ==========================================================
-abyss_03,0,0,3	script	Scapolite Deposit#1	1907,{
+abyss_02,0,0,3	script	Scapolite Deposit#1	1907,{
 	callfunc "checkprofession","Mining";
 
   getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -2522,34 +2932,180 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#2	1907
-beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#3	1907
-beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#4	1907
-juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#5	1907
-juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#6	1907
-nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#7	1907
-nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#8	1907
-odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#9	1907
-odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#10	1907
-thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#11	1907
-thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#12	1907
-thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#13	1907
-thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#14	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_2	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_3	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_4	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_5	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_6	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_7	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_8	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_9	1907
+abyss_02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_02_10	1907
 
-abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#15	1907
-abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#16	1907
-beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#17	1907
-beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#18	1907
-juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#19	1907
-juperos_01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#20	1907
-nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#21	1907
-nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#22	1907
-odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#23	1907
-odin_tem03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#24	1907
-thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#25	1907
-thor_v01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#26	1907
-thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#27	1907
-thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#28	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_1	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_2	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_3	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_4	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_5	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_6	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_7	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_8	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_9	1907
+abyss_03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#abyss_03_10	1907
+
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_1	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_2	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_3	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_4	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_5	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_6	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_7	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_8	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_9	1907
+beach_dun,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#beach_dun_10	1907
+
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_1	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_2	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_3	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_4	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_5	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_6	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_7	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_8	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_9	1907
+geffenia01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia01_10	1907
+
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_1	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_2	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_3	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_4	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_5	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_6	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_7	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_8	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_9	1907
+geffenia02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia02_10	1907
+
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_1	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_2	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_3	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_4	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_5	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_6	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_7	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_8	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_9	1907
+geffenia03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia03_10	1907
+
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_1	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_2	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_3	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_4	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_5	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_6	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_7	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_8	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_9	1907
+geffenia04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#geffenia04_10	1907
+
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_1	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_2	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_3	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_4	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_5	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_6	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_7	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_8	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_9	1907
+gld_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun01_10	1907
+
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_1	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_2	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_3	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_4	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_5	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_6	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_7	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_8	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_9	1907
+gld_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun02_10	1907
+
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_1	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_2	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_3	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_4	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_5	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_6	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_7	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_8	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_9	1907
+gld_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun03_10	1907
+
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_1	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_2	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_3	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_4	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_5	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_6	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_7	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_8	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_9	1907
+gld_dun04,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#gld_dun04_10	1907
+
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_1	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_2	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_3	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_4	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_5	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_6	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_7	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_8	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_9	1907
+mag_dun01,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun01_10	1907
+
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_1	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_2	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_3	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_4	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_5	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_6	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_7	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_8	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_9	1907
+mag_dun02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#mag_dun02_10	1907
+
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_1	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_2	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_3	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_4	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_5	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_6	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_7	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_8	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_9	1907
+nameless_n,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#nameless_n_10	1907
+
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_1	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_2	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_3	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_4	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_5	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_6	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_7	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_8	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_9	1907
+thor_v02,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#thor_v02_10	1907
+
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_1	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_2	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_3	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_4	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_5	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_6	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_7	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_8	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_9	1907
+tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_10	1907
 
 
 
@@ -2557,7 +3113,7 @@ thor_v03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#28	1907
 // Mining, Level 5
 // From Level 100 dungeons
 // ==========================================================
-nyd_dun01,0,0,3	script	Cyberium Deposit#1	10248,{
+odin_tem03,0,0,3	script	Cyberium Deposit#1	10248,{
 	callfunc "checkprofession","Mining";
 
   getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -2593,9 +3149,37 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-nyd_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#2	10248
-dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#3	10248
-dew_dun01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#4	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_2	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_3	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_4	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_5	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_6	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_7	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_8	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_9	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_10	10248
+
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_1	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_2	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_3	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_4	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_5	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_6	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_7	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_8	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_9	10248
+thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_10	10248
+
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_1	10248
+thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_10	10248
 
 
 
