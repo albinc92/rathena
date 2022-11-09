@@ -25,8 +25,8 @@ console_msg_log: 7
 // DNS Blacklist Blocking
 // If enabled, each incoming connection will be tested against the blacklists
 // on the specified dnsbl_servers (comma-separated list)
-use_dnsbl: yes
-dnsbl_servers: bl.blocklist.de, ircbl.ahbl.org, safe.dnsbl.sorbs.net, sbl-xbl.spamhaus.org, socks.dnsbl.sorbs.net, tor.ahbl.org
+//use_dnsbl: yes
+//dnsbl_servers: bl.blocklist.de, ircbl.ahbl.org, safe.dnsbl.sorbs.net, sbl-xbl.spamhaus.org, socks.dnsbl.sorbs.net, tor.ahbl.org
 // Here are some free DNS Blacklist Services: http://en.wikipedia.org/wiki/Comparison_of_DNS_blacklists
 //==============================================================================
 //   dnsbl_servers                 Description
