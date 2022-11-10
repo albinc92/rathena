@@ -80,7 +80,7 @@ L_Card:
 	next;
 
 	.@i = select( .@menu$ ) - 1;
-	
+
 	mes "["+strnpcinfo(1)+"]";
 	mes "How many would you like to trade?";
 	input .@amnt;
@@ -116,7 +116,7 @@ L_Information:
 	mes "And ^ff00002 Card Tokens^000000 for each Old Card Album ya give me.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes "You can trade in ya tokens for various goodies down at the ^ff0000Supply Master^000000 inside the ^ff0000Imperial Senate Building^000000.";
+	mes "You can trade in ya tokens for various goodies down at the ^ff0000Supply Master^000000 inside the ^ff0000Senate Building^000000.";
 	next;
 	mes "["+strnpcinfo(1)+"]";
 	mes "Got all that? Good, let's get down to business.";

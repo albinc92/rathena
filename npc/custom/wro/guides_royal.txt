@@ -1,7 +1,7 @@
 royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 	cutin "kafra_09",2;
 	mes "[Royal Guide]";
-	mes "Welcome to Royal, the imperial metropolis!";
+	mes "Welcome to Royal, the Schwarzwald Satellite City!";
 	mes "Feel free to ask me anything!";
 	set .@loop1,1;
 	while (.@loop1) {
@@ -196,7 +196,7 @@ royal,143,138,2	script	Guide#roy::RoyGuide	861,{
 			mes "Don't let the low drop rates of Boss Cards fool you! It is easier than you think to get powerful cards!";
 			next;
 			mes "[Royal Guide]";
-			mes "The Supply Master in the Imperial Senate building can sell you some useful items, such as ^ff0000Bubblegums^000000, and ^ff0000Convex Mirrors^000000, and even ^ff0000Bloody Branches^000000.";
+			mes "The Supply Master in the Senate building can sell you some useful items, such as ^ff0000Bubblegums^000000, and ^ff0000Convex Mirrors^000000, and even ^ff0000Bloody Branches^000000.";
 			break;
 			mes "[Royal Guide]";
 			mes "Also, I heard rumors of a guy in town who offers to trade in Cards and Old Card Albums for ^ff0000Card Tokens^000000, which in turn can be traded at the Supply Master for ^ff0000More Powerful Card Albums^000000!";

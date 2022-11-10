@@ -666,7 +666,7 @@ OnPCLoadMapEvent:
 
 
 // Imperial Recruiter
-royal,81,190,5	script	Imperial Recruiter	10010,{
+royal,81,190,5	script	Recruiter	10010,{
 	query_sql("SELECT `stage` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@stage);
 	query_sql("SELECT `rank` FROM `mainquest` WHERE `char_id` = " + getcharid(0), .@rank$);
 
@@ -674,7 +674,7 @@ royal,81,190,5	script	Imperial Recruiter	10010,{
 	mes "[" + strnpcinfo(1) + "]";
 	if(.@stage == 0) {
 		showevent -1,0;
-		mes "Greetings to you, adventurer. Allow me to welcome you to Royal, the Imperial Metropolis!";
+		mes "Greetings to you, adventurer. Allow me to welcome you to Royal, the Schwarzwald Satellite City!";
 		next;
 		mes "[" + strnpcinfo(1) + "]";
 		mes "I am responsible for recruiting new members into the ^0000ffImperial Legion^000000, the military force serving under this great nation.";

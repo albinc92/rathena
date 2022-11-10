@@ -455,7 +455,7 @@ OnInit:
 royal,129,166,5	script	Signpost#hq	837,{
 	end;
 OnInit:
-	waitingroom "Imperial Senate",0;
+	waitingroom "Senate",0;
 }
 
 royal,184,178,3	script	Signpost#church	837,{

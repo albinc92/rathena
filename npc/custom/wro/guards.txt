@@ -1,7 +1,7 @@
 -	script	royguard	-1,{
 
 	cutin "ein_soldier",2;
-	mes "[Imperial Guard]";
+	mes "[Guard]";
 	mes "Stay out of trouble.";
 	close2;
 	cutin "", 255;
@@ -11,22 +11,20 @@
 
 // Duplicates
 //============================================================
-//royal,126,165,5	duplicate(royguard)	Imperial Guard#cas1	852
-//royal,141,165,4	duplicate(royguard)	Imperial Guard#cas2	852
-royal,247,155,3	duplicate(royguard)	Imperial Guard#egate1	852
-royal,247,144,2	duplicate(royguard)	Imperial Guard#egate2	852
-royal,219,211,2	duplicate(royguard)	Imperial Guard#dock1	852
-royal,200,211,7	duplicate(royguard)	Imperial Guard#dock2	852
-royal,67,207,4	duplicate(royguard)	Imperial Guard#fish	852
-royal,128,16,5	duplicate(royguard)	Imperial Guard#sgate1	852
-royal,139,16,4	duplicate(royguard)	Imperial Guard#sgate2	852
-roy_in01,202,176,5	duplicate(royguard)	Imperial Guard#hq1	852
-roy_in01,202,186,5	duplicate(royguard)	Imperial Guard#hq2	852
-roy_in01,202,196,5	duplicate(royguard)	Imperial Guard#hq3	852
-roy_in01,193,176,5	duplicate(royguard)	Imperial Guard#hq4	852
-roy_in01,193,186,5	duplicate(royguard)	Imperial Guard#hq5	852
-roy_in01,193,196,5	duplicate(royguard)	Imperial Guard#hq6	852
-roy_in01,202,220,5	duplicate(royguard)	Imperial Guard#hq7	852
-roy_in01,193,220,5	duplicate(royguard)	Imperial Guard#hq8	852
-roy_fild01,195,276,4	duplicate(royguard)	Imperial Guard#fild1	852
-roy_fild01,183,276,5	duplicate(royguard)	Imperial Guard#fild2	852
+royal,247,155,3	duplicate(royguard)	Guard#egate1	852
+royal,247,144,2	duplicate(royguard)	Guard#egate2	852
+royal,219,211,2	duplicate(royguard)	Guard#dock1	852
+royal,200,211,7	duplicate(royguard)	Guard#dock2	852
+royal,67,207,4	duplicate(royguard)	Guard#fish	852
+royal,128,16,5	duplicate(royguard)	Guard#sgate1	852
+royal,139,16,4	duplicate(royguard)	Guard#sgate2	852
+roy_in01,202,176,5	duplicate(royguard)	Guard#hq1	852
+roy_in01,202,186,5	duplicate(royguard)	Guard#hq2	852
+roy_in01,202,196,5	duplicate(royguard)	Guard#hq3	852
+roy_in01,193,176,5	duplicate(royguard)	Guard#hq4	852
+roy_in01,193,186,5	duplicate(royguard)	Guard#hq5	852
+roy_in01,193,196,5	duplicate(royguard)	Guard#hq6	852
+roy_in01,202,220,5	duplicate(royguard)	Guard#hq7	852
+roy_in01,193,220,5	duplicate(royguard)	Guard#hq8	852
+roy_fild01,195,276,4	duplicate(royguard)	Guard#fild1	852
+roy_fild01,183,276,5	duplicate(royguard)	Guard#fild2	852
