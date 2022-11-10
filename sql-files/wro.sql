@@ -100,8 +100,7 @@ SET `id` = `id` + 41000,
     `script` = '',
     `equip_script` = '',
     `unequip_script` = ''
-WHERE `type` = 'Armor'
-AND (`location_head_top` = true
+WHERE (`location_head_top` = true
 OR `location_head_mid` = true
 OR `location_head_low` = true);
 
