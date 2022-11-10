@@ -1,12 +1,12 @@
 // Misc NPCs
-roy_in01,198,217,5	script	Empress Lyanna IX	640,{
-	cutin "gc_mayssel01",2;
-	mes "[Lyanna IX]";
-	mes "Hail, adventurer. I trust you enjoy your stay in Royal?";
-	close2;
-	cutin "", 255;
-	end;
-}
+//roy_in01,198,217,5	script	Empress Lyanna IX	640,{
+//	mes "[Lyanna IX]";
+//	cutin "gc_mayssel01",2;
+//	mes "Hail, adventurer. I trust you enjoy your stay in Royal?";
+//	close2;
+//	cutin "", 255;
+//	end;
+//}
 
 roy_in01,191,213,4	script	Minister Artemia	10182,{
 	cutin "16wol_ang",2;
@@ -96,7 +96,7 @@ royal,142,83,3	script	Sarah	10066,{
 roy_in02,92,61,1	script	Fay	665,{
 	cutin "paycana_a",2;
 	mes "[Fay]";
-	mes "Gathering professions are just the best!";
+	mes "Professions are just the best!";
 	close2;
 	cutin "", 255;
 	end;
