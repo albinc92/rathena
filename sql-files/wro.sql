@@ -46,9 +46,8 @@ CREATE TABLE IF NOT EXISTS `gathering` (
 ) ENGINE=MyISAM;
 
 -- FluXCP Config
-
-CREATE USER 'FluxCP'@localhost IDENTIFIED BY 'P3AniNm4t&nB5Tff';
-GRANT ALL PRIVILEGES ON *.* TO 'FluxCP'@localhost IDENTIFIED BY 'P3AniNm4t&nB5Tff';
+--CREATE USER 'FluxCP'@localhost IDENTIFIED BY 'P3AniNm4t&nB5Tff';
+--GRANT ALL PRIVILEGES ON *.* TO 'FluxCP'@localhost IDENTIFIED BY 'P3AniNm4t&nB5Tff';
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                     item_db
