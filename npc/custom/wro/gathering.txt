@@ -3613,8 +3613,8 @@ anthell01,0,0,3	script	Iolite Deposit#1	3742,{
   set .@skillLv, callfunc("checkskilllv","Mining",1);
   callfunc "harvestnode",.@skillLv,60;
 
-  setarray .@items[0],7049,1002,1010,985,723,994,730,5009;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],7049,1002,1010,985,723,994,730;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -3744,8 +3744,8 @@ iz_dun02,0,0,3	script	Kyanite Deposit#1	1914,{
   set .@skillLv, callfunc("checkskilllv","Mining",61);
   callfunc "harvestnode",.@skillLv,120;
 
-  setarray .@items[0],998,1003,1011,985,729,995,731,2413;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],998,1003,1011,985,729,995,731;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -3961,8 +3961,8 @@ abyss_01,0,0,3	script	Carnelian Deposit#1	1915,{
   set .@skillLv, callfunc("checkskilllv","Mining",121);
   callfunc "harvestnode",.@skillLv,180;
 
-  setarray .@items[0],7232,715,984,6241,721,996,732,2794;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],7232,715,984,6241,721,996,732;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -4277,8 +4277,8 @@ abyss_02,0,0,3	script	Scapolite Deposit#1	1907,{
   set .@skillLv, callfunc("checkskilllv","Mining",181);
   callfunc "harvestnode",.@skillLv,240;
 
-  setarray .@items[0],7233,716,984,6241,726,997,969,1148;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],7233,716,984,6241,726,997,969;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -4494,8 +4494,8 @@ odin_tem03,0,0,3	script	Cyberium Deposit#1	10248,{
   set .@skillLv, callfunc("checkskilllv","Mining",241);
   callfunc "harvestnode",.@skillLv,300;
 
-  setarray .@items[0],7231,717,6240,6241,728,1000,7444,1535;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],7231,717,6240,6241,728,1000,7444;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
