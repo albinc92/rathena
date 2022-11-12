@@ -151,11 +151,11 @@ WHERE `type` = 'Armor' AND (`location_head_top` = true OR `location_head_mid` = 
 REPLACE INTO `item_db2`
 SELECT * FROM `item_db`
 WHERE `id` IN (
-  7160, --Feudal lord permit
-  7285, 7287, --Holy/holier threads
-  7181, --Recepit
-  7426, 7427, 7428, 7429, 7430, --Thana Charm stones
-  7421, 7422, 7423, 7424, 7425 --Thana keys
+  7160,
+  7285, 7287,
+  7181,
+  7426, 7427, 7428, 7429, 7430,
+  7421, 7422, 7423, 7424, 7425
 );
 
 UPDATE `item_db2`
@@ -170,11 +170,11 @@ SET `weight` = 0,
     `trade_nomail` = true,
     `trade_noauction` = true
 WHERE `id` IN (
-  7160, --Feudal lord permit
-  7285, 7287, --Holy/holier threads
-  7181, --Recepit
-  7426, 7427, 7428, 7429, 7430, --Thana Charm stones
-  7421, 7422, 7423, 7424, 7425 --Thana keys
+  7160,
+  7285, 7287,
+  7181,
+  7426, 7427, 7428, 7429, 7430,
+  7421, 7422, 7423, 7424, 7425
 );
 
 -- Make certain items droppable etc.
