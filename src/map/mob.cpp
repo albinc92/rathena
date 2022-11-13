@@ -2758,8 +2758,6 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    id_range.push_back({2420, 32});	// Angels Reincarnation special case (based on same formula as normal type)
 	    id_range.push_back({2407, 41});
 	    id_range.push_back({2409, 51});
-	    id_range.push_back({2417, 60});
-	    id_range.push_back({2425, 60});
 	    std::vector<t_itemid> lv_60_footgear_r = { 2417, 2425 };
 	    id_range.push_back({lv_60_footgear_r.at(rnd() % lv_60_footgear_r.size()), 60});
 	    id_range.push_back({2426, 61});
