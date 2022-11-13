@@ -976,9 +976,11 @@ REPLACE INTO `mob_db2` VALUES (2476,'INVADING_BOSS','Invading_Boss','Invasion Co
 REPLACE INTO `mob_db2` VALUES (1288,'EMPELIUM','Emperium','Emperium',90,5000000,0,0,0,1,60,71,40,50,1,17,80,50,26,20,10,12,0,8,26,0x6200000,300,1288,288,384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 -- LHZ Mobs to boss flag
-UPDATE `mob_db2` SET `mode` = `mode` + 0x6200000 WHERE `id` IN (
+UPDATE `mob_db2` SET `mode` += 0x4200000 WHERE `id` IN (
   1634,
-  1635,
+  1635
+);
+UPDATE `mob_db2` SET `mode` += 0x6200000 WHERE `id` IN (
   1636,
   1637,
   1638,
