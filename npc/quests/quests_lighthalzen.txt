@@ -1659,6 +1659,7 @@ lhz_cube,248,193,0	script	Box#cube1	HIDDEN_NPC,{
 			mes "will be needing it later.";
 			lhz_sincube = 10;
 			getitem 2657,1;// Lab_Passport
+			set #LighthalzenDungeonQuest,1;
 		}
 		close;
 	}
