@@ -26,7 +26,7 @@
 
 // Information NPC
 //============================================================
-royal,122,159,5	script	WOE Manager	835,{
+royal,122,159,5	script	WOE Manager	10183,{
 	doevent "WOE_CONTROL::OnMenu";
 	end;
 OnAgitStart:
