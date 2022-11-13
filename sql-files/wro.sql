@@ -852,13 +852,6 @@ SELECT
 FROM `mob_db`
 WHERE `LV` > 99;
 
--- Limit slave count to 2 for monsters
-UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
-
--- Remove Earthquake from almost all mobs and Dispel from MvPs
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 653 AND mob_id NOT IN (1919, 1923);
-DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND mob_id IN (SELECT id FROM mob_db WHERE MEXP > 0);
-
 -- Remove all equipment from monster drop tables
 -- REPLACE INTO `mob_db2` SELECT * FROM `mob_db`;
 UPDATE `mob_db2` SET `Drop1id` = 0 WHERE `Drop1id` IN (
@@ -991,6 +984,13 @@ UPDATE `mob_db2` SET `mode` =  `mode` + 0x6200000 WHERE `id` IN (
 --                                                      mob_skill_db
 -- ---------------------------------------------------------------------------------------------------------------------
 
+-- Limit slave count to 2 for monsters
+UPDATE `mob_skill_db` SET `skill_lv` = 2 WHERE `skill_id` = 196 AND `skill_lv` > 2;
+
+-- Remove Earthquake from almost all mobs and Dispel from MvPs
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 653 AND mob_id NOT IN (1919, 1923);
+DELETE FROM `mob_skill_db` WHERE `skill_id` = 289 AND mob_id IN (SELECT id FROM mob_db WHERE MEXP > 0);
+
 -- Imperial Guards
 REPLACE INTO `mob_skill_db2` VALUES (3611,'Imperial Guard@GS_RAPIDSHOWER','attack',515,10,2000,0,1000,'yes','target','always',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
@@ -1000,6 +1000,26 @@ REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD',
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','chase',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db2` VALUES (2476,'Invasion Commander@CR_REFLECTSHIELD','attack',252,1,10000,0,300000,'yes','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
 REPLACE INTO `mob_skill_db` VALUES (2476,'Invasion Commander@NPC_GRANDDARKNESS','attack',339,5,500,2000,30000,'no','self','always','0',NULL,NULL,NULL,NULL,NULL,'6',NULL);
+
+-- LHZ bosses
+UPDATE `mob_skill_db`
+SET val1 = 1635, val2 = 1636, val3 = 1637, val4 = 1638, val5 = 1639
+WHERE mob_id = 1646 AND `info` LIKE '%@NPC_SUMMONSLAVE';
+UPDATE `mob_skill_db`
+SET val1 = 1634, val2 = 1636, val3 = 1637, val4 = 1638, val5 = 1639
+WHERE mob_id = 1647 AND `info` LIKE '%@NPC_SUMMONSLAVE';
+UPDATE `mob_skill_db`
+SET val1 = 1634, val2 = 1635, val3 = 1637, val4 = 1638, val5 = 1639
+WHERE mob_id = 1648 AND `info` LIKE '%@NPC_SUMMONSLAVE';
+UPDATE `mob_skill_db`
+SET val1 = 1634, val2 = 1635, val3 = 1636, val4 = 1638, val5 = 1639
+WHERE mob_id = 1649 AND `info` LIKE '%@NPC_SUMMONSLAVE';
+UPDATE `mob_skill_db`
+SET val1 = 1634, val2 = 1635, val3 = 1636, val4 = 1637, val5 = 1639
+WHERE mob_id = 1650 AND `info` LIKE '%@NPC_SUMMONSLAVE';
+UPDATE `mob_skill_db`
+SET val1 = 1634, val2 = 1635, val3 = 1636, val4 = 1637, val5 = 1638
+WHERE mob_id = 1651 AND `info` LIKE '%@NPC_SUMMONSLAVE';
 
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                          char
