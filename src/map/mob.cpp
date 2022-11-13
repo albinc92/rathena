@@ -2699,8 +2699,6 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    id_range.push_back({2318, 79});
 	    std::vector<t_itemid> lv_80_armor_r = { 2334, 2367 };
 	    id_range.push_back({lv_80_armor_r.at(rnd() % lv_80_armor_r.size()), 80});
-	    std::vector<t_itemid> lv_81_armor_r = { 2334, 2367 };
-	    id_range.push_back({lv_81_armor_r.at(rnd() % lv_81_armor_r.size()), 81});
 	    id_range.push_back({2390, 82});
 	    id_range.push_back({2354, 83});
 	    id_range.push_back({2344, 85});
@@ -2710,7 +2708,7 @@ t_itemid set_drop_id(int mob_level, e_mob_bosstype boss_type) {
 	    std::vector<t_itemid> lv_91_armor_r = { 2387, 2364 };
 	    id_range.push_back({lv_91_armor_r.at(rnd() % lv_91_armor_r.size()), 91});
 	    id_range.push_back({2389, 93});
-	    std::vector<t_itemid> lv_99_armor_r = { 2345, 2343, 2374, 2374, 2357, 2375 };
+	    std::vector<t_itemid> lv_99_armor_r = { 2345, 2343, 2374, 2357, 2375 };
 	    id_range.push_back({lv_99_armor_r.at(rnd() % lv_99_armor_r.size()), 99});
 		}
 		else if(item_type > 19 && item_type < 34) { // SHIELD
