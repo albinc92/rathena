@@ -216,16 +216,16 @@ T36: Go("yuno",157,51);
 // --------------------------------------------------
 	Fields:
 // --------------------------------------------------
-menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
-    	"Comodo Fields",F5,
-    	"Einbroch Fields",F8,
-    	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
-    	"Lighthalzen Fields",F13, "Louyang Field",F14, "Lutie Field",F15,
-    	"Manuk Fields",F17, "Morocc Deserts",F24, "Mjolnir Fields",F18,
-    	"Moscovia Fields",F19, "Niflheim Fields",F20, "Payon Forests",F21,
-    	"Prontera Fields",F22, "Rachel Fields",F23,
-    	"Splendide Fields",F25, "Umbala Fields",F26, "Veins Fields",F27,
-    	"Yuno Fields",F28;
+menu	"Amatsu Fields (^ff0000ama_fild^000000)",F1, "Ayothaya Fields (^ff0000ayo_fild^000000)",F2,
+    	"Comodo Fields (^ff0000cmd_fild^000000)",F5,
+    	"Einbroch Fields (^ff0000ein_fild^000000)",F8,
+    	"Geffen Fields (^ff0000gef_fild^000000)",F10, "Gonryun Fields (^ff0000gon_fild^000000)",F11, "Hugel Fields (^ff0000hu_fild^000000)",F12,
+    	"Lighthalzen Fields (^ff0000lhz_fild^000000)",F13, "Louyang Field (^ff0000lou_fild^000000)",F14, "Lutie Field (^ff0000xmas_fild^000000)",F15,
+    	"Manuk Fields (^ff0000man_fild^000000)",F17, "Morocc Deserts (^ff0000moc_fild^000000)",F24, "Mjolnir Fields (^ff0000mjolnir_^000000)",F18,
+    	"Moscovia Fields (^ff0000mosk_fild^000000)",F19, "Niflheim Fields (^ff0000nif_fild^000000)",F20, "Payon Forests (^ff0000pay_fild^000000)",F21,
+    	"Prontera Fields (^ff0000prt_fild^000000)",F22, "Rachel Fields (^ff0000ra_fild^000000)",F23, "Royal Fields (^ff0000roy_fild^000000)",F29,
+    	"Splendide Fields (^ff0000spl_fild^000000)",F25, "Umbala Fields (^ff0000um_fild^000000)",F26, "Veins Fields (^ff0000ve_fild^000000)",F27,
+    	"Yuno Fields (^ff0000yuno_fild^000000)",F28;
 
 F1: setarray @c[0],190,197;
 	Disp("Amatsu Field",1,1,"ama_fild"); Pick("ama_fild");
@@ -298,6 +298,8 @@ F27: Restrict("Pre-RE",5);
 F28: Restrict("Pre-RE",5,10);
 	 setarray @c[2],189,224,192,207,221,157,226,199,223,177,187,232,231,174,196,203,183,214,200,124,195,226,210,304;
 	 Disp("Yuno Field",1,12); Pick("yuno_fild");
+F15: setarray @c[2],115,145;
+	 Disp("Royal Fields",1,1); Pick("roy_fild");
 
 // --------------------------------------------------
 	Dungeons:

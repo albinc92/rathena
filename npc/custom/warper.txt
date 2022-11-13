@@ -133,7 +133,7 @@ menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
 		"Lutie",T21, "Malangdo",T22, "Malaya",T23, "Manuk",T24,
 		"Midgarts Expedition Camp",T25, "Mora",T26, "Morocc",T27, "Moscovia",T28,
 		"Nameless Island",T29, "Niflheim",T30, "Payon",T31, "Rachel",T32, "Splendide",T33,
-		"Thor Camp",T34, "Umbala",T35, "Veins",T36, "Yuno",T37;
+		"Thor Camp",T34, "Umbala",T35, "Veins",T36, "Juno",T37;
 
 T1: Go("prontera",155,183);
 T2: Go("alberta",28,234);
@@ -185,16 +185,16 @@ T37: Go("yuno",157,51);
 	Fields:
 // --------------------------------------------------
 @f = true;
-menu	"Amatsu Fields (^ff0000ama_fild^000000)",F1, "Ayothaya Fields (^ff0000ayo_fild^000000)",F2, "Bifrost Fields", F3,
-    	"Brasilis Fields",F4, "Comodo Fields (^ff0000cmd_fild^000000)",F5, "Dewata Fields",F6,
-    	"Eclage Fields",F7, "Einbroch Fields (^ff0000ein_fild^000000)",F8, "El Dicastes Fields",F9,
-    	"Geffen Fields (^ff0000gef_fild^000000)",F10, "Kunlun Fields (^ff0000gon_fild^000000)",F11, "Hugel Fields (^ff0000hu_fild^000000)",F12,
-		"Lasagna Fields",F13, "Lighthalzen Fields (^ff0000lhz_fild^000000)",F14, "Luoyang Field (^ff0000lou_fild^000000)",F15,
-		"Lutie Field (^ff0000xmas_fild^000000)",F16, "Malaya Fields",F17, "Manuk Fields (^ff0000man_fild^000000)",F18,
-		"Mjolnir Fields (^ff0000mjolnir_^000000)",F19, "Moscovia Fields (^ff0000mosk_fild^000000)",F20, "Niflheim Fields (^ff0000nif_fild^000000)",F21,
-		"Payon Forests (^ff0000pay_fild^000000)",F22, "Prontera Fields (^ff0000prt_fild^000000)",F23, "Rachel Fields (^ff0000ra_fild^000000)",F24,
-		"Sograt Deserts (^ff0000moc_fild^000000)",F25, "Splendide Fields (^ff0000spl_fild^000000)",F26, "Umbala Fields (^ff0000um_fild^000000)",F27,
-		"Veins Fields (^ff0000ve_fild^000000)",F28, "Yuno Fields (^ff0000yuno_fild^000000)",F29;
+menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Bifrost Fields", F3,
+    	"Brasilis Fields",F4, "Comodo Fields",F5, "Dewata Fields",F6,
+    	"Eclage Fields",F7, "Einbroch Fields",F8, "El Dicastes Fields",F9,
+    	"Geffen Fields",F10, "Kunlun Fields",F11, "Hugel Fields",F12,
+		"Lasagna Fields",F13, "Lighthalzen Fields",F14, "Luoyang Field",F15,
+		"Lutie Field",F16, "Malaya Fields",F17, "Manuk Fields",F18,
+		"Mjolnir Fields",F19, "Moscovia Fields",F20, "Niflheim Fields",F21,
+		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24,
+		"Sograt Deserts",F25, "Splendide Fields",F26, "Umbala Fields",F27,
+		"Veins Fields",F28, "Juno Fields",F29;
 
 F1: setarray @c[2],190,197;
 	Disp("Amatsu Field",1,1); Pick("ama_fild");
@@ -274,27 +274,27 @@ F28: Restrict("Pre-RE",5);
 	 Disp("Veins Field",1,7); Pick("ve_fild");
 F29: Restrict("Pre-RE",5,10);
 	 setarray @c[2],189,224,192,207,221,157,226,199,223,177,187,232,231,174,196,203,183,214,200,124,195,226,210,304;
-	 Disp("Yuno Field",1,12); Pick("yuno_fild");
+	 Disp("Juno Field",1,12); Pick("yuno_fild");
 
 // --------------------------------------------------
 	Dungeons:
 // --------------------------------------------------
 @d = true;
-menu	"Abyss Lakes Underground Cave (^ff0000abyss_^000000)",D1, "Amatsu Dungeon (^ff0000ama_dun^000000)",D2, "Ant Hell (^ff0000anthell^000000)",D3,
-    	"Ancient Shrine (^ff0000ayo_dun^000000)",D4, "Beach Dungeon (^ff0000beach_dun^000000)",D5, "Bifrost Tower",D42,
-    	"Somatology Laboratory (^ff0000lhz_dun^000000)",D6, "Brasilis Dungeon",D7, "Undersea Tunnel (^ff0000iz_dun^000000)",D8, "Clock Tower (^ff0000c_tower^000000/^ff0000alde_dun^000000)",D9,
-    	"Mjolnir Dead Pit (^ff0000mjo_dun^000000)",D10, "Prontera Culvert (^ff0000prt_sewb^000000)",D11, "Cursed Abbey (^ff0000abbey^000000)",D12, "Dewata Dungeon",D13,
-    	"Mine Dungeon (^ff0000ein_dun^000000)",D14, "Geffenia (^ff0000gefenia^000000)",D15, "Geffen Dungeon (^ff0000gef_dun^000000)",D16,
-    	"Glast Heim (^ff0000gl_*^000000)",D17, "Shrine of Gonryun (^ff0000gon_dun^000000)",D18, "Labyrinth Forest (^ff0000prt_maze^000000)",D19,
-    	"Ice Cave (^ff0000ice_dun^000000)",D20, "Juperos (^ff0000juperos^000000/^ff0000jupe_*^000000)",D21, "Kiel Dungeon (^ff0000kh_dun^000000)",D22, "Lasagna Dungeon",D23,
-		"The Royal Tomb (^ff0000lou_dun^000000)",D24, "Nogg Road (^ff0000mag_dun^000000)",D25, "Malangdo Dungeon",D26,
-		"Moscovia Forest (^ff0000mosk_dun^000000)",D27, "Yggdrasil Root (^ff0000nyd_dun^000000)",D28, "Odin Shrine (^ff0000odin_tem^000000)",D29,
-		"Orc Dungeon (^ff0000orcsdun^000000)",D30, "Payon Cave (^ff0000mosk_dun^000000)",D31, "Pyramids (^ff0000moc_pryd^000000)",D32, "Freya's Sacred Precinct (^ff0000ra_san^000000)",D33,
-    	"Scaraba Hole",D34, "Sphinx (^ff0000in_sphinx^000000)",D35, "Sunken Ship (^ff0000treasure^000000)",D36, "Thanatos Tower (^ff0000tha_t^000000)",D37,
-    	"Thor Volcano (^ff0000thor_v^000000)",D38, "Toy Factory (^ff0000xmas_dun^000000)",D39, "Turtle Island (^ff0000tur_dun^000000)",D40, "Umbala Dungeon (^ff0000um_dun^000000)",D41;
+menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
+    	"Ayothaya Dungeon",D4, "Beach Dungeon",D5, "Bifrost Tower",D42,
+    	"Bio Labs",D6, "Brasilis Dungeon",D7, "Byalan Dungeon",D8, "Clock Tower",D9,
+    	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12, "Dewata Dungeon",D13,
+    	"Einbroch Dungeon",D14, "Gefenia",D15, "Geffen Dungeon",D16,
+    	"Glast Heim",D17, "Kunlun Dungeon",D18, "Hidden Dungeon",D19,
+    	"Ice Dungeon",D20, "Juperos",D21, "Kiel Dungeon",D22, "Lasagna Dungeon",D23,
+		"Luoyang Dungeon",D24, "Magma Dungeon",D25, "Malangdo Dungeon",D26,
+		"Moscovia Dungeon",D27, "Nidhogg's Dungeon",D28, "Odin Temple",D29,
+		"Orc Dungeon",D30, "Payon Dungeon",D31, "Pyramids",D32, "Rachel Sanctuary",D33,
+    	"Scaraba Hole",D34, "Sphinx",D35, "Sunken Ship",D36, "Thanatos Tower",D37,
+    	"Thor Volcano",D38, "Toy Factory",D39, "Turtle Dungeon",D40, "Umbala Dungeon",D41;
 
 D1: setarray @c[2],261,272,275,270,116,27;
-	Disp("Abyss Lakes Underground Cave",1,3); Pick("abyss_");
+	Disp("Abyss Lakes",1,3); Pick("abyss_");
 D2: setarray @c[2],228,11,34,41,119,14;
 	Disp("Amatsu Dungeon",1,3); Pick("ama_dun");
 D3: setarray @c[2],35,262,168,170;
