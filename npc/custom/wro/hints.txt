@@ -16,6 +16,7 @@ OnPCLoginEvent:
 
     cutin "tipoftheday.bmp", 4;
     setarray .@hints$[0],
+		"You only need to complete dungeon entrance quests once per account!",
 		"Your online presence is rewarded! Event Tokens are rewarded to online players on an hourly basis. This does not apply for vending players.",
 		"Use the Navigation Interface and the World Map to more easily navigate Rune-Midgard.",
 		"Cast rate is affected by both the DEX and INT attributes according to the renewal formula.",
