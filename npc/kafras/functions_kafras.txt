@@ -139,7 +139,7 @@ function	script	F_Kafra	{
 			// Storage, Save, and Pushcart (Dewata, reorder of case 7)
 			case 10: setarray .@K_Menu0$[0],"Use Storage","Save","Rent a Pushcart","Cancel"; break;
 			// Storage, Teleport, Save, and Pushcart (Royal)
-            case 11: setarray .@K_Menu0$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Cancel"; break;
+      case 11: setarray .@K_Menu0$[0],"Use Storage","Use Guild Storage","Use Teleport Service","Save","Cancel"; break;
 			// Default message (obsolete)
 			default: setarray .@K_Menu0$[0],"Save","Use Storage","Use Teleport Service","Rent a Pushcart","Check Other Information","Cancel"; break;
 		}
