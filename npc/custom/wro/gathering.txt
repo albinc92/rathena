@@ -491,8 +491,8 @@ ayo_fild01,0,0,3	script	Green Stem#1	10229,{
   set .@skillLv, callfunc("checkskilllv","Herbalism",1);
   callfunc "harvestnode",.@skillLv,60;
 
-  setarray .@items[0],905,7033,522,11520,683,7015,749,5206;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],905,7033,522,11520,683,7015,749;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -1604,6 +1604,27 @@ yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_18	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_19	10229
 yuno_fild04,0,0,3	duplicate(Green Stem#1)	Green Stem#yuno_fild04_20	10229
 
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_1	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_2	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_3	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_4	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_5	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_6	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_7	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_8	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_9	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_10	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_11	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_12	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_13	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_14	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_15	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_16	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_17	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_18	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_19	10229
+roy_fild01,0,0,3	duplicate(Green Stem#1)	Green Stem#roy_fild01_20	10229
+
 // ==========================================================
 // Herbs, Level 2
 // Up to Level 120 fields
@@ -1622,8 +1643,8 @@ ama_fild01,0,0,3	script	Jack o' Pumpkin#1	10174,{
   set .@skillLv, callfunc("checkskilllv","Herbalism",61);
   callfunc "harvestnode",.@skillLv,120;
 
-  setarray .@items[0],1062,7012,12292,518,604,743,7140,5202;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250;
+  setarray .@items[0],1062,7012,12292,518,604,743,7140;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -2881,8 +2902,8 @@ cmd_fild02,0,0,3	script	Wigglewort#1	527,{
   set .@skillLv, callfunc("checkskilllv","Herbalism",121);
   callfunc "harvestnode",.@skillLv,180;
 
-  setarray .@items[0],7100,7763,12405,576,12338,752,7140,18596,511;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+  setarray .@items[0],7100,7763,12405,576,12338,752,7140,511;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,3300;
   setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -3364,6 +3385,48 @@ yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_18	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_19	527
 yuno_fild12,0,0,3	duplicate(Wigglewort#1)	Wigglewort#yuno_fild12_20	527
 
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_1	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_2	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_3	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_4	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_5	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_6	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_7	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_8	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_9	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_10	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_11	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_12	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_13	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_14	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_15	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_16	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_17	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_18	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_19	1915
+odin_tem01,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem01_20	1915
+
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_1	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_2	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_3	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_4	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_5	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_6	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_7	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_8	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_9	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_10	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_11	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_12	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_13	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_14	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_15	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_16	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_17	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_18	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_19	1915
+odin_tem02,0,0,3	duplicate(Wigglewort#1)	Wigglewort#odin_tem02_20	1915
+
 
 
 // ==========================================================
@@ -3384,8 +3447,8 @@ man_fild02,0,0,3	script	Silvervine Gourd#1	1816,{
   set .@skillLv, callfunc("checkskilllv","Herbalism",181);
   callfunc "harvestnode",.@skillLv,240;
 
-  setarray .@items[0],7771,6041,608,587,684,743,706,5533,610;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,250,3300;
+  setarray .@items[0],7771,6041,608,587,684,743,706,610;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,3300;
   setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -3551,8 +3614,8 @@ moc_fild22,0,0,3	script	Fairy Deadleaf#1	613,{
   set .@skillLv, callfunc("checkskilllv","Herbalism",241);
   callfunc "harvestnode",.@skillLv,300;
 
-  setarray .@items[0],7198,6035,607,12293,12103,7141,7510,5399,526;
-  setarray .@chance[0],10000,7500,3300,3300,1000,1000,500,250,3300;
+  setarray .@items[0],7198,6035,607,12293,12103,7141,7510,526;
+  setarray .@chance[0],10000,7500,3300,3300,1000,1000,500,3300;
   setarray .@count[0],3,2,1,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -3592,6 +3655,16 @@ moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_17	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_18	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_19	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_20	613
+
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_2	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_3	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_4	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_5	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_6	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_7	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_8	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_9	10248
+odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_10	10248
 
 
 
@@ -4191,28 +4264,6 @@ mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_8	1
 mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_9	1915
 mosk_dun03,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#mosk_dun03_10	1915
 
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_1	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_2	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_3	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_4	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_5	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_6	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_7	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_8	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_9	1915
-odin_tem01,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem01_10	1915
-
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_1	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_2	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_3	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_4	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_5	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_6	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_7	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_8	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_9	1915
-odin_tem02,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#odin_tem02_10	1915
-
 pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_1	1915
 pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_2	1915
 pay_dun04,0,0,3	duplicate(Carnelian Deposit#1)	Carnelian Deposit#pay_dun04_3	1915
@@ -4480,7 +4531,7 @@ tur_dun03,0,0,3	duplicate(Scapolite Deposit#1)	Scapolite Deposit#tur_dun03_10	19
 // Mining, Level 5
 // From Level 100 dungeons
 // ==========================================================
-odin_tem03,0,0,3	script	Cyberium Deposit#1	10248,{
+thor_v01,0,0,3	script	Cyberium Deposit#1	10248,{
 	callfunc "checkprofession","Mining";
 
   getmapxy $@mapname$, $@mapxNPC, $@mapyNPC, BL_NPC;
@@ -4516,17 +4567,6 @@ OnInit:
 	unitwarp getnpcid(0),.map$,-1,-1;
 	end;
 }
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_2	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_3	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_4	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_5	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_6	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_7	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_8	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_9	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_10	10248
-
-thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_1	10248
 thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_2	10248
 thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_3	10248
 thor_v01,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v01_4	10248
@@ -4547,6 +4587,17 @@ thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_7	10248
 thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_8	10248
 thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_9	10248
 thor_v03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#thor_v03_10	10248
+
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_1	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_2	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_3	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_4	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_5	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_6	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_7	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_8	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_9	10248
+lhz_dun03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#lhz_dun03_10	10248
 
 
 
