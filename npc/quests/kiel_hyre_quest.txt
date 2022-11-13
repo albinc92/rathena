@@ -3782,6 +3782,36 @@ OnTouch:
 // Robot Factory Second Floor Entrances
 //----------------------------------------------------------------------------
 kh_dun01,44,203,0	script	Entrance Device#khd2::KHAccess	111,{
+	if(#KielHyreQuest) {
+		mes "^3355FFYou encounter";
+		mes "a mechanical device.";
+		mes "It looks like it can be";
+		mes "operated by inserting the";
+		mes "correct keycard into the slot.^000000";
+		next;
+		input .@KHInput$;
+		if (.@KHInput$ == "Luxurious Keycard") {
+			mes "^3355FFAs you insert the";
+			mes "Luxurious Keycard";
+			mes "into the keycard slot,";
+			mes "the door swings open";
+			mes "to reveal a long flight";
+			mes "of descending stairs.^000000";
+			next;
+			switch(select("Descend Stairs:Cancel")) {
+			case 1:
+				warp "kh_dun02",41,198;
+				end;
+			case 2:
+				mes "^3355FFIt looks like this door";
+				mes "has automatically closed";
+				mes "after the preprogrammed";
+				mes "time limit has elapsed.^000000";
+				close;
+			}
+		}
+	}
+
 	if (countitem(7509) < 1) {
 		mes "^3355FFYou encounter";
 		mes "a mechanical device.";
