@@ -3656,15 +3656,16 @@ moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_18	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_19	613
 moc_fild22,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#moc_fild22_20	613
 
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_2	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_3	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_4	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_5	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_6	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_7	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_8	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_9	10248
-odin_tem03,0,0,3	duplicate(Cyberium Deposit#1)	Cyberium Deposit#odin_tem03_10	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_1	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_2	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_3	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_4	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_5	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_6	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_7	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_8	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_9	10248
+odin_tem03,0,0,3	duplicate(Fairy Deadleaf#1)	Fairy Deadleaf#odin_tem03_10	10248
 
 
 
