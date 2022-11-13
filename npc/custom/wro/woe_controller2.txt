@@ -27,6 +27,7 @@
 // Information NPC
 //============================================================
 royal,122,159,5	script	WOE Manager	10183,{
+	cutin "ep162_est01",2;
 	doevent "WOE_CONTROL::OnMenu";
 	end;
 OnAgitStart:
