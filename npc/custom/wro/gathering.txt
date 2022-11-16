@@ -4670,7 +4670,6 @@ L_Enchant:
 	set .@optAmt, 1;
 
 	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {	// WEAPON
-		message strcharinfo(0),"WEAPON.";
 	  set .@r, rand(1, (100 - (.@Enchanting / 6)));
 
 		if(.@r < 51 && .@r > 25) {
@@ -4702,7 +4701,6 @@ L_Enchant:
 			}
 		}
 	} else {	// ARMOR
-		message strcharinfo(0),"ARMOR.";
 	  set .@r, rand(1, (100 - (.@Enchanting / 10)));
 
 		if(.@r < 51 && .@r > 25) {
