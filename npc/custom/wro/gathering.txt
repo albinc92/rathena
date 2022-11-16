@@ -4661,47 +4661,63 @@ L_Enchant:
 	specialeffect2 EF_BEGINSPELL6;
 	progressbar "#00FF00",1;
 
-	set .@optAmt, 0;
-    set .@r, rand(1, (300 - (.@Enchanting / 6)));
-    if(.@r < 251 && .@r > 125) {
-        .@optAmt = 1;
-    } else if(.@r < 126 && .@r > 62) {
-        .@optAmt = 2;
-    } else if(.@r < 63 && .@r > 31) {
-        .@optAmt = 3;
-    } else if(.@r < 32 && .@r > 16) {
-        .@optAmt = 4;
-    }
-
-	if(.@optAmt == 0) {
+	if(rand((.@enchanting / 10), 100) < 33) {
 		message strcharinfo(0),"The enchanting process failed.";
 		goto L_End;
 	}
 
-    // Limit maximum random options based on weapon slot count
-    set .@slotAmnt, getiteminfo(getequipid(.@part), 10);
-    if(.@slotAmnt == 1 && .@optAmt > 4) {
-        .@optAmt = 4;
-    } else if(.@slotAmnt == 2 && .@optAmt > 3) {
-        .@optAmt = 3;
-    } else if(.@slotAmnt == 3 && .@optAmt > 2) {
-        .@optAmt = 2;
-    } else if(.@slotAmnt == 4 && .@optAmt > 1) {
-        .@optAmt = 1;
-    }
+	set .@slotAmnt, getiteminfo(getequipid(.@part), 10);
+	set .@optAmt, 1;
 
-    // Limit maximum random options based on enchanting level
-	if(.@Enchanting < 75) {
-		if(.@optAmt > 1) {
-        	.@optAmt = 1;
+	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {	// WEAPON
+	  set .@r, rand(1, (100 - (.@Enchanting / 10)));
+
+		if(.@r < 71 && .@r > 45) {
+	      .@optAmt = 2;
+	  } else if(.@r < 46 && .@r > 25) {
+	      .@optAmt = 3;
+	  } else if(.@r < 26 && .@r > 10) {
+	      .@optAmt = 4;
+	  } else if(.@r < 11) {
+	      .@optAmt = 5;
+	  }
+
+		// Limit maximum random options based on enchanting level
+		if(.@Enchanting < 76) {
+			if(.@optAmt > 1) {
+	        	.@optAmt = 1;
+			}
+		} else if(.@Enchanting > 75 && .@Enchanting < 151) {
+			if(.@optAmt > 2) {
+	        	.@optAmt = 2;
+			}
+		} else if(.@Enchanting > 150 && .@Enchanting < 226) {
+			if(.@optAmt > 3) {
+	        	.@optAmt = 3;
+			}
+		} else if(.@Enchanting > 225 && .@Enchanting < 300) {
+			if(.@optAmt > 4) {
+	        	.@optAmt = 4;
+			}
 		}
-	} else if(.@Enchanting > 74 && .@Enchanting < 150) {
-		if(.@optAmt > 2) {
-        	.@optAmt = 2;
-		}
-	} else if(.@Enchanting > 149 && .@Enchanting < 225) {
-		if(.@optAmt > 3) {
-        	.@optAmt = 3;
+	} else {	// ARMOR
+		set .@r, rand(1, (100 - (.@Enchanting / 7)));
+
+		if(.@r < 55 && .@r > 25) {
+	      .@optAmt = 2;
+	  } else if(.@r < 26) {
+	      .@optAmt = 3;
+	  }
+
+		// Limit maximum random options based on enchanting level
+		if(.@Enchanting < 151) {
+			if(.@optAmt > 1) {
+	        	.@optAmt = 1;
+			}
+		} else if(.@Enchanting > 150 && .@Enchanting < 300) {
+			if(.@optAmt > 2) {
+	        	.@optAmt = 2;
+			}
 		}
 	}
 
@@ -4756,10 +4772,6 @@ L_Enchant:
 			setrandomoption(.@part,.@i,.@weaponid[.@index[.@i]], (.@weaponbase[.@index[.@i]] + rand(0, .@weaponbonus[.@index[.@i]])), 0);
 		}
 	} else {
-		// Limit max slots on armor to 3
-		if(.@optAmt > 3) {
-			set .@optAmt, 3;
-		}
 		setarray .@armorid[0],
 				3, 4, 5, 6, 7, 8,
 				9, 10, 11, 12,
