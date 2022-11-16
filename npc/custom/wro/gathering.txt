@@ -4701,7 +4701,7 @@ L_Enchant:
 			}
 		}
 	} else {	// ARMOR
-		set .@r, rand(1, (100 - (.@Enchanting / 6)));
+		set .@r, rand(1, (100 - (.@Enchanting / 10)));
 
 		if(.@r < 51 && .@r > 25) {
 	      .@optAmt = 2;
