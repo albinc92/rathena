@@ -4670,15 +4670,15 @@ L_Enchant:
 	set .@optAmt, 1;
 
 	if(getiteminfo(getequipid(.@part),2) == IT_WEAPON) {	// WEAPON
-	  set .@r, rand(1, (100 - (.@Enchanting / 10)));
+	  set .@r, rand(1, (100 - (.@Enchanting / 6)));
 
-		if(.@r < 71 && .@r > 45) {
+		if(.@r < 51 && .@r > 25) {
 	      .@optAmt = 2;
-	  } else if(.@r < 46 && .@r > 25) {
+	  } else if(.@r < 26 && .@r > 12) {
 	      .@optAmt = 3;
-	  } else if(.@r < 26 && .@r > 10) {
+	  } else if(.@r < 13 && .@r > 6) {
 	      .@optAmt = 4;
-	  } else if(.@r < 11) {
+	  } else if(.@r < 7 && .@r > 2) {
 	      .@optAmt = 5;
 	  }
 
@@ -4701,11 +4701,11 @@ L_Enchant:
 			}
 		}
 	} else {	// ARMOR
-		set .@r, rand(1, (100 - (.@Enchanting / 7)));
+		set .@r, rand(1, (100 - (.@Enchanting / 6)));
 
-		if(.@r < 55 && .@r > 25) {
+		if(.@r < 51 && .@r > 25) {
 	      .@optAmt = 2;
-	  } else if(.@r < 26) {
+	  } else if(.@r < 26 && .@r > 12) {
 	      .@optAmt = 3;
 	  }
 
