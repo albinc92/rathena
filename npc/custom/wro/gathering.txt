@@ -4661,7 +4661,7 @@ L_Enchant:
 	specialeffect2 EF_BEGINSPELL6;
 	progressbar "#00FF00",1;
 
-	if(rand((.@enchanting / 10), 100) < 33) {
+	if(rand((.@enchanting / 10), 100) < 31) {
 		message strcharinfo(0),"The enchanting process failed.";
 		goto L_End;
 	}
