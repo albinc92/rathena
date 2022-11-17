@@ -2,11 +2,11 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 
 	cutin "ep15_2_brt_1",2;
 	mes "["+strnpcinfo(1)+"]";
-	mes "Yo! I can deconstruct your ^ff0000unidentified^000000 inventory items, reducing them to their base materials. Is this something you would like?";
+	mes "Yo! I can deconstruct all of your ^ff0000unidentified^000000 or ^ff0000identified^000000 inventory items, reducing them to their base materials. Is this something you would like?";
 	next;
-	set .@menu, select("Deconstruct:Information:Cancel");
+	set .@menu, select("Unidentified items:Identified items:Information:Cancel");
 
-	// DECONSTRUCT
+	// IDENTIFIED
 	if (.@menu == 1) {
 		getinventorylist;
 		for (.@i = 0; .@i < @inventorylist_count; .@i++) {
@@ -70,8 +70,60 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 		}
 	}
 
-	// INFO
+	// IDENTIFIED
 	if (.@menu == 2) {
+		getinventorylist;
+		for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+			if ( @inventorylist_identify[.@i] ) {
+				set .@found, 1;
+
+				// Get Magic Stone for magical affixes
+				if(@inventorylist_option_id1[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id2[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id3[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id4[.@i]) {
+					getitem 7597, 1;
+				}
+				if(@inventorylist_option_id5[.@i]) {
+					getitem 7597, 1;
+				}
+
+				// IF WEAPON
+				if(getiteminfo(@inventorylist_id[.@i],2)==5) {
+					delitem @inventorylist_id[.@i],1;
+
+					// wLVL CHECK
+					if(getiteminfo(@inventorylist_id[.@i],13)==1) {
+						getitem 1010,1;
+						set .@rng, rand(1,3);
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==2) {
+						getitem 1011,1;
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==3) {
+						getitem 984,1;
+					}
+					if(getiteminfo(@inventorylist_id[.@i],13)==4) {
+						getitem 984,1;
+					}
+				}
+
+				// IF ARMOR
+				if(getiteminfo(@inventorylist_id[.@i],2)==4) {
+					delitem @inventorylist_id[.@i],1;
+					getitem 985,1;
+				}
+			}
+		}
+
+	// INFO
+	if (.@menu == 3) {
 		mes "["+strnpcinfo(1)+"]";
 		mes "If you can bring me any type of unidentified piece of equipment, I can deconstruct it for you.";
 		next;
