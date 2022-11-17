@@ -6,7 +6,7 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 	next;
 	set .@menu, select("Unidentified items:Identified items:Information:Cancel");
 
-	// IDENTIFIED
+	// UNIDENTIFIED
 	if (.@menu == 1) {
 		getinventorylist;
 		for (.@i = 0; .@i < @inventorylist_count; .@i++) {
@@ -121,6 +121,7 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 				}
 			}
 		}
+ 	}
 
 	// INFO
 	if (.@menu == 3) {
