@@ -34,7 +34,7 @@ OnInit:
 	setarray .maps$[0],"abyss_03","ama_dun03","ayo_dun02","anthell02","beach_dun","abbey02","abbey03","gef_dun01",
 	                    "gef_dun02","gl_chyard","gon_dun03","prt_maze03","ein_dun02","mosk_dun03","odin_tem03",
 	                    "pay_dun04","prt_sewb4","moc_pryd04","moc_pryd06","ra_san05","kh_dun02","lou_dun03","jupe_core",
-	                    "in_sphinx5","treasure02","thor_v03","xmas_dun02","tur_dun05";
+	                    "in_sphinx5","treasure02","thor_v03","xmas_dun02","tur_dun05","lhz_dun03";
 	unitwarp getnpcid(0),.maps$[rand(0,getarraysize(.maps$)-1)],-1,-1;
 	//getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
 	//announce .@map$ + " " + .@x_npc + ", " + .@y_npc,bc_all,"0x70dbdb";
