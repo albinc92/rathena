@@ -136,7 +136,7 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 	// INFO
 	if (.@menu == 3) {
 		mes "["+strnpcinfo(1)+"]";
-		mes "If you can bring me any type of unidentified piece of equipment, I can deconstruct it for you.";
+		mes "If you can bring me any identified- or unidentified piece of equipment, I can deconstruct it for you.";
 		next;
 		mes "["+strnpcinfo(1)+"]";
 		mes "Once deconstructed, an item will be converted back to its base material(s).";
