@@ -126,6 +126,7 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 						getitem 985,1;
 					}
 				}
+			}
 		} else {
 			close2;
 			cutin "", 255;
