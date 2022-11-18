@@ -73,65 +73,64 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 	// IDENTIFIED
 	if (.@menu == 2) {
 		mes "["+strnpcinfo(1)+"]";
-		mes "Are you sure?";
+		mes "This will deconstruct ALL identified equipment in your inventory. Are you sure?";
 		next;
-		set .@menu2, select("Yes:No");
+		switch(select("Yes:Cancel")) {
+			case 1:
+				getinventorylist;
+				for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+					if ( @inventorylist_identify[.@i] && !@inventorylist_equip[.@i] ) {
+						set .@found, 1;
 
-		if (.@menu2 == 2) {
-			getinventorylist;
-			for (.@i = 0; .@i < @inventorylist_count; .@i++) {
-				if ( @inventorylist_identify[.@i] && !@inventorylist_equip[.@i] ) {
-					set .@found, 1;
-
-					// Get Magic Stone for magical affixes
-					if(@inventorylist_option_id1[.@i]) {
-						getitem 7597, 1;
-					}
-					if(@inventorylist_option_id2[.@i]) {
-						getitem 7597, 1;
-					}
-					if(@inventorylist_option_id3[.@i]) {
-						getitem 7597, 1;
-					}
-					if(@inventorylist_option_id4[.@i]) {
-						getitem 7597, 1;
-					}
-					if(@inventorylist_option_id5[.@i]) {
-						getitem 7597, 1;
-					}
-
-					// IF WEAPON
-					if(getiteminfo(@inventorylist_id[.@i],2)==5) {
-						delitem @inventorylist_id[.@i],1;
-
-						// wLVL CHECK
-						if(getiteminfo(@inventorylist_id[.@i],13)==1) {
-							getitem 1010,1;
-							set .@rng, rand(1,3);
+						// Get Magic Stone for magical affixes
+						if(@inventorylist_option_id1[.@i]) {
+							getitem 7597, 1;
 						}
-						if(getiteminfo(@inventorylist_id[.@i],13)==2) {
-							getitem 1011,1;
+						if(@inventorylist_option_id2[.@i]) {
+							getitem 7597, 1;
 						}
-						if(getiteminfo(@inventorylist_id[.@i],13)==3) {
-							getitem 984,1;
+						if(@inventorylist_option_id3[.@i]) {
+							getitem 7597, 1;
 						}
-						if(getiteminfo(@inventorylist_id[.@i],13)==4) {
-							getitem 984,1;
+						if(@inventorylist_option_id4[.@i]) {
+							getitem 7597, 1;
 						}
-					}
+						if(@inventorylist_option_id5[.@i]) {
+							getitem 7597, 1;
+						}
 
-					// IF ARMOR
-					if(getiteminfo(@inventorylist_id[.@i],2)==4) {
-						delitem @inventorylist_id[.@i],1;
-						getitem 985,1;
+						// IF WEAPON
+						if(getiteminfo(@inventorylist_id[.@i],2)==5) {
+							delitem @inventorylist_id[.@i],1;
+
+							// wLVL CHECK
+							if(getiteminfo(@inventorylist_id[.@i],13)==1) {
+								getitem 1010,1;
+								set .@rng, rand(1,3);
+							}
+							if(getiteminfo(@inventorylist_id[.@i],13)==2) {
+								getitem 1011,1;
+							}
+							if(getiteminfo(@inventorylist_id[.@i],13)==3) {
+								getitem 984,1;
+							}
+							if(getiteminfo(@inventorylist_id[.@i],13)==4) {
+								getitem 984,1;
+							}
+						}
+
+						// IF ARMOR
+						if(getiteminfo(@inventorylist_id[.@i],2)==4) {
+							delitem @inventorylist_id[.@i],1;
+							getitem 985,1;
+						}
 					}
 				}
-			}
-		} else {
-			close2;
-			cutin "", 255;
-			end;
+			case 2:
 		}
+		close2;
+		cutin "", 255;
+		end;
  	}
 
 	// INFO
