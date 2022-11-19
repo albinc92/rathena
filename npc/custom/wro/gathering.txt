@@ -4888,7 +4888,7 @@ L_End:
 
 // Equipment Crafting
 roy_in03,174,21,1	script	Bradium Smith#gathering	10079,{
-	set .@cost, 250000
+	set .@cost, 250000;
 
 	emotion ET_SMILE;
 	cutin "ep15_2_fru_1",2;
