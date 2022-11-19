@@ -4887,7 +4887,7 @@ L_End:
 
 
 // Equipment Crafting
-roy_in03,174,21,1	script	Bradium Smith#gathering	10079,{
+roy_in03,174,21,2	script	Bradium Smith#gathering	10079,{
 	set .@cost, 250000;
 
 	emotion ET_SMILE;
@@ -4900,20 +4900,17 @@ roy_in03,174,21,1	script	Bradium Smith#gathering	10079,{
 	mes "If you have some, will you let me try to craft a cool new item for you?";
 
 	switch(select("Bradium Ring:Bradium Earring:Bradium Brooch")) {
-		case 1:	// Ring
-			next;
+		case 1:
 			set .@itemToCraft, 2789;
 			setarray .@requiredItemIDs[0],6224,6090;
 			setarray .@requiredItemCount[0],100,1;
 			goto L_OnCraft;
-		case 2:	// Earring
-			next;
+		case 2:
 			set .@itemToCraft, 2788;
 			setarray .@requiredItemIDs[0],6224,6319;
 			setarray .@requiredItemCount[0],100,1;
 			goto L_OnCraft;
-		case 3:	// Brooch
-			next;
+		case 3:
 			set .@itemToCraft, 2790;
 			setarray .@requiredItemIDs[0],6224,6084;
 			setarray .@requiredItemCount[0],100,1;
@@ -4926,12 +4923,13 @@ roy_in03,174,21,1	script	Bradium Smith#gathering	10079,{
 L_OnCraft:
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "In order to craft this item I require the following materials:";
+	mes "^F7F7F7_^000000";
 
 	for(set .@i, 0; .@i<getarraysize(.@requiredItemIDs); ++.@i) {
 		if(countitem(.@requiredItemIDs[.@i]) >= .@requiredItemCount[.@i]) {
-			set .@missingItem, 1;
 			mes "^00ff00" + getitemname(.@requiredItemIDs[.@i]) + " ("+.@requiredItemCount[.@i]+"/"+.@requiredItemCount[.@i]+")" + "^000000";
 		} else {
+			set .@missingItem, 1;
 			mes "^ff0000" + getitemname(.@requiredItemIDs[.@i]) + " ("+countitem(.@requiredItemIDs[.@i])+"/"+.@requiredItemCount[.@i]+")" + "^000000";
 		}
 	}
@@ -4941,7 +4939,7 @@ L_OnCraft:
 		cutin "ep15_2_fru_3",2;
 		emotion ET_SORRY;
 		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
-		mes "Please come back when you have acquired all the necessary items~~";
+		mes "Please come back when you have acquired all of them~~";
 		close2;
 		cutin "", 255;
 		end;
@@ -4952,23 +4950,23 @@ L_OnCraft:
 
 	switch(select("Yes please:No thank you")) {
 		case 2:
-			next;
+			emotion ET_CRY;
 			cutin "ep15_2_fru_3",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
-			mes "Come back if you change your mind~~";
+			mes "Aww~~ Come back if you change your mind~~";
 			close2;
 			cutin "", 255;
 			end;
 	}
-	next;
 
+	emotion ET_SMILE;
 	cutin "ep15_2_fru_2",2;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Great! My services costs ^ff0000"+.@cost+"z^000000~~ Is this acceptable?";
 
 	switch(select("Yes:Whoa hold on")) {
 		case 2:
-			next;
+			emotion ET_SCRATCH;
 			cutin "ep15_2_fru_3",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 			mes "Look this isn't charity work okay~~";
@@ -4976,7 +4974,6 @@ L_OnCraft:
 			cutin "", 255;
 			end;
 	}
-	next;
 
 	if(zeny < .@cost) {
 		emotion ET_SORRY;
