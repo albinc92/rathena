@@ -4546,8 +4546,8 @@ thor_v01,0,0,3	script	Cyberium Deposit#1	10248,{
   set .@skillLv, callfunc("checkskilllv","Mining",241);
   callfunc "harvestnode",.@skillLv,300;
 
-  setarray .@items[0],7231,717,6240,6241,728,1000,7444;
-  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500;
+  setarray .@items[0],7231,717,6240,6241,728,1000,7444,6224;
+  setarray .@chance[0],10000,7500,3300,3300,3300,1000,500,200;
   setarray .@count[0],3,2,1,1,1,1,1,1;
 
 	getmapxy .@map$, .@x_npc, .@y_npc, BL_NPC;
@@ -4902,18 +4902,18 @@ roy_in03,174,21,2	script	Bradium Smith#gathering	10079,{
 	switch(select("Bradium Ring:Bradium Earring:Bradium Brooch")) {
 		case 1:
 			set .@itemToCraft, 2789;
-			setarray .@requiredItemIDs[0],6224,6090;
-			setarray .@requiredItemCount[0],100,1;
+			setarray .@requiredItemIDs[0],7231,723,6224;
+			setarray .@requiredItemCount[0],100,25,1;
 			goto L_OnCraft;
 		case 2:
 			set .@itemToCraft, 2788;
-			setarray .@requiredItemIDs[0],6224,6319;
-			setarray .@requiredItemCount[0],100,1;
+			setarray .@requiredItemIDs[0],7231,726,6224;
+			setarray .@requiredItemCount[0],100,25,1;
 			goto L_OnCraft;
 		case 3:
 			set .@itemToCraft, 2790;
-			setarray .@requiredItemIDs[0],6224,6084;
-			setarray .@requiredItemCount[0],100,1;
+			setarray .@requiredItemIDs[0],7231,728,6224;
+			setarray .@requiredItemCount[0],100,25,1;
 			goto L_OnCraft;
 	}
 	close2;
@@ -4921,6 +4921,7 @@ roy_in03,174,21,2	script	Bradium Smith#gathering	10079,{
 	end;
 
 L_OnCraft:
+	next;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "In order to craft this item I require the following materials:";
 	mes "^F7F7F7_^000000";
@@ -4950,6 +4951,7 @@ L_OnCraft:
 
 	switch(select("Yes please:No thank you")) {
 		case 2:
+			next;
 			emotion ET_CRY;
 			cutin "ep15_2_fru_3",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
@@ -4959,6 +4961,7 @@ L_OnCraft:
 			end;
 	}
 
+	next;
 	emotion ET_SMILE;
 	cutin "ep15_2_fru_2",2;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
@@ -4966,6 +4969,7 @@ L_OnCraft:
 
 	switch(select("Yes:Whoa hold on")) {
 		case 2:
+			next;
 			emotion ET_SCRATCH;
 			cutin "ep15_2_fru_3",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
@@ -4974,6 +4978,7 @@ L_OnCraft:
 			cutin "", 255;
 			end;
 	}
+	next;
 
 	if(zeny < .@cost) {
 		emotion ET_SORRY;
