@@ -834,7 +834,7 @@ OnInit:
 	disablenpc "Haggard Man";
 	end;
 }
-		
+
 ayothaya,253,99,3	script	Fisherman	843,{
 	if (thai_find == 1) {
 		mes "[Dannai]";
@@ -1505,6 +1505,9 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			set ayodunquest,3;
 			changequest 12036,12037;
 			getitem 7285,1; //Thread_Skein
+			if(!#AyothayaDungeonQuest) {
+				set #AyothayaDungeonQuest, 1;
+			}
 			next;
 			mes "[Boonthom]";
 			mes "Even if you lose this, don't worry. Just bring me the materials, and";
@@ -1553,6 +1556,9 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			delitem 7190,1; //Solid_Peeling
 			delitem 523,1; //Holy_Water
 			getitem 7285,1; //Thread_Skein
+			if(!#AyothayaDungeonQuest) {
+				set #AyothayaDungeonQuest, 1;
+			}
 			next;
 			mes "[Boonthom]";
 			mes "Even if you lose this, don't worry. Just bring me the materials, I can make you another one.";
@@ -1651,6 +1657,9 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			delitem 523,2; //Holy_Water
 			set ayodunquest,11;
 			getitem 7287,1; //Thread_Skein_
+			if(#AyothayaDungeonQuest == 1) {
+				set #AyothayaDungeonQuest, 2;
+			}
 			changequest 12038,12039;
 			next;
 			mes "[Boonthom]";
@@ -1679,7 +1688,7 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 		mes "threads for you.";
 		close;
 	} else if (ayodunquest == 11) {
-		if (countitem(7287) > 0) {
+		if (countitem(7287) > 0 || #AyothayaDungeonQuest == 2) {
 			mes "[Boonthom]";
 			mes "Those threads";
 			mes "will protect you";
@@ -1708,6 +1717,9 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			delitem 610,1; //Leaf_Of_Yggdrasil
 			delitem 523,2; //Holy_Water
 			getitem 7287,1; //Thread_Skein_
+			if(#AyothayaDungeonQuest == 1) {
+				set #AyothayaDungeonQuest, 2;
+			}
 			close;
 		}
 		mes "[Boonthom]";
@@ -1753,7 +1765,7 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 		completequest 12039;
 		close;
 	} else if (ayodunquest > 12) {
-		if (countitem(7287) > 0) {
+		if (countitem(7287) > 0 || #AyothayaDungeonQuest == 2) {
 			mes "[Boonthom]";
 			mes "Best of luck on your";
 			mes "expeditions, brave";
@@ -1787,6 +1799,9 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 			delitem 610,1; //Leaf_Of_Yggdrasil
 			delitem 523,2; //Holy_Water
 			getitem 7287,1; //Thread_Skein_
+			if(#AyothayaDungeonQuest == 1) {
+				set #AyothayaDungeonQuest, 2;
+			}
 			close;
 		}
 		mes "[Boonthom]";
@@ -1809,7 +1824,7 @@ ayo_in01,181,193,4	script	Shaman#thai	840,{
 }
 
 ayo_fild01,129,197,0	script	Puraim#thai1	842,{
-	if ((ayodunquest > 2 && countitem(7285) > 0) || (ayodunquest > 2 && countitem(7287) > 0)) {
+	if ((ayodunquest > 2 && countitem(7285) > 0) || (ayodunquest > 2 && countitem(7287) > 0) || #AyothayaDungeonQuest) {
 		mes "[Puraim]";
 		mes "Huh...?";
 		mes "I feel it!";
@@ -2057,7 +2072,7 @@ ayo_dun01,16,188,0	script	 #hun_thai_6	111,{
 
 ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 	if (ayodunquest > 10) {
-		if (countitem(7287) > 0) {
+		if (countitem(7287) > 0 || #AyothayaDungeonQuest == 2) {
 			mes "^3355FFThe holy threads";
 			mes "emanate a powerful sense";
 			mes "of safety and security.";
@@ -2080,7 +2095,7 @@ ayo_dun01,24,283,0	script	 #2_dun_in	111,{
 }
 
 ayo_dun02,268,108,0	script	 #reward_tiger	111,{
-	if (ayodunquest == 11 && countitem(7287) > 0) {
+	if ((ayodunquest == 11 && countitem(7287) > 0) || #AyothayaDungeonQuest == 2) {
 		mes "^3355FFYou find half of the skeletal remains of a person sticking out from the ground. It seems to be the remains of Boonthom's comrade.^000000";
 		next;
 		mes "^3355FFYou find a piece of paper beside the skeleton, as well as a box.^000000";
