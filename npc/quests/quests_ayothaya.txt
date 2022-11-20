@@ -2071,7 +2071,7 @@ ayo_dun01,16,188,0	script	 #hun_thai_6	111,{
 }
 
 ayo_dun01,24,283,0	script	 #2_dun_in	111,{
-	if (ayodunquest > 10) {
+	if (ayodunquest > 10 || #AyothayaDungeonQuest == 2) {
 		if (countitem(7287) > 0 || #AyothayaDungeonQuest == 2) {
 			mes "^3355FFThe holy threads";
 			mes "emanate a powerful sense";
