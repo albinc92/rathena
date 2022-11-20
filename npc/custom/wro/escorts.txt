@@ -73,11 +73,7 @@ ayo_dun01,262,23,3	script	Wailing Spirit	411,{
 			mes "As promised~~ follow me!";
 			next;
 			set zeny, (zeny - .@cost);
-			if(rand(0, 1)) {
-				warp "ayo_dun02", 24, 27;
-			} else {
-				warp "ayo_dun02", 276, 27;
-			}
+			warp "ayo_dun01", 24, 281;
 		}
 	} else {
 		mes "You decide your own fate, adventurer~~";
