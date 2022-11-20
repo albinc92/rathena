@@ -1656,7 +1656,7 @@ ama_in02,115,177,7	script	Soldier#ama10	767,{
 		mes "There are much better things to enjoy in town. Have a good time...";
 		close;
 	}
-	if (event_amatsu == 6) {
+	if (event_amatsu == 6 || #AmatsuDungeonQuest) {
 		if (countitem(7160) > 0 || #AmatsuDungeonQuest) {
 			mes "[Jyuro]";
 			mes "You have the ticket...";
