@@ -49,7 +49,7 @@
 // Prontera Culvert :: prt_npc
 //============================================================
 prt_in,88,105,2	script	Recruiter	105,{
-	if (MISC_QUEST & 8) {
+	if (MISC_QUEST & 8 || #PronteraDungeonQuest)) {
 		mes "[Recruiter]";
 		mes "Ah...";
 		mes "I know those eyes.";
@@ -121,6 +121,7 @@ prt_in,88,105,2	script	Recruiter	105,{
 	}
 
 S_Volunteer:
+	set #PronteraDungeonQuest, 1;
 	set MISC_QUEST,MISC_QUEST | 8;
 	mes "[Recruiter]";
 	mes "Your registration...";
@@ -141,7 +142,7 @@ S_Volunteer:
 }
 
 prt_fild05,270,212,5	script	Culvert Guardian	105,{
-	if (MISC_QUEST & 8) {
+	if (MISC_QUEST & 8 || #PronteraDungeonQuest) {
 		mes "[Culvert Guardian]";
 		mes "Ah, you're one of our volunteers. This is the entrance of the Prontera Culvert.";
 		mes "Do you wish to";
