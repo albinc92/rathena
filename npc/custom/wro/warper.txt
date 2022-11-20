@@ -328,7 +328,7 @@ D5: setarray @c[2],37,212,175,346,321,175;
 	Disp("Beach Dungeon",1,3); Pick("","comodo","comodo","comodo");
 D6: Go("lhz_in01",31,223);
 D6: setarray @c[2],31,223,310,302;
-  Disp("Main entrance:Sewer backdoor");
+  Disp("Main entrance:Sewer entrance");
   Pick("","lhz_in01","lighthalzen");
 D41: Go("lhz_in01",31,223);
 D8: Go("izlu2dun",108,88);
