@@ -49,7 +49,7 @@
 // Prontera Culvert :: prt_npc
 //============================================================
 prt_in,88,105,2	script	Recruiter	105,{
-	if (MISC_QUEST & 8 || #PronteraDungeonQuest)) {
+	if (MISC_QUEST & 8 || #PronteraDungeonQuest) {
 		mes "[Recruiter]";
 		mes "Ah...";
 		mes "I know those eyes.";
