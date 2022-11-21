@@ -113,6 +113,7 @@ L_CardAll:
 	mes "All of 'em eh? You real sure?";
 	switch(select("Real sure!:On second thought...")) {
 		case 2:
+			next;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 			mes "Yeah whatever...";
 			close;
@@ -127,11 +128,13 @@ L_CardAll:
 	}
 
 	if(!.@found) {
+		next;
 		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "Ya tryin' to pull my leg 'ere? You dun even 'ave a single card!";
 		close;
 	}
 
+	next;
 	emotion ET_OK;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Pleasure doin' business with ya!";
