@@ -11,49 +11,51 @@
 //============================================================
 
 roy_in02,178,11,2	script	Alleyway Jack	853,{
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Oi, you! Yeah you! You lookin' to get rid of some spare cards or albums?";
 	next;
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Tell you what, I'll trade ya ^ff00001 Card Token^000000 for each Card ya give me, and ^ff00005 Card Tokens^000000 for each Old Card Album you give me.";
 	next;
 	goto L_Main;
 
 L_Main:
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "So... what's it gon' be ye?";
 	next;
-	set .@menu, select("Cards:Old Card Albums:Information:Cancel");
+	set .@menu, select("Cards:All Cards:Old Card Albums:Information:Cancel");
 	if (.@menu == 1) {
 		goto L_Card;
 	} else if (.@menu == 2) {
-		goto L_OCA;
+		goto L_CardAll;
 	} else if (.@menu == 3) {
+		goto L_OCA;
+	} else if (.@menu == 4) {
 		goto L_Information;
 	} else {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "Oi! You know where to find me!";
 		close;
 	}
 
 L_OCA:
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "How many would you like to trade?";
 	input .@amnt;
 	next;
 	if(.@amnt <= 0) {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "You what?";
 		close;
 	}
 	if (countitem(616) < .@amnt) {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "Oi! You don't even have that many!";
 		close;
 	}
 	delitem 616, .@amnt;
 	getitem 40112, (.@amnt * 5);
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Pleasure doin' business with ya!";
 	close;
 
@@ -68,26 +70,26 @@ L_Card:
 	}
 
 	if(.@menu$ == "") {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "Ya tryin' to pull my leg 'ere? Ya don't even have a single card!";
 		close2;
 		cutin "", 255;
 		end;
 	}
 
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Which card would ya like to trade?";
 	next;
 
 	.@i = select( .@menu$ ) - 1;
 
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "How many would you like to trade?";
 	input .@amnt;
 	next;
 
 	if(.@amnt <= 0) {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "You what?";
 		close;
 	}
@@ -96,29 +98,59 @@ L_Card:
 		delitem @inventorylist_id[.@replicaindex[.@i-1]], .@amnt;
 		getitem 40112, .@amnt;
 	} else {
-		mes "["+strnpcinfo(1)+"]";
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "Oi! You don't even have that many!";
 		close;
 	}
 
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+	mes "Pleasure doin' business with ya!";
+	close;
+
+L_CardAll:
+	emotion ET_THINK;
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+	mes "All of 'em eh? You real sure?";
+	switch(select("Real sure!:On second thought...")) {
+		case 2:
+			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+			mes "Yeah whatever...";
+			close;
+	}
+
+	for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+		if(getiteminfo(@inventorylist_id[.@i],2) == 6) {
+			set .@found, 1;
+			getitem 40112, @inventorylist_amount[.@i];
+			delitem @inventorylist_id[.@i], @inventorylist_amount[.@i];
+		}
+	}
+
+	if(!.@found) {
+		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
+		mes "Ya tryin' to pull my leg 'ere? You dun even 'ave a single card!";
+		close;
+	}
+
+	emotion ET_OK;
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Pleasure doin' business with ya!";
 	close;
 
 L_Information:
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "If you're lookin' to get rid of some ol' cards you got lyin' about, I'm your man!";
 	next;
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "I'll trade ya ^ff00001 Card Token^000000 for each card ya give me.";
 	next;
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "And ^ff00002 Card Tokens^000000 for each Old Card Album ya give me.";
 	next;
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "You can trade in ya tokens for various goodies down at the ^ff0000Supply Master^000000 inside the ^ff0000Senate Building^000000.";
 	next;
-	mes "["+strnpcinfo(1)+"]";
+	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Got all that? Good, let's get down to business.";
 	next;
 	goto L_Main;
