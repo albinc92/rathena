@@ -1,8 +1,8 @@
-roy_in02,232,40,3	script	Socketing Craftsman#r1	851,{
+roy_in02,232,40,3	script	Socketing Craftsman#r1	10053,{
   setarray .@cost[0],10000,20000,40000;
 
   emotion ET_SMILE;
-	cutin "ep171_elyumina01",2;
+	cutin "dalle01",2;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "Hello ^0000FF"+strcharinfo(0)+"^000000, I am the Socketing Craftsman. I can socket gems into your equipment for additional bonuses.";
 	next;
@@ -17,7 +17,6 @@ L_Main:
 	// Information Menu
 	if (.@menu == 2) {
     emotion ET_OK;
-    cutin "ep171_elyumina04",2;
 		mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 		mes "I see why you might have some questions, this artform is rather new.";
 		next;
@@ -45,7 +44,6 @@ L_Main:
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "I can only work with ^0000ffRubies^000000, ^0000ffZircons^000000, ^0000ffEmeralds^000000, ^0000ffSapphires^000000, ^0000ffTopazes^000000, and ^0000ffSardonyxes^000000.";
 				next;
-        cutin "ep171_elyumina01",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "You will be the one to provide said mineral.";
 				next;
@@ -86,7 +84,6 @@ L_Main:
 				mes "However, there are legends telling of a ^0000FFSocketing Master^000000 hiding in the depths of a volcano somewhere in Midgard that can work with more... exquisite materials that provide more powerful bonuses.";
 				next;
         emotion ET_SMILE;
-        cutin "ep171_elyumina04",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "If you believe that sort of stuff hehe.";
 				next;
@@ -118,7 +115,7 @@ L_Main:
 
 		if (.@menu$ == "") {
       emotion ET_SWEAT;
-    	cutin "ep171_elyumina02",2;
+    	cutin "dalle04",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 			mes "Errr wait. Oh Sorry but you must have armors equipped to socket them!";
 			close2;
@@ -182,7 +179,7 @@ L_Main:
 		set .@itemid, getequipid(.@indices[.@part]);
 		if (countitem(.@itemid) > 1) {
       emotion ET_SWEAT;
-    	cutin "ep171_elyumina02",2;
+    	cutin "dalle02",2;
 			mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 			mes "Ah, looks like you have more than one of the same item in your inventory, I'm sorry but you must store them first before proceeding.";
 			close2;
@@ -224,7 +221,7 @@ L_Main:
 			// Check Zeny
 			if (Zeny < .@zeny_cost) {
         emotion ET_SWEAT;
-      	cutin "ep171_elyumina02",2;
+      	cutin "dalle02",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "Sorry, but you are broke.";
 				close2;
@@ -236,7 +233,7 @@ L_Main:
 			if(.@selected_bonus == 40200) {
 				if(countitem(723) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -246,7 +243,7 @@ L_Main:
 			} else if(.@selected_bonus == 40201) {
 				if(countitem(729) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -256,7 +253,7 @@ L_Main:
 			} else if(.@selected_bonus == 40202) {
 				if(countitem(721) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -266,7 +263,7 @@ L_Main:
 			} else if(.@selected_bonus == 40203) {
 				if(countitem(726) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -276,7 +273,7 @@ L_Main:
 			} else if(.@selected_bonus == 40204) {
 				if(countitem(728) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -286,7 +283,7 @@ L_Main:
 			} else {
 				if(countitem(725) == 0) {
           emotion ET_SWEAT;
-        	cutin "ep171_elyumina02",2;
+        	cutin "dalle03",2;
 					mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 					mes "It appears you are missing the correct ^FF0000mineral^000000 for me to work with.";
 					close2;
@@ -302,7 +299,7 @@ L_Main:
 			// Double Check after progress bar
 			if (Zeny < .@zeny_cost) {
         emotion ET_ANGER;
-      	cutin "ep171_elyumina02",2;
+        cutin "dalle03",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "Are you trying to fool me?! You don't have zeny anymore!";
 				close2;
@@ -310,7 +307,7 @@ L_Main:
 				end;
 			} if (getequipid(.@indices[.@part]) != .@itemid) {
         emotion ET_ANGER;
-      	cutin "ep171_elyumina02",2;
+        cutin "dalle03",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "What do you think you are doing, your punk?! You switched your equipment! Get lost before I sue you.";
 				close2;
@@ -322,7 +319,7 @@ L_Main:
 			if (rand(0,99) > .@chance) {
         emotion ET_CRY;
 				specialeffect2 306;
-      	cutin "ep171_elyumina02",2;
+        cutin "dalle04",2;
 				mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 				mes "I appear to have failed the process I'm afraid. I'm sorry.";
 				set Zeny, Zeny - .@zeny_cost;
