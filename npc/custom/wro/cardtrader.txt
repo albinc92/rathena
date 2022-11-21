@@ -108,6 +108,7 @@ L_Card:
 	close;
 
 L_CardAll:
+	getinventorylist;
 	emotion ET_THINK;
 	mes "[^0000ff"+strnpcinfo(1)+"^000000]";
 	mes "All of 'em eh? You real sure?";
