@@ -342,7 +342,7 @@ VALUES (4459,'Lata_Card','Rata Card','Card',20,10,true,true,true,true,'bonus bMa
 -- REPLACE INTO `item_db2` VALUES (4461,'Pillar_Card','Phylla Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,769,NULL,NULL,NULL,NULL,'bonus bDex,1; bonus bAgi,1; autobonus "{ bonus bCritical,20; }",15,4000,0,"{ specialeffect2 EF_ENHANCE; }";',NULL,NULL);
 REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_armor`,`flag_buyingstore`,`script`)
 VALUES (4462,'Hardrock_Mommos_Card','Hardrock Mammoth Card','Card',20,10,true,true,'.@r = getrefine(); bonus bDef,5; if(.@r>=6) { bonus bDef,3; bonus bMaxHPrate,10; } if(.@r>=7) { bonus bMaxHPrate,3; }');
-REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_left_hand`,`flag_buyingstore`,`script`)
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`location_right_hand`,`flag_buyingstore`,`script`)
 VALUES (4463,'Tendrilion_Card','Tendrillion Card','Card',20,10,true,true,'bonus bCritical,5; .@r = getrefine(); if(.@r>=6) { bonus bBaseAtk,35; } if(.@r>=7) { bonus bCritical,10; }');
 -- REPLACE INTO `item_db2` VALUES (4464,'Aunoe_Card','Aunoe Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bCritAtkRate,20;',NULL,NULL);
 -- REPLACE INTO `item_db2` VALUES (4465,'Panat_Card','Fanat Card',6,20,NULL,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,'bonus bBaseAtk,10; if(getiteminfo(getequipid(EQI_HAND_R),11)==W_2HSWORD) { .@r = getrefine(); if(.@r>=10) { bonus bAspd,1; } if(.@r>=14) { bonus bAspd,1; } }',NULL,NULL);
