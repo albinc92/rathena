@@ -41,7 +41,7 @@ OnComboEnd:
 
 	getexp @bExp, @jExp;
 	specialeffect2 799;
-	showscript @mobCombo + "x COMBO KILL! " + @bExp + " jExp / " + @jExp + " bExp REWARD!",SELF;
+	showscript @mobCombo + "x COMBO KILL! " + @bExp + " jExp / " + @jExp + " bExp REWARD!";
 	set @mobCombo, 0;
 	set @mobCombo2, 0;
 	set @bExp, 0;
