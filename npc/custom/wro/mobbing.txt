@@ -63,7 +63,7 @@ OnComboEnd:
 		soundeffectall "WhickedSick.wav", 0, .@map$;
 	}
 
-	getitem 40002,combocount;
+	// TODO: Reward player
 	set combocount, 0;
 	end;
 }

@@ -18,7 +18,7 @@ OnPCBaseLvUpEvent:
 		showscript strcharinfo(0)+" : "+.q$[.@quote];
 	}
 	if( getstatus(SC_INCREASEAGI) != 1 ) {
-		sc_start SC_SPEEDUP1,140000,25;
+		sc_start SC_SPEEDUP1,5000,50;
 		specialeffect2 780;
 	}
 	end;
