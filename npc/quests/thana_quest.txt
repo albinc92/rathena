@@ -1566,6 +1566,7 @@ tha_t06,204,181,0	script	Splendid Sword#tt5	111,3,3,{
 					next;
 					mes "^4d4dff All of a sudden, a Black Key appears from the smoke and you feel a great cursed power from it.^000000";
 					getitem 7425,1; //Key_Black
+					set #ThanatosTowerQuest, 1;
 					if (thana_tower != 8) close;
 					next;
 					mes "A drawer had snapped open under the table while you picked up the key and observed it.";
@@ -1795,7 +1796,7 @@ tha_t08,90,144,0	duplicate(Shining Crystal#tt_g1)	Shining Crystal#tt_g4	844
 
 tha_t12,161,57,0	script	Gold Religious Statue#tt	111,{
 	if ($@thana_summon == 0) {
-		if (countitem(7427) > 0) {
+		if (countitem(7427) > 0 || #ThanatosTowerQuest) {
 			mes "It's a statue giving off a golden light.";
 			mes "The sword appears to be missing a gem.";
 			mes "As I draw closer to the statue, the Yellow Charm Stone emits a bright light.";
@@ -1825,7 +1826,7 @@ tha_t12,161,57,0	script	Gold Religious Statue#tt	111,{
 
 tha_t12,154,17,0	script	Green Wiseman Statue#tt	111,{
 	if ($@thana_summon == 1) {
-		if (countitem(7429) > 0) {
+		if (countitem(7429) > 0 || #ThanatosTowerQuest) {
 			mes "A statue gives off green light.";
 			mes "The wiseman's wand seems to be missing a gem.";
 			mes "As I draw closer to the statue, the Green Charm Stone emits a bright light.";
@@ -1855,7 +1856,7 @@ tha_t12,154,17,0	script	Green Wiseman Statue#tt	111,{
 
 tha_t12,103,17,0	script	Blue Angel Statue#tt	111,{
 	if ($@thana_summon == 2) {
-		if (countitem(7428) > 0) {
+		if (countitem(7428) > 0 || #ThanatosTowerQuest) {
 			mes "An angel statue is covered with a blue light.";
 			mes "A gem seems to be missing from the statue's belt.";
 			mes "As I draw closer to the statue, the Blue Charm Stone emits a bright light.";
@@ -1885,7 +1886,7 @@ tha_t12,103,17,0	script	Blue Angel Statue#tt	111,{
 
 tha_t12,96,57,0	script	Bloody Knight Statue#tt	111,{
 	if ($@thana_summon == 3) {
-		if (countitem(7426) > 0) {
+		if (countitem(7426) > 0 || #ThanatosTowerQuest) {
 			mes "A statue is shining like blood.";
 			mes "A gem seems to be missing from the heart area of its armor.";
 			mes "As I draw closer to the statue, the Red Charm Stone emits a bright light.";
@@ -1915,7 +1916,7 @@ tha_t12,96,57,0	script	Bloody Knight Statue#tt	111,{
 
 tha_t12,129,86,0	script	Dark Devil Statue#tt	111,{
 	if ($@thana_summon == 4) {
-		if (countitem(7430) > 0) {
+		if (countitem(7430) > 0 || #ThanatosTowerQuest) {
 			mes "A devil statue emits dark light.";
 			mes "The right eye seems to be missing a gem.";
 			mes "As I draw closer to the statue, the Black Charm Stone emits a bright light.";
@@ -2293,7 +2294,7 @@ tha_t06,119,120,0	script	to 7th Floor	45,1,1,{
 	end;
 OnTouch:
 	if ((eaclass()&(EAJL_2|EAJL_UPPER)) || (eaclass()&EAJL_THIRD) || ((Class == Job_Super_Novice || Class == Job_Taekwon || Class == Job_Star_Gladiator || Class == Job_Soul_Linker || BaseClass == Job_Ninja || Class == Job_Gunslinger) && BaseLevel > 94)) {
-		if (countitem(7425) > 0) {
+		if (countitem(7425) > 0 || #ThanatosTowerQuest) {
 			mes "The shadow of a Black Key is gleaming in the center of the portal.";
 			mes "To pass this way, looks like I need something.";
 			next;
