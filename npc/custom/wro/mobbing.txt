@@ -26,6 +26,14 @@ OnNPCKillEvent:
 	end;
 
 OnComboEnd:
+	if(@mobCombo < 3) {
+		set @mobCombo, 0;
+		set @mobCombo2, 0;
+		set @bExp, 0;
+		set @jExp, 0;
+		end;
+	}
+
 	set @mobCombo2, @mobCombo;
 	if(@mobCombo > 10) {	// Limit exp gain by 10 mobs at once
 		set @mobCombo2, 10;
