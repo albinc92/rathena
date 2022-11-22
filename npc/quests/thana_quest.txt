@@ -1796,7 +1796,7 @@ tha_t08,90,144,0	duplicate(Shining Crystal#tt_g1)	Shining Crystal#tt_g4	844
 
 tha_t12,161,57,0	script	Gold Religious Statue#tt	111,{
 	if ($@thana_summon == 0) {
-		if (countitem(7427) > 0 || #ThanatosTowerQuest) {
+		if (countitem(7427) > 0 || #ThanatosTowerQuest == 2) {
 			mes "It's a statue giving off a golden light.";
 			mes "The sword appears to be missing a gem.";
 			mes "As I draw closer to the statue, the Yellow Charm Stone emits a bright light.";
@@ -1826,7 +1826,7 @@ tha_t12,161,57,0	script	Gold Religious Statue#tt	111,{
 
 tha_t12,154,17,0	script	Green Wiseman Statue#tt	111,{
 	if ($@thana_summon == 1) {
-		if (countitem(7429) > 0 || #ThanatosTowerQuest) {
+		if (countitem(7429) > 0 || #ThanatosTowerQuest == 2) {
 			mes "A statue gives off green light.";
 			mes "The wiseman's wand seems to be missing a gem.";
 			mes "As I draw closer to the statue, the Green Charm Stone emits a bright light.";
@@ -1856,7 +1856,7 @@ tha_t12,154,17,0	script	Green Wiseman Statue#tt	111,{
 
 tha_t12,103,17,0	script	Blue Angel Statue#tt	111,{
 	if ($@thana_summon == 2) {
-		if (countitem(7428) > 0 || #ThanatosTowerQuest) {
+		if (countitem(7428) > 0 || #ThanatosTowerQuest == 2) {
 			mes "An angel statue is covered with a blue light.";
 			mes "A gem seems to be missing from the statue's belt.";
 			mes "As I draw closer to the statue, the Blue Charm Stone emits a bright light.";
@@ -1886,7 +1886,7 @@ tha_t12,103,17,0	script	Blue Angel Statue#tt	111,{
 
 tha_t12,96,57,0	script	Bloody Knight Statue#tt	111,{
 	if ($@thana_summon == 3) {
-		if (countitem(7426) > 0 || #ThanatosTowerQuest) {
+		if (countitem(7426) > 0 || #ThanatosTowerQuest == 2) {
 			mes "A statue is shining like blood.";
 			mes "A gem seems to be missing from the heart area of its armor.";
 			mes "As I draw closer to the statue, the Red Charm Stone emits a bright light.";
@@ -1916,7 +1916,7 @@ tha_t12,96,57,0	script	Bloody Knight Statue#tt	111,{
 
 tha_t12,129,86,0	script	Dark Devil Statue#tt	111,{
 	if ($@thana_summon == 4) {
-		if (countitem(7430) > 0 || #ThanatosTowerQuest) {
+		if (countitem(7430) > 0 || #ThanatosTowerQuest == 2) {
 			mes "A devil statue emits dark light.";
 			mes "The right eye seems to be missing a gem.";
 			mes "As I draw closer to the statue, the Black Charm Stone emits a bright light.";
@@ -1928,6 +1928,7 @@ tha_t12,129,86,0	script	Dark Devil Statue#tt	111,{
 				mes "After inserting the Red Charm Stone into the eye socket, the statue begins to react.";
 				specialeffect EF_BEGINSPELL7;
 				delitem 7430,1; //Magic_Gem_Black
+				set #ThanatosTowerQuest, 2;
 				set $@thana_summon, 5;
 				donpcevent "#gateto_thanatos::OnEnable";
 				donpcevent "#tteffect01::OnStop";
