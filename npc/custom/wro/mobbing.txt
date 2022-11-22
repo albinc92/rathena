@@ -1,0 +1,69 @@
+//
+// Gain bonuses to exp and zeny if killing multiple monsters
+// in succession before the time runs out.
+//
+-	script	mobbing	-1,{
+
+OnPCDieEvent:
+OnPCLoadMapEvent:
+	if(!getmapflag(strcharinfo(3),mf_pvp)) {
+		set killcount, 0;
+		set combocount, 0;
+		deltimer strnpcinfo(0)+"::OnComboEnd";
+	}
+	end;
+
+OnNPCKillEvent:
+	if(!getmapflag(strcharinfo(3),mf_pvp)) {
+		getmapxy( .@map$, .@x, .@y, BL_PC );
+		set killcount, killcount + 1;
+		set combocount, combocount + 1;
+		deltimer strnpcinfo(0)+"::OnComboEnd";
+		addtimer 250,strnpcinfo(0)+"::OnComboEnd";
+	}
+	end;
+
+OnComboEnd:
+	getmapxy( .@map$, .@x, .@y, BL_PC );
+	if(combocount == 2) {
+		mapannounce .@map$,strcharinfo(0) + " just got a DOUBLE KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "double_kill.wav", 0, .@map$;
+	} else if(combocount == 3) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MULTI KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "multikill.wav", 0, .@map$;
+	} else if(combocount == 4) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MEGA KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "megakill.wav", 0, .@map$;
+	} else if(combocount == 5) {
+		mapannounce .@map$,strcharinfo(0) + " just got a ULTRA KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "ultrakill.wav", 0, .@map$;
+	} else if(combocount >= 6) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MONSTER KILL COMBO! (" + combocount + ")",bc_blue;
+		soundeffectall "Monsterkill_F.wav", 0, .@map$;
+	}
+
+	// Kill Announcement
+	else if(killcount == 3) {
+		mapannounce .@map$,strcharinfo(0) + " is on a KILLING SPREE! (" + killcount + ")",bc_blue;
+		soundeffectall "killing_spree.wav", 0, .@map$;
+	} else if(killcount == 5) {
+		mapannounce .@map$,strcharinfo(0) + " is on a RAMPAGE! (" + killcount + ")",bc_blue;
+		soundeffectall "rampage.wav", 0, .@map$;
+	} else if(killcount == 10) {
+		mapannounce .@map$,strcharinfo(0) + " is DOMINATING! (" + killcount + ")",bc_blue;
+		soundeffectall "dominating.wav", 0, .@map$;
+	} else if(killcount == 15) {
+		mapannounce .@map$,strcharinfo(0) + " is UNSTOPPABLE! (" + killcount + ")",bc_blue;
+		soundeffectall "unstoppable.wav", 0, .@map$;
+	} else if(killcount == 20) {
+		mapannounce .@map$,strcharinfo(0) + " is GODLIKE! (" + killcount + ")",bc_blue;
+		soundeffectall "godlike.wav", 0, .@map$;
+	} else if(killcount >= 25 && killcount%5 == 0) {
+		mapannounce .@map$,strcharinfo(0) + " is WICKED SICK! (" + killcount + ")",bc_blue;
+		soundeffectall "WhickedSick.wav", 0, .@map$;
+	}
+
+	getitem 40002,combocount;
+	set combocount, 0;
+	end;
+}

@@ -186,14 +186,16 @@ OnPCLogoutevent:
 -	script	pvp	-1,{
 
 OnPCLoadMapEvent:
-	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	//if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	if(getmapflag(strcharinfo(3),mf_pvp)) {
 		set killcount, 0;
 		set combocount, 0;
 	}
 	end;
 
 OnPCKillEvent:
-	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	//if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	if(getmapflag(strcharinfo(3),mf_pvp)) {
 		query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 		query_sql("SELECT COUNT(char_id) FROM `pvp` WHERE `char_id` = " + getcharid(0), .@recordExists);
 		if(!.@recordExists) {
@@ -256,7 +258,8 @@ OnComboEnd:
 	end;
 
 OnPCDieEvent:
-	if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	//if(getmapflag(strcharinfo(3),mf_pvp) && getmapflag(strcharinfo(3),mf_loadevent)) {
+	if(getmapflag(strcharinfo(3),mf_pvp)) {
 		query_sql("CREATE TABLE IF NOT EXISTS `pvp` (`char_id` int(11) unsigned NOT NULL default '0',`score` int(11) NOT NULL default '0',PRIMARY KEY (`char_id`),KEY `char_id` (`char_id`)) ENGINE=MyISAM;");
 		query_sql("SELECT COUNT(char_id) FROM `pvp` WHERE `char_id` = " + getcharid(0), .@recordExists);
 		if(!.@recordExists) {
