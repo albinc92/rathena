@@ -7,33 +7,36 @@
 OnPCDieEvent:
 OnPCLoadMapEvent:
 	if(!getmapflag(strcharinfo(3),mf_pvp)) {
-		set mobCombo, 0;
+		set @mobCombo, 0;
+		set @mobCombo2, 0;
+		set @bExp, 0;
+		set @jExp, 0;
 		deltimer strnpcinfo(0)+"::OnComboEnd";
 	}
 	end;
 
 OnNPCKillEvent:
 	if(!getmapflag(strcharinfo(3),mf_pvp)) {
-		getmapxy( .@map$, .@x, .@y, BL_PC );
-		set mobCombo, mobCombo + 1;
+		++@mobCombo;
+		@bExp += strmobinfo(6, killedrid);
+		@jExp += strmobinfo(7, killedrid);
 		deltimer strnpcinfo(0)+"::OnComboEnd";
-		addtimer 2500,strnpcinfo(0)+"::OnComboEnd";
+		addtimer 250,strnpcinfo(0)+"::OnComboEnd";
 	}
 	end;
 
 OnComboEnd:
-	getmapxy( .@map$, .@x, .@y, BL_PC );
-	set mobCombo2, mobCombo;
-	if(mobCombo > 10) {	// Limit exp gain by 10 mobs at once
-		set mobCombo2, 10;
+	set @mobCombo2, @mobCombo;
+	if(@mobCombo > 10) {	// Limit exp gain by 10 mobs at once
+		set @mobCombo2, 10;
 	}
 
-	set .@bExp, mobCombo2 * strmobinfo(6, killedrid);
-	set .@jExp, mobCombo2 * strmobinfo(7, killedrid);
-	getexp .@bExp,.@jExp;
+	getexp @bExp, @jExp;
 	specialeffect2 910;
-	message strcharinfo(0),"You received bonus experience by killing " + mobCombo + " monsters within a short time frame!";
-	set mobCombo, 0;
-	set mobCombo2, 0;
+	message strcharinfo(0),"You received bonus experience by killing " + @mobCombo + " monsters at the same time!";
+	set @mobCombo, 0;
+	set @mobCombo2, 0;
+	set @bExp, 0;
+	set @jExp, 0;
 	end;
 }
