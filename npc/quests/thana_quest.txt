@@ -515,14 +515,12 @@ tha_t01,140,78,4	script	Guide#reward	831,{
 
 tha_t02,231,161,5	script	Entrance Guide	874,{
 	mes "[Burled]";
-	if(#ThanatosTowerQuest == 0) {
-		if (thana_tower == 0) {
-			mes "You are in front of the entrance to the 3rd Floor. Only contracted";
-			mes "temp employees are authorized";
-			mes "to enter that area. For Rekenber temp contract information, please";
-			mes "speak to the 2nd Floor Guide.";
-			close;
-		}
+	if (thana_tower == 0 && !#ThanatosTowerQuest) {
+		mes "You are in front of the entrance to the 3rd Floor. Only contracted";
+		mes "temp employees are authorized";
+		mes "to enter that area. For Rekenber temp contract information, please";
+		mes "speak to the 2nd Floor Guide.";
+		close;
 	}
 	mes "This is the path to the 3rd floor.";
 	mes "Only the contracted staff are allowed to enter.";
@@ -555,10 +553,8 @@ tha_t02,231,161,5	script	Entrance Guide	874,{
 		//	close;
 		//}
 		mes "Great, you're just";
-		mes "in time. We just met";
-		mes "the minimum 5 temp group";
-		mes "requirement, so we'll open";
-		mes "the gate to the 3rd Floor soon.";
+		mes "in time. I'll open";
+		mes "the gate to the 3rd Floor now.";
 		next;
 		mes "[Burled]";
 		mes "The gate to the 3rd Floor";
@@ -879,13 +875,8 @@ OnInit:
 	disablenpc "3rdf_warp#tt";
 	end;
 OnTouch_:
-	if(!#ThanatosTowerQuest) {
-		if (thana_tower == 0) {
-			warp "tha_t02",227,158;
-		}
-	} else {
-		warp "tha_t03",219,159;
-	}
+	if (thana_tower == 0 && !#ThanatosTowerQuest) warp "tha_t02",227,158;
+	else warp "tha_t03",219,159;
 	end;
 OnEnable:
 	enablenpc "3rdf_warp#tt";
