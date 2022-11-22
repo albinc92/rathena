@@ -32,7 +32,7 @@ royal,122,159,5	script	WOE Manager	10183,{
 	end;
 OnAgitStart:
 	while(agitcheck() || agitcheck2() || agitcheck3()) {
-		sleep 2000;
+		sleep 2500;
 		specialeffect EF_ANGELUS;
 	}
 	end;
