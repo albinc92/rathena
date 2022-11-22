@@ -5270,6 +5270,7 @@ ra_temin,277,159,3	script	High Priest Zhed#rachel	932,{
 		mes "I need to go lay down now,";
 		mes "so if you'll let me rest...";
 		close2;
+		set #RachelDungeonQuest, 1;
 		set MISC_QUEST,MISC_QUEST | 8192;
 		set ra_tem_q,0;
 		cutin "",255;
@@ -7280,7 +7281,7 @@ OnTouch:
 
 ra_temin,28,319,0	script	saint1#rachel	45,4,2,{
 OnTouch:
-	if ((ra_tem_q > 21) || (MISC_QUEST & 8192)) { warp "ra_san01",140,135; end; }
+	if ((ra_tem_q > 21) || (MISC_QUEST & 8192) || #RachelDungeonQuest) { warp "ra_san01",140,135; end; }
 
 	if (ra_tem_q == 21) {
 		mes "^3355FFThis must be the";
