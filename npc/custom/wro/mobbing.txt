@@ -7,7 +7,7 @@
 OnPCDieEvent:
 OnPCLoadMapEvent:
 	if(!getmapflag(strcharinfo(3),mf_pvp)) {
-		set .@combo, 0;
+		set mobCombo, 0;
 		deltimer strnpcinfo(0)+"::OnComboEnd";
 	}
 	end;
@@ -15,7 +15,7 @@ OnPCLoadMapEvent:
 OnNPCKillEvent:
 	if(!getmapflag(strcharinfo(3),mf_pvp)) {
 		getmapxy( .@map$, .@x, .@y, BL_PC );
-		set .@combo, .@combo + 1;
+		set mobCombo, mobCombo + 1;
 		deltimer strnpcinfo(0)+"::OnComboEnd";
 		addtimer 5000,strnpcinfo(0)+"::OnComboEnd";
 	}
@@ -23,28 +23,28 @@ OnNPCKillEvent:
 
 OnComboEnd:
 	getmapxy( .@map$, .@x, .@y, BL_PC );
-	if(.@combo == 2) {
-		mapannounce .@map$,strcharinfo(0) + " just got a DOUBLE KILL COMBO! (" + .@combo + ")",bc_blue;
+	if(mobCombo == 2) {
+		mapannounce .@map$,strcharinfo(0) + " just got a DOUBLE KILL COMBO! (" + mobCombo + ")",bc_blue;
 		soundeffectall "double_kill.wav", 0, .@map$;
-	} else if(.@combo == 3) {
-		mapannounce .@map$,strcharinfo(0) + " just got a MULTI KILL COMBO! (" + .@combo + ")",bc_blue;
+	} else if(mobCombo == 3) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MULTI KILL COMBO! (" + mobCombo + ")",bc_blue;
 		soundeffectall "multikill.wav", 0, .@map$;
-	} else if(.@combo == 4) {
-		mapannounce .@map$,strcharinfo(0) + " just got a MEGA KILL COMBO! (" + .@combo + ")",bc_blue;
+	} else if(mobCombo == 4) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MEGA KILL COMBO! (" + mobCombo + ")",bc_blue;
 		soundeffectall "megakill.wav", 0, .@map$;
-	} else if(.@combo == 5) {
-		mapannounce .@map$,strcharinfo(0) + " just got a ULTRA KILL COMBO! (" + .@combo + ")",bc_blue;
+	} else if(mobCombo == 5) {
+		mapannounce .@map$,strcharinfo(0) + " just got a ULTRA KILL COMBO! (" + mobCombo + ")",bc_blue;
 		soundeffectall "ultrakill.wav", 0, .@map$;
-	} else if(.@combo >= 6) {
-		mapannounce .@map$,strcharinfo(0) + " just got a MONSTER KILL COMBO! (" + .@combo + ")",bc_blue;
+	} else if(mobCombo >= 6) {
+		mapannounce .@map$,strcharinfo(0) + " just got a MONSTER KILL COMBO! (" + mobCombo + ")",bc_blue;
 		soundeffectall "Monsterkill_F.wav", 0, .@map$;
 	}
 
-	set .@bExp, .@combo * strmobinfo(6, killedrid);
-	set .@jExp, .@combo * strmobinfo(7, killedrid);
+	set .@bExp, mobCombo * strmobinfo(6, killedrid);
+	set .@jExp, mobCombo * strmobinfo(7, killedrid);
 	getexp .@bExp,.@jExp;
 	specialeffect2 910;
-	message strcharinfo(0),"You received bonus experience by killing " + .@combo + " monsters within a short time-span!";
-	set .@combo, 0;
+	message strcharinfo(0),"You received bonus experience by killing " + mobCombo + " monsters within a short time-span!";
+	set mobCombo, 0;
 	end;
 }
