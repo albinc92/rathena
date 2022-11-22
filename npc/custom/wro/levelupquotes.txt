@@ -17,9 +17,5 @@ OnPCBaseLvUpEvent:
 		.@quote = rand(.num1);
 		showscript strcharinfo(0)+" : "+.q$[.@quote];
 	}
-	if( !getstatus(SC_SPEEDUP1) ) {
-		sc_start SC_SPEEDUP1,5000,50;
-		specialeffect2 780;
-	}
 	end;
 }
