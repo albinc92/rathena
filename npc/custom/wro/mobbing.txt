@@ -17,7 +17,7 @@ OnNPCKillEvent:
 		getmapxy( .@map$, .@x, .@y, BL_PC );
 		set .@combo, .@combo + 1;
 		deltimer strnpcinfo(0)+"::OnComboEnd";
-		addtimer 250,strnpcinfo(0)+"::OnComboEnd";
+		addtimer 5000,strnpcinfo(0)+"::OnComboEnd";
 	}
 	end;
 
