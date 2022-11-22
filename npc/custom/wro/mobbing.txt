@@ -40,7 +40,7 @@ OnComboEnd:
 	}
 
 	getexp @bExp, @jExp;
-	specialeffect2 910;
+	specialeffect2 799;
 	message strcharinfo(0),"You received bonus experience by killing " + @mobCombo + " monsters at the same time!";
 	set @mobCombo, 0;
 	set @mobCombo2, 0;
