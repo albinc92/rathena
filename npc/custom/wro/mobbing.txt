@@ -21,7 +21,7 @@ OnNPCKillEvent:
 		@bExp += strmobinfo(6, killedrid);
 		@jExp += strmobinfo(7, killedrid);
 		deltimer strnpcinfo(0)+"::OnComboEnd";
-		addtimer 500,strnpcinfo(0)+"::OnComboEnd";
+		addtimer 1000,strnpcinfo(0)+"::OnComboEnd";
 	}
 	end;
 
