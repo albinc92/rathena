@@ -124,20 +124,19 @@ roy_in02,88,105,3	script	Deconstructor	10078,{
 							delitem @inventorylist_id[.@i],1;
 							getitem 985,1;
 						}
-
-						// COMPLETION CHECK
-						if(.@found) {
-							specialeffect 106,AREA,"Deconstructor";
-							set .@found, 0;
-							mes "["+strnpcinfo(1)+"]";
-							mes "There you go~";
-						} else {
-							mes "["+strnpcinfo(1)+"]";
-							mes "Looks like you don't have anything on you...";
-						}
 					}
 				}
-			case 2:
+
+				// COMPLETION CHECK
+				if(.@found) {
+					specialeffect 106,AREA,"Deconstructor";
+					set .@found, 0;
+					mes "["+strnpcinfo(1)+"]";
+					mes "There you go~";
+				} else {
+					mes "["+strnpcinfo(1)+"]";
+					mes "Looks like you don't have anything on you...";
+				}
 		}
 		close2;
 		cutin "", 255;
