@@ -4902,14 +4902,8 @@ OnTimer22000:
 	soundeffectall "earth_quake.wav",0;
 	end;
 
-OnTimer24000:
-	set #JuperosDungeonQuest, 1;
-	mapwarp "jupe_ele","jupe_core",150,286;
-	end;
-
 OnTimer25000:
-	set #JuperosDungeonQuest, 1;
-	mapwarp "jupe_ele","jupe_core",151,286;
+	mapwarp "jupe_ele","juperos_02",130,156;
 	end;
 
 OnTimer26000:
