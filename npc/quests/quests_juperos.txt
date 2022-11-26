@@ -1541,7 +1541,7 @@ yuno_in04,118,116,4	script	Paper	111,{
 			mes "Please...";
 			mes "Come back to me.";
 			mes " ";
-			mes " ";		  
+			mes " ";
 			mes "Love,";
 			mes "Fayruz^000000";
 			close;
@@ -1700,7 +1700,7 @@ OnTimer2000:
 }
 
 //============================================================
-// 2nd Floor 
+// 2nd Floor
 //============================================================
 
 juperos_02,97,70,0	script	3F Gate Switch#jupe	-1,{
@@ -1820,6 +1820,9 @@ OnTimer1200000:
 	end;
 
 OnTouch_:
+	if(#JuperosDungeonQuest) {
+		warp "jupe_core",150,286;
+	}
 	warp "jupe_gate",50,167;
 	end;
 }
@@ -3903,7 +3906,7 @@ OnMyMobDead:
 	}
 	end;
 }
-	
+
 //============================================================
 // Security Checkpoint 2-4
 //============================================================
@@ -4891,20 +4894,25 @@ OnTimer11000:
 
 OnTimer12000:
 	mapannounce "jupe_ele","You want to know, don't you? Go ahead... Go deeper.",bc_map,"0x66FF00";
-	enablenpc "4F Enter#ufe";
+	//enablenpc "4F Enter#ufe";
 	end;
 
 OnTimer22000:
 	mapannounce "jupe_ele","It's not real anyway. All of it's safe, it can't hurt you...",bc_map,"0x66FF00";
 	soundeffectall "earth_quake.wav",0;
+	sleep2, 2500;
+	set #JuperosDungeonQuest, 1;
+	mapwarp "jupe_ele","jupe_core",150,286;
 	disablenpc "4F Enter#ufe";
 	end;
 
 OnTimer24000:
+	set #JuperosDungeonQuest, 1;
 	mapwarp "jupe_ele","jupe_core",150,286;
 	end;
 
 OnTimer25000:
+	set #JuperosDungeonQuest, 1;
 	mapwarp "jupe_ele","jupe_core",151,286;
 	end;
 
@@ -4922,6 +4930,7 @@ OnInit:
 	end;
 
 OnTouch_:
+	set #JuperosDungeonQuest, 1;
 	warp "jupe_core",rand(149,151),286;
 	end;
 }
