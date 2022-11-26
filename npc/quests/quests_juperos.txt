@@ -1821,7 +1821,7 @@ OnTimer1200000:
 
 OnTouch_:
 	if(#JuperosDungeonQuest) {
-		warp "jupe_core",150,286;
+		warp "jupe_core",50,167;
 	}
 	warp "jupe_gate",50,167;
 	end;
@@ -4900,20 +4900,9 @@ OnTimer12000:
 OnTimer22000:
 	mapannounce "jupe_ele","It's not real anyway. All of it's safe, it can't hurt you...",bc_map,"0x66FF00";
 	soundeffectall "earth_quake.wav",0;
-	sleep2, 2500;
+	sleep2 1000;
 	set #JuperosDungeonQuest, 1;
 	mapwarp "jupe_ele","jupe_core",150,286;
-	disablenpc "4F Enter#ufe";
-	end;
-
-OnTimer24000:
-	set #JuperosDungeonQuest, 1;
-	mapwarp "jupe_ele","jupe_core",150,286;
-	end;
-
-OnTimer25000:
-	set #JuperosDungeonQuest, 1;
-	mapwarp "jupe_ele","jupe_core",151,286;
 	end;
 
 OnTimer26000:
