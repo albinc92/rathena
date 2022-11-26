@@ -320,7 +320,6 @@ mosk_fild02,188,250,5	duplicate(Headhunter)	Headhunter#mosk_dun	481
 manuk,289,131,1	duplicate(Headhunter)	Headhunter#man	481
 splendide,193,155,4	duplicate(Headhunter)	Headhunter#spl	481
 spl_fild01,359,106,1	duplicate(Headhunter)	Headhunter#ygg	481
-spl_fild01,355,105,7	duplicate(Headhunter)	Headhunter#nyd	481
 e_tower,82,110,5	duplicate(Headhunter)	Headhunter#et	481
 gef_fild10,245,200,4	duplicate(Headhunter)	Headhunter#orcmemory	481
 monk_test,309,142,5	duplicate(Headhunter)	Headhunter#shrine	481

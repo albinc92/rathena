@@ -1064,6 +1064,7 @@ OnTouch:
 		case 1:
 			mes "You take a one step forward carefully through the muddy roots and slip.";
 			set ep13_mdrama,6;
+			set #NydhoggurDungeonQuest,1;
 			close2;
 			percentheal -30,0;
 			warp "nyd_dun01",72,125;
@@ -1074,7 +1075,7 @@ OnTouch:
 			close;
 		}
 	}
-	else if (ep13_mdrama > 5) {
+	else if (ep13_mdrama > 5 || #NydhoggurDungeonQuest) {
 		mes "Between huge roots, there is a hole leads to the underground cave.";
 		next;
 		switch(select("Go inside.:I'm not going in there.")) {
