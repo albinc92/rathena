@@ -203,10 +203,19 @@ function	script	F_KafStor	{
 
 	// Unable to access Guild Storage (Busy)
 	if (.@type == 1) {
-		if (guildopenstorage()) {
+		if (guildopenstorage() == GSTORAGE_NO_GUILD) {
 			mes "[Kafra Employee]";
-			mes "I'm sorry but another guild member is using the guild storage";
-			mes "right now.  Please wait until that person is finished.";
+			mes "I'm sorry but the guild storage is only available for guild members.";
+			close3;
+		}
+		if (guildopenstorage() == GSTORAGE_NO_STORAGE) {
+			mes "[Kafra Employee]";
+			mes "I'm sorry but the guild storage is only available for guilds that have invested in the Guild Storage Expansion skill.";
+			close3;
+		}
+		if (guildopenstorage() == GSTORAGE_NO_PERMISSION) {
+			mes "[Kafra Employee]";
+			mes "I'm sorry but you do not have the permission to open the guild storage.";
 			close3;
 		}
 		cutin "", 255;
