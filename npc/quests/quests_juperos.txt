@@ -4894,20 +4894,28 @@ OnTimer11000:
 
 OnTimer12000:
 	mapannounce "jupe_ele","You want to know, don't you? Go ahead... Go deeper.",bc_map,"0x66FF00";
-	//enablenpc "4F Enter#ufe";
+	enablenpc "4F Enter#ufe";
 	end;
 
 OnTimer22000:
 	mapannounce "jupe_ele","It's not real anyway. All of it's safe, it can't hurt you...",bc_map,"0x66FF00";
 	soundeffectall "earth_quake.wav",0;
-	sleep2 1000;
+	end;
+
+OnTimer24000:
 	set #JuperosDungeonQuest, 1;
 	mapwarp "jupe_ele","jupe_core",150,286;
+	end;
+
+OnTimer25000:
+	set #JuperosDungeonQuest, 1;
+	mapwarp "jupe_ele","jupe_core",151,286;
 	end;
 
 OnTimer26000:
 	set $@JupeElevatorInUse2,0;
 	set $@JupeElevatorInUse,0;
+	disablenpc "4F Enter#ufe";
 	disablenpc "Switch On#ufe";
 	enablenpc "Switch#ufe";
 	donpcevent "GuardEnd#ufe::OnDisable";
