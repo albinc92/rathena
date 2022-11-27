@@ -146,12 +146,12 @@ L_OnTutorialDone:
     mes "Okay! Before leaving, please accept these gifts on behalf of the Kafra Corporation!";
     next;
 
-    getitem 5055,1;
-    getitem 2112,1;
-    getitem 2414,1;
-    getitem 2510,1;
-    getitem 2352,1;
-    getitem 501,50;
+    getitem 2305,1;
+    getitem 2501,1;
+    getitem 2401,1;
+    getitem 2101,1;
+    getitem 1207,1;
+    getitem 501,25;
     set zeny, zeny + 10000;
 	query_sql("REPLACE INTO `wrochardata` SET `char_id` = '" + getcharid(0) + "', `intro` = 1, `mainquest` = 0");
 	query_sql("INSERT IGNORE INTO `wroaccdata` SET `account_id` = '" + getcharid(3) + "', `hints` = 1");
@@ -178,7 +178,7 @@ OnPCLoadMapEvent:
     mes "^0000ff[" + strnpcinfo(1) + "]^000000";
     mes "Greetings, " + strcharinfo(0) + "!";
     next;
-    
+
 	query_sql("SELECT `intro` FROM `wrochardata` WHERE `char_id` = '" + getcharid(0) + "'", .@intro);
     if(!.@intro) {
         mes "^0000ff[" + strnpcinfo(1) + "]^000000";
@@ -271,7 +271,7 @@ L_OnChoice:
     atcommand "@channel join #global";
     atcommand "@channel join #support";
     atcommand "@channel join #trade";
-    getitem .@weaponID, 1;
+    //getitem .@weaponID, 1;
     if (.@warpTo$ == "prontera") {
         savepoint "prontera",117,72,1,1;
         atcommand "@go 0";
