@@ -22,7 +22,7 @@ char_ip: 127.0.0.1
 // Map Server IP
 // The IP address which clients will use to connect.
 // Set this to what your server's public IP address is.
-map_ip: 188.149.31.64
+map_ip: 151.177.242.112
 
 //Time-stamp format which will be printed before all messages.
 //Can at most be 20 characters long.
