@@ -720,12 +720,17 @@ UPDATE `item_db2` SET `price_buy` = 2000, `price_sell` = 1000 WHERE `id` = 7721;
 REPLACE INTO `item_db2` SELECT * FROM `item_db` WHERE name_english = 'Gemmed Sallet';
 UPDATE `item_db2` SET view = 1799 WHERE name_english LIKE '%Gemmed Sallet';  -- Sprite for Gemmed Sallet
 
+-- Remote Store
+REPLACE INTO `item_db2` (`id`,`name_aegis`,`name_english`,`type`,`price_buy`,`weight`,`flag_buyingstore`,`flag_container`,`script`)
+VALUES (40059,'Remote_Store','Remote Store','Usable',1000,200,true,true,'callfunc "F_RemoteStore";');
+
 -- ---------------------------------------------------------------------------------------------------------------------
 --                                                      mob_db2
 -- ---------------------------------------------------------------------------------------------------------------------
 
 -- Make monsters scale up to Lv. 250
 -- Pre-renewal monsters
+/*
 REPLACE INTO `mob_db2`
 SELECT
     `ID`,
@@ -908,6 +913,7 @@ UPDATE `mob_db2` SET `Drop9id` = 0 WHERE `Drop9id` IN (
         'Armor'
     )
 );
+*/
 
 -- Add new cards to mob drops
 -- First, create copies of mobs in mob_db2
