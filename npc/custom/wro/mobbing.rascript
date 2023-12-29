@@ -16,10 +16,10 @@ OnPCLoadMapEvent:
 	end;
 
 OnNPCKillEvent:
-	if(!getmapflag(strcharinfo(3),mf_pvp)) {
+	if(!getmapflag(strcharinfo(3),mf_pvp) || (@BaseLevel < 250 && @JobLevel < 70)) {
 		++@mobCombo;
-		@bExp += strmobinfo(6, killedrid);
-		@jExp += strmobinfo(7, killedrid);
+		if(@BaseLevel < 250) { @bExp += strmobinfo(6, killedrid); }
+		if(@JobLevel < 70) { @jExp += strmobinfo(7, killedrid); }
 		deltimer strnpcinfo(0)+"::OnComboEnd";
 		addtimer 1000,strnpcinfo(0)+"::OnComboEnd";
 	}

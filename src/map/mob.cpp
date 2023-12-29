@@ -3206,7 +3206,7 @@ static struct item_drop* mob_setdropitem(struct s_mob_drop *mobdrop, int qty, un
 	drop->item_data.amount = qty;
 	drop->item_data.identify = itemdb_isidentified(mobdrop->nameid);
 	mob_setdropitem_option(&drop->item_data, mobdrop);
-  mob_setdropitem_option2(&drop->item_data, magic_find);
+ 	mob_setdropitem_option2(&drop->item_data, magic_find);
 	drop->mob_id = mob_id;
 	drop->next = NULL;
 	return drop;
@@ -3890,6 +3890,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 			mob_item_drop(md, dlist, ditem, 0, battle_config.finding_ore_rate/10, homkillonly);
 		}
 
+		/*
 		// Random equipment drop (WarboundRO)
         int drop_rate_eqi = 3300;   // 33% base drop rate of items
 
@@ -3942,6 +3943,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
                 }
             }
         }
+		*/
 
 		if(sd) {
 			// process script-granted extra drop bonuses
@@ -4101,7 +4103,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				}
 
 				mob_setdropitem_option(&item, &mdrop[i]);
-        //mob_setdropitem_option2(&item, sd->bonus.magic_find);
+        		//mob_setdropitem_option2(&item, sd->bonus.magic_find);
 
 				if((temp = pc_additem(mvp_sd,&item,1,LOG_TYPE_PICKDROP_PLAYER)) != 0) {
 					clif_additem(mvp_sd,0,0,temp);
